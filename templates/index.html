@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="index-page">
     <div class="container">
-        <header>
-            <h1 class="logo">Newsletter Archive</h1>
+        <header class="ix-header">
+            <div class="ix-logo-block">
+                <h1 class="logo"><span class="logo-word">THE ARCHIVE</span></h1>
+                <p class="logo-tagline">Signal Intelligence · Newsletter Archive</p>
+            </div>
             <div class="actions">
                 <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme">
                     <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -38,68 +41,69 @@
             </div>
         </header>
 
-        <div class="controls-bar">
-            <div class="search-row">
-                <div class="search-wrapper">
-                    <svg class="icon search-icon" viewBox="0 0 24 24">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="searchInput" class="search-input" placeholder="Search..."
-                        data-i18n="search_placeholder">
-                </div>
+        <!-- Stats Band -->
+        <div class="ix-stats-band">
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">{{ stats.count }}</span>
+                <span class="ix-stat-label">Dispatches</span>
             </div>
+            <div class="ix-stat-divider"></div>
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">{{ stats.last_updated }}</span>
+                <span class="ix-stat-label">Last Updated</span>
+            </div>
+            <div class="ix-stat-divider"></div>
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">{{ stats.archive_size }}</span>
+                <span class="ix-stat-label">Archive Size</span>
+            </div>
+        </div>
 
-            <div class="stats-filter-row">
-                <div class="stats-row">
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
-                        <span class="stat-val">{{ stats.count }}</span>
-                        <span class="stat-label">Newsletters</span>
-                    </div>
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span class="stat-label">Updated:</span>
-                        <span class="stat-val">{{ stats.last_updated }}</span>
-                    </div>
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                        </svg>
-                        <span class="stat-label">Size:</span>
-                        <span class="stat-val">{{ stats.archive_size }}</span>
-                    </div>
-                </div>
-                <div class="sort-wrapper">
-                    <select id="sortSelect" class="sort-select" onchange="sortList()">
-                        <option value="date-desc">Newest First</option>
-                        <option value="date-asc">Oldest First</option>
-                        <option value="sender-az">Sender A-Z</option>
-                        <option value="sender-za">Sender Z-A</option>
-                    </select>
-                    <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
-                    </svg>
-                </div>
+        <!-- CRM Filter Chips -->
+        <div class="ix-chip-row" id="crmFilterRow">
+            <button class="ix-chip ix-chip-all active" onclick="filterByCrm('all')">All</button>
+            {% set seen = namespace(crms=[]) %}
+            {% for email in emails %}
+                {% set crm = email.crm or 'Unknown' %}
+                {% if crm not in seen.crms %}
+                    {% set seen.crms = seen.crms + [crm] %}
+                    <button class="ix-chip" data-crm="{{ crm }}" onclick="filterByCrm('{{ crm }}')">{{ crm }}</button>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Controls Row (search + sort together) -->
+        <div class="ix-controls-row">
+            <div class="search-wrapper ix-search-wrapper">
+                <svg class="icon search-icon" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" class="search-input ix-search" placeholder="Search dispatches..."
+                    data-i18n="search_placeholder">
+            </div>
+            <div class="sort-wrapper ix-sort-wrapper">
+                <select id="sortSelect" class="sort-select ix-sort-select" onchange="sortList()">
+                    <option value="date-desc">Newest First</option>
+                    <option value="date-asc">Oldest First</option>
+                    <option value="sender-az">Sender A-Z</option>
+                    <option value="sender-za">Sender Z-A</option>
+                </select>
+                <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
             </div>
         </div>
 
         <ul class="news-grid" id="newsList">
-            <div id="noResults"
-                style="display:none; grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-secondary);"
+            <li id="noResults"
+                style="display:none; grid-column: 1/-1; list-style:none; text-align: center; padding: 40px; color: var(--text-secondary);"
                 data-i18n="no_results">
                 No results found.
-            </div>
+            </li>
             {% for email in emails %}
-            <li class="news-card glass" data-date="{{ email.date_obj }}" data-sender="{{ email.sender | e }}">
+            <li class="news-card glass{% if loop.first %} ix-featured{% endif %}" data-date="{{ email.date_obj }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
                 <a href="{{ email.id }}/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">{{ email.date_rec }}</span>
@@ -123,19 +127,6 @@
         </footer>
     </div>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Simple aggregate for reading time
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll('.news-card .read-time span');
-            let total = 0;
-            items.forEach(i => {
-                const t = parseInt(i.innerText);
-                if (!isNaN(t)) total += t;
-            });
-            const totalEl = document.getElementById('totalTime');
-            if (totalEl) totalEl.innerText = total + " min";
-        });
-    </script>
 </body>
 
 </html>

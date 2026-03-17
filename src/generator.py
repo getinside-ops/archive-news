@@ -12,7 +12,16 @@ env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(TEMPLATE_DIR),
     autoescape=jinja2.select_autoescape(['html', 'xml'])
 )
-env.globals.update(format_date=lambda d: d) # Placeholder, can process date filter if needed
+def _format_date(d):
+    """Parse an ISO 8601 date string and return DD/MM/YYYY, or return d unchanged."""
+    if not d:
+        return d
+    try:
+        return datetime.datetime.fromisoformat(d).strftime('%d/%m/%Y')
+    except (ValueError, TypeError):
+        return d
+
+env.globals.update(format_date=_format_date)
 
 def generate_viewer(metadata, html_content, links, output_path, lang='fr', detected_pixels=[], audit={}):
     """
@@ -64,13 +73,21 @@ def generate_index(emails_metadata, output_path, stats=None):
 def copy_assets(output_dir):
     """
     Copies static assets from src/assets to the output directory (docs/assets).
+    Also copies the project-root fonts/ folder to docs/fonts/ for @font-face serving.
     """
     import shutil
-    
+
     src_assets = os.path.join(os.path.dirname(__file__), 'assets')
     dest_assets = os.path.join(output_dir, 'assets')
-    
+
     if os.path.exists(src_assets):
         if os.path.exists(dest_assets):
             shutil.rmtree(dest_assets)
         shutil.copytree(src_assets, dest_assets)
+
+    src_fonts = os.path.join(os.getcwd(), 'fonts')
+    dest_fonts = os.path.join(output_dir, 'fonts')
+    if os.path.exists(src_fonts):
+        if os.path.exists(dest_fonts):
+            shutil.rmtree(dest_fonts)
+        shutil.copytree(src_fonts, dest_fonts)
