@@ -1314,6 +1314,8 @@ body.index-page[data-theme="dark"] .crm-badge {
 
 .viewer-layout .viewer-content {
     background: var(--vw-bg);
+    padding: 0;
+    align-items: center;
 }
 
 .viewer-layout .viewer-sidebar {
