@@ -1703,7 +1703,7 @@ body.index-page .logo-tagline {
 }
 
 .gi-logo-sm {
-    height: 22px;
+    height: 26px;
 }
 
 .gi-viewer-logo-link {
@@ -2168,6 +2168,90 @@ body.index-page .gi-topnav-link.active {
     color: var(--ix-brand);
     background: var(--ix-brand-dim);
 }
+
+/* Actions group (lang + theme) */
+.gi-topnav-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+/* SaaS external link — inline-flex to accommodate the arrow icon */
+.gi-topnav-saas {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* Language picker button */
+.gi-lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border: none;
+    background: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: color var(--transition-fast), background var(--transition-fast);
+}
+.gi-lang-btn:hover {
+    color: var(--accent-primary);
+    background: rgba(10, 170, 142, 0.06);
+}
+[data-theme="dark"] .gi-lang-btn { color: var(--text-secondary); }
+[data-theme="dark"] .gi-lang-btn:hover {
+    color: var(--accent-mint);
+    background: rgba(106, 231, 200, 0.06);
+}
+
+/* VitePress pill switch toggle (40×22px) */
+.gi-vp-switch {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border: 1px solid rgba(60, 63, 68, 0.7);
+    border-radius: 11px;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    transition: border-color var(--transition-fast);
+}
+[data-theme="dark"] .gi-vp-switch { border-color: rgb(60, 63, 68); }
+.gi-vp-switch:hover { border-color: var(--accent-primary); }
+[data-theme="dark"] .gi-vp-switch:hover { border-color: var(--accent-mint); }
+
+.gi-vp-check {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3c3c43;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+}
+[data-theme="dark"] .gi-vp-check { background: #ebebf0; transform: translateX(18px); }
+
+.gi-vp-icon {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dfdfda;
+}
+[data-theme="dark"] .gi-vp-icon { color: #3c3c43; }
+
 
 /* Index page container: no top padding since nav is above it */
 body.index-page .container {
