@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <style>
         body {
@@ -22,6 +23,35 @@
 
 <body>
     <div class="viewer-layout">
+        <!-- Top navigation -->
+        <nav class="gi-topnav">
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+            </a>
+            <div class="gi-topnav-links">
+                <a href="../index.html" class="gi-topnav-link">Archive</a>
+                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+            </div>
+            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
+                <svg class="icon icon-moon" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Main body row: viewer + sidebar -->
+        <div class="viewer-body-row">
         <!-- Main Content -->
         <div class="viewer-main">
             <!-- Header -->
@@ -29,7 +59,7 @@
                 <!-- Top bar: controls -->
                 <div class="vh-top-bar">
                     <div class="device-toggle hide-mobile">
-                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
                                 <line x1="12" y1="18" x2="12.01" y2="18"/>
@@ -41,7 +71,7 @@
                                 <line x1="12" y1="18" x2="12.01" y2="18"/>
                             </svg>
                         </button>
-                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                                 <line x1="8" y1="21" x2="16" y2="21"/>
@@ -63,23 +93,7 @@
 
                     <span class="crm-badge" data-crm="Sarbacane">Sarbacane</span>
 
-                    <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
-                        <svg class="icon icon-moon" viewBox="0 0 24 24">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
+                    </div>
                 <!-- Subject bar -->
                 <div class="vh-subject-bar">
                     <span class="vh-sender-pill">benoit@getinside.fr</span>
@@ -90,22 +104,16 @@
 
             <!-- Email Content -->
             <div class="viewer-content">
-                <div id="deviceFrame" data-mode="desktop"
-                    style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
+                <div id="deviceFrame" data-mode="mobile"
+                    style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
-            <div class="sidebar-header">
-                <div class="sh-signal">SIGNAL</div>
-                <div class="sh-sender">benoit@getinside.fr</div>
-                <div class="sh-tagline">link intelligence</div>
-            </div>
-
-            <div class="tab-bar">
+<div class="tab-bar">
                 <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
                 <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
                 <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">14</span></button>
@@ -160,13 +168,13 @@
                         
                         <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
                             <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-index">P</span>
                                 <span class="card-v2-domain">ci3.googleusercontent.com</span>
                                 <span class="card-v2-tag"
                                     style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
                             </div>
                             <div class="card-v2-body">
-                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-text">Integration: OK</div>
                                 <div class="card-v2-url-zone">
                                     <code class="card-v2-url">https://ci3.googleusercontent.com/meips/ADKq_NZOqhIfilEEpjjc1z9nVGDnOaJm-4N0CaTuckNK6M42RK0CYDxbLT_e1r13W5u7lIKNx6WqJQjxS44IDp6dNAcVrSvRrSUGsrK90zQH8ljBh0x2ys7frrgWWgfBnMk=s0-d-e1-ft#https://trk.newsletter.lespetitsculottes.fr/o/01K6YY7BZMHFZR0EK14T1A2VWG</code>
                                     <button class="card-v2-copy-btn"
@@ -1019,15 +1027,15 @@
 
             <!-- Sticky Footer in Sidebar -->
             <div class="sidebar-footer">
-                <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin: 0;">
-                    © 2025 <a href="https://github.com/benoit-prentout" target="_blank"
-                        style="color: var(--accent-cyan); text-decoration: underline dotted; font-weight: 600;">Benoît
-                        Prentout</a>.
-                    All rights reserved.
+                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
+                    Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
+                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                    © 2026 getinside. Tous droits réservés.
                 </p>
             </div>
         </aside>
-    </div>
+        </div><!-- /.viewer-body-row -->
+    </div><!-- /.viewer-layout -->
 
 
 
@@ -1121,6 +1129,7 @@
 
             const theme = localStorage.getItem('theme') || 'light';
             if (theme === 'dark') applyTheme('dark');
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
         }
 
         function setMode(mode) {

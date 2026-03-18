@@ -408,7 +408,7 @@ h1.logo {
 }
 
 .card-v2-text {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 11px;
     color: var(--text-terminal-muted);
     margin-bottom: 6px;
@@ -663,6 +663,22 @@ footer a:hover {
     border-color: var(--border-color) !important;
 }
 
+/* Homepage: neutral badge style to match handbook */
+body.index-page .crm-badge {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--ix-text);
+    border-color: var(--ix-border);
+    font-family: var(--font-main);
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+body.index-page[data-theme="dark"] .crm-badge {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--ix-muted);
+    border-color: var(--ix-border);
+}
+
 /* === MULTI-COLOR UTILITIES === */
 .text-purple {
     color: var(--accent-purple);
@@ -763,6 +779,28 @@ footer a:hover {
 .email-frame.no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/* Desktop mode: theme-aware scrollbar */
+.email-frame:not(.no-scrollbar)::-webkit-scrollbar {
+    width: 6px;
+}
+.email-frame:not(.no-scrollbar)::-webkit-scrollbar-track {
+    background: transparent;
+}
+.email-frame:not(.no-scrollbar)::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+}
+[data-theme="dark"] .email-frame:not(.no-scrollbar)::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+}
+.email-frame:not(.no-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+}
+[data-theme="dark"] .email-frame:not(.no-scrollbar) {
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
 }
 
 .viewer-sidebar {
@@ -973,6 +1011,11 @@ footer a:hover {
     background: rgba(230, 126, 34, 0.1);
     padding: 2px 6px;
     border-radius: 4px;
+}
+
+.tag-pixel {
+    color: var(--accent-primary);
+    background: rgba(10, 170, 142, 0.1);
 }
 
 .card-v2-body {
@@ -1314,10 +1357,10 @@ footer a:hover {
 }
 
 .vh-subject {
-    font-family: 'Garnett', sans-serif;
+    font-family: var(--font-main);
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--accent-primary);
+    color: var(--text-primary);
     margin: 0;
     flex: 1;
     white-space: nowrap;
@@ -1327,20 +1370,25 @@ footer a:hover {
 }
 
 .vh-sender-pill {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.65rem;
     font-weight: 600;
-    color: var(--vw-mint, #6AE7C8);
-    background: var(--vw-mint-dim, rgba(106, 231, 200, 0.1));
-    border: 1px solid rgba(106, 231, 200, 0.2);
+    color: var(--accent-primary);
+    background: rgba(10, 170, 142, 0.1);
+    border: 1px solid rgba(10, 170, 142, 0.25);
     border-radius: 4px;
     padding: 2px 7px;
     white-space: nowrap;
     flex-shrink: 0;
 }
+[data-theme="dark"] .vh-sender-pill {
+    color: var(--vw-mint, #6AE7C8);
+    background: rgba(106, 231, 200, 0.1);
+    border-color: rgba(106, 231, 200, 0.2);
+}
 
 .vh-date {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.65rem;
     color: var(--text-muted);
     white-space: nowrap;
@@ -1420,7 +1468,7 @@ footer a:hover {
 }
 
 .sc-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.58rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -1429,7 +1477,7 @@ footer a:hover {
 }
 
 .sc-value {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.78rem;
     color: var(--text-primary);
     overflow: hidden;
@@ -1449,13 +1497,18 @@ footer a:hover {
 .card-v2-url-truncated {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.68rem;
-    color: var(--vw-mint, #6AE7C8);
-    opacity: 0.75;
+    color: var(--accent-primary);
+    opacity: 0.9;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     flex: 1;
     min-width: 0;
+}
+
+[data-theme="dark"] .card-v2-url-truncated {
+    color: var(--vw-mint, #6AE7C8);
+    opacity: 0.75;
 }
 
 /* Expand zone — hidden by default, revealed when .expanded */
@@ -1612,7 +1665,7 @@ body.index-page .logo-word {
     font-family: 'Garnett', sans-serif;
     font-weight: 700;
     font-size: 2.2rem;
-    color: var(--ix-brand);
+    color: var(--ix-text);
     letter-spacing: -0.02em;
     display: block;
 }
@@ -1630,7 +1683,7 @@ body.index-page .btn-icon:hover {
 }
 
 body.index-page .logo-tagline {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.68rem;
     color: var(--ix-muted);
     margin: 0;
@@ -1693,7 +1746,7 @@ body.index-page .ix-stat-num {
 }
 
 body.index-page .ix-stat-label {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.62rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1707,6 +1760,18 @@ body.index-page .ix-stat-divider {
     flex-shrink: 0;
 }
 
+/* ── CRM Section Label ── */
+body.index-page .ix-section-label {
+    font-family: var(--font-main);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ix-muted);
+    padding-top: 20px;
+    padding-bottom: 4px;
+}
+
 /* ── CRM Filter Chips ── */
 body.index-page .ix-chip-row {
     display: flex;
@@ -1717,7 +1782,7 @@ body.index-page .ix-chip-row {
 }
 
 body.index-page .ix-chip {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -1794,13 +1859,13 @@ body.index-page .ix-sort-select {
     background: transparent;
     border: none;
     outline: none;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.82rem;
     color: var(--ix-muted);
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    padding-right: 20px;
+    padding-right: 32px;
 }
 
 body.index-page .ix-sort-select option {
@@ -1810,17 +1875,19 @@ body.index-page .ix-sort-select option {
 
 /* ── Cards ── */
 body.index-page .news-card {
-    background: var(--ix-bg-card);
+    background: #EEECEA;
     border: 1px solid var(--ix-border);
     border-radius: 10px;
-    border-left: 3px solid transparent;
-    transition: border-left-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 body.index-page .news-card:hover {
-    border-left-color: var(--ix-brand);
     transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body.index-page[data-theme="dark"] .news-card {
+    background: var(--ix-bg-card);
 }
 
 body.index-page[data-theme="dark"] .news-card:hover {
@@ -1842,12 +1909,12 @@ body.index-page .news-link {
     height: 100%;
 }
 
-/* Sender: amber JetBrains Mono text, no pill background */
+/* Sender: brand-colored Inter text, no pill background */
 body.index-page .sender-pill {
     background: transparent;
     border: none;
     color: var(--ix-brand);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0;
@@ -1855,7 +1922,7 @@ body.index-page .sender-pill {
 }
 
 body.index-page .card-title {
-    font-family: 'Garnett', sans-serif;
+    font-family: var(--font-main);
     font-weight: 600;
     font-size: 1.0rem;
     color: var(--ix-text);
@@ -1864,7 +1931,7 @@ body.index-page .card-title {
 }
 
 body.index-page .card-preview {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.76rem;
     color: var(--ix-muted);
     line-height: 1.5;
@@ -1877,7 +1944,7 @@ body.index-page .arrow {
 
 body.index-page .date {
     color: var(--ix-muted);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.72rem;
 }
 
@@ -1898,30 +1965,10 @@ body.index-page mark {
     padding: 0 2px;
 }
 
-/* ── Featured card (full-width at ≥900px) ── */
+/* ── Grid columns at ≥900px ── */
 @media (min-width: 900px) {
     body.index-page .news-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    body.index-page .ix-featured {
-        grid-column: 1 / -1;
-        border-left: 4px solid var(--ix-brand);
-    }
-
-    body.index-page .ix-featured .news-link {
-        flex-direction: row;
-        gap: 32px;
-        align-items: flex-start;
-    }
-
-    body.index-page .ix-featured .card-title {
-        font-size: 1.35rem;
-    }
-
-    body.index-page .ix-featured .card-preview {
-        font-size: 0.82rem;
-        max-width: 520px;
     }
 }
 
@@ -1977,7 +2024,7 @@ body.index-page mark {
 }
 
 .lf-chip {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.64rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -2009,7 +2056,7 @@ body.index-page mark {
 }
 
 .sp-title {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.60rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -2026,7 +2073,7 @@ body.index-page mark {
 }
 
 .sp-grid kbd {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.68rem;
     background: rgba(106, 231, 200, 0.08);
     border: 1px solid rgba(106, 231, 200, 0.2);
@@ -2038,7 +2085,272 @@ body.index-page mark {
 }
 
 .sp-grid span {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-main);
     font-size: 0.68rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .sp-grid kbd {
+    color: var(--accent-primary);
+    background: rgba(10, 170, 142, 0.08);
+    border-color: rgba(10, 170, 142, 0.2);
+}
+
+/* ============================================================
+   GI-TOPNAV — Common Navigation Bar (Archive ↔ Handbook)
+   ============================================================ */
+
+.gi-topnav {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+    transition: background var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.gi-topnav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.gi-topnav-links {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+    align-items: center;
+}
+
+.gi-topnav-link {
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.gi-topnav-link:hover,
+.gi-topnav-link.active {
+    color: var(--accent-primary);
+    background: rgba(10, 170, 142, 0.06);
+}
+
+[data-theme="dark"] .gi-topnav-link:hover,
+[data-theme="dark"] .gi-topnav-link.active {
+    color: var(--accent-mint);
+    background: rgba(106, 231, 200, 0.06);
+}
+
+/* Index page: full-width sticky nav, scoped overrides */
+body.index-page .gi-topnav {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    background: var(--ix-bg-card);
+    border-bottom-color: var(--ix-border);
+}
+
+body.index-page .gi-topnav-link {
+    color: var(--ix-muted);
+}
+
+body.index-page .gi-topnav-link:hover,
+body.index-page .gi-topnav-link.active {
+    color: var(--ix-brand);
+    background: var(--ix-brand-dim);
+}
+
+/* Index page container: no top padding since nav is above it */
+body.index-page .container {
+    padding-top: 0;
+}
+
+/* ============================================================
+   VIEWER LAYOUT — Column Flex (Nav row + Body row)
+   ============================================================ */
+
+/* Override: viewer-layout becomes a column to fit nav above main+sidebar */
+.viewer-layout {
+    flex-direction: column;
+}
+
+/* Wrapper for viewer-main + viewer-sidebar */
+.viewer-body-row {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Sidebar height: controlled by flex parent now, not 100vh */
+.viewer-body-row .viewer-sidebar {
+    height: auto;
+}
+
+/* Viewer nav: no sticky needed inside overflow:hidden column flex */
+.viewer-layout .gi-topnav {
+    background: var(--bg-glass);
+    border-bottom-color: var(--border-color);
+}
+
+/* ============================================================
+   VIEWER SIDEBAR — Softened Style
+   ============================================================ */
+
+/* Link cards: softer radius + design-system border */
+.link-card-v2 {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+/* Card header: neutral card background instead of terminal header */
+.card-v2-header {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+[data-theme="dark"] .card-v2-header {
+    background: var(--bg-card);
+}
+
+/* Stat grid: more generous spacing */
+.stat-grid {
+    gap: 10px;
+    padding: 14px;
+}
+
+.stat-cell {
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+/* Tab bar: Inter font for cleaner look (less terminal) */
+.tab-btn {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Link filter chips: fix light-mode visibility */
+.lf-chip {
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   SIDEBAR OVERFLOW — prevent horizontal scroll from text in flex/grid cells
+   ============================================================ */
+
+/* Sidebar content: never allow horizontal overflow */
+.viewer-layout .sidebar-content {
+    overflow-x: hidden;
+}
+
+/* stat-cell and sc-value: constrain width in grid */
+.stat-cell {
+    min-width: 0;
+}
+
+.sc-value {
+    min-width: 0;
+}
+
+/* ============================================================
+   SIDEBAR HEADER — Column layout (fixes overlap of 3 flex items)
+   ============================================================ */
+
+.viewer-layout .sidebar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 12px 16px 10px;
+}
+
+.sh-signal {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--vw-mint, #6AE7C8);
+    line-height: 1;
+    margin-bottom: 4px;
+    opacity: 0.9;
+}
+
+.sh-sender {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    line-height: 1.35;
+}
+
+.sh-tagline {
+    font-size: 0.66rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    line-height: 1;
+}
+
+/* ============================================================
+   HOMEPAGE STATS — Inter fallback (Garnett not loaded via GFonts)
+   ============================================================ */
+
+body.index-page .ix-stat-num {
+    font-family: 'Garnett', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+body.index-page .ix-stats-band {
+    padding: 20px 0;
+}
+
+/* ============================================================
+   HOMEPAGE CARDS — Crisp hover + featured card polish
+   ============================================================ */
+
+body.index-page .news-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] body.index-page .news-card:hover {
+    box-shadow: 0 8px 24px rgba(106, 231, 200, 0.08);
+}
+
+
+/* ============================================================
+   VIEWER TOPNAV — Softer on dark theme
+   ============================================================ */
+
+.viewer-layout .gi-topnav {
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--blur-strength));
+    -webkit-backdrop-filter: blur(var(--blur-strength));
+}
+
+/* Viewer nav links: adapt to viewer context */
+.viewer-layout .gi-topnav-link {
+    color: var(--text-secondary);
+}
+
+.viewer-layout .gi-topnav-link:hover {
+    color: var(--vw-mint, #6AE7C8);
+    background: var(--vw-mint-dim, rgba(106, 231, 200, 0.07));
 }

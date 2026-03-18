@@ -10,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) {
         searchInput.addEventListener('input', filterList);
     }
+
+    // Watch emailFrame class changes (setMode adds/removes no-scrollbar)
+    // so scrollbar CSS inside the iframe stays in sync with the mode
+    const emailFrame = document.getElementById('emailFrame');
+    if (emailFrame) {
+        new MutationObserver(() => {
+            const doc = emailFrame.contentDocument;
+            if (doc && doc.head) {
+                const theme = document.body.getAttribute('data-theme') || 'light';
+                _applyIframeScrollbar(emailFrame, doc, theme);
+            }
+        }).observe(emailFrame, { attributes: true, attributeFilter: ['class'] });
+    }
 });
 
 function applyTheme(theme) {
@@ -20,13 +33,13 @@ function applyTheme(theme) {
     const frame = document.getElementById('emailFrame');
     if (frame) {
         const doc = frame.contentDocument;
-        if (doc) {
+        if (doc && doc.head) {
             const styleId = 'dm-filter';
             let oldStyle = doc.getElementById(styleId);
             if (oldStyle) oldStyle.remove();
 
             if (theme === 'dark') {
-                doc.body.setAttribute('data-theme', 'dark');
+                if (doc.body) doc.body.setAttribute('data-theme', 'dark');
                 const style = doc.createElement('style');
                 style.id = styleId;
                 // Smart Inversion
@@ -36,9 +49,40 @@ function applyTheme(theme) {
                 `;
                 doc.head.appendChild(style);
             } else {
-                doc.body.setAttribute('data-theme', 'light');
+                if (doc.body) doc.body.setAttribute('data-theme', 'light');
             }
+
+            _applyIframeScrollbar(frame, doc, theme);
         }
+    }
+}
+
+/* Inject scrollbar CSS into the iframe document.
+   hide=true  → scrollbar hidden but content still scrollable (mobile/tablet)
+   hide=false → thin themed scrollbar (desktop) */
+function _applyIframeScrollbar(frameEl, doc, theme) {
+    if (!doc || !doc.head) return;
+    const hide = frameEl.classList.contains('no-scrollbar');
+    const styleId = 'sb-style';
+    let sbStyle = doc.getElementById(styleId);
+    if (!sbStyle) {
+        sbStyle = doc.createElement('style');
+        sbStyle.id = styleId;
+        doc.head.appendChild(sbStyle);
+    }
+    if (hide) {
+        sbStyle.innerHTML = `
+            html, body { scrollbar-width: none !important; overflow-y: auto !important; }
+            html::-webkit-scrollbar, body::-webkit-scrollbar { display: none !important; }
+        `;
+    } else {
+        const thumb = theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)';
+        sbStyle.innerHTML = `
+            html::-webkit-scrollbar { width: 6px; }
+            html::-webkit-scrollbar-track { background: transparent; }
+            html::-webkit-scrollbar-thumb { background: ${thumb}; border-radius: 3px; }
+            html { scrollbar-width: thin; scrollbar-color: ${thumb} transparent; }
+        `;
     }
 }
 
@@ -64,16 +108,39 @@ function updateThemeIcon(theme) {
 }
 
 /* Filtering Logic */
-let activeCrm = 'all';
+let activeCrms = new Set(); // empty = show all
 
-function filterByCrm(crm) {
-    activeCrm = crm;
-    document.querySelectorAll('.ix-chip').forEach(c => c.classList.remove('active'));
-    const btn = crm === 'all'
-        ? document.querySelector('.ix-chip-all')
-        : document.querySelector(`.ix-chip[data-crm="${CSS.escape(crm)}"]`);
-    if (btn) btn.classList.add('active');
-    filterList();
+document.addEventListener('DOMContentLoaded', () => {
+    const chipRow = document.getElementById('crmFilterRow');
+    if (chipRow) {
+        chipRow.addEventListener('click', e => {
+            const chip = e.target.closest('.ix-chip');
+            if (!chip) return;
+            const crm = chip.dataset.crm;
+            if (crm === 'all') {
+                activeCrms.clear();
+            } else {
+                if (activeCrms.has(crm)) {
+                    activeCrms.delete(crm);
+                } else {
+                    activeCrms.add(crm);
+                }
+            }
+            _updateChipActiveState();
+            filterList();
+        });
+    }
+});
+
+function _updateChipActiveState() {
+    document.querySelectorAll('.ix-chip').forEach(c => {
+        const crm = c.dataset.crm;
+        if (crm === 'all') {
+            c.classList.toggle('active', activeCrms.size === 0);
+        } else {
+            c.classList.toggle('active', activeCrms.has(crm));
+        }
+    });
 }
 
 function filterList() {
@@ -107,7 +174,7 @@ function filterList() {
             preview.toLowerCase().includes(filter)
         );
 
-        const crmMatch = activeCrm === 'all' || (item.dataset.crm || 'Unknown') === activeCrm;
+        const crmMatch = activeCrms.size === 0 || activeCrms.has(item.dataset.crm || 'Unknown');
 
         if ((!filter || matches) && crmMatch) {
             item.style.display = "";

@@ -21,32 +21,34 @@
         <div class="ix-blob ix-blob-mint"></div>
         <div class="ix-blob ix-blob-purple"></div>
     </div>
+
+    <nav class="gi-topnav">
+        <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+            <img src="assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+        </a>
+        <div class="gi-topnav-links">
+            <a href="index.html" class="gi-topnav-link active">Archive</a>
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme">
+            <svg class="icon icon-moon" viewBox="0 0 24 24">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </nav>
+
     <div class="container">
-        <header class="ix-header">
-            <div class="ix-logo-block">
-                <a href="index.html">
-                    <img src="assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img">
-                </a>
-            </div>
-            <div class="actions">
-                <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme">
-                    <svg class="icon icon-moon" viewBox="0 0 24 24">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </header>
 
         <!-- Stats Band -->
         <div class="ix-stats-band">
@@ -67,14 +69,15 @@
         </div>
 
         <!-- CRM Filter Chips -->
+        <div class="ix-section-label">Filtrer par CRM</div>
         <div class="ix-chip-row" id="crmFilterRow">
-            <button class="ix-chip ix-chip-all active" onclick="filterByCrm('all')">All</button>
+            <button class="ix-chip ix-chip-all active" data-crm="all">All</button>
             {% set seen = namespace(crms=[]) %}
             {% for email in emails %}
                 {% set crm = email.crm or 'Unknown' %}
                 {% if crm not in seen.crms %}
                     {% set seen.crms = seen.crms + [crm] %}
-                    <button class="ix-chip" data-crm="{{ crm }}" onclick="filterByCrm('{{ crm }}')">{{ crm }}</button>
+                    <button class="ix-chip" data-crm="{{ crm }}">{{ crm }}</button>
                 {% endif %}
             {% endfor %}
         </div>
@@ -110,7 +113,7 @@
                 No results found.
             </li>
             {% for email in emails %}
-            <li class="news-card glass{% if loop.first %} ix-featured{% endif %}" data-date="{{ email.date_obj }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
+            <li class="news-card glass" data-date="{{ email.date_obj }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
                 <a href="{{ email.id }}/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">{{ email.date_rec }}</span>
@@ -129,8 +132,9 @@
         </ul>
 
         <footer>
-            <p>&copy; 2025 <a href="https://github.com/benoit-prentout">Benoît Prentout</a>. <span
-                    data-i18n="footer_rights">All rights reserved.</span></p>
+            <p>Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>
+            · Studio : <a href="mailto:studio@getinside.fr">studio@getinside.fr</a></p>
+            <p>© 2026 getinside. Tous droits réservés.</p>
         </footer>
     </div>
     <script src="assets/js/main.js"></script>
