@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        [TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">MonJardinBio.com</span>
+                    <h1 class="vh-subject">[TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿</h1>
+                    <span class="vh-date">19/12/2025 à 14:18</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,474 +100,566 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">MonJardinBio.com</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">8</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">MonJardinBio.com</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="[TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿">[TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Epsiloon x MonJardinBio Le magazine scientifique pour voir le monde autrement : offre exclusive ! ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­...">Epsiloon x MonJardinBio Le magazine scientifique pour voir le monde autrement : offre exclusive ! ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">19/12/2025 à 14:18</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
-                    </div>
-                </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">12.7 KB</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (1)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">MonJardinBio.com</span>
                         </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/69314cdcb28f2</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/69314cdcb28f2')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="[TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿">[TEST] {prénom} découvrez Epsiloon pour 1€ seulement 🌿</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Epsiloon x MonJardinBio Le magazine scientifique pour voir le monde autrement : offre exclusive ! ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­...">Epsiloon x MonJardinBio Le magazine scientifique pour voir le monde autrement : offre exclusive ! ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">19/12/2025 à 14:18</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">12.7 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                    <div style="padding: 12px;">
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">api.getinside.media</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://api.getinside.media/v1/emails/track/69314cdcb28f2</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/69314cdcb28f2")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6945116f40f5f</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6945116f40f5f")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6945116f40f5f</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6945116f40f5f", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6945116f40f5f")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/69451179a7ae9</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69451179a7ae9")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/69451179a7ae9</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/69451179a7ae9", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69451179a7ae9")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/69314cdcb0a3f</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69314cdcb0a3f")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/69314cdcb0a3f</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/69314cdcb0a3f", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69314cdcb0a3f")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/69314cdcb0a3f</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69314cdcb0a3f")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE DÉCOUVRE EPSILOON POUR 1€</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/69314cdcb0a3f</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/69314cdcb0a3f", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69314cdcb0a3f")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/69450b3a91746</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69450b3a91746")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE M&#39;ABONNE À EPSILOON</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/69450b3a91746</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/69450b3a91746", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69450b3a91746")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6931cdd3c9ecc</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6931cdd3c9ecc")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">J&#39;OFFRE UN ABONNEMENT</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6931cdd3c9ecc</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6931cdd3c9ecc", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6931cdd3c9ecc")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">monjardinbio.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://www.monjardinbio.com/account/unsubscribe/preview</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://www.monjardinbio.com/account/unsubscribe/preview")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Se désabonner</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://www.monjardinbio.com/account/unsubscribe/preview</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://www.monjardinbio.com/account/unsubscribe/preview", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://www.monjardinbio.com/account/unsubscribe/preview")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-8">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/69451525d3b35</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69451525d3b35")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/69451525d3b35</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/69451525d3b35", 8)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/69451525d3b35")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-                
 
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (8)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6945116f40f5f</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6945116f40f5f', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6945116f40f5f')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/69451179a7ae9</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/69451179a7ae9', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/69451179a7ae9')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/69314cdcb0a3f</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/69314cdcb0a3f', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/69314cdcb0a3f')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">JE DÉCOUVRE EPSILOON POUR 1€</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/69314cdcb0a3f</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/69314cdcb0a3f', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/69314cdcb0a3f')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">JE M'ABONNE À EPSILOON</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/69450b3a91746</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/69450b3a91746', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/69450b3a91746')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">J'OFFRE UN ABONNEMENT</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6931cdd3c9ecc</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6931cdd3c9ecc', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6931cdd3c9ecc')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">monjardinbio.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Se désabonner</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://www.monjardinbio.com/account/unsubscribe/preview</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://www.monjardinbio.com/account/unsubscribe/preview', 7)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://www.monjardinbio.com/account/unsubscribe/preview')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(8)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">8</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/69451525d3b35</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/69451525d3b35', 8)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/69451525d3b35')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -568,18 +676,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n<html lang=\"fr\"><head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta charset=\"utf-8\"/>\n<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/>\n<meta name=\"x-apple-disable-message-reformatting\"/>\n<title>Epsiloon x MonJardinBio</title>\n<style>\r\n        /* Reset et styles de base */\r\n        body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f4f4f4; font-family: 'Helvetica', 'Arial', sans-serif; }\r\n        table, td { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }\r\n        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; display: block; }\r\n        \r\n        /* Couleurs de la charte */\r\n        .bg-body { background-color: #f4f4f4; }\r\n        .bg-white { background-color: #ffffff; }\r\n        .text-mjb { color: #435e1b; } /* Vert Mon Jardin Bio */\r\n        \r\n        /* Boutons */\r\n        .btn-primary {\r\n            background-color: #FEED2E; /* Jaune Epsiloon */\r\n            color: #000000;\r\n            font-weight: bold;\r\n            text-decoration: none;\r\n            padding: 15px 25px;\r\n            display: inline-block;\r\n            border-radius: 0px; /* Style carr\u00e9 Epsiloon */\r\n            text-transform: uppercase;\r\n            font-size: 16px;\r\n            letter-spacing: 0.5px;\r\n            mso-padding-alt: 0;\r\n            text-align: center;\r\n            border: 1px solid #e6d900;\r\n        }\r\n        \r\n        .btn-green {\r\n            background-color: #435e1b; \r\n            color: #ffffff;\r\n            border: none;\r\n        }\r\n\r\n        .btn-black {\r\n            background-color: #000000; \r\n            color: #FEED2E;\r\n            border: 1px solid #000000;\r\n        }\r\n        \r\n        /* Mobile */\r\n        @media only screen and (max-width: 600px) {\r\n            .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }\r\n            .mobile-stack { display: block !important; width: 100% !important; padding-bottom: 10px; }\r\n            .mobile-img { width: 100% !important; height: auto !important; }\r\n            .mobile-text-center { text-align: center !important; }\r\n            .testimonial-box { height: auto !important; margin-bottom: 15px !important; }\r\n        }\r\n    </style>\n</head>\n<body class=\"bg-body\">\n<div style=\"display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif\">Le magazine scientifique pour voir le monde autrement : offre exclusive !</div>\n<div style=\"display: none; max-height: 0px; overflow: hidden\">\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00a0</div>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"bg-body\" width=\"100%\">\n<tbody><tr>\n<td align=\"center\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"bg-white mobile-img\" style=\"margin-top: 20px; margin-bottom: 20px; max-width: 600px; box-shadow: 0px 2px 10px rgba(0,0,0,0.05);\" width=\"600\">\n<tbody><tr>\n<td align=\"center\" style=\"padding: 25px 20px; border-bottom: 1px solid #eeeeee;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"center\" style=\"font-size:0;\" valign=\"middle\">\n<a data-index=\"1\" href=\"https://gtinsi.de/6945116f40f5f\" style=\"text-decoration:none; border:0;\" target=\"_blank\">\n<img alt=\"MonJardinBio.com\" src=\"img_0.png\" style=\"display: inline-block; vertical-align: middle; border:0;\" width=\"140\"/>\n</a>\n<span style=\"font-size: 24px; color: #dddddd; margin: 0 15px; vertical-align: middle; font-weight:300; line-height:1;\">|</span>\n<a data-index=\"2\" href=\"https://gtinsi.de/69451179a7ae9\" style=\"text-decoration:none; border:0;\" target=\"_blank\">\n<img alt=\"Epsiloon\" src=\"img_1.png\" style=\"display: inline-block; vertical-align: middle; border:0;\" width=\"140\"/>\n</a>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"padding: 0;\">\n<a data-index=\"3\" href=\"https://gtinsi.de/69314cdcb0a3f\" style=\"text-decoration:none; border:0;\" target=\"_blank\">\n<img alt=\"D\u00e9couvrez Epsiloon\" class=\"mobile-img\" src=\"img_2.png\" style=\"display:block; border:0;\" width=\"600\"/>\n</a>\n</td>\n</tr>\n<tr>\n<td class=\"mobile-padding\" style=\"padding: 35px 40px 20px 40px; text-align: center;\">\n<h1 style=\"font-family: 'Helvetica', 'Arial', sans-serif; color: #435e1b; font-size: 22px; line-height: 1.4; margin: 0 0 20px 0;\">\r\n                                \ud83c\udf0d Offre exclusive : votre premier mois d'abonnement \u00e0 Epsiloon pour 1\u20ac seulement !\r\n                            </h1>\n<p style=\"font-size: 16px; line-height: 1.6; color: #333333; margin-bottom: 20px;\">\r\n                                Chez <strong>MonJardinBio.com</strong>, on conna\u00eet l'importance d'\u00e9couter la nature pour en comprendre ses m\u00e9canismes profonds et mieux la respecter au quotidien.\r\n                            </p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #333333; margin-bottom: 30px;\">\r\n                                C'est pourquoi nous avons le plaisir de vous faire d\u00e9couvrir <strong>Epsiloon</strong>, le magazine scientifique d'actualit\u00e9 ind\u00e9pendant qui explore le vivant et vous offre un nouveau regard sur le monde.\r\n                            </p>\n<p style=\"font-size: 18px; font-weight: bold; color: #000000; margin-bottom: 30px;\">\r\n                                Profitez d'une offre d\u00e9couverte \u00e0 1\u20ac le premier mois, sans engagement !\r\n                            </p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"center\">\n<a class=\"btn-primary\" data-index=\"4\" href=\"https://gtinsi.de/69314cdcb0a3f\" target=\"_blank\">\r\n                                            JE D\u00c9COUVRE EPSILOON POUR 1\u20ac\r\n                                        </a>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td class=\"mobile-padding\" style=\"padding: 30px 40px; background-color: #ffffff;\">\n<h2 style=\"font-size: 18px; color: #435e1b; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; font-weight:800;\">\r\n                                Pourquoi vous allez adorer Epsiloon ?\r\n                            </h2>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td style=\"font-size: 20px; padding-bottom:15px;\" valign=\"top\" width=\"30\">\ud83d\udd2c</td>\n<td style=\"padding-bottom: 15px; font-size: 15px; color: #333333; line-height: 1.5;\" valign=\"top\">\r\n                                        Des enqu\u00eates passionnantes sur les derni\u00e8res avanc\u00e9es scientifiques, la biodiversit\u00e9, les myst\u00e8res du vivant.\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 20px; padding-bottom:15px;\" valign=\"top\" width=\"30\">\u2728</td>\n<td style=\"padding-bottom: 15px; font-size: 15px; color: #333333; line-height: 1.5;\" valign=\"top\">\r\n                                        Des histoires originales et des rencontres avec les plus grands chercheurs.\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 20px; padding-bottom:15px;\" valign=\"top\" width=\"30\">\ud83d\udc4c</td>\n<td style=\"padding-bottom: 15px; font-size: 15px; color: #333333; line-height: 1.5;\" valign=\"top\">\r\n                                        Un ton clair, accessible\u2026 doubl\u00e9 d'un journalisme sinc\u00e8re et document\u00e9.\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 20px; padding-bottom:0px;\" valign=\"top\" width=\"30\">\ud83c\udf3f</td>\n<td style=\"padding-bottom: 0px; font-size: 15px; color: #333333; line-height: 1.5;\" valign=\"top\">\r\n                                        Une lecture qui se savoure comme un jardin : \u00e9clatante, surprenante, pleine de nuances.\r\n                                    </td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" class=\"mobile-padding\" style=\"padding: 40px; background-color: #FEED2E;\">\n<h3 style=\"margin-top:0; margin-bottom:20px; font-size: 18px; text-transform:uppercase;\">D\u00e9j\u00e0 35 000 abonn\u00e9s fid\u00e8les</h3>\n<img alt=\"Avis abonn\u00e9s Epsiloon\" src=\"img_3.png\" style=\"width:100%; max-width:520px; border:0;\" width=\"520\"/>\n</td>\n</tr>\n<tr>\n<td class=\"mobile-padding\" style=\"padding: 40px 40px;\">\n<h2 style=\"font-size: 18px; color: #435e1b; margin-top: 0; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; font-weight:800;\">\r\n                                Un abonnement pour nourrir votre passion du vivant\r\n                            </h2>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td style=\"font-size: 18px; color: #435e1b;\" valign=\"top\" width=\"30\">\u2705</td>\n<td style=\"padding-bottom: 10px; font-size: 16px; color: #333333;\" valign=\"top\">\n<strong>1 num\u00e9ro chaque mois</strong> comme une plong\u00e9e dans l'actualit\u00e9\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 18px; color: #435e1b;\" valign=\"top\" width=\"30\">\u2705</td>\n<td style=\"padding-bottom: 10px; font-size: 16px; color: #333333;\" valign=\"top\">\n<strong>1 hors s\u00e9rie chaque trimestre</strong> centr\u00e9 sur un sujet cl\u00e9\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 18px; color: #435e1b;\" valign=\"top\" width=\"30\">\u2705</td>\n<td style=\"padding-bottom: 10px; font-size: 16px; color: #333333;\" valign=\"top\">\r\n                                        Acc\u00e8s illimit\u00e9 \u00e0 tous les anciens articles\r\n                                    </td>\n</tr>\n<tr>\n<td style=\"font-size: 18px; color: #435e1b;\" valign=\"top\" width=\"30\">\u2705</td>\n<td style=\"padding-bottom: 0; font-size: 16px; color: #333333;\" valign=\"top\">\r\n                                        Offre sans engagement, r\u00e9siliable \u00e0 tout moment\r\n                                    </td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td class=\"mobile-padding\" style=\"padding: 0 40px 40px 40px; text-align: center;\">\n<p style=\"font-size: 18px; font-style: italic; color: #555555; margin-bottom: 20px;\">\r\n                                \"Comme un jardin, la curiosit\u00e9 se cultive. Avec Epsiloon, elle se nourrit chaque mois.\"\r\n                            </p>\n<p style=\"font-size: 16px; color: #000000; font-weight: bold; margin-bottom: 25px;\">\r\n                                \ud83c\udf89 Profitez vite de votre offre d\u00e9couverte \u00e0 1\u20ac le premier mois !\r\n                            </p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"center\">\n<a class=\"btn-primary btn-green\" data-index=\"5\" href=\"https://gtinsi.de/69450b3a91746\" style=\"color: #ffffff !important; text-decoration: none;\" target=\"_blank\">\r\n                JE M'ABONNE \u00c0 EPSILOON\r\n            </a>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td class=\"mobile-padding\" style=\"padding: 30px 40px; background-color: #FEED2E; text-align: center;\">\n<p style=\"font-size: 16px; line-height: 1.5; color: #000000; margin: 0 0 20px 0;\">\r\n                                \ud83c\udf81 <strong>Et \u00e0 l'occasion des f\u00eates de fin d'ann\u00e9e</strong>, offrez \u00e0 vos proches jusqu\u2019\u00e0 deux ans de journalisme scientifique ind\u00e9pendant \u2013 vous avez bien en t\u00eate quelqu'un \u00e0 qui cela peut faire plaisir ?\r\n                            </p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"center\">\n<a class=\"btn-primary btn-black\" data-index=\"6\" href=\"https://gtinsi.de/6931cdd3c9ecc\" style=\"color: #ffffff !important; text-decoration: none;\" target=\"_blank\">\r\n                J'OFFRE UN ABONNEMENT\r\n            </a>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"padding: 30px 20px; background-color: #333333; color: #aaaaaa; font-size: 12px; line-height: 1.5;\">\n<a data-index=\"7\" href=\"https://www.monjardinbio.com/account/unsubscribe/preview\" style=\"color: inherit;\" target=\"_blank\">Se d\u00e9sabonner</a>\n<p style=\"font-size: 10px; color: #777777; margin: 0 0 30px 0; line-height: 1.4;\">\r\n                                MonJardinBio.com est \u00e9dit\u00e9 par SYNERGIE 360<br/>\r\n                                26 rue de Colmar - 68420 EGUISHEIM<br/>\r\n                                RCS Colmar TI 513 281 816\r\n                            </p>\n<a data-index=\"8\" href=\"https://gtinsi.de/69451525d3b35\" style=\"text-decoration:none; border:0;\" target=\"_blank\">\n<img alt=\"GetInside\" src=\"img_4.png\" style=\"border:0; display:inline-block; opacity:0.6;\" width=\"80\"/>\n</a>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody></table>\n<img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</body></html>\n";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/6945116f40f5f", "final_url": "https://www.monjardinbio.com/", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6945116f40f5f"}, {"status": 200, "url": "https://www.monjardinbio.com/"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/69451179a7ae9", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69451179a7ae9"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/69314cdcb0a3f", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69314cdcb0a3f"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 4, "txt": "JE D\u00c9COUVRE EPSILOON POUR 1\u20ac", "original_url": "https://gtinsi.de/69314cdcb0a3f", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69314cdcb0a3f"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 5, "txt": "JE M'ABONNE \u00c0 EPSILOON", "original_url": "https://gtinsi.de/69450b3a91746", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69450b3a91746"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 6, "txt": "J'OFFRE UN ABONNEMENT", "original_url": "https://gtinsi.de/6931cdd3c9ecc", "final_url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6931cdd3c9ecc"}, {"status": 200, "url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 7, "txt": "Se d\u00e9sabonner", "original_url": "https://www.monjardinbio.com/account/unsubscribe/preview", "final_url": "https://www.monjardinbio.com/account/unsubscribe/preview", "domain": "monjardinbio.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.monjardinbio.com/account/unsubscribe/preview"}], "audit_date": "2026-02-10 16:45:41"}, {"index": 8, "txt": "", "original_url": "https://gtinsi.de/69451525d3b35", "final_url": "https://www.getinside.fr/", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69451525d3b35"}, {"status": 200, "url": "https://www.getinside.fr/"}], "audit_date": "2026-02-10 16:45:41"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/6945116f40f5f", "final_url": "https://www.monjardinbio.com/", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6945116f40f5f"}, {"status": 200, "url": "https://www.monjardinbio.com/"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/69451179a7ae9", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69451179a7ae9"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/69314cdcb0a3f", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69314cdcb0a3f"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 4, "txt": "JE D\u00c9COUVRE EPSILOON POUR 1\u20ac", "original_url": "https://gtinsi.de/69314cdcb0a3f", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69314cdcb0a3f"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 5, "txt": "JE M'ABONNE \u00c0 EPSILOON", "original_url": "https://gtinsi.de/69450b3a91746", "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69450b3a91746"}, {"status": 200, "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 6, "txt": "J'OFFRE UN ABONNEMENT", "original_url": "https://gtinsi.de/6931cdd3c9ecc", "final_url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6931cdd3c9ecc"}, {"status": 200, "url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 7, "txt": "Se d\u00e9sabonner", "original_url": "https://www.monjardinbio.com/account/unsubscribe/preview", "final_url": "https://www.monjardinbio.com/account/unsubscribe/preview", "domain": "monjardinbio.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.monjardinbio.com/account/unsubscribe/preview"}], "audit_date": "2026-03-18 11:08:01"}, {"index": 8, "txt": "", "original_url": "https://gtinsi.de/69451525d3b35", "final_url": "https://www.getinside.fr/", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/69451525d3b35"}, {"status": 200, "url": "https://www.getinside.fr/"}], "audit_date": "2026-03-18 11:08:01"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -597,10 +736,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -792,8 +931,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -844,8 +983,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -875,6 +1021,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -942,6 +1093,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -1031,6 +1185,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -1039,6 +1226,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

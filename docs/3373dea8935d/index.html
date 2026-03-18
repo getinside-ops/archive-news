@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        Ça a changé ma vie 💛
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">Joseph de MieuxQueDesFleurs</span>
+                    <h1 class="vh-subject">Ça a changé ma vie 💛</h1>
+                    <span class="vh-date">22/12/2025 à 10:35</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,688 +100,820 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">Joseph de MieuxQueDesFleurs</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">12</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">Joseph de MieuxQueDesFleurs</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Ça a changé ma vie 💛">Ça a changé ma vie 💛</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="C'est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...">C'est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">22/12/2025 à 10:35</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Klaviyo</span>
-                    </div>
-                </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">34.3 KB</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (2)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">Joseph de MieuxQueDesFleurs</span>
                         </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/68e3d9e270be3</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/68e3d9e270be3')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Klaviyo</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="Ça a changé ma vie 💛">Ça a changé ma vie 💛</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="C&#39;est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...">C&#39;est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">22/12/2025 à 10:35</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">34.3 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                    <div style="padding: 12px;">
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">api.getinside.media</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://api.getinside.media/v1/emails/track/68e3d9e270be3</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/68e3d9e270be3")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://ctrk.klclick.com/o/01KD2T0YZEBTNS84XE8DTXGM0K</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/o/01KD2T0YZEBTNS84XE8DTXGM0K")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/o/01KD2T0YZEBTNS84XE8DTXGM0K</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/o/01KD2T0YZEBTNS84XE8DTXGM0K')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-8">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7", 8)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-9">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8", 9)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-10">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9", 10)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-11">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10", 11)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-12">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <span class="card-v2-domain">ctrk.klclick.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Vous pouvez vous désinscrire ici.</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11", 12)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-                
 
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (12)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6', 7)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(8)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">8</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7', 8)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(9)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">9</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8', 9)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(10)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">10</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9', 10)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(11)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">11</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10', 11)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(12)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">12</span>
-                            <span class="card-v2-domain">ctrk.klclick.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Vous pouvez vous désinscrire ici.</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11', 12)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -782,18 +930,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head>\n<title>\n</title>\n<!--[if !mso]><!-->\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<!--<![endif]-->\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>\n<!--[if mso]>\r\n        <noscript>\r\n        <xml>\r\n        <o:OfficeDocumentSettings>\r\n          <o:AllowPNG/>\r\n          <o:PixelsPerInch>96</o:PixelsPerInch>\r\n        </o:OfficeDocumentSettings>\r\n        </xml>\r\n        </noscript>\r\n        <![endif]-->\n<!--[if lte mso 11]>\r\n        <style type=\"text/css\" data-inliner=\"ignore\">\r\n          .mj-outlook-group-fix { width:100% !important; }\r\n        </style>\r\n        <![endif]-->\n<!--[if !mso]><!--><!--<![endif]-->\n<style>a:not([name]) {color:#4685d3;text-decoration:underline}\r\na:link {color:#4685d3;text-decoration:underline}\r\na:visited {color:#4685d3;text-decoration:underline}\r\na:active {color:#4685d3;text-decoration:underline}\r\na:hover {color:#4685d3;text-decoration:underline}</style><style>@import url(https://static-forms.klaviyo.com/fonts/api/v1/Qb2tyP/custom_fonts.css);\r\n#outlook a {\r\n    padding: 0\r\n    }\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    -webkit-text-size-adjust: 100%;\r\n    -ms-text-size-adjust: 100%\r\n    }\r\ntable, td {\r\n    border-collapse: collapse;\r\n    mso-table-lspace: 0;\r\n    mso-table-rspace: 0\r\n    }\r\nimg {\r\n    border: 0;\r\n    line-height: 100%;\r\n    outline: none;\r\n    text-decoration: none;\r\n    -ms-interpolation-mode: bicubic\r\n    }\r\np {\r\n    display: block;\r\n    margin: 13px 0\r\n    }\r\n@media only screen and (min-width: 480px) {\r\n    .mj-column-per-100 {\r\n        width: 100% !important;\r\n        max-width: 100%\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    div.kl-row.colstack div.kl-column {\r\n        display: block !important;\r\n        width: 100% !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    .component-wrapper .mob-no-spc {\r\n        padding-left: 0 !important;\r\n        padding-right: 0 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    td.kl-img-base-auto-width {\r\n        width: 100% !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    .kl-split-subblock.top .spacer, .kl-split-subblock.bottom .spacer {\r\n        padding: 0 !important\r\n        }\r\n    .kl-split-subblock.top .spacer {\r\n        padding-bottom: 9px !important\r\n        }\r\n    .kl-split-subblock.top {\r\n        display: table-header-group !important;\r\n        width: 100% !important\r\n        }\r\n    .kl-split-subblock.bottom {\r\n        display: table-footer-group !important;\r\n        width: 100% !important\r\n        }\r\n    }\r\n@media screen and (max-width: 480px) {\r\n    .kl-sl-stk {\r\n        display: block !important;\r\n        width: 100% !important;\r\n        padding: 0 0 9px !important;\r\n        text-align: center !important\r\n        }\r\n    .kl-sl-stk.lbls {\r\n        padding: 0 !important\r\n        }\r\n    .kl-sl-stk.spcblk {\r\n        display: none !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    td.mobile-only {\r\n        display: table-cell !important\r\n        }\r\n    div.mobile-only {\r\n        display: block !important\r\n        }\r\n    table.mobile-only {\r\n        display: table !important\r\n        }\r\n    .desktop-only {\r\n        display: none !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    .table-mobile-only {\r\n        display: table-cell !important;\r\n        max-height: none !important\r\n        }\r\n    .table-mobile-only.block {\r\n        display: block !important\r\n        }\r\n    .table-mobile-only.inline-block {\r\n        display: inline-block !important\r\n        }\r\n    .table-desktop-only {\r\n        max-height: 0 !important;\r\n        display: none !important;\r\n        mso-hide: all !important;\r\n        overflow: hidden !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    body.mce-content-body, /* NOTE: needed for internal tinymce styles */.kl-text > div, .kl-table-subblock > div, .kl-split-subblock > div {\r\n        font-size: 14px !important;\r\n        line-height: 1.3 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    h1 {\r\n        font-size: 40px !important;\r\n        line-height: 1.3 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    h2 {\r\n        font-size: 32px !important;\r\n        line-height: 1.3 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    h3 {\r\n        font-size: 24px !important;\r\n        line-height: 1.3 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    h4 {\r\n        font-size: 18px !important;\r\n        line-height: 1.3 !important\r\n        }\r\n    }\r\n@media only screen and (max-width: 480px) {\r\n    .root-container {\r\n        width: 100% !important\r\n        }\r\n    .root-container-spacing {\r\n        padding: 10px !important\r\n        }\r\n    .content-padding {\r\n        padding-left: 0 !important;\r\n        padding-right: 0 !important\r\n        }\r\n    .content-padding.first {\r\n        padding-top: 0 !important\r\n        }\r\n    .content-padding.last {\r\n        padding-bottom: 0 !important\r\n        }\r\n    .kl-column > .component-wrapper {\r\n        padding-left: 0 !important;\r\n        padding-right: 0 !important;\r\n        width: unset !important\r\n        }\r\n    .kl-text {\r\n        padding-right: 18px !important;\r\n        padding-left: 18px !important\r\n        }\r\n    }</style></head>\n<body style=\"word-spacing:normal;background-color:#FDF5F5;\">\n<div style=\"display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">\r\n      C'est comme \u00e7a que je les remercie.\u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad\r\n    </div>\n<!-- TRACKING_PIXEL_TOP -->\n<div class=\"root-container\" id=\"bodyTable\" style=\"background-position:left top; background-repeat:repeat; background-size:auto; background-color:#FDF5F5\">\n<div class=\"root-container-spacing\" style=\"font-size:0; padding-bottom:20px; padding-top:50px\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"kl-section\" role=\"presentation\" style=\"width:100%;\">\n<tbody>\n<tr>\n<td>\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"kl-section-outlook\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n<tbody>\n<tr>\n<td style=\"border-bottom:solid 1px #ECF4FF;border-left:solid 1px #ECF4FF;border-right:solid 1px #ECF4FF;border-top:solid 1px #ECF4FF;direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ECC45A\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ECC45A url(https://d3k81ch9hvuctc.cloudfront.net/company/Qb2tyP/images/2dc01d16-e7d4-40a4-a08c-a78c084dd15f.jpeg) center center / cover no-repeat;background-position:center center;background-repeat:no-repeat;background-size:cover;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;\">\n<div style=\"line-height:0;font-size:0;\">\n<table align=\"center\" background=\"https://d3k81ch9hvuctc.cloudfront.net/company/Qb2tyP/images/2dc01d16-e7d4-40a4-a08c-a78c084dd15f.jpeg\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ECC45A url(https://d3k81ch9hvuctc.cloudfront.net/company/Qb2tyP/images/2dc01d16-e7d4-40a4-a08c-a78c084dd15f.jpeg) center center / cover no-repeat;background-position:center center;background-repeat:no-repeat;background-size:cover;width:100%;border-radius:0px 0px 0px 0px;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><![endif]-->\n<div class=\"content-padding first last\" style=\"padding-left:0; padding-right:0; padding-top:0; padding-bottom:0\">\n<!--[if true]><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"598\" style=\"width:598px;direction:ltr\"><tr><![endif]-->\n<div class=\"kl-row colstack\" style=\"display:table;table-layout:fixed;width:100%;\">\n<!--[if true]><td style=\"vertical-align:top;width:598px;\"><![endif]-->\n<div class=\"kl-column\" style=\"display:table-cell;vertical-align:top;width:100%;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"kl-image\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0px 0px 0px 0px;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"1\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img src=\"img_0.jpg\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"kl-image\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0px 0px 0px 0px;width:598px;\" valign=\"top\">\n<img src=\"img_1.jpg\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" width=\"598\"/>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#ECC45A;vertical-align:top;padding-top:9px;padding-right:40px;padding-bottom:9px;padding-left:40px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" class=\"kl-split\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<div style=\"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;\"><!--[if true]><table role=\"presentation\" width=\"100%\" style=\"all:unset;opacity:0;\"><tr><![endif]-->\n<!--[if false]></td></tr></table><![endif]-->\n<div style=\"display:table;width:100%;\">\n<!--[if true]><td vertical-align=\"top\" width=\"70%\"><![endif]-->\n<!--[if !true]><!--><div class=\"kl-split-subblock top\" style=\"display:table-cell;vertical-align: top;width:70%\"><!--<![endif]-->\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"spacer\" style=\"padding-left:0px;padding-right:0px;\" vertical-align=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody><tr>\n<td>\n<div style=\"font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;\"><div style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\">Bonjour,\r\n<div>C\u2019est Joseph, Le fondateur de MieuxQueDesFleurs. Je voulais vous raconter une petite histoire personnelle.</div>\n<div>\u00a0</div>\n<div>Quand j\u2019\u00e9tais petit, je n\u2019habitais pas la France, et malgr\u00e9 \u00e7a, <span style=\"font-weight: bold;\">j\u2019entendais parler de l\u2019Op\u00e9ration Pi\u00e8ces Jaunes \u00e0 travers les magazines et la t\u00e9l\u00e9 qui arrivait jusque dans mon pays.</span> Quand je suis arriv\u00e9 en France, j\u2019ai commenc\u00e9 \u00e0 retirer ma tirelire \u00e0 La Poste pour moi aussi, participer \u00e0 cet \u00e9lan de solidarit\u00e9 national.</div>\n<div>\u00a0</div>\n</span></div></div>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody>\n</table>\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if true]></td><![endif]-->\n<!--[if true]><td vertical-align=\"top\" width=\"30%\"><![endif]-->\n<!--[if !true]><!--><div class=\"kl-split-subblock bottom\" style=\"display:table-cell;vertical-align: top;width:30%\"><!--<![endif]-->\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"spacer\" style=\"padding-left:0px;padding-right:0px;\" vertical-align=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody><tr>\n<td>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"left\" class=\"\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"2\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img alt=\"\" src=\"img_2.jpg\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" title=\"\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody>\n</table>\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if true]></td><![endif]-->\n</div>\n<!--[if true]></tr></table><![endif]--></div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#ECC45A;vertical-align:top;padding-top:9px;padding-right:38px;padding-bottom:9px;padding-left:38px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" class=\"kl-text\" style=\"font-size:0px;padding:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;\">\n<div style=\"font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;\"><div style=\"text-align: justify;\"><strong>Jamais de la vie, je ne pensais qu\u2019un jour, le b\u00e9n\u00e9ficiaire des pi\u00e8ces jaunes, \u00e7a serait moi.</strong> Lorsque j\u2019ai fr\u00e9quent\u00e9 les couloirs de l\u2019h\u00f4pital avec ma fille, j\u2019ai d\u00e9couvert tout ce que les pi\u00e8ces jaunes ont pu faire pour faciliter la vie des parents, et am\u00e9liorer le quotidien des enfants qui vivaient \u00e0 l\u2019h\u00f4pital. <strong>J\u2019ai compris que tous les dons servaient \u00e0 mettre des sourires sur le visage des enfants et donne une bouff\u00e9e d\u2019air frais aux parents.</strong></div></div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"kl-image\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0px 0px 0px 0px;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"3\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img src=\"img_3.jpg\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#ECC45A;vertical-align:top;padding-top:9px;padding-right:38px;padding-bottom:9px;padding-left:38px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" class=\"kl-text\" style=\"font-size:0px;padding:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;\">\n<div style=\"font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;\"><div style=\"text-align: justify;\">Partenaire de coeur, nous les soutenons depuis 2 ans, en glissant des tirelires dans nos colis et avec un peu de communication.\u00a0Et si vous aussi vous voulez faire bouger les lignes, <strong>je vous ai mis un bouton pour faire un don.\u00a0</strong></div></div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"kl-image\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0px 0px 0px 0px;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"4\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img src=\"img_4.gif\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#ECC45A;vertical-align:top;padding-top:9px;padding-right:40px;padding-bottom:9px;padding-left:40px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" class=\"kl-split\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<div style=\"font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;\"><!--[if true]><table role=\"presentation\" width=\"100%\" style=\"all:unset;opacity:0;\"><tr><![endif]-->\n<!--[if false]></td></tr></table><![endif]-->\n<div style=\"display:table;width:100%;\">\n<!--[if true]><td vertical-align=\"top\" width=\"60%\"><![endif]-->\n<!--[if !true]><!--><div class=\"kl-split-subblock top\" style=\"display:table-cell;vertical-align: top;width:60%\"><!--<![endif]-->\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"spacer\" style=\"padding-left:0px;padding-right:0px;\" vertical-align=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody><tr>\n<td>\n<div style=\"font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;\"><div style=\"text-align: justify;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-style: italic;\">Et en \u00e9change \u00a0je vous glisse une photo de ma t\u00eate avec Didier Deschamps, qui \u00e9tait venu nous rendre visite \u00e0 l\u2019h\u00f4pital pour le lancement de l\u2019op\u00e9ration Pi\u00e8ces Jaunes de 2023 (au saut du lit, sinon c\u2019est pas dr\u00f4le).\u00a0</span><br/>\n<div>\u00a0</div>\n</span></div></div>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody>\n</table>\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if true]></td><![endif]-->\n<!--[if true]><td vertical-align=\"top\" width=\"40%\"><![endif]-->\n<!--[if !true]><!--><div class=\"kl-split-subblock bottom\" style=\"display:table-cell;vertical-align: top;width:40%\"><!--<![endif]-->\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"spacer\" style=\"padding-left:0px;padding-right:0px;\" vertical-align=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody><tr>\n<td>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tbody><tr>\n<td align=\"left\" class=\"\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"5\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img alt=\"\" src=\"img_5.jpg\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" title=\"\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody></table>\n</td>\n</tr>\n</tbody>\n</table>\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if true]></td><![endif]-->\n</div>\n<!--[if true]></tr></table><![endif]--></div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background:#ECC45A;font-size:0px;word-break:break-word;\">\n<div style=\"height:40px;line-height:40px;\">\u200a</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr><td style=\"color:#222222;font-family:'Helvetica Neue',Arial;font-size:14px;line-height:1.3;\"><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></td></tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"kl-image\" style=\"font-size:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td class=\"kl-img-base-auto-width\" style=\"border:0;padding:0px 0px 0px 0px;background-color:#FFFFFF;width:598px;\" valign=\"top\">\n<a class=\"kl-img-link\" data-index=\"6\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5\" style=\"color:#4685d3; text-decoration:underline; display:block\">\n<img src=\"img_6.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; display:block; font-size:13px; width:100%\" width=\"598\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#ffffff;vertical-align:top;padding-top:12px;padding-right:9px;padding-bottom:12px;padding-left:9px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td>\n<div style=\"width:100%;text-align:center\">\n<!--[if true]><table style=\"all:unset;opacity:0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" ><tr><![endif]-->\n<!--[if !true]><!--><div class=\"\" style=\"display:inline-block;padding-right:10px;\"><!--<![endif]-->\n<!--[if true]><td style=\"padding-right:10px;\"><![endif]-->\n<div style=\"text-align: center;\">\n<a data-index=\"7\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6\" style=\"color:#4685d3; text-decoration:underline\" target=\"_blank\">\n<img alt=\"Custom\" src=\"img_7.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; width:30px\" width=\"30\"/>\n</a>\n</div>\n<!--[if true]></td><![endif]-->\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if !true]><!--><div class=\"\" style=\"display:inline-block;padding-right:10px;\"><!--<![endif]-->\n<!--[if true]><td style=\"padding-right:10px;\"><![endif]-->\n<div style=\"text-align: center;\">\n<a data-index=\"8\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7\" style=\"color:#4685d3; text-decoration:underline\" target=\"_blank\">\n<img alt=\"Custom\" src=\"img_8.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; width:30px\" width=\"30\"/>\n</a>\n</div>\n<!--[if true]></td><![endif]-->\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if !true]><!--><div class=\"\" style=\"display:inline-block;padding-right:10px;\"><!--<![endif]-->\n<!--[if true]><td style=\"padding-right:10px;\"><![endif]-->\n<div style=\"text-align: center;\">\n<a data-index=\"9\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8\" style=\"color:#4685d3; text-decoration:underline\" target=\"_blank\">\n<img alt=\"Custom\" src=\"img_9.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; width:30px\" width=\"30\"/>\n</a>\n</div>\n<!--[if true]></td><![endif]-->\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if !true]><!--><div class=\"\" style=\"display:inline-block;padding-right:10px;\"><!--<![endif]-->\n<!--[if true]><td style=\"padding-right:10px;\"><![endif]-->\n<div style=\"text-align: center;\">\n<a data-index=\"10\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9\" style=\"color:#4685d3; text-decoration:underline\" target=\"_blank\">\n<img alt=\"Button Text\" src=\"img_10.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; width:30px\" width=\"30\"/>\n</a>\n</div>\n<!--[if true]></td><![endif]-->\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if !true]><!--><div class=\"\" style=\"display:inline-block;\"><!--<![endif]-->\n<!--[if true]><td style=\"\"><![endif]-->\n<div style=\"text-align: center;\">\n<a data-index=\"11\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10\" style=\"color:#4685d3; text-decoration:underline\" target=\"_blank\">\n<img alt=\"Custom\" src=\"img_11.png\" style=\"border:0; height:auto; line-height:100%; max-width:100%; outline:none; text-decoration:none; width:32px\" width=\"32\"/>\n</a>\n</div>\n<!--[if true]></td><![endif]-->\n<!--[if !true]><!--></div><!--<![endif]-->\n<!--[if true]></tr></table><![endif]-->\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"background-color:#FFFFFF;vertical-align:top;padding-top:18px;padding-right:18px;padding-bottom:18px;padding-left:18px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<p style=\"margin-bottom:0; margin-left:0; margin-right:0; margin-top:0; padding-bottom:0; border-top:solid 1px #ECF4FF; font-size:1px; margin:0 auto; width:100%\">\n</p>\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 1px #ECF4FF;font-size:1px;margin:0px auto;width:562px;\" role=\"presentation\" width=\"562px\" ><tr><td style=\"height:0;line-height:0;\"> \u00a0\r\n</td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-text-table-layout\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" class=\"kl-text\" style=\"background:#ffffff;font-size:0px;padding:0px;padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;\">\n<div style=\"font-family:'Helvetica Neue',Arial;font-size:14px;font-style:normal;font-weight:400;letter-spacing:0px;line-height:1.3;text-align:left;color:#222222;\"><div>\u200b</div>\n<p style=\"margin-bottom:0; margin-left:0; margin-right:0; margin-top:0; padding-bottom:0; text-align:center\"><span style=\"font-size: 10px; color: rgb(108, 108, 108);\">Vous ne souhaitez plus recevoir nos emails<span style=\"color: rgb(254, 169, 192);\"> <span style=\"color: rgb(108, 108, 108);\">? <span style=\"color: rgb(255, 88, 77);\"><a data-index=\"12\" href=\"https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11\" style=\"color:#4685d3; text-decoration:underline\">Vous pouvez vous d\u00e9sinscrire ici.</a></span></span></span></span></p></div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"mj-column-per-100 mj-outlook-group-fix component-wrapper\" style=\"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\" width=\"100%\">\n<tbody>\n<tr>\n<td class=\"\" style=\"vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background:#FFFFFF;font-size:0px;word-break:break-word;\">\n<div style=\"height:20px;line-height:20px;\">\u200a</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<!--[if true]></td><![endif]-->\n</div>\n<!--[if true]></tr></table><![endif]-->\n</div>\n<!--[if mso | IE]></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<!--[if mso | IE]></td></tr></table></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<!-- TRACKING_PIXEL_BOTTOM -->\n<img alt=\"\" border=\"0\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></body></html>";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 2, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 3, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 4, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 5, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 6, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5", "final_url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5"}, {"status": 200, "url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 7, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6", "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6"}, {"status": 302, "url": "https://www.instagram.com/mieuxquedesfleurs/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 429, "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 8, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7", "final_url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7"}, {"status": 200, "url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 9, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8", "final_url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8"}, {"status": 200, "url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 10, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9", "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9"}, {"status": 302, "url": "https://www.facebook.com/mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 400, "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 11, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10", "final_url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10"}, {"status": 400, "url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-02-10 16:45:40"}, {"index": 12, "txt": "Vous pouvez vous d\u00e9sinscrire ici.", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11", "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11"}, {"status": 301, "url": "http://manage.kmail-lists.com/subscriptions/placeholder"}, {"status": 200, "url": "https://manage.kmail-lists.com/subscriptions/placeholder"}], "audit_date": "2026-02-10 16:45:40"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_0"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 2, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_1"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 3, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_2"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 4, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_3"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 5, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4", "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_4"}, {"status": 302, "url": "https://gtinsi.de/68e3d9e26f3a1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 200, "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-mieux-que-des-fleurs&utm_medium=email&utm_campaign=piecesjaunes2026"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 6, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5", "final_url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_5"}, {"status": 200, "url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 7, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6", "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_6"}, {"status": 302, "url": "https://www.instagram.com/mieuxquedesfleurs/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 429, "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 8, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7", "final_url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_7"}, {"status": 200, "url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 9, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8", "final_url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_8"}, {"status": 200, "url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 10, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9", "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_9"}, {"status": 302, "url": "https://www.facebook.com/mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}, {"status": 400, "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPi%25C3%25A8ces%2Bjaunes%2B-%2Bgetinside%2B%2B%252801KCPH4DMMBG45A8EY9YSTAFV6%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 11, "txt": "", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10", "final_url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_10"}, {"status": 400, "url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Pi%C3%A8ces%20jaunes%20-%20getinside%20%20%2801KCPH4DMMBG45A8EY9YSTAFV6%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"}], "audit_date": "2026-03-18 11:08:00"}, {"index": 12, "txt": "Vous pouvez vous d\u00e9sinscrire ici.", "original_url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11", "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder", "domain": "ctrk.klclick.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://ctrk.klclick.com/l/01KD2T0YZEBTNS84XE8DTXGM0K_11"}, {"status": 301, "url": "http://manage.kmail-lists.com/subscriptions/placeholder"}, {"status": 200, "url": "https://manage.kmail-lists.com/subscriptions/placeholder"}], "audit_date": "2026-03-18 11:08:00"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -811,10 +990,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -1006,8 +1185,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -1058,8 +1237,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -1089,6 +1275,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -1156,6 +1347,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -1245,6 +1439,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -1253,6 +1480,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
