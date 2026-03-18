@@ -64,7 +64,7 @@ Since email HTML is sandboxed in an iframe, link numbering badges are rendered i
 1. **Parser Changes**: When adding new metadata, update the `EmailParser` in `src/parser.py` first. Ensure the dictionary returned is compatible with Jinja2 expectations.
 2. **Template Updates**: Updates to `templates/viewer.html` must maintain the JS-based sidebar logic. Be careful with variable escaping when injecting JSON into script tags.
 3. **Asset Isolation**: All archived images MUST be saved to `docs/assets/` to ensure offline/long-term availability.
-4. **CSS Architecture**: Use the Dracula-inspired color palette defined in `src/assets/css/style.css`.
+4. **CSS Architecture**: Use the getinside Design System palette defined in `src/assets/css/style.css` and documented in `DESIGN-SYSTEM.md`. Key tokens: `#0aaa8e` brand primary (light), `#6AE7C8` mint accent, `#F7F6F3` light bg, `#1b1b1f` dark bg. After editing CSS, copy `src/assets/css/style.css` → `docs/assets/css/style.css`.
 
 ---
 
