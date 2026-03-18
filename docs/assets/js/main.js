@@ -64,6 +64,18 @@ function updateThemeIcon(theme) {
 }
 
 /* Filtering Logic */
+let activeCrm = 'all';
+
+function filterByCrm(crm) {
+    activeCrm = crm;
+    document.querySelectorAll('.ix-chip').forEach(c => c.classList.remove('active'));
+    const btn = crm === 'all'
+        ? document.querySelector('.ix-chip-all')
+        : document.querySelector(`.ix-chip[data-crm="${CSS.escape(crm)}"]`);
+    if (btn) btn.classList.add('active');
+    filterList();
+}
+
 function filterList() {
     const input = document.getElementById('searchInput');
     if (!input) return;
@@ -74,15 +86,42 @@ function filterList() {
     let visibleCount = 0;
 
     items.forEach(item => {
-        const title = item.querySelector('.card-title')?.textContent || "";
-        const sender = item.querySelector('.sender-pill')?.textContent || "";
+        const titleEl = item.querySelector('.card-title');
+        const senderEl = item.querySelector('.sender-pill');
+
+        // Restore original text before re-evaluating
+        if (titleEl && titleEl.dataset.original !== undefined) {
+            titleEl.innerHTML = titleEl.dataset.original;
+        }
+        if (senderEl && senderEl.dataset.original !== undefined) {
+            senderEl.innerHTML = senderEl.dataset.original;
+        }
+
+        const title = titleEl?.textContent || "";
+        const sender = senderEl?.textContent || "";
         const preview = item.querySelector('.card-preview')?.textContent || "";
 
-        if (title.toLowerCase().includes(filter) ||
+        const matches = filter && (
+            title.toLowerCase().includes(filter) ||
             sender.toLowerCase().includes(filter) ||
-            preview.toLowerCase().includes(filter)) {
+            preview.toLowerCase().includes(filter)
+        );
+
+        const crmMatch = activeCrm === 'all' || (item.dataset.crm || 'Unknown') === activeCrm;
+
+        if ((!filter || matches) && crmMatch) {
             item.style.display = "";
             visibleCount++;
+            if (filter && matches) {
+                if (titleEl) {
+                    if (titleEl.dataset.original === undefined) titleEl.dataset.original = titleEl.innerHTML;
+                    titleEl.innerHTML = _highlightText(titleEl.textContent, filter);
+                }
+                if (senderEl) {
+                    if (senderEl.dataset.original === undefined) senderEl.dataset.original = senderEl.innerHTML;
+                    senderEl.innerHTML = _highlightText(senderEl.textContent, filter);
+                }
+            }
         } else {
             item.style.display = "none";
         }
@@ -92,6 +131,14 @@ function filterList() {
     if (noResults) {
         noResults.style.display = visibleCount === 0 ? "block" : "none";
     }
+}
+
+function _highlightText(text, query) {
+    const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const safeText = esc(text);
+    const safeQuery = esc(query);
+    const regexQuery = safeQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return safeText.replace(new RegExp(`(${regexQuery})`, 'gi'), '<mark>$1</mark>');
 }
 
 /* Sorting Logic */
@@ -136,58 +183,6 @@ function copyToClipboard(text, btn) {
     }).catch(err => {
         console.error('Failed to copy: ', err);
     });
-}
-
-function copySource() {
-    const code = document.getElementById('sourceCode');
-    if (!code) return;
-    const btn = document.querySelector('.modal-actions .btn-copy-source');
-    copyToClipboard(code.textContent, btn);
-}
-
-/* Highlight Toggle Logic */
-let highlightsActive = false;
-function toggleHighlight() {
-    const frame = document.getElementById('emailFrame');
-    if (!frame) return;
-    const doc = frame.contentDocument;
-
-    highlightsActive = !highlightsActive;
-    const btn = document.getElementById('highlight-toggle');
-    if (btn) btn.classList.toggle('active', highlightsActive);
-
-    const styleId = 'hl-style';
-    if (highlightsActive) {
-        const style = doc.createElement('style');
-        style.id = styleId;
-        // Updated style for uniformity: normal weight, small caps or uniform lower, uniform padding
-        style.innerHTML = `
-            a { 
-                position: relative;
-                outline: 2px solid #ff0000 !important; 
-                cursor: help !important;
-            }
-            a::after {
-                content: attr(href);
-                position: absolute;
-                bottom: 100%; left: 0;
-                background: #222; color: #fff;
-                padding: 4px 6px;
-                font-size: 10px;
-                font-weight: 400; /* Normal weight */
-                font-family: monospace;
-                border-radius: 4px;
-                white-space: nowrap;
-                z-index: 9999;
-                pointer-events: none;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            }
-        `;
-        doc.head.appendChild(style);
-    } else {
-        const s = doc.getElementById(styleId);
-        if (s) s.remove();
-    }
 }
 
 /* Link Highlighting from Sidebar List */
