@@ -1358,40 +1358,6 @@ footer a:hover {
     font-size: 0;
 }
 
-/* Sidebar header — SIGNAL */
-.viewer-layout .sidebar-header {
-    padding: 14px 16px 12px;
-    border-bottom: 1px solid var(--vw-border, rgba(255, 255, 255, 0.07));
-    background: transparent;
-}
-
-.sh-signal {
-    font-family: 'Garnett', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--vw-mint, #6AE7C8);
-    letter-spacing: 0.1em;
-    line-height: 1.1;
-}
-
-.sh-sender {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    margin-top: 3px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.sh-tagline {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.62rem;
-    color: rgba(106, 231, 200, 0.35);
-    letter-spacing: 0.05em;
-    margin-top: 1px;
-}
-
 /* Tab bar */
 .tab-bar {
     display: flex;
@@ -1669,6 +1635,37 @@ body.index-page .logo-tagline {
     color: var(--ix-muted);
     margin: 0;
     letter-spacing: 0.04em;
+}
+
+/* getinside logo image */
+.gi-logo-img {
+    height: 32px;
+    display: block;
+    filter: brightness(0);
+    transition: filter var(--transition-fast);
+}
+
+[data-theme="dark"] .gi-logo-img {
+    filter: brightness(0) invert(1);
+}
+
+.gi-logo-sm {
+    height: 22px;
+}
+
+.gi-viewer-logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+/* Viewer theme transitions */
+.viewer-layout .viewer-main,
+.viewer-layout .viewer-sidebar,
+.vh-top-bar,
+.vh-subject-bar {
+    transition: background-color var(--transition-smooth);
 }
 
 /* ── Stats Band ── */
