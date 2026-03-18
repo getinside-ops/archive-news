@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        [TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">MonJardinBio.com</span>
+                    <h1 class="vh-subject">[TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁</h1>
+                    <span class="vh-date">28/11/2025 à 17:40</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,282 +100,334 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">MonJardinBio.com</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">4</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">MonJardinBio.com</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="[TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁">[TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="un geste solidaire qui compte pour nous 🙏 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ Chère Madame, Cher ...">un geste solidaire qui compte pour nous 🙏 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ Chère Madame, Cher ...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">28/11/2025 à 17:40</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
-                    </div>
-                </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">18.5 KB</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (1)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">MonJardinBio.com</span>
                         </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/69175371416ce</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/69175371416ce')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="[TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁">[TEST] Une initiative deNoël qui nous tient à cœur :découvrez-la 🎁</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="un geste solidaire qui compte pour nous 🙏 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ Chère Madame, Cher ...">un geste solidaire qui compte pour nous 🙏 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­ Chère Madame, Cher ...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">28/11/2025 à 17:40</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">18.5 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                    <div style="padding: 12px;">
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">api.getinside.media</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://api.getinside.media/v1/emails/track/69175371416ce</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/69175371416ce")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/691753713e2df</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/691753713e2df", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/691753713e2df</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/691753713e2df", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/691753713e2df</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/691753713e2df", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/691753713e2df</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/691753713e2df", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/691753713e2df")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-                
 
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (4)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/691753713e2df', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/691753713e2df')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/691753713e2df', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/691753713e2df')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/691753713e2df', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/691753713e2df')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/691753713e2df</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/691753713e2df', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/691753713e2df')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -376,18 +444,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head>\n<title></title>\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/>\n<style type=\"text/css\">#outlook a { padding:0; }\r\n          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }\r\n          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }\r\n          img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }\r\n          p { display:block;margin:13px 0; }</style>\n<!--[if mso]>\r\n        <noscript>\r\n        <xml>\r\n        <o:OfficeDocumentSettings>\r\n          <o:AllowPNG/>\r\n          <o:PixelsPerInch>96</o:PixelsPerInch>\r\n        </o:OfficeDocumentSettings>\r\n        </xml>\r\n        </noscript>\r\n        <![endif]--><style type=\"text/css\">@media only screen and (min-width:480px) {\r\n        .mj-column-per-100 { width:100% !important; max-width: 100%; }\r\n.mj-column-px-600 { width:600px !important; max-width: 600px; }\r\n.mj-column-px-400 { width:400px !important; max-width: 400px; }\r\n.mj-column-px-239 { width:239px !important; max-width: 239px; }\r\n.mj-column-px-226 { width:226px !important; max-width: 226px; }\r\n.mj-column-per-15 { width:15% !important; max-width: 15%; }\r\n.mj-column-per-30 { width:30% !important; max-width: 30%; }\r\n.mj-column-per-50 { width:50% !important; max-width: 50%; }\r\n      }</style>\n<style media=\"screen and (min-width:480px)\">.moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }\r\n.moz-text-html .mj-column-px-600 { width:600px !important; max-width: 600px; }\r\n.moz-text-html .mj-column-px-400 { width:400px !important; max-width: 400px; }\r\n.moz-text-html .mj-column-px-239 { width:239px !important; max-width: 239px; }\r\n.moz-text-html .mj-column-px-226 { width:226px !important; max-width: 226px; }\r\n.moz-text-html .mj-column-per-15 { width:15% !important; max-width: 15%; }\r\n.moz-text-html .mj-column-per-30 { width:30% !important; max-width: 30%; }\r\n.moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }</style>\n<style type=\"text/css\">@media only screen and (max-width:480px) {\r\n      table.mj-full-width-mobile { width: 100% !important; }\r\n      td.mj-full-width-mobile { width: auto !important; }\r\n    }</style>\n<style type=\"text/css\">@media (max-width:499px) { .hidden-m { display: none; display: none\r\n      !important; } } @media (min-width:499px) { .hidden-d { display: none;\r\n      display: none !important; } } @media only screen and (min-width:480px) {\r\n      .desktop-border { border-right: 1px solid #DA324B; } }</style>\n</head>\n<body style=\"word-spacing:normal;background-color:#DA324B;\">\n<div style=\"display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif\">un geste solidaire qui compte pour nous \ud83d\ude4f</div>\n<div style=\"display: none; max-height: 0px; overflow: hidden\">\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u2007\u034f\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00ad\u00a0</div>\n<div style=\"background-color:#DA324B;\">\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:middle;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:257px;\"><a data-index=\"1\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Logo PETITS FRERES DES PAUVRES, Non \u00e0 l'isolement de nos a\u00een\u00e9s\" height=\"auto\" src=\"img_0.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"257\"/></a></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"background:white;background-color:white;margin:0px auto;border-radius:30px;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:white;background-color:white;width:100%;border-radius:30px;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div class=\"mj-column-px-600 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:600px;\"><a data-index=\"2\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Offrez un colis de No\u00ebl pour un a\u00een\u00e9 isol\u00e9 et illuminez son r\u00e9veillon ! J'offre un colis\" height=\"auto\" src=\"img_1.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Ch\u00e8re Madame, Cher Monsieur,<br/><br/>Aujourd\u2019hui en France, <b>plus de 2 millions de personnes \u00e2g\u00e9es sont isol\u00e9es au quotidien</b>, pire encore, 750 000 ne voient jamais personne*.<br/><br/>Comme tout au long de l\u2019ann\u00e9e, les b\u00e9n\u00e9voles des Petits Fr\u00e8res des Pauvres s\u2019engagent partout en France pour faire oublier la solitude \u00e0 nos a\u00een\u00e9s.</div></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div class=\"hidden-m\">\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div class=\"mj-column-px-600 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:550px;\"><img alt=\"Et si vous les aidiez, \u00e0 l\u2019occasion de cette fin d\u2019ann\u00e9e ? Vous pouvez par exemple faire un don pour financer les colis gourmands que nos b\u00e9n\u00e9voles iront offrir aux a\u00een\u00e9s isol\u00e9s qui ne peuvent plus se d\u00e9placer.\" height=\"auto\" src=\"img_2.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"550\"/></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n</div>\n<div class=\"hidden-d\">\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;text-align:center;\">\n<div class=\"mj-column-px-400 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:350px;\"><img alt=\"Et si vous les aidiez, \u00e0 l\u2019occasion de cette fin d\u2019ann\u00e9e ? Vous pouvez par exemple faire un don pour financer les colis gourmands que nos b\u00e9n\u00e9voles iront offrir aux a\u00een\u00e9s isol\u00e9s qui ne peuvent plus se d\u00e9placer.\" height=\"auto\" src=\"img_3.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"350\"/></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n</div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Tous les ans pour No\u00ebl, nos \u00e9quipes pr\u00e9parent de belles compositions : entr\u00e9e, plat, dessert, petite douceur, boisson, cadeau\u2026 de quoi illuminer le r\u00e9veillon d\u2019une personne \u00e2g\u00e9e qui est seule\u00a0!</div></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div class=\"mj-column-px-239 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:239px;\"><a data-index=\"3\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"J'offre un colis\" height=\"auto\" src=\"img_4.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"239\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Votre g\u00e9n\u00e9rosit\u00e9 transformera la solitude d\u2019un a\u00een\u00e9 isol\u00e9 en un moment de joie r\u00e9confortant qui donne du baume au c\u0153ur\u00a0!</div></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div class=\"mj-column-px-226 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:226px;\"><a data-index=\"4\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Je fais un don\" height=\"auto\" src=\"img_5.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"226\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;font-weight:bold;line-height:24px;text-align:left;color:#393939;\">En cette p\u00e9riode de f\u00eates, je vous remercie d\u2019unir vos forces aux n\u00f4tres pour faire entrer de la douceur et de la joie au domicile d\u2019une ou de plusieurs personnes \u00e2g\u00e9es\u00a0!</div></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:left;\">\n<div class=\"mj-column-per-15 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody></tbody></table></td></tr></tbody></table></div>\n<div class=\"mj-column-per-30 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:180px;\"><img alt=\"\" height=\"auto\" src=\"img_6.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"180\"/></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:16px;line-height:20px;text-align:left;color:#571936;\">\n<b>Anne G\u00e9neau</b><br/>Pr\u00e9sidente<br/>Petits Fr\u00e8res des Pauvres</div></td></tr></tbody></table></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"right\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Helvetica;font-size:12px;line-height:14px;text-align:right;color:#ffffff;\"><i>*\u00c9tude CSA Research/Petits Fr\u00e8res des Pauvres, 2025</i></div></td></tr></tbody></table></div>\n</td></tr></tbody></table></div>\n<div style=\"height:60px;line-height:60px;\">\u200a</div>\n</div>\n<img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</body></html>\n";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-02-10 16:46:06"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-02-10 16:46:06"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-02-10 16:46:06"}, {"index": 4, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM%2FxEn09x7%2BG99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv%2BnzcXS5cHavXKx1brPUpZblWSQ%2B1UFhyjvGjKiYArhI5G3HfoC6Drs0g%3D%3D&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-02-10 16:46:06"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-03-18 09:29:30"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-03-18 09:29:30"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-03-18 09:29:30"}, {"index": 4, "txt": "", "original_url": "https://gtinsi.de/691753713e2df", "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/691753713e2df"}, {"status": 303, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"}, {"status": 200, "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"}], "audit_date": "2026-03-18 09:29:30"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -405,10 +504,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -600,8 +699,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -652,8 +751,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -683,6 +789,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -750,6 +861,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -839,6 +953,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -847,6 +994,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

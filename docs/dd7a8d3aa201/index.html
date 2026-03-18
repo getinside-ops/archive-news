@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</title>
+    <title>PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">benoit@getinside.fr</span>
+                    <h1 class="vh-subject">PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</h1>
+                    <span class="vh-date">08/01/2026 à 03:26</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,433 +100,515 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">benoit@getinside.fr</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">7</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">benoit@getinside.fr</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)">PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...">Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">08/01/2026 à 03:26</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
-                    </div>
-                </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">22.3 KB</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (1)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">benoit@getinside.fr</span>
                         </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/694a98b8910e8</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/694a98b8910e8')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)">PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...">Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">08/01/2026 à 03:26</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">22.3 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                    <div style="padding: 12px;">
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">api.getinside.media</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://api.getinside.media/v1/emails/track/694a98b8910e8</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/694a98b8910e8")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/694a98b88f1c5</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/694a98b88f1c5</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/694a98b88f1c5", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE PARIE &gt;</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE PARIE &gt;</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">J&#39;EN PROFITE</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">External Link</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
+                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg> HTTP</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">#</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "#")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">désinscrire ici</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">#</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "#", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "#")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462ebf4</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/695eaf462ebf4</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462ebf4", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-                
 
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (7)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/694a98b88f1c5</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/694a98b88f1c5', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/694a98b88f1c5')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/695eaf462d955', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/695eaf462d955')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">JE PARIE ></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/695eaf462d955', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/695eaf462d955')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">JE PARIE ></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/695eaf462d955', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/695eaf462d955')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">J'EN PROFITE</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/695eaf462d955', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/695eaf462d955')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">External Link</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path
-                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                        <line x1="12" y1="9" x2="12" y2="13" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg> HTTP</span>
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">désinscrire ici</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">#</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, '#', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, '#')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/695eaf462ebf4</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/695eaf462ebf4', 7)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/695eaf462ebf4')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -527,18 +625,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n\n<html dir=\"auto\" lang=\"und\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\">\n<head>\n<title>Parie sur la plus grande soir\u00e9e de football europ\u00e9en avec Betclic.</title>\n<!--[if !mso]><!-->\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<!--<![endif]-->\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>\n<style type=\"text/css\">\n    #outlook a {\n      padding: 0;\n    }\n\n    body {\n      margin: 0;\n      padding: 0;\n      -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n    }\n\n    table,\n    td {\n      border-collapse: collapse;\n      mso-table-lspace: 0pt;\n      mso-table-rspace: 0pt;\n    }\n\n    img {\n      border: 0;\n      height: auto;\n      line-height: 100%;\n      outline: none;\n      text-decoration: none;\n      -ms-interpolation-mode: bicubic;\n    }\n\n    p {\n      display: block;\n      margin: 13px 0;\n    }\n  </style>\n<!--[if mso]>\n    <noscript>\n    <xml>\n    <o:OfficeDocumentSettings>\n      <o:AllowPNG/>\n      <o:PixelsPerInch>96</o:PixelsPerInch>\n    </o:OfficeDocumentSettings>\n    </xml>\n    </noscript>\n    <![endif]-->\n<!--[if lte mso 11]>\n    <style type=\"text/css\">\n      .mj-outlook-group-fix { width:100% !important; }\n    </style>\n    <![endif]-->\n<!--[if !mso]><!-->\n<link href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap\" rel=\"stylesheet\" type=\"text/css\"/>\n<link href=\"https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&amp;display=swap\" rel=\"stylesheet\" type=\"text/css\"/>\n<style type=\"text/css\">\n    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap);\n    @import url(https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap);\n  </style>\n<!--<![endif]-->\n<style type=\"text/css\">\n    @media only screen and (min-width:480px) {\n      .mj-column-per-100 {\n        width: 100% !important;\n        max-width: 100%;\n      }\n\n      .mj-column-per-90 {\n        width: 90% !important;\n        max-width: 90%;\n      }\n\n      .mj-column-per-48 {\n        width: 48% !important;\n        max-width: 48%;\n      }\n\n      .mj-column-per-4 {\n        width: 4% !important;\n        max-width: 4%;\n      }\n    }\n  </style>\n<style media=\"screen and (min-width:480px)\">\n    .moz-text-html .mj-column-per-100 {\n      width: 100% !important;\n      max-width: 100%;\n    }\n\n    .moz-text-html .mj-column-per-90 {\n      width: 90% !important;\n      max-width: 90%;\n    }\n\n    .moz-text-html .mj-column-per-48 {\n      width: 48% !important;\n      max-width: 48%;\n    }\n\n    .moz-text-html .mj-column-per-4 {\n      width: 4% !important;\n      max-width: 4%;\n    }\n  </style>\n<style type=\"text/css\">\n    @media only screen and (max-width:479px) {\n      table.mj-full-width-mobile {\n        width: 100% !important;\n      }\n\n      td.mj-full-width-mobile {\n        width: auto !important;\n      }\n    }\n  </style>\n<style type=\"text/css\">\n    .cta-btn:hover a {\n      background-color: #b00029 !important;\n    }\n\n    .match-btn:hover a {\n      background-color: #e6bd00 !important;\n    }\n\n    @media (max-width:480px) {\n      .mobile-title div {\n        font-size: 34px !important;\n        line-height: 38px !important;\n      }\n    }\n  </style>\n</head>\n<body style=\"word-spacing:normal;background-color:#f5f5f5;\">\n<div style=\"display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">Jusqu\u2019\u00e0 100\u20ac revers\u00e9s en Feebets* - Parie sur la plus grande soir\u00e9e de football europ\u00e9en.</div>\n<div aria-label=\"Parie sur la plus grande soir\u00e9e de football europ\u00e9en avec Betclic.\" aria-roledescription=\"email\" dir=\"auto\" lang=\"und\" role=\"article\" style=\"background-color:#f5f5f5;\">\n<!-- HEADER -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#E10014\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#E10014;background-color:#E10014;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#E10014;background-color:#E10014;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:140px;\">\n<a data-index=\"1\" href=\"https://gtinsi.de/694a98b88f1c5\" target=\"_blank\">\n<img alt=\"Betclic\" height=\"auto\" src=\"img_0.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"140\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- HERO IMAGE (NOUVEAU GIF) + BANDEAU LEGAL -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#111111\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#111111;background-color:#111111;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#111111;background-color:#111111;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:600px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- Le GIF Hero -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:600px;\">\n<a data-index=\"2\" href=\"https://gtinsi.de/695eaf462d955\" target=\"_blank\">\n<img alt=\"Parie sur l'Europe - Jusqu'\u00e0 100\u20ac de Feebets rembours\u00e9s\" height=\"auto\" src=\"img_1.gif\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<!-- Le Bandeau Jaune (Coll\u00e9 juste en dessous) -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:600px;\">\n<img alt=\"Mentions l\u00e9gales jeux d'argent\" height=\"auto\" src=\"img_2.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\"/>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TITRE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;padding-bottom:25px;padding-left:20px;padding-right:20px;padding-top:35px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"mobile-title\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Teko, sans-serif;font-size:44px;font-weight:700;line-height:44px;text-align:center;text-transform:uppercase;color:#111111;\">UNE GRANDE SOIR\u00c9E EUROP\u00c9ENNE, PARIE SUR LA DERNI\u00c8RE JOURN\u00c9E !</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- BULLET POINTS (Emojis \u00c9clairs) -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:540px;\" ><![endif]-->\n<div class=\"mj-column-per-90 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"left\" style=\"font-size:0px;padding:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"color:#000000;font-family:Roboto, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;\" width=\"100%\">\n<!-- Item 1 -->\n<tr>\n<td style=\"width: 35px; vertical-align: top; padding-bottom: 15px; padding-top:2px;\">\n<span style=\"color: #E10014; font-size: 24px; line-height: 24px;\">\u26a1</span>\n</td>\n<td style=\"vertical-align: top; padding-bottom: 15px;\">\n<span style=\"font-family:Roboto, sans-serif; font-size:18px; line-height:24px; color:#111111;\">\n<strong style=\"font-weight:700;\">18 matchs</strong> en simultan\u00e9 </span>\n</td>\n</tr>\n<!-- Item 2 -->\n<tr>\n<td style=\"width: 35px; vertical-align: top; padding-bottom: 15px; padding-top:2px;\">\n<span style=\"color: #E10014; font-size: 24px; line-height: 24px;\">\u26a1</span>\n</td>\n<td style=\"vertical-align: top; padding-bottom: 15px;\">\n<span style=\"font-family:Roboto, sans-serif; font-size:18px; line-height:24px; color:#111111;\">\n<strong style=\"font-weight:700;\">7 clubs</strong> fran\u00e7ais </span>\n</td>\n</tr>\n<!-- Item 3 -->\n<tr>\n<td style=\"width: 35px; vertical-align: top; padding-bottom: 15px; padding-top:2px;\">\n<span style=\"color: #E10014; font-size: 24px; line-height: 24px;\">\u26a1</span>\n</td>\n<td style=\"vertical-align: top; padding-bottom: 15px;\">\n<span style=\"font-family:Roboto, sans-serif; font-size:18px; line-height:24px; color:#111111;\">\n<strong style=\"font-weight:700;\">Des stars</strong> au rendez-vous </span>\n</td>\n</tr>\n<!-- Item 4 -->\n<tr>\n<td style=\"width: 35px; vertical-align: top; padding-bottom: 15px; padding-top:2px;\">\n<span style=\"color: #E10014; font-size: 24px; line-height: 24px;\">\u26a1</span>\n</td>\n<td style=\"vertical-align: top; padding-bottom: 15px;\">\n<span style=\"font-family:Roboto, sans-serif; font-size:18px; line-height:24px; color:#111111;\">\n<strong style=\"font-weight:700;\">Goals \u00e0 gogo</strong> : parie et enjaille-toi sur la derni\u00e8re journ\u00e9e europ\u00e9enne ! </span>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- BLOC MATCHS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;padding-bottom:30px;padding-left:15px;padding-right:15px;padding-top:10px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><![endif]-->\n<!-- Match 1 : Paris vs Newcastle -->\n<!--[if mso | IE]><td class=\"\" style=\"vertical-align:top;width:273.6px;\" ><![endif]-->\n<div class=\"mj-column-per-48 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background-color:#fafafa;border:1px solid #e5e5e5;border-radius:8px;vertical-align:top;border-collapse:separate;padding:15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Teko, sans-serif;font-size:22px;font-weight:600;line-height:22px;text-align:center;text-transform:uppercase;color:#111111;\">PARIS SG <span style=\"color:#999999;\">vs</span> NEWCASTLE</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" class=\"match-btn\" style=\"font-size:0px;padding:10px 25px;padding-top:5px;padding-bottom:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:100%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#FFD200\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;height:35px;mso-padding-alt:0;background:#FFD200;\" valign=\"middle\">\n<a data-index=\"3\" href=\"https://gtinsi.de/695eaf462d955\" style=\"display:inline-block;background:#FFD200;color:#111111;font-family:Roboto, sans-serif;font-size:16px;font-weight:900;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:0;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> JE PARIE &gt; </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><![endif]-->\n<!-- Espaceur -->\n<!--[if mso | IE]><td class=\"\" style=\"vertical-align:top;width:22.8px;\" ><![endif]-->\n<div class=\"mj-column-per-4 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"font-size:0px;word-break:break-word;\">\n<div style=\"height:15px;line-height:15px;\">\u200a</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><![endif]-->\n<!-- Match 2 : Benfica vs Real Madrid -->\n<!--[if mso | IE]><td class=\"\" style=\"vertical-align:top;width:273.6px;\" ><![endif]-->\n<div class=\"mj-column-per-48 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background-color:#fafafa;border:1px solid #e5e5e5;border-radius:8px;vertical-align:top;border-collapse:separate;padding:15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Teko, sans-serif;font-size:22px;font-weight:600;line-height:22px;text-align:center;text-transform:uppercase;color:#111111;\">BENFICA <span style=\"color:#999999;\">vs</span> R. MADRID</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" class=\"match-btn\" style=\"font-size:0px;padding:10px 25px;padding-top:5px;padding-bottom:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:100%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#FFD200\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;height:35px;mso-padding-alt:0;background:#FFD200;\" valign=\"middle\">\n<a data-index=\"4\" href=\"https://gtinsi.de/695eaf462d955\" style=\"display:inline-block;background:#FFD200;color:#111111;font-family:Roboto, sans-serif;font-size:16px;font-weight:900;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:0;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> JE PARIE &gt; </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- CTA & MENTIONS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;padding-bottom:45px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:600px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"cta-btn\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:90%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#E10014\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 25px;background:#E10014;\" valign=\"middle\">\n<a data-index=\"5\" href=\"https://gtinsi.de/695eaf462d955\" style=\"display:inline-block;background:#E10014;color:#ffffff;font-family:Teko, sans-serif;font-size:30px;font-weight:700;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 25px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> J'EN PROFITE </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;word-break:break-word;\">\n<div style=\"font-family:Roboto, Arial, sans-serif;font-size:12px;font-style:italic;line-height:24px;text-align:center;color:#666666;\">*Montant de ton 1er pari revers\u00e9 en cr\u00e9dits de jeu non retirables s'il est perdant.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- FOOTER -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#111111\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#111111;background-color:#111111;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#111111;background-color:#111111;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Roboto, Arial, sans-serif;font-size:10px;line-height:14px;text-align:center;color:#999999;\">Cet email vous est envoy\u00e9 par Spacefoot.com.<br/> Si vous ne souhaitez plus recevoir nos offres exclusives, vous pouvez vous <a data-index=\"6\" href=\"#\" style=\"color: #cccccc; text-decoration: underline;\">d\u00e9sinscrire ici</a>.<br/> \u00a9 2026 Betclic est une marque d\u00e9pos\u00e9e. Tous droits r\u00e9serv\u00e9s.</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:20px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:80px;\">\n<a data-index=\"7\" href=\"https://gtinsi.de/695eaf462ebf4\" target=\"_blank\">\n<img alt=\"Getinside\" height=\"auto\" src=\"img_3.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"80\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<!-- Tracking Pixel --><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</div>\n</body>\n</html>";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/694a98b88f1c5", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/694a98b88f1c5"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 3, "txt": "JE PARIE >", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 4, "txt": "JE PARIE >", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 5, "txt": "J'EN PROFITE", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 6, "txt": "d\u00e9sinscrire ici", "original_url": "#", "final_url": "#", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "#"}], "audit_date": "2026-02-10 16:45:16"}, {"index": 7, "txt": "", "original_url": "https://gtinsi.de/695eaf462ebf4", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462ebf4"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-02-10 16:45:16"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/694a98b88f1c5", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/694a98b88f1c5"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 2, "txt": "", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 3, "txt": "JE PARIE >", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 4, "txt": "JE PARIE >", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 5, "txt": "J'EN PROFITE", "original_url": "https://gtinsi.de/695eaf462d955", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462d955"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 6, "txt": "d\u00e9sinscrire ici", "original_url": "#", "final_url": "#", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "#"}], "audit_date": "2026-03-18 09:28:41"}, {"index": 7, "txt": "", "original_url": "https://gtinsi.de/695eaf462ebf4", "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/695eaf462ebf4"}, {"status": 301, "url": "https://betclic.onelink.me/2887093520/e278g8xh"}, {"status": 403, "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"}], "audit_date": "2026-03-18 09:28:41"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -556,10 +685,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -751,8 +880,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -803,8 +932,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -834,6 +970,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -901,13 +1042,16 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 
@@ -990,6 +1134,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -998,6 +1175,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

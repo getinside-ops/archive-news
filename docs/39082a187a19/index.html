@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">Sophie d&#39;Ultra Premium Direct</span>
+                    <h1 class="vh-subject">Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺</h1>
+                    <span class="vh-date">04/12/2025 à 11:02</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,728 +100,870 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">Sophie d&#39;Ultra Premium Direct</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">13</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">Sophie d'Ultra Premium Direct</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺">Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="[Edition limitée] Dépêchez-vous, il n'en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s'associe au créateur de contenu et amo...">[Edition limitée] Dépêchez-vous, il n'en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s'associe au créateur de contenu et amo...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">04/12/2025 à 11:02</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
-                    </div>
-                </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">27.7 KB</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (1)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">Sophie d&#39;Ultra Premium Direct</span>
                         </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text text-green">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/open.aspx?ffcb10-fec1157875630d78-fe5f12747561017f741d-fe3a11717564047d761c74-ff9a1071-fe2215767363017f7c1677-ff63167974&d=500020&bmt=0</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/open.aspx?ffcb10-fec1157875630d78-fe5f12747561017f741d-fe3a11717564047d761c74-ff9a1071-fe2215767363017f7c1677-ff63167974&amp;d=500020&amp;bmt=0')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺">Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="[Edition limitée] Dépêchez-vous, il n&#39;en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s&#39;associe au créateur de contenu et amo...">[Edition limitée] Dépêchez-vous, il n&#39;en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s&#39;associe au créateur de contenu et amo...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">04/12/2025 à 11:02</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">27.7 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">13</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                    <div style="padding: 12px;">
+                        
+                        <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9; margin-bottom: 8px;">
+                            <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
+                                <span class="card-v2-index" style="background: var(--accent-green); color: #0C0D10;">P</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <span class="card-v2-tag"
+                                    style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
+                            </div>
+                            <div class="card-v2-body">
+                                <div class="card-v2-text text-green">Integration: OK</div>
+                                <div class="card-v2-url-zone">
+                                    <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/open.aspx?ffcb10-fec1157875630d78-fe5f12747561017f741d-fe3a11717564047d761c74-ff9a1071-fe2215767363017f7c1677-ff63167974&amp;d=500020&amp;bmt=0</code>
+                                    <button class="card-v2-copy-btn"
+                                        onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/open.aspx?ffcb10-fec1157875630d78-fe5f12747561017f741d-fe3a11717564047d761c74-ff9a1071-fe2215767363017f7c1677-ff63167974\u0026d=500020\u0026bmt=0")">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                         <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                                     </svg>
                                 </button>
                             </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">En savoir plus</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Commander le coffret</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Commander le coffret</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">En savoir plus</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">External Link</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
+                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg> HTTP</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">tel:0564250308</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "tel:0564250308")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">05.64.25.03.08</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">tel:0564250308</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "tel:0564250308", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "tel:0564250308")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-8">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <span class="card-v2-domain">External Link</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
+                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg> HTTP</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">mailto:contact@ultrapremiumdirect.com</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "mailto:contact@ultrapremiumdirect.com")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">contact@ultrapremiumdirect.com</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">mailto:contact@ultrapremiumdirect.com</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "mailto:contact@ultrapremiumdirect.com", 8)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "mailto:contact@ultrapremiumdirect.com")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-9">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b", 9)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-10">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5", 10)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-11">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2", 11)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-12">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e", 12)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-13">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(13)">13</span>
+                                <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Ne plus recevoir de mail de notre part</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170", 13)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-                
 
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (13)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">En savoir plus</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Commander le coffret</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Commander le coffret</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">En savoir plus</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">External Link</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path
-                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                        <line x1="12" y1="9" x2="12" y2="13" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg> HTTP</span>
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">05.64.25.03.08</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">tel:0564250308</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'tel:0564250308', 7)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'tel:0564250308')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(8)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">8</span>
-                            <span class="card-v2-domain">External Link</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path
-                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                        <line x1="12" y1="9" x2="12" y2="13" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg> HTTP</span>
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">contact@ultrapremiumdirect.com</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">mailto:contact@ultrapremiumdirect.com</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'mailto:contact@ultrapremiumdirect.com', 8)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'mailto:contact@ultrapremiumdirect.com')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(9)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">9</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b', 9)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(10)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">10</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5', 10)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(11)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">11</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2', 11)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(12)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">12</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e', 12)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(13)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">13</span>
-                            <span class="card-v2-domain">click.info.ultrapremiumdirect.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Ne plus recevoir de mail de notre part</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170', 13)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -822,18 +980,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n\n<html>\n<head>\n<meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0\" name=\"viewport\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<style type=\"text/css\">\r\n      ReadMsgBody{ width: 100%;}\r\n      .ExternalClass {width: 100%;}\r\n      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}\r\n      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}\r\n      p { margin: 1em 0;}\r\n      table td { border-collapse: collapse;}\r\n      img {outline:0;}\r\n      a img {border:none;}\r\n      @-ms-viewport{ width: device-width;}\r\n    </style>\n<style type=\"text/css\">\r\n      @media only screen and (max-width: 480px) {\r\n        .container {width: 100% !important;}\r\n        .footer { width:auto !important; margin-left:0; }\r\n        .mobile-hidden { display:none !important; }\r\n        .logo { display:block !important; padding:0 !important; }\r\n        img { max-width:100% !important; height:auto !important; max-height:auto !important;}\r\n        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}\r\n        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}\r\n        .drop { display:block !important; width: 100% !important; float:left; clear:both;}\r\n        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}\r\n        .nav4, .nav5, .nav6 { display: none !important; }\r\n        .tableBlock {width:100% !important;}\r\n        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }\r\n        .fluid, .fluid-centered {\r\n          width: 100% !important;\r\n          max-width: 100% !important;\r\n          height: auto !important;\r\n          margin-left: auto !important;\r\n          margin-right: auto !important;\r\n        }\r\n        .fluid-centered {\r\n          margin-left: auto !important;\r\n          margin-right: auto !important;\r\n        }\r\n        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */\r\nbody, .tb_properties{font-family: Arial !important; font-size: 16px !important; color: #393939 !important; line-height: 1.5 !important; padding: 0px !important; }.buttonstyles{font-family: Arial, helvetica, sans-serif !important; font-size: 14px !important; color: #FFFFFF !important; padding: 10px 15px !important; }h1{font-family: Arial !important; font-size: 22px !important; color: #202020 !important; line-height: 1 !important; }h2{font-family: Arial !important; font-size: 20px !important; color: #202020 !important; line-height: 1 !important; }h3{font-family: Arial !important; font-size: 18px !important; color: #202020 !important; line-height: 1 !important; }a:not(.buttonstyles){line-height: 1 !important; }.mobile-hidden{display: none !important; }.responsive-td {width: 100% !important;\r\n display: block !important; padding: 0 !important;}\r\n/* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */\r\n      }\r\n      @media only screen and (max-width: 640px) {\r\n        .container { width:100% !important; }\r\n        .mobile-hidden { display:none !important; }\r\n        .logo { display:block !important; padding:0 !important; }\r\n        .photo img { width:100% !important; height:auto !important;}\r\n        .nav5, .nav6 { display: none !important;}\r\n        .fluid, .fluid-centered {\r\n          width: 100% !important;\r\n          max-width: 100% !important;\r\n          height: auto !important;\r\n          margin-left: auto !important;\r\n          margin-right: auto !important;\r\n        }\r\n        .fluid-centered {\r\n          margin-left: auto !important;\r\n          margin-right: auto !important;\r\n        }\r\n      }\r\n    </style>\n<!--[if mso]>       <style type=\"text/css\">           /* Begin Outlook Font Fix */               body, table, td {                  font-family : Arial, helvetica, sans-serif;                  line-height : 150%;                  font-size : 16px;                  color : #515151;               }           /* End Outlook Font Fix */       </style>     <![endif]-->\n</head>\n<body bgcolor=\"#EEEEEE\" style=\"margin: 0px; -webkit-text-size-adjust:none;background-color : #EEEEEE; font-family : Arial, helvetica, sans-serif; line-height : 150%; font-size : 16px; color : #515151; padding : 0px; \" text=\"#808080\"><style type=\"text/css\">\r\ndiv.preheader \r\n{ display: none !important; } \r\n</style>\n<div class=\"preheader\" style=\"font-size: 1px; display: none !important;\">[Edition limit\u00e9e] D\u00e9p\u00eachez-vous, il n'en reste plus beaucoup !</div>\n<div style=\"font-size:0; line-height:0;\"><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></div>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tr>\n<td align=\"center\" valign=\"top\">\n</td>\n</tr>\n<tr>\n<td align=\"center\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"container\" width=\"600\">\n<tr>\n<td>\n<table bgcolor=\"#FFF9F5\" cellpadding=\"0\" cellspacing=\"0\" class=\"tb_properties border_style\" style=\"font-size : 16px; font-family : Arial, helvetica, sans-serif; color : #515151;background-color : #FFF9F5; border : 0px; line-height : 100%; \" width=\"100%\">\n<tr>\n<td align=\"center\" valign=\"top\">\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tr>\n<td class=\"content_padding\" style=\"border:0px;padding : 0px 0px 10px; \">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n<tr>\n<td align=\"left\" class=\"header\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"slot-styling\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 20px 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"slot-styling\" role=\"presentation\" style=\"border: 0px; background-color: #FFFAF5; min-width: 100%; \" width=\"100%\"><tr><td class=\"slot-styling camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\">\n<a data-index=\"1\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95\" title=\"Je d\u00e9couvre la box\"><img alt=\"\" data-assetid=\"182223\" src=\"img_0.gif\" style=\"display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;\" width=\"600\"/></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>\n</td>\n</tr>\n<tr>\n<td align=\"left\" class=\"\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"slot-styling\" role=\"presentation\" style=\"border: 0px; background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"slot-styling camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 0px 40px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><div style=\"text-align: center;\">\n<span style=\"font-size:17px;line-height:1.8\"><b>Le coffret parfait pour votre animal</b></span></div><p data-end=\"256\" data-start=\"154\" style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8;\">Ultra Premium Direct s'associe au cr\u00e9ateur de contenu et amoureux des animaux, <b>Mastu</b>, pour d\u00e9voiler une <b>\u00e9dition limit\u00e9e*</b> unique !</span></p><p style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8;\">Pens\u00e9 comme une v\u00e9ritable <b>exp\u00e9rience de complicit\u00e9</b>, c'est le coffret parfait pour g\u00e2ter votre chien ou votre chat. Il combine le meilleur de la nutrition Ultra Premium Direct et une s\u00e9lection de jouets et accessoires exclusifs, <b>imagin\u00e9s et co-cr\u00e9\u00e9s avec Mastu.</b></span><br/>\r\n\t\u00a0</p><p style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8;\">Une belle dose d\u2019amour, de gourmandise et de surprises pour renforcer chaque jour le lien avec votre animal. Mais attention, c'est une <b>\u00c9dition Limit\u00e9e</b> !</span></p><p style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8;\">Valeur r\u00e9elle des produits : <b>plus de\u00a050\u20ac</b><br/>\r\n\tPrix exceptionnel du coffret : <b>34,90\u20ac</b></span></p></td></tr></table></td></tr></table></td></tr></table>\n</td>\n</tr>\n<tr>\n<td align=\"left\" class=\"\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"slot-styling\" role=\"presentation\" style=\"border: 0px; background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"slot-styling camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 0px 0px 20px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\"><tr>\n<td bgcolor=\"#68A4B6\" class=\"innertd buttonblock\" style=\" border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; background-color: #68A4B6;\"><a class=\"buttonstyles\" data-index=\"2\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef\" style=\" font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #68A4B6; border: 0px solid #0176D3; padding: 10px 20px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;\" target=\"_blank\" title=\"Je d\u00e9couvre la box\">En savoir plus </a></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr>\n<td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 10px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td class=\"responsive-td\" style=\"width: 50%; padding-right: 3px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><img alt=\"\" data-assetid=\"182269\" src=\"img_1.jpg\" style=\"display: block; padding: 25px 0px 0px; text-align: center; height: auto; width: 100%; border: 0px;\" width=\"2000\"/></td></tr></table></td></tr></table></td>\n<td class=\"responsive-td\" style=\"width: 50%; padding-left: 3px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><div style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8\"><b>Coffret pour Chien\u00a0\ud83d\udc36</b><br/>\n<br/>\r\n\tVous y trouverez l'<b>huile de saumon Mastu</b>, deux \u00e9chantillons de <b>croquettes fabriqu\u00e9es sans c\u00e9r\u00e9ales</b> (poulet ou saumon frais), des <b>friandises articulation</b> et deux <b>toppers au poulet</b> pour transformer les repas en festin.<br/>\r\n\tC\u00f4t\u00e9 accessoires exclusifs co-cr\u00e9\u00e9s avec Mastu : un <b>jouet indestructible</b> id\u00e9al pour l'hygi\u00e8ne dentaire, une <b>peluche </b>robuste, un <b>tote bag </b>et un <b>gobelet personnalis\u00e9</b>.\u00a0</span></div></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 20px 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\"><tr>\n<td bgcolor=\"#68A4B6\" class=\"innertd buttonblock\" style=\" border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; background-color: #68A4B6;\"><a class=\"buttonstyles\" data-index=\"3\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e\" style=\" font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #68A4B6; border: 0px solid #6B9DB3; padding: 10px 20px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;\" target=\"_blank\" title=\"Je d\u00e9couvre la box\">Commander le coffret</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr>\n<td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 10px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td class=\"responsive-td\" style=\"width: 50%; padding-right: 3px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><div style=\"text-align: center;\">\n<span style=\"font-size:14px;line-height:1.8\"><b>Coffret pour Chat\u00a0\ud83d\udc31</b><br/>\n<br/>\r\n\tVous y trouverez l'<b>huile de saumon Mastu</b>, un \u00e9chantillon de <b>croquettes fabriqu\u00e9es sans c\u00e9r\u00e9ales</b> (poulet frais), des <b>friandises</b> au saumon<b> (anti-boules de poils),\u00a0</b>deux <b>sachets fra\u00eecheur </b>(saumon/cabillaud &amp; poulet/dinde)<b>, </b>des <b>friandises cr\u00e9meuses </b>et <b>2 bo\u00eetes d'\u00e9minc\u00e9s en sauce</b> (poulet &amp; veau).<br/>\r\n\tC\u00f4t\u00e9 accessoires exclusifs co-cr\u00e9\u00e9s avec Mastu : un <b>jouet interactif</b>, une <b>canne \u00e0 p\u00eache avec herbe \u00e0 chat</b>, des balles, un <b>tote bag </b>et un <b>gobelet personnalis\u00e9</b>.\u00a0</span></div></td></tr></table></td><td class=\"responsive-td\" style=\"width: 50%; padding-left: 3px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 25px 0px 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\">\n<img alt=\"\" data-assetid=\"182270\" src=\"img_2.jpg\" style=\"display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;\" width=\"2000\"/></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 20px 0px 25px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\"><tr>\n<td bgcolor=\"#68A4B6\" class=\"innertd buttonblock\" style=\" border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; background-color: #68A4B6;\"><a class=\"buttonstyles\" data-index=\"4\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40\" style=\" font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #68A4B6; border: 0px solid #0176D3; padding: 10px 20px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;\" target=\"_blank\" title=\"Je d\u00e9couvre la box\">Commander le coffret</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 10px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td class=\"responsive-td\" style=\"width: 50%; padding-right: 5px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding-bottom: 10px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\">\n<a data-index=\"5\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2\" title=\"\"><img alt=\"\" data-assetid=\"185068\" src=\"img_3.jpg\" style=\"display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;\" width=\"2000\"/></a></td></tr></table></td></tr></table></td>\n<td class=\"responsive-td\" style=\"width: 50%; padding-left: 5px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding-bottom: 10px; \">\u00a0<div style=\"line-height: 150%;\">\n</div>\u00a0<div style=\"line-height: 150%; text-align: center;\">\n<span style=\"font-size:14px;\"><b>Dites adieu aux boules de poils !\u00a0\u2728</b></span><br/>\r\n\t\u00a0</div><div style=\"line-height: 150%; text-align: center;\">\n<span style=\"font-size:14px;\">Offrez \u00e0 votre chat un moment de plaisir tout en <b>am\u00e9liorant son confort digestif</b>. D\u00e9couvrez en<b> \u00e9dition limit\u00e9e</b> nos friandises au saumon qui <b>raviront le corps et les papilles </b>de votre chat.</span></div></td></tr></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 6px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px 0px 10px; \"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\"><tr>\n<td bgcolor=\"#68A4B6\" class=\"innertd buttonblock\" style=\" border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; background-color: #68A4B6;\"><a class=\"buttonstyles\" data-index=\"6\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2\" style=\" font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; background-color: #68A4B6; border: 0px solid #0176D3; padding: 10px 20px; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;\" target=\"_blank\" title=\"En savoir plus\">En savoir plus</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr>\n</table><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width: 100%;\"><tr><td style=\"width: 25%; padding-right: 0px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\">\n<img alt=\"\" data-assetid=\"171692\" height=\"125\" src=\"img_4.png\" style=\"display: block; padding: 0px; text-align: center; height: 125px; width: 125px; border: 0px;\" width=\"125\"/></td></tr></table></td></tr></table></td><td style=\"width: 25%; padding-left: 0px; padding-right: 0px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><img alt=\"\" data-assetid=\"171693\" height=\"125\" src=\"img_5.png\" style=\"display: block; padding: 0px; text-align: center; height: 125px; width: 125px; border: 0px;\" width=\"125\"/></td></tr>\n</table></td></tr></table></td><td style=\"width: 25%; padding-left: 0px; padding-right: 0px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><img alt=\"\" data-assetid=\"171748\" height=\"125\" src=\"img_6.png\" style=\"display: block; padding: 0px; text-align: center; height: 125px; width: 125px; border: 0px;\" width=\"125\"/></td></tr></table></td></tr></table></td><td style=\"width: 25%; padding-left: 0px;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\">\n<table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\"><img alt=\"\" data-assetid=\"171695\" height=\"125\" src=\"img_7.png\" style=\"display: block; padding: 0px; text-align: center; height: 125px; width: 125px; border: 0px;\" width=\"125\"/></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>\n</td>\n</tr>\n<tr>\n<td align=\"left\" class=\"\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"slot-styling\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; \" width=\"100%\"><tr><td class=\"slot-styling camarker-inner\" style=\"padding: 0px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"min-width: 100%; \" width=\"100%\"><tr><td class=\"stylingblock-content-margin-cell\" style=\"padding: 0px 20px; \"><table cellpadding=\"0\" cellspacing=\"0\" class=\"stylingblock-content-wrapper\" role=\"presentation\" style=\"background-color: transparent; min-width: 100%; border-top: 1px solid #848487; border-right: 0px; border-bottom: 0px; border-left: 0px; \" width=\"100%\"><tr><td class=\"stylingblock-content-wrapper camarker-inner\" style=\"padding: 0px; \"><p style=\"text-align: center; line-height: 115%;\">\n</p><div style=\"text-align: center; line-height: 115%;\">\n<span style=\"font-size:13px;\">\n<span><b>Nos experts en nutrition vous r\u00e9pondent :</b></span><br/>\n<span>Au</span>\u00a0\r\n    <b>\n<a data-index=\"7\" href=\"tel:0564250308\" style=\"text-decoration: none; color: inherit;\">\r\n        05.64.25.03.08\r\n      </a>\n</b>\u00a0\r\n    <span>(num\u00e9ro non surtax\u00e9) ou par email \u00e0</span>\u00a0\r\n    <b>\n<a data-index=\"8\" href=\"mailto:contact@ultrapremiumdirect.com\" style=\"text-decoration: none; color: inherit;\">\r\n        contact@ultrapremiumdirect.com\r\n      </a>\n</b>\n</span>\n</div>\n<div style=\"text-align: center;\">\n<div style=\"width:300px;height:30px;background:none;margin:auto;padding:10px;text-align:center\">\n<a data-index=\"9\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b\" title=\"\"><img alt=\"Suivez-nous sur Instagram\" data-assetid=\"6804\" height=\"30\" src=\"img_8.png\" style=\"display:inline-block;margin-left:5px;margin-right:5px\" width=\"30\"/></a>\n<a data-index=\"10\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5\" title=\"\"><img alt=\"\" data-assetid=\"6803\" height=\"30\" src=\"img_9.png\" style=\"display:inline-block;margin-left:5px;margin-right:5px\" width=\"30\"/></a>\n<a data-index=\"11\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2\" title=\"\"><img alt=\"\" data-assetid=\"6805\" height=\"30\" src=\"img_10.png\" style=\"display:inline-block;margin-left:5px;margin-right:5px\" width=\"30\"/></a>\n<a data-index=\"12\" data-linkto=\"https://\" href=\"https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e\" title=\"\"><img alt=\"\" data-assetid=\"6806\" height=\"30\" src=\"img_11.png\" style=\"display:inline-block;margin-left:5px;margin-right:5px\" width=\"30\"/></a>\n</div>\n<div style=\"text-align: center; line-height: 115%;\">\n<span style=\"font-size:12px;\">Ultra Premium Direct - Agropole 3 Chemin du Saylat CS 30009 47901 AGEN CEDEX 9</span><br/><br/>\n<div style=\"text-align: center; line-height: 115%;\">\n<span style=\"font-size:12px;\">*Vous pouvez ajouter au maximum 5 coffrets cadeaux dans votre panier, chien et chat confondus.</span><br/><br/>\n<div style=\"text-align: center; line-height: 115%;\">\n<span style=\"font-size:10px;\"><a data-index=\"13\" data-linkto=\"other\" href=\"https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170\" style=\"color:#AE9973;text-decoration:underline;\" title=\"Ne plus recevoir de mail de notre part\">Ne plus recevoir de mail de notre part</a></span></div></div></div></div></td></tr></table></td></tr></table></td></tr></table>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n<tr>\n<td valign=\"top\">\n</td>\n</tr>\n</table>\n</body>\n</html>\n";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 2, "txt": "En savoir plus", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 3, "txt": "Commander le coffret", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 4, "txt": "Commander le coffret", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 5, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 6, "txt": "En savoir plus", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 7, "txt": "05.64.25.03.08", "original_url": "tel:0564250308", "final_url": "tel:0564250308", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "tel:0564250308"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 8, "txt": "contact@ultrapremiumdirect.com", "original_url": "mailto:contact@ultrapremiumdirect.com", "final_url": "mailto:contact@ultrapremiumdirect.com", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "mailto:contact@ultrapremiumdirect.com"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 9, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 10, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 11, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 12, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}, {"index": 13, "txt": "Ne plus recevoir de mail de notre part", "original_url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-02-10 16:45:52"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 2, "txt": "En savoir plus", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 3, "txt": "Commander le coffret", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 4, "txt": "Commander le coffret", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 5, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 6, "txt": "En savoir plus", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 7, "txt": "05.64.25.03.08", "original_url": "tel:0564250308", "final_url": "tel:0564250308", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "tel:0564250308"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 8, "txt": "contact@ultrapremiumdirect.com", "original_url": "mailto:contact@ultrapremiumdirect.com", "final_url": "mailto:contact@ultrapremiumdirect.com", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": "mailto:contact@ultrapremiumdirect.com"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 9, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 10, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 11, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 12, "txt": "", "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}, {"index": 13, "txt": "Ne plus recevoir de mail de notre part", "original_url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170", "final_url": "https://click.info.ultrapremiumdirect.com/expired.html", "domain": "click.info.ultrapremiumdirect.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170"}, {"status": 200, "url": "https://click.info.ultrapremiumdirect.com/expired.html"}], "audit_date": "2026-03-18 09:29:16"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -851,10 +1040,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -1046,8 +1235,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -1098,8 +1287,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -1129,6 +1325,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -1196,6 +1397,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -1285,6 +1489,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -1293,6 +1530,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

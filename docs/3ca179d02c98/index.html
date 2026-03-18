@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Sendinblue">Sendinblue</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">Fanny de Yooji</span>
+                    <h1 class="vh-subject">TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)</h1>
+                    <span class="vh-date">14/01/2026 à 10:51</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,687 +100,830 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">Fanny de Yooji</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">13</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">Fanny de Yooji</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)">TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...">Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">14/01/2026 à 10:51</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Sendinblue</span>
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">Fanny de Yooji</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Sendinblue</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)">TEST - Moins de charge mentale dans l’assiette (pour vous aussi 💛)</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...">Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">14/01/2026 à 10:51</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">42.6 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">13</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">42.6 KB</span>
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Je découvre HelloFresh</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Cliquez ici</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Je découvre l’offre HelloFresh</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-8">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW", 8)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-9">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ", 9)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-10">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl", 10)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-11">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843", 11)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-12">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1", 12)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-13">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(13)">13</span>
+                                <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Se désinscrire</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV", 13)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
-                <!-- Tracking Pixels -->
-                
-
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (13)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Je découvre HelloFresh</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Cliquez ici</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Je découvre l’offre HelloFresh</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77', 7)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(8)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">8</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW', 8)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(9)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">9</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ', 9)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(10)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">10</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl', 10)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(11)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">11</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843', 11)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(12)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">12</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1', 12)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(13)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">13</span>
-                            <span class="card-v2-domain">hfbd6.r.bh.d.sendibt3.com</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Se désinscrire</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV', 13)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -781,18 +940,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta content=\"telephone=no\" name=\"format-detection\"/><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/><title>Moins de charge mentale dans l\u2019assiette (pour vous aussi \ud83d\udc9b)</title><style emogrify=\"no\" type=\"text/css\">#outlook a { padding:0; } .ExternalClass { width:100%; } .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; } table td { border-collapse: collapse; mso-line-height-rule: exactly; } .editable.image { font-size: 0 !important; line-height: 0 !important; } .nl2go_preheader { display: none !important; mso-hide:all !important; mso-line-height-rule: exactly; visibility: hidden !important; line-height: 0px !important; font-size: 0px !important; } body { width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; } img { outline:none; text-decoration:none; -ms-interpolation-mode: bicubic; } a img { border:none; } table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } th { font-weight: normal; text-align: left; } *[class=\"gmail-fix\"] { display: none !important; } </style><style emogrify=\"no\" type=\"text/css\"> @media (max-width: 600px) { .gmx-killpill { content: ' \\03D1';} } </style><style emogrify=\"no\" type=\"text/css\">@media (max-width: 600px) { .gmx-killpill { content: ' \\03D1';} .r0-o { border-style: solid !important; margin: 0 auto 0 auto !important; width: 320px !important } .r1-i { background-color: #ffffff !important } .r2-o { border-style: solid !important; margin: 0 auto 0 auto !important; width: 100% !important } .r3-c { box-sizing: border-box !important; display: block !important; valign: top !important; width: 100% !important } .r4-o { border-style: solid !important; width: 100% !important } .r5-o { background-size: auto !important; border-style: solid !important; margin: 0 auto 0 auto !important; width: 100% !important } .r6-i { padding-bottom: 0px !important; padding-top: 0px !important } .r7-o { background-size: cover !important; border-style: solid !important; margin: 0 auto 0 auto !important; width: 100% !important } .r8-c { box-sizing: border-box !important; display: block !important; valign: middle !important; width: 100% !important } .r9-i { background-color: #3e6256 !important; padding-bottom: 20px !important; padding-left: 0px !important; padding-right: 0px !important } .r10-c { box-sizing: border-box !important; text-align: center !important; valign: top !important; width: 100% !important } .r11-o { border-style: solid !important; margin: 0 auto 0 auto !important; margin-bottom: 0px !important; margin-top: 0px !important; width: 100% !important } .r12-i { background-color: #3e6256 !important; padding-bottom: 5px !important; padding-left: 5px !important; padding-right: 5px !important; padding-top: 20px !important; text-align: center !important } .r13-c { box-sizing: border-box !important; text-align: center !important; width: 100% !important } .r14-o { border-style: solid !important; margin: 0 auto 0 auto !important; width: 50% !important } .r15-i { padding-bottom: 15px !important; padding-top: 15px !important } .r16-c { background-color: #3e6256 !important; box-sizing: border-box !important; padding-bottom: 5px !important; padding-left: 10px !important; padding-right: 10px !important; padding-top: 5px !important; text-align: left !important; valign: top !important; width: 100% !important } .r17-i { background-color: #789f90 !important; padding-bottom: 20px !important; padding-left: 0px !important; padding-right: 0px !important } .r18-i { background-color: #789f90 !important; padding-bottom: 5px !important; padding-left: 5px !important; padding-right: 5px !important; padding-top: 20px !important; text-align: center !important } .r19-c { background-color: #789f90 !important; box-sizing: border-box !important; padding-bottom: 5px !important; padding-left: 10px !important; padding-right: 10px !important; padding-top: 10px !important; text-align: left !important; valign: top !important; width: 100% !important } .r20-o { border-style: solid !important; margin: 0 auto 0 auto !important; margin-bottom: 15px !important; margin-top: 20px !important; width: 85% !important } .r21-i { text-align: center !important } .r22-r { background-color: #ffffff !important; border-radius: 500px !important; border-width: 0px !important; box-sizing: border-box; height: initial !important; padding-bottom: 12px !important; padding-top: 12px !important; text-align: center !important; width: 100% !important } .r23-i { background-color: #3e6256 !important; padding-left: 0px !important; padding-right: 0px !important } .r24-i { background-color: #3e6256 !important; padding-bottom: 10px !important; padding-left: 5px !important; padding-right: 5px !important; padding-top: 20px !important; text-align: center !important } .r25-c { background-color: #3e6256 !important; box-sizing: border-box !important; padding-bottom: 10px !important; padding-left: 10px !important; padding-right: 10px !important; padding-top: 10px !important; text-align: left !important; valign: top !important; width: 100% !important } .r26-c { box-sizing: border-box !important; text-align: left !important; valign: top !important; width: 100% !important } .r27-o { border-style: solid !important; margin: 0 auto 0 0 !important; width: 100% !important } .r28-i { background-color: #3e6256 !important; padding-bottom: 25px !important; padding-left: 8px !important; padding-right: 8px !important; padding-top: 20px !important; text-align: center !important } .r29-c { box-sizing: border-box !important; padding-bottom: 0px !important; padding-top: 0px !important; text-align: center !important; valign: top !important; width: 100% !important } .r30-c { background-color: #ffffff !important; box-sizing: border-box !important; padding-bottom: 20px !important; padding-left: 10px !important; padding-right: 10px !important; padding-top: 20px !important; text-align: left !important; valign: top !important; width: 100% !important } .r31-c { background-color: #ffffff !important; box-sizing: border-box !important; padding-bottom: 5px !important; padding-top: 5px !important; text-align: center !important; width: 100% !important } .r32-i { padding-bottom: 0px !important; padding-left: 15px !important; padding-right: 15px !important; padding-top: 5px !important } .r33-i { padding-left: 0px !important; padding-right: 0px !important } .r34-c { box-sizing: border-box !important; text-align: center !important; valign: top !important; width: 200px !important } .r35-o { background-size: auto !important; border-style: solid !important; margin: 0 auto 0 auto !important; width: 200px !important } .r36-i { background-color: #ffffff !important; padding-bottom: 0px !important; padding-left: 10px !important; padding-right: 10px !important; padding-top: 10px !important; text-align: center !important } .r37-i { font-size: 0px !important; padding-bottom: 5px !important; padding-left: 15px !important; padding-right: 15px !important; padding-top: 5px !important } .r38-c { box-sizing: border-box !important; width: 32px !important } .r39-o { border-style: solid !important; margin-right: 20px !important; width: 32px !important } .r40-i { padding-bottom: 5px !important; padding-top: 5px !important } .r41-o { border-style: solid !important; margin-right: 0px !important; width: 32px !important } .r42-c { box-sizing: border-box !important; text-align: center !important; valign: top !important; width: 320px !important } .r43-i { color: #3b3f44 !important; padding-bottom: 5px !important; padding-left: 15px !important; padding-right: 15px !important; padding-top: 0px !important } .r44-i { color: #3b3f44 !important; padding-left: 0px !important; padding-right: 0px !important } .r45-i { color: #3b3f44 !important; padding-bottom: 0px !important; padding-top: 10px !important; text-align: center !important } .r46-c { box-sizing: border-box !important; text-align: center !important; valign: middle !important; width: 100% !important } .r47-i { color: #3b3f44 !important; padding-bottom: 5px !important; padding-left: 0px !important; padding-right: 0px !important; padding-top: 0px !important } .r48-i { color: #3b3f44 !important; text-align: center !important } body { -webkit-text-size-adjust: none } .nl2go-responsive-hide { display: none } .nl2go-body-table { min-width: unset !important } .mobshow { height: auto !important; overflow: visible !important; max-height: unset !important; visibility: visible !important } .resp-table { display: inline-table !important } .magic-resp { display: table-cell !important } } </style><style type=\"text/css\">p, h1, h2, h3, h4, ol, ul, li { margin: 0; } .nl2go-default-textstyle { color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word } .default-button { color: #ffffff; font-family: arial,helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; line-height: 1.15; text-decoration: none; word-break: break-word } a, a:link { color: #0092ff; text-decoration: underline } .default-heading1 { color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 36px; font-weight: 400; word-break: break-word } .default-heading2 { color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 32px; font-weight: 400; word-break: break-word } .default-heading3 { color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 24px; font-weight: 400; word-break: break-word } .default-heading4 { color: #1F2D3D; font-family: arial,helvetica,sans-serif; font-size: 18px; font-weight: 400; word-break: break-word } a[x-apple-data-detectors] { color: inherit !important; text-decoration: inherit !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; } .no-show-for-you { border: none; display: none; float: none; font-size: 0; height: 0; line-height: 0; max-height: 0; mso-hide: all; overflow: hidden; table-layout: fixed; visibility: hidden; width: 0; } </style><!--[if mso]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]--><style type=\"text/css\">a:link{color: #0092ff; text-decoration: underline;}</style></head><body bgcolor=\"#ffffff\" link=\"#0092ff\" style=\"background-color: #ffffff;\" text=\"#3b3f44\" yahoo=\"fix\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"mso-hide:all; display:none;\">\n<tr><td>Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes.\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad\u200c \u00a0 \u00ad</td></tr></table> <!--[if mso]> <img width=\"1\" height=\"1\" src=\"https://hfbd6.r.bh.d.sendibt3.com/mk/op/sh/7nVTPdV22Tlmzom2MfrdXHOVQDHvZvt/6i0rWMbVh8N9\" /> <![endif]-->\n<!--[if !mso]> <!----> <img src=\"img_0.gif\" style=\"display:none\"/> <!-- <![endif]--> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"nl2go-body-table\" role=\"presentation\" style=\"background-color: #ffffff; width: 100%;\" width=\"100%\"><tr><td> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r0-o\" role=\"presentation\" style=\"table-layout: fixed; width: 600px;\" width=\"600\"><tr><td class=\"r1-i\" style=\"background-color: #ffffff;\" valign=\"top\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r5-o\" role=\"presentation\" style=\"table-layout: fixed; width: 600px;\" width=\"600\"><tr><td class=\"r6-i\" style=\"font-size: 0px; line-height: 0px;\"> <a data-index=\"1\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"0\" src=\"img_1.jpg\" style=\"display: block; width: 100%;\" width=\"600\"/></a> </td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r7-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r8-c\" style=\"background-color: #3e6256; font-weight: normal;\" valign=\"middle\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r9-i\" style=\"background-color: #3e6256; padding-bottom: 20px;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"left\" class=\"r10-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r11-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r12-i nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #3e6256; padding-bottom: 10px; padding-left: 5px; padding-right: 5px; padding-top: 25px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0;\"><span style=\"color: #FFFFFF; font-family: Arial; font-size: 20px;\"><strong>En 2026, on all\u00e8ge sa charge mentale pour les repas de toute la famille \ud83e\udde0</strong></span></p></div> </td> </tr></table></td> </tr><tr><td align=\"center\" class=\"r13-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r14-o\" role=\"presentation\" style=\"table-layout: fixed;\" width=\"150\"><tr><td class=\"r15-i\" style=\"padding-bottom: 10px; padding-top: 10px; height: 2px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r15-i\" height=\"2\" role=\"presentation\" style=\"border-top-style: solid; background-clip: border-box; border-top-color: #ffffff; border-top-width: 2px; font-size: 2px; line-height: 2px;\" width=\"100%\"><tr><td height=\"0\" style=\"font-size: 0px; line-height: 0px;\">\u00ad</td> </tr></table></td> </tr></table></td> </tr></table></td> </tr><tr><td align=\"left\" class=\"r16-c nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #3e6256; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px; text-align: left; valign: top;\"> <div><p id=\"isPasted\" style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">Chez Yooji, on le sait bien : quand on devient parent, <strong>penser \u00e0 tous les repas de la semaine</strong>, faire les courses, cuisiner\u2026 en plus de s\u2019occuper de b\u00e9b\u00e9, \u00e7a peut vite faire beaucoup \ud83e\udee0</span></p><p style=\"margin: 0;\"><br/></p><p style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">C\u2019est justement pour \u00e7a que nous avons cr\u00e9\u00e9 nos petites portions de pur\u00e9es et de prot\u00e9ines : en\u00a0<strong>2 minutes\u00a0</strong>le repas de b\u00e9b\u00e9 est pr\u00eat !<br/>Moins de stress, plus de temps pour l\u2019essentiel \u2764\ufe0f</span></p><p style=\"margin: 0;\"><br/></p><p style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">Et si on vous disait qu'il existe aussi une solution pour vous simplifier <strong>vo</strong><strong>s repas de parents</strong> ?</span></p></div> </td> </tr></table></td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r7-o\" role=\"presentation\" style=\"background-color: #789f90; table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r8-c\" style=\"background-color: #789f90; font-weight: normal;\" valign=\"middle\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r17-i\" style=\"background-color: #789f90; padding-bottom: 20px;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"left\" class=\"r10-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r11-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r18-i nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #789f90; padding-bottom: 10px; padding-left: 5px; padding-right: 5px; padding-top: 25px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0;\"><span style=\"font-size: 20px; color: rgb(255, 255, 255);\"><strong>\ud83c\udf7d\ufe0f D\u00e9couvrez HelloFresh, votre partenaire au quotidien</strong></span></p></div> </td> </tr></table></td> </tr><tr><td align=\"left\" class=\"r19-c nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #789f90; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 5px; text-align: left; valign: top;\"> <div><p id=\"isPasted\" style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">HelloFresh, ce sont des <strong>B</strong><strong>ox de repas livr\u00e9es chez vous</strong>, avec :</span></p><ul data-spread=\"false\" style=\"margin: 0;\"><li style=\"margin: 0; color: rgb(255, 255, 255);\"><p style=\"margin: 0;\">des <strong>recettes simples et vari\u00e9es</strong></p></li><li style=\"margin: 0; color: rgb(255, 255, 255);\"><p style=\"margin: 0;\">des <strong>ingr\u00e9dients frais d\u00e9j\u00e0 dos\u00e9s</strong></p></li><li style=\"margin: 0; color: rgb(255, 255, 255);\"><p style=\"margin: 0;\"><strong>z\u00e9ro courses</strong>, <strong>z\u00e9ro casse-t\u00eate de menus</strong></p></li></ul><p style=\"margin: 0;\"><br/></p><p style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">Un vrai coup de pouce pour all\u00e9ger la charge mentale et gagner du temps, surtout quand on a d\u00e9j\u00e0 beaucoup de choses \u00e0 penser.</span></p></div> </td> </tr><tr><td align=\"center\" class=\"r10-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r20-o\" role=\"presentation\" style=\"table-layout: fixed; width: 300px;\" width=\"300\"><tr class=\"nl2go-responsive-hide\"><td height=\"20\" style=\"font-size: 20px; line-height: 20px;\">\u00ad</td> </tr><tr><td align=\"center\" class=\"r21-i nl2go-default-textstyle\" height=\"18\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word;\" valign=\"top\"> <!--[if mso]> <v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/4-QV2JwWzD_Y\" style=\"v-text-anchor:middle; height: 41px; width: 299px;\" arcsize=\"50%\" fillcolor=\"#ffffff\" strokecolor=\"#ffffff\" strokeweight=\"1px\" data-btn=\"1\" sib_link_id=\"-2\" templating=\"n\"> <w:anchorlock> </w:anchorlock> <v:textbox inset=\"0,0,0,0\"> <div style=\"display:none;\"> <center class=\"default-button\"><span><strong id=\"isPasted\"><span data-placeholder-token=\"true\" style=\"color: rgb(62, 98, 86);\">Je d\u00e9couvre HelloFresh</span></strong></span></center> </div> </v:textbox> </v:roundrect> <![endif]--> <!--[if !mso]><!-- --> <a class=\"r22-r default-button\" data-btn=\"1\" data-index=\"2\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB\" sib_link_id=\"-2\" style=\"font-style: normal; font-weight: normal; line-height: 1.15; text-decoration: none; word-break: break-word; border-style: solid; word-wrap: break-word; display: block; -webkit-text-size-adjust: none; background-color: #ffffff; border-color: #ffffff; border-radius: 500px; border-width: 0px; color: #ffffff; font-family: arial,helvetica,sans-serif; font-size: 16px; height: 18px; mso-hide: all; padding-bottom: 12px; padding-top: 12px; width: 300px;\" target=\"_blank\" templating=\"n\"> <span><strong id=\"isPasted\"><span data-placeholder-token=\"true\" style=\"color: rgb(62, 98, 86);\">Je d\u00e9couvre HelloFresh</span></strong></span></a> <!--<![endif]--> </td> </tr><tr class=\"nl2go-responsive-hide\"><td height=\"15\" style=\"font-size: 15px; line-height: 15px;\">\u00ad</td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r5-o\" role=\"presentation\" style=\"table-layout: fixed; width: 600px;\" width=\"600\"><tr><td class=\"r6-i\" style=\"font-size: 0px; line-height: 0px;\"> <a data-index=\"3\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"1\" src=\"img_2.jpg\" style=\"display: block; width: 100%;\" width=\"600\"/></a> </td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r7-o\" role=\"presentation\" style=\"background-color: #3e6256; table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r8-c\" style=\"background-color: #3e6256; font-weight: normal;\" valign=\"middle\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r23-i\" style=\"background-color: #3e6256;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"left\" class=\"r10-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r11-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r24-i nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #3e6256; padding-bottom: 10px; padding-top: 25px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0;\"><span style=\"font-size: 20px;\"><strong><span style=\"color: rgb(255, 255, 255);\">\ud83c\udf81 Offre exclusive pour la communaut\u00e9 Yooji</span></strong></span></p></div> </td> </tr></table></td> </tr><tr><td align=\"left\" class=\"r25-c nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #3e6256; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; text-align: left; valign: top;\"> <div><p id=\"isPasted\" style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">Pour vous aider \u00e0 tester en douceur, HelloFresh vous r\u00e9serve :<strong>\u00a0jusqu\u2019\u00e0 95 \u20ac offerts sur vos 5 premi\u00e8res box + un dessert offert \u00e0 vie*.</strong></span></p><p style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\">De quoi se simplifier les repas, sans pression \ud83d\udc9b</span></p><p style=\"margin: 0;\"><span style=\"color: rgb(255, 255, 255);\"><a data-index=\"4\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6\" rel=\"noopener noreferrer\" sib_link_id=\"-2\" style=\"text-decoration: underline; color: rgb(255, 255, 255);\" target=\"_blank\" templating=\"n\" type=\"absoluteLink\"><strong><br/></strong></a></span></p><ol style=\"margin: 0; line-height: 150%;\"><li style=\"margin: 0; color: rgb(255, 255, 255);\"><a data-index=\"5\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor\" rel=\"noopener noreferrer\" sib_link_id=\"-2\" style=\"text-decoration: underline; color: rgb(255, 255, 255);\" target=\"_blank\" templating=\"n\" type=\"absoluteLink\"><strong>Cliquez ici</strong></a> pour activer votre offre (le code <strong><span style=\"color: rgb(232, 146, 124);\">YOOJIJAN26</span></strong> s\u2019applique automatiquement)</li><li style=\"margin: 0; color: rgb(255, 255, 255);\">Cr\u00e9ez votre Box sur-mesure en s\u00e9lectionnant le nombre de personnes et de repas</li><li style=\"margin: 0; color: rgb(255, 255, 255);\">Choisissez vos recettes</li><li style=\"margin: 0; color: rgb(255, 255, 255);\">Votre Box arrive chez vous la semaine suivante !</li></ol><p style=\"margin: 0;\"><br/></p><p style=\"margin: 0;\"><span id=\"isPasted\" style=\"color: rgb(255, 255, 255);\">Parce que bien manger, c\u2019est important\u2026 mais se faciliter la vie, \u00e7a l\u2019est tout autant.</span></p></div> </td> </tr><tr><td align=\"center\" class=\"r10-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r20-o\" role=\"presentation\" style=\"table-layout: fixed; width: 300px;\" width=\"300\"><tr class=\"nl2go-responsive-hide\"><td height=\"20\" style=\"font-size: 20px; line-height: 20px;\">\u00ad</td> </tr><tr><td align=\"center\" class=\"r21-i nl2go-default-textstyle\" height=\"18\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word;\" valign=\"top\"> <!--[if mso]> <v:roundrect xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PUm-KXGcrWHc\" style=\"v-text-anchor:middle; height: 41px; width: 299px;\" arcsize=\"50%\" fillcolor=\"#ffffff\" strokecolor=\"#ffffff\" strokeweight=\"1px\" data-btn=\"2\" sib_link_id=\"-2\" templating=\"n\"> <w:anchorlock> </w:anchorlock> <v:textbox inset=\"0,0,0,0\"> <div style=\"display:none;\"> <center class=\"default-button\"><span><strong id=\"isPasted\"><span data-placeholder-token=\"true\" style=\"color: rgb(62, 98, 86);\">Je d\u00e9couvre l\u2019offre HelloFresh</span></strong></span></center> </div> </v:textbox> </v:roundrect> <![endif]--> <!--[if !mso]><!-- --> <a class=\"r22-r default-button\" data-btn=\"2\" data-index=\"6\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_\" sib_link_id=\"-2\" style=\"font-style: normal; font-weight: normal; line-height: 1.15; text-decoration: none; word-break: break-word; border-style: solid; word-wrap: break-word; display: block; -webkit-text-size-adjust: none; background-color: #ffffff; border-color: #ffffff; border-radius: 500px; border-width: 0px; color: #ffffff; font-family: arial,helvetica,sans-serif; font-size: 16px; height: 18px; mso-hide: all; padding-bottom: 12px; padding-top: 12px; width: 300px;\" target=\"_blank\" templating=\"n\"> <span><strong id=\"isPasted\"><span data-placeholder-token=\"true\" style=\"color: rgb(62, 98, 86);\">Je d\u00e9couvre l\u2019offre HelloFresh</span></strong></span></a> <!--<![endif]--> </td> </tr><tr class=\"nl2go-responsive-hide\"><td height=\"15\" style=\"font-size: 15px; line-height: 15px;\">\u00ad</td> </tr></table></td> </tr><tr><td align=\"left\" class=\"r26-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r27-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r28-i nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; word-break: break-word; background-color: #3e6256; line-height: 1; padding-bottom: 25px; padding-left: 5px; padding-right: 5px; padding-top: 20px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0;\"><span style=\"color: #FFF;\"><strong>L\u2019\u00e9quipe Yooji \ud83d\udc9a</strong></span></p><p style=\"margin: 0;\"><br/></p><p style=\"margin: 0;\"><span style=\"color: #FFF;\"><span style=\"font-size: 12px;\">PS : cet email vous est envoy\u00e9 dans le cadre d\u2019un partenariat avec HelloFresh, une marque que nous avons choisie pour ses valeurs et son engagement \u00e0 simplifier le quotidien des familles.</span></span></p></div> </td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r7-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><th class=\"r8-c\" style=\"background-color: #3e6256; font-weight: normal;\" valign=\"middle\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r23-i\" style=\"background-color: #3e6256;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\" class=\"r29-c\" style=\"font-size: 0px; line-height: 0px; valign: top;\"> <a data-index=\"7\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"2\" src=\"img_3.jpg\" style=\"display: block; width: 100%;\" width=\"600\"/></a> </td> </tr><tr><td align=\"left\" class=\"r30-c nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; word-break: break-word; background-color: #ffffff; line-height: custom; padding-bottom: 20px; padding-left: 10px; padding-right: 10px; padding-top: 20px; text-align: left; valign: top;\"> <div><p style=\"margin: 0; line-height: 125%;\"><span style=\"font-size: 10px;\">*Conditions de l\u2019offre : pour toute souscription, jusqu\u2019\u00e0 95 \u20ac de r\u00e9duction sur vos 5 premi\u00e8res Box (jusqu'\u00e0 40\u20ac sur la 1\u00e8re, 20 \u20ac sur la 2\u00e8me, 15 \u20ac sur la 3\u00e8me et 10 \u20ac sur la 4\u00e8me et 5\u00e8me). Cette offre est valable pendant 9 semaines, \u00e0 compter de votre date de conversion. A d\u00e9faut d\u2019utilisation de votre r\u00e9duction pass\u00e9 ce d\u00e9lai, celle-ci ne sera plus valable. La premi\u00e8re r\u00e9duction de 40 \u20ac inclut les frais de livraison qui sont offerts pour la 1\u00e8re Box uniquement. Cette offre comprend \u00e9galement un extra de notre march\u00e9 HelloFresh offert chaque semaine parmi une s\u00e9lection de produits tant que l\u2019abonnement n\u2019est pas r\u00e9sili\u00e9. L\u2019ajout de cet extra ne se fait pas automatiquement mais doit \u00eatre fait par vos soins au moment du choix des recettes. HelloFresh se r\u00e9serve le droit de remplacer le produit choisi si jamais celui-ci n\u2019est plus disponible.Offre devant \u00eatre activ\u00e9e avant le 28/02/2026, offre r\u00e9serv\u00e9e aux nouveaux clients HelloFresh seulement, non cumulable avec d\u2019autres offres ou r\u00e9ductions, limit\u00e9e \u00e0 une par foyer et ne donnant droit \u00e0 aucun \u00e9change, ni remboursement du montant de la r\u00e9duction. Les abonn\u00e9.e.s HelloFresh re\u00e7oivent chaque semaine une Box mais l\u2019abonnement est flexible. Les abonn\u00e9.e.s HelloFresh ont jusqu\u2019\u00e0 la date indiqu\u00e9e en haut de l\u2019onglet \u201cMon Menu\u201d (23h59) sur le site HelloFresh pour mettre en pause leur prochaine Box ou r\u00e9silier leur abonnement. Toute demande de modification, de pause ou de r\u00e9siliation faite apr\u00e8s cette date ne sera prise en compte qu\u2019apr\u00e8s la prochaine Box. Plus d\u2019informations sur : http://www.hellofresh.fr/conditions-generales.</span></p></div> </td> </tr><tr><td align=\"center\" class=\"r31-c\" style=\"background-color: #ffffff; padding-bottom: 5px; padding-top: 5px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"1\" role=\"presentation\" style=\"border-top-style: solid; background-clip: border-box; border-top-color: #eeeeee; border-top-width: 1px; font-size: 1px; line-height: 1px;\" width=\"100%\"><tr><td height=\"0\" style=\"font-size: 0px; line-height: 0px;\">\u00ad</td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r32-i\" style=\"padding-top: 5px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r33-i\" style=\"padding-left: 15px; padding-right: 15px;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\" class=\"r34-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r35-o\" role=\"presentation\" style=\"table-layout: fixed; width: 200px;\" width=\"200\"><tr><td class=\"r15-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 15px; padding-top: 15px;\"> <img border=\"0\" sib_img_id=\"3\" src=\"img_4.png\" style=\"display: block; width: 100%;\" width=\"200\"/></td> </tr></table></td> </tr><tr><td align=\"left\" class=\"r26-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r27-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r36-i nl2go-default-textstyle\" style=\"color: #3b3f44; font-family: arial,helvetica,sans-serif; font-size: 16px; line-height: 1.5; word-break: break-word; background-color: #ffffff; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 10px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0;\"><span style=\"color: #3E6256; font-size: 12px;\">Rejoignez notre communaut\u00e9 :</span></p></div> </td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table></td> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r32-i\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r33-i\" style=\"padding-left: 15px; padding-right: 15px;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\" class=\"r13-c\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 570px;\" width=\"570\"><tr><td valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"center\" class=\"r13-c\" style=\"display: inline-block;\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 570px;\" width=\"570\"><tr><td class=\"r37-i\" style=\"padding-bottom: 10px; padding-left: 165px; padding-right: 165px; padding-top: 5px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r38-c mobshow resp-table\" style=\"font-weight: normal;\" width=\"52\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r39-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r40-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 5px; padding-top: 5px;\"> <a data-index=\"8\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"4\" src=\"img_5.png\" style=\"display: block; width: 100%;\" width=\"32\"/></a> </td> <td class=\"nl2go-responsive-hide\" style=\"font-size: 0px; line-height: 1px;\" width=\"20\">\u00ad </td> </tr></table></th> <th class=\"r38-c mobshow resp-table\" style=\"font-weight: normal;\" width=\"52\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r39-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r40-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 5px; padding-top: 5px;\"> <a data-index=\"9\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"5\" src=\"img_6.png\" style=\"display: block; width: 100%;\" width=\"32\"/></a> </td> <td class=\"nl2go-responsive-hide\" style=\"font-size: 0px; line-height: 1px;\" width=\"20\">\u00ad </td> </tr></table></th> <th class=\"r38-c mobshow resp-table\" style=\"font-weight: normal;\" width=\"52\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r39-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r40-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 5px; padding-top: 5px;\"> <a data-index=\"10\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"6\" src=\"img_7.png\" style=\"display: block; width: 100%;\" width=\"32\"/></a> </td> <td class=\"nl2go-responsive-hide\" style=\"font-size: 0px; line-height: 1px;\" width=\"20\">\u00ad </td> </tr></table></th> <th class=\"r38-c mobshow resp-table\" style=\"font-weight: normal;\" width=\"52\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r39-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r40-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 5px; padding-top: 5px;\"> <a data-index=\"11\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"7\" src=\"img_8.png\" style=\"display: block; width: 100%;\" width=\"32\"/></a> </td> <td class=\"nl2go-responsive-hide\" style=\"font-size: 0px; line-height: 1px;\" width=\"20\">\u00ad </td> </tr></table></th> <th class=\"r38-c mobshow resp-table\" style=\"font-weight: normal;\" width=\"32\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r41-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r40-i\" style=\"font-size: 0px; line-height: 0px; padding-bottom: 5px; padding-top: 5px;\"> <a data-index=\"12\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1\" sib_link_id=\"-2\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\" templating=\"n\"> <img border=\"0\" sib_img_id=\"8\" src=\"img_9.png\" style=\"display: block; width: 100%;\" width=\"32\"/></a> </td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></table></td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></table><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r2-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td valign=\"top\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r0-o\" role=\"presentation\" style=\"table-layout: fixed; width: 600px;\" width=\"600\"><tr><td class=\"r43-i\" style=\"color: #3b3f44; font-size: 16px; padding-bottom: 5px; padding-top: 5px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td class=\"r44-i\" style=\"color: #3b3f44; font-size: 16px; padding-left: 15px; padding-right: 15px;\" valign=\"top\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><td align=\"left\" class=\"r26-c\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r27-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r45-i nl2go-default-textstyle\" style=\"font-family: arial,helvetica,sans-serif; line-height: 1.5; word-break: break-word; color: #3b3f44; font-size: 16px; padding-top: 10px; text-align: center;\" valign=\"top\"> <div><p style=\"margin: 0; color: #1F2D3D; font-size: 18px;\"><span style=\"color: #3E6256; font-family: Arial; font-size: 12px;\">Yooji, Agropole Entreprise, Estillac, Nouvelle-Aquitaine, 47310, France</span></p></div> </td> </tr></table></td> </tr><tr><td align=\"center\" class=\"r46-c\"> <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r7-o\" role=\"presentation\" style=\"table-layout: fixed; width: 570px;\" width=\"570\"><tr><td class=\"r47-i\" style=\"color: #3b3f44; font-size: 16px; padding-bottom: 5px; padding-left: 239px; padding-right: 238px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r3-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"93\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r4-o\" role=\"presentation\" style=\"table-layout: fixed;\" width=\"100%\"><tr><td class=\"r44-i\" style=\"color: #3b3f44; font-size: 16px; padding-left: 8px; padding-right: 8px;\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tr><th class=\"r26-c\" style=\"font-weight: normal;\" valign=\"top\" width=\"100%\"> <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"r27-o\" role=\"presentation\" style=\"table-layout: fixed; width: 100%;\" width=\"100%\"><tr><td align=\"center\" class=\"r48-i nl2go-default-textstyle\" style=\"font-family: arial,helvetica,sans-serif; line-height: 1.5; color: #3b3f44; font-size: 16px; text-align: center; word-break: break-word;\" valign=\"top\"> <div><p style=\"margin: 0;\"><a data-index=\"13\" href=\"https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV\" style=\"color: #0092ff; text-decoration: underline;\" target=\"_blank\"><span style=\"font-size: 12px;\"><u>Se d\u00e9sinscrire</u></span></a></p></div> </td> </tr></table></th> </tr></table></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></table></td> </tr></table></th> </tr></table></td> </tr></table></td> </tr></table></td> </tr></table> </body></html>\n";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 2, "txt": "Je d\u00e9couvre HelloFresh", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 3, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 4, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 5, "txt": "Cliquez ici", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 6, "txt": "Je d\u00e9couvre l\u2019offre HelloFresh", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 7, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 8, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 9, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 10, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 11, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 12, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1"}], "audit_date": "2026-02-10 16:45:04"}, {"index": 13, "txt": "Se d\u00e9sinscrire", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV"}], "audit_date": "2026-02-10 16:45:04"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 2, "txt": "Je d\u00e9couvre HelloFresh", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 3, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 4, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 5, "txt": "Cliquez ici", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 6, "txt": "Je d\u00e9couvre l\u2019offre HelloFresh", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 7, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 8, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 9, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 10, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 11, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 12, "txt": "", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1"}], "audit_date": "2026-03-18 09:28:30"}, {"index": 13, "txt": "Se d\u00e9sinscrire", "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV", "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV", "domain": "hfbd6.r.bh.d.sendibt3.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV"}], "audit_date": "2026-03-18 09:28:30"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -810,10 +1000,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -1005,8 +1195,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -1057,8 +1247,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -1088,6 +1285,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -1155,6 +1357,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -1244,6 +1449,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -1252,6 +1490,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

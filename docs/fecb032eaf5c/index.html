@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -26,14 +26,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        Avec Babilou, trouvez votre place en crèche pour la rentrée !
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip active" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -42,16 +58,10 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Mailjet">Mailjet</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
 
                     <button class="btn-icon" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
                         <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -70,13 +80,19 @@
                         </svg>
                     </button>
                 </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">benoit@getinside.fr</span>
+                    <h1 class="vh-subject">Avec Babilou, trouvez votre place en crèche pour la rentrée !</h1>
+                    <span class="vh-date">26/11/2025 à 13:20</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="desktop"
                     style="width: 100%; max-width: 800px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
@@ -84,351 +100,424 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
             <div class="sidebar-header">
-                <span class="sidebar-title">Metadata</span>
+                <div class="sh-signal">SIGNAL</div>
+                <div class="sh-sender">benoit@getinside.fr</div>
+                <div class="sh-tagline">link intelligence</div>
+            </div>
+
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">6</span></button>
             </div>
 
             <div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">benoit@getinside.fr</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Avec Babilou, trouvez votre place en crèche pour la rentrée !">Avec Babilou, trouvez votre place en crèche pour la rentrée !</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l'aide de votre employeur ! Je réserve ma place Vous ...">vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l'aide de votre employeur ! Je réserve ma place Vous ...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">26/11/2025 à 13:20</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Mailjet</span>
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">benoit@getinside.fr</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Mailjet</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="Avec Babilou, trouvez votre place en crèche pour la rentrée !">Avec Babilou, trouvez votre place en crèche pour la rentrée !</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l&#39;aide de votre employeur ! Je réserve ma place Vous ...">vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l&#39;aide de votre employeur ! Je réserve ma place Vous ...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">26/11/2025 à 13:20</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">40.4 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">6</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">40.4 KB</span>
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
+                    <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Je réserve ma place</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Je réserve ma place</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">www.bebeboutik-prive.fr</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">cliquez ici</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">Mentions légales</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 
-                <!-- Tracking Pixels -->
-                
-
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (6)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Je réserve ma place</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Je réserve ma place</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">www.bebeboutik-prive.fr</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">cliquez ici</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~', 5)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Mentions légales</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~', 6)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -445,18 +534,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<td align=\"center\" style=\"padding:0px;margin:0px\"><table align=\"center\" bgcolor=\"#ffffff\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:collapse;border-spacing:0px;background-color:rgb(255,255,255);width:600px\"><tbody><tr><td align=\"left\" style=\"padding:20px 20px 0px;margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px;width:560px\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px;font-size:0px\"><a data-index=\"1\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw1i3XC0Mxy-lF1POsXkk1bw\" href=\"https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~\" style=\"text-decoration:underline;color:rgb(9,104,172);font-size:14px\" target=\"_blank\"><img alt=\"Bebeboutik : Ventes Priv\u00e9es B\u00e9b\u00e9\" class=\"CToWUd\" data-bit=\"iit\" src=\"img_0.png\" style=\"display:block;border:0px;outline:none;text-decoration:none\" title=\"Bebeboutik : Ventes Priv\u00e9es B\u00e9b\u00e9\" width=\"230\"/></a>\n</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px;margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px;width:600px\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px\"><p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:21px;color:rgb(0,39,121);font-size:14px'><br/></p>\n<p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:27px;color:rgb(0,39,121);font-size:18px'>vous pr\u00e9sente</p></td></tr><tr><td align=\"center\" style=\"padding:0px;margin:0px\"><div style=\"display:none;font-size:1px;color:rgb(255,255,255);line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden\"> R\u00e9servez votre place en cr\u00e8che pour la rentr\u00e9e ! </div>\n<div dir=\"ltr\" lang=\"fr\" role=\"main\" style=\"background-color:rgb(255,255,255)\"><div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"margin:0px;direction:ltr;font-size:0px;padding:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"margin:0px;font-size:0px;padding:10px 0px 0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:600px\"><img alt=\"\" class=\"CToWUd\" data-bit=\"iit\" height=\"auto\" src=\"img_1.png\" style=\"display:block;border:none;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px\" width=\"600\"/></td>\n</tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"margin:0px;direction:ltr;font-size:0px;padding:15px 0px 0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"padding:0px 20px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:33px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:22px\"><b>Votre place en cr\u00e8che\u00a0</b></span></p>\n<p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:33px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(255,126,100);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:22px\"><b>pour la rentr\u00e9e, sans l'aide de votre employeur </b></span><span style=\"color:rgb(2,55,142);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:22px\"><b>!</b></span></p></div></td></tr>\n<tr><td align=\"center\" style=\"padding:20px 25px;margin:0px;background:rgb(255,255,255);font-size:0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;border-spacing:0px;line-height:15px\"><tbody><tr><td align=\"center\" bgcolor=\"#ff7e64\" role=\"presentation\" style=\"padding:0px;margin:0px;border:none;border-radius:35px;background:rgb(255,126,100)\" valign=\"middle\"><a data-index=\"2\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw2KksRpD5ZVI_wsaNHQPJh5\" href=\"https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~\" style=\"text-decoration:none;color:rgb(255,255,255);font-size:15px;display:inline-block;background:rgb(255,126,100);font-family:Verdana,Helvetica,Arial,sans-serif;font-weight:normal;line-height:18px;margin:0px;text-transform:none;padding:10px 25px 11px;border-radius:35px\" target=\"_blank\"><span style=\"font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:15px\"><b>Je r\u00e9serve ma place</b>\n</span></a></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"background:rgb(2,55,142);margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;background:rgb(2,55,142);width:100%\"><tbody><tr><td style=\"padding:20px 0px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"padding:0px 25px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:25px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(255,255,255);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:15px\">Vous avez besoin d'une <b>place en cr\u00e8che pour la rentr\u00e9e</b>, mais votre entreprise <b>ne propose pas de solution</b> de cr\u00e8che pour ses salari\u00e9s ?</span></p>\n<p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:25px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(255,255,255);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:15px\">En attendant de r\u00e9ussir \u00e0 les convaincre, <b>nous pouvons accueillir votre enfant</b> pendant <b>quelques jours, quelques mois et m\u00eame plus</b>, selon vos besoins !\u00a0</span></p></div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:10px 0px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:10px 25px;margin:0px;font-size:0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:550px\"><img alt=\"\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_2.png\" style=\"display:block;border:none;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"550\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 803.688px; top: 1549.86px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c294\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c294\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:10px 0px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"padding:0px 25px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:30px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:20px\"><b>Le saviez-vous ?</b></span></p>\n<p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:24px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:15px\">Nos <b>Conseillers Familles sont des experts</b> et peuvent vous accompagner dans cette d\u00e9marche pour <b>sensibiliser votre employeur</b> \u00e0 ce dispositif ? <img alt=\"\ud83d\ude09\" aria-label=\"\ud83d\ude09\" class=\"an1 CToWUd\" data-bit=\"iit\" data-emoji=\"\ud83d\ude09\" draggable=\"false\" loading=\"lazy\" src=\"img_3.png\"/></span></p></div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:20px 0px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"padding:0px 20px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:30px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:20px\"><b>Pourquoi choisir une cr\u00e8che <span class=\"il\">Babilou</span> ?</b></span></p>\n</div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"background:rgb(255,255,255);margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;background:rgb(255,255,255);width:100%\"><tbody><tr><td style=\"padding:0px 25px 10px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"margin:0px;font-size:0px;padding:0px 10px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:255px\"><img alt=\"\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_4.jpg\" style=\"display:block;border:none;outline:none;text-decoration:none;border-radius:10px;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"255\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 656.188px; top: 1962.52px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c295\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c295\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr>\n<tr><td align=\"left\" style=\"margin:0px;font-size:0px;padding:0px 5px 0px 0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><h3 style='margin:10px 0px;line-height:18px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:rgb(51,51,51);text-align:center'><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"><b>100% des cr\u00e8ches audit\u00e9es</b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"> chaque ann\u00e9e : </span><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"><b>500 points de contr\u00f4le</b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"> v\u00e9rifi\u00e9s.</span></h3>\n</div></td></tr></tbody></table></div>\n<div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"margin:0px;font-size:0px;padding:0px 10px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:255px\"><img alt=\"\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_5.jpg\" style=\"display:block;border:none;outline:none;text-decoration:none;border-radius:10px;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"255\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 656.188px; top: 2172.25px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c296\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c296\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr>\n<tr><td align=\"left\" style=\"margin:0px;font-size:0px;padding:0px 0px 0px 5px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><h3 style='margin:10px 0px;line-height:18px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:rgb(51,51,51);text-align:center'><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\">Un projet p\u00e9dagogique unique et des activit\u00e9s ludiques </span><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"><b>tous les jours </b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\">pour votre enfant.</span></h3>\n</div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"background:rgb(255,255,255);margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;background:rgb(255,255,255);width:100%\"><tbody><tr><td style=\"padding:0px 25px 10px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"margin:0px;font-size:0px;padding:0px 10px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:255px\"><img alt=\"\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_6.png\" style=\"display:block;border:none;outline:none;text-decoration:none;border-radius:10px;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"255\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 656.188px; top: 2412.45px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c297\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c297\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr>\n<tr><td align=\"left\" style=\"margin:0px;font-size:0px;padding:0px 5px 0px 0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><h3 style='margin:10px 0px;line-height:18px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:rgb(51,51,51);text-align:center'><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\">Une p\u00e9riode de </span><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"><b>familiarisation personnalis\u00e9e</b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"> en fonction des besoins de votre enfant.</span></h3>\n</div></td></tr></tbody></table></div>\n<div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"margin:0px;font-size:0px;padding:0px 10px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:255px\"><img alt=\"\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_7.jpg\" style=\"display:block;border:none;outline:none;text-decoration:none;border-radius:10px;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"255\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 656.188px; top: 2622.53px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c298\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c298\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr>\n<tr><td align=\"left\" style=\"padding:0px 25px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:21px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\">Des professionnels de la Petite Enfance </span><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\"><b>dipl\u00f4m\u00e9s et passionn\u00e9s</b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:14px\">.\u00a0</span></p>\n</div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:20px 0px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:10px 25px;margin:0px;font-size:0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;border-spacing:0px;line-height:22px\"><tbody><tr><td align=\"center\" bgcolor=\"#e2f2fc\" role=\"presentation\" style=\"padding:0px;margin:0px;border:none;border-radius:3px;background:rgb(226,242,252)\" valign=\"middle\"><p style=\"font-family:Verdana,Helvetica,Arial,sans-serif;line-height:26.4px;color:rgb(255,255,255);font-size:22px;display:inline-block;background:rgb(226,242,252);font-weight:normal;margin:0px;text-decoration:none;text-transform:none;padding:10px 25px;border-radius:3px\"><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:22px\">Notre ADN, la qualit\u00e9 d\u2019accueil : </span><span style=\"color:rgb(255,126,100);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:22px\"><b>9 parents sur 10</b></span><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:22px\"> recommandent leur cr\u00e8che <span class=\"il\">Babilou</span></span></p>\n</td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:0px 0px 50px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:13px 25px 15px;margin:0px;background:rgb(255,255,255);font-size:0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;border-spacing:0px;line-height:15px\"><tbody><tr><td align=\"center\" bgcolor=\"#ff7e64\" role=\"presentation\" style=\"padding:0px;margin:0px;border:none;border-radius:35px;background:rgb(255,126,100)\" valign=\"middle\"><a data-index=\"3\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw2ocX8HxOQ3-jSNjk9UPowY\" href=\"https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl\" style=\"text-decoration:none;color:rgb(255,255,255);font-size:15px;display:inline-block;background:rgb(255,126,100);font-family:Verdana,Helvetica,Arial,sans-serif;font-weight:normal;line-height:18px;margin:0px;text-transform:none;padding:10px 25px 11px;border-radius:35px\" target=\"_blank\"><span style=\"font-family:Quicksand,Arial,Helvetica,sans-serif;font-size:15px\"><b>Je r\u00e9serve ma place</b>\n</span></a></td></tr></tbody></table></td></tr><tr><td align=\"left\" style=\"padding:0px 25px;margin:0px;font-size:0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:normal;line-height:1;text-align:left;color:rgb(0,0,0)\"><p style='font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:21px;color:rgb(51,51,51);font-size:14px;text-align:center;margin:10px 0px'><span style=\"color:rgb(2,55,142);font-family:Montserrat,Arial,Helvetica,sans-serif\">Sautez le pas et optez pour un accueil sur mesure !</span></p></div></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:0px 0px 20px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px 25px 10px;margin:0px;font-size:0px;word-break:break-word\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\"><tbody><tr><td style=\"padding:0px;margin:0px;width:550px\"><img alt=\"Banni\u00e8re-Babilou\" class=\"CToWUd a6T\" data-bit=\"iit\" height=\"auto\" src=\"img_8.png\" style=\"display:block;border:none;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px\" tabindex=\"0\" width=\"550\"/><div class=\"a6S\" dir=\"ltr\" style=\"opacity: 0.01; left: 803.688px; top: 3093.42px;\"><span class=\"a5q\" data-is-tooltip-wrapper=\"true\" jsaction=\"JIbuQc:.CLIENT\"><button aria-label=\"T\u00e9l\u00e9charger la pi\u00e8ce jointe \" class=\"VYBDae-JX-I VYBDae-JX-I-ql-ay5-ays CgzRE\" data-idom-class=\"CgzRE\" data-tooltip-classes=\"AZPksf\" data-tooltip-enabled=\"true\" data-tooltip-id=\"tt-c299\" data-use-native-focus-logic=\"true\" id=\"\" jsaction=\"click:h5M12e;clickmod:h5M12e;pointerdown:FEiYhc;pointerup:mF5Elf;pointerenter:EX0mI;pointerleave:vpvbp;pointercancel:xyn4sd;contextmenu:xexox;focus:h06R8; blur:zjh6rb;mlnRJb:fLiPzd;\" jscontroller=\"PIVayb\" jslog=\"91252; u014N:cOuCgd,Kr2w4b,xr6bB; 4:WyIjbXNnLWY6MTgzOTkwMjQ1MDM1MTI0OTU4OCJd; 43:WyJpbWFnZS9qcGVnIl0.\" jsname=\"hRZeKc\"><span class=\"XjoK4b VYBDae-JX-UHGRz\"></span><span class=\"UTNHae\" jscontroller=\"LBaJxb\" jsname=\"m9ZlFb\" soy-skip=\"\" ssk=\"6:RWVI5c\"></span><span aria-hidden=\"true\" class=\"VYBDae-JX-ank-Rtc0Jf\" jsname=\"S5tZuc\"><span aria-hidden=\"true\" class=\"notranslate bzc-ank\"><svg class=\"aoH\" focusable=\"false\" height=\"20\" viewbox=\"0 -960 960 960\" width=\"20\"><path d=\"M480-336L288-528l51-51L444-474V-816h72v342L621-579l51,51L480-336ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72H696v-72h72v72q0,29.7-21.16,50.85T695.96-192H263.72Z\"></path></svg></span></span><div class=\"VYBDae-JX-ano\"></div></button><div aria-hidden=\"true\" class=\"ne2Ple-oshW8e-J9\" id=\"tt-c299\" role=\"tooltip\">T\u00e9l\u00e9charger</div></span></div></td>\n</tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"padding:0px 0px 20px;margin:0px;direction:ltr;font-size:0px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;vertical-align:top\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"margin:0px;font-size:0px;padding:7px 20px 0px;word-break:break-word\"><div style=\"font-family:Verdana,Helvetica,Arial,sans-serif;font-size:13px;line-height:1;text-align:left;color:rgb(0,0,0)\"></div>\n</td></tr></tbody></table></div></td></tr></tbody></table></div>\n<div style=\"margin:0px auto;max-width:600px\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;width:100%\"><tbody><tr><td style=\"margin:0px;direction:ltr;font-size:0px;padding:0px 0px 3px;text-align:center\"><div style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td style=\"padding:0px;margin:0px;vertical-align:top\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"></table>\n</td></tr></tbody></table></div></td></tr></tbody></table></div></div></td></tr></tbody></table></td></tr></tbody></table></td></tr>\n<tr><td align=\"left\" style=\"padding:20px 20px 0px;margin:0px\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px;width:560px\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"padding:0px;margin:0px\"><p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:16.5px;color:rgb(51,51,51);font-size:11px'>Vous recevez cette newsletter car vous vous \u00eates inscrit sur\u00a0<br/><a data-index=\"4\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw2ZCbcH9F_e94gyc1J36Jn4\" href=\"https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7\" style=\"text-decoration:underline;color:rgb(9,104,172);font-size:11px\" target=\"_blank\">www.<span class=\"il\">bebeboutik</span>-prive.fr</a>.<br/>Vous avez alors accept\u00e9 de recevoir nos offres.<br/>Toutes les donn\u00e9es personnelles recueillies sont stock\u00e9es dans un environnement s\u00e9curis\u00e9 pour \u00e9viter tout abus</p>\n<p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:16.5px;color:rgb(51,51,51);font-size:11px'><br/></p>\n<p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:16.5px;color:rgb(51,51,51);font-size:11px'>Si vous souhaitez vous d\u00e9sinscrire, <a data-index=\"5\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw35fRORffo4CWLyg0o7KHfE\" href=\"https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~\" style=\"text-decoration:underline;color:rgb(9,104,172);font-size:11px\" target=\"_blank\">cliquez ici</a><br/></p>\n<p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:16.5px;color:rgb(51,51,51);font-size:11px'><br/></p><p style='margin:0px;font-family:arial,\"helvetica neue\",helvetica,sans-serif;line-height:16.5px;color:rgb(51,51,51);font-size:11px'><span class=\"il\">BEBEBOUTIK</span>\u00a0-\u00a022 chemin de Garrabot,\u00a031770 Colomiers - FRANCE<br/><a data-index=\"6\" data-saferedirecturl=\"https://www.google.com/url?q=https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~&amp;source=gmail&amp;ust=1764278344188000&amp;usg=AOvVaw3-Z81b9hcE6jUCadvj6uf2\" href=\"https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~\" style=\"text-decoration:underline;color:rgb(9,104,172);font-size:11px\" target=\"_blank\">Mentions l\u00e9gales</a></p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td>";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~", "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19"}], "audit_date": "2026-02-10 16:46:25"}, {"index": 2, "txt": "Je r\u00e9serve ma place", "original_url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~", "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~"}, {"status": 200, "url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351"}], "audit_date": "2026-02-10 16:46:25"}, {"index": 3, "txt": "Je r\u00e9serve ma place", "original_url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl", "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl"}, {"status": 200, "url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374"}], "audit_date": "2026-02-10 16:46:25"}, {"index": 4, "txt": "www.bebeboutik-prive.fr", "original_url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7", "final_url": "https://www.bebeboutik-prive.fr/", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7"}, {"status": 301, "url": "http://www.bebeboutik-prive.fr/"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/"}], "audit_date": "2026-02-10 16:46:25"}, {"index": 5, "txt": "cliquez ici", "original_url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~", "final_url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~"}, {"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/z5x-f8MUBCeAbE3xNw428g~~/AABGZBA~/WgF0xvv0XPnEQFj-Ffi3MyiMLwncDIno0msvrc2hC7ErVxc65B6M0gMSMdFfAbfF1RFus4kMLHr0wq1oUSFYBzfPD_ooRFjB0XRrn-Idpqsgsv7HWsioE9DWyQzGt5h1WxOKSKk3uiqhs1ySqpP8Il9mAbF4ct8WNMgsH80gxuK79Hf9N9_iesyWOQCzp1SdroB12L9APNuNjU4N87PpHg~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc"}], "audit_date": "2026-02-10 16:46:25"}, {"index": 6, "txt": "Mentions l\u00e9gales", "original_url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~", "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"}], "audit_date": "2026-02-10 16:46:25"}];
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~", "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19"}], "audit_date": "2026-03-18 09:29:50"}, {"index": 2, "txt": "Je r\u00e9serve ma place", "original_url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~", "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~"}, {"status": 200, "url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351"}], "audit_date": "2026-03-18 09:29:50"}, {"index": 3, "txt": "Je r\u00e9serve ma place", "original_url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl", "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl"}, {"status": 200, "url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374"}], "audit_date": "2026-03-18 09:29:50"}, {"index": 4, "txt": "www.bebeboutik-prive.fr", "original_url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7", "final_url": "https://www.bebeboutik-prive.fr/", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7"}, {"status": 301, "url": "http://www.bebeboutik-prive.fr/"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/"}], "audit_date": "2026-03-18 09:29:50"}, {"index": 5, "txt": "cliquez ici", "original_url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~", "final_url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~"}, {"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/z5x-f8MUBCeAbE3xNw428g~~/AABGZBA~/WgF0xvv0XPnEQFj-Ffi3MyiMLwncDIno0msvrc2hC7ErVxc65B6M0gMSMdFfAbfF1RFus4kMLHr0wq1oUSFYBzfPD_ooRFjB0XRrn-Idpqsgsv7HWsioE9DWyQzGt5h1WxOKSKk3uiqhs1ySqpP8Il9mAbF4ct8WNMgsH80gxuK79Hf9N9_iesyWOQCzp1SdroB12L9APNuNjU4N87PpHg~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc"}], "audit_date": "2026-03-18 09:29:50"}, {"index": 6, "txt": "Mentions l\u00e9gales", "original_url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~", "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales", "domain": "clic.bebeboutik-prive.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~"}, {"status": 200, "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"}], "audit_date": "2026-03-18 09:29:50"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -474,10 +594,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -669,8 +789,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -721,8 +841,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -752,6 +879,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -819,6 +951,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -908,6 +1043,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -916,6 +1084,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
