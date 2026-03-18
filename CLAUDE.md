@@ -58,6 +58,7 @@ The pipeline has 4 stages orchestrated by `process_email.py`:
 
 This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages serves from `main /docs`.
 
+- **Single remote**: `getinside` → `https://github.com/getinside-ops/archive-news.git`. Always push with `git push getinside main`. There is no `origin` remote — if one appears, remove it with `git remote remove origin`.
 - Required secrets: `GMAIL_USER` + `GMAIL_PASSWORD` only. `GEMINI_API_KEY` is **not** referenced in any `.py` file — do not add it.
 - To reconfigure Pages source: `gh api repos/getinside-ops/archive-news/pages --method PUT -f 'source[branch]=main' -f 'source[path]=/docs'`
   (JSON object format is rejected by the API — use nested `-f` field syntax only.)
