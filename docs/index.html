@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="index-page">
     <div class="container">
-        <header>
-            <h1 class="logo">Newsletter Archive</h1>
+        <header class="ix-header">
+            <div class="ix-logo-block">
+                <h1 class="logo"><span class="logo-word">THE ARCHIVE</span></h1>
+                <p class="logo-tagline">Signal Intelligence · Newsletter Archive</p>
+            </div>
             <div class="actions">
                 <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme">
                     <svg class="icon icon-moon" viewBox="0 0 24 24">
@@ -38,68 +41,234 @@
             </div>
         </header>
 
-        <div class="controls-bar">
-            <div class="search-row">
-                <div class="search-wrapper">
-                    <svg class="icon search-icon" viewBox="0 0 24 24">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                    <input type="text" id="searchInput" class="search-input" placeholder="Search..."
-                        data-i18n="search_placeholder">
-                </div>
+        <!-- Stats Band -->
+        <div class="ix-stats-band">
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">52</span>
+                <span class="ix-stat-label">Dispatches</span>
             </div>
+            <div class="ix-stat-divider"></div>
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">18 Mar 2026, 08:57</span>
+                <span class="ix-stat-label">Last Updated</span>
+            </div>
+            <div class="ix-stat-divider"></div>
+            <div class="ix-stat-block">
+                <span class="ix-stat-num">192.8 MB</span>
+                <span class="ix-stat-label">Archive Size</span>
+            </div>
+        </div>
 
-            <div class="stats-filter-row">
-                <div class="stats-row">
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                            <polyline points="9 22 9 12 15 12 15 22" />
-                        </svg>
-                        <span class="stat-val">52</span>
-                        <span class="stat-label">Newsletters</span>
-                    </div>
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span class="stat-label">Updated:</span>
-                        <span class="stat-val">13 Mar 2026, 14:50</span>
-                    </div>
-                    <div class="stat-pill">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                        </svg>
-                        <span class="stat-label">Size:</span>
-                        <span class="stat-val">192.8 MB</span>
-                    </div>
-                </div>
-                <div class="sort-wrapper">
-                    <select id="sortSelect" class="sort-select" onchange="sortList()">
-                        <option value="date-desc">Newest First</option>
-                        <option value="date-asc">Oldest First</option>
-                        <option value="sender-az">Sender A-Z</option>
-                        <option value="sender-za">Sender Z-A</option>
-                    </select>
-                    <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="m6 9 6 6 6-6" />
-                    </svg>
-                </div>
+        <!-- CRM Filter Chips -->
+        <div class="ix-chip-row" id="crmFilterRow">
+            <button class="ix-chip ix-chip-all active" onclick="filterByCrm('all')">All</button>
+            
+            
+                
+                
+                    
+                    <button class="ix-chip" data-crm="Unknown" onclick="filterByCrm('Unknown')">Unknown</button>
+                
+            
+                
+                
+                    
+                    <button class="ix-chip" data-crm="Klaviyo" onclick="filterByCrm('Klaviyo')">Klaviyo</button>
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+                    <button class="ix-chip" data-crm="Sendinblue" onclick="filterByCrm('Sendinblue')">Sendinblue</button>
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+                    <button class="ix-chip" data-crm="Sarbacane" onclick="filterByCrm('Sarbacane')">Sarbacane</button>
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+                    
+                    <button class="ix-chip" data-crm="Mailjet" onclick="filterByCrm('Mailjet')">Mailjet</button>
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+                
+                
+            
+        </div>
+
+        <!-- Controls Row (search + sort together) -->
+        <div class="ix-controls-row">
+            <div class="search-wrapper ix-search-wrapper">
+                <svg class="icon search-icon" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" class="search-input ix-search" placeholder="Search dispatches..."
+                    data-i18n="search_placeholder">
+            </div>
+            <div class="sort-wrapper ix-sort-wrapper">
+                <select id="sortSelect" class="sort-select ix-sort-select" onchange="sortList()">
+                    <option value="date-desc">Newest First</option>
+                    <option value="date-asc">Oldest First</option>
+                    <option value="sender-az">Sender A-Z</option>
+                    <option value="sender-za">Sender Z-A</option>
+                </select>
+                <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                </svg>
             </div>
         </div>
 
         <ul class="news-grid" id="newsList">
-            <div id="noResults"
-                style="display:none; grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-secondary);"
+            <li id="noResults"
+                style="display:none; grid-column: 1/-1; list-style:none; text-align: center; padding: 40px; color: var(--text-secondary);"
                 data-i18n="no_results">
                 No results found.
-            </div>
+            </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass ix-featured" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="63a14dcc6e78/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">02/03/2026 à 02:01</span>
@@ -107,14 +276,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Coup de ❤️ BUT : HelloFresh</h2>
-                    <p class="card-preview">Coup de ❤️ BUT : HelloFresh Si vous rencontrez des problèmes d'affichage, cliquez ici. & Des bons plans repérés pour vous faciliter le quotidien. AVANTAGE EXCLU...</p>
+                    <p class="card-preview">Coup de ❤️ BUT : HelloFresh Si vous rencontrez des problèmes d&#39;affichage, cliquez ici. &amp; Des bons plans repérés pour vous faciliter le quotidien. AVANTAGE EXCLU...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="The Bradery">
+            <li class="news-card glass" data-date="" data-sender="The Bradery" data-crm="Klaviyo">
                 <a href="68ab2892dfb9/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">23/02/2026 à 18:45</span>
@@ -122,14 +291,14 @@
                     </div>
                     <div class="sender-pill">The Bradery</div>
                     <h2 class="card-title">My Variations, à ne pas manquer 🔥</h2>
-                    <p class="card-preview">Profitez d'un cadeau dès 90€ d'achat ! Jusqu’à -50% Bien plus qu'une brosse à dents, c'est l'assurance d'un nettoyage complet matin et soir. Puissante, ergonomi...</p>
+                    <p class="card-preview">Profitez d&#39;un cadeau dès 90€ d&#39;achat ! Jusqu’à -50% Bien plus qu&#39;une brosse à dents, c&#39;est l&#39;assurance d&#39;un nettoyage complet matin et soir. Puissante, ergonomi...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="noreply@dartagnan.io">
+            <li class="news-card glass" data-date="" data-sender="noreply@dartagnan.io" data-crm="Unknown">
                 <a href="f4eb1f63b7d8/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">23/02/2026 à 08:51</span>
@@ -144,7 +313,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="89593b52b414/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">19/02/2026 à 09:13</span>
@@ -152,14 +321,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Coup de coeur BUT : HelloFresh</h2>
-                    <p class="card-preview">Coup de ❤️ BUT : HelloFresh Grâce à BUT, profitez de jusqu'à 95€ offerts sur vos repas. Une cuisine équipée, c'est bien. Une cuisine qui régale, c'est mieux ! C...</p>
+                    <p class="card-preview">Coup de ❤️ BUT : HelloFresh Grâce à BUT, profitez de jusqu&#39;à 95€ offerts sur vos repas. Une cuisine équipée, c&#39;est bien. Une cuisine qui régale, c&#39;est mieux ! C...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="KIABI">
+            <li class="news-card glass" data-date="" data-sender="KIABI" data-crm="Unknown">
                 <a href="cbe615445000/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">11/02/2026 à 10:38</span>
@@ -174,7 +343,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="The Bradery">
+            <li class="news-card glass" data-date="" data-sender="The Bradery" data-crm="Klaviyo">
                 <a href="c9aa3fb56293/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">30/01/2026 à 11:31</span>
@@ -182,14 +351,14 @@
                     </div>
                     <div class="sender-pill">The Bradery</div>
                     <h2 class="card-title">Agenda Club 💜</h2>
-                    <p class="card-preview">On découvre des thés d'exception aux Ateliers de Mariage Frères avant de se rendre au Petit Palais pour découvrir Bilal Hamdad, et finir la journée au Wax, entr...</p>
+                    <p class="card-preview">On découvre des thés d&#39;exception aux Ateliers de Mariage Frères avant de se rendre au Petit Palais pour découvrir Bilal Hamdad, et finir la journée au Wax, entr...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="The Bradery">
+            <li class="news-card glass" data-date="" data-sender="The Bradery" data-crm="Klaviyo">
                 <a href="9252df01caed/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">23/01/2026 à 10:45</span>
@@ -204,7 +373,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Cyrielle de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Cyrielle de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="22bea897b63b/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">22/01/2026 à 06:45</span>
@@ -219,7 +388,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="e36a8cef5c32/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">22/01/2026 à 05:50</span>
@@ -227,14 +396,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Betclic : 100€ reversés en feebets sur tous les matchs* 🔥</h2>
-                    <p class="card-preview">Paris, Madrid, Marseille… jusqu'à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
+                    <p class="card-preview">Paris, Madrid, Marseille… jusqu&#39;à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="5ab20c587d81/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">20/01/2026 à 00:33</span>
@@ -242,14 +411,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Betclic : 100€ reversés en feebets sur tous les matchs* 🔥</h2>
-                    <p class="card-preview">Paris, Madrid, Marseille… jusqu'à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
+                    <p class="card-preview">Paris, Madrid, Marseille… jusqu&#39;à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Mieux Que Des Fleurs">
+            <li class="news-card glass" data-date="" data-sender="Mieux Que Des Fleurs" data-crm="Klaviyo">
                 <a href="206b76884d68/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">16/01/2026 à 10:32</span>
@@ -264,7 +433,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="108d9e4a76da/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">15/01/2026 à 08:03</span>
@@ -272,14 +441,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Betclic : 100€ reversés en feebets sur tous les matchs* 🔥</h2>
-                    <p class="card-preview">Paris, Madrid, Marseille… jusqu'à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
+                    <p class="card-preview">Paris, Madrid, Marseille… jusqu&#39;à 100€ remboursés en Feebets* pour parier sur Betclic ! Afficher la version en ligne | Se désinscrire ☰ ⊗ Chaussures Maillots Ba...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="820c70e8b537/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">15/01/2026 à 07:02</span>
@@ -287,21 +456,21 @@
                     </div>
                     <div class="sender-pill">Joseph de MieuxQueDesFleurs</div>
                     <h2 class="card-title">Le partenaire qui fait du sens 💛</h2>
-                    <p class="card-preview">C'est comme ça qu'on les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
+                    <p class="card-preview">C&#39;est comme ça qu&#39;on les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Cyrielle de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Cyrielle de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="d7ebb4040558/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">15/01/2026 à 06:03</span>
                         <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
                     </div>
                     <div class="sender-pill">Cyrielle de MieuxQueDesFleurs</div>
-                    <h2 class="card-title">C'est quand la St Valentin déjà ? 😅</h2>
+                    <h2 class="card-title">C&#39;est quand la St Valentin déjà ? 😅</h2>
                     <p class="card-preview">Je demande juste comme ça ❤️ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -309,7 +478,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Fanny de Yooji">
+            <li class="news-card glass" data-date="" data-sender="Fanny de Yooji" data-crm="Sendinblue">
                 <a href="3ca179d02c98/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">14/01/2026 à 10:51</span>
@@ -324,7 +493,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="ac1fa7779f71/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">14/01/2026 à 06:30</span>
@@ -332,14 +501,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Betclic : 100€ reversés en feebets sur tous les matchs* 🔥</h2>
-                    <p class="card-preview">Paris, Madrid, Marseille… jusqu'à 100€ remboursés en Feebets* pour parier sur Betclic ! Parie sur le meilleur du multiplex ! ⏱️ C'est ce soir ! ⏱️ C'EST AUJOURD...</p>
+                    <p class="card-preview">Paris, Madrid, Marseille… jusqu&#39;à 100€ remboursés en Feebets* pour parier sur Betclic ! Parie sur le meilleur du multiplex ! ⏱️ C&#39;est ce soir ! ⏱️ C&#39;EST AUJOURD...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="69def885ba64/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">12/01/2026 à 07:02</span>
@@ -347,29 +516,29 @@
                     </div>
                     <div class="sender-pill">Joseph de MieuxQueDesFleurs</div>
                     <h2 class="card-title">Ça a changé ma vie 💛</h2>
-                    <p class="card-preview">C'est comme ça qu'on les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
+                    <p class="card-preview">C&#39;est comme ça qu&#39;on les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="356f2f609780/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">09/01/2026 à 08:56</span>
                         <span class="crm-badge" data-crm="Unknown">Unknown</span>
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
-                    <h2 class="card-title">Betclic : 100€ offerts sur Paris, Madrid et l'OM ! 🔥</h2>
-                    <p class="card-preview">Paris, Madrid, Marseille… jusqu’à 100€ remboursés en Feebets* pour parier sur Betclic ! Parie sur le meilleur du multiplex ! 📅 C'EST AUJOURD'HUI : MERCREDI 28 J...</p>
+                    <h2 class="card-title">Betclic : 100€ offerts sur Paris, Madrid et l&#39;OM ! 🔥</h2>
+                    <p class="card-preview">Paris, Madrid, Marseille… jusqu’à 100€ remboursés en Feebets* pour parier sur Betclic ! Parie sur le meilleur du multiplex ! 📅 C&#39;EST AUJOURD&#39;HUI : MERCREDI 28 J...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="84ddb0d70e0e/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">09/01/2026 à 02:34</span>
@@ -384,7 +553,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="85f909a57240/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">09/01/2026 à 01:19</span>
@@ -399,14 +568,14 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="dd7a8d3aa201/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">08/01/2026 à 03:26</span>
                         <span class="crm-badge" data-crm="Unknown">Unknown</span>
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
-                    <h2 class="card-title">PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</h2>
+                    <h2 class="card-title">PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (gif)</h2>
                     <p class="card-preview">Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -414,14 +583,14 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="c601a75b3ea6/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">08/01/2026 à 02:21</span>
                         <span class="crm-badge" data-crm="Unknown">Unknown</span>
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
-                    <h2 class="card-title">PSG, Real, Benfica... Jusqu'à 100€ offerts sur la soirée avec Betclic ! ⚽️ (png)</h2>
+                    <h2 class="card-title">PSG, Real, Benfica... Jusqu&#39;à 100€ offerts sur la soirée avec Betclic ! ⚽️ (png)</h2>
                     <p class="card-preview">Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -429,7 +598,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="e77ef1d1b972/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">07/01/2026 à 05:39</span>
@@ -444,7 +613,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Mieux Que Des Fleurs">
+            <li class="news-card glass" data-date="" data-sender="Mieux Que Des Fleurs" data-crm="Klaviyo">
                 <a href="c61e3834e161/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">31/12/2025 à 09:50</span>
@@ -459,7 +628,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="b21d6a6d702a/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">30/12/2025 à 08:15</span>
@@ -474,7 +643,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="1be39e91c1a4/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">22/12/2025 à 10:42</span>
@@ -482,14 +651,14 @@
                     </div>
                     <div class="sender-pill">Joseph de MieuxQueDesFleurs</div>
                     <h2 class="card-title">Ça a changé ma vie 💛</h2>
-                    <p class="card-preview">C'est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
+                    <p class="card-preview">C&#39;est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="Joseph de MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="3373dea8935d/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">22/12/2025 à 10:35</span>
@@ -497,14 +666,14 @@
                     </div>
                     <div class="sender-pill">Joseph de MieuxQueDesFleurs</div>
                     <h2 class="card-title">Ça a changé ma vie 💛</h2>
-                    <p class="card-preview">C'est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
+                    <p class="card-preview">C&#39;est comme ça que je les remercie. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="MonJardinBio.com">
+            <li class="news-card glass" data-date="" data-sender="MonJardinBio.com" data-crm="Unknown">
                 <a href="b86901725817/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">19/12/2025 à 14:18</span>
@@ -519,7 +688,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises">
+            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises" data-crm="Klaviyo">
                 <a href="0095a3e7cf89/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">09/12/2025 à 17:04</span>
@@ -534,7 +703,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="e86476dee830/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">09/12/2025 à 06:48</span>
@@ -542,14 +711,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Et si votre plus beau cadeau était solidaire ? ✨</h2>
-                    <p class="card-preview">Et si votre plus beau cadeau était solidaire ? ✨ Aidez les Petits Frères des Pauvres à offrir un vrai repas de fête à ceux qui n'ont personne. Chère Madame, Che...</p>
+                    <p class="card-preview">Et si votre plus beau cadeau était solidaire ? ✨ Aidez les Petits Frères des Pauvres à offrir un vrai repas de fête à ceux qui n&#39;ont personne. Chère Madame, Che...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Berceau magique">
+            <li class="news-card glass" data-date="" data-sender="Berceau magique" data-crm="Sendinblue">
                 <a href="07b1ca3050ce/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">08/12/2025 à 17:32</span>
@@ -564,7 +733,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="PeintureVoiture.fr">
+            <li class="news-card glass" data-date="" data-sender="PeintureVoiture.fr" data-crm="Unknown">
                 <a href="8d07c49db9b0/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">08/12/2025 à 09:05</span>
@@ -579,14 +748,14 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="70b400a5618d/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">05/12/2025 à 16:01</span>
                         <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
                     </div>
                     <div class="sender-pill">MieuxQueDesFleurs</div>
-                    <h2 class="card-title">Le seul colis qu'ils attendent 👀</h2>
+                    <h2 class="card-title">Le seul colis qu&#39;ils attendent 👀</h2>
                     <p class="card-preview">Livré grâce à vous ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -594,7 +763,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Berceau magique">
+            <li class="news-card glass" data-date="" data-sender="Berceau magique" data-crm="Sendinblue">
                 <a href="7cf147a3ee88/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">05/12/2025 à 15:33</span>
@@ -602,29 +771,29 @@
                     </div>
                     <div class="sender-pill">Berceau magique</div>
                     <h2 class="card-title">Bouteilles sensorielles à prix minis 🌟</h2>
-                    <p class="card-preview">[OP] VP Petit Boum - 05/12/25 Jusqu'à -10% sur la marque Petit Boum ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
+                    <p class="card-preview">[OP] VP Petit Boum - 05/12/25 Jusqu&#39;à -10% sur la marque Petit Boum ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Sophie d&#39;Ultra Premium Direct">
+            <li class="news-card glass" data-date="" data-sender="Sophie d&#39;Ultra Premium Direct" data-crm="Unknown">
                 <a href="39082a187a19/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">04/12/2025 à 11:02</span>
                         <span class="crm-badge" data-crm="Unknown">Unknown</span>
                     </div>
-                    <div class="sender-pill">Sophie d'Ultra Premium Direct</div>
+                    <div class="sender-pill">Sophie d&#39;Ultra Premium Direct</div>
                     <h2 class="card-title">Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺</h2>
-                    <p class="card-preview">[Edition limitée] Dépêchez-vous, il n'en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s'associe au créateur de contenu et amo...</p>
+                    <p class="card-preview">[Edition limitée] Dépêchez-vous, il n&#39;en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s&#39;associe au créateur de contenu et amo...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Monsieur TSHIRT">
+            <li class="news-card glass" data-date="" data-sender="Monsieur TSHIRT" data-crm="Klaviyo">
                 <a href="918b15c59154/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">03/12/2025 à 13:05</span>
@@ -639,14 +808,14 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="MieuxQueDesFleurs">
+            <li class="news-card glass" data-date="" data-sender="MieuxQueDesFleurs" data-crm="Klaviyo">
                 <a href="9969f0b76404/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">03/12/2025 à 11:58</span>
                         <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
                     </div>
                     <div class="sender-pill">MieuxQueDesFleurs</div>
-                    <h2 class="card-title">Le seul colis qu'ils attendent 👀</h2>
+                    <h2 class="card-title">Le seul colis qu&#39;ils attendent 👀</h2>
                     <p class="card-preview">Livré grâce à vous ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -654,7 +823,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="CANIGOURMAND">
+            <li class="news-card glass" data-date="" data-sender="CANIGOURMAND" data-crm="Unknown">
                 <a href="3189f73bc0cb/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">30/11/2025 à 06:00</span>
@@ -669,22 +838,22 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Bebeboutik">
+            <li class="news-card glass" data-date="" data-sender="Bebeboutik" data-crm="Sarbacane">
                 <a href="a08b20ec6f01/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">29/11/2025 à 06:00</span>
                         <span class="crm-badge" data-crm="Sarbacane">Sarbacane</span>
                     </div>
                     <div class="sender-pill">Bebeboutik</div>
-                    <h2 class="card-title">YOOJI ✨ recettes bio & portions faciles</h2>
-                    <p class="card-preview">OWLET, ATMOSPHERA FOR KIDS, DOMIVA Dès aujourd'hui Yooji 🥕 Le bon goût du fait maison pour bébé 🍽️ Des repas bio et sains, faciles à doser et à préparer. 💚 Prat...</p>
+                    <h2 class="card-title">YOOJI ✨ recettes bio &amp; portions faciles</h2>
+                    <p class="card-preview">OWLET, ATMOSPHERA FOR KIDS, DOMIVA Dès aujourd&#39;hui Yooji 🥕 Le bon goût du fait maison pour bébé 🍽️ Des repas bio et sains, faciles à doser et à préparer. 💚 Prat...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="MonJardinBio.com">
+            <li class="news-card glass" data-date="" data-sender="MonJardinBio.com" data-crm="Unknown">
                 <a href="63f98f0ad806/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">28/11/2025 à 17:40</span>
@@ -699,7 +868,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="The Bradery">
+            <li class="news-card glass" data-date="" data-sender="The Bradery" data-crm="Klaviyo">
                 <a href="b201ec85b9da/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">28/11/2025 à 14:09</span>
@@ -714,7 +883,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="be20b468f3ac/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">28/11/2025 à 08:37</span>
@@ -729,7 +898,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="PeintureVoiture.fr">
+            <li class="news-card glass" data-date="" data-sender="PeintureVoiture.fr" data-crm="Unknown">
                 <a href="0a7817c3400c/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">28/11/2025 à 08:36</span>
@@ -744,7 +913,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="f39d681287b0/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">27/11/2025 à 03:53</span>
@@ -759,7 +928,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="084229ed0e81/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">26/11/2025 à 13:22</span>
@@ -767,14 +936,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Offre spéciale sur vos Magazines : Le Chasseur Français, La Revue Nationale de la Chasse...</h2>
-                    <p class="card-preview">Si vous ne visualisez pas correctement ce message, cliquez-ici TOUTE L'OFFRE L'ARMURERIE BONS PLANS MARQUES VIDÉOS Offre spéciale sur vos magazines préférés ! L...</p>
+                    <p class="card-preview">Si vous ne visualisez pas correctement ce message, cliquez-ici TOUTE L&#39;OFFRE L&#39;ARMURERIE BONS PLANS MARQUES VIDÉOS Offre spéciale sur vos magazines préférés ! L...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Mailjet">
                 <a href="fecb032eaf5c/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">26/11/2025 à 13:20</span>
@@ -782,14 +951,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Avec Babilou, trouvez votre place en crèche pour la rentrée !</h2>
-                    <p class="card-preview">vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l'aide de votre employeur ! Je réserve ma place Vous ...</p>
+                    <p class="card-preview">vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l&#39;aide de votre employeur ! Je réserve ma place Vous ...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Unknown">
                 <a href="8fb31ccea9fa/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">24/11/2025 à 05:48</span>
@@ -804,7 +973,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Klaviyo">
                 <a href="667f1f1b378c/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">24/11/2025 à 05:24</span>
@@ -812,14 +981,14 @@
                     </div>
                     <div class="sender-pill">benoit@getinside.fr</div>
                     <h2 class="card-title">Hello Fresh - Campagne Insertion Panier - Août 2025 Preview</h2>
-                    <p class="card-preview">Encore merci pour votre commande ! Voici votre code promo exclusif Suite à votre commande chez MieuxQueDesFleurs, bénéficiez de jusqu'à 95€ offerts sur vos prem...</p>
+                    <p class="card-preview">Encore merci pour votre commande ! Voici votre code promo exclusif Suite à votre commande chez MieuxQueDesFleurs, bénéficiez de jusqu&#39;à 95€ offerts sur vos prem...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr">
+            <li class="news-card glass" data-date="" data-sender="benoit@getinside.fr" data-crm="Sarbacane">
                 <a href="1aebb73dd87d/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">24/11/2025 à 05:21</span>
@@ -834,7 +1003,7 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises">
+            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises" data-crm="Unknown">
                 <a href="db3fd63ac9d5/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">20/11/2025 à 10:01</span>
@@ -849,29 +1018,29 @@
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Fanny de Yooji">
+            <li class="news-card glass" data-date="" data-sender="Fanny de Yooji" data-crm="Sendinblue">
                 <a href="fdf5fd94e9da/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">17/11/2025 à 18:10</span>
                         <span class="crm-badge" data-crm="Sendinblue">Sendinblue</span>
                     </div>
                     <div class="sender-pill">Fanny de Yooji</div>
-                    <h2 class="card-title">Besoin d'un mode de garde pour bébé ?</h2>
-                    <p class="card-preview">Besoin d'un mode de garde pour bébé ? Découvrez Babilou, notre coup de cœur pour accompagner les familles au quotidien. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
+                    <h2 class="card-title">Besoin d&#39;un mode de garde pour bébé ?</h2>
+                    <p class="card-preview">Besoin d&#39;un mode de garde pour bébé ? Découvrez Babilou, notre coup de cœur pour accompagner les familles au quotidien. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             
-            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises">
+            <li class="news-card glass" data-date="" data-sender="Atelier Loupiote | Lampes artisanales françaises" data-crm="Klaviyo">
                 <a href="8eb0a0b995a0/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">19/09/2025 à 14:23</span>
                         <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
                     </div>
                     <div class="sender-pill">Atelier Loupiote | Lampes artisanales françaises</div>
-                    <h2 class="card-title">🌱 🇫🇷 👕  Envie d'unintérieur ET d'une garde robe saine ?</h2>
+                    <h2 class="card-title">🌱 🇫🇷 👕  Envie d&#39;unintérieur ET d&#39;une garde robe saine ?</h2>
                     <p class="card-preview">On a une offre (-20%!!!) Maison Lemahieu pour vous 🤗 ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</p>
                     <div class="card-footer">
                         <span class="arrow">→</span>
@@ -887,19 +1056,6 @@
         </footer>
     </div>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Simple aggregate for reading time
-        document.addEventListener("DOMContentLoaded", () => {
-            const items = document.querySelectorAll('.news-card .read-time span');
-            let total = 0;
-            items.forEach(i => {
-                const t = parseInt(i.innerText);
-                if (!isNaN(t)) total += t;
-            });
-            const totalEl = document.getElementById('totalTime');
-            if (totalEl) totalEl.innerText = total + " min";
-        });
-    </script>
 </body>
 
 </html>
