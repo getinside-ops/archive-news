@@ -63,6 +63,14 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 - To reconfigure Pages source: `gh api repos/getinside-ops/archive-news/pages --method PUT -f 'source[branch]=main' -f 'source[path]=/docs'`
   (JSON object format is rejected by the API — use nested `-f` field syntax only.)
 
+## UI / CSS workflow notes
+
+- **CSS sync**: After editing `src/assets/css/style.css`, always copy to `docs/assets/css/style.css`. The generator does this automatically on pipeline runs.
+- **`docs/index.html` is generated**: `templates/index.html` → `docs/index.html` via `generator.py`. When making nav/static changes, update both files manually if not running the full pipeline.
+- **Viewer CSS layering**: Base layout rules in `.viewer-content` etc.; viewer-specific overrides live in `.viewer-layout .viewer-content` blocks (~line 1315 in style.css). Add overrides there, not to base rules.
+- **Local preview**: Playwright blocks `file://` — run `python3 -m http.server 8765` inside `docs/` to preview locally.
+- **VitePress pill toggle tokens** (measured from live handbook): border `rgb(60,63,68)`, check circle `#3c3c43` (light) / `#ebebf0` (dark), icon `#dfdfda` (light) / `#3c3c43` (dark).
+
 ## Contributing rules (from README)
 
 - **Parser changes**: Update `EmailParser` in `src/parser.py` first; ensure the returned dict keys match Jinja2 template expectations in `templates/viewer.html`.
