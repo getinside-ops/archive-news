@@ -151,11 +151,11 @@ function updateThemeIcon(theme) {
     const sun = btn.querySelector('.icon-sun');
     const moon = btn.querySelector('.icon-moon');
     if (theme === 'dark') {
-        if (sun) sun.style.display = 'block';
-        if (moon) moon.style.display = 'none';
-    } else {
         if (sun) sun.style.display = 'none';
         if (moon) moon.style.display = 'block';
+    } else {
+        if (sun) sun.style.display = 'block';
+        if (moon) moon.style.display = 'none';
     }
 }
 
@@ -304,6 +304,25 @@ function copyToClipboard(text, btn) {
     }).catch(err => {
         console.error('Failed to copy: ', err);
     });
+}
+
+function shareEmail(btn) {
+    const url = window.location.href;
+    const title = document.querySelector('.vh-subject')?.textContent?.trim() || document.title;
+    if (navigator.share) {
+        navigator.share({ title, url }).catch(() => {});
+        return;
+    }
+    // Fallback: copy URL to clipboard
+    navigator.clipboard.writeText(url).then(() => {
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg>Copied!';
+        btn.classList.add('copy-success');
+        setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            btn.classList.remove('copy-success');
+        }, 2000);
+    }).catch(err => console.error('Failed to copy:', err));
 }
 
 /* Link Highlighting from Sidebar List */

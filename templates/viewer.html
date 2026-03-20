@@ -50,8 +50,8 @@
                 <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
                     <span class="gi-vp-check">
                         <span class="gi-vp-icon">
-                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
                         </span>
                     </span>
                 </button>
@@ -96,8 +96,8 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
-                        <button class="btn btn-secondary" id="copyLinkBtn" onclick="copyToClipboard(window.location.href, this)" title="Copy link to this email">
-                            Copy Link
+                        <button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Share
                         </button>
                         <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
@@ -336,6 +336,7 @@
             <kbd>H</kbd><span>Toggle link badges</span>
             <kbd>T</kbd><span>Toggle dark mode</span>
             <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>S</kbd><span>Share</span>
             <kbd>↑ ↓</kbd><span>Scroll email</span>
             <kbd>?</kbd><span>This panel</span>
         </div>
@@ -937,6 +938,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === 's' || e.key === 'S') shareEmail(document.getElementById('shareBtn'));
             if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows

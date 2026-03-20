@@ -2231,7 +2231,7 @@ body.index-page .gi-topnav-link.active {
 
 .gi-vp-check {
     position: absolute;
-    top: 1px;
+    top: 50%;
     left: 1px;
     width: 18px;
     height: 18px;
@@ -2241,8 +2241,9 @@ body.index-page .gi-topnav-link.active {
     align-items: center;
     justify-content: center;
     transition: transform 0.25s ease;
+    transform: translateY(-50%);
 }
-[data-theme="dark"] .gi-vp-check { background: #ebebf0; transform: translateX(18px); }
+[data-theme="dark"] .gi-vp-check { background: #ebebf0; transform: translateY(-50%) translateX(18px); }
 
 .gi-vp-icon {
     width: 12px;
