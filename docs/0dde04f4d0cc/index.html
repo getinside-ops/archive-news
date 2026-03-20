@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -27,26 +28,34 @@
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
                 <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
             </a>
+
             <div class="gi-topnav-links">
-                <a href="../index.html" class="gi-topnav-link">Archive</a>
-                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
         </nav>
 
         <!-- Main body row: viewer + sidebar -->
@@ -55,930 +64,127 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        Votre première commande photo à -50% 🎁
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
                             <span id="highlightBtnText">Show Links</span>
                         </button>
-                        <button class="btn btn-secondary" onclick="openHtmlModal()" title="View HTML (V)">
-                            View HTML
+                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+                            Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
-
-                    </div>
+                </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">benoit@getinside.fr</span>
+                    <h1 class="vh-subject">Votre première commande photo à -50% 🎁</h1>
+                    <span class="vh-date">29/12/2025 à 01:24</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="mobile"
                     style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
-<div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">benoit@getinside.fr</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Votre première commande photo à -50% 🎁">Votre première commande photo à -50% 🎁</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Vos plus beaux souvenirs, fabriqués en France Profitez de -50%* sur vos produits préférés Imprimez vos plus beaux instants, Photoweb vous offre -50%* sur votre ...">Vos plus beaux souvenirs, fabriqués en France Profitez de -50%* sur vos produits préférés Imprimez vos plus beaux instants, Photoweb vous offre -50%* sur votre ...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">29/12/2025 à 01:24</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
+            </div>
+
+            <div class="sidebar-content">
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">benoit@getinside.fr</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="Votre première commande photo à -50% 🎁">Votre première commande photo à -50% 🎁</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Vos plus beaux souvenirs, fabriqués en France Profitez de -50%* sur vos produits préférés Imprimez vos plus beaux instants, Photoweb vous offre -50%* sur votre ...">Vos plus beaux souvenirs, fabriqués en France Profitez de -50%* sur vos produits préférés Imprimez vos plus beaux instants, Photoweb vous offre -50%* sur votre ...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">29/12/2025 à 01:24</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">31.4 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">0</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">31.4 KB</span>
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
+                    <div style="padding: 8px 10px;">
+                        
                     </div>
                 </div>
 
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (2)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/6929b994dbbaf</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/6929b994dbbaf')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,1</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,1')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (15)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Profitez de -50%* sur vos produits préférés</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Imprimez vos plus beaux instants, Photoweb vous of</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Je découvre</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(5)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">5</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Les livres photo</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(6)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">6</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Les tirages photo</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(7)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">7</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Les calendriers photo</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(8)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">8</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">La décoration murale</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(9)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">9</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(10)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">10</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Découvrez nos cartes de voeux & faire-part</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(11)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">11</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Partagez vos plus beaux messages avec les cartes P</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(12)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">12</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Créez dès maintenant</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(13)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">13</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Si vous souhaitez vous désabonner de la lettre d’i</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(14)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">14</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Mon compte</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(15)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">15</span>
-                            <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                <span class="card-v2-tag tag-tracking"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                    </svg> TRACKING</span>
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Mes Newsletters</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -993,33 +199,51 @@
         </div><!-- /.viewer-body-row -->
     </div><!-- /.viewer-layout -->
 
-    <!-- HTML Source Modal -->
-    <div class="modal-overlay" id="htmlModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-title" style="color: var(--accent-blue);">HTML Source</span>
-                <button class="modal-close" onclick="closeHtmlModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <pre class="code-block" id="htmlSourceCode"></pre>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" onclick="copyAllHtml()">Copy HTML</button>
-            </div>
-        </div>
-    </div>
+
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
 
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
 
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
+
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<body cz-shortcut-listen=\"true\" style=\"background-color:#ffffff\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"width:100%;margin-top:-1px\" width=\"100%\">\n<tbody><tr aria-hidden=\"true\" class=\"t_dnone m_dnone\">\n<td height=\"1\" style=\"height:1px;max-height:1px;font-size:1px;line-height:1px\">\n<span style=\"display:block;width:800px;min-width:800px\">\u00a0</span>\n</td></tr><tr><td role=\"main\" style=\"background-color:#ffffff\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"800\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_mauto t_w100p m_mauto m_w100p\" role=\"none\" style=\"margin:auto\" width=\"800\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<!--[if !mso]><!-->\n<div class=\"m_v t_v\" style=\"display:none;font-size:1px;color:#000000;line-height:1px;max-height:0px;max-width:0px;overflow:hidden;mso-hide:all;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_dnone m_dnone\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#667085;text-align:center;font-size:12px;padding-top:10px;vertical-align:middle;line-height:16px;mso-hyphenate:none\"> Vos plus beaux souvenirs, fabriqu\u00e9s en France </td></tr></tbody></table>\n</div>\n<!--<![endif]-->\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_mauto t_w100p m_mauto m_w100p\" role=\"none\" style=\"margin:auto\" width=\"800\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"800\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w90p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"450\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center m_dnone\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"40\" style=\"height:40px;font-size:8px\"> \u200c </td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_bdclseparate t_ovhidden m_bdclseparate m_ovhidden\" role=\"none\" style=\"border-collapse:separate;overflow:hidden\" width=\"100%\">\n<tbody><tr><td class=\"t_bdclseparate t_ovhidden m_pt0px m_bdtlrs0px m_bdtrrs0px m_bdblrs0px m_bdbrrs0px m_bdclseparate m_ovhidden\" style=\"text-align:center;vertical-align:middle;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-collapse:separate;overflow:hidden\">\n<a data-index=\"1\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1\" style=\"color:#000000;outline:0;border:none;margin:auto;display:block\" target=\"_blank\" width=\"100%\"><img alt=\"\" class=\"t_w100p m_w100p\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/1.jpg\" style=\"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none\" width=\"450\"/></a>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w80p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w90p m_w90p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"m_fz24px m_lh28px\" style=\"font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:28px;padding-top:20px;vertical-align:middle;line-height:35px;mso-hyphenate:none;font-weight:700\">\n<a class=\"m_lh28px\" data-index=\"2\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2\" style=\"color:#000000;line-height:35px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Profitez de -50%* sur vos produits pr\u00e9f\u00e9r\u00e9s </a>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w85p m_w90p\" role=\"none\" style=\"margin:auto\" width=\"75%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#000000;text-align:center;font-size:14px;padding-top:10px;padding-bottom:20px;vertical-align:middle;line-height:21px;mso-hyphenate:none\">\n<a data-index=\"3\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3\" style=\"color:#000000;line-height:21px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Imprimez vos plus beaux instants, Photoweb vous offre -50%* sur votre premi\u00e8re commande avec\u00a0le\u00a0code\u00a0REDOUTE50 </a>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"texta0ce56ec-0671-4522-bcbc-6b48e3d820cf\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td class=\"m_h40px yah_hauto\" height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:center;font-size:16px;background-color:#000;vertical-align:middle;line-height:19px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"4\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4\" style=\"color:#fff;line-height:19px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Je d\u00e9couvre </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"40\" style=\"height:40px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w98p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"90%\">\n<tbody><tr><td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left t_flnone t_mauto t_w81p m_flnone m_mauto m_w81p\" role=\"none\" width=\"352\">\n<tbody><tr><td>\n<div style=\"border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:separate\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"352\">\n<tbody><tr><td background=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/2.jpg\" class=\"h352px bgiurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb2jpg bgurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb2jpgnominrepeatcentercentercover bgszcover bgpcentercenter t_bgp50p50 t_bgszcover t_hauto m_bgszcover m_hauto yah_hauto\" height=\"352\" style=\"background-repeat:no-repeat\" valign=\"top\">\n<!--[if mso]>\n<v:rect xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\" stroke=\"f\" style=\"width:352px;height:352px;\">\n<v:fill type=\"frame\" aspect=\"atleast\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/2.jpg\" color=\"#ffffff\" origin=\"0 0\" position=\"0 0\" />\n<v:textbox inset=\"0,0,0,0\">\n<![endif]-->\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left\" role=\"none\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;margin:auto;overflow:hidden;clear:both\" width=\"100%\">\n<tbody><tr><td class=\"m_h202px yah_hauto\" height=\"292\" style=\"height:292px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"texte07e079f-f2e6-44c0-84c1-da38ca156d7e\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:16px;background-color:#FFFFFF;vertical-align:middle;line-height:18px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"5\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5\" style=\"color:#191B21;line-height:18px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Les livres photo </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n<!--[if mso]>\n</v:textbox>\n</v:rect>\n<![endif]-->\n</td></tr></tbody></table>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table></td>\n<td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_right t_flnone t_mauto t_w81p m_flnone m_mauto m_w81p\" role=\"none\" width=\"352\">\n<tbody><tr><td>\n<div style=\"border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:separate\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"352\">\n<tbody><tr><td background=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/3.jpg\" class=\"h352px bgiurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb3jpg bgurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb3jpgnominrepeatcentercentercover bgszcover bgpcentercenter t_bgp50p50 t_bgszcover t_hauto m_bgszcover m_hauto yah_hauto\" height=\"352\" style=\"background-repeat:no-repeat\" valign=\"top\">\n<!--[if mso]>\n<v:rect xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\" stroke=\"f\" style=\"width:352px;height:352px;\">\n<v:fill type=\"frame\" aspect=\"atleast\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/3.jpg\" color=\"#ffffff\" origin=\"0 0\" position=\"0 0\" />\n<v:textbox inset=\"0,0,0,0\">\n<![endif]-->\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left\" role=\"none\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;margin:auto;overflow:hidden;clear:both\" width=\"100%\">\n<tbody><tr><td class=\"m_h202px yah_hauto\" height=\"292\" style=\"height:292px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"textb9c6336b-c73b-4a83-a99e-afb13700ba30\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:16px;background-color:#FFFFFF;vertical-align:middle;line-height:18px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"6\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6\" style=\"color:#191B21;line-height:18px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Les tirages photo </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n<!--[if mso]>\n</v:textbox>\n</v:rect>\n<![endif]-->\n</td></tr></tbody></table>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w98p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"90%\">\n<tbody><tr><td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left t_flnone t_mauto t_w81p m_flnone m_mauto m_w81p\" role=\"none\" width=\"352\">\n<tbody><tr><td>\n<div style=\"border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:separate\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"352\">\n<tbody><tr><td background=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/4.jpg\" class=\"h352px bgiurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb4jpg bgurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb4jpgnominrepeatcentercentercover bgszcover bgpcentercenter t_bgp50p50 t_bgszcover t_hauto m_bgszcover m_hauto yah_hauto\" height=\"352\" style=\"background-repeat:no-repeat\" valign=\"top\">\n<!--[if mso]>\n<v:rect xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\" stroke=\"f\" style=\"width:352px;height:352px;\">\n<v:fill type=\"frame\" aspect=\"atleast\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/4.jpg\" color=\"#ffffff\" origin=\"0 0\" position=\"0 0\" />\n<v:textbox inset=\"0,0,0,0\">\n<![endif]-->\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left\" role=\"none\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;margin:auto;overflow:hidden;clear:both\" width=\"100%\">\n<tbody><tr><td class=\"m_h202px yah_hauto\" height=\"292\" style=\"height:292px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"text648d1639-500b-440e-9f5e-64d557f443d1\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:16px;background-color:#FFFFFF;vertical-align:middle;line-height:18px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"7\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7\" style=\"color:#191B21;line-height:18px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Les calendriers photo </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n<!--[if mso]>\n</v:textbox>\n</v:rect>\n<![endif]-->\n</td></tr></tbody></table>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table></td>\n<td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_right t_flnone t_mauto t_w81p m_flnone m_mauto m_w81p\" role=\"none\" width=\"352\">\n<tbody><tr><td>\n<div style=\"border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:separate\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"352\">\n<tbody><tr><td background=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/5.jpg\" class=\"h352px bgiurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb5jpg bgurlhttpsdivcdndlaredoutecomnewsletters2026emcs02photoweb5jpgnominrepeatcentercentercover bgszcover bgpcentercenter t_bgp50p50 t_bgszcover t_hauto m_bgszcover m_hauto yah_hauto\" height=\"352\" style=\"background-repeat:no-repeat\" valign=\"top\">\n<!--[if mso]>\n<v:rect xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\" stroke=\"f\" style=\"width:352px;height:352px;\">\n<v:fill type=\"frame\" aspect=\"atleast\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/5.jpg\" color=\"#ffffff\" origin=\"0 0\" position=\"0 0\" />\n<v:textbox inset=\"0,0,0,0\">\n<![endif]-->\n<table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_left\" role=\"none\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;margin:auto;overflow:hidden;clear:both\" width=\"100%\">\n<tbody><tr><td class=\"m_h202px yah_hauto\" height=\"292\" style=\"height:292px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"text1858146e-231e-4404-85ba-3b91dd81598d\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:16px;background-color:#FFFFFF;vertical-align:middle;line-height:18px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"8\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8\" style=\"color:#191B21;line-height:18px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> La d\u00e9coration murale </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n</td></tr><tr><td>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n<!--[if mso]>\n</v:textbox>\n</v:rect>\n<![endif]-->\n</td></tr></tbody></table>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"16\" style=\"height:16px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"24\" style=\"height:24px;font-size:8px\"> \u200c </td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"720\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w80p m_w80p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td>\n<div style=\"border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"border-collapse:separate;background-color:#F6F6F8\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" width=\"100%\">\n<tbody><tr><td style=\"text-align:center;vertical-align:middle\">\n<a data-index=\"9\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9\" style=\"color:#000000;outline:0;border:none;margin:auto;display:block\" target=\"_blank\" width=\"100%\"><img alt=\"\" class=\"t_w100p m_w100p\" src=\"https://cdn.laredoute.com/newsletters/2026/emc/S02/photoweb/6.jpg\" style=\"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none\" width=\"360\"/></a>\n</td></tr></tbody></table>\n</td></tr></tbody></table></td>\n<td class=\"t_w100p t_dinlineminblock m_w100p m_dinlineminblock\" valign=\"top\" width=\"50%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w90p m_w90p\" role=\"none\" style=\"margin:auto\" width=\"80%\">\n<tbody><tr><td class=\"m_fz16px m_pt20px m_lh19px\" style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:18px;padding-top:38px;padding-bottom:10px;vertical-align:middle;line-height:22px;mso-hyphenate:none;font-weight:700\">\n<a class=\"m_lh19px\" data-index=\"10\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca\" style=\"color:#191B21;line-height:22px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> D\u00e9couvrez nos cartes de voeux &amp; faire-part </a>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w80p m_w90p\" role=\"none\" style=\"margin:auto\" width=\"90%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#191B21;text-align:center;font-size:14px;padding-bottom:20px;vertical-align:middle;line-height:21px;mso-hyphenate:none\">\n<a data-index=\"11\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb\" style=\"color:#191B21;line-height:21px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Partagez vos plus beaux messages avec les cartes Photoweb. Cr\u00e9ez des designs uniques, personnalis\u00e9s avec vos photos. </a>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w250px m_w200px\" role=\"none\" style=\"margin:auto;border-collapse:separate\" width=\"250\">\n<tbody><tr><td id=\"text98d4405a-e536-47a6-85a6-6d0a627736a2\">\n<div style=\"border-top-left-radius:24px;border-top-right-radius:24px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;overflow:hidden\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tbody><tr><td class=\"m_h40px yah_hauto\" height=\"44\" style=\"font-family:Arial,Helvetica,sans-serif;color:#fff;text-align:center;font-size:16px;background-color:#000;vertical-align:middle;line-height:18px;height:44px;mso-hyphenate:none;font-weight:700\">\n<a data-index=\"12\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc\" style=\"color:#fff;line-height:18px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Cr\u00e9ez d\u00e8s maintenant </a>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table></div>\n</td></tr></tbody></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tbody><tr><td height=\"40\" style=\"height:40px;font-size:8px\"> \u200c </td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"800\">\n<tbody><tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#667085;text-align:left;font-size:9px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;vertical-align:middle;line-height:12px;mso-hyphenate:none\">\n<span style=\"font-weight:700\">*Offre r\u00e9serv\u00e9e aux nouveaux clients :</span> -50% sur tous les produits sans minimum d\u2019achat (hors livres photo luxe) jusqu\u2019au 31/03/2026. Non cumulable avec d\u2019autres offres en cours. Offre utilisable sur l\u2019application mobile et Photoweb.fr. Photoweb SAS - 1 rue des Platanes, 38120 Saint-Egr\u00e8ve - Capital social 40 000\u20ac - RCS Grenoble 428 083 703 Photoweb vous offre -50% sur tout le site!\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#667085;text-align:left;font-size:9px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;vertical-align:middle;line-height:12px;mso-hyphenate:none\">\n<a data-index=\"13\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd\" style=\"color:#667085;line-height:12px;display:block;text-decoration:none;outline:0\" target=\"_blank\"> Si vous souhaitez vous d\u00e9sabonner de la lettre d\u2019information La Redoute, <span style=\"text-decoration:underline\">rendez-vous sur ce lien</span>.<br role=\"none\"/></a>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#667085;text-align:left;font-size:9px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;vertical-align:middle;line-height:12px;mso-hyphenate:none\"> Conform\u00e9ment \u00e0 la loi informatique et libert\u00e9s modifi\u00e9e et au r\u00e8glement europ\u00e9en 2016/679 du 27 avril 2016, vous disposez d'un droit d'acc\u00e8s, de rectification et de suppression des donn\u00e9es vous concernant et d'opposition \u00e0 leur traitement. Si vous souhaitez l'exercer, vous pouvez \u00e9crire \u00e0 La Redoute \u2013 Service Relations Clients \u2013 59081 Roubaix Cedex 2, en indiquant vos nom, pr\u00e9nom, adresse, email et si possible r\u00e9f\u00e9rence client afin d'acc\u00e9l\u00e9rer la prise en compte de votre demande. \u00c0 ces m\u00eames coordonn\u00e9es, vous pouvez vous opposer sans frais \u00e0 la prospection commerciale. Vous pouvez \u00e0 tout moment avoir acc\u00e8s et changer les informations concernant vos coordonn\u00e9es (adresses e-mail et courrier, changement de patronyme...) dans la rubrique \"<a data-index=\"14\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU\" style=\"color:#667085;text-decoration:underline\">Mon compte</a>\" et g\u00e9rer votre abonnement / d\u00e9sabonnement dans la rubrique \"<a data-index=\"15\" href=\"https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&amp;e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&amp;s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI\" style=\"color:#667085;text-decoration:underline\">Mes Newsletters</a>\". Pour conna\u00eetre notre politique de protection de vos donn\u00e9es personnelles, connectez vous sur le site Redoute, rubrique \u00ab donn\u00e9es personnelles \u00bb en bas de page.<br role=\"none\"/>\n</td></tr></tbody></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tbody><tr><td style=\"font-family:Arial,Helvetica,sans-serif;color:#667085;text-align:left;font-size:9px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px;vertical-align:middle;line-height:12px;mso-hyphenate:none\"> \u00a9 2025 - copyright La Redoute. Tous droits r\u00e9serv\u00e9s. La Redoute S.A.S. - 110 rue de Blanchemaille 59100 Roubaix - Capital\u00a0: 181\u00a0362\u00a0300\u00a0\u20ac - 477 180 186 RCS Lille M\u00e9tropole. T\u00e9l\u00e9phone : 0969 323 515 du lundi au samedi de 8h \u00e0 21h (Service gratuit + prix d\u2019un appel local).<br role=\"none\"/>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n</td></tr></tbody></table>\n<img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" \u00a0width=\"1\"/>\n<img alt=\"\" height=\"0\" src=\"\" style=\"display:none !important;\" width=\"0\"/>\n</body>";
+        const emailLinks = [];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -1037,10 +261,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -1233,8 +457,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -1285,33 +509,22 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
             });
         });
 
-        function openHtmlModal() {
-            const modal = document.getElementById('htmlModal');
-            const codeEl = document.getElementById('htmlSourceCode');
-            codeEl.textContent = content;
-            modal.classList.add('active');
-        }
 
-        function closeHtmlModal() {
-            document.getElementById('htmlModal').classList.remove('active');
-        }
-
-        function copyAllHtml() {
-            navigator.clipboard.writeText(content).then(() => {
-                const btn = event.target;
-                const original = btn.textContent;
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = original, 1500);
-            });
-        }
 
         function copyLink(btn, url) {
             navigator.clipboard.writeText(url).then(() => {
@@ -1327,12 +540,18 @@
             });
         }
 
-        async function runAudit(btn, url) {
+        async function runAudit(btn, url, index) {
             // Find parent elements
             const cardBody = btn.closest('.card-v2-body');
             const logContainer = cardBody.querySelector('.audit-log-container');
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
+            const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -1344,71 +563,196 @@
             await new Promise(r => setTimeout(r, 300));
 
             try {
-                // Determine mock behavior based on URL patterns
-                const isError = url.includes('error') || url.includes('404');
-                const isTracking = url.includes('tracking') || url.includes('click');
+                if (linkData && linkData.redirect_chain && linkData.redirect_chain.length > 0) {
+                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${linkData.audit_date}</small>` : '';
+                    statusText.innerHTML = 'Analyzing Redirection Chain...' + auditDateStr;
 
-                // --- Step 1: Initial Request ---
-                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> ${url}</div>`;
-                await new Promise(r => setTimeout(r, 600)); // Network delay
+                    let containsGtinsi = false;
+                    for (let i = 0; i < linkData.redirect_chain.length; i++) {
+                        const step = linkData.redirect_chain[i];
+                        const isLast = i === linkData.redirect_chain.length - 1;
+                        const isGtinsi = step.url && step.url.includes('gtinsi.de');
+                        if (isGtinsi) containsGtinsi = true;
 
-                if (isTracking) {
-                    // --- Step 2: Redirection (Mock) ---
-                    // Example: Tracking service -> Analytics Gateway -> Final URL
-                    statusText.innerHTML = 'Following redirects...';
+                        const stepClass = isGtinsi ? 'audit-step highlighted' : 'audit-step';
 
-                    // Decode URL parts to look like real params but show FULL URL
-                    const encodedTarget = encodeURIComponent(url);
+                        // Display the step
+                        if (!isLast) {
+                            // It's a redirect step
+                            const nextStep = linkData.redirect_chain[i + 1];
+                            timeline.innerHTML += `<div class="${stepClass}"><strong>${step.status}</strong> &rarr; ${nextStep.url}</div>`;
+                        } else {
+                            // It's the final destination
+                            const statusColor = (step.status === 200) ? 'text-green' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'text-red' : 'text-cyan');
+                            const statusIcon = (step.status === 200) ? 'final' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'error' : '');
 
-                    timeline.innerHTML += `<div class="audit-step"><strong>302</strong> &rarr; https://analytics.wrapper.com/redirect?target=${encodedTarget}&ts=123456789</div>`;
-                    await new Promise(r => setTimeout(r, 500));
+                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${step.status || 'Done'}</strong> &bull; ${step.url}</div>`;
 
-                    timeline.innerHTML += `<div class="audit-step"><strong>301</strong> &rarr; https://campaign.landing.page/special-offer?utm_source=email&utm_medium=archive_tool&utm_campaign=winter_sale</div>`;
-                    await new Promise(r => setTimeout(r, 500));
+                            // Update status text
+                            if (step.status === 200) {
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : 'Verification Complete';
+                            } else if (step.status === 'Timeout') {
+                                statusText.innerHTML = 'Request Timed Out';
+                            } else if (step.status >= 400 || step.status === 'Error') {
+                                statusText.innerHTML = 'Audit Finished (Error Found)';
+                            } else {
+                                statusText.innerHTML = 'Audit Finished';
+                            }
 
-                    // Final Destination
-                    if (isError) {
-                        timeline.innerHTML += `<div class="audit-step error"><strong>404</strong> NOT FOUND</div>`;
-                        statusText.innerHTML = 'Broken Link Detected';
-                        statusText.className = 'audit-status-text text-red';
-                    } else {
-                        timeline.innerHTML += `<div class="audit-step final"><strong>200 OK</strong> &bull; Final Destination Reached</div>`;
-                        statusText.innerHTML = 'Verification Complete';
-                        statusText.className = 'audit-status-text text-green';
+                            statusText.className = `audit-status-text ${statusColor}`;
+                            btn.style.color = (step.status === 200) ? 'var(--accent-green)' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'var(--accent-red)' : 'var(--accent-cyan)');
+                        }
+                        await new Promise(r => setTimeout(r, 400));
                     }
-                } else if (isError) {
-                    // Direct Error
-                    timeline.innerHTML += `<div class="audit-step error"><strong>404</strong> NOT FOUND</div>`;
-                    statusText.innerHTML = 'Broken Link';
-                    statusText.className = 'audit-status-text text-red';
                 } else {
-                    // Direct Success
-                    timeline.innerHTML += `<div class="audit-step final"><strong>200 OK</strong> &bull; Link validated successfully</div>`;
-                    statusText.innerHTML = 'Verification Complete';
-                    statusText.className = 'audit-status-text text-green';
+                    // Fallback for archives created before this feature or if resolution failed
+                    timeline.innerHTML += `<div class="audit-step"><strong>INFO</strong> Pre-calculated redirect data missing.</div>`;
+                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${url}</div>`;
+                    await new Promise(r => setTimeout(r, 600));
+                    timeline.innerHTML += `<div class="audit-step final"><strong>ACTION</strong> Please re-archive this email to enable full redirect auditing.</div>`;
+                    statusText.innerHTML = 'Direct Link Check';
+                    statusText.className = 'audit-status-text text-yellow';
+                    btn.style.color = 'var(--accent-yellow)';
                 }
 
-                // Visual feedback on button
-                btn.style.color = isError ? 'var(--accent-red)' : 'var(--accent-green)';
-
             } catch (e) {
-                statusText.innerHTML = 'Connection Error';
+                console.error("Audit error:", e);
+                statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
+        async function downloadEmailZip() {
+            try {
+                const zip = new JSZip();
+                const subject = "Votre première commande photo à -50% 🎁".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const timestamp = new Date().toISOString().split('T')[0];
+                const zipFilename = `${subject}_${timestamp}.zip`;
+
+                // Get all images from the current directory
+                const currentPath = window.location.pathname;
+                const emailDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+
+                // Find all image references in the HTML
+                const doc = frame.contentDocument;
+                const images = doc.querySelectorAll('img[src]');
+
+                // Create a folder for images
+                const imgFolder = zip.folder("images");
+
+                // Download each image and track the mapping
+                let downloadCount = 0;
+                const imagePromises = [];
+                const imageMapping = new Map(); // old path -> new path
+
+                images.forEach((img, index) => {
+                    const imgSrc = img.getAttribute('src');
+                    if (imgSrc && !imgSrc.startsWith('data:') && !imgSrc.startsWith('http')) {
+                        // It's a local image
+                        const imgPath = emailDir + '/' + imgSrc;
+                        const imgFilename = imgSrc.split('/').pop();
+
+                        // Store the mapping: old src -> new path in zip
+                        imageMapping.set(imgSrc, 'images/' + imgFilename);
+
+                        const promise = fetch(imgPath)
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.blob();
+                                }
+                                throw new Error(`Failed to fetch ${imgFilename}`);
+                            })
+                            .then(blob => {
+                                imgFolder.file(imgFilename, blob);
+                                downloadCount++;
+                            })
+                            .catch(err => {
+                                console.warn(`Could not download ${imgFilename}:`, err);
+                            });
+
+                        imagePromises.push(promise);
+                    }
+                });
+
+                // Wait for all images to be added
+                await Promise.all(imagePromises);
+
+                // Fix image paths in HTML content
+                let fixedHtml = content;
+                imageMapping.forEach((newPath, oldPath) => {
+                    // Replace all occurrences of the old path with the new path
+                    const regex = new RegExp(oldPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    fixedHtml = fixedHtml.replace(regex, newPath);
+                });
+
+                // Add HTML content with fixed paths
+                zip.file("email.html", fixedHtml);
+
+                // Generate zip file
+                const blob = await zip.generateAsync({ type: "blob" });
+
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = zipFilename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                console.log(`Downloaded ${downloadCount} images and HTML as ${zipFilename}`);
+            } catch (error) {
+                console.error('Error creating zip file:', error);
+                alert('Failed to create download. Please try again.');
+            }
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const modal = document.getElementById('htmlModal');
-                if (modal.classList.contains('active')) closeHtmlModal();
-            }
             if (e.key === '1') setMode('mobile');
             if (e.key === '2') setMode('tablet');
             if (e.key === '3') setMode('desktop');
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
-            if (e.key === 'v' || e.key === 'V') openHtmlModal();
+            if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

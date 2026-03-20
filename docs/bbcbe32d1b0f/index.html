@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
@@ -28,26 +28,34 @@
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
                 <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
             </a>
+
             <div class="gi-topnav-links">
-                <a href="../index.html" class="gi-topnav-link">Archive</a>
-                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
         </nav>
 
         <!-- Main body row: viewer + sidebar -->
@@ -56,14 +64,30 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        Coup de ❤️ BUT : simplicité et gourmandise en cuisine
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
@@ -72,304 +96,95 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
-
-                    </div>
+                </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">benoit@getinside.fr</span>
+                    <h1 class="vh-subject">Coup de ❤️ BUT : simplicité et gourmandise en cuisine</h1>
+                    <span class="vh-date">10/02/2026 à 08:43</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="mobile"
                     style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
-<div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">benoit@getinside.fr</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Coup de ❤️ BUT : simplicité et gourmandise en cuisine">Coup de ❤️ BUT : simplicité et gourmandise en cuisine</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Une recommandation gourmande réservée aux clients BUT. Une cuisine équipée, c'est bien. Une cuisine qui r...">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Une recommandation gourmande réservée aux clients BUT. Une cuisine équipée, c'est bien. Une cuisine qui r...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">10/02/2026 à 08:43</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
+            </div>
+
+            <div class="sidebar-content">
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">benoit@getinside.fr</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="Coup de ❤️ BUT : simplicité et gourmandise en cuisine">Coup de ❤️ BUT : simplicité et gourmandise en cuisine</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Une recommandation gourmande réservée aux clients BUT. Une cuisine équipée, c&#39;est bien. Une cuisine qui r...">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Une recommandation gourmande réservée aux clients BUT. Une cuisine équipée, c&#39;est bien. Une cuisine qui r...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">10/02/2026 à 08:43</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">28.5 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">0</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">28.5 KB</span>
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
+                    <div style="padding: 8px 10px;">
+                        
                     </div>
                 </div>
 
-                <!-- Tracking Pixels -->
-                
-                <div class="meta-section">
-                    <div class="meta-section-title">Tracking Pixels (1)</div>
-                    
-                    <div class="link-card-v2" style="cursor: default; border-color: var(--accent-green); opacity: 0.9;">
-                        <div class="card-v2-header" style="background: rgba(80, 250, 123, 0.05);">
-                            <span class="card-v2-index" style="background: var(--accent-green);">P</span>
-                            <span class="card-v2-domain">api.getinside.media</span>
-                            <span class="card-v2-tag"
-                                style="color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">PIXEL</span>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">Integration: OK</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://api.getinside.media/v1/emails/track/6984c4f02c604</code>
-                                <button class="card-v2-copy-btn"
-                                    onclick="event.stopPropagation(); copyLink(this, 'https://api.getinside.media/v1/emails/track/6984c4f02c604')">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (4)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6984c4f02ae69</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6984c4f02ae69', 1)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6984c4f02ae69')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">J'EN PROFITE ►</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6984c4f02ae69</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6984c4f02ae69', 2)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6984c4f02ae69')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text"></div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6984c4f02ae69</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6984c4f02ae69', 3)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6984c4f02ae69')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(4)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">4</span>
-                            <span class="card-v2-domain">gtinsi.de</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">JE COMMANDE MA BOX</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://gtinsi.de/6984c4f02ae69</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://gtinsi.de/6984c4f02ae69', 4)">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://gtinsi.de/6984c4f02ae69')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -386,18 +201,49 @@
 
 
 
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n\n<html dir=\"auto\" lang=\"und\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\">\n<head>\n<title>Offre exclusive : jusqu\u2019\u00e0 95 \u20ac offerts avec HelloFresh</title>\n<!--[if !mso]><!-->\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<!--<![endif]-->\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>\n<style type=\"text/css\">\n    #outlook a {\n      padding: 0;\n    }\n\n    body {\n      margin: 0;\n      padding: 0;\n      -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n    }\n\n    table,\n    td {\n      border-collapse: collapse;\n      mso-table-lspace: 0pt;\n      mso-table-rspace: 0pt;\n    }\n\n    img {\n      border: 0;\n      height: auto;\n      line-height: 100%;\n      outline: none;\n      text-decoration: none;\n      -ms-interpolation-mode: bicubic;\n    }\n\n    p {\n      display: block;\n      margin: 13px 0;\n    }\n  </style>\n<!--[if mso]>\n    <noscript>\n    <xml>\n    <o:OfficeDocumentSettings>\n      <o:AllowPNG/>\n      <o:PixelsPerInch>96</o:PixelsPerInch>\n    </o:OfficeDocumentSettings>\n    </xml>\n    </noscript>\n    <![endif]-->\n<!--[if lte mso 11]>\n    <style type=\"text/css\">\n      .mj-outlook-group-fix { width:100% !important; }\n    </style>\n    <![endif]-->\n<style type=\"text/css\">\n    @media only screen and (min-width:480px) {\n      .mj-column-per-100 {\n        width: 100% !important;\n        max-width: 100%;\n      }\n\n      .mj-column-per-50 {\n        width: 50% !important;\n        max-width: 50%;\n      }\n    }\n  </style>\n<style media=\"screen and (min-width:480px)\">\n    .moz-text-html .mj-column-per-100 {\n      width: 100% !important;\n      max-width: 100%;\n    }\n\n    .moz-text-html .mj-column-per-50 {\n      width: 50% !important;\n      max-width: 50%;\n    }\n  </style>\n<style type=\"text/css\">\n    @media only screen and (max-width:479px) {\n      table.mj-full-width-mobile {\n        width: 100% !important;\n      }\n\n      td.mj-full-width-mobile {\n        width: auto !important;\n      }\n    }\n  </style>\n<style type=\"text/css\">\n    .hide-mobile {\n      display: none !important;\n    }\n\n    .but-red {\n      color: #EA2504 !important;\n    }\n\n    /* GESTION DU DARK MODE CSS */\n    :root {\n      color-scheme: light dark;\n      supported-color-schemes: light dark;\n    }\n\n    /* Transformation en BLOC MONOCHROME SOLIDE SANS OMBRE (Flat Design) */\n    .coupon-box {\n      background-color: #ffffff !important;\n      border-radius: 8px !important;\n      overflow: hidden !important;\n      border: 1px solid #E0E0E0 !important;\n    }\n\n    /* Code promo : Bloc solide gris clair */\n    .promo-code {\n      background-color: #F4F4F4;\n      color: #EA2504;\n      padding: 10px 20px;\n      font-weight: 900;\n      border-radius: 4px;\n      display: inline-block;\n      font-size: 16px;\n      letter-spacing: 1px;\n    }\n\n    .impact-text {\n      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;\n    }\n  </style>\n<!-- TITRE ET PRE-HEADER (Option 3 int\u00e9gr\u00e9e par d\u00e9faut) -->\n<!-- META TAGS POUR LE DARK MODE (Am\u00e9liore le support global) -->\n<meta content=\"light dark\" name=\"color-scheme\"/>\n<meta content=\"light dark\" name=\"supported-color-schemes\"/>\n</head>\n<body style=\"word-spacing:normal;background-color:#F4F4F4;\">\n<div style=\"display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">Une recommandation gourmande r\u00e9serv\u00e9e aux clients BUT.</div>\n<div aria-label=\"Offre exclusive : jusqu\u2019\u00e0 95 \u20ac offerts avec HelloFresh\" aria-roledescription=\"email\" dir=\"auto\" lang=\"und\" role=\"article\" style=\"background-color:#F4F4F4;\">\n<!-- HERO IMAGE STANDARD (Redimensionnement mobile parfait) -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:600px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:600px;\">\n<a data-index=\"1\" href=\"https://gtinsi.de/6984c4f02ae69\" target=\"_blank\">\n<img alt=\"D\u00e9couvrir l'offre HelloFresh\" height=\"auto\" src=\"img_0.jpg\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TITRE ACCROCHE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px 20px 10px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- TITRE BUT : ROUGE MIS \u00c0 JOUR -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:20px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Une cuisine \u00e9quip\u00e9e, c'est bien.<br/> Une cuisine qui r\u00e9gale, c'est mieux !</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- EDITORIAL CONTEXT (D\u00c9PLAC\u00c9 AVANT L'OFFRE) -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\">Chez <strong>BUT</strong>, nous aimons vous aider \u00e0 cr\u00e9er une cuisine conviviale. Mais nous savons que ce qui compte le plus, c'est ce que vous y partagez.<br/><br/> D\u00e9couvrez <strong>HelloFresh</strong> : des ingr\u00e9dients frais livr\u00e9s chez vous pour cuisiner simplement.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- OFFER BLOCK STYLE \"CARTE SOLIDE\" SANS OMBRE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"coupon-box-outlook\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix coupon-box\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding:25px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<!-- PRIX OPTIMIS\u00c9 MOBILE (32px) EN ROUGE BUT -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:5px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:32px;font-weight:900;line-height:36px;text-align:center;text-transform:uppercase;color:#EA2504;\">JUSQU'\u00c0 95\u20ac OFFERTS*</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:20px;text-align:center;text-transform:uppercase;color:#333333;\">+ VOTRE DESSERT \u00c0 VIE !*</div>\n</td>\n</tr>\n<!-- CODE PROMO -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:20px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:24px;text-align:center;color:#333333;\">Votre code avantage :<br/><br/>\n<span class=\"promo-code\">BUTF4L26</span>\n</div>\n</td>\n</tr>\n<!-- CTA -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"2\" href=\"https://gtinsi.de/6984c4f02ae69\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> J'EN PROFITE \u25ba </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<!-- TEXTE AVEC AST\u00c9RISQUE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:24px;text-align:center;color:#555555;\">Soit de d\u00e9licieux repas <strong>\u00e0 partir de moins de 3 \u20ac par assiette*</strong>.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- ARGUMENTS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 10px 0px 10px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83d\udce6</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Livraison flexible</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Choisissez votre cr\u00e9neau de 8h \u00e0 22h.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd55</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Ingr\u00e9dients frais</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Produits de qualit\u00e9 s\u00e9lectionn\u00e9s avec soin.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd57</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Vari\u00e9t\u00e9 au menu</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">45 nouvelles recettes chaque semaine.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd33</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Sans engagement</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Suspendez votre abonnement en un clic.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- SECTION VISUEL PLATS & TEXTE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- S\u00e9parateur SOLIDE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:25px;word-break:break-word;\">\n<p style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:100%;\">\n</p>\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:510px;\" role=\"presentation\" width=\"510px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n</td></tr></table><![endif]-->\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">De l'inspiration dans votre assiette</div>\n</td>\n</tr>\n<!-- IMAGE SECONDAIRE CLIQUABLE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:510px;\">\n<a data-index=\"3\" href=\"https://gtinsi.de/6984c4f02ae69\" target=\"_blank\">\n<img alt=\"Plats savoureux HelloFresh\" height=\"auto\" src=\"img_1.png\" style=\"border:0;border-radius:8px;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"510\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\"><strong>En manque d'id\u00e9es ?</strong><br/> Retrouvez chaque semaine 45 nouvelles recettes au menu : classiques, familiales, express ou encore v\u00e9g\u00e9tariennes. Cuisinez des plats savoureux en moins de 30 minutes gr\u00e2ce \u00e0 nos fiches-recettes pas \u00e0 pas.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- HOW IT WORKS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background-color:#F4F4F4;border-radius:8px;vertical-align:top;border-collapse:separate;padding:20px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#333333;\">Comment \u00e7a marche ?</div>\n</td>\n</tr>\n<tr>\n<td align=\"left\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;\" width=\"100%\">\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">1.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\"><strong>Cliquez sur le bouton</strong> (code int\u00e9gr\u00e9).</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">2.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Cr\u00e9ez votre <strong>Box sur mesure</strong>.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">3.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Choisissez vos recettes.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">4.</td>\n<td style=\"padding-bottom: 0; font-size: 13px; line-height: 18px; color: #333333;\">Recevez votre box !</td>\n</tr>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:20px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:100%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"4\" href=\"https://gtinsi.de/6984c4f02ae69\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> JE COMMANDE MA BOX </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- FOOTER LEGAL COMPLET -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"justify\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:9px;line-height:13px;text-align:justify;color:#999999;\">*Conditions de l\u2019offre : pour toute souscription, jusqu\u2019\u00e0 95 \u20ac de r\u00e9duction sur vos 5 premi\u00e8res Box (jusqu'\u00e0 40 \u20ac sur la 1\u00e8re, 20 \u20ac sur la 2\u00e8me, 15 \u20ac sur la 3\u00e8me et 10 \u20ac sur la 4\u00e8me et 5\u00e8me). Cette offre est valable pendant 9 semaines, \u00e0 compter de votre date de conversion. A d\u00e9faut d\u2019utilisation de votre r\u00e9duction pass\u00e9 ce d\u00e9lai, celle-ci ne sera plus valable. La premi\u00e8re r\u00e9duction de 40 \u20ac inclut les frais de livraison qui sont offerts pour la 1\u00e8re Box uniquement. Cette offre comprend \u00e9galement un extra de notre march\u00e9 HelloFresh offert chaque semaine parmi une s\u00e9lection de produits tant que l\u2019abonnement n\u2019est pas r\u00e9sili\u00e9. L\u2019ajout de cet extra ne se fait pas automatiquement mais doit \u00eatre fait par vos soins au moment du choix des recettes. HelloFresh se r\u00e9serve le droit de remplacer le produit choisi si jamais celui-ci n\u2019est plus disponible.Offre devant \u00eatre activ\u00e9e avant le 28/02/2026, offre r\u00e9serv\u00e9e aux nouveaux clients HelloFresh seulement, non cumulable avec d\u2019autres offres ou r\u00e9ductions, limit\u00e9e \u00e0 une par foyer et ne donnant droit \u00e0 aucun \u00e9change, ni remboursement du montant de la r\u00e9duction. Les abonn\u00e9.e.s HelloFresh re\u00e7oivent chaque semaine une Box mais l\u2019abonnement est flexible. Les abonn\u00e9.e.s HelloFresh ont jusqu\u2019\u00e0 la date indiqu\u00e9e en haut de l\u2019onglet \u201cMon Menu\u201d (23h59) sur le site HelloFresh pour mettre en pause leur prochaine Box ou r\u00e9silier leur abonnement. Toute demande de modification, de pause ou de r\u00e9siliation faite apr\u00e8s cette date ne sera prise en compte qu\u2019apr\u00e8s la prochaine Box. Plus d\u2019informations sur :\u00a0http://www.hellofresh.fr/conditions-generales.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TRACKING PIXEL (RAW) --><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</div>\n</body>\n</html>";
-        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://gtinsi.de/6984c4f02ae69", "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6984c4f02ae69"}, {"status": 200, "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"}], "audit_date": "2026-02-10 16:44:44"}, {"index": 2, "txt": "J'EN PROFITE \u25ba", "original_url": "https://gtinsi.de/6984c4f02ae69", "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6984c4f02ae69"}, {"status": 200, "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"}], "audit_date": "2026-02-10 16:44:44"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/6984c4f02ae69", "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6984c4f02ae69"}, {"status": 200, "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"}], "audit_date": "2026-02-10 16:44:44"}, {"index": 4, "txt": "JE COMMANDE MA BOX", "original_url": "https://gtinsi.de/6984c4f02ae69", "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6984c4f02ae69"}, {"status": 200, "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"}], "audit_date": "2026-02-10 16:44:44"}];
+        const emailLinks = [];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -415,10 +261,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -611,8 +457,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -663,8 +509,15 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
@@ -694,6 +547,11 @@
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
             const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -761,6 +619,9 @@
                 console.error("Audit error:", e);
                 statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
@@ -850,6 +711,39 @@
             }
         }
 
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -858,6 +752,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

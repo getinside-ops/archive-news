@@ -5,6 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+import mimetypes
 import re
 import zipfile
 import io
@@ -83,6 +84,9 @@ if submitted:
                                 # Normalize path in ZIP
                                 img_path = os.path.normpath(os.path.join(os.path.dirname(main_html_file), src)).replace('\\', '/')
                                 if img_path in z.namelist():
+                                    mime_type, _ = mimetypes.guess_type(img_path)
+                                    if not mime_type or not mime_type.startswith('image/'):
+                                        continue  # Skip non-image files
                                     img_data = z.read(img_path)
                                     # Create a unique CID using a counter
                                     basename = os.path.basename(img_path)

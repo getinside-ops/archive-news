@@ -297,8 +297,8 @@ class EmailParser:
                     path = os.path.join(self.output_folder, local_name)
                     with open(path, "wb") as f: f.write(r.content)
                     return img_obj, local_name
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning("Image download failed for %s: %s", url, e)
             return img_obj, None
 
         with ThreadPoolExecutor(max_workers=5) as ex:

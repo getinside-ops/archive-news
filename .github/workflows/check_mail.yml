@@ -24,18 +24,32 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.12'
           cache: 'pip'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Validate secrets
+        run: |
+          if [ -z "${{ secrets.GMAIL_USER }}" ] || [ -z "${{ secrets.GMAIL_PASSWORD }}" ]; then
+            echo "ERROR: GMAIL_USER or GMAIL_PASSWORD secret is not set."
+            exit 1
+          fi
 
       - name: Run Email Processor
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           FORCE_UPDATE: ${{ github.event.inputs.force_update }}
-        run: python process_email.py
+        run: python process_email.py 2>&1 | tee pipeline.log
+
+      - name: Upload pipeline log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-log
+          path: pipeline.log
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5

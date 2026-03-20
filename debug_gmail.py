@@ -4,7 +4,7 @@ from src.imap_client import EmailFetcher
 # CONFIG from environment or process_email.py defaults
 GMAIL_USER = os.environ.get("GMAIL_USER")
 GMAIL_PASSWORD = os.environ.get("GMAIL_PASSWORD")
-TARGET_LABEL = "Github/archive-newsletters"
+TARGET_LABEL = os.environ.get("GMAIL_LABEL", "Github/archive-newsletters")
 
 def debug_gmail():
     if not GMAIL_USER or not GMAIL_PASSWORD:

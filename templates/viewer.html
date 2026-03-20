@@ -28,26 +28,34 @@
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
                 <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
             </a>
+
             <div class="gi-topnav-links">
-                <a href="../index.html" class="gi-topnav-link">Archive</a>
-                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
         </nav>
 
         <!-- Main body row: viewer + sidebar -->

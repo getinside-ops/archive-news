@@ -4,8 +4,15 @@ import json
 import logging
 import os
 import shutil
+import sys
 from datetime import datetime
 from email.utils import parsedate_to_datetime
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 from src.imap_client import EmailFetcher
 from src.parser import EmailParser
@@ -21,7 +28,7 @@ logger = logging.getLogger(__name__)
 # CONFIG
 GMAIL_USER = os.environ.get("GMAIL_USER")
 GMAIL_PASSWORD = os.environ.get("GMAIL_PASSWORD")
-TARGET_LABEL = "Github/archive-newsletters"
+TARGET_LABEL = os.environ.get("GMAIL_LABEL", "Github/archive-newsletters")
 OUTPUT_FOLDER = "docs"
 BATCH_SIZE = 9999
 FORCE_UPDATE = os.environ.get("FORCE_UPDATE", "false").lower() == "true"
@@ -30,7 +37,7 @@ FORCE_UPDATE = os.environ.get("FORCE_UPDATE", "false").lower() == "true"
 def process_emails():
     if not GMAIL_USER or not GMAIL_PASSWORD:
         logger.error("Missing credentials: set GMAIL_USER and GMAIL_PASSWORD env vars.")
-        return
+        sys.exit(1)
 
     if not os.path.exists(OUTPUT_FOLDER):
         os.makedirs(OUTPUT_FOLDER)
@@ -48,6 +55,7 @@ def process_emails():
         
         # 3. Process
         all_metadata = []
+        failure_count = 0
 
         for f_id, num in list(email_map.items())[:BATCH_SIZE]:
             folder_path = os.path.join(OUTPUT_FOLDER, f_id)
@@ -165,6 +173,7 @@ def process_emails():
 
             except Exception as e:
                 logger.error("Error processing %s: %s. Skipping.", f_id, e)
+                failure_count += 1
             
         # 4. Generate Main Index
         # Sort by date ISO (descending)
@@ -196,10 +205,75 @@ def process_emails():
         from src.generator import copy_assets
         copy_assets(OUTPUT_FOLDER)
         logger.info("Assets copied.")
-        
-        
+
+        if failure_count > 0:
+            logger.warning("%d email(s) failed to process.", failure_count)
+            sys.exit(1)
+
     finally:
         fetcher.close()
 
+def _extract_email_html_from_viewer(viewer_path):
+    """Extract the email HTML content from an existing viewer index.html."""
+    import re
+    with open(viewer_path, 'r', encoding='utf-8') as f:
+        text = f.read()
+    m = re.search(r'const content = ("(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\')', text, re.DOTALL)
+    if not m:
+        return None
+    return json.loads(m.group(1))
+
+
+def regen_only():
+    """Re-render all viewer pages from existing index.html + metadata.json, no IMAP needed."""
+    if not os.path.exists(OUTPUT_FOLDER):
+        logger.error("docs/ folder not found.")
+        sys.exit(1)
+
+    from src.generator import generate_viewer, generate_index, copy_assets
+
+    all_metadata = []
+    for entry in sorted(os.listdir(OUTPUT_FOLDER)):
+        meta_path = os.path.join(OUTPUT_FOLDER, entry, "metadata.json")
+        viewer_path = os.path.join(OUTPUT_FOLDER, entry, "index.html")
+        if not os.path.exists(meta_path):
+            continue
+        with open(meta_path, 'r', encoding='utf-8') as f:
+            metadata = json.load(f)
+        all_metadata.append(metadata)
+
+        if os.path.exists(viewer_path):
+            html_content = _extract_email_html_from_viewer(viewer_path)
+            if html_content:
+                links = metadata.get('audit', {}).get('links', [])
+                detected_pixels = metadata.get('audit', {}).get('pixels', [])
+                generate_viewer(metadata, html_content, links, viewer_path, detected_pixels=detected_pixels)
+                logger.info("Re-rendered %s", entry)
+            else:
+                logger.warning("Could not extract email HTML from %s — skipping", entry)
+        else:
+            logger.warning("No index.html for %s — skipping", entry)
+
+    all_metadata.sort(key=lambda x: x.get('date_iso', ''), reverse=True)
+
+    total_size = sum(
+        os.path.getsize(os.path.join(dp, f))
+        for dp, _, files in os.walk(OUTPUT_FOLDER)
+        for f in files
+        if not os.path.islink(os.path.join(dp, f))
+    )
+    stats = {
+        'last_updated': datetime.now().strftime("%d %b %Y, %H:%M"),
+        'archive_size': f"{total_size / (1024*1024):.1f} MB",
+        'count': len(all_metadata)
+    }
+    generate_index(all_metadata, os.path.join(OUTPUT_FOLDER, "index.html"), stats)
+    copy_assets(OUTPUT_FOLDER)
+    logger.info("Done — %d viewers re-rendered.", len(all_metadata))
+
+
 if __name__ == "__main__":
-    process_emails()
+    if "--regen-only" in sys.argv:
+        regen_only()
+    else:
+        process_emails()

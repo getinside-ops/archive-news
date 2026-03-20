@@ -28,26 +28,34 @@
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
                 <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
             </a>
+
             <div class="gi-topnav-links">
-                <a href="../index.html" class="gi-topnav-link">Archive</a>
-                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
         </nav>
 
         <!-- Main body row: viewer + sidebar -->
@@ -114,8 +122,8 @@
         <aside class="viewer-sidebar">
             <div class="tab-bar">
                 <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
-                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')">PIXELS</button>
-                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">7</span></button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
             </div>
 
             <div class="sidebar-content">
@@ -155,7 +163,7 @@
                         </div>
                         <div class="stat-cell">
                             <span class="sc-label">Links</span>
-                            <span class="sc-value">7</span>
+                            <span class="sc-value">0</span>
                         </div>
                     </div>
                 </div>
@@ -214,419 +222,6 @@
                         <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
                     <div style="padding: 8px 10px;">
-                        
-                        <div class="link-card-v2" id="lc-1">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text"></div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 1)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-2">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">JE PARIE &gt;</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 2)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-3">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">JE PARIE &gt;</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 3)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-4">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">JE PARIE &gt;</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 4)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-5">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">J&#39;EN PROFITE</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 5)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-6">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
-                                <span class="card-v2-domain">External Link</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="3">
-                                            <path
-                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                            <line x1="12" y1="9" x2="12" y2="13" />
-                                            <line x1="12" y1="17" x2="12.01" y2="17" />
-                                        </svg> HTTP</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">#</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "#")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">désinscrire ici</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">#</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "#", 6)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "#")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="link-card-v2" id="lc-7">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
-                                <span class="card-v2-domain">gtinsi.de</span>
-                                <div style="display: flex; gap: 4px;">
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462ebf4</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text"></div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">https://gtinsi.de/695eaf462ebf4</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462ebf4", 7)">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
-                                        </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         
                     </div>
                 </div>

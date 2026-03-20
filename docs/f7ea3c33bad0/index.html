@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -27,26 +28,34 @@
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
                 <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
             </a>
+
             <div class="gi-topnav-links">
-                <a href="../index.html" class="gi-topnav-link">Archive</a>
-                <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-link" target="_blank" rel="noopener">Handbook ↗</a>
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn-icon" title="Toggle Theme (T)">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
         </nav>
 
         <!-- Main body row: viewer + sidebar -->
@@ -55,259 +64,127 @@
         <div class="viewer-main">
             <!-- Header -->
             <header class="viewer-header">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <h1
-                        style="font-family: var(--font-header); font-size: 1rem; font-weight: 600; margin: 0; max-width: 500px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--accent-blue);">
-                        BAT photoweb
-                    </h1>
-                </div>
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                    </div>
 
-                <div style="display: flex; align-items: center; gap: 12px;">
                     <div class="viewer-toolbar">
                         <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
                             title="Highlight all links (H)">
                             <span id="highlightBtnText">Show Links</span>
                         </button>
-                        <button class="btn btn-secondary" onclick="openHtmlModal()" title="View HTML (V)">
-                            View HTML
+                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+                            Download
                         </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
 
                     <span class="crm-badge" data-crm="Unknown">Unknown</span>
-
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn" onclick="setMode('mobile')" title="Mobile (1)">Mobile</button>
-                        <button class="device-btn" onclick="setMode('tablet')" title="Tablet (2)">Tablet</button>
-                        <button class="device-btn active" onclick="setMode('desktop')"
-                            title="Desktop (3)">Desktop</button>
-                    </div>
-
-                    </div>
+                </div>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">DEBARGE Victoire</span>
+                    <h1 class="vh-subject">BAT photoweb</h1>
+                    <span class="vh-date">29/12/2025 à 12:44</span>
+                </div>
             </header>
 
             <!-- Email Content -->
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="mobile"
                     style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame"></iframe>
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
         <aside class="viewer-sidebar">
-<div class="sidebar-content">
-                <!-- General Info -->
-                <div class="meta-section">
-                    <div class="meta-section-title">General</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Sender</span>
-                        <span class="meta-val">DEBARGE Victoire</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Subject</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="BAT photoweb">BAT photoweb</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Preheader</span>
-                        <span class="meta-val"
-                            style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"
-                            title="Bonjour Benoit, Voici le BAT pour l’email NE Photoweb Belle journée https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqr...">Bonjour Benoit, Voici le BAT pour l’email NE Photoweb Belle journée https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqr...</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Received</span>
-                        <span class="meta-val">29/12/2025 à 12:44</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">CRM</span>
-                        <span class="meta-val text-cyan" style="font-weight: 700;">Unknown</span>
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
+            </div>
+
+            <div class="sidebar-content">
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">DEBARGE Victoire</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="BAT photoweb">BAT photoweb</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Bonjour Benoit, Voici le BAT pour l’email NE Photoweb Belle journée https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqr...">Bonjour Benoit, Voici le BAT pour l’email NE Photoweb Belle journée https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqr...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">29/12/2025 à 12:44</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">6.0 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">0</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Technical -->
-                <div class="meta-section">
-                    <div class="meta-section-title">Technical</div>
-                    <div class="meta-row">
-                        <span class="meta-key">Size</span>
-                        <span class="meta-val text-yellow">6.0 KB</span>
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
                     </div>
-                    <div class="meta-row">
-                        <span class="meta-key">Clipping Risk</span>
-                        <span class="meta-val text-green"
-                            style="font-weight: 700;">
-                            Low
-                        </span>
+                    <div style="padding: 8px 10px;">
+                        
                     </div>
                 </div>
 
-                <!-- Tracking Pixels -->
-                
-
-                <!-- All Links -->
-                <div class="meta-section" style="flex: 1;">
-                    <div class="meta-section-title">Links (3)</div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(1)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">1</span>
-                            <span class="card-v2-domain">m12.news.laredoute.fr</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qU</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(2)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">2</span>
-                            <span class="card-v2-domain">External Link</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path
-                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                        <line x1="12" y1="9" x2="12" y2="13" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg> HTTP</span>
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">vdebarge</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">mailto:vdebarge@redoute.fr</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'mailto:vdebarge@redoute.fr')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'mailto:vdebarge@redoute.fr')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="link-card-v2" onclick="highlightLink(3)">
-                        <div class="card-v2-header">
-                            <span class="card-v2-index">3</span>
-                            <span class="card-v2-domain">External Link</span>
-                            <div style="display: flex; gap: 4px;">
-                                
-                                <span class="card-v2-tag tag-unsecure"><svg width="8"
-                                        height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="3">
-                                        <path
-                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                        <line x1="12" y1="9" x2="12" y2="13" />
-                                        <line x1="12" y1="17" x2="12.01" y2="17" />
-                                    </svg> HTTP</span>
-                                
-                            </div>
-                        </div>
-                        <div class="card-v2-body">
-                            <div class="card-v2-text">@redoute.fr</div>
-                            <div class="card-v2-url-zone">
-                                <code class="card-v2-url">mailto:vdebarge@redoute.fr</code>
-
-                                <div
-                                    style="display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; justify-content: flex-end;">
-                                    <button class="btn-card" title="Verify Link"
-                                        onclick="event.stopPropagation(); runAudit(this, 'mailto:vdebarge@redoute.fr')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                    </button>
-                                    <button class="btn-card" title="Copy URL"
-                                        onclick="event.stopPropagation(); copyLink(this, 'mailto:vdebarge@redoute.fr')">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                            stroke="currentColor" stroke-width="2">
-                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Audit Log Container -->
-                            <div class="audit-log-container">
-                                <div class="audit-status-bar">
-                                    <span class="audit-status-text">Scanning...</span>
-                                </div>
-                                <div class="audit-timeline">
-                                    <!-- Log items will be injected here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
             </div>
 
             <!-- Sticky Footer in Sidebar -->
@@ -322,33 +199,51 @@
         </div><!-- /.viewer-body-row -->
     </div><!-- /.viewer-layout -->
 
-    <!-- HTML Source Modal -->
-    <div class="modal-overlay" id="htmlModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-title" style="color: var(--accent-blue);">HTML Source</span>
-                <button class="modal-close" onclick="closeHtmlModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <pre class="code-block" id="htmlSourceCode"></pre>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" onclick="copyAllHtml()">Copy HTML</button>
-            </div>
-        </div>
-    </div>
+
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
 
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
 
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
+        </div>
+    </div>
+
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<html xmlns=\"http://www.w3.org/TR/REC-html40\" xmlns:m=\"http://schemas.microsoft.com/office/2004/12/omml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:w=\"urn:schemas-microsoft-com:office:word\">\n<head>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"Microsoft Word 15 (filtered medium)\" name=\"Generator\"/>\n<!--[if !mso]><style>v\\:* {behavior:url(#default#VML);}\r\no\\:* {behavior:url(#default#VML);}\r\nw\\:* {behavior:url(#default#VML);}\r\n.shape {behavior:url(#default#VML);}\r\n</style><![endif]--><style><!--\r\n/* Font Definitions */\r\n@font-face\r\n\t{font-family:\"Cambria Math\";\r\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n\t{font-family:Aptos;}\r\n@font-face\r\n\t{font-family:Poppins;\r\n\tpanose-1:0 0 5 0 0 0 0 0 0 0;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n\t{margin:0cm;\r\n\tfont-size:12.0pt;\r\n\tfont-family:\"Aptos\",sans-serif;\r\n\tmso-ligatures:standardcontextual;\r\n\tmso-fareast-language:EN-US;}\r\na:link, span.MsoHyperlink\r\n\t{mso-style-priority:99;\r\n\tcolor:#467886;\r\n\ttext-decoration:underline;}\r\na:visited, span.MsoHyperlinkFollowed\r\n\t{mso-style-priority:99;\r\n\tcolor:#96607D;\r\n\ttext-decoration:underline;}\r\nspan.EmailStyle17\r\n\t{mso-style-type:personal-compose;\r\n\tfont-family:\"Aptos\",sans-serif;\r\n\tcolor:windowtext;}\r\n.MsoChpDefault\r\n\t{mso-style-type:export-only;\r\n\tmso-fareast-language:EN-US;}\r\n@page WordSection1\r\n\t{size:612.0pt 792.0pt;\r\n\tmargin:70.85pt 70.85pt 70.85pt 70.85pt;}\r\ndiv.WordSection1\r\n\t{page:WordSection1;}\r\n--></style>\n</head>\n<body lang=\"FR\" link=\"#467886\" style=\"word-wrap:break-word\" vlink=\"#96607D\">\n<div class=\"WordSection1\">\n<p class=\"MsoNormal\">Bonjour Benoit,<o:p></o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<p class=\"MsoNormal\">Voici le BAT pour l\u2019email NE Photoweb <o:p></o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<p class=\"MsoNormal\">Belle journ\u00e9e <o:p></o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<p class=\"MsoNormal\"><b><a data-index=\"1\" href=\"https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D\" target=\"_blank\">https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D</a></b><o:p></o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<p class=\"MsoNormal\"><o:p>\u00a0</o:p></p>\n<div>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"MsoNormalTable\" style=\"width:430.0pt;border-collapse:collapse\" width=\"573\">\n<tbody>\n<tr>\n<td style=\"padding:0cm 11.25pt 0cm 0cm\">\n<p class=\"MsoNormal\"><span style=\"font-size:13.5pt;font-family:Poppins;color:black;mso-fareast-language:FR\"><img border=\"0\" height=\"100\" id=\"Image_x0020_1\" src=\"cid:image001.gif@01DC78C9.344DDD30\" style=\"width:1.0416in;height:1.0416in\" width=\"100\"/></span><span style=\"mso-ligatures:none;mso-fareast-language:FR\"><o:p></o:p></span></p>\n</td>\n<td style=\"padding:0cm 0cm 0cm 0cm\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"MsoNormalTable\" style=\"width:330.0pt;border-collapse:collapse\" width=\"440\">\n<tbody>\n<tr>\n<td style=\"padding:0cm 0cm 0cm 0cm\">\n<p class=\"MsoNormal\"><b><span style=\"font-size:10.5pt;font-family:Poppins;mso-ligatures:none;mso-fareast-language:FR\">Victoire Debarge</span></b><span style=\"mso-ligatures:none;mso-fareast-language:FR\"><o:p></o:p></span></p>\n</td>\n</tr>\n<tr>\n<td style=\"padding:0cm 0cm 0cm 0cm\">\n<div>\n<p class=\"MsoNormal\"><span style=\"color:black;mso-ligatures:none;mso-fareast-language:FR\">Account Manager Retail Media</span><span style=\"color:black;mso-ligatures:none;mso-fareast-language:FR\"><o:p></o:p></span></p>\n</div>\n</td>\n</tr>\n<tr>\n<td style=\"padding:0cm 0cm 0cm 0cm\">\n<p class=\"MsoNormal\"><u><span style=\"color:blue;mso-ligatures:none;mso-fareast-language:FR\"><a data-index=\"2\" href=\"mailto:vdebarge@redoute.fr\"><span style=\"color:blue\">vdebarge</span></a></span></u><u><span style=\"font-size:10.5pt;font-family:Poppins;color:blue;mso-ligatures:none;mso-fareast-language:FR\"><a data-index=\"3\" href=\"mailto:vdebarge@redoute.fr\"><span style=\"color:blue\">@redoute.fr</span></a></span></u><span style=\"mso-ligatures:none;mso-fareast-language:FR\"><o:p></o:p></span></p>\n</td>\n</tr>\n<tr>\n<td style=\"padding:0cm 0cm 0cm 0cm\"></td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n<p class=\"MsoNormal\"><span style=\"mso-ligatures:none;mso-fareast-language:FR\">\u00a0<o:p></o:p></span></p>\n<p class=\"MsoNormal\"><span style=\"mso-ligatures:none;mso-fareast-language:FR\">\u00a0</span><o:p></o:p></p>\n</div>\n</div>\r\nLes informations contenues dans ce message ainsi que dans les pi\u00e8ces jointes sont strictement confidentielles et r\u00e9serv\u00e9es \u00e0 l'usage exclusif de ses destinataires. Si vous prenez connaissance de ce message sans en \u00eatre le (la) destinataire, vous \u00eates pri\u00e9(e)\r\n d'en aviser imm\u00e9diatement l'\u00e9metteur et de le d\u00e9truire sous toutes ses formes. Toute diffusion ou publication, totale ou partielle, est interdite sauf autorisation expresse de l'\u00e9metteur. Les meilleurs efforts sont faits pour maintenir cette transmission exempte\r\n de tout virus mais l'int\u00e9grit\u00e9 de ce message n'est pas assur\u00e9e sur Internet : il a pu \u00eatre alt\u00e9r\u00e9 ou falsifi\u00e9. Les points de vue ou avis \u00e9manent de son auteur et ne repr\u00e9sentent pas n\u00e9cessairement ceux de la Soci\u00e9t\u00e9. Son contenu ne peut engager la responsabilit\u00e9\r\n de La Redoute et de ses filiales. This message and any attachments are strictly confidential and intended solely for the addressees. If you have received this message in error please delete it and notify the sender immediately. Any dissemination or disclosure,\r\n either whole or partial, is prohibited except formal approval of the sender. Best efforts are made in order to keep this message free of virus, but integrity of this message is not guaranteed through the Internet : it could have been altered or falsified.\r\n The views or opinions presented here are solely of the author and do not necessarily represent those of the Enterprise. Its content cannot bind La Redoute and its subsidiaries.\r\n</body>\n</html>\n";
+        const emailLinks = [];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
 
         function init() {
             const doc = frame.contentDocument;
@@ -366,10 +261,10 @@
                     /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
                     --spotlight-dim: rgba(255, 255, 255, 0.7);
                     /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584; 
+                    --spotlight-glow: #AF0584;
                 }
                 body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
-                .link-outline { 
+                .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
@@ -562,8 +457,8 @@
                     position: fixed;
                     left: ${badgeX}px;
                     top: ${badgeY}px;
-                    background: #BD93F9; /* Purple for badges */
-                    color: #fff;
+                    background: #6AE7C8;
+                    color: #0C0D10;
                     font-size: 11px;
                     font-weight: 800;
                     padding: 0px 6px;
@@ -614,33 +509,22 @@
 
         // Update overlays logic
         frame.addEventListener('load', () => {
+            let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
             });
             frame.contentWindow.addEventListener('resize', () => {
                 if (linksHighlighted) updateOverlays();
             });
         });
 
-        function openHtmlModal() {
-            const modal = document.getElementById('htmlModal');
-            const codeEl = document.getElementById('htmlSourceCode');
-            codeEl.textContent = content;
-            modal.classList.add('active');
-        }
 
-        function closeHtmlModal() {
-            document.getElementById('htmlModal').classList.remove('active');
-        }
-
-        function copyAllHtml() {
-            navigator.clipboard.writeText(content).then(() => {
-                const btn = event.target;
-                const original = btn.textContent;
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = original, 1500);
-            });
-        }
 
         function copyLink(btn, url) {
             navigator.clipboard.writeText(url).then(() => {
@@ -656,12 +540,18 @@
             });
         }
 
-        async function runAudit(btn, url) {
+        async function runAudit(btn, url, index) {
             // Find parent elements
             const cardBody = btn.closest('.card-v2-body');
             const logContainer = cardBody.querySelector('.audit-log-container');
             const timeline = logContainer.querySelector('.audit-timeline');
             const statusText = logContainer.querySelector('.audit-status-text');
+            const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
 
             // Reset UI
             logContainer.classList.add('active');
@@ -673,71 +563,196 @@
             await new Promise(r => setTimeout(r, 300));
 
             try {
-                // Determine mock behavior based on URL patterns
-                const isError = url.includes('error') || url.includes('404');
-                const isTracking = url.includes('tracking') || url.includes('click');
+                if (linkData && linkData.redirect_chain && linkData.redirect_chain.length > 0) {
+                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${linkData.audit_date}</small>` : '';
+                    statusText.innerHTML = 'Analyzing Redirection Chain...' + auditDateStr;
 
-                // --- Step 1: Initial Request ---
-                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> ${url}</div>`;
-                await new Promise(r => setTimeout(r, 600)); // Network delay
+                    let containsGtinsi = false;
+                    for (let i = 0; i < linkData.redirect_chain.length; i++) {
+                        const step = linkData.redirect_chain[i];
+                        const isLast = i === linkData.redirect_chain.length - 1;
+                        const isGtinsi = step.url && step.url.includes('gtinsi.de');
+                        if (isGtinsi) containsGtinsi = true;
 
-                if (isTracking) {
-                    // --- Step 2: Redirection (Mock) ---
-                    // Example: Tracking service -> Analytics Gateway -> Final URL
-                    statusText.innerHTML = 'Following redirects...';
+                        const stepClass = isGtinsi ? 'audit-step highlighted' : 'audit-step';
 
-                    // Decode URL parts to look like real params but show FULL URL
-                    const encodedTarget = encodeURIComponent(url);
+                        // Display the step
+                        if (!isLast) {
+                            // It's a redirect step
+                            const nextStep = linkData.redirect_chain[i + 1];
+                            timeline.innerHTML += `<div class="${stepClass}"><strong>${step.status}</strong> &rarr; ${nextStep.url}</div>`;
+                        } else {
+                            // It's the final destination
+                            const statusColor = (step.status === 200) ? 'text-green' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'text-red' : 'text-cyan');
+                            const statusIcon = (step.status === 200) ? 'final' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'error' : '');
 
-                    timeline.innerHTML += `<div class="audit-step"><strong>302</strong> &rarr; https://analytics.wrapper.com/redirect?target=${encodedTarget}&ts=123456789</div>`;
-                    await new Promise(r => setTimeout(r, 500));
+                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${step.status || 'Done'}</strong> &bull; ${step.url}</div>`;
 
-                    timeline.innerHTML += `<div class="audit-step"><strong>301</strong> &rarr; https://campaign.landing.page/special-offer?utm_source=email&utm_medium=archive_tool&utm_campaign=winter_sale</div>`;
-                    await new Promise(r => setTimeout(r, 500));
+                            // Update status text
+                            if (step.status === 200) {
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : 'Verification Complete';
+                            } else if (step.status === 'Timeout') {
+                                statusText.innerHTML = 'Request Timed Out';
+                            } else if (step.status >= 400 || step.status === 'Error') {
+                                statusText.innerHTML = 'Audit Finished (Error Found)';
+                            } else {
+                                statusText.innerHTML = 'Audit Finished';
+                            }
 
-                    // Final Destination
-                    if (isError) {
-                        timeline.innerHTML += `<div class="audit-step error"><strong>404</strong> NOT FOUND</div>`;
-                        statusText.innerHTML = 'Broken Link Detected';
-                        statusText.className = 'audit-status-text text-red';
-                    } else {
-                        timeline.innerHTML += `<div class="audit-step final"><strong>200 OK</strong> &bull; Final Destination Reached</div>`;
-                        statusText.innerHTML = 'Verification Complete';
-                        statusText.className = 'audit-status-text text-green';
+                            statusText.className = `audit-status-text ${statusColor}`;
+                            btn.style.color = (step.status === 200) ? 'var(--accent-green)' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'var(--accent-red)' : 'var(--accent-cyan)');
+                        }
+                        await new Promise(r => setTimeout(r, 400));
                     }
-                } else if (isError) {
-                    // Direct Error
-                    timeline.innerHTML += `<div class="audit-step error"><strong>404</strong> NOT FOUND</div>`;
-                    statusText.innerHTML = 'Broken Link';
-                    statusText.className = 'audit-status-text text-red';
                 } else {
-                    // Direct Success
-                    timeline.innerHTML += `<div class="audit-step final"><strong>200 OK</strong> &bull; Link validated successfully</div>`;
-                    statusText.innerHTML = 'Verification Complete';
-                    statusText.className = 'audit-status-text text-green';
+                    // Fallback for archives created before this feature or if resolution failed
+                    timeline.innerHTML += `<div class="audit-step"><strong>INFO</strong> Pre-calculated redirect data missing.</div>`;
+                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${url}</div>`;
+                    await new Promise(r => setTimeout(r, 600));
+                    timeline.innerHTML += `<div class="audit-step final"><strong>ACTION</strong> Please re-archive this email to enable full redirect auditing.</div>`;
+                    statusText.innerHTML = 'Direct Link Check';
+                    statusText.className = 'audit-status-text text-yellow';
+                    btn.style.color = 'var(--accent-yellow)';
                 }
 
-                // Visual feedback on button
-                btn.style.color = isError ? 'var(--accent-red)' : 'var(--accent-green)';
-
             } catch (e) {
-                statusText.innerHTML = 'Connection Error';
+                console.error("Audit error:", e);
+                statusText.innerHTML = 'Analysis Error';
                 statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
             }
         }
 
+        async function downloadEmailZip() {
+            try {
+                const zip = new JSZip();
+                const subject = "BAT photoweb".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const timestamp = new Date().toISOString().split('T')[0];
+                const zipFilename = `${subject}_${timestamp}.zip`;
+
+                // Get all images from the current directory
+                const currentPath = window.location.pathname;
+                const emailDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+
+                // Find all image references in the HTML
+                const doc = frame.contentDocument;
+                const images = doc.querySelectorAll('img[src]');
+
+                // Create a folder for images
+                const imgFolder = zip.folder("images");
+
+                // Download each image and track the mapping
+                let downloadCount = 0;
+                const imagePromises = [];
+                const imageMapping = new Map(); // old path -> new path
+
+                images.forEach((img, index) => {
+                    const imgSrc = img.getAttribute('src');
+                    if (imgSrc && !imgSrc.startsWith('data:') && !imgSrc.startsWith('http')) {
+                        // It's a local image
+                        const imgPath = emailDir + '/' + imgSrc;
+                        const imgFilename = imgSrc.split('/').pop();
+
+                        // Store the mapping: old src -> new path in zip
+                        imageMapping.set(imgSrc, 'images/' + imgFilename);
+
+                        const promise = fetch(imgPath)
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.blob();
+                                }
+                                throw new Error(`Failed to fetch ${imgFilename}`);
+                            })
+                            .then(blob => {
+                                imgFolder.file(imgFilename, blob);
+                                downloadCount++;
+                            })
+                            .catch(err => {
+                                console.warn(`Could not download ${imgFilename}:`, err);
+                            });
+
+                        imagePromises.push(promise);
+                    }
+                });
+
+                // Wait for all images to be added
+                await Promise.all(imagePromises);
+
+                // Fix image paths in HTML content
+                let fixedHtml = content;
+                imageMapping.forEach((newPath, oldPath) => {
+                    // Replace all occurrences of the old path with the new path
+                    const regex = new RegExp(oldPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    fixedHtml = fixedHtml.replace(regex, newPath);
+                });
+
+                // Add HTML content with fixed paths
+                zip.file("email.html", fixedHtml);
+
+                // Generate zip file
+                const blob = await zip.generateAsync({ type: "blob" });
+
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = zipFilename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                console.log(`Downloaded ${downloadCount} images and HTML as ${zipFilename}`);
+            } catch (error) {
+                console.error('Error creating zip file:', error);
+                alert('Failed to create download. Please try again.');
+            }
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const modal = document.getElementById('htmlModal');
-                if (modal.classList.contains('active')) closeHtmlModal();
-            }
             if (e.key === '1') setMode('mobile');
             if (e.key === '2') setMode('tablet');
             if (e.key === '3') setMode('desktop');
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
-            if (e.key === 'v' || e.key === 'V') openHtmlModal();
+            if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);

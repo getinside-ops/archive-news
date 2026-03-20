@@ -8,177 +8,186 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
-    <!-- Inline Viewer Styles Moved to style.css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="viewer-header">
-        <div style="font-weight:700; font-family:var(--font-header);">Newsletter Archive</div>
+    <div class="viewer-layout">
+        <!-- Top navigation -->
+        <nav class="gi-topnav">
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+            </a>
 
-        <div class="device-toggles">
-            <button class="device-btn" onclick="setMode('mobile')" title="View in Mobile Mode (375px)">Mobile</button>
-            <button class="device-btn" onclick="setMode('tablet')" title="View in Tablet Mode (768px)">Tablet</button>
-            <button class="device-btn active" onclick="setMode('desktop')"
-                title="View in Desktop Mode (Filtered)">Desktop</button>
-        </div>
-
-        <div class="action-group">
-            <button class="action-btn" onclick="openSourceModal()" title="View Source Code">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-            </button>
-            <button class="action-btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
-                <svg class="icon icon-moon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg class="icon icon-sun" style="display:none;" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
-            <button class="action-btn" id="highlight-toggle" onclick="toggleHighlight()"
-                title="Highlight Links in Email">
-                <svg class="icon" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-            </button>
-            <button class="action-btn active" onclick="toggleSidebar()" title="Toggle Metadata Sidebar">
-                <span>Metadata</span>
-                <svg class="icon" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="viewer-container">
-        <div class="device-stage">
-            <div class="device-frame" id="deviceFrame" data-mode="mobile">
-                <iframe id="emailFrame"></iframe>
+            <div class="gi-topnav-links">
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
+                <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
-        </div>
 
-        <div class="meta-sidebar" id="sidebar">
-<div class="sidebar-content">
-                <div class="section-title">General Info</div>
-                <div class="meta-row">
-                    <span class="meta-key">Subject</span>
-                    <span class="meta-val">[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !</span>
-                </div>
-                <div class="meta-row">
-                    <span class="meta-key">Sender</span>
-                    <span class="meta-val">"MonJardinBio.com" <contact@monjardinbio.com></span>
-                </div>
-                <div class="meta-row">
-                    <span class="meta-key">Received</span>
-                    <span class="meta-val">28/11/2025 à 10:17</span>
-                </div>
-                <div class="meta-row">
-                    <span class="meta-key">Archived</span>
-                    <span class="meta-val">19/12/2025 à 22:14</span>
-                </div>
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button class="gi-lang-btn" title="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
 
-                
-                <div class="meta-row">
-                    <span class="meta-key">Email Size</span>
-                    <span class="meta-val">0.02 MB</span>
-                </div>
-                
-                <div class="meta-row">
-                    <span class="meta-key">CRM</span>
-                    <span class="meta-val">Unknown</span>
-                </div><div class="section-title">Technical</div>
-                
-                <div class="pixel-box">
-                    <div class="pixel-header">Tracking Detected (1)</div>
-                    
-                    <div class="pixel-row" title="This 1x1 image or known tracking URL was blocked.">
-                        <div class="pixel-reason">Known Tracking Domain</div>
-                        <div class="pixel-desc">Blocked because the domain is on a known list of email trackers.</div>
-                        <div class="pixel-url">https://api.getinside.media/v1/emails/track/69175371416ce</div>
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main body row: viewer + sidebar -->
+        <div class="viewer-body-row">
+        <!-- Main Content -->
+        <div class="viewer-main">
+            <!-- Header -->
+            <header class="viewer-header">
+                <!-- Top bar: controls -->
+                <div class="vh-top-bar">
+                    <div class="device-toggle hide-mobile">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18"/>
+                            </svg>
+                        </button>
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </button>
                     </div>
-                    
-                </div>
-                
 
-                <div class="section-title" style="display:flex; justify-content:space-between; align-items:center;">
-                    <span>Links (4)</span>
-                    <button onclick="copyLinks([{'index': 1, 'txt': '', 'original_url': 'https://gtinsi.de/691753713e2df', 'final_url': 'https://gtinsi.de/691753713e2df'}, {'index': 2, 'txt': '', 'original_url': 'https://gtinsi.de/691753713e2df', 'final_url': 'https://gtinsi.de/691753713e2df'}, {'index': 3, 'txt': '', 'original_url': 'https://gtinsi.de/691753713e2df', 'final_url': 'https://gtinsi.de/691753713e2df'}, {'index': 4, 'txt': '', 'original_url': 'https://gtinsi.de/691753713e2df', 'final_url': 'https://gtinsi.de/691753713e2df'}])"
-                        style="border:none; background:none; color:var(--accent-color); cursor:pointer; font-size:0.7em; font-weight:600;">COPY
-                        ALL</button>
+                    <div class="viewer-toolbar">
+                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
+                            title="Highlight all links (H)">
+                            <span id="highlightBtnText">Show Links</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+                            Download
+                        </button>
+                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
+                    </div>
+
+                    <span class="crm-badge" data-crm="Unknown">Unknown</span>
                 </div>
-                <ul class="link-list">
-                    
-                    <li class="link-item" onclick="highlightLink(1)">
-                        <div class="link-num">1</div><button class="copy-btn-icon" onclick="copyLink('https://gtinsi.de/691753713e2df', this)" title="Copy Link">
-                            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                           </button>
-                        <div class="link-content">
-                            <div class="link-txt"></div>
-                            <div class="link-url">https://gtinsi.de/691753713e2df</div>
-                        </div>
-                    </li>
-                    
-                    <li class="link-item" onclick="highlightLink(2)">
-                        <div class="link-num">2</div><button class="copy-btn-icon" onclick="copyLink('https://gtinsi.de/691753713e2df', this)" title="Copy Link">
-                            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                           </button>
-                        <div class="link-content">
-                            <div class="link-txt"></div>
-                            <div class="link-url">https://gtinsi.de/691753713e2df</div>
-                        </div>
-                    </li>
-                    
-                    <li class="link-item" onclick="highlightLink(3)">
-                        <div class="link-num">3</div><button class="copy-btn-icon" onclick="copyLink('https://gtinsi.de/691753713e2df', this)" title="Copy Link">
-                            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                           </button>
-                        <div class="link-content">
-                            <div class="link-txt"></div>
-                            <div class="link-url">https://gtinsi.de/691753713e2df</div>
-                        </div>
-                    </li>
-                    
-                    <li class="link-item" onclick="highlightLink(4)">
-                        <div class="link-num">4</div><button class="copy-btn-icon" onclick="copyLink('https://gtinsi.de/691753713e2df', this)" title="Copy Link">
-                            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                           </button>
-                        <div class="link-content">
-                            <div class="link-txt"></div>
-                            <div class="link-url">https://gtinsi.de/691753713e2df</div>
-                        </div>
-                    </li>
-                    
-                </ul>
+                <!-- Subject bar -->
+                <div class="vh-subject-bar">
+                    <span class="vh-sender-pill">&#34;MonJardinBio.com&#34; &lt;contact@monjardinbio.com&gt;</span>
+                    <h1 class="vh-subject">[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !</h1>
+                    <span class="vh-date">28/11/2025 à 10:17</span>
+                </div>
+            </header>
+
+            <!-- Email Content -->
+            <div class="viewer-content">
+                <div id="deviceFrame" data-mode="mobile"
+                    style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="viewer-sidebar">
+            <div class="tab-bar">
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
             </div>
 
+            <div class="sidebar-content">
+
+                <!-- META Tab -->
+                <div class="tab-pane" id="tab-meta">
+                    <div class="stat-grid">
+                        <div class="stat-cell">
+                            <span class="sc-label">Sender</span>
+                            <span class="sc-value">&#34;MonJardinBio.com&#34; &lt;contact@monjardinbio.com&gt;</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">CRM</span>
+                            <span class="sc-value text-cyan">Unknown</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Subject</span>
+                            <span class="sc-value" title="[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !">[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !</span>
+                        </div>
+                        <div class="stat-cell sc-wide">
+                            <span class="sc-label">Preheader</span>
+                            <span class="sc-value" title="Chère Madame, Cher Monsieur, Aujourd’hui en France, plus de 2 millions de personnes âgées sont isolées au quotidien , pire encore, 750 000 ne voient jamais pers...">Chère Madame, Cher Monsieur, Aujourd’hui en France, plus de 2 millions de personnes âgées sont isolées au quotidien , pire encore, 750 000 ne voient jamais pers...</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Received</span>
+                            <span class="sc-value">28/11/2025 à 10:17</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Size</span>
+                            <span class="sc-value text-yellow">17.5 KB</span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-value text-green">
+                                Low
+                            </span>
+                        </div>
+                        <div class="stat-cell">
+                            <span class="sc-label">Links</span>
+                            <span class="sc-value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PIXELS Tab -->
+                <div class="tab-pane" id="tab-pixels" style="display:none;">
+                    
+                </div>
+
+                <!-- LINKS Tab -->
+                <div class="tab-pane" id="tab-links" style="display:none;">
+                    <div class="lf-filter-row" id="linkFilterRow">
+                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                    </div>
+                    <div style="padding: 8px 10px;">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sticky Footer in Sidebar -->
             <div class="sidebar-footer">
                 <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
                     Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
@@ -186,40 +195,570 @@
                     © 2026 getinside. Tous droits réservés.
                 </p>
             </div>
-        </div>
-    </div>
+        </aside>
+        </div><!-- /.viewer-body-row -->
+    </div><!-- /.viewer-layout -->
 
-    <!-- Code Modal -->
-    <div id="sourceModal" class="modal-overlay">
-        <div class="modal">
-            <div class="modal-header">
-                <span>HTML Source</span>
-<button class="copy-source-btn" onclick="copySource()">Copy Code</button>
-                <button class="close-btn" onclick="closeSourceModal()">×</button>
-            </div>
-            <div class="modal-body">
-                <textarea id="sourceText" class="source-area" readonly></textarea>
-            </div>
+
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+        ☰ Links
+    </button>
+
+    <!-- Link overlays container -->
+    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Keyboard shortcut legend -->
+    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
+        <div class="sp-title">Shortcuts</div>
+        <div class="sp-grid">
+            <kbd>1</kbd><span>Mobile view</span>
+            <kbd>2</kbd><span>Tablet view</span>
+            <kbd>3</kbd><span>Desktop view</span>
+            <kbd>H</kbd><span>Toggle link badges</span>
+            <kbd>T</kbd><span>Toggle dark mode</span>
+            <kbd>D</kbd><span>Download ZIP</span>
+            <kbd>↑ ↓</kbd><span>Scroll email</span>
+            <kbd>?</kbd><span>This panel</span>
         </div>
     </div>
 
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head><title></title><meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width,initial-scale=1\" name=\"viewport\"/><style type=\"text/css\">#outlook a { padding:0; }\r\n          body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }\r\n          table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }\r\n          img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }\r\n          p { display:block;margin:13px 0; }</style><!--[if mso]>\r\n        <noscript>\r\n        <xml>\r\n        <o:OfficeDocumentSettings>\r\n          <o:AllowPNG/>\r\n          <o:PixelsPerInch>96</o:PixelsPerInch>\r\n        </o:OfficeDocumentSettings>\r\n        </xml>\r\n        </noscript>\r\n        <![endif]--><style type=\"text/css\">@media only screen and (min-width:480px) {\r\n        .mj-column-per-100 { width:100% !important; max-width: 100%; }\r\n.mj-column-px-600 { width:600px !important; max-width: 600px; }\r\n.mj-column-px-400 { width:400px !important; max-width: 400px; }\r\n.mj-column-px-239 { width:239px !important; max-width: 239px; }\r\n.mj-column-px-226 { width:226px !important; max-width: 226px; }\r\n.mj-column-per-15 { width:15% !important; max-width: 15%; }\r\n.mj-column-per-30 { width:30% !important; max-width: 30%; }\r\n.mj-column-per-50 { width:50% !important; max-width: 50%; }\r\n      }</style><style media=\"screen and (min-width:480px)\">.moz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }\r\n.moz-text-html .mj-column-px-600 { width:600px !important; max-width: 600px; }\r\n.moz-text-html .mj-column-px-400 { width:400px !important; max-width: 400px; }\r\n.moz-text-html .mj-column-px-239 { width:239px !important; max-width: 239px; }\r\n.moz-text-html .mj-column-px-226 { width:226px !important; max-width: 226px; }\r\n.moz-text-html .mj-column-per-15 { width:15% !important; max-width: 15%; }\r\n.moz-text-html .mj-column-per-30 { width:30% !important; max-width: 30%; }\r\n.moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }</style><style type=\"text/css\">@media only screen and (max-width:480px) {\r\n      table.mj-full-width-mobile { width: 100% !important; }\r\n      td.mj-full-width-mobile { width: auto !important; }\r\n    }</style><style type=\"text/css\">@media (max-width:499px) { .hidden-m { display: none; display: none\r\n      !important; } } @media (min-width:499px) { .hidden-d { display: none;\r\n      display: none !important; } } @media only screen and (min-width:480px) {\r\n      .desktop-border { border-right: 1px solid #DA324B; } }</style></head><body style=\"word-spacing:normal;background-color:#DA324B;\"><div style=\"background-color:#DA324B;\"><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:middle;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:257px;\"><a data-index=\"1\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Logo PETITS FRERES DES PAUVRES, Non \u00e0 l'isolement de nos a\u00een\u00e9s\" height=\"auto\" src=\"img_0.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"257\"/></a></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"background:white;background-color:white;margin:0px auto;border-radius:30px;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:white;background-color:white;width:100%;border-radius:30px;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div class=\"mj-column-px-600 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:600px;\"><a data-index=\"2\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Offrez un colis de No\u00ebl pour un a\u00een\u00e9 isol\u00e9 et illuminez son r\u00e9veillon ! J'offre un colis\" height=\"auto\" src=\"img_1.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Ch\u00e8re Madame, Cher Monsieur,<br/><br/>Aujourd\u2019hui en France, <b>plus de 2 millions de personnes \u00e2g\u00e9es sont isol\u00e9es au quotidien</b>, pire encore, 750 000 ne voient jamais personne*.<br/><br/>Comme tout au long de l\u2019ann\u00e9e, les b\u00e9n\u00e9voles des Petits Fr\u00e8res des Pauvres s\u2019engagent partout en France pour faire oublier la solitude \u00e0 nos a\u00een\u00e9s.</div></td></tr></tbody></table></div></td></tr></tbody></table></div><div class=\"hidden-m\"><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div class=\"mj-column-px-600 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:550px;\"><img alt=\"Et si vous les aidiez, \u00e0 l\u2019occasion de cette fin d\u2019ann\u00e9e ? Vous pouvez par exemple faire un don pour financer les colis gourmands que nos b\u00e9n\u00e9voles iront offrir aux a\u00een\u00e9s isol\u00e9s qui ne peuvent plus se d\u00e9placer.\" height=\"auto\" src=\"img_2.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"550\"/></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div></div><div class=\"hidden-d\"><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;text-align:center;\"><div class=\"mj-column-px-400 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:350px;\"><img alt=\"Et si vous les aidiez, \u00e0 l\u2019occasion de cette fin d\u2019ann\u00e9e ? Vous pouvez par exemple faire un don pour financer les colis gourmands que nos b\u00e9n\u00e9voles iront offrir aux a\u00een\u00e9s isol\u00e9s qui ne peuvent plus se d\u00e9placer.\" height=\"auto\" src=\"img_3.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"350\"/></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Tous les ans pour No\u00ebl, nos \u00e9quipes pr\u00e9parent de belles compositions : entr\u00e9e, plat, dessert, petite douceur, boisson, cadeau\u2026 de quoi illuminer le r\u00e9veillon d\u2019une personne \u00e2g\u00e9e qui est seule\u00a0!</div></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div class=\"mj-column-px-239 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:239px;\"><a data-index=\"3\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"J'offre un colis\" height=\"auto\" src=\"img_4.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"239\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;line-height:24px;text-align:left;color:#393939;\">Votre g\u00e9n\u00e9rosit\u00e9 transformera la solitude d\u2019un a\u00een\u00e9 isol\u00e9 en un moment de joie r\u00e9confortant qui donne du baume au c\u0153ur\u00a0!</div></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div class=\"mj-column-px-226 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:top;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:226px;\"><a data-index=\"4\" href=\"https://gtinsi.de/691753713e2df\" target=\"_blank\"><img alt=\"Je fais un don\" height=\"auto\" src=\"img_5.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"226\"/></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:18px;font-weight:bold;line-height:24px;text-align:left;color:#393939;\">En cette p\u00e9riode de f\u00eates, je vous remercie d\u2019unir vos forces aux n\u00f4tres pour faire entrer de la douceur et de la joie au domicile d\u2019une ou de plusieurs personnes \u00e2g\u00e9es\u00a0!</div></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:left;\"><div class=\"mj-column-per-15 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody></tbody></table></td></tr></tbody></table></div><div class=\"mj-column-per-30 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"center\" style=\"font-size:0px;padding:0px;word-break:break-word;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\"><tbody><tr><td style=\"width:180px;\"><img alt=\"\" height=\"auto\" src=\"img_6.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"180\"/></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td style=\"vertical-align:middle;padding:0px;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Arial;font-size:16px;line-height:20px;text-align:left;color:#571936;\"><b>Anne G\u00e9neau</b><br/>Pr\u00e9sidente<br/>Petits Fr\u00e8res des Pauvres</div></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"margin:0px auto;max-width:600px;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\"><tbody><tr><td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\"><div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\"><tbody><tr><td align=\"right\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\"><div style=\"font-family:Helvetica;font-size:12px;line-height:14px;text-align:right;color:#ffffff;\"><i>*\u00c9tude CSA Research/Petits Fr\u00e8res des Pauvres, 2025</i></div></td></tr></tbody></table></div></td></tr></tbody></table></div><div style=\"height:60px;line-height:60px;\">\u200a</div></div>\n<img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></body></html>\n";
+        const emailLinks = [];
         const frame = document.getElementById('emailFrame');
-        
+        let linksHighlighted = false;
+        let overlayElements = [];
+        let lastHighlightedIdx = null;
+        let spotlightTimeout = null;
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
+
         function init() {
-            const frame = document.getElementById('emailFrame');
-            if (!frame) return;
             const doc = frame.contentDocument;
             doc.open();
             doc.write(content);
             doc.close();
 
-            // Apply theme (which calls setupFrame)
+            const style = doc.createElement('style');
+            style.innerHTML = `
+                :root {
+                    --spotlight-dim: rgba(0, 0, 0, 0.6);
+                    --spotlight-glow: #50FA7B;
+                }
+                [data-theme="dark"] {
+                    /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
+                    --spotlight-dim: rgba(255, 255, 255, 0.7);
+                    /* And we use the complement of green so it inverts back to green */
+                    --spotlight-glow: #AF0584;
+                }
+                body { margin: 0; font-family: sans-serif; background: #fff; position: relative; }
+                .link-outline {
+                    outline: 2px solid #8BE9FD !important; /* Cyan */
+                    outline-offset: 1px !important;
+                    transition: outline 0.2s ease;
+                }
+                .link-highlight-pulse {
+                    animation: link-pulse 2s infinite;
+                }
+                @keyframes link-pulse {
+                    0% { outline-color: #8BE9FD; outline-width: 2px; }
+                    50% { outline-color: #BD93F9; outline-width: 4px; outline-offset: 3px; }
+                    100% { outline-color: #8BE9FD; outline-width: 2px; }
+                }
+                .link-flash-spotlight {
+                    position: relative !important;
+                    z-index: 2147483647 !important;
+                    outline: 8px solid var(--spotlight-glow) !important;
+                    outline-offset: 4px !important;
+                    box-shadow: 0 0 0 10000px var(--spotlight-dim), 0 0 40px var(--spotlight-glow) !important;
+                    background-color: rgba(255, 255, 255, 1) !important;
+                    color: #282a36 !important;
+                }
+            `;
+            doc.head.appendChild(style);
+
             const theme = localStorage.getItem('theme') || 'light';
-            applyTheme(theme);
+            if (theme === 'dark') applyTheme('dark');
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
         }
+
+        function setMode(mode) {
+            const frameEl = document.getElementById('deviceFrame');
+            const iframeEl = document.getElementById('emailFrame');
+
+            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+            const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
+            if (btn) btn.classList.add('active');
+
+            // Remove/add scrollbar class
+            if (mode === 'mobile') {
+                frameEl.style.maxWidth = '375px';
+                iframeEl.classList.add('no-scrollbar');
+            } else if (mode === 'tablet') {
+                frameEl.style.maxWidth = '600px';
+                iframeEl.classList.add('no-scrollbar');
+            } else {
+                frameEl.style.maxWidth = '800px';
+                iframeEl.classList.remove('no-scrollbar');
+            }
+
+            // Update overlays if visible
+            if (linksHighlighted) {
+                setTimeout(updateOverlays, 150);
+            }
+        }
+
+        function highlightLink(idx) {
+            const doc = frame.contentDocument;
+            const link = doc.querySelector(`[data-index="${idx}"]`);
+            if (link) {
+                // Toggle Logic: If clicking the same link again, remove highlight
+                if (lastHighlightedIdx === idx) {
+                    doc.querySelectorAll('.link-flash-spotlight').forEach(el => el.classList.remove('link-flash-spotlight'));
+                    if (!linksHighlighted) {
+                        link.classList.remove('link-outline');
+                    }
+                    lastHighlightedIdx = null;
+                    if (spotlightTimeout) clearTimeout(spotlightTimeout);
+                    return;
+                }
+
+                lastHighlightedIdx = idx;
+
+                // Ensure it's scrolled into view
+                link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Remove existing flash/spotlight from others
+                doc.querySelectorAll('.link-flash-spotlight').forEach(el => el.classList.remove('link-flash-spotlight'));
+
+                // Add spotlight class (this dims the rest of the iframe via large box-shadow)
+                link.classList.add('link-flash-spotlight');
+
+                // If Show Links is off, temporarily show this one's overlay/outline
+                const wasHighlighted = linksHighlighted;
+                if (!wasHighlighted) {
+                    link.classList.add('link-outline');
+                }
+
+                if (spotlightTimeout) clearTimeout(spotlightTimeout);
+                spotlightTimeout = setTimeout(() => {
+                    link.classList.remove('link-flash-spotlight');
+                    if (!wasHighlighted) {
+                        link.classList.remove('link-outline');
+                    }
+                    if (lastHighlightedIdx === idx) lastHighlightedIdx = null;
+                }, 4000); // 4 seconds spotlight
+            }
+        }
+
+        function toggleHighlightLinks() {
+            linksHighlighted = !linksHighlighted;
+            const btn = document.getElementById('highlightBtnText');
+            btn.textContent = linksHighlighted ? 'Hide Links' : 'Show Links';
+
+            if (linksHighlighted) {
+                createOverlays();
+            } else {
+                removeOverlays();
+            }
+        }
+
+        function createOverlays() {
+            removeOverlays();
+            const doc = frame.contentDocument;
+            const links = doc.querySelectorAll('[data-index]');
+            const container = document.getElementById('linkOverlays');
+            const frameRect = frame.getBoundingClientRect();
+
+            links.forEach(link => {
+                const idx = link.getAttribute('data-index');
+                let rect = link.getBoundingClientRect();
+
+                // Advanced Dimension Check: If element is "empty" or "inline-collapsed", check children or use parent
+                if (rect.width <= 2 || rect.height <= 2) {
+                    const children = link.querySelectorAll('img, table, div, span, p');
+                    let found = false;
+                    for (let child of children) {
+                        const childRect = child.getBoundingClientRect();
+                        if (childRect.width > 2 && childRect.height > 2) {
+                            rect = childRect;
+                            found = true;
+                            break;
+                        }
+                    }
+                    // If still no size, it might be a text-only link that is display: inline
+                    // Try to get a range client rect if possible
+                    if (!found) {
+                        try {
+                            const range = doc.createRange();
+                            range.selectNodeContents(link);
+                            const rangeRect = range.getBoundingClientRect();
+                            if (rangeRect.width > 0) {
+                                rect = rangeRect;
+                            }
+                        } catch (e) {
+                            console.warn("Could not calculate range rect for link", idx);
+                        }
+                    }
+                }
+
+                // Final safety skip
+                if (rect.width === 0 || rect.height === 0) return;
+
+                // Clipping Logic: Only show badge if link is at least partially visible in iframe viewport
+                // rect is relative to iframe viewport
+                const iframeHeight = frame.clientHeight;
+                const iframeWidth = frame.clientWidth;
+
+                // If the link is fully out of view, skip it
+                if (rect.bottom < 0 || rect.top > iframeHeight || rect.right < 0 || rect.left > iframeWidth) {
+                    return;
+                }
+
+                // Create overlay badge
+                const badge = document.createElement('div');
+                badge.className = 'link-overlay-badge';
+                badge.textContent = idx;
+
+                // Position badge: top-right calculation relative to main window
+                let badgeX, badgeY;
+                if (rect.width < 15) {
+                    badgeX = frameRect.left + rect.left + (rect.width / 2) - 10;
+                    badgeY = frameRect.top + rect.top - 20;
+                } else {
+                    badgeX = frameRect.left + rect.left + rect.width - 6;
+                    badgeY = frameRect.top + rect.top - 12;
+                }
+
+                // Ensure the badge itself is clipped by the frame boundaries
+                // (e.g. don't let it overlap the header if the link is at the very top edge)
+                if (badgeY < frameRect.top) {
+                    // If the link is partially visible at top but badge would be outside,
+                    // we can either hide it or stick it to the edge. Let's hide for clean look.
+                    return;
+                }
+                if (badgeY > frameRect.bottom - 20) {
+                    return;
+                }
+
+                badge.style.cssText = `
+                    position: fixed;
+                    left: ${badgeX}px;
+                    top: ${badgeY}px;
+                    background: #6AE7C8;
+                    color: #0C0D10;
+                    font-size: 11px;
+                    font-weight: 800;
+                    padding: 0px 6px;
+                    min-width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    z-index: 1000;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.8);
+                    text-align: center;
+                    border: none;
+                    pointer-events: none;
+                    opacity: 1;
+                    transition: transform 0.2s ease;
+                `;
+                container.appendChild(badge);
+                overlayElements.push(badge);
+
+                // Add highlight to link in iframe
+                link.classList.add('link-outline');
+                link.classList.add('link-highlight-pulse');
+            });
+        }
+
+        function removeOverlays() {
+            const container = document.getElementById('linkOverlays');
+            container.innerHTML = '';
+            overlayElements = [];
+
+            // Remove outlines from iframe links
+            const doc = frame.contentDocument;
+            if (doc) {
+                const links = doc.querySelectorAll('[data-index]');
+                links.forEach(link => {
+                    link.classList.remove('link-outline');
+                    link.classList.remove('link-highlight-pulse');
+                    link.classList.remove('link-flash-spotlight');
+                });
+            }
+        }
+
+        function updateOverlays() {
+            if (linksHighlighted) {
+                createOverlays();
+            }
+        }
+
+        // Update overlays logic
+        frame.addEventListener('load', () => {
+            let rafPending = false;
+            frame.contentWindow.addEventListener('scroll', () => {
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
+            });
+            frame.contentWindow.addEventListener('resize', () => {
+                if (linksHighlighted) updateOverlays();
+            });
+        });
+
+
+
+        function copyLink(btn, url) {
+            navigator.clipboard.writeText(url).then(() => {
+                const originalHtml = btn.innerHTML;
+                // Temporarily show checkmark
+                btn.innerHTML = '<span style="color: var(--accent-green); font-weight: bold;">✓</span>';
+                btn.classList.add('copy-success');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.classList.remove('copy-success');
+                }, 1500);
+            });
+        }
+
+        async function runAudit(btn, url, index) {
+            // Find parent elements
+            const cardBody = btn.closest('.card-v2-body');
+            const logContainer = cardBody.querySelector('.audit-log-container');
+            const timeline = logContainer.querySelector('.audit-timeline');
+            const statusText = logContainer.querySelector('.audit-status-text');
+            const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
+
+            // Reset UI
+            logContainer.classList.add('active');
+            timeline.innerHTML = '';
+            statusText.innerHTML = 'Initiating Audit...';
+            statusText.className = 'audit-status-text text-yellow';
+
+            // Allow animation
+            await new Promise(r => setTimeout(r, 300));
+
+            try {
+                if (linkData && linkData.redirect_chain && linkData.redirect_chain.length > 0) {
+                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${linkData.audit_date}</small>` : '';
+                    statusText.innerHTML = 'Analyzing Redirection Chain...' + auditDateStr;
+
+                    let containsGtinsi = false;
+                    for (let i = 0; i < linkData.redirect_chain.length; i++) {
+                        const step = linkData.redirect_chain[i];
+                        const isLast = i === linkData.redirect_chain.length - 1;
+                        const isGtinsi = step.url && step.url.includes('gtinsi.de');
+                        if (isGtinsi) containsGtinsi = true;
+
+                        const stepClass = isGtinsi ? 'audit-step highlighted' : 'audit-step';
+
+                        // Display the step
+                        if (!isLast) {
+                            // It's a redirect step
+                            const nextStep = linkData.redirect_chain[i + 1];
+                            timeline.innerHTML += `<div class="${stepClass}"><strong>${step.status}</strong> &rarr; ${nextStep.url}</div>`;
+                        } else {
+                            // It's the final destination
+                            const statusColor = (step.status === 200) ? 'text-green' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'text-red' : 'text-cyan');
+                            const statusIcon = (step.status === 200) ? 'final' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'error' : '');
+
+                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${step.status || 'Done'}</strong> &bull; ${step.url}</div>`;
+
+                            // Update status text
+                            if (step.status === 200) {
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : 'Verification Complete';
+                            } else if (step.status === 'Timeout') {
+                                statusText.innerHTML = 'Request Timed Out';
+                            } else if (step.status >= 400 || step.status === 'Error') {
+                                statusText.innerHTML = 'Audit Finished (Error Found)';
+                            } else {
+                                statusText.innerHTML = 'Audit Finished';
+                            }
+
+                            statusText.className = `audit-status-text ${statusColor}`;
+                            btn.style.color = (step.status === 200) ? 'var(--accent-green)' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'var(--accent-red)' : 'var(--accent-cyan)');
+                        }
+                        await new Promise(r => setTimeout(r, 400));
+                    }
+                } else {
+                    // Fallback for archives created before this feature or if resolution failed
+                    timeline.innerHTML += `<div class="audit-step"><strong>INFO</strong> Pre-calculated redirect data missing.</div>`;
+                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${url}</div>`;
+                    await new Promise(r => setTimeout(r, 600));
+                    timeline.innerHTML += `<div class="audit-step final"><strong>ACTION</strong> Please re-archive this email to enable full redirect auditing.</div>`;
+                    statusText.innerHTML = 'Direct Link Check';
+                    statusText.className = 'audit-status-text text-yellow';
+                    btn.style.color = 'var(--accent-yellow)';
+                }
+
+            } catch (e) {
+                console.error("Audit error:", e);
+                statusText.innerHTML = 'Analysis Error';
+                statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
+            }
+        }
+
+        async function downloadEmailZip() {
+            try {
+                const zip = new JSZip();
+                const subject = "[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const timestamp = new Date().toISOString().split('T')[0];
+                const zipFilename = `${subject}_${timestamp}.zip`;
+
+                // Get all images from the current directory
+                const currentPath = window.location.pathname;
+                const emailDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+
+                // Find all image references in the HTML
+                const doc = frame.contentDocument;
+                const images = doc.querySelectorAll('img[src]');
+
+                // Create a folder for images
+                const imgFolder = zip.folder("images");
+
+                // Download each image and track the mapping
+                let downloadCount = 0;
+                const imagePromises = [];
+                const imageMapping = new Map(); // old path -> new path
+
+                images.forEach((img, index) => {
+                    const imgSrc = img.getAttribute('src');
+                    if (imgSrc && !imgSrc.startsWith('data:') && !imgSrc.startsWith('http')) {
+                        // It's a local image
+                        const imgPath = emailDir + '/' + imgSrc;
+                        const imgFilename = imgSrc.split('/').pop();
+
+                        // Store the mapping: old src -> new path in zip
+                        imageMapping.set(imgSrc, 'images/' + imgFilename);
+
+                        const promise = fetch(imgPath)
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.blob();
+                                }
+                                throw new Error(`Failed to fetch ${imgFilename}`);
+                            })
+                            .then(blob => {
+                                imgFolder.file(imgFilename, blob);
+                                downloadCount++;
+                            })
+                            .catch(err => {
+                                console.warn(`Could not download ${imgFilename}:`, err);
+                            });
+
+                        imagePromises.push(promise);
+                    }
+                });
+
+                // Wait for all images to be added
+                await Promise.all(imagePromises);
+
+                // Fix image paths in HTML content
+                let fixedHtml = content;
+                imageMapping.forEach((newPath, oldPath) => {
+                    // Replace all occurrences of the old path with the new path
+                    const regex = new RegExp(oldPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    fixedHtml = fixedHtml.replace(regex, newPath);
+                });
+
+                // Add HTML content with fixed paths
+                zip.file("email.html", fixedHtml);
+
+                // Generate zip file
+                const blob = await zip.generateAsync({ type: "blob" });
+
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = zipFilename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                console.log(`Downloaded ${downloadCount} images and HTML as ${zipFilename}`);
+            } catch (error) {
+                console.error('Error creating zip file:', error);
+                alert('Failed to create download. Please try again.');
+            }
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
+            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        function toggleShortcuts() {
+            const p = document.getElementById('shortcutPanel');
+            p.style.display = p.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.addEventListener('click', e => {
+            const p = document.getElementById('shortcutPanel');
+            const btn = document.getElementById('shortcutBtn');
+            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
+                p.style.display = 'none';
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '1') setMode('mobile');
+            if (e.key === '2') setMode('tablet');
+            if (e.key === '3') setMode('desktop');
+            if (e.key === 't' || e.key === 'T') toggleTheme();
+            if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
+            if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === '?') toggleShortcuts();
+
+            // Scroll iframe with arrows
+            if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
+            if (e.key === 'ArrowUp') frame.contentWindow.scrollBy(0, -150);
+        });
+
         init();
     </script>
 </body>
