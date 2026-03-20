@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 
 <head>
     <meta charset="UTF-8">
@@ -41,13 +41,13 @@
 
             <div class="gi-topnav-actions">
                 <!-- Language picker: translate icon matching VitePress vpi-languages -->
-                <button class="gi-lang-btn" title="Change language">
+                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
                 </button>
 
                 <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)">
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
                     <span class="gi-vp-check">
                         <span class="gi-vp-icon">
                             <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -67,19 +67,19 @@
                 <!-- Top bar: controls -->
                 <div class="vh-top-bar">
                     <div class="device-toggle hide-mobile">
-                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
                                 <line x1="12" y1="18" x2="12.01" y2="18"/>
                             </svg>
                         </button>
-                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
                                 <line x1="12" y1="18" x2="12.01" y2="18"/>
                             </svg>
                         </button>
-                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                                 <line x1="8" y1="21" x2="16" y2="21"/>
@@ -95,6 +95,9 @@
                         </button>
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
+                        </button>
+                        <button class="btn btn-secondary" id="copyLinkBtn" onclick="copyToClipboard(window.location.href, this)" title="Copy link to this email">
+                            Copy Link
                         </button>
                         <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
@@ -113,17 +116,17 @@
             <div class="viewer-content">
                 <div id="deviceFrame" data-mode="mobile"
                     style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups"></iframe>
+                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
                 </div>
             </div>
         </div>
 
         <!-- Sidebar -->
-        <aside class="viewer-sidebar">
+        <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
             <div class="tab-bar">
-                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')">META</button>
-                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
-                <button class="tab-btn" data-tab="links" onclick="showTab('links')">LINKS <span class="tab-count-badge">0</span></button>
+                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">11</span></button>
             </div>
 
             <div class="sidebar-content">
@@ -132,38 +135,38 @@
                 <div class="tab-pane" id="tab-meta">
                     <div class="stat-grid">
                         <div class="stat-cell">
-                            <span class="sc-label">Sender</span>
+                            <span class="sc-label" data-i18n="meta_sender">Sender</span>
                             <span class="sc-value">PeintureVoiture.fr</span>
                         </div>
                         <div class="stat-cell">
-                            <span class="sc-label">CRM</span>
+                            <span class="sc-label" data-i18n="meta_crm">CRM</span>
                             <span class="sc-value text-cyan">Unknown</span>
                         </div>
                         <div class="stat-cell sc-wide">
-                            <span class="sc-label">Subject</span>
+                            <span class="sc-label" data-i18n="meta_subject">Subject</span>
                             <span class="sc-value" title="[TEST FR] Un email un peu différent… pour une cause qui nous tient à cœur">[TEST FR] Un email un peu différent… pour une cause qui nous tient à cœur</span>
                         </div>
                         <div class="stat-cell sc-wide">
-                            <span class="sc-label">Preheader</span>
+                            <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
                             <span class="sc-value" title="Un email un peu différent… pour une cause qui nous tient à cœur Soutenir la Protection Civile, ensemble, ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...">Un email un peu différent… pour une cause qui nous tient à cœur Soutenir la Protection Civile, ensemble, ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</span>
                         </div>
                         <div class="stat-cell">
-                            <span class="sc-label">Received</span>
+                            <span class="sc-label" data-i18n="meta_received">Received</span>
                             <span class="sc-value">08/12/2025 à 09:05</span>
                         </div>
                         <div class="stat-cell">
-                            <span class="sc-label">Size</span>
+                            <span class="sc-label" data-i18n="meta_size">Size</span>
                             <span class="sc-value text-yellow">67.5 KB</span>
                         </div>
                         <div class="stat-cell">
-                            <span class="sc-label">Clipping Risk</span>
+                            <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
                             <span class="sc-value text-green">
                                 Low
                             </span>
                         </div>
                         <div class="stat-cell">
-                            <span class="sc-label">Links</span>
-                            <span class="sc-value">0</span>
+                            <span class="sc-label" data-i18n="meta_links">Links</span>
+                            <span class="sc-value">11</span>
                         </div>
                     </div>
                 </div>
@@ -217,11 +220,663 @@
                 <!-- LINKS Tab -->
                 <div class="tab-pane" id="tab-links" style="display:none;">
                     <div class="lf-filter-row" id="linkFilterRow">
-                        <button class="lf-chip active" onclick="filterLinks('all')">All</button>
-                        <button class="lf-chip" onclick="filterLinks('tracking')">Tracking</button>
-                        <button class="lf-chip" onclick="filterLinks('http')">HTTP</button>
+                        <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
+                        <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
+                        <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
                     </div>
                     <div style="padding: 8px 10px;">
+                        
+                        <div class="link-card-v2" id="lc-1">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <span class="card-v2-domain">External Link</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
+                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg> HTTP</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated"></code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">rendez-vous ici</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url"></code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "", 1)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-2">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <span class="card-v2-domain">peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    <span class="card-v2-tag tag-unsecure"><svg width="8"
+                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="3">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                            <line x1="12" y1="9" x2="12" y2="13" />
+                                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                                        </svg> HTTP</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">http://www.peinturevoiture.fr/</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "http://www.peinturevoiture.fr/")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">http://www.peinturevoiture.fr/</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "http://www.peinturevoiture.fr/", 2)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "http://www.peinturevoiture.fr/")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-3">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6926b24fb4f2a</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6926b24fb4f2a</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6926b24fb4f2a", 3)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-4">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6926b24fb4f2a</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE DONNEà la Protection Civile</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6926b24fb4f2a</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6926b24fb4f2a", 4)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-5">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6926b24fb4f2a</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6926b24fb4f2a</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6926b24fb4f2a", 5)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-6">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <span class="card-v2-domain">gtinsi.de</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://gtinsi.de/6926b24fb4f2a</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">JE DONNEà la Protection Civile</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://gtinsi.de/6926b24fb4f2a</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6926b24fb4f2a", 6)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6926b24fb4f2a")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-7">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <span class="card-v2-domain">peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://www.peinturevoiture.fr/content/5-paiement-securise</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/5-paiement-securise")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://www.peinturevoiture.fr/content/5-paiement-securise</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://www.peinturevoiture.fr/content/5-paiement-securise", 7)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/5-paiement-securise")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-8">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <span class="card-v2-domain">peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://www.peinturevoiture.fr/content/1-livraison</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/1-livraison")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://www.peinturevoiture.fr/content/1-livraison</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://www.peinturevoiture.fr/content/1-livraison", 8)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/1-livraison")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-9">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <span class="card-v2-domain">peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://www.peinturevoiture.fr/content/9-fidelite-recompensee</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/9-fidelite-recompensee")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://www.peinturevoiture.fr/content/9-fidelite-recompensee</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://www.peinturevoiture.fr/content/9-fidelite-recompensee", 9)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/9-fidelite-recompensee")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-10">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <span class="card-v2-domain">peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://www.peinturevoiture.fr/content/5-paiement-securise</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/5-paiement-securise")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text"></div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://www.peinturevoiture.fr/content/5-paiement-securise</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://www.peinturevoiture.fr/content/5-paiement-securise", 10)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://www.peinturevoiture.fr/content/5-paiement-securise")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="link-card-v2" id="lc-11">
+                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <span class="card-v2-domain">redir.peinturevoiture.fr</span>
+                                <div style="display: flex; gap: 4px;">
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <code class="card-v2-url-truncated">https://redir.peinturevoiture.fr/w/b/u/34/0</code>
+                                <button class="btn-card" title="Copy URL"
+                                    onclick="event.stopPropagation(); copyLink(this, "https://redir.peinturevoiture.fr/w/b/u/34/0")">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="card-expand-zone">
+                                <div class="card-v2-body">
+                                    <div class="card-v2-text">suivre ce lien</div>
+                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <code class="card-v2-url">https://redir.peinturevoiture.fr/w/b/u/34/0</code>
+                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <button class="btn-card" title="Verify Link"
+                                                onclick="event.stopPropagation(); runAudit(this, "https://redir.peinturevoiture.fr/w/b/u/34/0", 11)">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-card" title="Copy URL"
+                                                onclick="event.stopPropagation(); copyLink(this, "https://redir.peinturevoiture.fr/w/b/u/34/0")">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Audit Log Container -->
+                                    <div class="audit-log-container">
+                                        <div class="audit-status-bar">
+                                            <span class="audit-status-text">Scanning...</span>
+                                        </div>
+                                        <div class="audit-timeline">
+                                            <!-- Log items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                     </div>
                 </div>
@@ -243,7 +898,7 @@
 
 
     <!-- Mobile sidebar toggle button -->
-    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
         ☰ Links
     </button>
 
@@ -268,12 +923,71 @@
     <script src="../assets/js/main.js"></script>
     <script>
         const content = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html lang=\"en\" xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head><title>Un email un peu diff\u00e9rent\u2026 pour une cause qui nous tient \u00e0 c\u0153ur</title><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/><meta content=\"width=device-width\" name=\"viewport\"/><meta content=\"telephone=no\" name=\"format-detection\"/><!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><style data-spm-styles=\"persistent\">\r\n#outlook a { padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;}body.outlook p { display: inline;}body { width: 100%; min-width: 100%; margin: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;}.ExternalClass { width: 100%;}.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div,.ExternalClass th { line-height: 100%;} @media only screen and (max-width: 600px) { body { width: auto; min-width: 0; } #k .r .o_image img { height: auto; max-width: 100% !important; } #k .r .o_image img.spm1 { width: auto !important; max-width: 100% !important; } #k .r .spm_product_list_element_container img { max-width: 50%; } #k .container { width: 95% !important; } #k .r .container { min-width: 0 !important; } #k .r>tbody>tr>td>.columns, #k .r>tbody>tr>td>.columns>tbody>tr>.column, #k .r>tbody>tr>td>.columns>tbody, #k .r>tbody>tr>td>.columns>tbody>tr, #k .r>tbody>tr>td>.columns>tbody>tr>.column table { table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important; display: table !important; } #k .r, #k .r>tbody>tr, #k .r>tbody { width: 100% !important; display: block !important; } #k .hide-for-small, #k .show-for-desktop, #k .r>tbody>tr>td>.columns>tbody>tr>.column table.hide-for-small, #k .r>tbody>tr>td>.columns>tbody>tr>.column table.show-for-desktop { display: none !important; } #k .f, #k .e, #k .f th, #k .e th, #k .f td, #k .e td, #k .f table, #k .e table { display: table-cell !important; height: auto !important; overflow: visible !important; float: none !important; visibility: visible !important; max-height: inherit !important; } #k .f .container, #k .e .container { width: 95% !important; min-width: 0 !important; } #k .r .f, #k .r .e, #k .r .f th, #k .r .e th, #k .r .f td, #k .r .e td, #k .r .f table, #k .r .e table { display: block !important; height: auto !important; overflow: visible !important; float: none !important; visibility: visible !important; width: 100% !important; max-height: inherit !important; padding: inherit !important; } #k .r th.f, #k .r th.e, #k .r table.f>tbody>tr>td, #k .r table.e>tbody>tr>td, #k .r table.f>tbody>tr>td th.c, #k .r table.e>tbody>tr>td th.c { max-width: inherit !important; padding: inherit !important; } #k .f>tbody>tr>td, #k .e>tbody>tr>td { display: table-cell !important; } #k table.f, #k table.e, #k table.f table, #k table.e table { display: table !important; } #k table.r>tbody>tr>td, #k table.r>tbody>tr>th, #k table.r table.a>tbody>tr>td, #k .r table.d>tbody>tr>th, #k .r table.d>tbody>tr>th { display: block !important; text-align: center !important; width: auto !important; } #k .r h1, #k .r h2, #k .r h3, #k .r h4 { text-align: center !important; } #k .r>tbody>tr>td>.columns>tbody>tr>.column table.button { width: auto !important; } #k .r>tbody>tr>td>.columns>tbody>tr>.column table.button.spm1 { width: 100% !important; }}@media only screen and (max-width: 375px) { #k .r table.columns td, #k .r table.column td { width: auto !important; }} @media only screen and (max-width: 599px) {} #o_245f1a5f49c44ac1857 img { max-width: 600px;}#o_245f1a5f49c44ac1857 img { width: 600px;} #o_15194a515a737d17735ef img { max-width: 913px;}#o_bbb298a2f2132d8a3e55 img { max-width: 500px;}#o_b718b9a7a14862627c14 img { max-width: 500px;} #o_621f91c9b76bf img { max-width: 65px;}#o_621f91c9b76bf img { width: 65px;}#o_621f91c9c9359 img { max-width: 65px;}#o_621f91c9c9359 img { width: 65px;}#o_621f91c9d6e8b img { max-width: 65px;}#o_621f91c9d6e8b img { width: 65px;}#o_621f91c9e177a img { max-width: 65px;}#o_621f91c9e177a img { width: 65px;} #LANG_10c62ae25fa4cc50157 img { max-width: 1px;}#LANG_10c62ae25fa4cc50157 img { width: 1px;} \r\n</style></head><body style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-family: 'Helvetica', 'Arial', sans-serif;\"><div style=\"display:none;font-size:1px;line-height:1px;opacity:0;visibility:hidden;\">\r\n\r\nSoutenir la Protection Civile, ensemble,\r\n\u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \r\n\u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \r\n\u00a0\r\n\r\n</div><table align=\"left\" bgcolor=\"rgb(255, 255, 255)\" bis_size='{\"x\":2,\"y\":2,\"w\":1455,\"h\":1792,\"abs_x\":2,\"abs_y\":110}' cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" id=\"k\" style=\"border-spacing: 0; border-collapse: collapse; font-size: 12px; height: 100%; width: 100%; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); background-color: rgb(255, 255, 255); text-align: left;\"> <tbody bis_size='{\"x\":2,\"y\":2,\"w\":1455,\"h\":1792,\"abs_x\":2,\"abs_y\":110}'> <tr bis_size='{\"x\":2,\"y\":2,\"w\":1455,\"h\":1792,\"abs_x\":2,\"abs_y\":110}'>\n<td align=\"left\" bis_size='{\"x\":2,\"y\":2,\"w\":1455,\"h\":1792,\"abs_x\":2,\"abs_y\":110}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <center bis_size='{\"x\":2,\"y\":2,\"w\":1455,\"h\":1792,\"abs_x\":2,\"abs_y\":110}' style=\"width: 100%;\"> <table bgcolor=\"rgb(244, 244, 244)\" cellpadding=\"0\" cellspacing=\"0\" class=\"l r\" draggable=\"false\" id=\"l_9fff8ea418119a240e30b\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(244, 244, 244); width: 100%; border-collapse: collapse;\"><tbody><tr>\n<td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <center style=\"width: 100%;\"><table align=\"inherit\" cellpadding=\"0\" cellspacing=\"0\" class=\"container\" id=\"l_9257f291e64422e8c9c6_content\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: 600px; width: 600px; margin: 0 auto; text-align: inherit;\"><tbody><tr>\n<td align=\"left\" class=\"b\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_c1d5ce9d9f8101236e\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"><tbody><tr><td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"row r\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"><tbody><tr><td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"><tbody><tr>\n<th align=\"left\" class=\"column c spm2\" id=\"n9877a6f9a68d796c320c\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-left: 5px; padding-right: 5px; width: 100%; border-collapse: collapse;\" valign=\"top\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"o_separator d\" draggable=\"false\" id=\"o_7b56f00ebc3f9a2b5f7a\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 0px; border-collapse: collapse;\" width=\"100%\"> <tbody><tr><th align=\"left\" height=\"1\" style=\"vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; background: none; height: 1px; width: 100%; margin: 0px; line-height: 0.1px; border-width: 0px 0px 1px; border-style: none none solid; border-bottom-style: solid; border-bottom-color: rgb(34, 33, 33); border-bottom-width: 1px; border-color: rgb(244, 244, 244); border-collapse: collapse;\" valign=\"top\">\u00a0</th></tr></tbody></table></th></tr></tbody></table></th> </tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody>\n</table><table bgcolor=\"rgb(244, 244, 244)\" cellpadding=\"0\" cellspacing=\"0\" class=\"l\" draggable=\"false\" id=\"l_916b687467a228a229ff\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(244, 244, 244); width: 100%; border-collapse: collapse;\"><tbody><tr><td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-right: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse;\" valign=\"top\"> <center style=\"width: 100%;\">\n<table align=\"inherit\" bgcolor=\"rgb(255, 255, 255)\" cellpadding=\"0\" cellspacing=\"0\" class=\"container\" id=\"l_8114077e43563d4b16a7_content\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: 600px; width: 600px; margin: 0 auto; text-align: inherit; background-color: rgb(255, 255, 255);\"><tbody><tr><td align=\"left\" class=\"b\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_148a4473aa35ba711157\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"><tbody><tr>\n<td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"row\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"><tbody><tr><td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"><tbody><tr> <th align=\"left\" class=\"column c spm2\" id=\"nc4cf40ca506c4b7a8da8\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; width: 100%; border-collapse: collapse;\" valign=\"top\"><table bis_size='{\"x\":444,\"y\":7,\"w\":570,\"h\":24,\"abs_x\":444,\"abs_y\":115}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_621f91c81c37a\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse; display: table;\" width=\"100%\">\n<tbody bis_size='{\"x\":444,\"y\":7,\"w\":570,\"h\":24,\"abs_x\":444,\"abs_y\":115}'> <tr bis_size='{\"x\":444,\"y\":7,\"w\":570,\"h\":24,\"abs_x\":444,\"abs_y\":115}'> <th align=\"center\" bis_size='{\"x\":444,\"y\":7,\"w\":570,\"h\":24,\"abs_x\":444,\"abs_y\":115}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":12,\"w\":570,\"h\":14,\"abs_x\":444,\"abs_y\":120}'>Pour consulter la version en ligne,\r\n<a data-index=\"1\" href=\"\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\"> rendez-vous ici </a> </div></th> </tr> </tbody> </table><table cellpadding=\"0\" cellspacing=\"0\" class=\"o_image d\" draggable=\"false\" id=\"o_245f1a5f49c44ac1857\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"> <tbody> <tr> <th align=\"center\" style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\"> <a data-index=\"2\" draggable=\"false\" href=\"http://www.peinturevoiture.fr/\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\">\n<img alt=\"\" draggable=\"false\" src=\"img_0.jpg\" style=\"outline: none; text-decoration: none; border: medium none;\" width=\"600\"/></a> </th> </tr> </tbody> </table></th></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table><table bgcolor=\"rgb(244, 244, 244)\" cellpadding=\"0\" cellspacing=\"0\" class=\"l\" draggable=\"false\" id=\"l_772fc2661f36eb84335a\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(244, 244, 244); width: 100%; border-collapse: collapse;\"> <tbody> <tr>\n<td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <center style=\"width: 100%;\"> <table align=\"inherit\" bgcolor=\"rgb(255, 255, 255)\" cellpadding=\"0\" cellspacing=\"0\" class=\"container\" id=\"l_b25e7cbb221277a34b9_content\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: 600px; width: 600px; margin: 0 auto; text-align: inherit; background-color: rgb(255, 255, 255);\"> <tbody> <tr>\n<td align=\"left\" class=\"b\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_822583b3091b5934b17f\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; display: table; border-collapse: collapse;\" width=\"100%\"> <tbody> <tr> <td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"row\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"> <tbody> <tr> <td align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"> <tbody> <tr>\n<th align=\"left\" class=\"column c\" id=\"nb2c1004c29d4605b8f6\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 100%; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_5fe725eed115eeadbd76\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-bottom: 5px; padding-left: 30px; padding-right: 30px; padding-top: 15px; border-collapse: collapse;\" valign=\"top\"><div>\n<p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\"><b style='font-size: 12px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; color: rgb(235, 102, 42);'>PeintureVoiture.fr</b><b style='font-size: 12px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; color: rgb(32, 60, 123);'> met en avant la Protection Civile et le financement de ses v\u00e9hicules d\u2019intervention, indispensables \u00e0 ses missions de secours. </b></p></div></th></tr></tbody></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"o_image d\" draggable=\"false\" id=\"o_bbb298a2f2132d8a3e55\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr>\n<th align=\"center\" style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 20px; padding-bottom: 20px; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\"><a data-index=\"3\" draggable=\"false\" href=\"https://gtinsi.de/6926b24fb4f2a\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\"> <img alt=\"Pour intervenir, on a besoin de vous\" draggable=\"false\" height=\"auto\" src=\"img_1.png\" style=\"outline: none; text-decoration: none; border: medium none; height: auto; width: 85%;\" width=\"500\"/> </a></th></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_710b491008425d91ac0\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"><table align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"button\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: hidden; width: auto;\"><tbody><tr>\n<th align=\"center\" bgcolor=\"rgb(32, 60, 123)\" style=\"margin: 0; display: block; vertical-align: middle; text-align: center; text-decoration: none; background-color: rgb(32, 60, 123); color: rgb(255, 255, 255); font-weight: bold; font-style: normal; text-decoration-line: none; text-transform: none; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'sans-serif'; letter-spacing: 1px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; border-color: rgb(130, 187, 0); border-style: solid; border-top-color: rgb(130, 187, 0); border-top-width: 1px; border-top-style: solid; border-bottom-color: rgb(130, 187, 0); border-bottom-width: 1px; border-bottom-style: solid; border-left-color: rgb(130, 187, 0); border-left-width: 1px; border-left-style: solid; border-right-color: rgb(130, 187, 0); border-right-width: 1px; border-right-style: solid; border-width: 0px; border-radius: 15px; font-size: 14px; line-height: 18px; border-collapse: collapse;\" valign=\"middle\">\n<a data-index=\"4\" draggable=\"false\" href=\"https://gtinsi.de/6926b24fb4f2a\" style=\"background: transparent; display: block; width: 100%; height: 100%; text-decoration: none; background-color: rgb(32, 60, 123); color: rgb(255, 255, 255); font-weight: bold; font-style: normal; text-decoration-line: none; text-transform: none; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'sans-serif'; letter-spacing: 1px; font-size: 14px; line-height: 18px;\">JE DONNE <br/> \u00e0 la Protection Civile <br/></a> </th></tr></tbody></table></th></tr></tbody></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_1b8793f5f3838c1b642\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"> <tbody> <tr>\n<th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-left: 45px; padding-right: 45px; padding-top: 20px; padding-bottom: 20px; border-collapse: collapse;\" valign=\"top\"><div><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>\u00c0 l\u2019occasion de cette fin d\u2019ann\u00e9e, Peinture Voiture souhaite mettre en lumi\u00e8re un besoin essentiel de la Protection Civile : </span><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>ses v\u00e9hicules d\u2019intervention, indispensables pour sauver des vies.</b></p>\n<p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>Avec 463 ambulances sur l\u2019ensemble du territoire, </span><b style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>cette association</b><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'> a r\u00e9alis\u00e9 3 488 gardes SAMU/pompiers pour soutenir des services d\u2019urgence en tension et 7 433 \u00e9vacuations vers des centres hospitaliers en 2024.</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p>\n<p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>Plus largement, ces v\u00e9hicules permettent d\u2019intervenir partout en France sur des catastrophes naturelles pour effectuer des \u00e9vacuations de populations sinistr\u00e9es ou r\u00e9aliser des formations aux gestes de premiers secours.\u00a0</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>Gr\u00e2ce \u00e0 votre g\u00e9n\u00e9rosit\u00e9, la Protection Civile pourra mener \u00e0 bien toutes ses actions.\u00a0</span></p>\n<p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><b style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>Votre don</b><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'> permet </span><b style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'>de financer, d\u2019entretenir et d\u2019\u00e9quiper ces v\u00e9hicules,</b><span style='color: rgb(32, 60, 123); font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px;'> mais aussi de maintenir ses actions de proximit\u00e9, pour rester aux c\u00f4t\u00e9s de celles et ceux qui en ont le plus besoin.\r\n</span></p></div></th> </tr> </tbody> </table><table cellpadding=\"0\" cellspacing=\"0\" class=\"o_image d\" draggable=\"false\" id=\"o_b718b9a7a14862627c14\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"center\" style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 20px; padding-bottom: 20px; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\"><a data-index=\"5\" draggable=\"false\" href=\"https://gtinsi.de/6926b24fb4f2a\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\">\n<img alt=\"Protection civile en intervention \" draggable=\"false\" height=\"auto\" src=\"img_2.png\" style=\"outline: none; text-decoration: none; border: medium none; height: auto; width: 85%;\" width=\"500\"/> </a></th></tr></tbody></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_2dd72f59123fc0af234a\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\">\n<table align=\"center\" cellpadding=\"0\" cellspacing=\"0\" class=\"button\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; overflow: hidden; width: auto;\"><tbody><tr>\n<th align=\"center\" bgcolor=\"rgb(32, 60, 123)\" style=\"margin: 0; display: block; vertical-align: middle; text-align: center; text-decoration: none; background-color: rgb(32, 60, 123); color: rgb(255, 255, 255); font-weight: bold; font-style: normal; text-decoration-line: none; text-transform: none; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'sans-serif'; letter-spacing: 1px; padding-top: 10px; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; border-color: rgb(130, 187, 0); border-style: solid; border-top-color: rgb(130, 187, 0); border-top-width: 1px; border-top-style: solid; border-bottom-color: rgb(130, 187, 0); border-bottom-width: 1px; border-bottom-style: solid; border-left-color: rgb(130, 187, 0); border-left-width: 1px; border-left-style: solid; border-right-color: rgb(130, 187, 0); border-right-width: 1px; border-right-style: solid; border-width: 0px; border-radius: 15px; font-size: 14px; line-height: 18px; border-collapse: collapse;\" valign=\"middle\">\n<a data-index=\"6\" draggable=\"false\" href=\"https://gtinsi.de/6926b24fb4f2a\" style=\"background: transparent; display: block; width: 100%; height: 100%; text-decoration: none; background-color: rgb(32, 60, 123); color: rgb(255, 255, 255); font-weight: bold; font-style: normal; text-decoration-line: none; text-transform: none; font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'sans-serif'; letter-spacing: 1px; font-size: 14px; line-height: 18px;\">JE DONNE <br/> \u00e0 la Protection Civile <br/></a> </th></tr></tbody></table></th></tr></tbody></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_4fa1002e514c8a8101a8\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"> <tbody> <tr>\n<th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-left: 45px; padding-right: 45px; padding-top: 20px; padding-bottom: 20px; border-collapse: collapse;\" valign=\"top\"><div><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>Pourquoi faire un don ?</b><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'> </span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\">\n<span style='font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; color: rgb(32, 60, 123);'>En faisant un don \u00e0 la Protection Civile, vous soutenez leurs actions tout en b\u00e9n\u00e9ficiant d\u2019un avantage fiscal.</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>Vous \u00eates un particulier</b></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>\r\n\u25cf 75 % du montant de votre don sont d\u00e9ductibles de votre imp\u00f4t sur le revenu, dans la limite de 1 000 \u20ac.</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'> \u25cf Au-del\u00e0 de 1 000 \u20ac, 66 % du montant de votre don sont d\u00e9ductibles, dans la limite de 20 % de votre revenu imposable.</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>Vous avez </span><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>\r\njusqu\u2019au 31 d\u00e9cembre</b><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'> pour faire un don d\u00e9fiscalis\u00e9.</span></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>Vous \u00eates une entreprise (imp\u00f4t sur les soci\u00e9t\u00e9s)</b></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0;\"><br/></p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>\r\n\u25cf Votre don ouvre droit \u00e0 une d\u00e9duction fiscale de </span><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>60 %</b><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>, dans la limite de </span><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>0,5 % du chiffre d\u2019affaires </b><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>ou de</span><b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'> 20 000 \u20ac.</b></p></div></th> </tr> </tbody> </table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_3edef88ac915a1d40c13\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"> <tbody> <tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-left: 45px; padding-right: 45px; padding-top: 20px; padding-bottom: 20px; border-collapse: collapse;\" valign=\"top\"><div><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>L\u2019obtention du </span>\n<b style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'>Label Do Good</b><span style='color: rgb(32, 60, 123); font-size: 13px; font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif;'> permet \u00e0 la Protection Civile de rassurer ses donateurs, ses m\u00e9c\u00e8nes et ses partenaires institutionnels et priv\u00e9s quant \u00e0 la bonne utilisation de leurs dons et l\u2019efficacit\u00e9 de ses interventions.</span></p></div></th> </tr> </tbody> </table><table cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_92ebe1fca53ac425f87\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"> <tbody> <tr>\n<th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-top: 15px; padding-bottom: 15px; padding-left: 30px; padding-right: 30px; border-collapse: collapse;\" valign=\"top\"><div><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: left;\"><span style='font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px; color: rgb(32, 60, 123);'>Encore merci d\u2019avoir pris le temps de lire cet email un peu diff\u00e9rent de nos envois habituels. Toute l\u2019\u00e9quipe </span><b style='font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px; color: rgb(235, 102, 42);'>PeintureVoiture </b>\n<span style='font-family: \"lucida sans unicode\", \"lucida grande\", sans-serif; font-size: 13px; color: rgb(32, 60, 123);'>est heureuse de pouvoir apporter de la visibilit\u00e9 \u00e0 la Protection Civile.</span></p></div></th> </tr> </tbody> </table> </th></tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </center> </td> </tr> </tbody> </table><table bgcolor=\"rgb(244, 244, 244)\" bis_size='{\"x\":2,\"y\":1467,\"w\":1455,\"h\":278,\"abs_x\":2,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"l\" draggable=\"false\" id=\"l_621f91c97ceba\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(244, 244, 244); width: 100%; border-collapse: collapse;\">\n<tbody bis_size='{\"x\":2,\"y\":1467,\"w\":1455,\"h\":278,\"abs_x\":2,\"abs_y\":1575}'> <tr bis_size='{\"x\":2,\"y\":1467,\"w\":1455,\"h\":278,\"abs_x\":2,\"abs_y\":1575}'> <td align=\"left\" bis_size='{\"x\":2,\"y\":1467,\"w\":1455,\"h\":278,\"abs_x\":2,\"abs_y\":1575}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <center bis_size='{\"x\":2,\"y\":1467,\"w\":1455,\"h\":278,\"abs_x\":2,\"abs_y\":1575}' style=\"width: 100%;\">\n<table align=\"center\" bgcolor=\"rgb(244, 244, 244)\" bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":278,\"abs_x\":429,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"container\" id=\"l_621f91c97ceba_content\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: 600px; width: 600px; margin: 0 auto; text-align: center; background-color: rgb(244, 244, 244);\"> <tbody bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":278,\"abs_x\":429,\"abs_y\":1575}'> <tr bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":278,\"abs_x\":429,\"abs_y\":1575}'>\n<td align=\"center\" bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":278,\"abs_x\":429,\"abs_y\":1575}' class=\"b\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":136,\"abs_x\":429,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_621f91c98fc53\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"> <tbody bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":136,\"abs_x\":429,\"abs_y\":1575}'>\n<tr bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":136,\"abs_x\":429,\"abs_y\":1575}'> <td align=\"center\" bis_size='{\"x\":429,\"y\":1467,\"w\":600,\"h\":136,\"abs_x\":429,\"abs_y\":1575}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-right: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"row\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \">\n<tbody bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}'> <tr bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}'> <td align=\"center\" bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; border-collapse: collapse;\" valign=\"top\">\n<table bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"> <tbody bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}'> <tr bis_size='{\"x\":439,\"y\":1467,\"w\":580,\"h\":136,\"abs_x\":439,\"abs_y\":1575}'>\n<th align=\"center\" bis_size='{\"x\":439,\"y\":1467,\"w\":290,\"h\":136,\"abs_x\":439,\"abs_y\":1575}' class=\"column c spm2\" id=\"n_621f91c99ce7d\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-left: 5px; padding-right: 5px; text-align: center; width: 50%; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":444,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"o_image d\" draggable=\"false\" id=\"o_621f91c9b76bf\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\">\n<tbody bis_size='{\"x\":444,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1575}'> <tr bis_size='{\"x\":444,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1575}'> <th align=\"center\" bis_size='{\"x\":444,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1575}' style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\">\n<a bis_size='{\"x\":552,\"y\":1537,\"w\":65,\"h\":0,\"abs_x\":552,\"abs_y\":1645}' data-index=\"7\" draggable=\"false\" href=\"https://www.peinturevoiture.fr/content/5-paiement-securise\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\"><img alt=\"\" bis_size='{\"x\":552,\"y\":1472,\"w\":65,\"h\":65,\"abs_x\":552,\"abs_y\":1580}' draggable=\"false\" src=\"img_3.png\" style=\"outline: none; text-decoration: none; border: medium none;\" width=\"65\"/></a> </th> </tr> </tbody> </table>\n<table bis_size='{\"x\":444,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1650}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_6fb2af7338138fc5c8842\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":444,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1650}'><tr bis_size='{\"x\":444,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1650}'>\n<th align=\"center\" bis_size='{\"x\":444,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1650}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":1547,\"w\":280,\"h\":20,\"abs_x\":444,\"abs_y\":1655}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; line-height: 1.3; text-align: center;\"><b style=\"font-size: 16px; color: rgb(235, 102, 42);\">PAIEMENT S\u00c9CURIS\u00c9</b></p></div></th></tr></tbody></table>\n<table bis_size='{\"x\":444,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1681}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_20b2a5f9e68b2b867b1\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":444,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1681}'><tr bis_size='{\"x\":444,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1681}'>\n<th align=\"center\" bis_size='{\"x\":444,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1681}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1681}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Paiement 100% s\u00e9curis\u00e9 par Carte Bancaire, </p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">x fois sans frais, Paypal ou Ch\u00e8que.</p></div></th></tr></tbody></table> </th>\n<th align=\"center\" bis_size='{\"x\":729,\"y\":1467,\"w\":290,\"h\":136,\"abs_x\":729,\"abs_y\":1575}' class=\"column c spm2\" id=\"n_621f91c9a32b5\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-left: 5px; padding-right: 5px; text-align: center; width: 50%; display: table-cell; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":734,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1575}' cellpadding=\"0\" cellspacing=\"0\" class=\"d o_image\" draggable=\"false\" id=\"o_621f91c9c9359\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\">\n<tbody bis_size='{\"x\":734,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1575}'><tr bis_size='{\"x\":734,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1575}'><th align=\"center\" bis_size='{\"x\":734,\"y\":1467,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1575}' style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\">\n<a bis_size='{\"x\":842,\"y\":1537,\"w\":65,\"h\":0,\"abs_x\":842,\"abs_y\":1645}' data-index=\"8\" draggable=\"false\" href=\"https://www.peinturevoiture.fr/content/1-livraison\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\"><img alt=\"\" bis_size='{\"x\":842,\"y\":1472,\"w\":65,\"h\":65,\"abs_x\":842,\"abs_y\":1580}' draggable=\"false\" src=\"img_4.png\" style=\"outline: none; text-decoration: none; border: medium none;\" width=\"65\"/></a> </th></tr></tbody></table>\n<table bis_size='{\"x\":734,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1650}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_33fa8b798fad004d7aca\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":734,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1650}'><tr bis_size='{\"x\":734,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1650}'>\n<th align=\"center\" bis_size='{\"x\":734,\"y\":1542,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1650}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":734,\"y\":1547,\"w\":280,\"h\":20,\"abs_x\":734,\"abs_y\":1655}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center; line-height: 1.3;\"><b style=\"font-size: 16px; color: rgb(235, 102, 42);\">LIVRAISON RAPIDE<span class=\"ql-cursor\"> </span></b></p></div></th></tr></tbody></table>\n<table bis_size='{\"x\":734,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1681}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_28c02e671d6c09525ca3\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":734,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1681}'><tr bis_size='{\"x\":734,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1681}'>\n<th align=\"center\" bis_size='{\"x\":734,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1681}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":734,\"y\":1573,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1681}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Livraison rapide en France M\u00e9tropolitaine, </p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Belgique &amp;amp; Luxembourg</p></div></th></tr></tbody></table> </th> </tr> </tbody> </table> </td> </tr>\n</tbody> </table> </td> </tr> </tbody> </table> <table bis_size='{\"x\":429,\"y\":1604,\"w\":600,\"h\":141,\"abs_x\":429,\"abs_y\":1712}' cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_621f91c9964b3\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; display: table; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":429,\"y\":1604,\"w\":600,\"h\":141,\"abs_x\":429,\"abs_y\":1712}'><tr bis_size='{\"x\":429,\"y\":1604,\"w\":600,\"h\":141,\"abs_x\":429,\"abs_y\":1712}'>\n<td align=\"center\" bis_size='{\"x\":429,\"y\":1604,\"w\":600,\"h\":141,\"abs_x\":429,\"abs_y\":1712}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-right: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-top: 0px; padding-bottom: 0px; border-collapse: collapse;\" valign=\"top\"><table bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}' cellpadding=\"0\" cellspacing=\"0\" class=\"row\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"><tbody bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}'>\n<tr bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}'><td align=\"center\" bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; border-collapse: collapse;\" valign=\"top\"><table bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}' cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \">\n<tbody bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}'><tr bis_size='{\"x\":439,\"y\":1604,\"w\":580,\"h\":141,\"abs_x\":439,\"abs_y\":1712}'> <th align=\"center\" bis_size='{\"x\":439,\"y\":1604,\"w\":290,\"h\":141,\"abs_x\":439,\"abs_y\":1712}' class=\"column c spm2\" id=\"n_621f91c9a9739\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-left: 5px; padding-right: 5px; text-align: center; width: 50%; border-collapse: collapse;\" valign=\"top\">\n<table bis_size='{\"x\":444,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1712}' cellpadding=\"0\" cellspacing=\"0\" class=\"d o_image\" draggable=\"false\" id=\"o_621f91c9d6e8b\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"><tbody bis_size='{\"x\":444,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1712}'><tr bis_size='{\"x\":444,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1712}'>\n<th align=\"center\" bis_size='{\"x\":444,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":444,\"abs_y\":1712}' style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\"> <a bis_size='{\"x\":552,\"y\":1674,\"w\":65,\"h\":0,\"abs_x\":552,\"abs_y\":1782}' data-index=\"9\" draggable=\"false\" href=\"https://www.peinturevoiture.fr/content/9-fidelite-recompensee\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\">\n<img alt=\"\" bis_size='{\"x\":552,\"y\":1609,\"w\":65,\"h\":65,\"abs_x\":552,\"abs_y\":1717}' draggable=\"false\" src=\"img_5.png\" style=\"outline: none; text-decoration: none; border: medium none;\" width=\"65\"/></a> </th></tr></tbody></table> <table bis_size='{\"x\":444,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1787}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_a5cf38dfcb133650872cd\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":444,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1787}'>\n<tr bis_size='{\"x\":444,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1787}'> <th align=\"center\" bis_size='{\"x\":444,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":444,\"abs_y\":1787}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":1684,\"w\":280,\"h\":20,\"abs_x\":444,\"abs_y\":1792}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; line-height: 1.3;\"><b style=\"font-size: 16px; color: rgb(235, 102, 42);\">FID\u00c9LIT\u00c9 R\u00c9COMPENS\u00c9E</b></p></div></th></tr></tbody></table>\n<table bis_size='{\"x\":444,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":444,\"abs_y\":1818}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_2639e9f6b93e10f9e667\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":444,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":444,\"abs_y\":1818}'><tr bis_size='{\"x\":444,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":444,\"abs_y\":1818}'>\n<th align=\"center\" bis_size='{\"x\":444,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":444,\"abs_y\":1818}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-bottom: 5px; padding-left: 0px; padding-right: 0px; padding-top: 0px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":1710,\"w\":280,\"h\":31,\"abs_x\":444,\"abs_y\":1818}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Obtenez des r\u00e9ductions gr\u00e2ce </p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">\u00e0 vos achats sur Peinturevoiture.fr</p></div></th></tr></tbody></table> </th>\n<th align=\"center\" bis_size='{\"x\":729,\"y\":1604,\"w\":290,\"h\":141,\"abs_x\":729,\"abs_y\":1712}' class=\"column c spm2\" id=\"n_621f91c9b0f79\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-left: 5px; padding-right: 5px; text-align: center; width: 50%; display: table-cell; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":734,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1712}' cellpadding=\"0\" cellspacing=\"0\" class=\"d o_image\" draggable=\"false\" id=\"o_621f91c9e177a\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\">\n<tbody bis_size='{\"x\":734,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1712}'><tr bis_size='{\"x\":734,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1712}'><th align=\"center\" bis_size='{\"x\":734,\"y\":1604,\"w\":280,\"h\":75,\"abs_x\":734,\"abs_y\":1712}' style=\"vertical-align: top; font-weight: normal; margin: 0; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; text-align: center; border-collapse: collapse; line-height: 1px; font-size: 1px; mso-line-height-alt: 1px;\" valign=\"top\">\n<a bis_size='{\"x\":842,\"y\":1674,\"w\":65,\"h\":0,\"abs_x\":842,\"abs_y\":1782}' data-index=\"10\" draggable=\"false\" href=\"https://www.peinturevoiture.fr/content/5-paiement-securise\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\"><img alt=\"\" bis_size='{\"x\":842,\"y\":1609,\"w\":65,\"h\":65,\"abs_x\":842,\"abs_y\":1717}' draggable=\"false\" src=\"img_6.png\" style=\"outline: none; text-decoration: none; border: medium none;\" width=\"65\"/></a> </th></tr></tbody></table>\n<table bis_size='{\"x\":734,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1787}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_b504b29a64582ac99ae\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":734,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1787}'><tr bis_size='{\"x\":734,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1787}'>\n<th align=\"center\" bis_size='{\"x\":734,\"y\":1679,\"w\":280,\"h\":30,\"abs_x\":734,\"abs_y\":1787}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":734,\"y\":1684,\"w\":280,\"h\":20,\"abs_x\":734,\"abs_y\":1792}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; line-height: 1.3;\"><b style=\"font-size: 16px; color: rgb(235, 102, 42);\">BESOIN D'AIDE ?</b></p></div></th></tr></tbody></table>\n<table bis_size='{\"x\":734,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":734,\"abs_y\":1818}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_82978690df51365754\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody bis_size='{\"x\":734,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":734,\"abs_y\":1818}'><tr bis_size='{\"x\":734,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":734,\"abs_y\":1818}'>\n<th align=\"center\" bis_size='{\"x\":734,\"y\":1710,\"w\":280,\"h\":36,\"abs_x\":734,\"abs_y\":1818}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: center; padding-bottom: 5px; padding-left: 0px; padding-right: 0px; padding-top: 0px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":734,\"y\":1710,\"w\":280,\"h\":31,\"abs_x\":734,\"abs_y\":1818}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Nos techniciens carrossiers sont \u00e0 votre disposition </p><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">du Lundi au Vendredi - <b>05 33 120 100</b></p></div></th></tr></tbody></table> </th> </tr></tbody>\n</table></td></tr></tbody></table></td></tr></tbody></table> </td> </tr> </tbody> </table> </center> </td> </tr> </tbody> </table><table bgcolor=\"rgb(244, 244, 244)\" bis_size='{\"x\":2,\"y\":1746,\"w\":1455,\"h\":48,\"abs_x\":2,\"abs_y\":1854}' cellpadding=\"0\" cellspacing=\"0\" class=\"l r\" draggable=\"false\" id=\"l_621f91c9ec71c\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(244, 244, 244); width: 100%; border-collapse: collapse;\"> <tbody bis_size='{\"x\":2,\"y\":1746,\"w\":1455,\"h\":48,\"abs_x\":2,\"abs_y\":1854}'> <tr bis_size='{\"x\":2,\"y\":1746,\"w\":1455,\"h\":48,\"abs_x\":2,\"abs_y\":1854}'>\n<td align=\"left\" bis_size='{\"x\":2,\"y\":1746,\"w\":1455,\"h\":48,\"abs_x\":2,\"abs_y\":1854}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <center bis_size='{\"x\":2,\"y\":1746,\"w\":1455,\"h\":48,\"abs_x\":2,\"abs_y\":1854}' style=\"width: 100%;\">\n<table align=\"center\" bgcolor=\"transparent\" bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}' cellpadding=\"0\" cellspacing=\"0\" class=\"container\" id=\"l_621f91c9ec71c_content\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: 600px; width: 600px; margin: 0 auto; font-size: 10px; text-align: center; \"> <tbody bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}'> <tr bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}'>\n<td align=\"left\" bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}' class=\"b\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}' cellpadding=\"0\" cellspacing=\"0\" class=\"a\" id=\"m_621f91c9f08bb\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"> <tbody bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}'>\n<tr bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}'> <td align=\"left\" bis_size='{\"x\":429,\"y\":1746,\"w\":600,\"h\":48,\"abs_x\":429,\"abs_y\":1854}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\"> <table bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}' cellpadding=\"0\" cellspacing=\"0\" class=\"row r\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \">\n<tbody bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}'> <tr bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}'> <td align=\"left\" bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}' style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; border-collapse: collapse;\" valign=\"top\">\n<table bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}' cellpadding=\"0\" cellspacing=\"0\" class=\"columns\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 100%; \"> <tbody bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}'> <tr bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}'>\n<th align=\"left\" bis_size='{\"x\":439,\"y\":1751,\"w\":580,\"h\":38,\"abs_x\":439,\"abs_y\":1859}' class=\"column c\" id=\"n_621f91c9f1fc1\" style=\"line-height: normal; vertical-align: top; font-weight: normal; padding-top: 0; padding-bottom: 0; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-left: 5px; padding-right: 5px; width: 100%; border-collapse: collapse;\" valign=\"top\"> <table cellpadding=\"0\" cellspacing=\"0\" class=\"o_import_zip d\" id=\"o_58f9699f6a21f9d1cca6\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr>\n<th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"></th></tr></tbody></table><table cellpadding=\"0\" cellspacing=\"0\" class=\"o_code d\" draggable=\"false\" id=\"o_115a8be75e0a7116313c8\" style=\"border-spacing: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-collapse: collapse;\" width=\"100%\"><tbody><tr> <th align=\"left\" style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\">\n<img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></th></tr></tbody></table><table bis_size='{\"x\":444,\"y\":1751,\"w\":570,\"h\":38,\"abs_x\":444,\"abs_y\":1859}' cellpadding=\"0\" cellspacing=\"0\" class=\"d\" draggable=\"false\" id=\"o_621f91c9f37b6\" style=\"border-spacing: 0; border-collapse: collapse; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;\" width=\"100%\"> <tbody bis_size='{\"x\":444,\"y\":1751,\"w\":570,\"h\":38,\"abs_x\":444,\"abs_y\":1859}'> <tr bis_size='{\"x\":444,\"y\":1751,\"w\":570,\"h\":38,\"abs_x\":444,\"abs_y\":1859}'>\n<th align=\"left\" bis_size='{\"x\":444,\"y\":1751,\"w\":570,\"h\":38,\"abs_x\":444,\"abs_y\":1859}' style=\"line-height: normal; vertical-align: top; font-weight: normal; margin: 0; font-size: 10px; font-family: Arial, Helvetica, sans-serif; color: rgb(34, 33, 33); text-align: left; padding-right: 0px; padding-left: 0px; padding-top: 5px; padding-bottom: 5px; border-collapse: collapse;\" valign=\"top\"><div bis_size='{\"x\":444,\"y\":1756,\"w\":570,\"h\":28,\"abs_x\":444,\"abs_y\":1864}'><p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">Pour vous d\u00e9sinscrire, veuillez <a data-index=\"11\" href=\"https://redir.peinturevoiture.fr/w/b/u/34/0\" rel=\"noopener noreferrer\" style=\"background: transparent; text-decoration: none; color: rgb(236, 102, 42);\" target=\"_blank\"> suivre ce lien </a> .</p>\n<p style=\"padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin: 0; text-align: center;\">TECHN'ECAR, 708 All\u00e9e des randonneurs, Tr\u00e9lissac, 24750, FR</p></div></th> </tr> </tbody> </table> </th> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </center> </td> </tr> </tbody> </table> </center> </td> </tr> </tbody> </table> </body></html>\n";
-        const emailLinks = [{"index": 1, "txt": "rendez-vous ici", "original_url": "", "final_url": "", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": ""}], "audit_date": "2026-03-18 16:09:51"}, {"index": 2, "txt": "", "original_url": "http://www.peinturevoiture.fr/", "final_url": "https://www.peinturevoiture.fr/", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": 301, "url": "http://www.peinturevoiture.fr/"}, {"status": 200, "url": "https://www.peinturevoiture.fr/"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 4, "txt": "JE DONNE\u00e0 la Protection Civile", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 5, "txt": "", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 6, "txt": "JE DONNE\u00e0 la Protection Civile", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 7, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "final_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 8, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/1-livraison", "final_url": "https://www.peinturevoiture.fr/content/1-livraison", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/1-livraison"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 9, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee", "final_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 301, "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee"}, {"status": 200, "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 10, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "final_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"}], "audit_date": "2026-03-18 16:09:51"}, {"index": 11, "txt": "suivre ce lien", "original_url": "https://redir.peinturevoiture.fr/w/b/u/34/0", "final_url": "https://redir.peinturevoiture.fr/w/b/u/34/0", "domain": "redir.peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://redir.peinturevoiture.fr/w/b/u/34/0"}], "audit_date": "2026-03-18 16:09:51"}];
+        const emailLinks = [{"index": 1, "txt": "rendez-vous ici", "original_url": "", "final_url": "", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": "Error", "url": ""}], "audit_date": "2026-03-20 21:59:33"}, {"index": 2, "txt": "", "original_url": "http://www.peinturevoiture.fr/", "final_url": "https://www.peinturevoiture.fr/", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": false, "is_dev": false, "redirect_chain": [{"status": 301, "url": "http://www.peinturevoiture.fr/"}, {"status": 200, "url": "https://www.peinturevoiture.fr/"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 3, "txt": "", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 4, "txt": "JE DONNE\u00e0 la Protection Civile", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 5, "txt": "", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 6, "txt": "JE DONNE\u00e0 la Protection Civile", "original_url": "https://gtinsi.de/6926b24fb4f2a", "final_url": "https://don.protection-civile.org/fnpc-interventions-2025", "domain": "gtinsi.de", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 302, "url": "https://gtinsi.de/6926b24fb4f2a"}, {"status": 200, "url": "https://don.protection-civile.org/fnpc-interventions-2025"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 7, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "final_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 8, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/1-livraison", "final_url": "https://www.peinturevoiture.fr/content/1-livraison", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/1-livraison"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 9, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee", "final_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 301, "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee"}, {"status": 200, "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 10, "txt": "", "original_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "final_url": "https://www.peinturevoiture.fr/content/5-paiement-securise", "domain": "peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"}], "audit_date": "2026-03-20 21:59:33"}, {"index": 11, "txt": "suivre ce lien", "original_url": "https://redir.peinturevoiture.fr/w/b/u/34/0", "final_url": "https://redir.peinturevoiture.fr/w/b/u/34/0", "domain": "redir.peinturevoiture.fr", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://redir.peinturevoiture.fr/w/b/u/34/0"}], "audit_date": "2026-03-20 21:59:33"}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
         let lastHighlightedIdx = null;
         let spotlightTimeout = null;
+
+        // ── i18n ──────────────────────────────────────────────────────────────
+        const STRINGS = {
+            en: {
+                tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LINKS',
+                meta_sender: 'Sender', meta_crm: 'CRM', meta_subject: 'Subject',
+                meta_preheader: 'Preheader', meta_received: 'Received',
+                meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
+                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
+                lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
+                sidebar_toggle_title: 'Toggle Links Panel',
+                audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
+                audit_error: 'Audit Finished (Error Found)',
+            },
+            fr: {
+                tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LIENS',
+                meta_sender: 'Expéditeur', meta_crm: 'CRM', meta_subject: 'Sujet',
+                meta_preheader: 'Prévisualisation', meta_received: 'Reçu le',
+                meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
+                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
+                lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
+                sidebar_toggle_title: 'Panneau des liens',
+                audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
+                audit_error: 'Audit terminé (Erreur détectée)',
+            }
+        };
+
+        function detectLang() {
+            const stored = localStorage.getItem('lang');
+            if (stored && STRINGS[stored]) return stored;
+            return (navigator.language || '').startsWith('fr') ? 'fr' : 'en';
+        }
+
+        let currentLang = detectLang();
+
+        function applyStrings(lang) {
+            const s = STRINGS[lang] || STRINGS.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (s[key] !== undefined) el.textContent = s[key];
+            });
+            document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                const key = el.dataset.i18nTitle;
+                if (s[key] !== undefined) el.title = s[key];
+            });
+            document.getElementById('htmlRoot').lang = lang;
+            // Sync highlight button text with current state
+            const highlightBtn = document.getElementById('highlightBtnText');
+            if (highlightBtn) highlightBtn.textContent = linksHighlighted ? s.hide_links : s.show_links;
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('lang', currentLang);
+            applyStrings(currentLang);
+        });
+        // ── end i18n ──────────────────────────────────────────────────────────
 
         function showTab(name) {
             document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
@@ -406,8 +1120,9 @@
 
         function toggleHighlightLinks() {
             linksHighlighted = !linksHighlighted;
+            const s = STRINGS[currentLang] || STRINGS.en;
             const btn = document.getElementById('highlightBtnText');
-            btn.textContent = linksHighlighted ? 'Hide Links' : 'Show Links';
+            btn.textContent = linksHighlighted ? s.hide_links : s.show_links;
 
             if (linksHighlighted) {
                 createOverlays();
@@ -548,7 +1263,7 @@
             }
         }
 
-        // Update overlays logic
+        // Update overlays logic (both scroll and resize debounced via RAF)
         frame.addEventListener('load', () => {
             let rafPending = false;
             frame.contentWindow.addEventListener('scroll', () => {
@@ -560,8 +1275,15 @@
                     });
                 }
             });
+            let resizePending = false;
             frame.contentWindow.addEventListener('resize', () => {
-                if (linksHighlighted) updateOverlays();
+                if (linksHighlighted && !resizePending) {
+                    resizePending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        resizePending = false;
+                    });
+                }
             });
         });
 
@@ -595,9 +1317,10 @@
             btn.title = 'Auditing...';
 
             // Reset UI
+            const _s = STRINGS[currentLang] || STRINGS.en;
             logContainer.classList.add('active');
             timeline.innerHTML = '';
-            statusText.innerHTML = 'Initiating Audit...';
+            statusText.innerHTML = _s.audit_initiating;
             statusText.className = 'audit-status-text text-yellow';
 
             // Allow animation
@@ -631,13 +1354,13 @@
 
                             // Update status text
                             if (step.status === 200) {
-                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : 'Verification Complete';
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : _s.audit_finished;
                             } else if (step.status === 'Timeout') {
                                 statusText.innerHTML = 'Request Timed Out';
                             } else if (step.status >= 400 || step.status === 'Error') {
-                                statusText.innerHTML = 'Audit Finished (Error Found)';
+                                statusText.innerHTML = _s.audit_error;
                             } else {
-                                statusText.innerHTML = 'Audit Finished';
+                                statusText.innerHTML = _s.audit_finished;
                             }
 
                             statusText.className = `audit-status-text ${statusColor}`;
@@ -800,6 +1523,7 @@
             if (e.key === 'ArrowUp') frame.contentWindow.scrollBy(0, -150);
         });
 
+        applyStrings(currentLang);
         init();
     </script>
 </body>
