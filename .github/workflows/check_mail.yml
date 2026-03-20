@@ -37,7 +37,22 @@ jobs:
             exit 1
           fi
 
+      - name: Check for new emails
+        id: check_new
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: |
+          if [ "${{ github.event.inputs.force_update }}" = "true" ]; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+          elif python process_email.py --check-new; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run Email Processor
+        if: steps.check_new.outputs.has_new == 'true'
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
@@ -52,6 +67,7 @@ jobs:
           path: pipeline.log
 
       - name: Commit and Push changes
+        if: steps.check_new.outputs.has_new == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Mise à jour archives newsletters"

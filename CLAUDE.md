@@ -19,6 +19,13 @@ GMAIL_USER=you@gmail.com GMAIL_PASSWORD=app_password python process_email.py
 # Force re-generate all existing archives
 FORCE_UPDATE=true python process_email.py
 
+# Re-render all viewer HTML from existing metadata (no IMAP, no image download)
+python process_email.py --regen-only
+
+# Quick-check whether any new emails exist (used by CI to skip the pipeline)
+# exits 0 = new emails found, exits 2 = nothing new
+python process_email.py --check-new
+
 # Manual injector (Streamlit UI for one-off uploads)
 streamlit run injector.py
 ```
@@ -60,6 +67,7 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 
 - **Single remote**: `getinside` → `https://github.com/getinside-ops/archive-news.git`. Always push with `git push getinside main`. There is no `origin` remote — if one appears, remove it with `git remote remove origin`.
 - Required secrets: `GMAIL_USER` + `GMAIL_PASSWORD` only. `GEMINI_API_KEY` is **not** referenced in any `.py` file — do not add it.
+- **CI optimization**: The workflow runs a `--check-new` count check before the full pipeline. If IMAP count ≤ archived count, all heavy steps are skipped. Manual `workflow_dispatch` has a `force_update` boolean input to bypass this.
 - To reconfigure Pages source: `gh api repos/getinside-ops/archive-news/pages --method PUT -f 'source[branch]=main' -f 'source[path]=/docs'`
   (JSON object format is rejected by the API — use nested `-f` field syntax only.)
 
@@ -69,7 +77,12 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 - **`docs/index.html` is generated**: `templates/index.html` → `docs/index.html` via `generator.py`. When making nav/static changes, update both files manually if not running the full pipeline.
 - **Viewer CSS layering**: Base layout rules in `.viewer-content` etc.; viewer-specific overrides live in `.viewer-layout .viewer-content` blocks (~line 1315 in style.css). Add overrides there, not to base rules.
 - **Local preview**: Playwright blocks `file://` — run `python3 -m http.server 8765` inside `docs/` to preview locally.
-- **VitePress pill toggle tokens** (measured from live handbook): border `rgb(60,63,68)`, check circle `#3c3c43` (light) / `#ebebf0` (dark), icon `#dfdfda` (light) / `#3c3c43` (dark).
+
+## Utility scripts
+
+- **`apply_changes.py`**: Applies bulk template/generator changes to existing archived viewers without re-running the full IMAP pipeline.
+- **`debug_gmail.py`**: Standalone IMAP connection debugger — lists labels and message counts without archiving anything. Useful for diagnosing credential or label issues.
+- **`test_parser.py`**: Ad-hoc parser test script for checking parse output on local HTML files. Not a test suite.
 
 ## Contributing rules (from README)
 

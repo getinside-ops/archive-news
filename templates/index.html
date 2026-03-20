@@ -40,13 +40,13 @@
 
         <div class="gi-topnav-actions">
             <!-- Language picker -->
-            <button class="gi-lang-btn" title="Change language">
+            <button class="gi-lang-btn" title="Change language" aria-label="Change language">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
             </button>
 
             <!-- Theme toggle: VitePress pill switch -->
-            <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme">
+            <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme" aria-label="Toggle theme">
                 <span class="gi-vp-check">
                     <span class="gi-vp-icon">
                         <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -133,12 +133,19 @@
                     <h2 class="card-title">{{ email.subject }}</h2>
                     <p class="card-preview">{{ email.preheader }}</p>
                     <div class="card-footer">
+                        {% if email.reading_time %}<span class="read-time">{{ email.reading_time }}</span>{% endif %}
                         <span class="arrow">→</span>
                     </div>
                 </a>
             </li>
             {% endfor %}
         </ul>
+
+        <div id="paginationWrapper" style="display:none; justify-content:center; align-items:center; gap:16px; padding:24px 0; flex-wrap:wrap;">
+            <button id="paginationPrev" onclick="changePage(-1)" class="ix-chip" disabled aria-label="Previous page">← Prev</button>
+            <span id="paginationInfo" style="color:var(--text-secondary); font-size:0.9rem;" aria-live="polite"></span>
+            <button id="paginationNext" onclick="changePage(1)" class="ix-chip" aria-label="Next page">Next →</button>
+        </div>
 
         <footer>
             <p>Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>

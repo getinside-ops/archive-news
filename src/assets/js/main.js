@@ -1,15 +1,67 @@
 /* Main JS for Archive News */
 
+/* Pagination */
+const PAGE_SIZE = 20;
+let currentPage = 1;
+
+function renderPage() {
+    const list = document.getElementById('newsList');
+    if (!list) return;
+    const allItems = list.querySelectorAll('.news-card');
+    const visibleItems = Array.from(allItems).filter(el => !el.dataset.filteredOut);
+    const totalPages = Math.max(1, Math.ceil(visibleItems.length / PAGE_SIZE));
+    currentPage = Math.min(currentPage, totalPages);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const visibleSet = new Map(visibleItems.map((item, i) => [item, i]));
+    allItems.forEach(item => {
+        if (item.dataset.filteredOut) {
+            item.style.display = 'none';
+        } else {
+            const idx = visibleSet.get(item);
+            item.style.display = (idx >= start && idx < end) ? '' : 'none';
+        }
+    });
+    const noResults = document.getElementById('noResults');
+    if (noResults) noResults.style.display = visibleItems.length === 0 ? 'block' : 'none';
+    updatePaginationUI(currentPage, totalPages);
+}
+
+function updatePaginationUI(page, totalPages) {
+    const wrapper = document.getElementById('paginationWrapper');
+    const prevBtn = document.getElementById('paginationPrev');
+    const nextBtn = document.getElementById('paginationNext');
+    const pageInfo = document.getElementById('paginationInfo');
+    if (!wrapper) return;
+    wrapper.style.display = totalPages > 1 ? 'flex' : 'none';
+    if (prevBtn) prevBtn.disabled = page <= 1;
+    if (nextBtn) nextBtn.disabled = page >= totalPages;
+    if (pageInfo) pageInfo.textContent = totalPages > 1 ? `Page ${page} of ${totalPages}` : '';
+}
+
+function changePage(delta) {
+    currentPage += delta;
+    renderPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 
-    // Event Listeners
+    // Debounced search
+    let _searchTimer = null;
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
-        searchInput.addEventListener('input', filterList);
+        searchInput.addEventListener('input', () => {
+            clearTimeout(_searchTimer);
+            _searchTimer = setTimeout(filterList, 200);
+        });
     }
+
+    // Initial pagination render
+    renderPage();
 
     // Watch emailFrame class changes (setMode adds/removes no-scrollbar)
     // so scrollbar CSS inside the iframe stays in sync with the mode
@@ -150,7 +202,11 @@ function filterList() {
     const list = document.getElementById('newsList');
     if (!list) return;
     const items = list.querySelectorAll('.news-card');
-    let visibleCount = 0;
+
+    // Compile regex once outside the per-card loop
+    const searchRegex = filter
+        ? new RegExp(filter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi')
+        : null;
 
     items.forEach(item => {
         const titleEl = item.querySelector('.card-title');
@@ -175,37 +231,33 @@ function filterList() {
         );
 
         const crmMatch = activeCrms.size === 0 || activeCrms.has(item.dataset.crm || 'Unknown');
+        const show = (!filter || matches) && crmMatch;
 
-        if ((!filter || matches) && crmMatch) {
-            item.style.display = "";
-            visibleCount++;
-            if (filter && matches) {
-                if (titleEl) {
-                    if (titleEl.dataset.original === undefined) titleEl.dataset.original = titleEl.innerHTML;
-                    titleEl.innerHTML = _highlightText(titleEl.textContent, filter);
-                }
-                if (senderEl) {
-                    if (senderEl.dataset.original === undefined) senderEl.dataset.original = senderEl.innerHTML;
-                    senderEl.innerHTML = _highlightText(senderEl.textContent, filter);
-                }
+        item.dataset.filteredOut = show ? '' : 'true';
+
+        if (show && filter && matches && searchRegex) {
+            if (titleEl) {
+                if (titleEl.dataset.original === undefined) titleEl.dataset.original = titleEl.innerHTML;
+                searchRegex.lastIndex = 0;
+                titleEl.innerHTML = _highlightText(titleEl.textContent, searchRegex);
             }
-        } else {
-            item.style.display = "none";
+            if (senderEl) {
+                if (senderEl.dataset.original === undefined) senderEl.dataset.original = senderEl.innerHTML;
+                searchRegex.lastIndex = 0;
+                senderEl.innerHTML = _highlightText(senderEl.textContent, searchRegex);
+            }
         }
     });
 
-    const noResults = document.getElementById('noResults');
-    if (noResults) {
-        noResults.style.display = visibleCount === 0 ? "block" : "none";
-    }
+    currentPage = 1;
+    renderPage();
 }
 
-function _highlightText(text, query) {
+function _highlightText(text, regex) {
     const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     const safeText = esc(text);
-    const safeQuery = esc(query);
-    const regexQuery = safeQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return safeText.replace(new RegExp(`(${regexQuery})`, 'gi'), '<mark>$1</mark>');
+    regex.lastIndex = 0;
+    return safeText.replace(regex, '<mark>$&</mark>');
 }
 
 /* Sorting Logic */
@@ -234,6 +286,8 @@ function sortList() {
 
     // Re-append items in new order
     items.forEach(item => list.appendChild(item));
+    currentPage = 1;
+    renderPage();
 }
 
 /* Clipboard Utilities */

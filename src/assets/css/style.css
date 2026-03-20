@@ -513,7 +513,7 @@ h1.logo {
 
 .card-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-top: 14px;
     border-top: 1px solid var(--border-color);
@@ -2439,4 +2439,46 @@ body.index-page .news-card:hover {
 .viewer-layout .gi-topnav-link:hover {
     color: var(--vw-mint, #6AE7C8);
     background: var(--vw-mint-dim, rgba(106, 231, 200, 0.07));
+}
+
+/* ── Performance ────────────────────────────────────────────────────────── */
+.link-overlay-badge {
+    will-change: transform;
+}
+
+/* ── Accessibility: touch targets (44×44px minimum per WCAG 2.5.5) ─────── */
+.device-btn {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.gi-lang-btn {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Expand pill switch hit area without changing its visual size */
+.gi-vp-switch {
+    padding: 11px 0;
+}
+
+/* ── Accessibility: visible focus rings ─────────────────────────────────── */
+button:focus-visible,
+[role="button"]:focus-visible,
+a:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+[data-theme="dark"] button:focus-visible,
+[data-theme="dark"] [role="button"]:focus-visible,
+[data-theme="dark"] a:focus-visible,
+[data-theme="dark"] select:focus-visible {
+    outline-color: var(--accent-mint, #6AE7C8);
+}
+
+/* Search input already shows box-shadow on focus; keep outline suppressed there */
+.search-input:focus-visible {
+    outline: none;
 }

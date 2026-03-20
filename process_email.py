@@ -84,9 +84,9 @@ def process_emails():
                         cdisp = str(part.get('Content-Disposition'))
                         cid = part.get('Content-ID')
 
-                        if ctype == "text/html":
+                        if ctype.lower() == "text/html":
                             html_payload = part.get_payload(decode=True).decode(part.get_content_charset() or 'utf-8', errors='replace')
-                        elif ctype == "text/plain" and 'attachment' not in cdisp:
+                        elif ctype.lower() == "text/plain" and 'attachment' not in cdisp:
                              text_payload = part.get_payload(decode=True).decode(part.get_content_charset() or 'utf-8', errors='replace')
                         elif cid:
                             # It's an inline attachment (like an image with CID)
@@ -272,8 +272,38 @@ def regen_only():
     logger.info("Done — %d viewers re-rendered.", len(all_metadata))
 
 
+def check_new_emails():
+    """Quick check: compare IMAP message count vs. archived count.
+    Exits 0 if new emails exist, exits 2 if nothing to process."""
+    if not GMAIL_USER or not GMAIL_PASSWORD:
+        logger.error("Missing credentials: set GMAIL_USER and GMAIL_PASSWORD env vars.")
+        sys.exit(1)
+
+    fetcher = EmailFetcher(GMAIL_USER, GMAIL_PASSWORD, TARGET_LABEL)
+    try:
+        fetcher.connect()
+        imap_count = len(fetcher.search_all())
+        archived_count = sum(
+            1 for d in os.listdir(OUTPUT_FOLDER)
+            if os.path.isfile(os.path.join(OUTPUT_FOLDER, d, "metadata.json"))
+        ) if os.path.exists(OUTPUT_FOLDER) else 0
+
+        if imap_count > archived_count:
+            logger.info("IMAP: %d emails, archived: %d → %d new. Running pipeline.",
+                        imap_count, archived_count, imap_count - archived_count)
+            sys.exit(0)
+        else:
+            logger.info("IMAP: %d emails, archived: %d → nothing new. Skipping.",
+                        imap_count, archived_count)
+            sys.exit(2)
+    finally:
+        fetcher.close()
+
+
 if __name__ == "__main__":
     if "--regen-only" in sys.argv:
         regen_only()
+    elif "--check-new" in sys.argv:
+        check_new_emails()
     else:
         process_emails()

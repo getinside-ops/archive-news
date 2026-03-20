@@ -4,6 +4,7 @@ import email
 import hashlib
 import logging
 import re
+import time
 from email.header import decode_header
 from email.utils import parseaddr
 
@@ -18,16 +19,26 @@ class EmailFetcher:
 
     def connect(self):
         logger.info("Connecting to Gmail...")
-        self.mail = imaplib.IMAP4_SSL("imap.gmail.com")
-        self.mail.login(self.user, self.password)
-        rv, _ = self.mail.select(f'"{self.label}"')
-        if rv != 'OK':
-            logger.error("Label %s not found. Listing available labels:", self.label)
-            status, labels = self.mail.list()
-            if status == 'OK':
-                for label in labels:
-                    logger.error(" - %s", label.decode('utf-8'))
-            raise Exception(f"Label {self.label} not found")
+        last_err = None
+        for attempt in range(3):
+            try:
+                self.mail = imaplib.IMAP4_SSL("imap.gmail.com")
+                self.mail.login(self.user, self.password)
+                rv, _ = self.mail.select(f'"{self.label}"')
+                if rv != 'OK':
+                    logger.error("Label %s not found. Listing available labels:", self.label)
+                    status, labels = self.mail.list()
+                    if status == 'OK':
+                        for label in labels:
+                            logger.error(" - %s", label.decode('utf-8'))
+                    raise Exception(f"Label {self.label} not found")
+                return
+            except Exception as e:
+                last_err = e
+                if attempt < 2:
+                    logger.warning("IMAP connect attempt %d failed: %s. Retrying in 5s...", attempt + 1, e)
+                    time.sleep(5)
+        raise last_err
 
     def search_all(self):
         status, messages = self.mail.search(None, 'ALL')

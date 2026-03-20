@@ -6,6 +6,7 @@ import mimetypes
 import os
 import re
 import requests
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse, urljoin
 
@@ -55,6 +56,20 @@ HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
 }
+
+
+def _http_get(url, retries=3, timeout=10):
+    """GET with exponential backoff (1s, 2s, 4s) on transient failures."""
+    delays = [1, 2, 4]
+    last_err = None
+    for attempt in range(retries):
+        try:
+            return requests.get(url, headers=HEADERS, timeout=timeout)
+        except Exception as e:
+            last_err = e
+            if attempt < retries - 1:
+                time.sleep(delays[attempt])
+    raise last_err
 
 class EmailParser:
     def __init__(self, raw_html, output_folder, headers=None, attachments=None):
@@ -151,19 +166,20 @@ class EmailParser:
                 reason = "1x1 Pixel Dimensions"
                 
             if reason:
-                # Extract domain for pixel to match link layout
-                pixel_domain = ""
+                # Extract domain; skip pixel if URL is unparseable
                 try:
                     pixel_domain = urlparse(src).netloc.replace('www.', '')
                 except Exception:
-                    pass
-                
+                    img['src'] = ""
+                    img['style'] = "display:none !important;"
+                    continue
+
                 self.detected_pixels.append({
-                    'url': src, 
+                    'url': src,
                     'status': 'Integration: OK',
                     'domain': pixel_domain
                 })
-                img['src'] = "" 
+                img['src'] = ""
                 img['style'] = "display:none !important;"
         
         # 2. Extract Preheader (Text approximation)
@@ -290,7 +306,7 @@ class EmailParser:
                     if os.path.exists(potential_path):
                         return img_obj, potential_name
 
-                r = requests.get(url, headers=HEADERS, timeout=10)
+                r = _http_get(url)
                 if r.status_code == 200:
                     ext = mimetypes.guess_extension(r.headers.get('content-type', '')) or ".jpg"
                     local_name = f"img_{idx}{ext}"
