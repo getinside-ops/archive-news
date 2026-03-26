@@ -80,6 +80,11 @@
     --bg-terminal-code: #f6f8fa;
     --btn-terminal-bg: #ffffff;
     --btn-terminal-hover: #f3f4f6;
+
+    /* Audit chip backgrounds */
+    --chip-bg-pass: rgba(46, 204, 113, 0.12);
+    --chip-bg-warn: rgba(230, 126, 34, 0.12);
+    --chip-bg-fail: rgba(231, 76, 60, 0.12);
 }
 
 /* Default Dark Theme Logic */
@@ -110,6 +115,11 @@
     --bg-terminal-code: #0d1117;
     --btn-terminal-bg: #21262d;
     --btn-terminal-hover: #30363d;
+
+    /* Audit chip backgrounds */
+    --chip-bg-pass: rgba(80, 250, 123, 0.12);
+    --chip-bg-warn: rgba(230, 126, 34, 0.12);
+    --chip-bg-fail: rgba(231, 76, 60, 0.12);
 }
 
 /* === BASE RESET === */
@@ -1505,17 +1515,17 @@ body.index-page[data-theme="dark"] .crm-badge {
 }
 
 .audit-chip--pass {
-    background: rgba(46, 204, 113, 0.12);
+    background: var(--chip-bg-pass);
     color: var(--accent-green);
     border: 1px solid rgba(46, 204, 113, 0.3);
 }
 .audit-chip--warn {
-    background: rgba(230, 126, 34, 0.12);
+    background: var(--chip-bg-warn);
     color: var(--accent-orange);
     border: 1px solid rgba(230, 126, 34, 0.3);
 }
 .audit-chip--fail {
-    background: rgba(231, 76, 60, 0.12);
+    background: var(--chip-bg-fail);
     color: var(--accent-red);
     border: 1px solid rgba(231, 76, 60, 0.3);
 }
