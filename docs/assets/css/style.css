@@ -1336,6 +1336,69 @@ body.index-page[data-theme="dark"] .crm-badge {
     backdrop-filter: none;
 }
 
+/* === THREE-ZONE UNIFIED HEADER === */
+.vh-unified-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--vw-sidebar);
+    border-bottom: 1px solid var(--vw-border);
+    min-height: 48px;
+}
+
+.vh-zone-identity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    padding: 8px 14px;
+    overflow: hidden;
+}
+
+.vh-zone-identity .vh-subject {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+}
+
+.vh-zone-identity .vh-sender-pill {
+    flex-shrink: 0;
+}
+
+.vh-zone-identity .vh-date {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.vh-zone-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--vw-border);
+    flex-shrink: 0;
+}
+
+.vh-zone-view {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    flex-shrink: 0;
+}
+
+.vh-zone-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    flex-shrink: 0;
+}
+
 .vh-top-bar {
     display: flex;
     align-items: center;

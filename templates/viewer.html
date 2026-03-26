@@ -52,35 +52,35 @@
         <div class="viewer-body-row">
         <!-- Main Content -->
         <div class="viewer-main">
-            <!-- Header -->
+            <!-- Header: three-zone unified bar -->
             <header class="viewer-header">
-                <!-- Top bar: controls -->
-                <div class="vh-top-bar">
-                    <div class="device-toggle hide-mobile">
-                        <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                <line x1="12" y1="18" x2="12.01" y2="18"/>
-                            </svg>
-                        </button>
-                        <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-                                <line x1="12" y1="18" x2="12.01" y2="18"/>
-                            </svg>
-                        </button>
-                        <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                            </svg>
-                        </button>
+                <div class="vh-unified-bar">
+                    <!-- Left: Email identity -->
+                    <div class="vh-zone-identity">
+                        <span class="vh-sender-pill">{{ sender_name }}</span>
+                        <h1 class="vh-subject" title="{{ subject }}">{{ subject }}</h1>
+                        <span class="crm-badge" data-crm="{{ crm or 'Unknown' }}">{{ crm or 'Unknown' }}</span>
+                        <span class="vh-date">{{ email_date }}</span>
                     </div>
-
-                    <div class="viewer-toolbar">
-                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()"
-                            title="Highlight all links (H)">
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Center: Device toggle (hidden on mobile) -->
+                    <div class="vh-zone-view hide-mobile">
+                        <div class="device-toggle">
+                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Right: QA Actions -->
+                    <div class="vh-zone-actions">
+                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
                             <span id="highlightBtnText">Show Links</span>
                         </button>
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
@@ -89,16 +89,7 @@
                         <button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
                             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Share
                         </button>
-                        <button class="btn btn-secondary" id="shortcutBtn" onclick="toggleShortcuts()" title="Keyboard Shortcuts (?)">?</button>
                     </div>
-
-                    <span class="crm-badge" data-crm="{{ crm or 'Unknown' }}">{{ crm or 'Unknown' }}</span>
-                </div>
-                <!-- Subject bar -->
-                <div class="vh-subject-bar">
-                    <span class="vh-sender-pill">{{ sender_name }}</span>
-                    <h1 class="vh-subject">{{ subject }}</h1>
-                    <span class="vh-date">{{ email_date }}</span>
                 </div>
             </header>
 
