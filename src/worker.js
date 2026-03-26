@@ -8,7 +8,6 @@ const USER_AGENTS = {
 
 export default {
   async fetch(request, env, ctx) {
-    // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, {
         headers: {
@@ -33,7 +32,6 @@ export default {
         return jsonResponse({ success: false, error: 'url parameter required' }, 400);
       }
 
-      // Validate URL format
       let urlObj;
       try {
         urlObj = new URL(url);
@@ -91,18 +89,15 @@ async function followRedirects(url, userAgent, maxHops) {
         url: currentUrl
       });
 
-      // Check if it's a redirect
       if ([301, 302, 303, 307, 308].includes(status)) {
         const location = response.headers.get('Location');
         if (!location) break; // No Location header, treat as final
         currentUrl = new URL(location, currentUrl).toString();
         hopCount++;
       } else {
-        // Non-redirect response, we're done
         break;
       }
     } catch (error) {
-      // Network error, timeout, etc.
       chain.push({
         status: 'Error',
         url: currentUrl,
@@ -110,14 +105,6 @@ async function followRedirects(url, userAgent, maxHops) {
       });
       break;
     }
-  }
-
-  if (hopCount >= maxHops && [301, 302, 303, 307, 308].includes(chain[chain.length - 1]?.status)) {
-    chain.push({
-      status: 'Error',
-      url: 'Too many redirects (>15 hops)',
-      error: 'Redirect chain exceeded 15 hops'
-    });
   }
 
   return chain;
