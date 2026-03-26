@@ -102,6 +102,30 @@
             </div>
         </div>
 
+        {# === AUDIT SCORING (computed at render time, no new data required) === #}
+
+        {# Metadata: FAIL if preheader or subject missing, WARN if clipping risk #}
+        {% set _meta_preheader_ok = preheader and preheader | trim | length > 0 %}
+        {% set _meta_subject_ok = subject and subject | trim | length > 0 %}
+        {% set metadata_score = 'fail' if (not _meta_preheader_ok or not _meta_subject_ok) else ('warn' if email_size > 102000 else 'pass') %}
+
+        {# Pixels: FAIL if no pixels detected #}
+        {% set pixels_score = 'fail' if not detected_pixels else 'pass' %}
+
+        {# Links: FAIL if any HTTP or DEV link; WARN if no tracking links (and links exist) #}
+        {% set _http_links = links | selectattr('is_secure', 'equalto', false) | list %}
+        {% set _dev_links = links | selectattr('is_dev') | list %}
+        {% set _tracking_links = links | selectattr('is_tracking') | list %}
+        {% set _links_fail = (_http_links | length > 0) or (_dev_links | length > 0) %}
+        {% set _links_warn = (_tracking_links | length == 0) and (links | length > 0) %}
+        {% set links_score = 'fail' if _links_fail else ('warn' if _links_warn else 'pass') %}
+        {% set flagged_links_count = (_http_links | length) + (_dev_links | length) %}
+
+        {# Overall: FAIL if any FAIL, WARN if any WARN, PASS if all PASS #}
+        {% set _any_fail = metadata_score == 'fail' or pixels_score == 'fail' or links_score == 'fail' %}
+        {% set _any_warn = metadata_score == 'warn' or pixels_score == 'warn' or links_score == 'warn' %}
+        {% set overall_score = 'fail' if _any_fail else ('warn' if _any_warn else 'pass') %}
+
         <!-- Sidebar -->
         <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
             <div class="tab-bar">
