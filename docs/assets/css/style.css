@@ -1399,28 +1399,6 @@ body.index-page[data-theme="dark"] .crm-badge {
     flex-shrink: 0;
 }
 
-.vh-top-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px 14px;
-    background: var(--vw-sidebar);
-    border-bottom: 1px solid var(--vw-border);
-    min-height: 36px;
-    flex-wrap: wrap;
-}
-
-.vh-subject-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px 14px;
-    background: var(--vw-bg);
-    border-bottom: 1px solid var(--vw-border);
-    min-height: 40px;
-    overflow: hidden;
-}
-
 .vh-subject {
     font-family: var(--font-main);
     font-size: 1.1rem;
@@ -1780,9 +1758,7 @@ body.index-page .logo-tagline {
 
 /* Viewer theme transitions */
 .viewer-layout .viewer-main,
-.viewer-layout .viewer-sidebar,
-.vh-top-bar,
-.vh-subject-bar {
+.viewer-layout .viewer-sidebar {
     transition: background-color var(--transition-smooth);
 }
 
@@ -2105,60 +2081,6 @@ body.index-page mark {
 .lf-chip.active {
     color: var(--vw-mint, #6AE7C8);
     border-color: var(--vw-mint, #6AE7C8);
-}
-
-/* Keyboard shortcut legend panel */
-.shortcut-panel {
-    position: fixed;
-    bottom: 56px;
-    right: 16px;
-    background: var(--vw-sidebar);
-    border: 1px solid rgba(106, 231, 200, 0.25);
-    padding: 16px 18px;
-    z-index: 500;
-    min-width: 220px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-}
-
-.sp-title {
-    font-family: var(--font-main);
-    font-size: 0.60rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--vw-mint, #6AE7C8);
-    margin-bottom: 12px;
-}
-
-.sp-grid {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 6px 12px;
-    align-items: center;
-}
-
-.sp-grid kbd {
-    font-family: var(--font-main);
-    font-size: 0.68rem;
-    background: rgba(106, 231, 200, 0.08);
-    border: 1px solid rgba(106, 231, 200, 0.2);
-    color: var(--vw-mint, #6AE7C8);
-    padding: 2px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.sp-grid span {
-    font-family: var(--font-main);
-    font-size: 0.68rem;
-    color: var(--text-secondary);
-}
-
-[data-theme="light"] .sp-grid kbd {
-    color: var(--accent-primary);
-    background: rgba(10, 170, 142, 0.08);
-    border-color: rgba(10, 170, 142, 0.2);
 }
 
 /* ============================================================

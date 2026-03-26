@@ -307,23 +307,7 @@
     <!-- Link overlays container -->
     <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
 
-    <!-- Keyboard shortcut legend -->
-    <div id="shortcutPanel" class="shortcut-panel" style="display:none;">
-        <div class="sp-title">Shortcuts</div>
-        <div class="sp-grid">
-            <kbd>1</kbd><span>Mobile view</span>
-            <kbd>2</kbd><span>Tablet view</span>
-            <kbd>3</kbd><span>Desktop view</span>
-            <kbd>H</kbd><span>Toggle link badges</span>
-            <kbd>T</kbd><span>Toggle dark mode</span>
-            <kbd>D</kbd><span>Download ZIP</span>
-            <kbd>S</kbd><span>Share</span>
-            <kbd>↑ ↓</kbd><span>Scroll email</span>
-            <kbd>?</kbd><span>This panel</span>
-        </div>
-    </div>
-
-    <script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js"></script>
     <script>
         const content = {{ safe_html }};
         const emailLinks = {{ links_json }};
@@ -898,19 +882,6 @@
             });
         }
 
-        function toggleShortcuts() {
-            const p = document.getElementById('shortcutPanel');
-            p.style.display = p.style.display === 'none' ? 'block' : 'none';
-        }
-
-        document.addEventListener('click', e => {
-            const p = document.getElementById('shortcutPanel');
-            const btn = document.getElementById('shortcutBtn');
-            if (p && p.style.display !== 'none' && !p.contains(e.target) && !btn.contains(e.target)) {
-                p.style.display = 'none';
-            }
-        });
-
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') setMode('mobile');
@@ -920,7 +891,6 @@
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
             if (e.key === 's' || e.key === 'S') shareEmail(document.getElementById('shareBtn'));
-            if (e.key === '?') toggleShortcuts();
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
