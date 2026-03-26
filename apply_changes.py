@@ -79,6 +79,8 @@ def apply_changes():
         metadata['preheader'] = parser.preheader
         metadata['crm'] = crm
         metadata['audit'] = parser.audit
+        metadata['links'] = parser.links
+        metadata['detected_pixels'] = parser.detected_pixels
         
         # Decode sender if it's MIMED
         sender = metadata.get('sender', 'Unknown')

@@ -109,8 +109,8 @@
         {% set _meta_subject_ok = subject and subject | trim | length > 0 %}
         {% set metadata_score = 'fail' if (not _meta_preheader_ok or not _meta_subject_ok) else ('warn' if email_size > 102000 else 'pass') %}
 
-        {# Pixels: FAIL if no pixels detected #}
-        {% set pixels_score = 'fail' if not detected_pixels else 'pass' %}
+        {# Pixels: WARN if no pixels detected (data lost during sanitization), PASS if pixels found #}
+        {% set pixels_score = 'warn' if not detected_pixels else 'pass' %}
 
         {# Links: FAIL if any HTTP or DEV link; WARN if no tracking links (and links exist) #}
         {% set _http_links = links | selectattr('is_secure', 'equalto', false) | list %}
