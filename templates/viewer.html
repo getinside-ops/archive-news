@@ -129,7 +129,7 @@
         <!-- Sidebar -->
         <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
             <!-- Fixed: Audit Summary Panel -->
-            <div class="audit-summary-panel">
+            <div class="audit-summary-panel" role="region" aria-label="Audit scorecard">
                 <div class="audit-overall audit-overall--{{ overall_score }}">
                     <span class="audit-overall-dot"></span>
                     <span class="audit-overall-label">{{ overall_score | upper }}</span>
@@ -159,7 +159,7 @@
             </div>
 
             <!-- Scrollable: Detail Log (existing tab content) -->
-            <div class="audit-detail-log">
+            <div class="audit-detail-log" role="region" aria-label="Audit detail">
                 <div class="tab-bar">
                     <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
                     <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')"{% if not detected_pixels %} style="display:none"{% endif %} data-i18n="tab_pixels">PIXELS</button>
