@@ -14,5 +14,7 @@
         "link_count": 45,
         "images_no_alt": 18
     },
-    "crm": "Sendinblue"
+    "crm": "Sendinblue",
+    "links": [],
+    "detected_pixels": []
 }

@@ -14,5 +14,7 @@
         "link_count": 6,
         "images_no_alt": 6
     },
-    "crm": "Mailjet"
+    "crm": "Mailjet",
+    "links": [],
+    "detected_pixels": []
 }

@@ -14,5 +14,7 @@
         "link_count": 42,
         "images_no_alt": 14
     },
-    "crm": null
+    "crm": null,
+    "links": [],
+    "detected_pixels": []
 }

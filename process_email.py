@@ -148,7 +148,9 @@ def process_emails():
                     'preheader': parser.preheader,
                     'reading_time': parser.reading_time,
                     'audit': parser.audit,
-                    'crm': parser.detected_crm
+                    'crm': parser.detected_crm,
+                    'links': parser.links,
+                    'detected_pixels': parser.detected_pixels,
                 }
 
                 # Subject Length Audit
@@ -245,8 +247,8 @@ def regen_only():
         if os.path.exists(viewer_path):
             html_content = _extract_email_html_from_viewer(viewer_path)
             if html_content:
-                links = metadata.get('audit', {}).get('links', [])
-                detected_pixels = metadata.get('audit', {}).get('pixels', [])
+                links = metadata.get('links', [])
+                detected_pixels = metadata.get('detected_pixels', [])
                 generate_viewer(metadata, html_content, links, viewer_path, detected_pixels=detected_pixels)
                 logger.info("Re-rendered %s", entry)
             else:
