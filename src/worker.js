@@ -98,12 +98,8 @@ async function followRedirects(url, userAgent, maxHops) {
         break;
       }
     } catch (error) {
-      chain.push({
-        status: 'Error',
-        url: currentUrl,
-        error: mapErrorMessage(error.message)
-      });
-      break;
+      // Network error, timeout, etc. - throw to handler
+      throw error;
     }
   }
 
