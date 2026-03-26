@@ -2793,3 +2793,201 @@ select:focus-visible {
 .search-input:focus-visible {
     outline: none;
 }
+
+/* Redirect chain table styles */
+.audit-log-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+}
+
+.audit-log-container table thead {
+  border-bottom: 1px solid #2a2a35;
+}
+
+.audit-log-container table th {
+  text-align: left;
+  padding: 6px;
+  color: #666;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.audit-log-container table tbody tr {
+  border-bottom: 1px solid #1e1e24;
+}
+
+.audit-log-container table td {
+  padding: 6px;
+  color: #ccc;
+  word-break: break-all;
+}
+
+.audit-log-container table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Status badge colors in table */
+.audit-log-container .status-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.status-badge.redirect {
+  background: #2d3a4a;
+  color: #6AB0E7;
+}
+
+.status-badge.success {
+  background: #0aaa8e33;
+  color: #0aaa8e;
+  border: 1px solid #0aaa8e;
+}
+
+.status-badge.error {
+  background: #8B3A3A;
+  color: #FF6B6B;
+}
+
+/* Final destination row highlight */
+.audit-log-container table tbody tr:last-child td {
+  color: #fff;
+}
+
+.audit-log-container table tbody tr:last-child {
+  border: 1px solid #0aaa8e44;
+  background: #0aaa8e11;
+}
+
+/* Link action buttons */
+.link-action-btn {
+  background: #1e1e24;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.link-action-btn:hover {
+  background: #2a2a35;
+  border-color: #444;
+  color: #fff;
+}
+
+.link-action-btn[style*="background: #0aaa8e"] {
+  border-color: #0aaa8e;
+}
+
+.link-action-btn[style*="background: #0aaa8e"]:hover {
+  background: #088b7a !important;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.redirect-check-loading {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #0aaa8e;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Error state box */
+.redirect-check-error {
+  padding: 12px;
+  background: #3d1a1a;
+  border: 1px solid #8B3A3A;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.redirect-check-error-icon {
+  color: #FF6B6B;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.redirect-check-error-title {
+  color: #FF6B6B;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.redirect-check-error-message {
+  color: #ccc;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.redirect-check-error-retry {
+  background: #0aaa8e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.redirect-check-error-retry:hover {
+  background: #088b7a;
+}
+
+/* UA selector styling */
+#ua-selector-container {
+  padding: 12px 16px;
+  border-bottom: 1px solid #2a2a35;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#ua-select {
+  background: #1e1e24;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: monospace;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#ua-select:hover {
+  border-color: #444;
+  background: #2a2a35;
+}
+
+#ua-select:focus {
+  outline: none;
+  border-color: #0aaa8e;
+  background: #1e1e24;
+}
