@@ -128,188 +128,181 @@
 
         <!-- Sidebar -->
         <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
-            <div class="tab-bar">
-                <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
-                <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')"{% if not detected_pixels %} style="display:none"{% endif %} data-i18n="tab_pixels">PIXELS</button>
-                <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">{{ links|length }}</span></button>
+            <!-- Fixed: Audit Summary Panel -->
+            <div class="audit-summary-panel">
+                <div class="audit-overall audit-overall--{{ overall_score }}">
+                    <span class="audit-overall-dot"></span>
+                    <span class="audit-overall-label">{{ overall_score | upper }}</span>
+                </div>
+                <div class="audit-categories">
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <span class="audit-cat-name">Metadata</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--{{ metadata_score }}">{{ metadata_score | upper }}</span>
+                    </div>
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <span class="audit-cat-name">Pixels</span>
+                        <span class="audit-cat-count">{{ detected_pixels | length }}</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--{{ pixels_score }}">{{ pixels_score | upper }}</span>
+                    </div>
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        <span class="audit-cat-name">Links</span>
+                        <span class="audit-cat-count">{{ flagged_links_count }}/{{ links | length }}</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--{{ links_score }}">{{ links_score | upper }}</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="sidebar-content">
-
-                <!-- META Tab -->
-                <div class="tab-pane" id="tab-meta">
-                    <div class="stat-grid">
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_sender">Sender</span>
-                            <span class="sc-value">{{ sender_name }}</span>
-                        </div>
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_crm">CRM</span>
-                            <span class="sc-value text-cyan">{{ crm or 'Unknown' }}</span>
-                        </div>
-                        <div class="stat-cell sc-wide">
-                            <span class="sc-label" data-i18n="meta_subject">Subject</span>
-                            <span class="sc-value" title="{{ subject }}">{{ subject }}</span>
-                        </div>
-                        <div class="stat-cell sc-wide">
-                            <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
-                            <span class="sc-value" title="{{ preheader }}">{{ preheader }}</span>
-                        </div>
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_received">Received</span>
-                            <span class="sc-value">{{ email_date }}</span>
-                        </div>
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_size">Size</span>
-                            <span class="sc-value text-yellow">{{ (email_size / 1024)|round(1) }} KB</span>
-                        </div>
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
-                            <span class="sc-value {% if email_size > 102000 %}text-orange{% else %}text-green{% endif %}">
-                                {% if email_size > 102000 %}High{% else %}Low{% endif %}
-                            </span>
-                        </div>
-                        <div class="stat-cell">
-                            <span class="sc-label" data-i18n="meta_links">Links</span>
-                            <span class="sc-value">{{ links|length }}</span>
-                        </div>
-                    </div>
+            <!-- Scrollable: Detail Log (existing tab content) -->
+            <div class="audit-detail-log">
+                <div class="tab-bar">
+                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')"{% if not detected_pixels %} style="display:none"{% endif %} data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">{{ links|length }}</span></button>
                 </div>
 
-                <!-- PIXELS Tab -->
-                <div class="tab-pane" id="tab-pixels" style="display:none;">
-                    {% if detected_pixels %}
-                    <div style="padding: 8px 10px;">
-                        {% for pixel in detected_pixels %}
-                        <div class="link-card-v2" id="px-{{ loop.index }}">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index">P</span>
-                                <span class="card-v2-domain">{{ pixel.domain or 'Unknown Provider' }}</span>
-                                <div style="display: flex; gap: 4px;">
-                                    <span class="card-v2-tag tag-pixel">PIXEL</span>
+                <div class="sidebar-content">
+
+                    <!-- META Tab -->
+                    <div class="tab-pane" id="tab-meta">
+                        <div class="stat-grid">
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_sender">Sender</span>
+                                <span class="sc-value">{{ sender_name }}</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_crm">CRM</span>
+                                <span class="sc-value text-cyan">{{ crm or 'Unknown' }}</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_subject">Subject</span>
+                                <span class="sc-value" title="{{ subject }}">{{ subject }}</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
+                                <span class="sc-value" title="{{ preheader }}">{{ preheader }}</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_received">Received</span>
+                                <span class="sc-value">{{ email_date }}</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_size">Size</span>
+                                <span class="sc-value text-yellow">{{ (email_size / 1024)|round(1) }} KB</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
+                                <span class="sc-value {% if email_size > 102000 %}text-orange{% else %}text-green{% endif %}">
+                                    {% if email_size > 102000 %}High{% else %}Low{% endif %}
+                                </span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_links">Links</span>
+                                <span class="sc-value">{{ links|length }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PIXELS Tab -->
+                    <div class="tab-pane" id="tab-pixels" style="display:none;">
+                        {% if detected_pixels %}
+                        <div style="padding: 8px 10px;">
+                            {% for pixel in detected_pixels %}
+                            <div class="link-card-v2" id="px-{{ loop.index }}">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index">P</span>
+                                    <span class="card-v2-domain">{{ pixel.domain or 'Unknown Provider' }}</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        <span class="card-v2-tag tag-pixel">PIXEL</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">{{ pixel.url }}</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, {{ pixel.url | tojson }})">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">{{ pixel.status }}</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">{{ pixel.url }}</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, {{ pixel.url | tojson }})">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">{{ pixel.url }}</code>
+                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, {{ pixel.url | tojson }})">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">{{ pixel.status }}</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">{{ pixel.url }}</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, {{ pixel.url | tojson }})">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
+                        {% endif %}
                     </div>
-                    {% endif %}
-                </div>
 
-                <!-- LINKS Tab -->
-                <div class="tab-pane" id="tab-links" style="display:none;">
-                    <div class="lf-filter-row" id="linkFilterRow">
-                        <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
-                        <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
-                        <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
-                    </div>
-                    <div style="padding: 8px 10px;">
-                        {% for link in links %}
-                        <div class="link-card-v2" id="lc-{{ link.index }}">
-                            <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink({{ link.index }})">{{ link.index }}</span>
-                                <span class="card-v2-domain">{{ link.domain or 'External Link' }}</span>
-                                <div style="display: flex; gap: 4px;">
-                                    {% if link.is_tracking %}<span class="card-v2-tag tag-tracking"><svg width="8"
-                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="3">
-                                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                                        </svg> TRACK</span>{% endif %}
-                                    {% if not link.is_secure %}<span class="card-v2-tag tag-unsecure"><svg width="8"
-                                            height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="3">
-                                            <path
-                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                            <line x1="12" y1="9" x2="12" y2="13" />
-                                            <line x1="12" y1="17" x2="12.01" y2="17" />
-                                        </svg> HTTP</span>{% endif %}
-                                    {% if link.is_dev %}<span class="card-v2-tag tag-dev"><svg width="8" height="8"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                            <polyline points="16 18 22 12 16 6" />
-                                            <polyline points="8 6 2 12 8 18" />
-                                        </svg> DEV</span>{% endif %}
-                                </div>
-                            </div>
-                            <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                <code class="card-v2-url-truncated">{{ link.original_url }}</code>
-                                <button class="btn-card" title="Copy URL"
-                                    onclick="event.stopPropagation(); copyLink(this, {{ link.original_url | tojson }})">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="card-expand-zone">
-                                <div class="card-v2-body">
-                                    <div class="card-v2-text">{{ link.txt }}</div>
-                                    <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
-                                        <code class="card-v2-url">{{ link.original_url }}</code>
-                                        <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                            <button class="btn-card" title="Verify Link"
-                                                onclick="event.stopPropagation(); runAudit(this, {{ link.original_url | tojson }}, {{ link.index }})">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                                </svg>
-                                            </button>
-                                            <button class="btn-card" title="Copy URL"
-                                                onclick="event.stopPropagation(); copyLink(this, {{ link.original_url | tojson }})">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                                    stroke="currentColor" stroke-width="2">
-                                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
+                    <!-- LINKS Tab -->
+                    <div class="tab-pane" id="tab-links" style="display:none;">
+                        <div class="lf-filter-row" id="linkFilterRow">
+                            <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
+                            <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
+                            <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
+                        </div>
+                        <div style="padding: 8px 10px;">
+                            {% for link in links %}
+                            <div class="link-card-v2" id="lc-{{ link.index }}">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink({{ link.index }})">{{ link.index }}</span>
+                                    <span class="card-v2-domain">{{ link.domain or 'External Link' }}</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        {% if link.is_tracking %}<span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>{% endif %}
+                                        {% if not link.is_secure %}<span class="card-v2-tag tag-unsecure"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> HTTP</span>{% endif %}
+                                        {% if link.is_dev %}<span class="card-v2-tag tag-dev"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> DEV</span>{% endif %}
                                     </div>
-
-                                    <!-- Audit Log Container -->
-                                    <div class="audit-log-container">
-                                        <div class="audit-status-bar">
-                                            <span class="audit-status-text">Scanning...</span>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">{{ link.original_url }}</code>
+                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, {{ link.original_url | tojson }})">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">{{ link.txt }}</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">{{ link.original_url }}</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, {{ link.original_url | tojson }}, {{ link.index }})">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, {{ link.original_url | tojson }})">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="audit-timeline">
-                                            <!-- Log items will be injected here -->
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
 
-            </div>
+                </div><!-- /.sidebar-content -->
+            </div><!-- /.audit-detail-log -->
 
-            <!-- Sticky Footer in Sidebar -->
+            <!-- Sticky Footer -->
             <div class="sidebar-footer">
                 <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
                     Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
