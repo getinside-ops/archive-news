@@ -4,7 +4,7 @@
     "date_rec": "24/11/2025 à 05:24",
     "date_iso": "2025-11-24T05:24:30-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "20/03/2026 à 22:15",
+    "date_arch": "26/03/2026 à 23:34",
     "preheader": "Encore merci pour votre commande ! Voici votre code promo exclusif Suite à votre commande chez MieuxQueDesFleurs, bénéficiez de jusqu'à 95€ offerts sur vos prem...",
     "reading_time": "2 min",
     "audit": {
@@ -15,6 +15,137 @@
         "images_no_alt": 3
     },
     "crm": "Klaviyo",
-    "links": [],
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_0",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_0"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        },
+        {
+            "index": 2,
+            "txt": "Profiter de l'offre",
+            "original_url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_1",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        },
+        {
+            "index": 3,
+            "txt": "ce lien",
+            "original_url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_2",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_3",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_3"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        },
+        {
+            "index": 5,
+            "txt": "www.hellofresh.fr/conditions-generales",
+            "original_url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_4",
+            "final_url": "https://www.hellofresh.fr/about/termes-et-conditions?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01K6HX6KQ4WCNSTY7S9A64652S_4"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.hellofresh.fr/conditions-generales?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                },
+                {
+                    "status": 301,
+                    "url": "https://www.hellofresh.fr/conditions-generales?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/about/termes-et-conditions?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        },
+        {
+            "index": 6,
+            "txt": "Vous pouvez vous désinscrire ici.",
+            "original_url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "final_url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "domain": "HelloFresh,%20c'est%20quoi%20",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:39"
+        }
+    ],
     "detected_pixels": []
 }

@@ -4,7 +4,7 @@
     "date_rec": "14/01/2026 à 10:51",
     "date_iso": "2026-01-14T10:51:21+00:00",
     "sender": "Fanny de Yooji",
-    "date_arch": "20/03/2026 à 22:14",
+    "date_arch": "26/03/2026 à 23:32",
     "preheader": "Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...",
     "reading_time": "4 min",
     "audit": {
@@ -15,6 +15,228 @@
         "images_no_alt": 10
     },
     "crm": "Sendinblue",
-    "links": [],
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 2,
+            "txt": "Je découvre HelloFresh",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 5,
+            "txt": "Cliquez ici",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 6,
+            "txt": "Je découvre l’offre HelloFresh",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        },
+        {
+            "index": 13,
+            "txt": "Se désinscrire",
+            "original_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV",
+            "final_url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV",
+            "domain": "hfbd6.r.bh.d.sendibt3.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV"
+                }
+            ],
+            "audit_date": "2026-03-26 23:32:49"
+        }
+    ],
     "detected_pixels": []
 }

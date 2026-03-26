@@ -4,7 +4,7 @@
     "date_rec": "04/12/2025 à 11:02",
     "date_iso": "2025-12-04T11:02:50-06:00",
     "sender": "Sophie d'Ultra Premium Direct",
-    "date_arch": "20/03/2026 à 22:14",
+    "date_arch": "26/03/2026 à 23:33",
     "preheader": "[Edition limitée] Dépêchez-vous, il n'en reste plus beaucoup ! Le coffret parfait pour votre animal Ultra Premium Direct s'associe au créateur de contenu et amo...",
     "reading_time": "2 min",
     "audit": {
@@ -15,6 +15,278 @@
         "images_no_alt": 11
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e42660d6f36e0594490150539e0f977a0e46e7e40f5558e2d27848d684455d47d292cd581e516f0a7b8f77209f65197d373853ea5629aecb95"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 2,
+            "txt": "En savoir plus",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4467457d3145f76c5bb5bb729edafdc8a0ef5b8af9ddf2b320abb694ca6eacd7371f66af05effb113cecaa5218952dab3c9ddb0fe8b4b36ef"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 3,
+            "txt": "Commander le coffret",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49c30856aa8d5cefe893e2960572c5d583464c58ca298ffbe60e0fa8ccea6002a12bd2e25ee43311abbe1e29ca7be6cfff3d860ffa520e90e"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 4,
+            "txt": "Commander le coffret",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4076792841bb7ad1dfd4875cc189e2ff89de73ba854c2871a2735ebcafcacf9c001da90b152e663fe496ca9be5c0e4789afd8c7433c437b40"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 5,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 6,
+            "txt": "En savoir plus",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e49be35f542411098e13d7fd41e540116ff9bccb7db896beceeb93cc314a5760f977f090a1cfbf9eec7f15b3ccf48ae9798239690511fabfe2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 7,
+            "txt": "05.64.25.03.08",
+            "original_url": "tel:0564250308",
+            "final_url": "tel:0564250308",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "tel:0564250308"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 8,
+            "txt": "contact@ultrapremiumdirect.com",
+            "original_url": "mailto:contact@ultrapremiumdirect.com",
+            "final_url": "mailto:contact@ultrapremiumdirect.com",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "mailto:contact@ultrapremiumdirect.com"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4cb5a9baacc245a1c9c21cdb777329310beb084744824cdb98338716833dee9b862b50ff84f3bf09cd542d54d06cfde21f3904cdbd7f6472b"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4408fefc4e75b69a9e0db74f7db7ad15196c4266c9f843d5d4deff67bde3b826d00ea419ebb50148c4b2efc15e31019305d782be5ff1fa1d5"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e4bee9cc7e49d3fbd7b47bfab9eb8ddc6b2ec0b1be332e1b870bb9cb45e8fba95032a20045fb41ac095c271c4b162ad9dd39bb816f35554bc2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/?qs=13bdd49838d249e46af8f5b67c289c8ae78e97f7fdfe0e5ac5b8146774f34618b5e158e9a4ec008496dda66625e9b024242e5d42b67963715cfc302178dd0b4e"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        },
+        {
+            "index": 13,
+            "txt": "Ne plus recevoir de mail de notre part",
+            "original_url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170",
+            "final_url": "https://click.info.ultrapremiumdirect.com/expired.html",
+            "domain": "click.info.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://click.info.ultrapremiumdirect.com/unsub_center.aspx?qs=ab3b362d9c04d29ed22666c3c7b8fcea1ca00a9c2ccfd4fdeaf2fdf45ee698d342006cf7a79083a5d5db20d49b71f4874bcfc8dbfa855b0af4053877f1df9c0b76757bdb2b5b2170"
+                },
+                {
+                    "status": 200,
+                    "url": "https://click.info.ultrapremiumdirect.com/expired.html"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:48"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://click.info.ultrapremiumdirect.com/open.aspx?ffcb10-fec1157875630d78-fe5f12747561017f741d-fe3a11717564047d761c74-ff9a1071-fe2215767363017f7c1677-ff63167974&d=500020&bmt=0",
+            "status": "Integration: OK",
+            "domain": "click.info.ultrapremiumdirect.com"
+        }
+    ]
 }

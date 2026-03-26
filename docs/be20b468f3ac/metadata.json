@@ -4,7 +4,7 @@
     "date_rec": "28/11/2025 à 08:37",
     "date_iso": "2025-11-28T08:37:40-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "20/03/2026 à 22:15",
+    "date_arch": "26/03/2026 à 23:34",
     "preheader": "Ultra Premium Direct | Les croquettes de Noël 🐶 -25%* avec le code REDOUTE25 -25%* avec le code REDOUTE25 ! Faites vivre un Noël gourmand à votre animal avec Ul...",
     "reading_time": "2 min",
     "audit": {
@@ -15,6 +15,710 @@
         "images_no_alt": 8
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b0",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b1",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b1"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 3,
+            "txt": "-25%* avec le code REDOUTE25 !",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b2",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 4,
+            "txt": "Faites vivre un Noël gourmand à votre animal avec ",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b3",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b3"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 5,
+            "txt": "J’en profite",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b4",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b4"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b5",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b5"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b6",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b6"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911df6f13a95"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 8,
+            "txt": "Croquettes chien adulte(sac de 12 kg)",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b7",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911df6f13a95"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 9,
+            "txt": "62,90€25%47,18€",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855014",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855014"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911df6f13a95"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chien-adulte-toutes-tailles/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855015",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855015"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfa69ca6f"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 11,
+            "txt": "Croquettes chiot toutes tailles (sac de 12 kg)",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855016",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855016"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfa69ca6f"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 12,
+            "txt": "62,90€-25%47,18€",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855017",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855017"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfa69ca6f"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-poulet-frais-chiot/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 13,
+            "txt": "Voir la sélection",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855018",
+            "final_url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855018"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929a04296b89"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855019",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855019"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6908b512f0c49"
+                },
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/laredoute112025/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501a",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501a"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfbc2d4a6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 16,
+            "txt": "Croquettes chat stérilisé(sac de 7 kg)",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501b",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501b"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfbc2d4a6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 17,
+            "txt": "48,90€-25%36,68€",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501c",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501c"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfbc2d4a6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/croquettes-sans-cereales-au-poulet-frais-pour-chat-adulte-sterilise/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501d",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501d"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfe2d32c9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 19,
+            "txt": "Boîtes d'émincés(12 x 85 gr)",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501e",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501e"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfe2d32c9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 20,
+            "txt": "13,90€-25%10,43€",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501f",
+            "final_url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501f"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6911dfe2d32c9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/produits/boite-eminces-en-sauce-sans-cereales-pour-chat-poulet-et-veau/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 21,
+            "txt": "Voir la sélection",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855020",
+            "final_url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855020"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929a09a36876"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=email&utm_campaign=nl-laredoute-112025"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 22,
+            "txt": "Si vous souhaitez vous désabonner de la lettre d’i",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855021",
+            "final_url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855021"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 23,
+            "txt": "Mon compte",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855022&e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&s=fevEFEMDO5oMGoh9vvGXNzWPt41DSU66aVNRCyzObrM",
+            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855022&e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&s=fevEFEMDO5oMGoh9vvGXNzWPt41DSU66aVNRCyzObrM"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fordertracingall%2Easpx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377%2Df78e%2D4167%2Dac94%2Dea1b59cbe847%26idcl%3Df620a577%2D1d4c%2D4f9e%2D8a84%2D5b8163d7b149%26nc%3D%26%24deep%5Flink%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        },
+        {
+            "index": 24,
+            "txt": "Mes Newsletters",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855023&e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&s=N0as2vEfbgyNYsv-fP4x4W6Fwt7F5Dv_9lPCiR716rA",
+            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855023&e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&s=N0as2vEfbgyNYsv-fP4x4W6Fwt7F5Dv_9lPCiR716rA"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fnewslettersubscribe%2Easpx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377%2Df78e%2D4167%2Dac94%2Dea1b59cbe847%26idcl%3Df620a577%2D1d4c%2D4f9e%2D8a84%2D5b8163d7b149%26nc%3D%26%24deep%5Flink%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211204FR%26idms%3Df6b7c377-f78e-4167-ac94-ea1b59cbe847%26idcl%3Df620a577-1d4c-4f9e-8a84-5b8163d7b149%26nc%3D%26%24deep_link%3Dtrue"
+                }
+            ],
+            "audit_date": "2026-03-26 23:34:03"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://api.getinside.media/v1/emails/track/6908b512f2b49",
+            "status": "Integration: OK",
+            "domain": "api.getinside.media"
+        },
+        {
+            "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,1",
+            "status": "Integration: OK",
+            "domain": "news.tracking.laredoute.fr"
+        }
+    ]
 }

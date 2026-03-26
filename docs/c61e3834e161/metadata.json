@@ -4,7 +4,7 @@
     "date_rec": "31/12/2025 à 09:50",
     "date_iso": "2025-12-31T09:50:18+00:00",
     "sender": "Mieux Que Des Fleurs",
-    "date_arch": "20/03/2026 à 22:14",
+    "date_arch": "26/03/2026 à 23:33",
     "preheader": "De quoi se régaler ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...",
     "reading_time": "3 min",
     "audit": {
@@ -15,6 +15,185 @@
         "images_no_alt": 3
     },
     "crm": "Klaviyo",
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_0",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_0"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 2,
+            "txt": "J'en profite",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_1",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_1"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/68f8cee5f2d5a?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 3,
+            "txt": "ce lien",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_2",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/68f8cee5f2d5a?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_3",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_3"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/68f8cee5f2d5a?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFF4L&utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=a1297040-6ed5-4457-8112-e7a23cc5efe2&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 5,
+            "txt": "http://www.hellofresh.fr/conditions-generales",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_4",
+            "final_url": "https://www.hellofresh.fr/about/termes-et-conditions?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_4"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.hellofresh.fr/conditions-generales?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                },
+                {
+                    "status": 301,
+                    "url": "https://www.hellofresh.fr/conditions-generales?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/about/termes-et-conditions?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 6,
+            "txt": "Vous pouvez vous désinscrire ici.",
+            "original_url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "final_url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "domain": "HelloFresh, c'est quoi ",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202025%20%28RmmHxN%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        },
+        {
+            "index": 7,
+            "txt": "click here",
+            "original_url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_5",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "domain": "ctrk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KDSX1FSPS2AMW68Z9TKGC2CG_5"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:04"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://api.getinside.media/v1/emails/track/68f8cee60179a",
+            "status": "Integration: OK",
+            "domain": "api.getinside.media"
+        },
+        {
+            "url": "https://ctrk.klclick.com/o/01KDSX1FSPS2AMW68Z9TKGC2CG",
+            "status": "Integration: OK",
+            "domain": "ctrk.klclick.com"
+        }
+    ]
 }

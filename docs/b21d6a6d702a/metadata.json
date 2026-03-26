@@ -4,7 +4,7 @@
     "date_rec": "30/12/2025 à 08:15",
     "date_iso": "2025-12-30T08:15:24-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "20/03/2026 à 22:14",
+    "date_arch": "26/03/2026 à 23:33",
     "preheader": "Votre première commande photo à -50% 🎁 Vos plus beaux souvenirs, fabriqués en France Profitez de -50%* sur vos produits préférés Imprimez vos plus beaux instant...",
     "reading_time": "2 min",
     "audit": {
@@ -15,6 +15,469 @@
         "images_no_alt": 1
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f108",
+            "final_url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f108"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929b994d76b8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 2,
+            "txt": "Profitez de -50%* sur vos produits préférés",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f109",
+            "final_url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f109"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929b994d76b8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 3,
+            "txt": "Imprimez vos plus beaux instants, Photoweb vous of",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10a",
+            "final_url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10a"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929b994d76b8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 4,
+            "txt": "Je découvre",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10b",
+            "final_url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10b"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6929b994d76b8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/?egn-publisher=Getinside&egn-name=Getinside-Laredoute&egn-location=mail&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 5,
+            "txt": "Les livres photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10c",
+            "final_url": "https://www.photoweb.fr/livre-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=livres&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10c"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6941969a6a580"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/livre-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=livres&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 6,
+            "txt": "Les tirages photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10d",
+            "final_url": "https://www.photoweb.fr/tirage-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=tirages&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10d"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/694196a7a7f34"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/tirage-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=tirages&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 7,
+            "txt": "Les calendriers photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10e",
+            "final_url": "https://www.photoweb.fr/calendrier-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=calendriers&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10e"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/694196b4ba8b5"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/calendrier-photo?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=calendriers&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 8,
+            "txt": "La décoration murale",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10f",
+            "final_url": "https://www.photoweb.fr/decoration-murale?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=dÃ©co&egn-creative=clearpix&egn-creativetype=1x1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f10f"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/694196be1e6e3"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/decoration-murale?egn-publisher=Getinside&egn-name=Getinside-laredoute&egn-location=dÃ©co&egn-creative=clearpix&egn-creativetype=1x1"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f110",
+            "final_url": "https://gtinsi.de/694196c842ddfÂ ",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f110"
+                },
+                {
+                    "status": 404,
+                    "url": "https://gtinsi.de/694196c842ddfÂ "
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 10,
+            "txt": "Découvrez nos cartes de voeux & faire-part",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f111",
+            "final_url": "https://gtinsi.de/694196c842ddfÂ ",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f111"
+                },
+                {
+                    "status": 404,
+                    "url": "https://gtinsi.de/694196c842ddfÂ "
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 11,
+            "txt": "Partagez vos plus beaux messages avec les cartes P",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f112",
+            "final_url": "https://gtinsi.de/694196c842ddfÂ ",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f112"
+                },
+                {
+                    "status": 404,
+                    "url": "https://gtinsi.de/694196c842ddfÂ "
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 12,
+            "txt": "Créez dès maintenant",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f113",
+            "final_url": "https://gtinsi.de/694196c842ddfÂ ",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f113"
+                },
+                {
+                    "status": 404,
+                    "url": "https://gtinsi.de/694196c842ddfÂ "
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 13,
+            "txt": "Si vous souhaitez vous désabonner de la lettre d’i",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f114",
+            "final_url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f114"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 14,
+            "txt": "Mon compte",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f115&e=cDE9RU1DMDAyMTI2MjZGUiZwMj05NjM1NmM5NS05YmRhLTQ3MzgtOWM4ZS02NGQ3OWEyMmEyYTMmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=lyHKQdDXFHegsJpwlhOil-3TCP4OrBVV5W9w0S3g9A4",
+            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f115&e=cDE9RU1DMDAyMTI2MjZGUiZwMj05NjM1NmM5NS05YmRhLTQ3MzgtOWM4ZS02NGQ3OWEyMmEyYTMmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=lyHKQdDXFHegsJpwlhOil-3TCP4OrBVV5W9w0S3g9A4"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fordertracingall%2Easpx%3Fcod%3DEMC00212626FR%26idms%3D96356c95%2D9bda%2D4738%2D9c8e%2D64d79a22a2a3%26idcl%3D2e783ac0%2D94de%2D45ed%2D88a7%2Dbc6ab3f789d5%26nc%3D%26%24deep%5Flink%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        },
+        {
+            "index": 15,
+            "txt": "Mes Newsletters",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f116&e=cDE9RU1DMDAyMTI2MjZGUiZwMj05NjM1NmM5NS05YmRhLTQ3MzgtOWM4ZS02NGQ3OWEyMmEyYTMmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=XGDAVMpsrJDf3uRKHJNz3nfZPUwUyerMdK5vEKD9uGE",
+            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,2a8f116&e=cDE9RU1DMDAyMTI2MjZGUiZwMj05NjM1NmM5NS05YmRhLTQ3MzgtOWM4ZS02NGQ3OWEyMmEyYTMmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=XGDAVMpsrJDf3uRKHJNz3nfZPUwUyerMdK5vEKD9uGE"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fnewslettersubscribe%2Easpx%3Fcod%3DEMC00212626FR%26idms%3D96356c95%2D9bda%2D4738%2D9c8e%2D64d79a22a2a3%26idcl%3D2e783ac0%2D94de%2D45ed%2D88a7%2Dbc6ab3f789d5%26nc%3D%26%24deep%5Flink%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                },
+                {
+                    "status": 307,
+                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00212626FR%26idms%3D96356c95-9bda-4738-9c8e-64d79a22a2a3%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
+                }
+            ],
+            "audit_date": "2026-03-26 23:33:06"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://api.getinside.media/v1/emails/track/6929b994dbbaf",
+            "status": "Integration: OK",
+            "domain": "api.getinside.media"
+        },
+        {
+            "url": "https://news.tracking.laredoute.fr/r/?id=h96356c95-9bda-4738-9c8e-64d79a22a2a3,12e1dee,1",
+            "status": "Integration: OK",
+            "domain": "news.tracking.laredoute.fr"
+        }
+    ]
 }
