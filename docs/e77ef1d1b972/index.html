@@ -257,7 +257,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -267,10 +267,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 1)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -298,7 +298,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">%%view_email_url%%</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "%%view_email_url%%")">
+                                    <button class="btn-card" title="Copy URL" data-url="%%view_email_url%%" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -308,10 +308,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">%%view_email_url%%</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "%%view_email_url%%", 2)">
+                                                <button class="btn-card" title="Verify Link" data-url="%%view_email_url%%" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "%%view_email_url%%")">
+                                                <button class="btn-card" title="Copy URL" data-url="%%view_email_url%%" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -339,7 +339,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -349,10 +349,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx", 3)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -380,7 +380,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -390,10 +390,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 4)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -421,7 +421,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -431,10 +431,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 5)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -462,7 +462,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -472,10 +472,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 6)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -503,7 +503,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -513,10 +513,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 7)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -544,7 +544,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -554,10 +554,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 8)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -585,7 +585,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -595,10 +595,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026", 9)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive\u0026utm_medium=email\u0026utm_campaign=piecesjaunes2026")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&amp;utm_medium=email&amp;utm_campaign=piecesjaunes2026" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -626,7 +626,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -636,10 +636,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx", 10)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueil.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueil.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -667,7 +667,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://instagram.com/showroomprive/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://instagram.com/showroomprive/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://instagram.com/showroomprive/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -677,10 +677,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://instagram.com/showroomprive/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://instagram.com/showroomprive/", 11)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://instagram.com/showroomprive/" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://instagram.com/showroomprive/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://instagram.com/showroomprive/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -708,7 +708,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.facebook.com/showroomprivecom</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.facebook.com/showroomprivecom")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.facebook.com/showroomprivecom" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -718,10 +718,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.facebook.com/showroomprivecom</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.facebook.com/showroomprivecom", 12)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.facebook.com/showroomprivecom" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.facebook.com/showroomprivecom")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.facebook.com/showroomprivecom" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -749,7 +749,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.tiktok.com/@showroomprive</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.tiktok.com/@showroomprive")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.tiktok.com/@showroomprive" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -759,10 +759,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.tiktok.com/@showroomprive</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.tiktok.com/@showroomprive", 13)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.tiktok.com/@showroomprive" data-index="13" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.tiktok.com/@showroomprive")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.tiktok.com/@showroomprive" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -790,7 +790,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://fr.linkedin.com/company/showroomprive-com</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://fr.linkedin.com/company/showroomprive-com")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://fr.linkedin.com/company/showroomprive-com" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -800,10 +800,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://fr.linkedin.com/company/showroomprive-com</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://fr.linkedin.com/company/showroomprive-com", 14)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://fr.linkedin.com/company/showroomprive-com" data-index="14" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://fr.linkedin.com/company/showroomprive-com")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://fr.linkedin.com/company/showroomprive-com" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -831,7 +831,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=mobile.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=mobile.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=mobile.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -841,10 +841,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=mobile.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=mobile.aspx", 15)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=mobile.aspx" data-index="15" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=mobile.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=mobile.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -872,7 +872,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/Mescommandes.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/Mescommandes.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/Mescommandes.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -882,10 +882,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/Mescommandes.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/Mescommandes.aspx", 16)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/Mescommandes.aspx" data-index="16" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/Mescommandes.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/Mescommandes.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -913,7 +913,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/mesba.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/mesba.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/mesba.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -923,10 +923,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/mesba.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/mesba.aspx", 17)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/mesba.aspx" data-index="17" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=MonCompte/mesba.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=MonCompte/mesba.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -954,7 +954,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -964,10 +964,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx", 18)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" data-index="18" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -995,7 +995,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1005,10 +1005,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1", 19)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1" data-index="19" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1036,7 +1036,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universmaison%3fu%3d4%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universmaison%3fu%3d4%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universmaison%3fu%3d4%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1046,10 +1046,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universmaison%3fu%3d4%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universmaison%3fu%3d4%3Fwebview%3D1", 20)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universmaison%3fu%3d4%3Fwebview%3D1" data-index="20" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universmaison%3fu%3d4%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universmaison%3fu%3d4%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1077,7 +1077,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilvoyage.aspx%3fu%3d5</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilvoyage.aspx%3fu%3d5")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilvoyage.aspx%3fu%3d5" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1087,10 +1087,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilvoyage.aspx%3fu%3d5</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilvoyage.aspx%3fu%3d5", 21)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilvoyage.aspx%3fu%3d5" data-index="21" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilvoyage.aspx%3fu%3d5")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilvoyage.aspx%3fu%3d5" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1118,7 +1118,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1128,10 +1128,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1", 22)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1" data-index="22" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1159,7 +1159,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1169,10 +1169,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1", 23)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1" data-index="23" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1200,7 +1200,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1210,10 +1210,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1", 24)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" data-index="24" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1241,7 +1241,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1251,10 +1251,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1", 25)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" data-index="25" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1282,7 +1282,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilbilletterie.aspx%3fu%3d9</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilbilletterie.aspx%3fu%3d9")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilbilletterie.aspx%3fu%3d9" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1292,10 +1292,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilbilletterie.aspx%3fu%3d9</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilbilletterie.aspx%3fu%3d9", 26)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilbilletterie.aspx%3fu%3d9" data-index="26" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=accueilbilletterie.aspx%3fu%3d9")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=accueilbilletterie.aspx%3fu%3d9" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1323,7 +1323,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/legrandmarche%3fu%3d161</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/legrandmarche%3fu%3d161")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/legrandmarche%3fu%3d161" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1333,10 +1333,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/legrandmarche%3fu%3d161</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/legrandmarche%3fu%3d161", 27)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/legrandmarche%3fu%3d161" data-index="27" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=univers-srp/legrandmarche%3fu%3d161")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=univers-srp/legrandmarche%3fu%3d161" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1364,7 +1364,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=outlet.aspx%3fu%3d8</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=outlet.aspx%3fu%3d8")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=outlet.aspx%3fu%3d8" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1374,10 +1374,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=outlet.aspx%3fu%3d8</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=outlet.aspx%3fu%3d8", 28)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=outlet.aspx%3fu%3d8" data-index="28" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%\u0026p=%%Member Encrypted Password%%\u0026direction=outlet.aspx%3fu%3d8")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&amp;p=%%Member Encrypted Password%%&amp;direction=outlet.aspx%3fu%3d8" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1405,7 +1405,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1415,10 +1415,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx", 29)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" data-index="29" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%\u0026p=%%Member Encrypted Password%%\u0026direction=moncompte/mespreferences.aspx")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&amp;p=%%Member Encrypted Password%%&amp;direction=moncompte/mespreferences.aspx" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>

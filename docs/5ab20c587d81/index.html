@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated"></code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "")">
+                                    <button class="btn-card" title="Copy URL" data-url="" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -256,7 +256,7 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url"></code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "")">
+                                                <button class="btn-card" title="Copy URL" data-url="" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -275,7 +275,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://api.getinside.media/v1/emails/track/694a98b8910e8</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/694a98b8910e8")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://api.getinside.media/v1/emails/track/694a98b8910e8" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -285,7 +285,7 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://api.getinside.media/v1/emails/track/694a98b8910e8</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://api.getinside.media/v1/emails/track/694a98b8910e8")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://api.getinside.media/v1/emails/track/694a98b8910e8" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -319,7 +319,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">${webversion}</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "${webversion}")">
+                                    <button class="btn-card" title="Copy URL" data-url="${webversion}" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -329,10 +329,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">${webversion}</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "${webversion}", 1)">
+                                                <button class="btn-card" title="Verify Link" data-url="${webversion}" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "${webversion}")">
+                                                <button class="btn-card" title="Copy URL" data-url="${webversion}" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -360,7 +360,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">${unsubscribe}</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "${unsubscribe}")">
+                                    <button class="btn-card" title="Copy URL" data-url="${unsubscribe}" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -370,10 +370,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">${unsubscribe}</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "${unsubscribe}", 2)">
+                                                <button class="btn-card" title="Verify Link" data-url="${unsubscribe}" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "${unsubscribe}")">
+                                                <button class="btn-card" title="Copy URL" data-url="${unsubscribe}" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -401,7 +401,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -411,10 +411,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/", 3)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -442,7 +442,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/chaussures-de-football</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/chaussures-de-football")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/chaussures-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -452,10 +452,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/chaussures-de-football</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/chaussures-de-football", 4)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/chaussures-de-football" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/chaussures-de-football")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/chaussures-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -483,7 +483,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/boutique-de-supporters-de-football</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/boutique-de-supporters-de-football")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/boutique-de-supporters-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -493,10 +493,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/boutique-de-supporters-de-football</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/boutique-de-supporters-de-football", 5)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/boutique-de-supporters-de-football" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/boutique-de-supporters-de-football")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/boutique-de-supporters-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -524,7 +524,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/equipements-de-football/ballons-de-football</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/equipements-de-football/ballons-de-football")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/equipements-de-football/ballons-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -534,10 +534,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/equipements-de-football/ballons-de-football</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/equipements-de-football/ballons-de-football", 6)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/equipements-de-football/ballons-de-football" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/equipements-de-football/ballons-de-football")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/equipements-de-football/ballons-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -565,7 +565,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/equipements-de-football</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/equipements-de-football")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/equipements-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -575,10 +575,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/equipements-de-football</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/equipements-de-football", 7)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/equipements-de-football" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/equipements-de-football")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/equipements-de-football" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -606,7 +606,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/destockage</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/destockage")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/destockage" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -616,10 +616,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/destockage</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/destockage", 8)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/destockage" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/destockage")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/destockage" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -647,7 +647,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/694a98b88f1c5</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -657,10 +657,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/694a98b88f1c5</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/694a98b88f1c5", 9)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/694a98b88f1c5" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -688,7 +688,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/694a98b88f1c5</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -698,10 +698,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/694a98b88f1c5</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/694a98b88f1c5", 10)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/694a98b88f1c5" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -729,7 +729,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b12f9cc</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -739,10 +739,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b12f9cc</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b12f9cc", 11)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b12f9cc" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -770,7 +770,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b12f9cc</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -780,10 +780,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b12f9cc</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b12f9cc", 12)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b12f9cc" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -811,7 +811,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b12f9cc</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -821,10 +821,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b12f9cc</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b12f9cc", 13)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b12f9cc" data-index="13" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b12f9cc")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b12f9cc" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -852,7 +852,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -862,10 +862,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 14)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/695eaf462d955" data-index="14" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -893,7 +893,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b41d89f</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -903,10 +903,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b41d89f</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b41d89f", 15)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b41d89f" data-index="15" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -934,7 +934,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b41d89f</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -944,10 +944,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b41d89f</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b41d89f", 16)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b41d89f" data-index="16" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -975,7 +975,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4b41d89f</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -985,10 +985,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4b41d89f</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4b41d89f", 17)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4b41d89f" data-index="17" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4b41d89f")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4b41d89f" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1016,7 +1016,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1026,10 +1026,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 18)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/695eaf462d955" data-index="18" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1057,7 +1057,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4bf7a605</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1067,10 +1067,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4bf7a605</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4bf7a605", 19)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4bf7a605" data-index="19" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1098,7 +1098,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4bf7a605</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1108,10 +1108,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4bf7a605</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4bf7a605", 20)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4bf7a605" data-index="20" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1139,7 +1139,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/6967a4bf7a605</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1149,10 +1149,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/6967a4bf7a605</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/6967a4bf7a605", 21)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/6967a4bf7a605" data-index="21" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/6967a4bf7a605")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/6967a4bf7a605" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1180,7 +1180,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462d955</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1190,10 +1190,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/695eaf462d955</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462d955", 22)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/695eaf462d955" data-index="22" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462d955")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462d955" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1221,7 +1221,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/695eaf462ebf4</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462ebf4" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1231,10 +1231,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/695eaf462ebf4</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/695eaf462ebf4", 23)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/695eaf462ebf4" data-index="23" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/695eaf462ebf4")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/695eaf462ebf4" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1262,7 +1262,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://gtinsi.de/694a98b88f1c5</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1272,10 +1272,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://gtinsi.de/694a98b88f1c5</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://gtinsi.de/694a98b88f1c5", 24)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://gtinsi.de/694a98b88f1c5" data-index="24" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://gtinsi.de/694a98b88f1c5")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://gtinsi.de/694a98b88f1c5" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1303,7 +1303,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://foot-store.fr/contact_form/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/contact_form/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/contact_form/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1313,10 +1313,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://foot-store.fr/contact_form/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://foot-store.fr/contact_form/", 25)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://foot-store.fr/contact_form/" data-index="25" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://foot-store.fr/contact_form/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://foot-store.fr/contact_form/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1344,7 +1344,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.facebook.com/footstore75/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.facebook.com/footstore75/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.facebook.com/footstore75/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1354,10 +1354,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.facebook.com/footstore75/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.facebook.com/footstore75/", 26)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.facebook.com/footstore75/" data-index="26" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.facebook.com/footstore75/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.facebook.com/footstore75/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1385,7 +1385,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://x.com/FootStore75</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://x.com/FootStore75")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://x.com/FootStore75" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1395,10 +1395,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://x.com/FootStore75</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://x.com/FootStore75", 27)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://x.com/FootStore75" data-index="27" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://x.com/FootStore75")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://x.com/FootStore75" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1426,7 +1426,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.instagram.com/footstorefr/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.instagram.com/footstorefr/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.instagram.com/footstorefr/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1436,10 +1436,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.instagram.com/footstorefr/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.instagram.com/footstorefr/", 28)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.instagram.com/footstorefr/" data-index="28" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.instagram.com/footstorefr/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.instagram.com/footstorefr/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
@@ -1467,7 +1467,7 @@
                                 </div>
                                 <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <code class="card-v2-url-truncated">https://www.getinside.fr/</code>
-                                    <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.getinside.fr/")">
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.getinside.fr/" onclick="event.stopPropagation(); copyLink(this)">
                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                     </button>
                                 </div>
@@ -1477,10 +1477,10 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">https://www.getinside.fr/</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
-                                                <button class="btn-card" title="Verify Link" onclick="event.stopPropagation(); runAudit(this, "https://www.getinside.fr/", 29)">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.getinside.fr/" data-index="29" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
-                                                <button class="btn-card" title="Copy URL" onclick="event.stopPropagation(); copyLink(this, "https://www.getinside.fr/")">
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.getinside.fr/" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
