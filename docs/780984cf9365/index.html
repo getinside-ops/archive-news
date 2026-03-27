@@ -95,9 +95,32 @@
 
             <!-- Email Content -->
             <div class="viewer-content">
-                <div id="deviceFrame" data-mode="mobile"
-                    style="width: 100%; max-width: 375px; height: 100%; transition: max-width 0.3s ease;">
-                    <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
+                <div id="deviceFrame" class="device-mockup" data-mode="mobile">
+                    <!-- Desktop browser chrome -->
+                    <div class="dm-browser-bar">
+                        <div class="dm-traffic-lights">
+                            <div class="dm-dot dm-dot-close"></div>
+                            <div class="dm-dot dm-dot-min"></div>
+                            <div class="dm-dot dm-dot-max"></div>
+                        </div>
+                        <div class="dm-tab">
+                            <div class="dm-tab-favicon"></div>
+                            <span>[TEST] Offrez un colis deNoël pour un aîné isolé et illuminez sonréveillon !</span>
+                        </div>
+                        <div class="dm-address-bar">&#34;MonJardinBio.com&#34; &lt;contact@monjardinbio.com&gt;</div>
+                    </div>
+                    <!-- Mobile/Tablet status bar + notch -->
+                    <div class="dm-status-bar">
+                        <div class="dm-notch"></div>
+                    </div>
+                    <!-- Email screen -->
+                    <div class="dm-screen">
+                        <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
+                    </div>
+                    <!-- Bottom home bar -->
+                    <div class="dm-chrome-bottom">
+                        <div class="dm-home-indicator"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -387,16 +410,12 @@
             const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
             if (btn) btn.classList.add('active');
 
-            // Remove/add scrollbar class
-            if (mode === 'mobile') {
-                frameEl.style.maxWidth = '375px';
-                iframeEl.classList.add('no-scrollbar');
-            } else if (mode === 'tablet') {
-                frameEl.style.maxWidth = '600px';
-                iframeEl.classList.add('no-scrollbar');
-            } else {
-                frameEl.style.maxWidth = '800px';
+            // Switch mode — CSS handles sizing via data-mode attribute
+            frameEl.dataset.mode = mode;
+            if (mode === 'desktop') {
                 iframeEl.classList.remove('no-scrollbar');
+            } else {
+                iframeEl.classList.add('no-scrollbar');
             }
 
             // Update overlays if visible
@@ -619,7 +638,8 @@
 
 
 
-        function copyLink(btn, url) {
+        function copyLink(btn) {
+            const url = btn.dataset.url;
             navigator.clipboard.writeText(url).then(() => {
                 const originalHtml = btn.innerHTML;
                 // Temporarily show checkmark
@@ -633,7 +653,9 @@
             });
         }
 
-        async function runAudit(btn, url, index) {
+        async function runAudit(btn) {
+            const url = btn.dataset.url;
+            const index = parseInt(btn.dataset.index);
             // Find parent elements
             const cardBody = btn.closest('.card-v2-body');
             const logContainer = cardBody.querySelector('.audit-log-container');
