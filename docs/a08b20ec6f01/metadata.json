@@ -20,683 +20,275 @@
             "index": 1,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
-            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/jD_wZ_NmWKgQcn386krsxw~~/AABGZBA~/wubcdki4-hOC5xSol4Iriy627-Ore6IWcWr_O0no6FFUqdsYNVszc0OeMX8vQs0y1uXXc0yRxlh7ToisEhG133NuXO3b1fHROOLNYCYtVAlRiq7ohO9FXGH-vVqhHXZ2U9iqU3lCBXqmd6EAoDvE9uDAc-zlq3IAxujv9mE9R8KVcxSnjn6mk79Dz6bVWzuWBkgYjvd-Bce3m7JOhtbE--1D6BrxbLfgiJOYz5hqrW0~",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fyooji-16",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/jD_wZ_NmWKgQcn386krsxw~~/AABGZBA~/wubcdki4-hOC5xSol4Iriy627-Ore6IWcWr_O0no6FFUqdsYNVszc0OeMX8vQs0y1uXXc0yRxlh7ToisEhG133NuXO3b1fHROOLNYCYtVAlRiq7ohO9FXGH-vVqhHXZ2U9iqU3lCBXqmd6EAoDvE9uDAc-zlq3IAxujv9mE9R8KVcxSnjn6mk79Dz6bVWzuWBkgYjvd-Bce3m7JOhtbE--1D6BrxbLfgiJOYz5hqrW0~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/jD_wZ_NmWKgQcn386krsxw~~/AABGZBA~/wubcdki4-hOC5xSol4Iriy627-Ore6IWcWr_O0no6FFUqdsYNVszc0OeMX8vQs0y1uXXc0yRxlh7ToisEhG133NuXO3b1fHROOLNYCYtVAlRiq7ohO9FXGH-vVqhHXZ2U9iqU3lCBXqmd6EAoDvE9uDAc-zlq3IAxujv9mE9R8KVcxSnjn6mk79Dz6bVWzuWBkgYjvd-Bce3m7JOhtbE--1D6BrxbLfgiJOYz5hqrW0~"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/yooji-16?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4613"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/yooji-16?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4613"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fyooji-16"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/HXQVT_8zViZLg3mJj6O_gQ~~/AABGZBA~/YFLyJy6tpyg5e1kl89DdRh0I8dd99r2AmjREdG9PoYnjzLeyJiGGs_ioPxPZ2UPCP2oQxx5L_KBkqp06nPth788egvrhOdlKD6W1kAZ-eVjIt_qSuqLW94NCzcvtXTBv35xI-vArqRWOeQfqljwAqUUrmuNxz1hyY-13MqUlB1f9mdJmo_peHWaQLkyS-Z68QERao0blUM0iVMR8-ZHiKRzogUMsBw_GI7E1jI1L-trbShUS2-FIOSrFzfu1R-aKcJSGudjkpq4KI0OtVq9Pbg~~",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fatmosphera-for-kids-11-2025",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/HXQVT_8zViZLg3mJj6O_gQ~~/AABGZBA~/YFLyJy6tpyg5e1kl89DdRh0I8dd99r2AmjREdG9PoYnjzLeyJiGGs_ioPxPZ2UPCP2oQxx5L_KBkqp06nPth788egvrhOdlKD6W1kAZ-eVjIt_qSuqLW94NCzcvtXTBv35xI-vArqRWOeQfqljwAqUUrmuNxz1hyY-13MqUlB1f9mdJmo_peHWaQLkyS-Z68QERao0blUM0iVMR8-ZHiKRzogUMsBw_GI7E1jI1L-trbShUS2-FIOSrFzfu1R-aKcJSGudjkpq4KI0OtVq9Pbg~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/HXQVT_8zViZLg3mJj6O_gQ~~/AABGZBA~/YFLyJy6tpyg5e1kl89DdRh0I8dd99r2AmjREdG9PoYnjzLeyJiGGs_ioPxPZ2UPCP2oQxx5L_KBkqp06nPth788egvrhOdlKD6W1kAZ-eVjIt_qSuqLW94NCzcvtXTBv35xI-vArqRWOeQfqljwAqUUrmuNxz1hyY-13MqUlB1f9mdJmo_peHWaQLkyS-Z68QERao0blUM0iVMR8-ZHiKRzogUMsBw_GI7E1jI1L-trbShUS2-FIOSrFzfu1R-aKcJSGudjkpq4KI0OtVq9Pbg~~"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/atmosphera-for-kids-11-2025?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4648"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/atmosphera-for-kids-11-2025?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4648"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fatmosphera-for-kids-11-2025"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/DZ-MBpfMEPHPdjNLzY1BIg~~/AABGZBA~/e7T1B_avnQAFeYCFbmXRTDCillXBucwQ4LdqLzpeCIF2oKLwJid-HWWgL_14SRKoU6RF5kkxmtTjba_FGXzlvRWBkhpteNrNW58MIsd1Ss19oAG7JSDmPiO0IG43djJoLKRyD3zXN5Cb1mo6nhkg7Y3NAr7psozFgNj1mz3nbBkEoL1jp3D7MOmwxSMa_8tTQLEfPoVoOq9LY8BFwJXIW9T8bS4Jba_9Cl5-2vNTUX6qDS2Oe6TA3SyYubRTtSI-",
-            "final_url": "https://www.bebeboutik-prive.fr/pages/owlet?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4657",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/DZ-MBpfMEPHPdjNLzY1BIg~~/AABGZBA~/e7T1B_avnQAFeYCFbmXRTDCillXBucwQ4LdqLzpeCIF2oKLwJid-HWWgL_14SRKoU6RF5kkxmtTjba_FGXzlvRWBkhpteNrNW58MIsd1Ss19oAG7JSDmPiO0IG43djJoLKRyD3zXN5Cb1mo6nhkg7Y3NAr7psozFgNj1mz3nbBkEoL1jp3D7MOmwxSMa_8tTQLEfPoVoOq9LY8BFwJXIW9T8bS4Jba_9Cl5-2vNTUX6qDS2Oe6TA3SyYubRTtSI-",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/DZ-MBpfMEPHPdjNLzY1BIg~~/AABGZBA~/e7T1B_avnQAFeYCFbmXRTDCillXBucwQ4LdqLzpeCIF2oKLwJid-HWWgL_14SRKoU6RF5kkxmtTjba_FGXzlvRWBkhpteNrNW58MIsd1Ss19oAG7JSDmPiO0IG43djJoLKRyD3zXN5Cb1mo6nhkg7Y3NAr7psozFgNj1mz3nbBkEoL1jp3D7MOmwxSMa_8tTQLEfPoVoOq9LY8BFwJXIW9T8bS4Jba_9Cl5-2vNTUX6qDS2Oe6TA3SyYubRTtSI-"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/pages/owlet?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4657"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/oVLcmvfzPQE6qYd6u0ZkxA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCORTt85vnqnBpEyzCszNLMzZJ5-I7KaGT-t1OeBCw3u-d0ARv877AqZIYJl1f-hrIo4V3-Mo1e8dtf9O7BV4eLhhxPy0WwSpKxlygYe_S13Qtlru0zbvQW1b0X6MjXHMP08os58JDt_ENXgq_OXF_jVMj6i25y51RUO4FEKSG3tbOjNaTK7bUbvgun3sVQUGNUJPAuBoAlWNlUgmXEy7c3g",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdouceur-d-interieur-12",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/oVLcmvfzPQE6qYd6u0ZkxA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCORTt85vnqnBpEyzCszNLMzZJ5-I7KaGT-t1OeBCw3u-d0ARv877AqZIYJl1f-hrIo4V3-Mo1e8dtf9O7BV4eLhhxPy0WwSpKxlygYe_S13Qtlru0zbvQW1b0X6MjXHMP08os58JDt_ENXgq_OXF_jVMj6i25y51RUO4FEKSG3tbOjNaTK7bUbvgun3sVQUGNUJPAuBoAlWNlUgmXEy7c3g",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/oVLcmvfzPQE6qYd6u0ZkxA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCORTt85vnqnBpEyzCszNLMzZJ5-I7KaGT-t1OeBCw3u-d0ARv877AqZIYJl1f-hrIo4V3-Mo1e8dtf9O7BV4eLhhxPy0WwSpKxlygYe_S13Qtlru0zbvQW1b0X6MjXHMP08os58JDt_ENXgq_OXF_jVMj6i25y51RUO4FEKSG3tbOjNaTK7bUbvgun3sVQUGNUJPAuBoAlWNlUgmXEy7c3g"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/douceur-d-interieur-12?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4658"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/douceur-d-interieur-12?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4658"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdouceur-d-interieur-12"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/Pn7WBfqPXVxrrJNVRL-7lQ~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZVglwYblbDFgS53UUVdQ1IeQ_0JlAykpfk5wRH8bZBor1EVwe5KzKrGczdq1-Y-RB4kxt2Wa7d7YSukjKaOYO3AB5QxWjK-GMvAGCp3lOHTLJhQ8Eyh8AQM-1B9UmftVMbtF-L8ubV5-cMOzTJRCTPiRyZ3_QdHjZKcFyyDjJQFjFImnvz90MA2hWahiAruDaZh7kHmdD1ZBO-ZP8klNKh",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdomiva-11",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/Pn7WBfqPXVxrrJNVRL-7lQ~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZVglwYblbDFgS53UUVdQ1IeQ_0JlAykpfk5wRH8bZBor1EVwe5KzKrGczdq1-Y-RB4kxt2Wa7d7YSukjKaOYO3AB5QxWjK-GMvAGCp3lOHTLJhQ8Eyh8AQM-1B9UmftVMbtF-L8ubV5-cMOzTJRCTPiRyZ3_QdHjZKcFyyDjJQFjFImnvz90MA2hWahiAruDaZh7kHmdD1ZBO-ZP8klNKh",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/Pn7WBfqPXVxrrJNVRL-7lQ~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZVglwYblbDFgS53UUVdQ1IeQ_0JlAykpfk5wRH8bZBor1EVwe5KzKrGczdq1-Y-RB4kxt2Wa7d7YSukjKaOYO3AB5QxWjK-GMvAGCp3lOHTLJhQ8Eyh8AQM-1B9UmftVMbtF-L8ubV5-cMOzTJRCTPiRyZ3_QdHjZKcFyyDjJQFjFImnvz90MA2hWahiAruDaZh7kHmdD1ZBO-ZP8klNKh"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/domiva-11?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4622"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/domiva-11?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4622"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdomiva-11"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/RlL1juDYfIhlwjVSGul8Ew~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHSZLCwt2TxVaL6WYq2jZ5Oz8rU9Ae_RhKvmu-K9_GwvhVA7Ifu0gpVsLwb3tMs011MYpyjCVOtYY7G4OtUi8mysE-s3FR_5xCT2I5RIY9G_wN9aHMmo3asDloiL_Vk-00hCOn8YR7Ui7kBO_5c8g1Sdi1aCyo74HQYxhxaC-nCd3VX9zu1aAWjDBnBEzna7Vc7FtUbN27rkWig3Bq3DgjG_q9CHlhgOoO6Aou2WROCGew~~",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fma-petite-bibliotheque-11-2025",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/RlL1juDYfIhlwjVSGul8Ew~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHSZLCwt2TxVaL6WYq2jZ5Oz8rU9Ae_RhKvmu-K9_GwvhVA7Ifu0gpVsLwb3tMs011MYpyjCVOtYY7G4OtUi8mysE-s3FR_5xCT2I5RIY9G_wN9aHMmo3asDloiL_Vk-00hCOn8YR7Ui7kBO_5c8g1Sdi1aCyo74HQYxhxaC-nCd3VX9zu1aAWjDBnBEzna7Vc7FtUbN27rkWig3Bq3DgjG_q9CHlhgOoO6Aou2WROCGew~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/RlL1juDYfIhlwjVSGul8Ew~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHSZLCwt2TxVaL6WYq2jZ5Oz8rU9Ae_RhKvmu-K9_GwvhVA7Ifu0gpVsLwb3tMs011MYpyjCVOtYY7G4OtUi8mysE-s3FR_5xCT2I5RIY9G_wN9aHMmo3asDloiL_Vk-00hCOn8YR7Ui7kBO_5c8g1Sdi1aCyo74HQYxhxaC-nCd3VX9zu1aAWjDBnBEzna7Vc7FtUbN27rkWig3Bq3DgjG_q9CHlhgOoO6Aou2WROCGew~~"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/ma-petite-bibliotheque-11-2025?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4635"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/ma-petite-bibliotheque-11-2025?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4635"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fma-petite-bibliotheque-11-2025"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/qPuMgLsrCC5HAwnsC8Q7KA~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHRvWWLrjPQxJdRsI66MSpMMlba4s1QudXhvXk9FAHWQnFiv772yF8m4R6-0qWeyc_Nr7BOLYqxXgr_anP1_tjgnCnXjvaSDg9EbIN9D4JWGyMkRQ5xltbdXTjlulSXUTDOoflSOsKpPEB8vxRAEI-K5U16AvdtkFJCxa8c8zWCLbj-nJTvdVBlwyyDLSamHktLF1u5uxkvtKCAu1c3BZdDS8p5faMoru_dyQXw7-zJweQ~~",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fidees-cadeaux-par-l-idealliste",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/qPuMgLsrCC5HAwnsC8Q7KA~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHRvWWLrjPQxJdRsI66MSpMMlba4s1QudXhvXk9FAHWQnFiv772yF8m4R6-0qWeyc_Nr7BOLYqxXgr_anP1_tjgnCnXjvaSDg9EbIN9D4JWGyMkRQ5xltbdXTjlulSXUTDOoflSOsKpPEB8vxRAEI-K5U16AvdtkFJCxa8c8zWCLbj-nJTvdVBlwyyDLSamHktLF1u5uxkvtKCAu1c3BZdDS8p5faMoru_dyQXw7-zJweQ~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/qPuMgLsrCC5HAwnsC8Q7KA~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHRvWWLrjPQxJdRsI66MSpMMlba4s1QudXhvXk9FAHWQnFiv772yF8m4R6-0qWeyc_Nr7BOLYqxXgr_anP1_tjgnCnXjvaSDg9EbIN9D4JWGyMkRQ5xltbdXTjlulSXUTDOoflSOsKpPEB8vxRAEI-K5U16AvdtkFJCxa8c8zWCLbj-nJTvdVBlwyyDLSamHktLF1u5uxkvtKCAu1c3BZdDS8p5faMoru_dyQXw7-zJweQ~~"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/idees-cadeaux-par-l-idealliste?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4652"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/idees-cadeaux-par-l-idealliste?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4652"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fidees-cadeaux-par-l-idealliste"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/Wnnock6X_a6e0EyBF_-eLA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCNpYy480Y0byerKWJ8eow4HBFSMm1OUZjwvQLY0CITmWnFHgv_K2q0xqXo6BGqx_HMw8EBlMnMKAqjktwQmjWCmJUZsF94r8Ckb9XjACkT9iFiNojBfcZLgnSbscjmgR7r2i-yFDqcFrFbfKwv2sOy5VumgrnZyk95xRLgarso7w8FyqNFbtmXGKO_iDkTe31ij07BDC4nizX7oQs1ujoSj",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fle-roi-du-t-shirt-co-3",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/Wnnock6X_a6e0EyBF_-eLA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCNpYy480Y0byerKWJ8eow4HBFSMm1OUZjwvQLY0CITmWnFHgv_K2q0xqXo6BGqx_HMw8EBlMnMKAqjktwQmjWCmJUZsF94r8Ckb9XjACkT9iFiNojBfcZLgnSbscjmgR7r2i-yFDqcFrFbfKwv2sOy5VumgrnZyk95xRLgarso7w8FyqNFbtmXGKO_iDkTe31ij07BDC4nizX7oQs1ujoSj",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/Wnnock6X_a6e0EyBF_-eLA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCNpYy480Y0byerKWJ8eow4HBFSMm1OUZjwvQLY0CITmWnFHgv_K2q0xqXo6BGqx_HMw8EBlMnMKAqjktwQmjWCmJUZsF94r8Ckb9XjACkT9iFiNojBfcZLgnSbscjmgR7r2i-yFDqcFrFbfKwv2sOy5VumgrnZyk95xRLgarso7w8FyqNFbtmXGKO_iDkTe31ij07BDC4nizX7oQs1ujoSj"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/le-roi-du-t-shirt-co-3?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4614"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/le-roi-du-t-shirt-co-3?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4614"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fle-roi-du-t-shirt-co-3"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/sql-Ms2x7UE0n19abwUGiA~~/AABGZBA~/RGXpvdXpOWOpco58BlE2OkyCM0j9Lu5vKn6ahfn4yUXdVRe3efZTXwq7ZahQvMzI4CLqllqIIKKKF6cdYL55U2CcDrOu7MgMZOQA8SjDLWdBquuuUzGUKrtGUPzWxsgUc28hUbDLo4nmrTk4An6EbDInsoMlhgTIxr0VQMy97jfrQzuBAxAK6vq0FMuhhW6Zp64IdxZrdMo-GkclDKSXvONVichPlbhXzAtOOd_BmRZyg8II9fynTUdV7ctARHEY",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fminiland-4",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/sql-Ms2x7UE0n19abwUGiA~~/AABGZBA~/RGXpvdXpOWOpco58BlE2OkyCM0j9Lu5vKn6ahfn4yUXdVRe3efZTXwq7ZahQvMzI4CLqllqIIKKKF6cdYL55U2CcDrOu7MgMZOQA8SjDLWdBquuuUzGUKrtGUPzWxsgUc28hUbDLo4nmrTk4An6EbDInsoMlhgTIxr0VQMy97jfrQzuBAxAK6vq0FMuhhW6Zp64IdxZrdMo-GkclDKSXvONVichPlbhXzAtOOd_BmRZyg8II9fynTUdV7ctARHEY",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/sql-Ms2x7UE0n19abwUGiA~~/AABGZBA~/RGXpvdXpOWOpco58BlE2OkyCM0j9Lu5vKn6ahfn4yUXdVRe3efZTXwq7ZahQvMzI4CLqllqIIKKKF6cdYL55U2CcDrOu7MgMZOQA8SjDLWdBquuuUzGUKrtGUPzWxsgUc28hUbDLo4nmrTk4An6EbDInsoMlhgTIxr0VQMy97jfrQzuBAxAK6vq0FMuhhW6Zp64IdxZrdMo-GkclDKSXvONVichPlbhXzAtOOd_BmRZyg8II9fynTUdV7ctARHEY"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/miniland-4?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4626"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/miniland-4?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4626"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fminiland-4"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "EN VOIR PLUS",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
-            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/H-JviqT9g3ACVN8f28oRrA~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZURXWfHLCW8TG3_KDpAxoY8DbFLF-R7-iQLkCdAQWKBJsLkhcqxwlGJenEISiSoMtEqsNWQvuuKWqABrftNJp-0MBmyHjm0TVY4fHlxi2vqnNQ89UBUz0L7UrnVdLjSC8SPZNLbDHIqEeSOtn67147lBhLFWuc3fYQ99KW4qWtBwKLPQUT3n4C6pmCmfCKOA3A6NLiPUcuPjokw0akawc-",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fpopote-12",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/H-JviqT9g3ACVN8f28oRrA~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZURXWfHLCW8TG3_KDpAxoY8DbFLF-R7-iQLkCdAQWKBJsLkhcqxwlGJenEISiSoMtEqsNWQvuuKWqABrftNJp-0MBmyHjm0TVY4fHlxi2vqnNQ89UBUz0L7UrnVdLjSC8SPZNLbDHIqEeSOtn67147lBhLFWuc3fYQ99KW4qWtBwKLPQUT3n4C6pmCmfCKOA3A6NLiPUcuPjokw0akawc-",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/H-JviqT9g3ACVN8f28oRrA~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZURXWfHLCW8TG3_KDpAxoY8DbFLF-R7-iQLkCdAQWKBJsLkhcqxwlGJenEISiSoMtEqsNWQvuuKWqABrftNJp-0MBmyHjm0TVY4fHlxi2vqnNQ89UBUz0L7UrnVdLjSC8SPZNLbDHIqEeSOtn67147lBhLFWuc3fYQ99KW4qWtBwKLPQUT3n4C6pmCmfCKOA3A6NLiPUcuPjokw0akawc-"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/popote-12?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4580"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/popote-12?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4580"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fpopote-12"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/SxJeCz6miS07LyOw2ACASw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M1_sw5dkcWGiA4__kBdL4PBsKs57fhP3g8RDJdhzp8kopTyfY6vT16dOw0urb1q1dTaivoH9XKst1tz11bmwSKP4HRVHoknOipponS1FcFnOrXCn2BATqdYs4sDllmOYgt-u_SGziwagel-DybxNbCcjvGegffN48QG5B0UjbjHd1g0NSLaOhbFAGspgX21v9pIggtMnhUxS4Urg6YHFP_b",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fjolly-mama-13",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/SxJeCz6miS07LyOw2ACASw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M1_sw5dkcWGiA4__kBdL4PBsKs57fhP3g8RDJdhzp8kopTyfY6vT16dOw0urb1q1dTaivoH9XKst1tz11bmwSKP4HRVHoknOipponS1FcFnOrXCn2BATqdYs4sDllmOYgt-u_SGziwagel-DybxNbCcjvGegffN48QG5B0UjbjHd1g0NSLaOhbFAGspgX21v9pIggtMnhUxS4Urg6YHFP_b",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/SxJeCz6miS07LyOw2ACASw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M1_sw5dkcWGiA4__kBdL4PBsKs57fhP3g8RDJdhzp8kopTyfY6vT16dOw0urb1q1dTaivoH9XKst1tz11bmwSKP4HRVHoknOipponS1FcFnOrXCn2BATqdYs4sDllmOYgt-u_SGziwagel-DybxNbCcjvGegffN48QG5B0UjbjHd1g0NSLaOhbFAGspgX21v9pIggtMnhUxS4Urg6YHFP_b"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/jolly-mama-13?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4589"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/jolly-mama-13?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4589"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fjolly-mama-13"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 14,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/pUkwbNGHr3pGby932zlwSw~~/AABGZBA~/fX0uY7XinMAVbh2K3WraALXAXzuoqK2IwzS3HAVPvb3KRJSbc13nCompy6v4QTqyUgexzTebfwaXQpguRBK0vw156ZmWhLIu0Tbr6GJBY2FnR7NJO4sCWeI5mZWdLnkczQeW3M49R7UaAcgYC0a5quOOzNFwx8CmlOr2CCzkuPnmChjTC1BV86CfMtU7yZ-JGak5e0dDxErgFzj6qyGErCv0H4ZPbUsJafmLM7apubyAX_TO_E0Sc-ixvzzoS-rw",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdoudou-compagnie-7",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/pUkwbNGHr3pGby932zlwSw~~/AABGZBA~/fX0uY7XinMAVbh2K3WraALXAXzuoqK2IwzS3HAVPvb3KRJSbc13nCompy6v4QTqyUgexzTebfwaXQpguRBK0vw156ZmWhLIu0Tbr6GJBY2FnR7NJO4sCWeI5mZWdLnkczQeW3M49R7UaAcgYC0a5quOOzNFwx8CmlOr2CCzkuPnmChjTC1BV86CfMtU7yZ-JGak5e0dDxErgFzj6qyGErCv0H4ZPbUsJafmLM7apubyAX_TO_E0Sc-ixvzzoS-rw",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/pUkwbNGHr3pGby932zlwSw~~/AABGZBA~/fX0uY7XinMAVbh2K3WraALXAXzuoqK2IwzS3HAVPvb3KRJSbc13nCompy6v4QTqyUgexzTebfwaXQpguRBK0vw156ZmWhLIu0Tbr6GJBY2FnR7NJO4sCWeI5mZWdLnkczQeW3M49R7UaAcgYC0a5quOOzNFwx8CmlOr2CCzkuPnmChjTC1BV86CfMtU7yZ-JGak5e0dDxErgFzj6qyGErCv0H4ZPbUsJafmLM7apubyAX_TO_E0Sc-ixvzzoS-rw"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/doudou-compagnie-7?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4533"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/doudou-compagnie-7?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4533"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fdoudou-compagnie-7"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/GGijNu4cs8dO91HhRVfdyw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M10Z83nRcNNWYGCfUCumnWDzfYd4-snQWIneEF2T094PVZCAJN8fYpXIM-dtkPODFN8ofWPby-t-IWe5Fethr-Qww2faIwwRBnA0kTkEz4zI429-DP0wezFHiiczhJG6EKdZwELFfv3ZjNmWSYLEibucp6q_sqjrwCpQY0QWaiLM4nsn6QHKLPxN2Tu0ofN_JPt1NkCD8kflxGEKN3zhv8J",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Ftwistshake-14",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/GGijNu4cs8dO91HhRVfdyw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M10Z83nRcNNWYGCfUCumnWDzfYd4-snQWIneEF2T094PVZCAJN8fYpXIM-dtkPODFN8ofWPby-t-IWe5Fethr-Qww2faIwwRBnA0kTkEz4zI429-DP0wezFHiiczhJG6EKdZwELFfv3ZjNmWSYLEibucp6q_sqjrwCpQY0QWaiLM4nsn6QHKLPxN2Tu0ofN_JPt1NkCD8kflxGEKN3zhv8J",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/GGijNu4cs8dO91HhRVfdyw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M10Z83nRcNNWYGCfUCumnWDzfYd4-snQWIneEF2T094PVZCAJN8fYpXIM-dtkPODFN8ofWPby-t-IWe5Fethr-Qww2faIwwRBnA0kTkEz4zI429-DP0wezFHiiczhJG6EKdZwELFfv3ZjNmWSYLEibucp6q_sqjrwCpQY0QWaiLM4nsn6QHKLPxN2Tu0ofN_JPt1NkCD8kflxGEKN3zhv8J"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/twistshake-14?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4568"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/twistshake-14?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4568"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Ftwistshake-14"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 16,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/FYPvb73S4cD6tQt441AzcQ~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEV99c08S-1xKr3Lq4E83kAD_q55dKLkoQCbWJtBmtl-Slv0YvC2VWEXeDFUyb1vOWw2KcPrc7k-0iO1GyCXd6nBIUTx1CUMj_1gJiyveaGDDGHKIKUQQPuooW4gX8pDZWbvUVThs6srbS0Qa0MjOlD9zUE3bLkAtr2CN9un3SspLfHt_5esC2TbPBRpCMvr3SZiLrTde8OPVuidxhPopQMR",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fnoel-des-papas-1",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/FYPvb73S4cD6tQt441AzcQ~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEV99c08S-1xKr3Lq4E83kAD_q55dKLkoQCbWJtBmtl-Slv0YvC2VWEXeDFUyb1vOWw2KcPrc7k-0iO1GyCXd6nBIUTx1CUMj_1gJiyveaGDDGHKIKUQQPuooW4gX8pDZWbvUVThs6srbS0Qa0MjOlD9zUE3bLkAtr2CN9un3SspLfHt_5esC2TbPBRpCMvr3SZiLrTde8OPVuidxhPopQMR",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/FYPvb73S4cD6tQt441AzcQ~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEV99c08S-1xKr3Lq4E83kAD_q55dKLkoQCbWJtBmtl-Slv0YvC2VWEXeDFUyb1vOWw2KcPrc7k-0iO1GyCXd6nBIUTx1CUMj_1gJiyveaGDDGHKIKUQQPuooW4gX8pDZWbvUVThs6srbS0Qa0MjOlD9zUE3bLkAtr2CN9un3SspLfHt_5esC2TbPBRpCMvr3SZiLrTde8OPVuidxhPopQMR"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/noel-des-papas-1?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4545"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/noel-des-papas-1?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4545"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Fnoel-des-papas-1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 17,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/MqVG31ZsB4STusimfxuEWg~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEWJDhPFUcvC25RILpTeiQqmcZPN6zSzGycjqUzLaGF6gcRAMKecWVbNTC-CbQgbwXx4t3MBpLBMcnF1LImH911u2YInOkNwU4DIOg0j0Oc85e2WLIcW2CfpagMzP-SP-Gk-0vibW1_Js5f2qkII3hOjPdlntNiEyX-BWtNLGC_HEvDnD_ZajL1Jlkj4wwZ1g19TD5bmGYryQnrMCkPsxD_8",
-            "final_url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Feditions-auzou-1",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/MqVG31ZsB4STusimfxuEWg~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEWJDhPFUcvC25RILpTeiQqmcZPN6zSzGycjqUzLaGF6gcRAMKecWVbNTC-CbQgbwXx4t3MBpLBMcnF1LImH911u2YInOkNwU4DIOg0j0Oc85e2WLIcW2CfpagMzP-SP-Gk-0vibW1_Js5f2qkII3hOjPdlntNiEyX-BWtNLGC_HEvDnD_ZajL1Jlkj4wwZ1g19TD5bmGYryQnrMCkPsxD_8",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/MqVG31ZsB4STusimfxuEWg~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEWJDhPFUcvC25RILpTeiQqmcZPN6zSzGycjqUzLaGF6gcRAMKecWVbNTC-CbQgbwXx4t3MBpLBMcnF1LImH911u2YInOkNwU4DIOg0j0Oc85e2WLIcW2CfpagMzP-SP-Gk-0vibW1_Js5f2qkII3hOjPdlntNiEyX-BWtNLGC_HEvDnD_ZajL1Jlkj4wwZ1g19TD5bmGYryQnrMCkPsxD_8"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr/editions-auzou-1?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4576"
-                },
-                {
-                    "status": 307,
-                    "url": "https://www.bebeboutik-prive.fr/editions-auzou-1?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29&utm_content=4576"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/connexion?callbackUrl=%2Feditions-auzou-1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 18,
             "txt": "TOUTES LES VENTES",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
-            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_quoti&utm_campaign=2025-11-29"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 19,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/w8K8_xBOgHMBrWXm4HTf9w~~/AABGZBA~/j3GyEzXfwX4Ks0aktpd-x3F0FoVhN8pKOV8xDYRmxkvD7p776CXabadzSlTc-83cJE6BETS5BbjJGgtJxF74AAmxzgLRxqxaFfITLW2cziS5ZSWvMpsWdyYNbkTZUs_Y",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/w8K8_xBOgHMBrWXm4HTf9w~~/AABGZBA~/j3GyEzXfwX4Ks0aktpd-x3F0FoVhN8pKOV8xDYRmxkvD7p776CXabadzSlTc-83cJE6BETS5BbjJGgtJxF74AAmxzgLRxqxaFfITLW2cziS5ZSWvMpsWdyYNbkTZUs_Y",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/w8K8_xBOgHMBrWXm4HTf9w~~/AABGZBA~/j3GyEzXfwX4Ks0aktpd-x3F0FoVhN8pKOV8xDYRmxkvD7p776CXabadzSlTc-83cJE6BETS5BbjJGgtJxF74AAmxzgLRxqxaFfITLW2cziS5ZSWvMpsWdyYNbkTZUs_Y"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/bebeboutik/"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 20,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/kgL7sPWxCHCVa-sQhhWpDw~~/AABGZBA~/6e5DnkMWNBlEYLfoVezmqBMLXUigAoMKQvWcecDCnQIYE_aYbhXURYtjfOzIVLlA_NlE-YyhFKEihzw1zn-s8CgnFTARjF9zJTJtVKjha3BcnQdpVhvHVmzpgAG0XMWU",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/kgL7sPWxCHCVa-sQhhWpDw~~/AABGZBA~/6e5DnkMWNBlEYLfoVezmqBMLXUigAoMKQvWcecDCnQIYE_aYbhXURYtjfOzIVLlA_NlE-YyhFKEihzw1zn-s8CgnFTARjF9zJTJtVKjha3BcnQdpVhvHVmzpgAG0XMWU",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/kgL7sPWxCHCVa-sQhhWpDw~~/AABGZBA~/6e5DnkMWNBlEYLfoVezmqBMLXUigAoMKQvWcecDCnQIYE_aYbhXURYtjfOzIVLlA_NlE-YyhFKEihzw1zn-s8CgnFTARjF9zJTJtVKjha3BcnQdpVhvHVmzpgAG0XMWU"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/bebeboutik/"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 21,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/UaJutZZkLmgbSkINVsiogg~~/AABGZBA~/CLEEgWf9Dcos9ukAJsIzABV3zTUMkkIgpgiBy5f-14NRB05Q43_2NFziK91prtLBHLOvw7Mo7U_fX4T9OY7nIqhcPDkSPTs8HM1hpcudcF-HJtgLMeq68WDxaoNClr_cfofPVgDu8uaAjN1lfJ760qYDTnOkCuhz4p7vCwOtlqY~",
-            "final_url": "https://play.google.com/store/apps/details?id=com.bebeboutik",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/UaJutZZkLmgbSkINVsiogg~~/AABGZBA~/CLEEgWf9Dcos9ukAJsIzABV3zTUMkkIgpgiBy5f-14NRB05Q43_2NFziK91prtLBHLOvw7Mo7U_fX4T9OY7nIqhcPDkSPTs8HM1hpcudcF-HJtgLMeq68WDxaoNClr_cfofPVgDu8uaAjN1lfJ760qYDTnOkCuhz4p7vCwOtlqY~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/UaJutZZkLmgbSkINVsiogg~~/AABGZBA~/CLEEgWf9Dcos9ukAJsIzABV3zTUMkkIgpgiBy5f-14NRB05Q43_2NFziK91prtLBHLOvw7Mo7U_fX4T9OY7nIqhcPDkSPTs8HM1hpcudcF-HJtgLMeq68WDxaoNClr_cfofPVgDu8uaAjN1lfJ760qYDTnOkCuhz4p7vCwOtlqY~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://play.google.com/store/apps/details?id=com.bebeboutik"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 22,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/RAnBHn_ZLkjkBTjw0r_gQA~~/AABGZBA~/DjbfomFewlGrWQulpTS_j48FaNtPchfitmy3tle6vYwRsWVmXVR9lDiTRRMBfKaOWYQ3yfOERAMsMnGFbA37pUkq8-41sz6T_GgLOq3aq7eDLbm7gSjEYSdOydnVzYfm5m6ibYRMQLn79tl1mDTxrCCd_K67IwFzZGFGyHhKrZma4JjtjSD5b7QU6DfzW1pz",
-            "final_url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/RAnBHn_ZLkjkBTjw0r_gQA~~/AABGZBA~/DjbfomFewlGrWQulpTS_j48FaNtPchfitmy3tle6vYwRsWVmXVR9lDiTRRMBfKaOWYQ3yfOERAMsMnGFbA37pUkq8-41sz6T_GgLOq3aq7eDLbm7gSjEYSdOydnVzYfm5m6ibYRMQLn79tl1mDTxrCCd_K67IwFzZGFGyHhKrZma4JjtjSD5b7QU6DfzW1pz",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/RAnBHn_ZLkjkBTjw0r_gQA~~/AABGZBA~/DjbfomFewlGrWQulpTS_j48FaNtPchfitmy3tle6vYwRsWVmXVR9lDiTRRMBfKaOWYQ3yfOERAMsMnGFbA37pUkq8-41sz6T_GgLOq3aq7eDLbm7gSjEYSdOydnVzYfm5m6ibYRMQLn79tl1mDTxrCCd_K67IwFzZGFGyHhKrZma4JjtjSD5b7QU6DfzW1pz"
-                },
-                {
-                    "status": 200,
-                    "url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 23,
             "txt": "www.bebeboutik-prive.fr",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/1ftTx9idSUGQBv_oyLRO_A~~/AABGZBA~/I3CfAPjEcadk6M6kn5oYzeEfb3hQo_ctUvjbW08U8hLFVFvx9-irRaQHx2IH6VM7ekIyOknr0skjGR43FTpAUzOEnFyAv6Dvd6oPf7hN5kjMSc9GDBjOplFRjnWFXQx7",
-            "final_url": "https://www.bebeboutik-prive.fr/",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/1ftTx9idSUGQBv_oyLRO_A~~/AABGZBA~/I3CfAPjEcadk6M6kn5oYzeEfb3hQo_ctUvjbW08U8hLFVFvx9-irRaQHx2IH6VM7ekIyOknr0skjGR43FTpAUzOEnFyAv6Dvd6oPf7hN5kjMSc9GDBjOplFRjnWFXQx7",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/1ftTx9idSUGQBv_oyLRO_A~~/AABGZBA~/I3CfAPjEcadk6M6kn5oYzeEfb3hQo_ctUvjbW08U8hLFVFvx9-irRaQHx2IH6VM7ekIyOknr0skjGR43FTpAUzOEnFyAv6Dvd6oPf7hN5kjMSc9GDBjOplFRjnWFXQx7"
-                },
-                {
-                    "status": 301,
-                    "url": "http://www.bebeboutik-prive.fr"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 24,
             "txt": "cliquez ici",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/2FOvJG3tnSxlirQEfbmeCg~~/AABGZBA~/y-pyjFDQPcPMXarjvzQ5UouPSeeDA0oGAlj8YVGv49xtyOyWZ3aYRNEokdrmTWd3wFuR-SCZ77UPrvZ4S6a3l5uMCrX0QfURP4hCD_iN8EwQidye7tW10t7TL2qTR3T1FdG07zpLt0ILQ9Rerc77lX8cnWaLZc0HWefD4ZopO-RFbh_n0yId0I-1OXlPuanXNUe7JfdAZ-npRDYbLqaPYQ~~",
-            "final_url": "https://www.bebeboutik-prive.fr/desabonnement/e14b00e622f8e03062bec26dc5bdcdfd0d4657b9",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/2FOvJG3tnSxlirQEfbmeCg~~/AABGZBA~/y-pyjFDQPcPMXarjvzQ5UouPSeeDA0oGAlj8YVGv49xtyOyWZ3aYRNEokdrmTWd3wFuR-SCZ77UPrvZ4S6a3l5uMCrX0QfURP4hCD_iN8EwQidye7tW10t7TL2qTR3T1FdG07zpLt0ILQ9Rerc77lX8cnWaLZc0HWefD4ZopO-RFbh_n0yId0I-1OXlPuanXNUe7JfdAZ-npRDYbLqaPYQ~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/2FOvJG3tnSxlirQEfbmeCg~~/AABGZBA~/y-pyjFDQPcPMXarjvzQ5UouPSeeDA0oGAlj8YVGv49xtyOyWZ3aYRNEokdrmTWd3wFuR-SCZ77UPrvZ4S6a3l5uMCrX0QfURP4hCD_iN8EwQidye7tW10t7TL2qTR3T1FdG07zpLt0ILQ9Rerc77lX8cnWaLZc0HWefD4ZopO-RFbh_n0yId0I-1OXlPuanXNUe7JfdAZ-npRDYbLqaPYQ~~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/desabonnement/e14b00e622f8e03062bec26dc5bdcdfd0d4657b9"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 25,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/uPzTUooecMh_Ym1yd6tgvA~~/AABGZBA~/qUdIdDbrzuYPnl_R9_c_DlWnSkrisL4vrHpRQtVKFBpsfvdtnD35C8i26ds6AI0yA3fykzuPw_J_4vk2HQnJWf5RH9jAKMp3bVRrkzm0oila2EKuvqbuUILVBPsOZzC_",
-            "final_url": "https://www.bebeboutik-prive.fr/",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/uPzTUooecMh_Ym1yd6tgvA~~/AABGZBA~/qUdIdDbrzuYPnl_R9_c_DlWnSkrisL4vrHpRQtVKFBpsfvdtnD35C8i26ds6AI0yA3fykzuPw_J_4vk2HQnJWf5RH9jAKMp3bVRrkzm0oila2EKuvqbuUILVBPsOZzC_",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/uPzTUooecMh_Ym1yd6tgvA~~/AABGZBA~/qUdIdDbrzuYPnl_R9_c_DlWnSkrisL4vrHpRQtVKFBpsfvdtnD35C8i26ds6AI0yA3fykzuPw_J_4vk2HQnJWf5RH9jAKMp3bVRrkzm0oila2EKuvqbuUILVBPsOZzC_"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         },
         {
             "index": 26,
             "txt": "Mentions légales",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/uoKPUJ9lFN1aoDxnd2z2Nw~~/AABGZBA~/j9YqbFM92V5i-mcKqkuHC_q3MG9TXH8gYSpNs8HYB4thfIa0wMxKyROpxPy1OUWTDWpXr3eD6KpexGaPw5m8HFLaQHY3YNldciZY3X5Js8gEBMGLKucxcuYuMfEe5dg7yqzZZ0F5fl71xxKCGVE72g~~",
-            "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales",
+            "final_url": "https://clic.bebeboutik-prive.fr/f/a/uoKPUJ9lFN1aoDxnd2z2Nw~~/AABGZBA~/j9YqbFM92V5i-mcKqkuHC_q3MG9TXH8gYSpNs8HYB4thfIa0wMxKyROpxPy1OUWTDWpXr3eD6KpexGaPw5m8HFLaQHY3YNldciZY3X5Js8gEBMGLKucxcuYuMfEe5dg7yqzZZ0F5fl71xxKCGVE72g~~",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://clic.bebeboutik-prive.fr/f/a/uoKPUJ9lFN1aoDxnd2z2Nw~~/AABGZBA~/j9YqbFM92V5i-mcKqkuHC_q3MG9TXH8gYSpNs8HYB4thfIa0wMxKyROpxPy1OUWTDWpXr3eD6KpexGaPw5m8HFLaQHY3YNldciZY3X5Js8gEBMGLKucxcuYuMfEe5dg7yqzZZ0F5fl71xxKCGVE72g~~"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:24"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://clic.bebeboutik-prive.fr/q/6UtNbqS6Tcbs7goGS2aVyw~~/AABGZBA~/zPAPpO-Xad2XvMnTvoRyDjCUIxxsisFP18TMkUM9d4oK0JsaiqSN-HRQW1iD0nFP_icLQuPYbXZU9iOo_fgS2w~~",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "clic.bebeboutik-prive.fr"
+            "domain": "",
+            "is_gtinsi": false
         },
         {
-            "url": "https://clic.bebeboutik-prive.fr/q/34nVB37mswMnJIOUKP4JGA~~/AABGZBA~/Muw0GwVs4NZOLBqzzlkWg5icEvmAu_iq6JySpJ1RM_Y7FczNi0ab-5ZP3fW4ga2NToHdi5-t5zx1CaVzAiG_xA~~",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "clic.bebeboutik-prive.fr"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

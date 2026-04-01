@@ -20,22 +20,11 @@
             "index": 1,
             "txt": "Aidez-nous à améliorer le cadre de vie des enfants",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 2,
@@ -45,236 +34,107 @@
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "%%view_email_url%%"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive",
-            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/accueil.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "Je fais un don en ligne",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "Je fais un don",
             "original_url": "https://gtinsi.de/68f23eba9991f",
-            "final_url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026",
+            "final_url": "https://gtinsi.de/68f23eba9991f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/68f23eba9991f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive",
-            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/accueil.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=je_fonce&utm_term=showroomprive"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://instagram.com/showroomprive/",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle",
+            "final_url": "https://instagram.com/showroomprive/",
             "domain": "instagram.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "https://instagram.com/showroomprive/"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/showroomprive/"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "",
             "original_url": "https://www.facebook.com/showroomprivecom",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom",
+            "final_url": "https://www.facebook.com/showroomprivecom",
             "domain": "facebook.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/showroomprivecom"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 13,
@@ -284,14 +144,7 @@
             "domain": "tiktok.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://www.tiktok.com/@showroomprive"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 14,
@@ -301,372 +154,165 @@
             "domain": "fr.linkedin.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 404,
-                    "url": "https://fr.linkedin.com/company/showroomprive-com"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=mobile.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=application_mobile",
-            "final_url": "https://www.showroomprive.com/mobile.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=application_mobile",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=mobile.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=application_mobile",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=mobile.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=application_mobile"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/mobile.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=application_mobile"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 16,
             "txt": "Mes commandes",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/Mescommandes.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_commandes",
-            "final_url": "https://www.showroomprive.com/MonCompte/Mescommandes.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_commandes",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/Mescommandes.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_commandes",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/Mescommandes.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_commandes"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.showroomprive.com/MonCompte/Mescommandes.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_commandes"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 17,
             "txt": "Mes bons d'achat",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/mesba.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_bons_dachat",
-            "final_url": "https://www.showroomprive.com/MonCompte/mesba.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_bons_dachat",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/mesba.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_bons_dachat",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=MonCompte/mesba.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_bons_dachat"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.showroomprive.com/MonCompte/mesba.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_bons_dachat"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 18,
             "txt": "Mes communications",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_communications",
-            "final_url": "https://www.showroomprive.com/moncompte/mespreferences.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_communications",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_communications",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_communications"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.showroomprive.com/moncompte/mespreferences.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mes_communications"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 19,
             "txt": "Mode",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mode",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/mode?u=1?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mode",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/mode%3fu%3d1%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mode"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/univers-srp/mode%3Fu%3D1%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=mode"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/mode?u=1?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 20,
             "txt": "Maison",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universmaison%3fu%3d4%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=maison",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universmaison?u=4?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universmaison%3fu%3d4%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=maison",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universmaison%3fu%3d4%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=maison"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/ope/universmaison%3Fu%3D4%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=maison"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universmaison?u=4?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 21,
             "txt": "Voyage",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilvoyage.aspx%3fu%3d5&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=voyage",
-            "final_url": "https://www.showroomprive.com/?mes=&direction=%2fvoyage%2forchestra%2fsrporchestra.aspx",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilvoyage.aspx%3fu%3d5&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=voyage",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilvoyage.aspx%3fu%3d5&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=voyage"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/accueilvoyage.aspx%3Fu%3D5?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=voyage"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/voyage/orchestra/srporchestra.aspx"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/?mes=&direction=%2fvoyage%2forchestra%2fsrporchestra.aspx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 22,
             "txt": "Beauté",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=beaute",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universbeaute?u=6?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=beaute",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=ope/universbeaute%3fu%3d6%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=beaute"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/ope/universbeaute%3Fu%3D6%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=beaute"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universbeaute?u=6?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 23,
             "txt": "Enfant",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=enfant",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/enfant?u=3?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=enfant",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/enfant%3fu%3d3%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=enfant"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/univers-srp/enfant%3Fu%3D3%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=enfant"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/enfant?u=3?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 24,
             "txt": "Hi-tech",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=hi-tech",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=hi-tech",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=hi-tech"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/univers-srp/ht/electromenager%3Fu%3D147%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=hi-tech"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 25,
             "txt": "Electromenager",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=electromenager",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=electromenager",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/ht/electromenager%3fu%3d147%3Fwebview%3D1&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=electromenager"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/univers-srp/ht/electromenager%3Fu%3D147%3Fwebview%3D1?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=electromenager"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 26,
             "txt": "Loisirs",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilbilletterie.aspx%3fu%3d9&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=loisirs",
-            "final_url": "https://www.showroomprive.com/accueilbilletterie.aspx%3Fu%3D9?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=loisirs",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilbilletterie.aspx%3fu%3d9&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=loisirs",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=accueilbilletterie.aspx%3fu%3d9&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=loisirs"
-                },
-                {
-                    "status": 404,
-                    "url": "https://www.showroomprive.com/accueilbilletterie.aspx%3Fu%3D9?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=loisirs"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 27,
             "txt": "Marché",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/legrandmarche%3fu%3d161&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=marche",
-            "final_url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/legrandmarche?u=161",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/legrandmarche%3fu%3d161&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=marche",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=univers-srp/legrandmarche%3fu%3d161&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=marche"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/univers-srp/legrandmarche%3Fu%3D161?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=marche"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/legrandmarche?u=161"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 28,
             "txt": "Outlet",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=outlet.aspx%3fu%3d8&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=outlet",
-            "final_url": "https://www.showroomprive.com/outlet.aspx%3Fu%3D8?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=outlet",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=outlet.aspx%3fu%3d8&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=outlet",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=outlet.aspx%3fu%3d8&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=outlet"
-                },
-                {
-                    "status": 404,
-                    "url": "https://www.showroomprive.com/outlet.aspx%3Fu%3D8?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=outlet"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         },
         {
             "index": 29,
             "txt": "ici",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=ici",
-            "final_url": "https://www.showroomprive.com/moncompte/mespreferences.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=ici",
+            "final_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=ici",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx&utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=ici"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.showroomprive.com/moncompte/mespreferences.aspx?utm_goal=5&utm_channel=email_animco&utm_medium=email_animco&utm_source=brand&utm_campaign=piece_jaune&utm_content=ici"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:56"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://api.getinside.media/v1/emails/track/68f23eba9b496",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

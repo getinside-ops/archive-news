@@ -15,6 +15,37 @@
         "images_no_alt": 1
     },
     "crm": null,
-    "links": [],
+    "links": [
+        {
+            "index": 1,
+            "txt": "https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qU",
+            "original_url": "https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D",
+            "final_url": "https://m12.news.laredoute.fr/nl/jsp/m.jsp?c=%40qUCD8eyZQXuTPqgBna3aO7cWdC8C0avW6Td2cL8DTXqrTJBsmCulFQ%2BZ200mv9SeR8Mx2J8KsqYP%2B4GRZH3kHQ%3D%3D",
+            "domain": "m12.news.laredoute.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 2,
+            "txt": "vdebarge",
+            "original_url": "mailto:vdebarge@redoute.fr",
+            "final_url": "mailto:vdebarge@redoute.fr",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false
+        },
+        {
+            "index": 3,
+            "txt": "@redoute.fr",
+            "original_url": "mailto:vdebarge@redoute.fr",
+            "final_url": "mailto:vdebarge@redoute.fr",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false
+        }
+    ],
     "detected_pixels": []
 }

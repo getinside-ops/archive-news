@@ -28,13 +28,16 @@ def generate_viewer(metadata, html_content, links, output_path, lang='fr', detec
     Generates the viewer HTML using Jinja2 template.
     """
     template = env.get_template('viewer.html')
-    
+
     # Calculate size for Gmail clipping warning
     email_size = len(html_content.encode('utf-8'))
-    
+
+    # Count GTINSI links
+    gtinsi_count = sum(1 for link in links if 'gtinsi.de' in link.get('original_url', ''))
+
     # Escape </script> to avoid breaking the viewer's script tag, then mark as safe for Jinja2
     safe_html_json = Markup(json.dumps(html_content).replace('</script>', r'<\/script>'))
-    
+
     rendered_html = template.render(
         subject=metadata.get('subject', 'No Subject'),
         email_date=metadata.get('date_rec', ''),
@@ -49,9 +52,10 @@ def generate_viewer(metadata, html_content, links, output_path, lang='fr', detec
         detected_pixels=detected_pixels,
         audit=metadata.get('audit', {}),
         crm=metadata.get('crm'),
-        links_json=Markup(json.dumps(links).replace('</script>', r'<\/script>'))
+        links_json=Markup(json.dumps(links).replace('</script>', r'<\/script>')),
+        gtinsi_count=gtinsi_count
     )
-    
+
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(rendered_html)
 def generate_index(emails_metadata, output_path, stats=None):

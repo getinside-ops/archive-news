@@ -1,236 +1,838 @@
 <!DOCTYPE html>
+<html lang="en" id="htmlRoot">
 
-<html id="htmlRoot" lang="en">
-<head><base target="_blank"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="../assets/css/style.css" rel="stylesheet"/>
-<link href="../assets/images/gi-keyvisual.svg" rel="icon" type="image/svg+xml"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
         body {
             margin: 0;
             overflow: hidden;
         }
     </style>
 </head>
+
 <body>
-<div class="viewer-layout">
-<!-- Top navigation -->
-<nav class="gi-topnav">
-<a class="gi-topnav-logo" href="https://getinside-ops.github.io/handbook/" rel="noopener" target="_blank">
-<img alt="getinside" class="gi-logo-img gi-logo-sm" src="../assets/images/logo-getinside.svg"/>
-</a>
-<div class="gi-topnav-actions">
-<!-- Language picker: translate icon matching VitePress vpi-languages -->
-<button aria-label="Change language" class="gi-lang-btn" id="langBtn" title="Change language">
-<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>
-<svg aria-hidden="true" fill="currentColor" height="10" viewbox="0 0 24 24" width="10"><path d="M7 10l5 5 5-5z"></path></svg>
-</button>
-<!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-<button aria-label="Toggle theme" class="gi-vp-switch" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
-<span class="gi-vp-check">
-<span class="gi-vp-icon">
-<svg aria-hidden="true" class="icon-moon" fill="currentColor" height="12" style="display:none;" viewbox="0 0 24 24" width="12"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-<svg aria-hidden="true" class="icon-sun" fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
-</span>
-</span>
-</button>
-</div>
-</nav>
-<!-- Main body row: viewer + sidebar -->
-<div class="viewer-body-row">
-<!-- Main Content -->
-<div class="viewer-main">
-<!-- Header: three-zone unified bar -->
-<header class="viewer-header">
-<div class="vh-unified-bar">
-<!-- Left: Email identity -->
-<div class="vh-zone-identity">
-<span class="vh-sender-pill">BUT</span>
-<h1 class="vh-subject" title="Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh">Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</h1>
-<span class="crm-badge" data-crm="Unknown">Unknown</span>
-<span class="vh-date">19/02/2026 à 16:55</span>
-</div>
-<div aria-hidden="true" class="vh-zone-divider"></div>
-<!-- Center: Device toggle (hidden on mobile) -->
-<div class="vh-zone-view hide-mobile">
-<div class="device-toggle">
-<button aria-label="Mobile view (1)" class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
-</button>
-<button aria-label="Tablet view (2)" class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="20" rx="2" ry="2" width="16" x="4" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
-</button>
-<button aria-label="Desktop view (3)" class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
-<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="14" rx="2" ry="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
-</button>
-</div>
-</div>
-<div aria-hidden="true" class="vh-zone-divider"></div>
-<!-- Right: QA Actions -->
-<div class="vh-zone-actions">
-<button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
-<span id="highlightBtnText">Show Links</span>
-</button>
-<button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+    <div class="viewer-layout">
+        <!-- Top navigation -->
+        <nav class="gi-topnav">
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+            </a>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main body row: viewer + sidebar -->
+        <div class="viewer-body-row">
+        <!-- Main Content -->
+        <div class="viewer-main">
+            <!-- Header: three-zone unified bar -->
+            <header class="viewer-header">
+                <div class="vh-unified-bar">
+                    <!-- Left: Email identity -->
+                    <div class="vh-zone-identity">
+                        <span class="vh-sender-pill">BUT</span>
+                        <h1 class="vh-subject" title="Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh">Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</h1>
+                        <span class="crm-badge" data-crm="Unknown">Unknown</span>
+                        <span class="vh-date">19/02/2026 à 16:55</span>
+                    </div>
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Center: Device toggle (hidden on mobile) -->
+                    <div class="vh-zone-view hide-mobile">
+                        <div class="device-toggle">
+                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Right: QA Actions -->
+                    <div class="vh-zone-actions">
+                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+                            <span id="highlightBtnText">Show Links</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
-<button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
-<svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" style="vertical-align:-1px;margin-right:4px" viewbox="0 0 24 24" width="13"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" x2="12" y1="2" y2="15"></line></svg>Share
+                        <button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Share
                         </button>
-</div>
-</div>
-</header>
-<!-- Email Content -->
-<div class="viewer-content">
-<div class="device-mockup" data-mode="mobile" id="deviceFrame">
-<!-- Desktop browser chrome -->
-<div class="dm-browser-bar">
-<div class="dm-traffic-lights">
-<div class="dm-dot dm-dot-close"></div>
-<div class="dm-dot dm-dot-min"></div>
-<div class="dm-dot dm-dot-max"></div>
-</div>
-<div class="dm-tab">
-<div class="dm-tab-favicon"></div>
-<span>Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</span>
-</div>
-<div class="dm-address-bar">BUT</div>
-</div>
-<!-- Mobile/Tablet status bar + notch -->
-<div class="dm-status-bar">
-<div class="dm-notch"></div>
-</div>
-<!-- Email screen -->
-<div class="dm-screen">
-<iframe class="email-frame no-scrollbar" id="emailFrame" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
-</div>
-<!-- Bottom home bar -->
-<div class="dm-chrome-bottom">
-<div class="dm-home-indicator"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Sidebar -->
-<aside aria-label="Sidebar" class="viewer-sidebar" role="region">
-<!-- Fixed: Audit Summary Panel -->
-<div aria-label="Audit scorecard" class="audit-summary-panel" role="region">
-<div class="audit-overall audit-overall--warn">
-<span class="audit-overall-dot"></span>
-<span class="audit-overall-label">WARN</span>
-</div>
-<div class="audit-categories">
-<div class="audit-category-row">
-<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-<span class="audit-cat-name">Metadata</span>
-<span class="audit-cat-spacer"></span>
-<span class="audit-cat-chip audit-chip--pass">PASS</span>
-</div>
-<div class="audit-category-row">
-<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-<span class="audit-cat-name">Pixels</span>
-<span class="audit-cat-count">0</span>
-<span class="audit-cat-spacer"></span>
-<span class="audit-cat-chip audit-chip--warn">WARN</span>
-</div>
-<div class="audit-category-row">
-<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-<span class="audit-cat-name">Links</span>
-<span class="audit-cat-count">0/0</span>
-<span class="audit-cat-spacer"></span>
-<span class="audit-cat-chip audit-chip--pass">PASS</span>
-</div>
-</div>
-</div>
-<!-- Scrollable: Detail Log (existing tab content) -->
-<div aria-label="Audit detail" class="audit-detail-log" role="region">
-<div class="tab-bar">
-<button class="tab-btn active" data-i18n="tab_meta" data-tab="meta" onclick="showTab('meta')">META</button>
-<button class="tab-btn" data-i18n="tab_pixels" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
-<button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">0</span></button>
-</div>
-<div class="sidebar-content">
-<!-- META Tab -->
-<div class="tab-pane" id="tab-meta">
-<div class="stat-grid">
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_sender">Sender</span>
-<span class="sc-value">BUT</span>
-</div>
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_crm">CRM</span>
-<span class="sc-value text-cyan">Unknown</span>
-</div>
-<div class="stat-cell sc-wide">
-<span class="sc-label" data-i18n="meta_subject">Subject</span>
-<span class="sc-value" title="Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh">Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</span>
-</div>
-<div class="stat-cell sc-wide">
-<span class="sc-label" data-i18n="meta_preheader">Preheader</span>
-<span class="sc-value" title="HelloFresh Grâce à BUT, profitez de jusqu'à 95€ offerts sur vos repas. Une cuisine équipée, c'est bien. Une cuisine qui régale, c'est mieux ! Si vous rencontrez...">HelloFresh Grâce à BUT, profitez de jusqu'à 95€ offerts sur vos repas. Une cuisine équipée, c'est bien. Une cuisine qui régale, c'est mieux ! Si vous rencontrez...</span>
-</div>
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_received">Received</span>
-<span class="sc-value">19/02/2026 à 16:55</span>
-</div>
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_size">Size</span>
-<span class="sc-value text-yellow">46.8 KB</span>
-</div>
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
-<span class="sc-value text-green">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Email Content -->
+            <div class="viewer-content">
+                <div id="deviceFrame" class="device-mockup" data-mode="mobile">
+                    <!-- Desktop browser chrome -->
+                    <div class="dm-browser-bar">
+                        <div class="dm-traffic-lights">
+                            <div class="dm-dot dm-dot-close"></div>
+                            <div class="dm-dot dm-dot-min"></div>
+                            <div class="dm-dot dm-dot-max"></div>
+                        </div>
+                        <div class="dm-tab">
+                            <div class="dm-tab-favicon"></div>
+                            <span>Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</span>
+                        </div>
+                        <div class="dm-address-bar">BUT</div>
+                    </div>
+                    <!-- Mobile/Tablet status bar + notch -->
+                    <div class="dm-status-bar">
+                        <div class="dm-notch"></div>
+                    </div>
+                    <!-- Email screen -->
+                    <div class="dm-screen">
+                        <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" title="Email content"></iframe>
+                    </div>
+                    <!-- Bottom home bar -->
+                    <div class="dm-chrome-bottom">
+                        <div class="dm-home-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+
+        <!-- Sidebar -->
+        <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
+            <!-- Fixed: Audit Summary Panel -->
+            <div class="audit-summary-panel" role="region" aria-label="Audit scorecard">
+                <div class="audit-overall audit-overall--fail">
+                    <span class="audit-overall-dot"></span>
+                    <span class="audit-overall-label">FAIL</span>
+                </div>
+                <!-- Status Legend -->
+                <div class="status-legend">
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--pass"></span>
+                        <span class="status-label" data-i18n="legend_pass">PASS: No issues</span>
+                    </div>
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--warn"></span>
+                        <span class="status-label" data-i18n="legend_warn">WARN: Needs attention</span>
+                    </div>
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--fail"></span>
+                        <span class="status-label" data-i18n="legend_fail">FAIL: Critical issue</span>
+                    </div>
+                </div>
+                <div class="audit-categories">
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <span class="audit-cat-name">Metadata</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--pass" title="PASS: Preheader and subject present">PASS</span>
+                    </div>
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <span class="audit-cat-name">Pixels</span>
+                        <span class="audit-cat-count">1</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--pass" title="PASS: Pixels detected">PASS</span>
+                    </div>
+                    <div class="audit-category-row">
+                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        <span class="audit-cat-name">Links</span>
+                        <span class="audit-cat-count">1/12</span>
+                        <span class="audit-cat-spacer"></span>
+                        <span class="audit-cat-chip audit-chip--fail" title="FAIL: HTTP or DEV links found">FAIL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scrollable: Detail Log (existing tab content) -->
+            <div class="audit-detail-log" role="region" aria-label="Audit detail">
+                <div class="tab-bar">
+                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">12</span></button>
+                </div>
+
+                <div class="sidebar-content">
+
+                    <!-- META Tab -->
+                    <div class="tab-pane" id="tab-meta">
+                        <div class="stat-grid">
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_sender">Sender</span>
+                                <span class="sc-value">BUT</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_crm">CRM</span>
+                                <span class="sc-value text-cyan">Unknown</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_subject">Subject</span>
+                                <span class="sc-value" title="Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh">Proof Launch: (HTML-only) Coup de ❤️ BUT : HelloFresh</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
+                                <span class="sc-value" title="HelloFresh Grâce à BUT, profitez de jusqu&#39;à 95€ offerts sur vos repas. Une cuisine équipée, c&#39;est bien. Une cuisine qui régale, c&#39;est mieux ! Si vous rencontrez...">HelloFresh Grâce à BUT, profitez de jusqu&#39;à 95€ offerts sur vos repas. Une cuisine équipée, c&#39;est bien. Une cuisine qui régale, c&#39;est mieux ! Si vous rencontrez...</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_received">Received</span>
+                                <span class="sc-value">19/02/2026 à 16:55</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_size">Size</span>
+                                <span class="sc-value text-yellow">46.8 KB</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
+                                <span class="sc-value text-green">
                                     Low
                                 </span>
-</div>
-<div class="stat-cell">
-<span class="sc-label" data-i18n="meta_links">Links</span>
-<span class="sc-value">0</span>
-</div>
-</div>
-</div>
-<!-- PIXELS Tab -->
-<div class="tab-pane" id="tab-pixels" style="display:none;">
-</div>
-<!-- LINKS Tab -->
-<div class="tab-pane" id="tab-links" style="display:none;">
-<div class="lf-filter-row" id="linkFilterRow">
-<button class="lf-chip active" data-i18n="filter_all" onclick="filterLinks('all')">All</button>
-<button class="lf-chip" data-i18n="filter_tracking" onclick="filterLinks('tracking')">Tracking</button>
-<button class="lf-chip" data-i18n="filter_http" onclick="filterLinks('http')">HTTP</button>
-</div>
-<div style="padding: 8px 10px;">
-</div>
-</div>
-</div><!-- /.sidebar-content -->
-</div><!-- /.audit-detail-log -->
-<!-- Sticky Footer -->
-<div class="sidebar-footer">
-<p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_links">Links</span>
+                                <span class="sc-value">12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PIXELS Tab -->
+                    <div class="tab-pane" id="tab-pixels" style="display:none;">
+                        
+                        <div style="padding: 8px 10px;">
+                            
+                            <div class="link-card-v2 " id="px-1">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index">P</span>
+                                    <span class="card-v2-domain">Unknown Provider</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        <span class="card-v2-tag tag-pixel">PIXEL</span>
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated"></code>
+                                    <button class="btn-card" title="Copy URL" data-url="" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Integration: OK</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url"></code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Copy URL" data-url="" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <!-- LINKS Tab -->
+                    <div class="tab-pane" id="tab-links" style="display:none;">
+                        <div class="lf-filter-row" id="linkFilterRow">
+                            <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
+                            <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
+                            <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
+                            <button class="lf-chip" onclick="filterLinks('gtinsi')" data-i18n="filter_gtinsi">
+                                getinside
+                            </button>
+                        </div>
+                        <div style="padding: 8px 10px;">
+                            
+                            <div class="link-card-v2 " id="lc-1">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Si vous rencontrez des problèmes d&#39;affichage,cliqu</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-2">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-3">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-4">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-5">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">J&#39;EN PROFITE ►</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-6">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-7">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">JE COMMANDE MA BOX</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-8">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-9">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                    <span class="card-v2-domain">External Link</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        <span class="card-v2-tag tag-unsecure"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> HTTP</span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">mailto:informatique.libertes@but.fr</code>
+                                    <button class="btn-card" title="Copy URL" data-url="mailto:informatique.libertes@but.fr" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">informatique.libertes@but.fr</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">mailto:informatique.libertes@but.fr</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="mailto:informatique.libertes@but.fr" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="mailto:informatique.libertes@but.fr" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-10">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                    <span class="card-v2-domain">but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://www.but.fr/aide?_eptssref=/fr-fr/contact</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.but.fr/aide?_eptssref=/fr-fr/contact" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">https://www.but.fr/aide?_eptssref=/fr-fr/contact</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://www.but.fr/aide?_eptssref=/fr-fr/contact</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.but.fr/aide?_eptssref=/fr-fr/contact" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.but.fr/aide?_eptssref=/fr-fr/contact" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-11">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                    <span class="card-v2-domain">but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://www.but.fr/Common/Services/DonneesPersonnelles</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://www.but.fr/Common/Services/DonneesPersonnelles" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">https://www.but.fr/Common/Services/DonneesPersonne</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://www.but.fr/Common/Services/DonneesPersonnelles</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://www.but.fr/Common/Services/DonneesPersonnelles" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://www.but.fr/Common/Services/DonneesPersonnelles" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-12">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                    <span class="card-v2-domain">news.but.fr</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Je peux me désinscrire facilement et ne plus recev</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div><!-- /.sidebar-content -->
+            </div><!-- /.audit-detail-log -->
+
+            <!-- Sticky Footer -->
+            <div class="sidebar-footer">
+                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
                     Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
-                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br/>
+                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
                     © 2026 getinside. Tous droits réservés.
                 </p>
-</div>
-</aside>
-</div><!-- /.viewer-body-row -->
-</div><!-- /.viewer-layout -->
-<!-- Mobile sidebar toggle button -->
-<button aria-label="Toggle Links Panel" class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
+            </div>
+        </aside>
+        </div><!-- /.viewer-body-row -->
+    </div><!-- /.viewer-layout -->
+
+
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
         ☰ Links
     </button>
-<!-- Link overlays container -->
-<div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+    <!-- Link overlays container -->
+    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
 <script src="../assets/js/main.js"></script>
-<script>
+    <script>
         const content = "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" style=\"width:100%;margin-top:-1px\" width=\"100%\">\n<tr aria-hidden=\"true\" class=\"t_dnone m_dnone\">\n<td height=\"1\" style=\"height:1px;max-height:1px;font-size:1px;line-height:1px\">\n<span style=\"display:block;width:640px;min-width:640px\">\u00a0</span>\n</td></tr><tr><td role=\"main\" style=\"background-color:#f2f2f2\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_mauto t_w100p m_mauto m_w100p\" role=\"none\" style=\"margin:auto;background-color:#ffffff\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"m_pt2px m_pr10p m_pl10p\" style=\"font-family:Helvetica,Arial,sans-serif;color:#707173;text-align:center;font-size:9px;padding-top:5px;padding-bottom:5px;vertical-align:middle;line-height:13px;mso-hyphenate:none\">HelloFresh Gr\u00e2ce \u00e0 BUT, profitez de jusqu'\u00e0 95\u20ac offerts sur vos repas. Une cuisine \u00e9quip\u00e9e, c'est bien. Une cuisine qui r\u00e9gale, c'est mieux !\r\n</td></tr></table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto;background-color:#ffffff\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td style=\"font-family:Helvetica,Arial,sans-serif;color:#55565A;text-align:center;font-size:11px;background-color:#E4E4E3;padding-top:10px;padding-bottom:10px;vertical-align:middle;line-height:13px;mso-hyphenate:none\">\n<a data-index=\"1\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0\" style=\"color:#55565A;line-height:13px;display:block;text-decoration:none;outline:0\"> Si vous rencontrez des probl\u00e8mes d'affichage, <span style=\"text-decoration:underline\">cliquez ici.</span></a>\n</td></tr></table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_mauto t_w100p m_mauto m_w100p\" role=\"none\" style=\"margin:auto;background-color:#eaffc2\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w55p m_w82p\" role=\"none\" style=\"margin:auto\" width=\"41%\">\n<tr><td class=\"t_w35p m_w28p\" valign=\"top\" width=\"20%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"13\" style=\"height:13px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w78px m_flright m_w77px\" role=\"none\" style=\"margin:auto\" width=\"77\">\n<tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" width=\"100%\">\n<tr><td style=\"text-align:center\">\n<a data-index=\"2\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0\" style=\"color:#000000;outline:0;border:none;margin:auto;display:block\" title=\"BUT.fr\" width=\"100%\">\n<img alt=\"BUT\" class=\"t_w100p m_w100p\" src=\"img_0.jpg\" style=\"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none\" width=\"77\"/></a>\n</td></tr></table>\n</td></tr></table></td>\n<td class=\"t_w11p m_w14p\" valign=\"top\" width=\"19%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td class=\"m_h50px yah_hauto\" height=\"47\" style=\"height:47px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"m_fz27px m_lh29px\" style=\"font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:30px;padding-top:0;vertical-align:middle;line-height:32px;mso-hyphenate:none;font-weight:700\"> &amp; </td></tr></table></td>\n<td class=\"t_w54p m_w58p\" valign=\"top\" width=\"61%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"20\" style=\"height:20px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w144px m_flleft m_w150px\" role=\"none\" style=\"margin:auto\" width=\"147\">\n<tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" width=\"100%\">\n<tr><td class=\"m_pt0px\" style=\"text-align:center\">\n<a data-index=\"3\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og\" style=\"color:#000000;outline:0;border:none;margin:auto;display:block\" title=\"BUT.fr\" width=\"100%\">\n<img alt=\"Hello Fresh\" class=\"t_w100p m_w100p\" src=\"img_1.png\" style=\"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none\" width=\"147\"/></a>\n</td></tr></table>\n</td></tr></table>\n</td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"m_fz12px m_lh14px\" style=\"font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:14px;padding-top:8px;padding-bottom:8px;vertical-align:middle;line-height:16px;mso-hyphenate:none\"> Des bons plans rep\u00e9r\u00e9s pour vous faciliter le quotidien. </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"t_fz16px t_lh18px\" style=\"font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:center;font-size:20px;padding-bottom:8px;vertical-align:middle;line-height:22px;mso-hyphenate:none;font-weight:700\"> AVANTAGE EXCLUSIF : PLUS LOIN DANS VOS ENVIES </td></tr></table>\n</td></tr></table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"20\" style=\"height:20px;font-size:8px\"> \u00a0 </td></tr></table>\n<!DOCTYPE html>\n\n<html dir=\"auto\" lang=\"und\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\">\n<head>\n<title>Coup de \u2764\ufe0f BUT : HelloFresh</title>\n<!--[if !mso]><!-->\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<!--<![endif]-->\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>\n<style type=\"text/css\">\r\n    #outlook a {\r\n      padding: 0;\r\n    }\r\n\r\n    body {\r\n      margin: 0;\r\n      padding: 0;\r\n      -webkit-text-size-adjust: 100%;\r\n      -ms-text-size-adjust: 100%;\r\n    }\r\n\r\n    table,\r\n    td {\r\n      border-collapse: collapse;\r\n      mso-table-lspace: 0pt;\r\n      mso-table-rspace: 0pt;\r\n    }\r\n\r\n    img {\r\n      border: 0;\r\n      height: auto;\r\n      line-height: 100%;\r\n      outline: none;\r\n      text-decoration: none;\r\n      -ms-interpolation-mode: bicubic;\r\n    }\r\n\r\n    p {\r\n      display: block;\r\n      margin: 13px 0;\r\n    }\r\n  </style>\n<!--[if mso]>\r\n    <noscript>\r\n    <xml>\r\n    <o:OfficeDocumentSettings>\r\n      <o:AllowPNG/>\r\n      <o:PixelsPerInch>96</o:PixelsPerInch>\r\n    </o:OfficeDocumentSettings>\r\n    </xml>\r\n    </noscript>\r\n    <![endif]-->\n<!--[if lte mso 11]>\r\n    <style type=\"text/css\">\r\n      .mj-outlook-group-fix { width:100% !important; }\r\n    </style>\r\n    <![endif]-->\n<style type=\"text/css\">\r\n    @media only screen and (min-width:480px) {\r\n      .mj-column-per-100 {\r\n        width: 100% !important;\r\n        max-width: 100%;\r\n      }\r\n\r\n      .mj-column-per-50 {\r\n        width: 50% !important;\r\n        max-width: 50%;\r\n      }\r\n    }\r\n  </style>\n<style media=\"screen and (min-width:480px)\">\r\n    .moz-text-html .mj-column-per-100 {\r\n      width: 100% !important;\r\n      max-width: 100%;\r\n    }\r\n\r\n    .moz-text-html .mj-column-per-50 {\r\n      width: 50% !important;\r\n      max-width: 50%;\r\n    }\r\n  </style>\n<style type=\"text/css\">\r\n    @media only screen and (max-width:479px) {\r\n      table.mj-full-width-mobile {\r\n        width: 100% !important;\r\n      }\r\n\r\n      td.mj-full-width-mobile {\r\n        width: auto !important;\r\n      }\r\n    }\r\n  </style>\n<style type=\"text/css\">\r\n    .hide-mobile {\r\n      display: none !important;\r\n    }\r\n\r\n    .but-red {\r\n      color: #EA2504 !important;\r\n    }\r\n\r\n    /* GESTION DU DARK MODE CSS */\r\n    :root {\r\n      color-scheme: light dark;\r\n      supported-color-schemes: light dark;\r\n    }\r\n\r\n    /* Transformation en BLOC MONOCHROME SOLIDE SANS OMBRE (Flat Design) */\r\n    .coupon-box {\r\n      background-color: #ffffff !important;\r\n      border-radius: 8px !important;\r\n      overflow: hidden !important;\r\n      border: 1px solid #E0E0E0 !important;\r\n    }\r\n\r\n    /* Code promo : Bloc solide gris clair */\r\n    .promo-code {\r\n      background-color: #F4F4F4;\r\n      color: #EA2504;\r\n      padding: 10px 20px;\r\n      font-weight: 900;\r\n      border-radius: 4px;\r\n      display: inline-block;\r\n      font-size: 16px;\r\n      letter-spacing: 1px;\r\n    }\r\n\r\n    .impact-text {\r\n      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;\r\n    }\r\n  </style>\n<!-- TITRE ET PRE-HEADER MIS \u00c0 JOUR SELON VOTRE R\u00c9FLEXION -->\n<!-- META TAGS POUR LE DARK MODE (Am\u00e9liore le support global) -->\n<meta content=\"light dark\" name=\"color-scheme\"/>\n<meta content=\"light dark\" name=\"supported-color-schemes\"/>\n</head>\n<body style=\"word-spacing:normal;background-color:#F4F4F4;\"><table cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px; padding: 0px; margin: 0px; position: absolute; display: none; float: left\">\n<tr>\n<td height=\"1\" style=\"font-size: 1px; line-height: 1px; padding: 0px;\">\n<img src=\"img_2.gif\"/>\n</td>\n</tr>\n</table>\n<div style=\"display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">Gr\u00e2ce \u00e0 BUT, profitez de jusqu'\u00e0 95\u20ac offerts sur vos repas.</div>\n<div aria-label=\"Coup de \u2764\ufe0f BUT : HelloFresh\" aria-roledescription=\"email\" dir=\"auto\" lang=\"und\" role=\"article\" style=\"background-color:#F4F4F4;\">\n<!-- HERO IMAGE STANDARD (Redimensionnement mobile parfait) -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:600px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:0;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:600px;\">\n<a data-index=\"4\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og\" target=\"_blank\">\n<img alt=\"D\u00e9couvrir l'offre HelloFresh\" height=\"auto\" src=\"img_3.jpg\" style=\"border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"600\">\n</img></a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TITRE ACCROCHE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px 20px 10px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- TITRE BUT : ROUGE MIS \u00c0 JOUR -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:20px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Une cuisine \u00e9quip\u00e9e, c'est bien.<br/> Une cuisine qui r\u00e9gale, c'est mieux !</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- EDITORIAL CONTEXT -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\">Chez <strong>BUT</strong>, nous aimons vous aider \u00e0 cr\u00e9er une cuisine conviviale. Mais nous savons que ce qui compte le plus, c'est ce que vous y partagez.<br/><br/> D\u00e9couvrez <strong>HelloFresh</strong> : des ingr\u00e9dients frais livr\u00e9s chez vous pour cuisiner simplement.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- OFFER BLOCK STYLE \"CARTE SOLIDE\" SANS OMBRE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"coupon-box-outlook\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix coupon-box\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding:25px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<!-- PRIX OPTIMIS\u00c9 MOBILE (32px) EN ROUGE BUT -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:5px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:32px;font-weight:900;line-height:36px;text-align:center;text-transform:uppercase;color:#EA2504;\">JUSQU'\u00c0 95\u20ac OFFERTS*</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:20px;text-align:center;text-transform:uppercase;color:#333333;\">+ VOTRE DESSERT \u00c0 VIE !*</div>\n</td>\n</tr>\n<!-- CODE PROMO -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:20px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:24px;text-align:center;color:#333333;\">Votre code avantage :<br/><br/>\n<span class=\"promo-code\">BUTF4L26</span>\n</div>\n</td>\n</tr>\n<!-- CTA -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"5\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> J'EN PROFITE \u25ba </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<!-- TEXTE AVEC AST\u00c9RISQUE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:24px;text-align:center;color:#555555;\">Soit de d\u00e9licieux repas <strong>\u00e0 partir de moins de 3 \u20ac par assiette*</strong>.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- ARGUMENTS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 10px 0px 10px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83d\udce6</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Livraison flexible</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Choisissez votre cr\u00e9neau de 8h \u00e0 22h.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd55</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Ingr\u00e9dients frais</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Produits de qualit\u00e9 s\u00e9lectionn\u00e9s avec soin.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd57</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Vari\u00e9t\u00e9 au menu</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">45 nouvelles recettes chaque semaine.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd33</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Sans engagement</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Suspendez votre abonnement en un clic.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- SECTION VISUEL PLATS & TEXTE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- S\u00e9parateur SOLIDE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:25px;word-break:break-word;\">\n<p style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:100%;\">\n</p>\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:510px;\" role=\"presentation\" width=\"510px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\r\n</td></tr></table><![endif]-->\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">De l'inspiration dans votre assiette</div>\n</td>\n</tr>\n<!-- IMAGE SECONDAIRE CLIQUABLE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:510px;\">\n<a data-index=\"6\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog\" target=\"_blank\">\n<img alt=\"Plats savoureux HelloFresh\" height=\"auto\" src=\"img_4.png\" style=\"border:0;border-radius:8px;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"510\">\n</img></a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\"><strong>En manque d'id\u00e9es ?</strong><br/> Retrouvez chaque semaine 45 nouvelles recettes au menu : classiques, familiales, express ou encore v\u00e9g\u00e9tariennes. Cuisinez des plats savoureux en moins de 30 minutes gr\u00e2ce \u00e0 nos fiches-recettes pas \u00e0 pas.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- HOW IT WORKS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background-color:#F4F4F4;border-radius:8px;vertical-align:top;border-collapse:separate;padding:20px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#333333;\">Comment \u00e7a marche ?</div>\n</td>\n</tr>\n<tr>\n<td align=\"left\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;\" width=\"100%\">\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">1.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\"><strong>Cliquez sur le bouton</strong> (code int\u00e9gr\u00e9).</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">2.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Cr\u00e9ez votre <strong>Box sur mesure</strong>.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">3.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Choisissez vos recettes.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">4.</td>\n<td style=\"padding-bottom: 0; font-size: 13px; line-height: 18px; color: #333333;\">Recevez votre box !</td>\n</tr>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:20px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:100%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"7\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> JE COMMANDE MA BOX </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- FOOTER LEGAL COMPLET -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"justify\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:9px;line-height:13px;text-align:justify;color:#999999;\">*Conditions de l\u2019offre : pour toute souscription, jusqu\u2019\u00e0 95 \u20ac de r\u00e9duction sur vos 5 premi\u00e8res Box (jusqu'\u00e0 40 \u20ac sur la 1\u00e8re, 20 \u20ac sur la 2\u00e8me, 15 \u20ac sur la 3\u00e8me et 10 \u20ac sur la 4\u00e8me et 5\u00e8me). Cette offre est valable pendant 9 semaines, \u00e0 compter de votre date de conversion. A d\u00e9faut d\u2019utilisation de votre r\u00e9duction pass\u00e9 ce d\u00e9lai, celle-ci ne sera plus valable. La premi\u00e8re r\u00e9duction de 40 \u20ac inclut les frais de livraison qui sont offerts pour la 1\u00e8re Box uniquement. Cette offre comprend \u00e9galement un extra de notre march\u00e9 HelloFresh offert chaque semaine parmi une s\u00e9lection de produits tant que l\u2019abonnement n\u2019est pas r\u00e9sili\u00e9. L\u2019ajout de cet extra ne se fait pas automatiquement mais doit \u00eatre fait par vos soins au moment du choix des recettes. HelloFresh se r\u00e9serve le droit de remplacer le produit choisi si jamais celui-ci n\u2019est plus disponible.Offre devant \u00eatre activ\u00e9e avant le 28/02/2026, offre r\u00e9serv\u00e9e aux nouveaux clients HelloFresh seulement, non cumulable avec d\u2019autres offres ou r\u00e9ductions, limit\u00e9e \u00e0 une par foyer et ne donnant droit \u00e0 aucun \u00e9change, ni remboursement du montant de la r\u00e9duction. Les abonn\u00e9.e.s HelloFresh re\u00e7oivent chaque semaine une Box mais l\u2019abonnement est flexible. Les abonn\u00e9.e.s HelloFresh ont jusqu\u2019\u00e0 la date indiqu\u00e9e en haut de l\u2019onglet \u201cMon Menu\u201d (23h59) sur le site HelloFresh pour mettre en pause leur prochaine Box ou r\u00e9silier leur abonnement. Toute demande de modification, de pause ou de r\u00e9siliation faite apr\u00e8s cette date ne sera prise en compte qu\u2019apr\u00e8s la prochaine Box. Plus d\u2019informations sur :\u00a0http://www.hellofresh.fr/conditions-generales.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TRACKING PIXEL (RAW) --><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</div>\n</body>\n</html>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"20\" style=\"height:20px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_mauto t_w100p m_mauto m_w100p\" role=\"none\" style=\"margin:auto;background-color:#eaffc2\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"20\" style=\"height:20px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w95p m_w95p\" role=\"none\" style=\"margin:auto\" width=\"90%\">\n<tr><td class=\"t_w22p m_w21p\" valign=\"top\" width=\"18%\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w85px m_flleft m_w59px\" role=\"none\" style=\"margin:auto\" width=\"87\">\n<tr><td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" width=\"100%\">\n<tr><td class=\"m_pt0px\" style=\"text-align:center\">\n<a data-index=\"8\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&amp;_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&amp;_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0\" style=\"color:#000000;outline:0;border:none;margin:auto;display:block\" title=\"BUT.fr\" width=\"100%\">\n<img alt=\"BUT\" class=\"t_w100p m_w100p\" src=\"img_5.jpg\" style=\"font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:16px;display:block;border:none\" width=\"87\"/></a>\n</td></tr></table>\n</td></tr></table></td>\n<td aria-hidden=\"true\" class=\"t_w2p m_w2p\" valign=\"top\" width=\"2%\">\n<span>\u00a0</span></td>\n<td class=\"t_w76p m_w77p\" valign=\"top\" width=\"80%\">\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td class=\"t_h23px m_h16px yah_hauto\" height=\"18\" style=\"height:18px;font-size:8px\"> \u00a0 </td></tr></table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" role=\"none\" style=\"margin:auto\" width=\"100%\">\n<tr><td class=\"t_fz18px t_lh20px m_fz13px m_lh15px\" style=\"font-family:Helvetica,Arial,sans-serif;color:#000000;text-align:left;font-size:22px;vertical-align:middle;line-height:24px;mso-hyphenate:none;font-weight:700\"> TOUJOURS L\u00c0 POUR VOS ENVIES<br role=\"none\"/>D\u2019INT\u00c9RIEUR\u2026 ET PLUS ENCORE </td></tr></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"18\" style=\"height:18px;font-size:8px\"> \u00a0 </td></tr></table>\n</td></tr></table>\n<table align=\"center\" aria-hidden=\"true\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center\" style=\"margin:auto;clear:both\" width=\"100%\">\n<tr><td height=\"20\" style=\"height:20px;font-size:8px\"> \u00a0 </td></tr></table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;margin-top:-1px\" width=\"100%\">\n<tr>\n<td style=\"background-color:#E4E4E3\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_flnone t_mauto t_w100p m_flnone m_mauto m_w100p\" style=\"margin:auto;background-color:#ffffff\" width=\"640\">\n<tr>\n<td>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_flnone t_mauto t_w90p m_flnone m_mauto m_w90p\" role=\"presentation\" style=\"margin:auto;width:608px\" width=\"608\">\n<tr>\n<td style=\"font-family:Arial,Helvetica,sans-serif;color:#707173;text-align:left;font-size:11px;padding-top:32px;\r\npadding-bottom:0;vertical-align:middle;line-height:13px\"><p>BUT INTERNATIONAL, en qualit\u00e9 de responsable de traitement, traite vos donn\u00e9es personnelles sur la base de notre int\u00e9r\u00eat l\u00e9gitime suite \u00e0 votre navigation sur but.fr ou la compl\u00e9tion de notre formulaire de projet.\r\n</p>\n<p>Vos donn\u00e9es personnelles seront conserv\u00e9es pour une dur\u00e9e de 3 ans \u00e0 compter de votre dernier achat.\r\n</p>\n<p>Vous pouvez vous opposer \u00e0 la r\u00e9ception de ce type d'email en cliquant sur le lien suivant ci-dessous. Au regard du RGPD, vous disposez \u00e9galement du droit d'acc\u00e9der \u00e0 vos donn\u00e9es personnelles, de les modifier en cas d'erreur, de demander leur effacement, d'indiquer le sort de vos donn\u00e9es \u00e0 votre d\u00e9c\u00e8s. Vous disposez enfin du droit \u00e0 la limitation du traitement de vos donn\u00e9es et de leur portabilit\u00e9. Pour exercer l'un de ses droits, vous pouvez contacter le D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es (DPO) \u00e0 travers le formulaire de contact disponible sur notre site internet, par email \u00e0 l'adresse suivante :\u00a0<a data-index=\"9\" href=\"mailto:informatique.libertes@but.fr\">informatique.libertes@but.fr</a>, ou en \u00e9crivant un courrier \u00e0 BUT INTERNATIONAL - DPO - 1 avenue Spinoza 77184 EMERAINVILLE.\r\n</p>\n<p>Si vous n'\u00eates pas satisfait du traitement de votre demande par BUT, vous pouvez vous plaindre aupr\u00e8s de la CNIL, via un formulaire pr\u00e9vu \u00e0 cet effet : <a data-index=\"10\" href=\"https://www.but.fr/aide?_eptssref=/fr-fr/contact\">https://www.but.fr/aide?_eptssref=/fr-fr/contact</a>\n</p>\r\nEnfin, vous pouvez prendre connaissance de l'ensemble des informations relatives au traitement de vos donn\u00e9es personnelles par BUT en lisant notre politique de confidentialit\u00e9 : <a data-index=\"11\" href=\"https://www.but.fr/Common/Services/DonneesPersonnelles\">https://www.but.fr/Common/Services/DonneesPersonnelles</a>.</td>\n</tr>\n</table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_flnone t_mauto t_w90p m_flnone m_mauto m_w90p\" role=\"presentation\" style=\"margin:auto;width:608px\" width=\"608\">\n<tr>\n</tr>\n</table>\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_flnone t_mauto t_w90p m_flnone m_mauto m_w90p\" role=\"presentation\" style=\"margin:auto;width:608px\" width=\"608\">\n<tr>\n<td style=\"font-family:Arial,Helvetica,sans-serif;color:#707173;text-align:center;font-size:11px;padding-top:5px;\r\npadding-bottom:10px;vertical-align:middle;line-height:13px\">\n<a data-index=\"12\" href=\"https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&amp;_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&amp;_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng\" style=\"color:#707173;line-height:13px;display:block;text-decoration:none;outline:0\">\n<span style=\"text-decoration:underline\">Je peux me d\u00e9sinscrire facilement et ne plus recevoir la newsletter BUT en cliquant ici. </span></a>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n</table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"none\" width=\"100%\">\n<tr><td>\n<!--[if mso]>\r\n<table cellpadding=\"0\"\r\ncellspacing=\"0\"\r\nborder=\"0\"\r\nwidth=\"100%\"\r\nalign=\"center\"\r\nstyle=\"\">\r\n<tr><td>\r\n<![endif]-->\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"d_center t_w100p m_w100p\" role=\"none\" style=\"margin:auto\" width=\"640\">\n<tr><td class=\"t_w100p m_w100p\" valign=\"top\" width=\"100%\">\n</td>\n</tr>\n</table>\n</td></tr></table>\n<!--[if mso]>\r\n</td></tr></table>\r\n<![endif]-->\n</td></tr></table>\n\n";
-        const emailLinks = [];
+        const emailLinks = [{"index": 1, "txt": "Si vous rencontrez des probl\u00e8mes d'affichage,cliqu", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=te42s3hu9c1ae991t9mn823o1ogq93nv4r8sknu8lkkes6vnjga0", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 2, "txt": "", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 3, "txt": "", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 4, "txt": "", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=640llarlj879ea51o6msk7cd6sohtbt6c7n8fdnphviefrfqt3og", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 5, "txt": "J'EN PROFITE \u25ba", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=jdqv4tsq20nvorrfavek0u13kspljb9lq4kh52te2fal7jmsr6mg", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 6, "txt": "", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=71en7fg574jn3dko4ha5lmdkhmq881b3julch41e5bkjnekbmoog", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 7, "txt": "JE COMMANDE MA BOX", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCSBTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=sb5kcgisof60j08ahsooil70e55km2qcastucsdio4kr9qqcd330", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 8, "txt": "", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=fm2hgpst63lhuh9ssudeuiafvcea04d1sgvs287036g02c7jina0", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 9, "txt": "informatique.libertes@but.fr", "original_url": "mailto:informatique.libertes@but.fr", "final_url": "mailto:informatique.libertes@but.fr", "domain": "", "is_tracking": false, "is_secure": false, "is_dev": false}, {"index": 10, "txt": "https://www.but.fr/aide?_eptssref=/fr-fr/contact", "original_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact", "final_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact", "domain": "but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 11, "txt": "https://www.but.fr/Common/Services/DonneesPersonne", "original_url": "https://www.but.fr/Common/Services/DonneesPersonnelles", "final_url": "https://www.but.fr/Common/Services/DonneesPersonnelles", "domain": "but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}, {"index": 12, "txt": "Je peux me d\u00e9sinscrire facilement et ne plus recev", "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng", "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG2u42GPe7Nrzeo7rgoEnRHnzdofgYoT3nEzdzgFIdast3zdfUMg4JsOVXtpKX%3DCRCDCW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&_di_=31tcj20uf2dju2v1c97bsmnvdvv72092694a8p25mcg2oohjb1ng", "domain": "news.but.fr", "is_tracking": false, "is_secure": true, "is_dev": false}];
         const frame = document.getElementById('emailFrame');
         let linksHighlighted = false;
         let overlayElements = [];
@@ -244,24 +846,26 @@
                 meta_sender: 'Sender', meta_crm: 'CRM', meta_subject: 'Subject',
                 meta_preheader: 'Preheader', meta_received: 'Received',
                 meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
-                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
                 lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
                 sidebar_toggle_title: 'Toggle Links Panel',
                 audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
                 audit_error: 'Audit Finished (Error Found)',
+                legend_pass: 'PASS: No issues', legend_warn: 'WARN: Needs attention', legend_fail: 'FAIL: Critical issue',
             },
             fr: {
                 tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LIENS',
                 meta_sender: 'Expéditeur', meta_crm: 'CRM', meta_subject: 'Sujet',
                 meta_preheader: 'Prévisualisation', meta_received: 'Reçu le',
                 meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
-                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
                 lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
                 sidebar_toggle_title: 'Panneau des liens',
                 audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
                 audit_error: 'Audit terminé (Erreur détectée)',
+                legend_pass: 'PASS: Aucun problème', legend_warn: 'WARN: Attention requise', legend_fail: 'FAIL: Problème critique',
             }
         };
 
@@ -660,7 +1264,7 @@
 
                             // Update status text
                             if (step.status === 200) {
-                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : _s.audit_finished;
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (getinside Detected)' : _s.audit_finished;
                             } else if (step.status === 'Timeout') {
                                 statusText.innerHTML = 'Request Timed Out';
                             } else if (step.status >= 400 || step.status === 'Error') {
@@ -789,14 +1393,21 @@
         let activeLinkFilter = 'all';
         function filterLinks(type) {
             activeLinkFilter = type;
-            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
-            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active', 'gtinsi-active'));
+            const selectedChip = document.querySelector(`.lf-chip[onclick*="'${type}'"]`);
+            selectedChip.classList.add('active');
+            // Add special gtinsi-active class for the GTINSI button
+            if (type === 'gtinsi') {
+                selectedChip.classList.add('gtinsi-active');
+            }
             document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
                 const hasTracking = card.querySelector('.tag-tracking');
                 const hasHttp = card.querySelector('.tag-unsecure');
+                const hasGtinsi = card.querySelector('.tag-gtinsi');
                 const show = type === 'all'
                     || (type === 'tracking' && hasTracking)
-                    || (type === 'http' && hasHttp);
+                    || (type === 'http' && hasHttp)
+                    || (type === 'gtinsi' && hasGtinsi);
                 card.style.display = show ? '' : 'none';
             });
         }
@@ -820,4 +1431,5 @@
         init();
     </script>
 </body>
+
 </html>

@@ -1742,6 +1742,93 @@ html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] .dm-home-indica
     border: 1px solid rgba(231, 76, 60, 0.3);
 }
 
+/* Status Legend */
+.status-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    font-size: 0.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+[data-theme="dark"] .status-legend {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+.status-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.status-dot--pass {
+    background: var(--accent-green);
+    box-shadow: 0 0 4px var(--accent-green);
+}
+.status-dot--warn {
+    background: var(--accent-orange);
+    box-shadow: 0 0 4px var(--accent-orange);
+}
+.status-dot--fail {
+    background: var(--accent-red);
+    box-shadow: 0 0 4px var(--accent-red);
+}
+.status-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* GTINSI Highlight */
+.gtinsi-highlight {
+    border: 1px solid var(--accent-mint) !important;
+    background: rgba(106, 231, 200, 0.05) !important;
+}
+[data-theme="dark"] .gtinsi-highlight {
+    background: rgba(106, 231, 200, 0.08) !important;
+}
+.tag-gtinsi {
+    background: rgba(106, 231, 200, 0.15);
+    color: var(--accent-mint);
+    border: 1px solid rgba(106, 231, 200, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* GTINSI Filter Button Active State */
+.lf-chip.gtinsi-active {
+    background: var(--accent-mint);
+    color: #0C0D10;
+    border-color: var(--accent-mint);
+}
+
+/* GTINSI Count Pill */
+.gtinsi-count-pill {
+    background: rgba(106, 231, 200, 0.2);
+    color: var(--accent-mint);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+    border: 1px solid rgba(106, 231, 200, 0.3);
+}
+
+
 .vh-subject {
     font-family: var(--font-main);
     font-size: 1.1rem;

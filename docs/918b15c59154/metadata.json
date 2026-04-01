@@ -20,545 +20,259 @@
             "index": 1,
             "txt": "Visualiser cet email en ligne",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_0",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/web-view?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_0",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_0"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/web-view?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_1",
-            "final_url": "https://www.monsieurtshirt.com?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_1"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_2",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_2",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_2"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "TOUTES NOS IDÉES CADEAUX",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_3",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_3",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_3"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_4",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_4",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_4"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "t-shirts",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_5",
-            "final_url": "https://www.monsieurtshirt.com/tshirt-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_5",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_5"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/tshirt-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "sweats",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_6",
-            "final_url": "https://www.monsieurtshirt.com/sweat-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_6",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_6"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/sweat-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "hoodie",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_7",
-            "final_url": "https://www.monsieurtshirt.com/hoodie-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_7",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_7"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/hoodie-homme?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_8",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_8",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_8"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_9",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_9",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_9"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "affiches",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_10",
-            "final_url": "https://www.monsieurtshirt.com/cadre-affiche-personnalise?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_10",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_10"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/cadre-affiche-personnalise?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "mugs",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_11",
-            "final_url": "https://www.monsieurtshirt.com/mugs?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_11",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_11"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/mugs?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_12",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_12",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_12"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 14,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_13",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_13",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_13"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "+50 IDÉES CADEAUX NOËL",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_14",
-            "final_url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_14",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_14"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/idee-cadeau-noel?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 16,
             "txt": "NOUS REJOINDRE 🤝",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_15",
-            "final_url": "https://www.welcometothejungle.com/fr/companies/monsieur-tshirt/jobs?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_15",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_15"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.welcometothejungle.com/fr/companies/monsieur-tshirt/jobs?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 17,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_16",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmonsieurtshirt%2F%3Futm_source%3DNL_Klaviyo%26utm_medium%3Demail%26utm_campaign%3DFR_Branding_AtelierP%25C3%25A8reNo%25C3%25ABl%26_kx%3Dxkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP&is_from_rle",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_16",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_16"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/monsieurtshirt/?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmonsieurtshirt%2F%3Futm_source%3DNL_Klaviyo%26utm_medium%3Demail%26utm_campaign%3DFR_Branding_AtelierP%25C3%25A8reNo%25C3%25ABl%26_kx%3Dxkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 18,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_17",
-            "final_url": "https://www.tiktok.com/@monsieurtshirt?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_17",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_17"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.tiktok.com/@monsieurtshirt?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 19,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_18",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmonsieurtshirtstore%3Futm_source%3DNL_Klaviyo%26utm_medium%3Demail%26utm_campaign%3DFR_Branding_AtelierP%25C3%25A8reNo%25C3%25ABl%26_kx%3Dxkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_18",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_18"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/monsieurtshirtstore?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmonsieurtshirtstore%3Futm_source%3DNL_Klaviyo%26utm_medium%3Demail%26utm_campaign%3DFR_Branding_AtelierP%25C3%25A8reNo%25C3%25ABl%26_kx%3Dxkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 20,
             "txt": "boutique,",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_19",
-            "final_url": "https://www.monsieurtshirt.com/info/boutiques?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_19",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_19"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com/info/boutiques?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 21,
             "txt": "On recrute !",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_20",
-            "final_url": "https://www.welcometothejungle.com/fr/companies/monsieur-tshirt?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_20",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_20"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.welcometothejungle.com/fr/companies/monsieur-tshirt?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 22,
             "txt": "Se désabonner",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_21",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_21",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_21"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 23,
             "txt": "Gérer mes préférences",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_22",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/update?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_22",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_22"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/update?a=VAHYbP&c=01JYS0GDX9F8S30E9S2PRRQ2MF&k=8be86db3f53365881d4352558b8f6426&m=01KBCRXEGJEW71GX41AXXD4WHR&r=01KBJ3WX0DVA7ZH4GCZ5RT1Z7R"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 24,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_23",
-            "final_url": "https://www.monsieurtshirt.com:443/?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_23",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_23"
-                },
-                {
-                    "status": 301,
-                    "url": "https://monsieurtshirt.com?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monsieurtshirt.com:443/?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         },
         {
             "index": 25,
             "txt": "Avis-vérifiés",
             "original_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_24",
-            "final_url": "https://www.avis-verifies.com/avis-clients/monsieurtshirt.com?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_24",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ3YPQJQ58H4S9YNGCE0FDB_24"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.avis-verifies.com/avis-clients/monsieurtshirt.com?utm_source=NL_Klaviyo&utm_medium=email&utm_campaign=FR_Branding_AtelierP%C3%A8reNo%C3%ABl&_kx=xkh6iYNz1j2P2wrRUyby7a1P84O5Me90FQjNI0Rvc0I.VAHYbP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:17"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://ctrk.klclick.com/o/01KBJ3YPQJQ58H4S9YNGCE0FDB",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "ctrk.klclick.com"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

@@ -15,6 +15,84 @@
         "images_no_alt": 0
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://gtinsi.de/694a98b88f1c5",
+            "final_url": "https://gtinsi.de/694a98b88f1c5",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://gtinsi.de/695eaf462d955",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 3,
+            "txt": "JE PARIE >",
+            "original_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://gtinsi.de/695eaf462d955",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 4,
+            "txt": "JE PARIE >",
+            "original_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://gtinsi.de/695eaf462d955",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 5,
+            "txt": "J'EN PROFITE",
+            "original_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://gtinsi.de/695eaf462d955",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 6,
+            "txt": "désinscrire ici",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://gtinsi.de/695eaf462ebf4",
+            "final_url": "https://gtinsi.de/695eaf462ebf4",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "",
+            "status": "Integration: OK",
+            "domain": "",
+            "is_gtinsi": false
+        }
+    ]
 }

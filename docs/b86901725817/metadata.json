@@ -20,127 +20,61 @@
             "index": 1,
             "txt": "",
             "original_url": "https://gtinsi.de/6945116f40f5f",
-            "final_url": "https://www.monjardinbio.com/",
+            "final_url": "https://gtinsi.de/6945116f40f5f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6945116f40f5f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.monjardinbio.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://gtinsi.de/69451179a7ae9",
-            "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email",
+            "final_url": "https://gtinsi.de/69451179a7ae9",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69451179a7ae9"
-                },
-                {
-                    "status": 200,
-                    "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://gtinsi.de/69314cdcb0a3f",
-            "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email",
+            "final_url": "https://gtinsi.de/69314cdcb0a3f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69314cdcb0a3f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "JE DÉCOUVRE EPSILOON POUR 1€",
             "original_url": "https://gtinsi.de/69314cdcb0a3f",
-            "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email",
+            "final_url": "https://gtinsi.de/69314cdcb0a3f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69314cdcb0a3f"
-                },
-                {
-                    "status": 200,
-                    "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "JE M'ABONNE À EPSILOON",
             "original_url": "https://gtinsi.de/69450b3a91746",
-            "final_url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email",
+            "final_url": "https://gtinsi.de/69450b3a91746",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69450b3a91746"
-                },
-                {
-                    "status": 200,
-                    "url": "https://offres.epsiloon.com/mon-jardin-bio?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "J'OFFRE UN ABONNEMENT",
             "original_url": "https://gtinsi.de/6931cdd3c9ecc",
-            "final_url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email",
+            "final_url": "https://gtinsi.de/6931cdd3c9ecc",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6931cdd3c9ecc"
-                },
-                {
-                    "status": 200,
-                    "url": "https://offres.epsiloon.com/offrir-magazine-science?utm_source=getinside&utm_campaign=Emailing_MonJardinBio&utm_medium=email"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 7,
@@ -150,42 +84,25 @@
             "domain": "monjardinbio.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://www.monjardinbio.com/account/unsubscribe/preview"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://gtinsi.de/69451525d3b35",
-            "final_url": "https://www.getinside.fr/",
+            "final_url": "https://gtinsi.de/69451525d3b35",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69451525d3b35"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.getinside.fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:08"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://api.getinside.media/v1/emails/track/69314cdcb28f2",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

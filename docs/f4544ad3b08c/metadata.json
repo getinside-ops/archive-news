@@ -15,6 +15,134 @@
         "images_no_alt": 1
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "Si vous rencontrez des problèmes d'affichage,cliqu",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=g4b0e26cp14oraln7ach3spda1blrutm15v8oqtpduq4m5jlu99g",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=g4b0e26cp14oraln7ach3spda1blrutm15v8oqtpduq4m5jlu99g",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=lnrdmu32a4jd5531a3l8upv0jof1e865bv31t911o0nf4nq3vepg",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=lnrdmu32a4jd5531a3l8upv0jof1e865bv31t911o0nf4nq3vepg",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=itkf9fns1io25gvm3vrmeul55i27rkgen3s717agan8l3r1kas10",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=itkf9fns1io25gvm3vrmeul55i27rkgen3s717agan8l3r1kas10",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=itkf9fns1io25gvm3vrmeul55i27rkgen3s717agan8l3r1kas10",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=itkf9fns1io25gvm3vrmeul55i27rkgen3s717agan8l3r1kas10",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 5,
+            "txt": "J'EN PROFITE ►",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=frbe47he39a15an332mdnm2s42sj09fc53k6prqmggt634hh1iug",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=frbe47he39a15an332mdnm2s42sj09fc53k6prqmggt634hh1iug",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=5vj26amo9vmqvbnd2olusqk0a1auaor6gnqfon14dbn243cfj23g",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=5vj26amo9vmqvbnd2olusqk0a1auaor6gnqfon14dbn243cfj23g",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 7,
+            "txt": "JE COMMANDE MA BOX",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=ijdt84tg62o97msupub6sv959mo7evhj9213ltrtb37d23n6fvog",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCSBTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=ijdt84tg62o97msupub6sv959mo7evhj9213ltrtb37d23n6fvog",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=lnrdmu32a4jd5531a3l8upv0jof1e865bv31t911o0nf4nq3vepg",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWG_GqrfwL6aXnxkpoLGqXJ58Sy5SBS5t2c_-8y8iVSRf7CZBCPkZvJz4t0_BgYvJBlQutNg.&_di_=lnrdmu32a4jd5531a3l8upv0jof1e865bv31t911o0nf4nq3vepg",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 9,
+            "txt": "informatique.libertes@but.fr",
+            "original_url": "mailto:informatique.libertes@but.fr",
+            "final_url": "mailto:informatique.libertes@but.fr",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false
+        },
+        {
+            "index": 10,
+            "txt": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "original_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "final_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "domain": "but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 11,
+            "txt": "https://www.but.fr/Common/Services/DonneesPersonne",
+            "original_url": "https://www.but.fr/Common/Services/DonneesPersonnelles",
+            "final_url": "https://www.but.fr/Common/Services/DonneesPersonnelles",
+            "domain": "but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 12,
+            "txt": "Je peux me désinscrire facilement et ne plus recev",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDCW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&_di_=e7unm8l5do4095hsctvqsilfcbpqfu820qr6gppa02n5p4e7algg",
+            "final_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGza9l2EhfjgsXJDejze4OHHzdTesKaFzdd8gzepO46d4K9GofzctDSHRVXtpKX%3DCRCDCW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjB4_2CdfwaB-5v7jx2h4mcZg2-xZEH_jbaw.&_di_=e7unm8l5do4095hsctvqsilfcbpqfu820qr6gppa02n5p4e7algg",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "",
+            "status": "Integration: OK",
+            "domain": "",
+            "is_gtinsi": false
+        }
+    ]
 }

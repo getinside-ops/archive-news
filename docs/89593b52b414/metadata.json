@@ -20,92 +20,49 @@
             "index": 1,
             "txt": "",
             "original_url": "https://gtinsi.de/6984c4f02ae69",
-            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6984c4f02ae69"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:30"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "J'EN PROFITE ►",
             "original_url": "https://gtinsi.de/6984c4f02ae69",
-            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6984c4f02ae69"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:30"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://gtinsi.de/6984c4f02ae69",
-            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6984c4f02ae69"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:30"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "JE COMMANDE MA BOX",
             "original_url": "https://gtinsi.de/6984c4f02ae69",
-            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6984c4f02ae69"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=BUTF4L26&utm_source=But&utm_medium=NL&utm_campaign=But_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=3b1ea624-4462-4bbe-9cfd-1fde9d6a9ac4&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:30"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://api.getinside.media/v1/emails/track/6984c4f02c604",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

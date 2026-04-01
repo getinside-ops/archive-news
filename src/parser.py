@@ -174,10 +174,14 @@ class EmailParser:
                     img['style'] = "display:none !important;"
                     continue
 
+                # Check if pixel contains gtinsi.de
+                is_gtinsi = 'gtinsi.de' in src
+
                 self.detected_pixels.append({
                     'url': src,
                     'status': 'Integration: OK',
-                    'domain': pixel_domain
+                    'domain': pixel_domain,
+                    'is_gtinsi': is_gtinsi
                 })
                 img['src'] = ""
                 img['style'] = "display:none !important;"

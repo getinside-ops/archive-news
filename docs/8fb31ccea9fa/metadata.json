@@ -24,14 +24,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/mr/sh/7xYEvjyWS1dhUHp3TVE7pSQbY1YU1sF/roNTxIIB1_bI"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 2,
@@ -41,14 +34,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrNvBcdBhVw5Ooi6yHXa9sl/r-EqQU9d05Za"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 3,
@@ -58,14 +44,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrPoB98Ug5AXRB1v8e2MtpH/n5e3NJx9LxUL"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 4,
@@ -75,14 +54,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrRhAfdneeOzTXLjJ0X9dln/T8R5gWTayWZH"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 5,
@@ -92,14 +64,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrTaAC96dDdRVtfXTN1wNiJ/nr2unSgL9zgx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 6,
@@ -109,14 +74,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrVT9iePbmrtYFzLdjWj7ep/okvfMN546q-v"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 7,
@@ -126,14 +84,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrXM9F9iaM6LacJ9o61VrbL/JbhSewumr12J"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 8,
@@ -143,14 +94,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4PrZF8lf1YvKncycxySWIbXr/gFfXColJbnt_"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 9,
@@ -160,14 +104,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4Prb88IAKXUZFfKwm8p15LUN/pGSEPCoyUdkV"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 10,
@@ -177,14 +114,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4Prd17ofdW3nhhhGaJBVs5Qt/AacWJ2l7hM8f"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 11,
@@ -194,14 +124,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/1vWzjx4Preu7LAwUd29k3aOTY0epNP/019tGSHk0jND"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 12,
@@ -211,14 +134,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEmRCR1cNhA9rFMX5AxiWEOnf/io5j8p_ebTKx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 13,
@@ -228,14 +144,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEmYzV3pe3FdX16gsJkbdU6Pn/TLQyKZP0BxnU"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 14,
@@ -245,14 +154,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEmgmZ62uPL7CmqqfSXUkjo1v/dmfAXfETSV2r"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 15,
@@ -262,14 +164,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEmoZd8GAlQasYb0SbKNrzVe3/J4vg_9TRpjKd"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 16,
@@ -279,14 +174,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEmwMhATR7W4YKLAFk7GzFDGB/p-eVsPH030Tr"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 17,
@@ -296,14 +184,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEn49lCghTbYE65K2suA6UusJ/UXX206Aj8q-D"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 18,
@@ -313,14 +194,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEnBwpEtxph1trpTq1h3DkcUR/oLurr0DVdEDP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 19,
@@ -330,14 +204,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/cl/f/sh/7xYEvjuEnJjtH7EBmVZdZddATwL0K6Z/7TQ137YojCPV"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         },
         {
             "index": 20,
@@ -347,14 +214,7 @@
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/un/v2/sh/7xYEvk0fHl1ZgYvAXZXaGYqMmSVYTUV/Lj2GS2lRfQ2S"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:47"
+            "is_dev": false
         }
     ],
     "detected_pixels": []

@@ -157,26 +157,41 @@
                     <span class="audit-overall-dot"></span>
                     <span class="audit-overall-label">{{ overall_score | upper }}</span>
                 </div>
+                <!-- Status Legend -->
+                <div class="status-legend">
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--pass"></span>
+                        <span class="status-label" data-i18n="legend_pass">PASS: No issues</span>
+                    </div>
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--warn"></span>
+                        <span class="status-label" data-i18n="legend_warn">WARN: Needs attention</span>
+                    </div>
+                    <div class="status-legend-item">
+                        <span class="status-dot status-dot--fail"></span>
+                        <span class="status-label" data-i18n="legend_fail">FAIL: Critical issue</span>
+                    </div>
+                </div>
                 <div class="audit-categories">
                     <div class="audit-category-row">
                         <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                         <span class="audit-cat-name">Metadata</span>
                         <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ metadata_score }}">{{ metadata_score | upper }}</span>
+                        <span class="audit-cat-chip audit-chip--{{ metadata_score }}" title="{{ 'PASS: Preheader and subject present' if metadata_score == 'pass' else 'WARN: Clipping risk or missing metadata' if metadata_score == 'warn' else 'FAIL: Missing preheader or subject' }}">{{ metadata_score | upper }}</span>
                     </div>
                     <div class="audit-category-row">
                         <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                         <span class="audit-cat-name">Pixels</span>
                         <span class="audit-cat-count">{{ detected_pixels | length }}</span>
                         <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ pixels_score }}">{{ pixels_score | upper }}</span>
+                        <span class="audit-cat-chip audit-chip--{{ pixels_score }}" title="{{ 'PASS: Pixels detected' if pixels_score == 'pass' else 'WARN: No pixels detected (may be lost during sanitization)' }}">{{ pixels_score | upper }}</span>
                     </div>
                     <div class="audit-category-row">
                         <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                         <span class="audit-cat-name">Links</span>
                         <span class="audit-cat-count">{{ flagged_links_count }}/{{ links | length }}</span>
                         <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ links_score }}">{{ links_score | upper }}</span>
+                        <span class="audit-cat-chip audit-chip--{{ links_score }}" title="{{ 'PASS: All links secure' if links_score == 'pass' else 'WARN: No tracking links detected' if links_score == 'warn' else 'FAIL: HTTP or DEV links found' }}">{{ links_score | upper }}</span>
                     </div>
                 </div>
             </div>
@@ -236,11 +251,12 @@
                         {% if detected_pixels %}
                         <div style="padding: 8px 10px;">
                             {% for pixel in detected_pixels %}
-                            <div class="link-card-v2" id="px-{{ loop.index }}">
+                            <div class="link-card-v2 {% if pixel.is_gtinsi %}gtinsi-highlight{% endif %}" id="px-{{ loop.index }}">
                                 <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">{{ pixel.domain or 'Unknown Provider' }}</span>
                                     <div style="display: flex; gap: 4px;">
+                                        {% if pixel.is_gtinsi %}<span class="card-v2-tag tag-gtinsi"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> getinside</span>{% endif %}
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
                                     </div>
                                 </div>
@@ -275,14 +291,18 @@
                             <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
                             <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
                             <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
+                            <button class="lf-chip" onclick="filterLinks('gtinsi')" data-i18n="filter_gtinsi">
+                                getinside{% if gtinsi_count > 0 %}<span class="gtinsi-count-pill">{{ gtinsi_count }}</span>{% endif %}
+                            </button>
                         </div>
                         <div style="padding: 8px 10px;">
                             {% for link in links %}
-                            <div class="link-card-v2" id="lc-{{ link.index }}">
+                            <div class="link-card-v2 {% if 'gtinsi.de' in link.original_url %}gtinsi-highlight{% endif %}" id="lc-{{ link.index }}">
                                 <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink({{ link.index }})">{{ link.index }}</span>
                                     <span class="card-v2-domain">{{ link.domain or 'External Link' }}</span>
                                     <div style="display: flex; gap: 4px;">
+                                        {% if 'gtinsi.de' in link.original_url %}<span class="card-v2-tag tag-gtinsi"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> getinside</span>{% endif %}
                                         {% if link.is_tracking %}<span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>{% endif %}
                                         {% if not link.is_secure %}<span class="card-v2-tag tag-unsecure"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> HTTP</span>{% endif %}
                                         {% if link.is_dev %}<span class="card-v2-tag tag-dev"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> DEV</span>{% endif %}
@@ -364,24 +384,26 @@
                 meta_sender: 'Sender', meta_crm: 'CRM', meta_subject: 'Subject',
                 meta_preheader: 'Preheader', meta_received: 'Received',
                 meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
-                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
                 lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
                 sidebar_toggle_title: 'Toggle Links Panel',
                 audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
                 audit_error: 'Audit Finished (Error Found)',
+                legend_pass: 'PASS: No issues', legend_warn: 'WARN: Needs attention', legend_fail: 'FAIL: Critical issue',
             },
             fr: {
                 tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LIENS',
                 meta_sender: 'Expéditeur', meta_crm: 'CRM', meta_subject: 'Sujet',
                 meta_preheader: 'Prévisualisation', meta_received: 'Reçu le',
                 meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
-                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP',
+                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
                 lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
                 sidebar_toggle_title: 'Panneau des liens',
                 audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
                 audit_error: 'Audit terminé (Erreur détectée)',
+                legend_pass: 'PASS: Aucun problème', legend_warn: 'WARN: Attention requise', legend_fail: 'FAIL: Problème critique',
             }
         };
 
@@ -780,7 +802,7 @@
 
                             // Update status text
                             if (step.status === 200) {
-                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (GTINSI Detected)' : _s.audit_finished;
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (getinside Detected)' : _s.audit_finished;
                             } else if (step.status === 'Timeout') {
                                 statusText.innerHTML = 'Request Timed Out';
                             } else if (step.status >= 400 || step.status === 'Error') {
@@ -909,14 +931,21 @@
         let activeLinkFilter = 'all';
         function filterLinks(type) {
             activeLinkFilter = type;
-            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active'));
-            document.querySelector(`.lf-chip[onclick*="'${type}'"]`).classList.add('active');
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active', 'gtinsi-active'));
+            const selectedChip = document.querySelector(`.lf-chip[onclick*="'${type}'"]`);
+            selectedChip.classList.add('active');
+            // Add special gtinsi-active class for the GTINSI button
+            if (type === 'gtinsi') {
+                selectedChip.classList.add('gtinsi-active');
+            }
             document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
                 const hasTracking = card.querySelector('.tag-tracking');
                 const hasHttp = card.querySelector('.tag-unsecure');
+                const hasGtinsi = card.querySelector('.tag-gtinsi');
                 const show = type === 'all'
                     || (type === 'tracking' && hasTracking)
-                    || (type === 'http' && hasHttp);
+                    || (type === 'http' && hasHttp)
+                    || (type === 'gtinsi' && hasGtinsi);
                 card.style.display = show ? '' : 'none';
             });
         }

@@ -20,293 +20,139 @@
             "index": 1,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_0",
-            "final_url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_0",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_0"
-                },
-                {
-                    "status": 200,
-                    "url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_1",
-            "final_url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_1"
-                },
-                {
-                    "status": 200,
-                    "url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_2",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_2",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_2"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_3",
-            "final_url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_3",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_3"
-                },
-                {
-                    "status": 200,
-                    "url": "https://colisdenoel.petitsfreresdespauvres.fr/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_4",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_4",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_4"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_5",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_5",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_5"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?_cv=1&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_6",
-            "final_url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_6",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_6"
-                },
-                {
-                    "status": 200,
-                    "url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_7",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_7",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_7"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/mieuxquedesfleurs/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_8",
-            "final_url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_8",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_8"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_9",
-            "final_url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_9",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_9"
-                },
-                {
-                    "status": 200,
-                    "url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_10",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_10",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_10"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DbWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_11",
-            "final_url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_11",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_11"
-                },
-                {
-                    "status": 400,
-                    "url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=bWLWpweggwyee9BZ_-6dx280P2nHLcd_4-NXmqDO5KM.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "Vous pouvez vous désinscrire ici.",
             "original_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_12",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "final_url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_12",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBJ17JZG0VADPH0H7ETWC5RD_12"
-                },
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:20"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://ctrk.klclick.com/o/01KBJ17JZG0VADPH0H7ETWC5RD",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "ctrk.klclick.com"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

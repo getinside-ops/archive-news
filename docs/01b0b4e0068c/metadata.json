@@ -15,6 +15,54 @@
         "images_no_alt": 0
     },
     "crm": null,
-    "links": [],
-    "detected_pixels": []
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://gtinsi.de/6984c4f02ae69",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 2,
+            "txt": "J'EN PROFITE ►",
+            "original_url": "https://gtinsi.de/6984c4f02ae69",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://gtinsi.de/6984c4f02ae69",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 4,
+            "txt": "JE COMMANDE MA BOX",
+            "original_url": "https://gtinsi.de/6984c4f02ae69",
+            "final_url": "https://gtinsi.de/6984c4f02ae69",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "",
+            "status": "Integration: OK",
+            "domain": "",
+            "is_gtinsi": false
+        }
+    ]
 }

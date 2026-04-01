@@ -24,316 +24,147 @@
             "domain": "illicado.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.illicado.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://gtinsi.de/693af78a488c0",
-            "final_url": "https://www.nocibe.fr/fr/?trac=DO_FR.04.04_Promotional..illicado.email....",
+            "final_url": "https://gtinsi.de/693af78a488c0",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/693af78a488c0"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.nocibe.fr/fr/?trac=DO_FR.04.04_Promotional..illicado.email...."
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/693af78a488c0",
-            "final_url": "https://www.nocibe.fr/fr/?trac=DO_FR.04.04_Promotional..illicado.email....",
+            "final_url": "https://gtinsi.de/693af78a488c0",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/693af78a488c0"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.nocibe.fr/fr/?trac=DO_FR.04.04_Promotional..illicado.email...."
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://gtinsi.de/698069fba10a3",
-            "final_url": "https://www.recommerce.com/fr/?utm_source=illicado&utm_medium=email&utm_campaign=emailing-illicado-326",
+            "final_url": "https://gtinsi.de/698069fba10a3",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698069fba10a3"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.recommerce.com/fr/?utm_source=illicado&utm_medium=email&utm_campaign=emailing-illicado-326"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/698069fba10a3",
-            "final_url": "https://www.recommerce.com/fr/?utm_source=illicado&utm_medium=email&utm_campaign=emailing-illicado-326",
+            "final_url": "https://gtinsi.de/698069fba10a3",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698069fba10a3"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.recommerce.com/fr/?utm_source=illicado&utm_medium=email&utm_campaign=emailing-illicado-326"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "",
             "original_url": "https://gtinsi.de/698a03d16177b",
-            "final_url": "https://www.sarenza.com/?utm_campaign=pt_20260301_trade-illicado&utm_medium=partenariat&utm_source=illicado&utm_term=trade",
+            "final_url": "https://gtinsi.de/698a03d16177b",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698a03d16177b"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.sarenza.com/?utm_campaign=pt_20260301_trade-illicado&utm_medium=partenariat&utm_source=illicado&utm_term=trade"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/698a03d16177b",
-            "final_url": "https://www.sarenza.com/?utm_campaign=pt_20260301_trade-illicado&utm_medium=partenariat&utm_source=illicado&utm_term=trade",
+            "final_url": "https://gtinsi.de/698a03d16177b",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698a03d16177b"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.sarenza.com/?utm_campaign=pt_20260301_trade-illicado&utm_medium=partenariat&utm_source=illicado&utm_term=trade"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://gtinsi.de/69988d7b4f387",
-            "final_url": "https://boutique.guydemarle.com/",
+            "final_url": "https://gtinsi.de/69988d7b4f387",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69988d7b4f387"
-                },
-                {
-                    "status": 301,
-                    "url": "http://boutique.guydemarle.com/?utm_source=email&utm_medium=illicado&utm_campaign=email-fil-rouge"
-                },
-                {
-                    "status": 200,
-                    "url": "https://boutique.guydemarle.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/69988d7b4f387",
-            "final_url": "https://boutique.guydemarle.com/",
+            "final_url": "https://gtinsi.de/69988d7b4f387",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/69988d7b4f387"
-                },
-                {
-                    "status": 301,
-                    "url": "http://boutique.guydemarle.com/?utm_source=email&utm_medium=illicado&utm_campaign=email-fil-rouge"
-                },
-                {
-                    "status": 200,
-                    "url": "https://boutique.guydemarle.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://gtinsi.de/698b2f855b8ee",
-            "final_url": "https://www.kombo.co/fr/",
+            "final_url": "https://gtinsi.de/698b2f855b8ee",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698b2f855b8ee"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.kombo.co/fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/698b2f855b8ee",
-            "final_url": "https://www.kombo.co/fr/",
+            "final_url": "https://gtinsi.de/698b2f855b8ee",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698b2f855b8ee"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.kombo.co/fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "",
             "original_url": "https://gtinsi.de/698335c664bea",
-            "final_url": "https://www.motoblouz.com/?utm_source=illicado&utm_medium=email&utm_content=illicado_bonsplans_filrouge",
+            "final_url": "https://gtinsi.de/698335c664bea",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698335c664bea"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.motoblouz.com/?utm_source=illicado&utm_medium=email&utm_content=illicado_bonsplans_filrouge"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/698335c664bea",
-            "final_url": "https://www.motoblouz.com/?utm_source=illicado&utm_medium=email&utm_content=illicado_bonsplans_filrouge",
+            "final_url": "https://gtinsi.de/698335c664bea",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698335c664bea"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.motoblouz.com/?utm_source=illicado&utm_medium=email&utm_content=illicado_bonsplans_filrouge"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 14,
             "txt": "",
             "original_url": "https://gtinsi.de/698478fac0b01",
-            "final_url": "https://www.francoisesaget.com/fr-fr/c/linge-de-lit?utm_source=illicado&utm_medium=email&utm_campaign=illicado_bons_plans",
+            "final_url": "https://gtinsi.de/698478fac0b01",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698478fac0b01"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.francoisesaget.com/fr-fr/c/linge-de-lit?utm_source=illicado&utm_medium=email&utm_campaign=illicado_bons_plans"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "J'en profite",
             "original_url": "https://gtinsi.de/698478fac0b01",
-            "final_url": "https://www.francoisesaget.com/fr-fr/c/linge-de-lit?utm_source=illicado&utm_medium=email&utm_campaign=illicado_bons_plans",
+            "final_url": "https://gtinsi.de/698478fac0b01",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/698478fac0b01"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.francoisesaget.com/fr-fr/c/linge-de-lit?utm_source=illicado&utm_medium=email&utm_campaign=illicado_bons_plans"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 16,
@@ -343,56 +174,27 @@
             "domain": "illicado.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.illicado.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 17,
             "txt": "",
             "original_url": "https://www.facebook.com/illicado",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fillicado",
+            "final_url": "https://www.facebook.com/illicado",
             "domain": "facebook.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/illicado"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fillicado"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 18,
             "txt": "",
             "original_url": "https://www.instagram.com/illicado_/?hl=fr",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fillicado_%2F%3Fhl%3Dfr&is_from_rle",
+            "final_url": "https://www.instagram.com/illicado_/?hl=fr",
             "domain": "instagram.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/illicado_/?hl=fr"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fillicado_%2F%3Fhl%3Dfr&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 19,
@@ -402,35 +204,17 @@
             "domain": "illicado.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.illicado.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 20,
             "txt": "",
             "original_url": "https://www.linkedin.com/company/illicado/mycompany/",
-            "final_url": "https://fr.linkedin.com/company/illicado",
+            "final_url": "https://www.linkedin.com/company/illicado/mycompany/",
             "domain": "linkedin.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "https://www.linkedin.com/company/illicado/mycompany/"
-                },
-                {
-                    "status": 200,
-                    "url": "https://fr.linkedin.com/company/illicado"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 21,
@@ -440,14 +224,7 @@
             "domain": "illicado.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.illicado.com/contact"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 22,
@@ -457,14 +234,7 @@
             "domain": "illicado.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.illicado.com/donnees-personnelles"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         },
         {
             "index": 23,
@@ -474,46 +244,8 @@
             "domain": "illiandco.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://illiandco.com/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:12"
+            "is_dev": false
         }
     ],
-    "detected_pixels": [
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2071621.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        },
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2071621.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        },
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2073604.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        },
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2073605.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        },
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2073607.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        },
-        {
-            "url": "http://tracking.illicado.com/custloads/291139738/md_2073606.png",
-            "status": "Integration: OK",
-            "domain": "tracking.illicado.com"
-        }
-    ]
+    "detected_pixels": []
 }

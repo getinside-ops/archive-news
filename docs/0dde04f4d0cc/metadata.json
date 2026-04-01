@@ -15,6 +15,157 @@
         "images_no_alt": 2
     },
     "crm": null,
-    "links": [],
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec1",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 2,
+            "txt": "Profitez de -50%* sur vos produits préférés",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec2",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 3,
+            "txt": "Imprimez vos plus beaux instants, Photoweb vous of",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec3",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 4,
+            "txt": "Je découvre",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec4",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 5,
+            "txt": "Les livres photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec5",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 6,
+            "txt": "Les tirages photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec6",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 7,
+            "txt": "Les calendriers photo",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec7",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 8,
+            "txt": "La décoration murale",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec8",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aec9",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 10,
+            "txt": "Découvrez nos cartes de voeux & faire-part",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aeca",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 11,
+            "txt": "Partagez vos plus beaux messages avec les cartes P",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecb",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 12,
+            "txt": "Créez dès maintenant",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecc",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 13,
+            "txt": "Si vous souhaitez vous désabonner de la lettre d’i",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecd",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 14,
+            "txt": "Mon compte",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aece&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=hPS-_-6zLC_wQwq1tRhbHhKMmj_B6B16fUexVl2rBfU",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        },
+        {
+            "index": 15,
+            "txt": "Mes Newsletters",
+            "original_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=h59fc507c-e8d8-4ace-92bf-8889c0b9d6c8,12d9b22,2a7aecf&e=cDE9RU1DMDAyMTI2MjZGUiZwMj01OWZjNTA3Yy1lOGQ4LTRhY2UtOTJiZi04ODg5YzBiOWQ2YzgmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=dQvoldFC49cTYztR5AHtYshWX-FSUQyS5DaMgkD98AI",
+            "domain": "news.tracking.laredoute.fr",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false
+        }
+    ],
     "detected_pixels": []
 }

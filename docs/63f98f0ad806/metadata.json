@@ -20,108 +20,49 @@
             "index": 1,
             "txt": "",
             "original_url": "https://gtinsi.de/691753713e2df",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1",
+            "final_url": "https://gtinsi.de/691753713e2df",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691753713e2df"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:28"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://gtinsi.de/691753713e2df",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1",
+            "final_url": "https://gtinsi.de/691753713e2df",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691753713e2df"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:28"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://gtinsi.de/691753713e2df",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1",
+            "final_url": "https://gtinsi.de/691753713e2df",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691753713e2df"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:28"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://gtinsi.de/691753713e2df",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1",
+            "final_url": "https://gtinsi.de/691753713e2df",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691753713e2df"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeCVE4xoUMVJ2siDwby44XGMVAfRDZElI063OEiTlP4yEYB0uQxvVhlHb1Qcbj71T3nGM1o4pKv-nzcXS5cHavXKx1brPUpZblWSQ-1UFhyjvGjKiYArhI5G3HfoC6Drs0g&utm_campaign=Colis25&utm_source=GI-JARDINBIO&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:52:28"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://api.getinside.media/v1/emails/track/69175371416ce",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

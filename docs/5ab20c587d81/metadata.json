@@ -24,14 +24,7 @@
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "${webversion}"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 2,
@@ -41,14 +34,7 @@
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "${unsubscribe}"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 3,
@@ -58,14 +44,7 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 4,
@@ -75,14 +54,7 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/chaussures-de-football"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 5,
@@ -92,14 +64,7 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/boutique-de-supporters-de-football"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 6,
@@ -109,14 +74,7 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/equipements-de-football/ballons-de-football"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 7,
@@ -126,14 +84,7 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/equipements-de-football"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 8,
@@ -143,456 +94,187 @@
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/destockage"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://gtinsi.de/694a98b88f1c5",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/694a98b88f1c5",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/694a98b88f1c5"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://gtinsi.de/694a98b88f1c5",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/694a98b88f1c5",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/694a98b88f1c5"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "Paris1,75",
             "original_url": "https://gtinsi.de/6967a4b12f9cc",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b12f9cc",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b12f9cc"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "Nul3,90",
             "original_url": "https://gtinsi.de/6967a4b12f9cc",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b12f9cc",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b12f9cc"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "Newcastle4,20",
             "original_url": "https://gtinsi.de/6967a4b12f9cc",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b12f9cc",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b12f9cc"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 14,
             "txt": "JE PARIE",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/695eaf462d955",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/695eaf462d955"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "BEN3,10",
             "original_url": "https://gtinsi.de/6967a4b41d89f",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b41d89f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b41d89f"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 16,
             "txt": "Nul3,50",
             "original_url": "https://gtinsi.de/6967a4b41d89f",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b41d89f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b41d89f"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 17,
             "txt": "RMD2,15",
             "original_url": "https://gtinsi.de/6967a4b41d89f",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4b41d89f",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4b41d89f"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 18,
             "txt": "JE PARIE",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/695eaf462d955",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/695eaf462d955"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 19,
             "txt": "BRU3,80",
             "original_url": "https://gtinsi.de/6967a4bf7a605",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4bf7a605",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4bf7a605"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 20,
             "txt": "Nul3,60",
             "original_url": "https://gtinsi.de/6967a4bf7a605",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4bf7a605",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4bf7a605"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 21,
             "txt": "MAR1,95",
             "original_url": "https://gtinsi.de/6967a4bf7a605",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/6967a4bf7a605",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/6967a4bf7a605"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 22,
             "txt": "JE PARIE",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/695eaf462d955",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/695eaf462d955"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 23,
             "txt": "J'EN PROFITE",
             "original_url": "https://gtinsi.de/695eaf462ebf4",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/695eaf462ebf4",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/695eaf462ebf4"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 24,
             "txt": "",
             "original_url": "https://gtinsi.de/694a98b88f1c5",
-            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
+            "final_url": "https://gtinsi.de/694a98b88f1c5",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/694a98b88f1c5"
-                },
-                {
-                    "status": 301,
-                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 25,
             "txt": "Via notre formulaire",
             "original_url": "https://foot-store.fr/contact_form/",
-            "final_url": "https://foot-store.fr/contact_form",
+            "final_url": "https://foot-store.fr/contact_form/",
             "domain": "foot-store.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 308,
-                    "url": "https://foot-store.fr/contact_form/"
-                },
-                {
-                    "status": 200,
-                    "url": "https://foot-store.fr/contact_form"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 26,
             "txt": "",
             "original_url": "https://www.facebook.com/footstore75/",
-            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ffootstore75%2F",
+            "final_url": "https://www.facebook.com/footstore75/",
             "domain": "facebook.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.facebook.com/footstore75/"
-                },
-                {
-                    "status": 400,
-                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ffootstore75%2F"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 27,
@@ -602,35 +284,17 @@
             "domain": "x.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://x.com/FootStore75"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 28,
             "txt": "",
             "original_url": "https://www.instagram.com/footstorefr/",
-            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffootstorefr%2F&is_from_rle",
+            "final_url": "https://www.instagram.com/footstorefr/",
             "domain": "instagram.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://www.instagram.com/footstorefr/"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ffootstorefr%2F&is_from_rle"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         },
         {
             "index": 29,
@@ -640,26 +304,21 @@
             "domain": "getinside.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://www.getinside.fr/"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:40"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
             "url": "",
             "status": "Integration: OK",
-            "domain": ""
+            "domain": "",
+            "is_gtinsi": false
         },
         {
-            "url": "https://api.getinside.media/v1/emails/track/694a98b8910e8",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }

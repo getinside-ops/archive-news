@@ -20,557 +20,169 @@
             "index": 1,
             "txt": "",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c7",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c7",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c7"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c8",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c8",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c8"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 3,
             "txt": "Chère Madame, Cher Monsieur,Aujourd’hui en France,",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c9",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c9",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1c9"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ca",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ca",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ca"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cb",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cb",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cb"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 6,
             "txt": "Tous les ans pour Noël, nos équipes préparent de b",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cc",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cc",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cc"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 7,
             "txt": "J'OFFRE UN COLIS",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cd",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cd",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cd"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 8,
             "txt": "Votre générosité transformera la solitude d’un aîn",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ce",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ce",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1ce"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 9,
             "txt": "JE FAIS UN DON",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cf",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cf",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,292d1cf"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 10,
             "txt": "En cette période de fêtes, je vous remercie d’unir",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936050",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936050",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936050"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936051",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936051",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936051"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 12,
             "txt": "Anne GéneauPrésidentePetits Frères des Pauvres",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936052",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936052",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936052"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 13,
             "txt": "*Étude CSA Research/Petits Frères des Pauvres, 202",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936053",
-            "final_url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936053",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936053"
-                },
-                {
-                    "status": 302,
-                    "url": "https://gtinsi.de/691afc3b1446b"
-                },
-                {
-                    "status": 303,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/?utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&amount=2500&frequency=once"
-                },
-                {
-                    "status": 200,
-                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-de-noel/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeArDiSfvL27aG_9yWKZ2d19rS8WWdJp_5P_b7mUFpmRv1pOXjY-wjBzcDkeXp6qX20RqZXxqV4KU5pSlTbupiaXieBzTFOpjKKvnji8B7vXEo_dkQgHD7gxskWJIRrfx0Q&utm_campaign=Colis25&utm_source=GI-LAREDOUTE&utm_medium=CPM&_cv=1"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 14,
             "txt": "Si vous souhaitez vous désabonner de la lettre d’i",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936054",
-            "final_url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936054",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936054"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 15,
             "txt": "Mon compte",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936055&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=GWhUOX1posAW1zUpy-1T9ldzriIQgipEre03xewKiMY",
-            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936055&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=GWhUOX1posAW1zUpy-1T9ldzriIQgipEre03xewKiMY",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936055&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=GWhUOX1posAW1zUpy-1T9ldzriIQgipEre03xewKiMY"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fordertracingall%2Easpx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3%2D46fe%2D48b7%2Da4f1%2D9b54288e7a05%26idcl%3D2e783ac0%2D94de%2D45ed%2D88a7%2Dbc6ab3f789d5%26nc%3D%26%24deep%5Flink%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fordertracingall.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         },
         {
             "index": 16,
             "txt": "Mes Newsletters",
             "original_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936056&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=lM76gxxsQ2L_XyLd4zoPB3DD8C3honNYIoVOZdH4qbM",
-            "final_url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue",
+            "final_url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936056&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=lM76gxxsQ2L_XyLd4zoPB3DD8C3honNYIoVOZdH4qbM",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
-            "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,2936056&e=cDE9RU1DMDAyMTE3OTZGUiZwMj1mZDBjYzNkMy00NmZlLTQ4YjctYTRmMS05YjU0Mjg4ZTdhMDUmcDM9MmU3ODNhYzAtOTRkZS00NWVkLTg4YTctYmM2YWIzZjc4OWQ1JnA0PQ&s=lM76gxxsQ2L_XyLd4zoPB3DD8C3honNYIoVOZdH4qbM"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww%2Elaredoute%2Efr%2Fmyaccount%2Fnewslettersubscribe%2Easpx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3%2D46fe%2D48b7%2Da4f1%2D9b54288e7a05%26idcl%3D2e783ac0%2D94de%2D45ed%2D88a7%2Dbc6ab3f789d5%26nc%3D%26%24deep%5Flink%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                },
-                {
-                    "status": 307,
-                    "url": "https://lr.app.link/3p?$3p=e_adobe_campaign_classic&$original_url=https%3A%2F%2Fwww.laredoute.fr%2Fmyaccount%2Fnewslettersubscribe.aspx%3Fcod%3DEMC00211796FR%26idms%3Dfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05%26idcl%3D2e783ac0-94de-45ed-88a7-bc6ab3f789d5%26nc%3D%26%24deep_link%3Dtrue"
-                }
-            ],
-            "audit_date": "2026-04-01 09:51:50"
+            "is_dev": false
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://api.getinside.media/v1/emails/track/691afc3b16459",
+            "url": "",
             "status": "Integration: OK",
-            "domain": "api.getinside.media"
-        },
-        {
-            "url": "https://news.tracking.laredoute.fr/r/?id=hfd0cc3d3-46fe-48b7-a4f1-9b54288e7a05,122ac5d,1",
-            "status": "Integration: OK",
-            "domain": "news.tracking.laredoute.fr"
+            "domain": "",
+            "is_gtinsi": false
         }
     ]
 }
