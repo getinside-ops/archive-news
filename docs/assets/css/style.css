@@ -1564,6 +1564,7 @@ html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] .dm-home-indica
     background: transparent;
     border-bottom: none;
     backdrop-filter: none;
+    margin-bottom: 0;
 }
 
 /* === THREE-ZONE UNIFIED HEADER === */
