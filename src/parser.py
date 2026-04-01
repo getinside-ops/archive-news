@@ -397,5 +397,18 @@ class EmailParser:
                 if link['redirect_chain']:
                     link['final_url'] = link['redirect_chain'][-1]['url']
 
+    def inject_base_target(self):
+        """Inject <base target="_blank"> to make all links open in new tab."""
+        base_tag = self.soup.new_tag('base', target='_blank')
+        if self.soup.head:
+            self.soup.head.insert(0, base_tag)
+        else:
+            # Create head if it doesn't exist
+            head_tag = self.soup.new_tag('head')
+            head_tag.insert(0, base_tag)
+            if self.soup.html:
+                self.soup.html.insert(0, head_tag)
+
     def get_html(self):
+        self.inject_base_target()
         return str(self.soup)
