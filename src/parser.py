@@ -154,21 +154,39 @@ class EmailParser:
     def clean_and_process(self):
         # 1. Pixel Detection & Cleanup
         for img in self.soup.find_all("img"):
+            # Handle lazy-loading attributes BEFORE checking src
+            # This ensures we capture the actual tracking URL
+            for lazy_attr in ['data-src', 'data-original', 'data-url']:
+                if img.get(lazy_attr):
+                    img['src'] = img.get(lazy_attr)
+                    break
+            
             src = img.get("src", "")
             width = img.get("width")
             height = img.get("height")
-            
+
             # Detect by pattern OR dimensions (1x1)
             reason = None
             if any(pattern in src for pattern in TRACKING_PATTERNS):
                 reason = "Known Tracking Domain"
             elif width == "1" and height == "1":
                 reason = "1x1 Pixel Dimensions"
-                
+
             if reason:
+                # Skip pixel if src is empty
+                if not src:
+                    img['src'] = ""
+                    img['style'] = "display:none !important;"
+                    continue
+                
                 # Extract domain; skip pixel if URL is unparseable
                 try:
                     pixel_domain = urlparse(src).netloc.replace('www.', '')
+                    # If domain is still empty after parsing, skip this pixel
+                    if not pixel_domain:
+                        img['src'] = ""
+                        img['style'] = "display:none !important;"
+                        continue
                 except Exception:
                     img['src'] = ""
                     img['style'] = "display:none !important;"
