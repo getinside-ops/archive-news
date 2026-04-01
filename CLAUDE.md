@@ -91,7 +91,8 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 ## Contributing rules (from README)
 
 - **Parser changes**: Update `EmailParser` in `src/parser.py` first; ensure the returned dict keys match Jinja2 template expectations in `templates/viewer.html`.
-- **Template updates**: Maintain the JS-based sidebar logic; be careful with variable escaping when injecting JSON into `<script>` tags.
+- **Template updates**: Maintain the JS-based sidebar logic; be careful with variable escaping when injecting JSON into `<script>` tags. **Never pass URLs via `onclick="{{ url | tojson }}"` — `tojson` produces double-quoted strings that break HTML attribute parsing.** Use `data-url="{{ url }}"` on the element and read `btn.dataset.url` in JS instead.
+- **Device mockup**: Chrome HTML structure lives in `#deviceFrame` in `templates/viewer.html` (dm-browser-bar, dm-status-bar, dm-notch, dm-screen, dm-chrome-bottom). The CSS uses `.device-mockup[data-mode="mobile|tablet|desktop"]` selectors — both the class and `data-mode` attribute must be present. `setMode()` switches modes by setting `frameEl.dataset.mode`.
 - **Assets**: All archived images must be saved to `docs/assets/` (via `copy_assets`) or per-email folders — never referenced from `src/`.
 - **CSS**: Use the getinside Design System palette defined in `src/assets/css/style.css` and documented in `DESIGN-SYSTEM.md`. Key tokens: `#0aaa8e` brand primary (light), `#6AE7C8` mint accent, `#F7F6F3` light bg, `#1b1b1f` dark bg. After editing CSS, copy `src/assets/css/style.css` → `docs/assets/css/style.css`.
 - **Worker JSON responses**: URLs and user content rendered to DOM must be HTML-escaped to prevent XSS. Use `escapeHtml()` helper function with DOM's textContent/innerHTML pattern.

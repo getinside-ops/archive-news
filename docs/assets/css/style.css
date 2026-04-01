@@ -832,6 +832,25 @@ body.index-page[data-theme="dark"] .crm-badge {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(106, 231, 200, 0.08);
 }
 
+/* Light mode: phone/tablet uses dark device chrome (conventional mockup appearance,
+   prevents the white status-bar block visible against colored email content) */
+html:not([data-theme="dark"]) .device-mockup[data-mode="mobile"],
+html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] {
+    background: #242428;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+html:not([data-theme="dark"]) .device-mockup[data-mode="mobile"] .dm-notch,
+html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] .dm-notch {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+html:not([data-theme="dark"]) .device-mockup[data-mode="mobile"] .dm-home-indicator,
+html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] .dm-home-indicator {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 .device-mockup[data-mode="desktop"] {
     max-width: 960px;
     border-radius: 8px;
@@ -1511,7 +1530,7 @@ body.index-page[data-theme="dark"] .crm-badge {
 }
 
 .viewer-layout .viewer-content {
-    padding: 0 20px 20px;
+    padding: 20px 20px 20px;
     align-items: flex-start;
     justify-content: center;
     background:
