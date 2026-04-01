@@ -1,280 +1,234 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <style>
+<html id="htmlRoot" lang="en">
+<head><base target="_blank"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<link href="../assets/images/gi-keyvisual.svg" rel="icon" type="image/svg+xml"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
         body {
             margin: 0;
             overflow: hidden;
         }
     </style>
 </head>
-
 <body>
-    <div class="viewer-layout">
-        <!-- Top navigation -->
-        <nav class="gi-topnav">
-            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
-                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
-            </a>
-
-            <div class="gi-topnav-actions">
-                <!-- Language picker: translate icon matching VitePress vpi-languages -->
-                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-                </button>
-
-                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
-                    <span class="gi-vp-check">
-                        <span class="gi-vp-icon">
-                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        </span>
-                    </span>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Main body row: viewer + sidebar -->
-        <div class="viewer-body-row">
-        <!-- Main Content -->
-        <div class="viewer-main">
-            <!-- Header: three-zone unified bar -->
-            <header class="viewer-header">
-                <div class="vh-unified-bar">
-                    <!-- Left: Email identity -->
-                    <div class="vh-zone-identity">
-                        <span class="vh-sender-pill">benoit@getinside.fr</span>
-                        <h1 class="vh-subject" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</h1>
-                        <span class="crm-badge" data-crm="Unknown">Unknown</span>
-                        <span class="vh-date">10/02/2026 à 02:35</span>
-                    </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Center: Device toggle (hidden on mobile) -->
-                    <div class="vh-zone-view hide-mobile">
-                        <div class="device-toggle">
-                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            </button>
-                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            </button>
-                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Right: QA Actions -->
-                    <div class="vh-zone-actions">
-                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
-                            <span id="highlightBtnText">Show Links</span>
-                        </button>
-                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+<div class="viewer-layout">
+<!-- Top navigation -->
+<nav class="gi-topnav">
+<a class="gi-topnav-logo" href="https://getinside-ops.github.io/handbook/" rel="noopener" target="_blank">
+<img alt="getinside" class="gi-logo-img gi-logo-sm" src="../assets/images/logo-getinside.svg"/>
+</a>
+<div class="gi-topnav-actions">
+<!-- Language picker: translate icon matching VitePress vpi-languages -->
+<button aria-label="Change language" class="gi-lang-btn" id="langBtn" title="Change language">
+<svg aria-hidden="true" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>
+<svg aria-hidden="true" fill="currentColor" height="10" viewbox="0 0 24 24" width="10"><path d="M7 10l5 5 5-5z"></path></svg>
+</button>
+<!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+<button aria-label="Toggle theme" class="gi-vp-switch" id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme (T)">
+<span class="gi-vp-check">
+<span class="gi-vp-icon">
+<svg aria-hidden="true" class="icon-moon" fill="currentColor" height="12" style="display:none;" viewbox="0 0 24 24" width="12"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg aria-hidden="true" class="icon-sun" fill="currentColor" height="12" viewbox="0 0 24 24" width="12"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+</span>
+</span>
+</button>
+</div>
+</nav>
+<!-- Main body row: viewer + sidebar -->
+<div class="viewer-body-row">
+<!-- Main Content -->
+<div class="viewer-main">
+<!-- Header: three-zone unified bar -->
+<header class="viewer-header">
+<div class="vh-unified-bar">
+<!-- Left: Email identity -->
+<div class="vh-zone-identity">
+<span class="vh-sender-pill">benoit@getinside.fr</span>
+<h1 class="vh-subject" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</h1>
+<span class="crm-badge" data-crm="Unknown">Unknown</span>
+<span class="vh-date">10/02/2026 à 02:35</span>
+</div>
+<div aria-hidden="true" class="vh-zone-divider"></div>
+<!-- Center: Device toggle (hidden on mobile) -->
+<div class="vh-zone-view hide-mobile">
+<div class="device-toggle">
+<button aria-label="Mobile view (1)" class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+</button>
+<button aria-label="Tablet view (2)" class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="20" rx="2" ry="2" width="16" x="4" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+</button>
+<button aria-label="Desktop view (3)" class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="14" rx="2" ry="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+</button>
+</div>
+</div>
+<div aria-hidden="true" class="vh-zone-divider"></div>
+<!-- Right: QA Actions -->
+<div class="vh-zone-actions">
+<button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+<span id="highlightBtnText">Show Links</span>
+</button>
+<button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
-                        <button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Share
+<button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
+<svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" style="vertical-align:-1px;margin-right:4px" viewbox="0 0 24 24" width="13"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" x2="12" y1="2" y2="15"></line></svg>Share
                         </button>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Email Content -->
-            <div class="viewer-content">
-                <div id="deviceFrame" class="device-mockup" data-mode="mobile">
-                    <!-- Desktop browser chrome -->
-                    <div class="dm-browser-bar">
-                        <div class="dm-traffic-lights">
-                            <div class="dm-dot dm-dot-close"></div>
-                            <div class="dm-dot dm-dot-min"></div>
-                            <div class="dm-dot dm-dot-max"></div>
-                        </div>
-                        <div class="dm-tab">
-                            <div class="dm-tab-favicon"></div>
-                            <span>Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</span>
-                        </div>
-                        <div class="dm-address-bar">benoit@getinside.fr</div>
-                    </div>
-                    <!-- Mobile/Tablet status bar + notch -->
-                    <div class="dm-status-bar">
-                        <div class="dm-notch"></div>
-                    </div>
-                    <!-- Email screen -->
-                    <div class="dm-screen">
-                        <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
-                    </div>
-                    <!-- Bottom home bar -->
-                    <div class="dm-chrome-bottom">
-                        <div class="dm-home-indicator"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-
-        
-        
-        
-        
-
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
-        
-        
-
-        <!-- Sidebar -->
-        <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
-            <!-- Fixed: Audit Summary Panel -->
-            <div class="audit-summary-panel" role="region" aria-label="Audit scorecard">
-                <div class="audit-overall audit-overall--warn">
-                    <span class="audit-overall-dot"></span>
-                    <span class="audit-overall-label">WARN</span>
-                </div>
-                <div class="audit-categories">
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                        <span class="audit-cat-name">Metadata</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--pass">PASS</span>
-                    </div>
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        <span class="audit-cat-name">Pixels</span>
-                        <span class="audit-cat-count">0</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--warn">WARN</span>
-                    </div>
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        <span class="audit-cat-name">Links</span>
-                        <span class="audit-cat-count">0/0</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--pass">PASS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Scrollable: Detail Log (existing tab content) -->
-            <div class="audit-detail-log" role="region" aria-label="Audit detail">
-                <div class="tab-bar">
-                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
-                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" style="display:none" data-i18n="tab_pixels">PIXELS</button>
-                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">0</span></button>
-                </div>
-
-                <div class="sidebar-content">
-
-                    <!-- META Tab -->
-                    <div class="tab-pane" id="tab-meta">
-                        <div class="stat-grid">
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_sender">Sender</span>
-                                <span class="sc-value">benoit@getinside.fr</span>
-                            </div>
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_crm">CRM</span>
-                                <span class="sc-value text-cyan">Unknown</span>
-                            </div>
-                            <div class="stat-cell sc-wide">
-                                <span class="sc-label" data-i18n="meta_subject">Subject</span>
-                                <span class="sc-value" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</span>
-                            </div>
-                            <div class="stat-cell sc-wide">
-                                <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
-                                <span class="sc-value" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Un avantage réservé aux clients BUT. Offre Partenaire Une cuisine équipée, c&#39;est bien. Une cuisine qui ré...">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Un avantage réservé aux clients BUT. Offre Partenaire Une cuisine équipée, c&#39;est bien. Une cuisine qui ré...</span>
-                            </div>
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_received">Received</span>
-                                <span class="sc-value">10/02/2026 à 02:35</span>
-                            </div>
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_size">Size</span>
-                                <span class="sc-value text-yellow">29.3 KB</span>
-                            </div>
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
-                                <span class="sc-value text-green">
+</div>
+</div>
+</header>
+<!-- Email Content -->
+<div class="viewer-content">
+<div class="device-mockup" data-mode="mobile" id="deviceFrame">
+<!-- Desktop browser chrome -->
+<div class="dm-browser-bar">
+<div class="dm-traffic-lights">
+<div class="dm-dot dm-dot-close"></div>
+<div class="dm-dot dm-dot-min"></div>
+<div class="dm-dot dm-dot-max"></div>
+</div>
+<div class="dm-tab">
+<div class="dm-tab-favicon"></div>
+<span>Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</span>
+</div>
+<div class="dm-address-bar">benoit@getinside.fr</div>
+</div>
+<!-- Mobile/Tablet status bar + notch -->
+<div class="dm-status-bar">
+<div class="dm-notch"></div>
+</div>
+<!-- Email screen -->
+<div class="dm-screen">
+<iframe class="email-frame no-scrollbar" id="emailFrame" sandbox="allow-same-origin allow-popups" title="Email content"></iframe>
+</div>
+<!-- Bottom home bar -->
+<div class="dm-chrome-bottom">
+<div class="dm-home-indicator"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside aria-label="Sidebar" class="viewer-sidebar" role="region">
+<!-- Fixed: Audit Summary Panel -->
+<div aria-label="Audit scorecard" class="audit-summary-panel" role="region">
+<div class="audit-overall audit-overall--warn">
+<span class="audit-overall-dot"></span>
+<span class="audit-overall-label">WARN</span>
+</div>
+<div class="audit-categories">
+<div class="audit-category-row">
+<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+<span class="audit-cat-name">Metadata</span>
+<span class="audit-cat-spacer"></span>
+<span class="audit-cat-chip audit-chip--pass">PASS</span>
+</div>
+<div class="audit-category-row">
+<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+<span class="audit-cat-name">Pixels</span>
+<span class="audit-cat-count">0</span>
+<span class="audit-cat-spacer"></span>
+<span class="audit-cat-chip audit-chip--warn">WARN</span>
+</div>
+<div class="audit-category-row">
+<svg aria-hidden="true" class="audit-cat-icon" fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+<span class="audit-cat-name">Links</span>
+<span class="audit-cat-count">0/0</span>
+<span class="audit-cat-spacer"></span>
+<span class="audit-cat-chip audit-chip--pass">PASS</span>
+</div>
+</div>
+</div>
+<!-- Scrollable: Detail Log (existing tab content) -->
+<div aria-label="Audit detail" class="audit-detail-log" role="region">
+<div class="tab-bar">
+<button class="tab-btn active" data-i18n="tab_meta" data-tab="meta" onclick="showTab('meta')">META</button>
+<button class="tab-btn" data-i18n="tab_pixels" data-tab="pixels" onclick="showTab('pixels')" style="display:none">PIXELS</button>
+<button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">0</span></button>
+</div>
+<div class="sidebar-content">
+<!-- META Tab -->
+<div class="tab-pane" id="tab-meta">
+<div class="stat-grid">
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_sender">Sender</span>
+<span class="sc-value">benoit@getinside.fr</span>
+</div>
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_crm">CRM</span>
+<span class="sc-value text-cyan">Unknown</span>
+</div>
+<div class="stat-cell sc-wide">
+<span class="sc-label" data-i18n="meta_subject">Subject</span>
+<span class="sc-value" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh</span>
+</div>
+<div class="stat-cell sc-wide">
+<span class="sc-label" data-i18n="meta_preheader">Preheader</span>
+<span class="sc-value" title="Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Un avantage réservé aux clients BUT. Offre Partenaire Une cuisine équipée, c'est bien. Une cuisine qui ré...">Offre exclusive : jusqu’à 95 € offerts avec HelloFresh Un avantage réservé aux clients BUT. Offre Partenaire Une cuisine équipée, c'est bien. Une cuisine qui ré...</span>
+</div>
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_received">Received</span>
+<span class="sc-value">10/02/2026 à 02:35</span>
+</div>
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_size">Size</span>
+<span class="sc-value text-yellow">29.3 KB</span>
+</div>
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
+<span class="sc-value text-green">
                                     Low
                                 </span>
-                            </div>
-                            <div class="stat-cell">
-                                <span class="sc-label" data-i18n="meta_links">Links</span>
-                                <span class="sc-value">0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- PIXELS Tab -->
-                    <div class="tab-pane" id="tab-pixels" style="display:none;">
-                        
-                    </div>
-
-                    <!-- LINKS Tab -->
-                    <div class="tab-pane" id="tab-links" style="display:none;">
-                        <div class="lf-filter-row" id="linkFilterRow">
-                            <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
-                            <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
-                            <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
-                        </div>
-                        <div style="padding: 8px 10px;">
-                            
-                        </div>
-                    </div>
-
-                </div><!-- /.sidebar-content -->
-            </div><!-- /.audit-detail-log -->
-
-            <!-- Sticky Footer -->
-            <div class="sidebar-footer">
-                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
+</div>
+<div class="stat-cell">
+<span class="sc-label" data-i18n="meta_links">Links</span>
+<span class="sc-value">0</span>
+</div>
+</div>
+</div>
+<!-- PIXELS Tab -->
+<div class="tab-pane" id="tab-pixels" style="display:none;">
+</div>
+<!-- LINKS Tab -->
+<div class="tab-pane" id="tab-links" style="display:none;">
+<div class="lf-filter-row" id="linkFilterRow">
+<button class="lf-chip active" data-i18n="filter_all" onclick="filterLinks('all')">All</button>
+<button class="lf-chip" data-i18n="filter_tracking" onclick="filterLinks('tracking')">Tracking</button>
+<button class="lf-chip" data-i18n="filter_http" onclick="filterLinks('http')">HTTP</button>
+</div>
+<div style="padding: 8px 10px;">
+</div>
+</div>
+</div><!-- /.sidebar-content -->
+</div><!-- /.audit-detail-log -->
+<!-- Sticky Footer -->
+<div class="sidebar-footer">
+<p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
                     Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
-                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br/>
                     © 2026 getinside. Tous droits réservés.
                 </p>
-            </div>
-        </aside>
-        </div><!-- /.viewer-body-row -->
-    </div><!-- /.viewer-layout -->
-
-
-
-    <!-- Mobile sidebar toggle button -->
-    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
+</div>
+</aside>
+</div><!-- /.viewer-body-row -->
+</div><!-- /.viewer-layout -->
+<!-- Mobile sidebar toggle button -->
+<button aria-label="Toggle Links Panel" class="sidebar-mobile-toggle" id="sidebarToggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel">
         ☰ Links
     </button>
-
-    <!-- Link overlays container -->
-    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
-
+<!-- Link overlays container -->
+<div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
 <script src="../assets/js/main.js"></script>
-    <script>
+<script>
         const content = "<!DOCTYPE html>\n\n<html dir=\"auto\" lang=\"und\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\">\n<head>\n<title>Offre exclusive : jusqu\u2019\u00e0 95 \u20ac offerts avec HelloFresh</title>\n<!--[if !mso]><!-->\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<!--<![endif]-->\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"width=device-width, initial-scale=1\" name=\"viewport\"/>\n<style type=\"text/css\">\n    #outlook a {\n      padding: 0;\n    }\n\n    body {\n      margin: 0;\n      padding: 0;\n      -webkit-text-size-adjust: 100%;\n      -ms-text-size-adjust: 100%;\n    }\n\n    table,\n    td {\n      border-collapse: collapse;\n      mso-table-lspace: 0pt;\n      mso-table-rspace: 0pt;\n    }\n\n    img {\n      border: 0;\n      height: auto;\n      line-height: 100%;\n      outline: none;\n      text-decoration: none;\n      -ms-interpolation-mode: bicubic;\n    }\n\n    p {\n      display: block;\n      margin: 13px 0;\n    }\n  </style>\n<!--[if mso]>\n    <noscript>\n    <xml>\n    <o:OfficeDocumentSettings>\n      <o:AllowPNG/>\n      <o:PixelsPerInch>96</o:PixelsPerInch>\n    </o:OfficeDocumentSettings>\n    </xml>\n    </noscript>\n    <![endif]-->\n<!--[if lte mso 11]>\n    <style type=\"text/css\">\n      .mj-outlook-group-fix { width:100% !important; }\n    </style>\n    <![endif]-->\n<style type=\"text/css\">\n    @media only screen and (min-width:480px) {\n      .mj-column-per-100 {\n        width: 100% !important;\n        max-width: 100%;\n      }\n\n      .mj-column-per-50 {\n        width: 50% !important;\n        max-width: 50%;\n      }\n    }\n  </style>\n<style media=\"screen and (min-width:480px)\">\n    .moz-text-html .mj-column-per-100 {\n      width: 100% !important;\n      max-width: 100%;\n    }\n\n    .moz-text-html .mj-column-per-50 {\n      width: 50% !important;\n      max-width: 50%;\n    }\n  </style>\n<style type=\"text/css\">\n    @media only screen and (max-width:479px) {\n      table.mj-full-width-mobile {\n        width: 100% !important;\n      }\n\n      td.mj-full-width-mobile {\n        width: auto !important;\n      }\n    }\n  </style>\n<style type=\"text/css\">\n    .hide-mobile {\n      display: none !important;\n    }\n\n    .but-red {\n      color: #EA2504 !important;\n    }\n\n    /* Transformation en BLOC MONOCHROME SOLIDE SANS OMBRE (Flat Design) */\n    .coupon-box {\n      background-color: #ffffff !important;\n      border-radius: 8px !important;\n      overflow: hidden !important;\n      border: 1px solid #E0E0E0 !important;\n    }\n\n    /* Code promo : Bloc solide gris clair */\n    .promo-code {\n      background-color: #F4F4F4;\n      color: #EA2504;\n      padding: 10px 20px;\n      font-weight: 900;\n      border-radius: 4px;\n      display: inline-block;\n      font-size: 16px;\n      letter-spacing: 1px;\n    }\n\n    .impact-text {\n      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;\n    }\n  </style>\n<!-- TITRE ET PRE-HEADER VALID\u00c9S -->\n</head>\n<body style=\"word-spacing:normal;background-color:#F4F4F4;\">\n<div style=\"display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">Un avantage r\u00e9serv\u00e9 aux clients BUT.</div>\n<div aria-label=\"Offre exclusive : jusqu\u2019\u00e0 95 \u20ac offerts avec HelloFresh\" aria-roledescription=\"email\" dir=\"auto\" lang=\"und\" role=\"article\" style=\"background-color:#F4F4F4;\">\n<!-- HERO IMAGE AVEC BADGE ET ZONE CLIQUABLE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"line-height:0;font-size:0;mso-line-height-rule:exactly;\"><v:image style=\"border:0;height:350px;mso-position-horizontal:center;position:absolute;top:0;width:600px;z-index:-3;\" src=\"https://res.cloudinary.com/dto4gkqlt/image/upload/v1770630430/RYAN5551_high_tl9xov.jpg\" xmlns:v=\"urn:schemas-microsoft-com:vml\" /><![endif]-->\n<div style=\"margin:0 auto;max-width:600px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n<tbody>\n<tr style=\"vertical-align:top;\">\n<td background=\"https://res.cloudinary.com/dto4gkqlt/image/upload/v1770630430/RYAN5551_high_tl9xov.jpg\" height=\"310\" style=\"background:#ffffff url('https://res.cloudinary.com/dto4gkqlt/image/upload/v1770630430/RYAN5551_high_tl9xov.jpg') no-repeat center center / cover;background-position:center center;background-repeat:no-repeat;padding:20px;vertical-align:top;height:310px;\">\n<!--[if mso | IE]><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:600px;\" width=\"600\" ><tr><td style=\"\"><![endif]-->\n<div class=\"mj-hero-content\" style=\"margin:0px auto;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;margin:0px;\">\n<tbody>\n<tr>\n<td style=\"\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;margin:0px;\">\n<tbody>\n<!-- 1. Le Badge cliquable -->\n<tr>\n<td align=\"right\" style=\"font-size:0px;padding:0px;padding-bottom:10px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:24px;text-align:right;color:#333333;\"><a data-index=\"1\" href=\"https://gtinsi.de/6984c4f02ae69\" style=\"background-color: #EA2504; color: #ffffff; padding: 6px 10px; font-weight: bold; text-transform: uppercase; font-size: 10px; border-radius: 4px; letter-spacing: 0.5px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; display: inline-block;\"> Offre Partenaire </a></div>\n</td>\n</tr>\n<!-- 2. Zone transparente cliquable (Simule le clic sur le fond) -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:510px;\">\n<a data-index=\"2\" href=\"https://gtinsi.de/6984c4f02ae69\" target=\"_blank\">\n<img alt=\"D\u00e9couvrir l'offre\" height=\"280\" src=\"img_0.png\" style=\"border:0;display:block;outline:none;text-decoration:none;height:280px;width:100%;font-size:13px;\" width=\"510\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TITRE ACCROCHE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:20px 20px 10px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- TITRE BUT : ROUGE MIS \u00c0 JOUR -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:20px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Une cuisine \u00e9quip\u00e9e, c'est bien.<br/> Une cuisine qui r\u00e9gale, c'est mieux !</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- OFFER BLOCK STYLE \"CARTE SOLIDE\" SANS OMBRE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"coupon-box-outlook\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix coupon-box\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding:25px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<!-- PRIX OPTIMIS\u00c9 MOBILE (32px) EN ROUGE BUT -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:5px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:32px;font-weight:900;line-height:36px;text-align:center;text-transform:uppercase;color:#EA2504;\">JUSQU'\u00c0 95\u20ac OFFERTS*</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:20px;text-align:center;text-transform:uppercase;color:#333333;\">+ VOTRE DESSERT \u00c0 VIE !</div>\n</td>\n</tr>\n<!-- CODE PROMO -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:20px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:24px;text-align:center;color:#333333;\">Votre code avantage :<br/><br/>\n<span class=\"promo-code\">BUTF4L26</span>\n</div>\n</td>\n</tr>\n<!-- CTA -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"3\" href=\"https://gtinsi.de/6984c4f02ae69\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> J'EN PROFITE \u25ba </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<!-- TEXTE MODIFI\u00c9 AVEC AST\u00c9RISQUE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;padding-bottom:0px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:24px;text-align:center;color:#555555;\">Soit de d\u00e9licieux repas <strong>\u00e0 partir de moins de 3 \u20ac par assiette*</strong>.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- EDITORIAL CONTEXT -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 10px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\">Chez <strong>BUT</strong>, nous aimons vous aider \u00e0 cr\u00e9er une cuisine conviviale. Mais nous savons que ce qui compte le plus, c'est ce que vous y partagez.<br/><br/> D\u00e9couvrez <strong>HelloFresh</strong> : des ingr\u00e9dients frais livr\u00e9s chez vous pour cuisiner simplement.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- ARGUMENTS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 10px 0px 10px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83d\udce6</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Livraison flexible</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Choisissez votre cr\u00e9neau de 8h \u00e0 22h.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd55</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Ingr\u00e9dients frais</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Produits de qualit\u00e9 s\u00e9lectionn\u00e9s avec soin.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd57</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Vari\u00e9t\u00e9 au menu</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">45 nouvelles recettes chaque semaine.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td><td class=\"\" style=\"vertical-align:top;width:290px;\" ><![endif]-->\n<div class=\"mj-column-per-50 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"vertical-align:top;padding-bottom:20px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:30px;line-height:24px;text-align:center;color:#333333;\">\ud83e\udd33</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">Sans engagement</div>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;text-align:center;color:#555555;\">Suspendez votre abonnement en un clic.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- SECTION VISUEL PLATS & TEXTE -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 20px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<!-- S\u00e9parateur SOLIDE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:25px;word-break:break-word;\">\n<p style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:100%;\">\n</p>\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 1px #E0E0E0;font-size:1px;margin:0px auto;width:510px;\" role=\"presentation\" width=\"510px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n</td></tr></table><![endif]-->\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:18px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#EA2504;\">De l'inspiration dans votre assiette</div>\n</td>\n</tr>\n<!-- IMAGE SECONDAIRE CLIQUABLE -->\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:collapse;border-spacing:0px;\">\n<tbody>\n<tr>\n<td style=\"width:510px;\">\n<a data-index=\"4\" href=\"https://gtinsi.de/6984c4f02ae69\" target=\"_blank\">\n<img alt=\"Plats savoureux HelloFresh\" height=\"auto\" src=\"img_1.png\" style=\"border:0;border-radius:8px;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;\" width=\"510\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;color:#333333;\"><strong>En manque d'id\u00e9es ?</strong><br/> Retrouvez chaque semaine 45 nouvelles recettes au menu : classiques, familiales, express ou encore v\u00e9g\u00e9tariennes. Cuisinez des plats savoureux en moins de 30 minutes gr\u00e2ce \u00e0 nos fiches-recettes pas \u00e0 pas.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- HOW IT WORKS -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:10px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;\" width=\"100%\">\n<tbody>\n<tr>\n<td style=\"background-color:#F4F4F4;border-radius:8px;vertical-align:top;border-collapse:separate;padding:20px 15px;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-bottom:15px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:900;line-height:24px;text-align:center;text-transform:uppercase;color:#333333;\">Comment \u00e7a marche ?</div>\n</td>\n</tr>\n<tr>\n<td align=\"left\" style=\"font-size:0px;padding:0px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;\" width=\"100%\">\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">1.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\"><strong>Cliquez sur le bouton</strong> (code int\u00e9gr\u00e9).</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">2.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Cr\u00e9ez votre <strong>Box sur mesure</strong>.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">3.</td>\n<td style=\"padding-bottom: 10px; font-size: 13px; line-height: 18px; color: #333333;\">Choisissez vos recettes.</td>\n</tr>\n<tr>\n<td style=\"font-weight: 900; color: #EA2504; font-size: 16px; line-height: 20px;\" valign=\"top\" width=\"25\">4.</td>\n<td style=\"padding-bottom: 0; font-size: 13px; line-height: 18px; color: #333333;\">Recevez votre box !</td>\n</tr>\n</table>\n</td>\n</tr>\n<tr>\n<td align=\"center\" style=\"font-size:0px;padding:10px 25px;padding-top:20px;word-break:break-word;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate;width:100%;line-height:100%;\">\n<tbody>\n<tr>\n<td align=\"center\" bgcolor=\"#EA2504\" role=\"presentation\" style=\"border:none;border-radius:4px;cursor:auto;mso-padding-alt:15px 30px;background:#EA2504;\" valign=\"middle\">\n<a data-index=\"5\" href=\"https://gtinsi.de/6984c4f02ae69\" style=\"display:inline-block;background:#EA2504;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:uppercase;padding:15px 30px;mso-padding-alt:0px;border-radius:4px;\" target=\"_blank\"> JE COMMANDE MA BOX </a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- FOOTER LEGAL COMPLET -->\n<!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:600px;\" width=\"600\" bgcolor=\"#ffffff\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n<div style=\"background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;\">\n<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"background:#ffffff;background-color:#ffffff;width:100%;\">\n<tbody>\n<tr>\n<td style=\"direction:ltr;font-size:0px;padding:0px 20px 30px 20px;text-align:center;\">\n<!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:560px;\" ><![endif]-->\n<div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"justify\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n<div style=\"font-family:Helvetica, Arial, sans-serif;font-size:9px;line-height:13px;text-align:justify;color:#999999;\">*Conditions de l\u2019offre : pour toute souscription, jusqu\u2019\u00e0 95 \u20ac de r\u00e9duction sur vos 5 premi\u00e8res Box (jusqu'\u00e0 40 \u20ac sur la 1\u00e8re, 20 \u20ac sur la 2\u00e8me, 15 \u20ac sur la 3\u00e8me et 10 \u20ac sur la 4\u00e8me et 5\u00e8me). Cette offre est valable pendant 9 semaines, \u00e0 compter de votre date de conversion. A d\u00e9faut d\u2019utilisation de votre r\u00e9duction pass\u00e9 ce d\u00e9lai, celle-ci ne sera plus valable. La premi\u00e8re r\u00e9duction de 40 \u20ac inclut les frais de livraison qui sont offerts pour la 1\u00e8re Box uniquement. Cette offre comprend \u00e9galement un extra de notre march\u00e9 HelloFresh offert chaque semaine parmi une s\u00e9lection de produits tant que l\u2019abonnement n\u2019est pas r\u00e9sili\u00e9. L\u2019ajout de cet extra ne se fait pas automatiquement mais doit \u00eatre fait par vos soins au moment du choix des recettes. HelloFresh se r\u00e9serve le droit de remplacer le produit choisi si jamais celui-ci n\u2019est plus disponible.Offre devant \u00eatre activ\u00e9e avant le 28/02/2026, offre r\u00e9serv\u00e9e aux nouveaux clients HelloFresh seulement, non cumulable avec d\u2019autres offres ou r\u00e9ductions, limit\u00e9e \u00e0 une par foyer et ne donnant droit \u00e0 aucun \u00e9change, ni remboursement du montant de la r\u00e9duction. Les abonn\u00e9.e.s HelloFresh re\u00e7oivent chaque semaine une Box mais l\u2019abonnement est flexible. Les abonn\u00e9.e.s HelloFresh ont jusqu\u2019\u00e0 la date indiqu\u00e9e en haut de l\u2019onglet \u201cMon Menu\u201d (23h59) sur le site HelloFresh pour mettre en pause leur prochaine Box ou r\u00e9silier leur abonnement. Toute demande de modification, de pause ou de r\u00e9siliation faite apr\u00e8s cette date ne sera prise en compte qu\u2019apr\u00e8s la prochaine Box. Plus d\u2019informations sur :\u00a0http://www.hellofresh.fr/conditions-generales.</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<!--[if mso | IE]></td></tr></table><![endif]-->\n<!-- TRACKING PIXEL (RAW) --><img alt=\"\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/>\n</div>\n</body>\n</html>";
         const emailLinks = [];
         const frame = document.getElementById('emailFrame');
@@ -866,5 +820,4 @@
         init();
     </script>
 </body>
-
 </html>
