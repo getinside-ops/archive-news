@@ -4,7 +4,7 @@
     "date_rec": "08/12/2025 à 09:05",
     "date_iso": "2025-12-08T09:05:24+01:00",
     "sender": "PeintureVoiture.fr",
-    "date_arch": "01/04/2026 à 09:52",
+    "date_arch": "02/04/2026 à 12:19",
     "preheader": "Un email un peu différent… pour une cause qui nous tient à cœur Soutenir la Protection Civile, ensemble, ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...",
     "reading_time": "3 min",
     "audit": {
@@ -24,57 +24,119 @@
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": ""
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "http://www.peinturevoiture.fr/",
-            "final_url": "http://www.peinturevoiture.fr/",
+            "final_url": "https://www.peinturevoiture.fr/",
             "domain": "peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 301,
+                    "url": "http://www.peinturevoiture.fr/"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.peinturevoiture.fr/"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://gtinsi.de/6926b24fb4f2a",
-            "final_url": "https://gtinsi.de/6926b24fb4f2a",
+            "final_url": "https://don.protection-civile.org/fnpc-interventions-2025",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6926b24fb4f2a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://don.protection-civile.org/fnpc-interventions-2025"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 4,
             "txt": "JE DONNEà la Protection Civile",
             "original_url": "https://gtinsi.de/6926b24fb4f2a",
-            "final_url": "https://gtinsi.de/6926b24fb4f2a",
+            "final_url": "https://don.protection-civile.org/fnpc-interventions-2025",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6926b24fb4f2a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://don.protection-civile.org/fnpc-interventions-2025"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://gtinsi.de/6926b24fb4f2a",
-            "final_url": "https://gtinsi.de/6926b24fb4f2a",
+            "final_url": "https://don.protection-civile.org/fnpc-interventions-2025",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6926b24fb4f2a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://don.protection-civile.org/fnpc-interventions-2025"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 6,
             "txt": "JE DONNEà la Protection Civile",
             "original_url": "https://gtinsi.de/6926b24fb4f2a",
-            "final_url": "https://gtinsi.de/6926b24fb4f2a",
+            "final_url": "https://don.protection-civile.org/fnpc-interventions-2025",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6926b24fb4f2a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://don.protection-civile.org/fnpc-interventions-2025"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 7,
@@ -84,7 +146,14 @@
             "domain": "peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 8,
@@ -94,17 +163,35 @@
             "domain": "peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.peinturevoiture.fr/content/1-livraison"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee",
-            "final_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee",
+            "final_url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage",
             "domain": "peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 301,
+                    "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.peinturevoiture.fr/content/9-fidelite-recompensee-parrainage"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 10,
@@ -114,7 +201,14 @@
             "domain": "peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.peinturevoiture.fr/content/5-paiement-securise"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         },
         {
             "index": 11,
@@ -124,14 +218,21 @@
             "domain": "redir.peinturevoiture.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://redir.peinturevoiture.fr/w/b/u/34/0"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:19"
         }
     ],
     "detected_pixels": [
         {
-            "url": "",
+            "url": "https://api.getinside.media/v1/emails/track/6926b24fb6f0b",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "api.getinside.media",
             "is_gtinsi": false
         }
     ]

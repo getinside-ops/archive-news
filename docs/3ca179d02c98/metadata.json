@@ -4,7 +4,7 @@
     "date_rec": "14/01/2026 à 10:51",
     "date_iso": "2026-01-14T10:51:21+00:00",
     "sender": "Fanny de Yooji",
-    "date_arch": "01/04/2026 à 09:51",
+    "date_arch": "02/04/2026 à 12:18",
     "preheader": "Moins de charge mentale dans l’assiette (pour vous aussi 💛) Facilitez votre quotidien avec HelloFresh ! Le plaisir de cuisiner, sans les contraintes. ­ ­ ­ ­ ­ ...",
     "reading_time": "4 min",
     "audit": {
@@ -14,7 +14,7 @@
         "link_count": 13,
         "images_no_alt": 10
     },
-    "crm": null,
+    "crm": "Sendinblue",
     "links": [
         {
             "index": 1,
@@ -24,7 +24,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/qIm5dDJEwk9X"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 2,
@@ -34,7 +41,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5zi1UqDdE0qB"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 3,
@@ -44,7 +58,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/Fsqe-poazMuE"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 4,
@@ -54,7 +75,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/h1VwEC4MQ4E6"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 5,
@@ -64,7 +92,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/PbUVm5ufodor"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 6,
@@ -74,7 +109,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/jTJhVZ0d48C_"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 7,
@@ -84,7 +126,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/5Q1tspXfkp77"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 8,
@@ -94,7 +143,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/o-yjetS1XcgW"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 9,
@@ -104,7 +160,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/0Bni6i9Xf3YZ"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 10,
@@ -114,7 +177,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/LSTDOHiJxuzl"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 11,
@@ -124,7 +194,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/x4ByPNU0i843"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 12,
@@ -134,7 +211,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/cl/f/sh/7nVU1aA6Qs4xydkWTvsnvX2XMNs78zB/onfy9lTQhiO1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         },
         {
             "index": 13,
@@ -144,7 +228,14 @@
             "domain": "hfbd6.r.bh.d.sendibt3.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://hfbd6.r.bh.d.sendibt3.com/mk/un/v2/sh/7nVTPdXAsD9fC5s9QkB5yNoGeeF01Y9/85hG9q7-c9mV"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:39"
         }
     ],
     "detected_pixels": []

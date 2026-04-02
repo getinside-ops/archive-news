@@ -4,7 +4,7 @@
     "date_rec": "30/11/2025 à 06:00",
     "date_iso": "2025-11-30T06:00:36+00:00",
     "sender": "CANIGOURMAND",
-    "date_arch": "01/04/2026 à 09:52",
+    "date_arch": "02/04/2026 à 12:19",
     "preheader": "Dernière chance avant la fin des promos ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...",
     "reading_time": "2 min",
     "audit": {
@@ -20,298 +20,629 @@
             "index": 1,
             "txt": "MASTICATIONS",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_0",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_0",
+            "final_url": "https://www.canigourmand.com/3-mastication?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_0"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/3-mastication?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 2,
             "txt": "RECOMPENSES",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_1",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_1",
+            "final_url": "https://www.canigourmand.com/8-recompense?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_1"
+                },
+                {
+                    "status": 301,
+                    "url": "https://www.canigourmand.com/8-recompenses?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/8-recompense?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_2",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_2",
+            "final_url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 4,
             "txt": "Plus tard, il sera trop tard",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_3",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_3",
+            "final_url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_3"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_4",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_4",
+            "final_url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_4"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 6,
             "txt": "Sauciflair Boeuf",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_5",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_5",
+            "final_url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_5"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 7,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_6",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_6",
+            "final_url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1111-sauciflair-boudin-recompense-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_7",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_7",
+            "final_url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 9,
             "txt": "Oreilles de bœuf avec poils",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_8",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_8",
+            "final_url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 10,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_9",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_9",
+            "final_url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/1158-oreilles-de-boeuf-avec-poils.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_10",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_10",
+            "final_url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_10"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 12,
             "txt": "Oreilles De Boeuf",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_11",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_11",
+            "final_url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_11"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 13,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_12",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_12",
+            "final_url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_12"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/mastication/24-oreille-de-boeuf.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 14,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_13",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_13",
+            "final_url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_13"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 15,
             "txt": "Cubes de canard",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_14",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_14",
+            "final_url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_14"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 16,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_15",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_15",
+            "final_url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_15"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/recompense/1084-cubes-de-canard-canigourmand.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 17,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_16",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_16",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_16"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 18,
             "txt": "Sauciflair Sanglier",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_17",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_17",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_17"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 19,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_18",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_18",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_18"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1241-recompense-sanglier-chien.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 20,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_19",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_19",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_19"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 21,
             "txt": "Fromages soufflés 60g",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_20",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_20",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_20"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 22,
             "txt": "Acheter",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_21",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_21",
+            "final_url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_21"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/friandises-naturelles-chien/1374-fromage-souffle-chien-chiot-3760361284033.html?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 23,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_22",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_22",
+            "final_url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_22"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 24,
             "txt": "Je fonce profiter des promos",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_23",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_23",
+            "final_url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_23"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.canigourmand.com/promotions?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 25,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_24",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_24",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fcanigourmandfr%2F%3Flocale%3Dfr_FR%26_kx%3DYEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_24"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/canigourmandfr/?locale=fr_FR&_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fcanigourmandfr%2F%3Flocale%3Dfr_FR%26_kx%3DYEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 26,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_25",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_25",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fcanigourmand%2F%3Fhl%3Dfr%26_kx%3DYEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm&is_from_rle",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_25"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/canigourmand/?hl=fr&_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fcanigourmand%2F%3Fhl%3Dfr%26_kx%3DYEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 27,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_26",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_26",
+            "final_url": "https://www.youtube.com/channel/UC9gJT32Ox3x4NY2LH7aHcng?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_26"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.youtube.com/channel/UC9gJT32Ox3x4NY2LH7aHcng?_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 28,
             "txt": "",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_27",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_27",
+            "final_url": "https://www.tiktok.com/@canigourmand?lang=fr&_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_27"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@canigourmand?lang=fr&_kx=YEn1KWFm8oaywzdLmU7-uVQLM3H-HV9c-KuuEGlv18I.RPN7Nm"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         },
         {
             "index": 29,
             "txt": "en cliquant ici",
             "original_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_28",
-            "final_url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_28",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=RPN7Nm&c=01KABAMF5DVJ7GPDG7G1Q48HSY&k=bcf8ac2788fc5cce41049e3cc18289f8&g=UykjcS&m=01KA9B5SGQQ79TK4T6N5MT8V6S&r=01KB9MNZE9MDDXVNEV965YPMG2",
             "domain": "ctrk.klclick1.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick1.com/l/01KB9MQ7CCXTH01VX5H4HD7ZZK_28"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=RPN7Nm&c=01KABAMF5DVJ7GPDG7G1Q48HSY&k=bcf8ac2788fc5cce41049e3cc18289f8&g=UykjcS&m=01KA9B5SGQQ79TK4T6N5MT8V6S&r=01KB9MNZE9MDDXVNEV965YPMG2"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:31"
         }
     ],
     "detected_pixels": [
         {
-            "url": "",
+            "url": "https://ctrk.klclick1.com/o/01KB9MQ7CCXTH01VX5H4HD7ZZK",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "ctrk.klclick1.com",
             "is_gtinsi": false
         }
     ]

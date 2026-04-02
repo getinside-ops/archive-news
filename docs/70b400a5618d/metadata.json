@@ -4,7 +4,7 @@
     "date_rec": "05/12/2025 à 16:01",
     "date_iso": "2025-12-05T16:01:34+00:00",
     "sender": "MieuxQueDesFleurs",
-    "date_arch": "01/04/2026 à 09:52",
+    "date_arch": "02/04/2026 à 12:19",
     "preheader": "Livré grâce à vous ! ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...",
     "reading_time": "1 min",
     "audit": {
@@ -20,144 +20,395 @@
             "index": 1,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_0",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_0",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_1",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_1",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_1"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_2",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_2",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 4,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_3",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_3",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_3"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_4",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_4",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_4"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 6,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_5",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_5",
+            "final_url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_5"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6917544cbb501?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/colis-denoel/?utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 303,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/version1/?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&amount=2500&frequency=once&lang=&_cv=1"
+                },
+                {
+                    "status": 404,
+                    "url": "https://faireundon.petitsfreresdespauvres.fr/~mon-don?ns_ira_cr_arg=IyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM_xEn09x7-G99FnxwJuHUjXFQRRVinIWpF46K7paLMeEOH-kToPCrsHLzv66B-rQDL1DF1RaQ9tw00eSPRV2IKfK4C4CQGgZOUE-6uW7eZu5GV_o7RfjgeNFnPwE5weGs397W8hpvCPY_7i6FN5s1fDUR4O6MvHLQ0Qbfx-tR8xw&utm_campaign=Colis25&utm_source=GIMQDFLEURS&utm_medium=CPM&_cpn_name_=version1&_cv=1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_6",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_6",
+            "final_url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://mieuxquedesfleurs.com/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 8,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_7",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_7",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DBTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP&is_from_rle",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/mieuxquedesfleurs/?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmieuxquedesfleurs%2F%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DBTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_8",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_8",
+            "final_url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_9",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_9",
+            "final_url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://fr.linkedin.com/posts/mieuxquedesfleurs_nous-montons-un-site-qui-sappelle-mieuxquedesfleurs-activity-6951144704826609664-tC9N?trk=public_profile_like_view&utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_10",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_10",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DBTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_10"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/mieuxquedesfleurs?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmieuxquedesfleurs%3Futm_source%3DKlaviyo%26utm_medium%3Dcampaign%26utm_campaign%3DPetits%2BFr%25C3%25A8res%2Bdes%2Bpauvres%2BX%2BMQDF%2B%252801KBFVWWGK55137GQZ4T2XQRF5%2529%26_kx%3DBTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 12,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_11",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_11",
+            "final_url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_11"
+                },
+                {
+                    "status": 400,
+                    "url": "https://wa.me/message/AOP7RL3VD2UVF1?utm_source=Klaviyo&utm_medium=campaign&utm_campaign=Petits%20Fr%C3%A8res%20des%20pauvres%20X%20MQDF%20%2801KBFVWWGK55137GQZ4T2XQRF5%29&_kx=BTwoGNTjmsaN24otzWlTxpULi4YGbwab_nHMhb5yv14.Qb2tyP"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         },
         {
             "index": 13,
             "txt": "Vous pouvez vous désinscrire ici.",
             "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_12",
-            "final_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_12",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_12"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:20"
         }
     ],
     "detected_pixels": [
         {
-            "url": "",
+            "url": "https://api.getinside.media/v1/emails/track/6917544cbd485",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "api.getinside.media",
             "is_gtinsi": false
         },
         {
-            "url": "",
+            "url": "https://ctrk.klclick.com/o/01KBQKYKGF7KPGNF8GVSKVME77",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "ctrk.klclick.com",
             "is_gtinsi": false
         }
     ]

@@ -4,7 +4,7 @@
     "date_rec": "08/01/2026 à 03:26",
     "date_iso": "2026-01-08T03:26:22-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "01/04/2026 à 09:51",
+    "date_arch": "02/04/2026 à 12:18",
     "preheader": "Parie sur la plus grande soirée de football européen avec Betclic. Jusqu’à 100€ reversés en Feebets* - Parie sur la plus grande soirée de football européen. UNE...",
     "reading_time": "1 min",
     "audit": {
@@ -20,51 +20,126 @@
             "index": 1,
             "txt": "",
             "original_url": "https://gtinsi.de/694a98b88f1c5",
-            "final_url": "https://gtinsi.de/694a98b88f1c5",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/694a98b88f1c5"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/695eaf462d955"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 3,
             "txt": "JE PARIE >",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/695eaf462d955"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 4,
             "txt": "JE PARIE >",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/695eaf462d955"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 5,
             "txt": "J'EN PROFITE",
             "original_url": "https://gtinsi.de/695eaf462d955",
-            "final_url": "https://gtinsi.de/695eaf462d955",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/695eaf462d955"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 6,
@@ -74,24 +149,46 @@
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://gtinsi.de/695eaf462ebf4",
-            "final_url": "https://gtinsi.de/695eaf462ebf4",
+            "final_url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1",
             "domain": "gtinsi.de",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/695eaf462ebf4"
+                },
+                {
+                    "status": 301,
+                    "url": "https://betclic.onelink.me/2887093520/e278g8xh"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.betclic.fr/inscription?id=GIS&zone=EMAIL_1&source_caller=ui&shortlink=e278g8xh&af_sub1=GIS&c=BCFR_GIS_EXP_ALL_EMAIL_1&pid=GetInside&af_xp=custom&af_adset=Campagne test&af_sub2=EMAIL_1"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:50"
         }
     ],
     "detected_pixels": [
         {
-            "url": "",
+            "url": "https://api.getinside.media/v1/emails/track/694a98b8910e8",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "api.getinside.media",
             "is_gtinsi": false
         }
     ]

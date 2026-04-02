@@ -4,7 +4,7 @@
     "date_rec": "23/01/2026 à 10:45",
     "date_iso": "2026-01-23T10:45:11+00:00",
     "sender": "The Bradery",
-    "date_arch": "01/04/2026 à 09:51",
+    "date_arch": "02/04/2026 à 12:18",
     "preheader": "On déjeune chez Tekés avant de (re)découvrir Martin Parr au Jeu de Paume, puis commencer la soirée avec un cocktail chez Prescription Club ! JAN. 26 Week 3 Le r...",
     "reading_time": "1 min",
     "audit": {
@@ -20,228 +20,538 @@
             "index": 1,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_0",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_0",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_0"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 2,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_1",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_1",
+            "final_url": "https://thebradery.com/pages/agenda-club-exclus",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_1"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4h2tBU5?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club-exclus"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_2",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_2",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_2"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 4,
             "txt": "JE M’INSCRIS",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_3",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_3",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_3"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 5,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_4",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_4",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_4"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 6,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_5",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_5",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_5"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 7,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_6",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_6",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_6"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 8,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_7",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_7",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_7"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 9,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_8",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_8",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_8"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 10,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_9",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_9",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_9"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 11,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_10",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_10",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_10"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 12,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_11",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_11",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_11"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 13,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_12",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_12",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_12"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 14,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_13",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_13",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_13"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 15,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_14",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_14",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_14"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 16,
             "txt": "JE DÉCOUVRE",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_15",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_15",
+            "final_url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_15"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/49lGer3?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/pages/agenda-club?utm_campaign=site&utm_medium=media&utm_source=media"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 17,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_16",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_16",
+            "final_url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_16"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 18,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_17",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_17",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthebradery%2F%3Futm_source%3Dlancement%26utm_medium%3Demail%26utm_campaign%3DNL_AgendaClub_23012026%2B%252801KFN2BR02DVZEGMJN141RGM8W%2529%26hash_email%3D01JYS05CXGP9E88AV4HTF3W2Z1%26_kx%3DCWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7&is_from_rle",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_17"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/thebradery/?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthebradery%2F%3Futm_source%3Dlancement%26utm_medium%3Demail%26utm_campaign%3DNL_AgendaClub_23012026%2B%252801KFN2BR02DVZEGMJN141RGM8W%2529%26hash_email%3D01JYS05CXGP9E88AV4HTF3W2Z1%26_kx%3DCWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 19,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_18",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_18",
+            "final_url": "https://www.tiktok.com/@thebradery?lang=fr&utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_18"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@thebradery?lang=fr&utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 20,
             "txt": "",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_19",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_19",
+            "final_url": "https://fr.linkedin.com/company/the-bradery?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_19"
+                },
+                {
+                    "status": 200,
+                    "url": "https://fr.linkedin.com/company/the-bradery?utm_source=lancement&utm_medium=email&utm_campaign=NL_AgendaClub_23012026%20%2801KFN2BR02DVZEGMJN141RGM8W%29&hash_email=01JYS05CXGP9E88AV4HTF3W2Z1&_kx=CWt7E4l5Uy422pnh2d7QjmxDtF4pU6UYGCcY9OLLJLo.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 21,
             "txt": "préférences",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_20",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_20",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/update?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KFN2BR2H075WSADGDAXBYBD9&r=01KFN6XTGB6TRQVGQGP3252W7F",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_20"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/update?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KFN2BR2H075WSADGDAXBYBD9&r=01KFN6XTGB6TRQVGQGP3252W7F"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         },
         {
             "index": 22,
             "txt": "désinscrire",
             "original_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_21",
-            "final_url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_21",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KFN2BR2H075WSADGDAXBYBD9&r=01KFN6XTGB6TRQVGQGP3252W7F",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://ctrk.klclick.com/l/01KFN6YTCEVHJ0711447HNX45R_21"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KFN2BR2H075WSADGDAXBYBD9&r=01KFN6XTGB6TRQVGQGP3252W7F"
+                }
+            ],
+            "audit_date": "2026-04-02 12:18:23"
         }
     ],
     "detected_pixels": [
         {
-            "url": "",
+            "url": "https://ctrk.klclick.com/o/01KFN6YTCEVHJ0711447HNX45R",
             "status": "Integration: OK",
-            "domain": "",
+            "domain": "ctrk.klclick.com",
             "is_gtinsi": false
         }
     ]

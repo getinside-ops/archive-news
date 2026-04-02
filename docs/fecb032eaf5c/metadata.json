@@ -4,7 +4,7 @@
     "date_rec": "26/11/2025 à 13:20",
     "date_iso": "2025-11-26T13:20:09-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "01/04/2026 à 09:52",
+    "date_arch": "02/04/2026 à 12:20",
     "preheader": "vous présente Réservez votre place en crèche pour la rentrée ! Votre place en crèche pour la rentrée, sans l'aide de votre employeur ! Je réserve ma place Vous ...",
     "reading_time": "1 min",
     "audit": {
@@ -14,67 +14,141 @@
         "link_count": 6,
         "images_no_alt": 6
     },
-    "crm": null,
+    "crm": "Mailjet",
     "links": [
         {
             "index": 1,
             "txt": "",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~",
+            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/3HCVAd5ptuGG6YV-EGWjng~~/AABGZBA~/6E5MpHUiOvYEAB8wIsaiYRP6xOyjNxkMPs5iFr5vbb_seS4SY6gOqzP_30tpPW-IZGZaJsYRPq1xTxrFMN2QOZ3x4P74hFWn04cEj9ZuHrItRkru9JFsShJfp8yrbepfsaXji5GZEO5TP5Q6S-Wwijsk90OPxN11-NRgfnM_pp-BxYDY_5nhJM3grQJF6SNToCCr8PYYKWZyn0uRtKOPpA~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_trade&utm_campaign=2025-08-19"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         },
         {
             "index": 2,
             "txt": "Je réserve ma place",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~",
+            "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/e2Y_NfYwdOp4_PFW9PgmHQ~~/AABGZBA~/979NpwrzpGOcYQJAWzz7f0c_2n-1r9ogreMA18Y3tf9Ow45Xiu4VvTWJ58-v_dOVpe5gMi_lKzHVREBXXuikOhRbE3fMZwxsb_SWzImJYQjV0QakqwuEwh0jKspiOcgTuaPwsD-31BFp3RBfAQ4xcQou-u8HvrphAeljxHNIWrxlRl8Mgr-eUud5Km6qBomo6lglkxFHSiAvaiq68HnNNsaNomrkSUafHqQpPQH4V8eLS78z4T3-K7-5b3nx4xX84d_N6EMCi7WN5egobQ4VeaIkWY6oGXGZr54VdXpFgTU~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.babilou.fr/babilouforyou?utm_medium=emailc&utm_source=newsletter&utm_campaign=b2c_emailc_bab-psu-occa-r%C3%A9gulier-%C3%A9t%C3%A925&campaign_id=CM250351"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         },
         {
             "index": 3,
             "txt": "Je réserve ma place",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl",
+            "final_url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/pvabZ1-B228D8F9WD1LMYQ~~/AABGZBA~/l-oRppYVjwbo2TFOt-zivxLnU54CRsoL6FKsj8YDMLYc8qqhCuCOBH8yXJZcuZWwMIHBHpYpxg_7VTV1IGIlqtJrTiHVS8ZncKQAkmqLMgJfGPsHo8xHUzV33877ZO-QNlxjDYro1rJwk1c4eVLrOK-BvX-oxGr2b5J3ld7RkWpXXzSC2eHAU1V990fcUSQXexPeuFsxA74EVtQW9W_aDF1g5Ie93OiZsH6KHre0cDYeFV1lTjT1oUzGGA_pi6gl"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.babilou.fr/babilouforyou?utm_medium=email&utm_source=newsletter&utm_campaign=b2c_email_bebeboutik&campaign_id=CM250374"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         },
         {
             "index": 4,
             "txt": "www.bebeboutik-prive.fr",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7",
+            "final_url": "https://www.bebeboutik-prive.fr/",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/Dz8Dro3dLzbiBfcyjYKlnQ~~/AABGZBA~/K2Sfvrrc-BZSa1-EVbX7G3R8QCOfpZyXGCd3eRnv9Zd3m4Zc6MaK3n46MRH3TtcHSZdthHxn-0bq-uK-6i7hEpHHTFJr4Rih1IBGsNP1acK1NEitNWs37wIw-w7WJIW7"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.bebeboutik-prive.fr/"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         },
         {
             "index": 5,
             "txt": "cliquez ici",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~",
+            "final_url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/5_dL3UUyArNvfOenylL0wA~~/AABGZBA~/vfxDWXVcxyHodnjwBxIdBZs1EgYhVSXhYETN5Fyj3v3d2Ey54HYcRZZesAZxFSjS5bYU_9OuHA98hlB4P7XoMQy7sP5TKv9kfcsxdwWjeQ3wzryko6xplDXm0BqUqvYMJdnalcKdQlt649pTDQsFbSNzlTOKoN1zou7FCGpbwKM5pbNp37jGBmjUxA_KDY-ehVnmGNn49UKENniJD-Qj61Y9-6Tp8-EmZDXrb9U4Ywp1LHvWOWH1SMdDJmyQooSL1H5HsF9YUaYRh3q-3HX1qzyT9FURyDo5OFHUFRXLUar64uwyLj3d2hLKpeudvpIEs4cWvuQknKglB6_UOEEFjhZAObXjGMlPH8mqpwsq_L9cVFmpiD2TAdumP_SANn0mzJ4xaB_AtEKfw2Jek2XcOe5X5HXbTf7StMKr41B1Grnk_h0hDJEk6Plu3ExmTs0zpFmxtkLdWoy0EEfuGQTBTw~~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/z5x-f8MUBCeAbE3xNw428g~~/AABGZBA~/WgF0xvv0XPnEQFj-Ffi3MyiMLwncDIno0msvrc2hC7ErVxc65B6M0gMSMdFfAbfF1RFus4kMLHr0wq1oUSFYBzfPD_ooRFjB0XRrn-Idpqsgsv7HWsioE9DWyQzGt5h1WxOKSKk3uiqhs1ySqpP8Il9mAbF4ct8WNMgsH80gxuK79Hf9N9_iesyWOQCzp1SdroB12L9APNuNjU4N87PpHg~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/desabonnement/669bc448061c37541b3a6b886e97569e5d17a8fc"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         },
         {
             "index": 6,
             "txt": "Mentions légales",
             "original_url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~",
-            "final_url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~",
+            "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales",
             "domain": "clic.bebeboutik-prive.fr",
             "is_tracking": false,
             "is_secure": true,
-            "is_dev": false
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://clic.bebeboutik-prive.fr/f/a/jDQPI389s17jBTStt6FTOQ~~/AABGZBA~/Jr_rTYW9AOqb2ysop_RxBNgxnQ2ztW529tLFjvVHuw-3crGGQ9OcKEyBd9AQM3xQMjI1S-78LWx9mwPlIJRMSkIWK45tfS9N1HY48Wx2bGlcG0dnXCHvRkkGGKw8oZ7BNI1l3xM7a4ufAmX3rbCvtQ~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"
+                }
+            ],
+            "audit_date": "2026-04-02 12:19:58"
         }
     ],
     "detected_pixels": []
