@@ -1,0 +1,709 @@
+{
+    "id": "6e7cb47a731c",
+    "subject": "Benoit, pour vous un mini ordinateur en CADEAU avec notre\r\n partenaire !",
+    "date_rec": "23/04/2026 à 15:54",
+    "date_iso": "2026-04-23T15:54:04+02:00",
+    "sender": "sendtest@info.pecheur.com",
+    "date_arch": "23/04/2026 à 13:59",
+    "preheader": "Pêcheur Un mini ordinateur en cadeau pour tout abonnement de magazine(s) ! Si vous ne visualisez pas correctement ce message, cliquez-ici TOUTE L'OFFRE BONS PLA...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Too Long",
+        "unsubscribe_found": false,
+        "link_count": 29,
+        "images_no_alt": 2
+    },
+    "crm": "Sarbacane",
+    "links": [
+        {
+            "index": 1,
+            "txt": "Si vous ne visualisez pas correctement ce message,",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2V0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=1&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2V0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=1&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 3,
+            "txt": "TOUTE L'OFFRE",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2V0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=1&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2V0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=1&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 4,
+            "txt": "BONS PLANS",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2VJjK2iNEEVCXCtXMdeGtewE3664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=193&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2VJjK2iNEEVCXCtXMdeGtewE3664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=193&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 5,
+            "txt": "MARQUES",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnLovCUjT0NOK50VChh-v20ftPzJ-ZkDmy9_M75cIXRM_Dw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=52&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnLovCUjT0NOK50VChh-v20ftPzJ-ZkDmy9_M75cIXRM_Dw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=52&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 6,
+            "txt": "VIDÉOS",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnJK8LV2mBqPS_cxJROcz5xBPFGzna5ICdOqKGfSOnDOg03664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=258&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnJK8LV2mBqPS_cxJROcz5xBPFGzna5ICdOqKGfSOnDOg03664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=258&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 7,
+            "txt": "OFFRE PARTENAIRE",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2VAIimu0JhMIaJoGfn1Bw1GE3664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=140&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2VAIimu0JhMIaJoGfn1Bw1GE3664YLG-UMPtKokbnJrCICtRqlg8FdY-b9BImXtVxMOaHu44Vmr8q_Ct2Qm8sr1BFsXyUoW0ZYGVdep7i32FLNY-m8pgWsqLstrpjnbKiT"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=140&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 10,
+            "txt": "J'en profite",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 12,
+            "txt": "J'en profite",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 14,
+            "txt": "J'en profite",
+            "original_url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA",
+            "final_url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2oO_u3V0p0daWLgXiVpxZmlI4zyiU0BXprOHokQO0hghYhBILVxdxPq432dbsc-fFxLXr7Nc541-dDhabWisNGBKtSLU9OzourSKA2rM93wpSBBiSKlGpxKNbp5dMgmkqaBd8qM0Y0ZV4Sgil8MjxPA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699de9c7d733b?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.serviceabonnements-pecheur.com/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabonnements-pecheur.com:443/?CODEMAILING=TW716&utm_source=notebook&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 15,
+            "txt": "DES EXPERTS À VOTRE ÉCOUTE.",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnIRRLXiV7qgRtuWPzBPkIRQ0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=7&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnIRRLXiV7qgRtuWPzBPkIRQ0HYPxuy-Jce9Gj7e8IbA7iR8qS3o8uTuDS5HnxKDGp7UwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=7&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 16,
+            "txt": "LIVRAISON SUR MESURE",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2Vo7Q1XJSbNb8s90TorZ2mazw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=17&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2Vo7Q1XJSbNb8s90TorZ2mazw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=17&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 17,
+            "txt": "CHANGEZ D'AVIS FACILEMENT",
+            "original_url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2Vh7O-fuO6gBMybjQ2xcTAojw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c",
+            "final_url": "https://www.pecheur.com/newsdispatch.html?from=16&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2jfZwrrwt8SC5MdRhHlCXE1-iTYAbuzX-P5GXcjH4xnKQK7XN1cf_qy_I7GJlQg2Vh7O-fuO6gBMybjQ2xcTAojw7ig9deq-nU3lbEEi95vbCdRn-93W6xFK4eP14L4Q5N_z0E0VqL2IocWbNPhtgqvVY_FyO6NKNSBUsCcLqT-L2YJ1XxmqhLWKDMfCCM94c"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.pecheur.com/newsdispatch.html?from=16&paysiso=FR&langueiso=FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 18,
+            "txt": "NOTE CLIENTS",
+            "original_url": "https://tg.info.pecheur.com/l/o2HIA0pfBC5zOmrUkSY44IcmEhdnRso84Lsjho3lbZLLDBLLbU0LM21sn-O9X7F5D0J5oIIEdimSXRZitaISWQSWAgImp2sZs83aN5OOezsWXUwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo",
+            "final_url": "https://ratings.bazaarvoice.com/index.html?merchant=pecheur&locale=fr_FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2HIA0pfBC5zOmrUkSY44IcmEhdnRso84Lsjho3lbZLLDBLLbU0LM21sn-O9X7F5D0J5oIIEdimSXRZitaISWQSWAgImp2sZs83aN5OOezsWXUwS4DftHOdAg_wlTDu2pw3ngzEqsSxAE03VDfyXckcG42LzEe5gHCT97Pg5mD-jp2Ls4BtKFVCN8SKtsp13uo"
+                },
+                {
+                    "status": 200,
+                    "url": "https://ratings.bazaarvoice.com/index.html?merchant=pecheur&locale=fr_FR&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 22,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2a-GWM6tt9wfqe1yg8aDsneVeSfVxelTi7moAb37Kz158JFJNRBNJEtDt0XhYi5qAbRR2K97k1Fu1itxL2Y7azuSaMOlURjau9RikoTgd7eONW4bD9AfkGwN2g3IRdcpI3pt55UVQtuQziSeObrrHPYS7DKks1Mf7EskFVMsYoRE",
+            "final_url": "https://apps.apple.com/us/app/pecheur-com/id1577367272?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2a-GWM6tt9wfqe1yg8aDsneVeSfVxelTi7moAb37Kz158JFJNRBNJEtDt0XhYi5qAbRR2K97k1Fu1itxL2Y7azuSaMOlURjau9RikoTgd7eONW4bD9AfkGwN2g3IRdcpI3pt55UVQtuQziSeObrrHPYS7DKks1Mf7EskFVMsYoRE"
+                },
+                {
+                    "status": 404,
+                    "url": "https://apps.apple.com/us/app/pecheur-com/id1577367272?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 24,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2V3uSdm--nnszAeCXqNYpwBR31s6E8GSOxC3xm2fXuXu3b7F5ZDDNb-d63uCfnZZtdRuFMh2eXurCzSp72jbwf1iEEgtXF3E-rjfZ1uxz58XEtevs1znjX50OFptaKw0YEq1ItT07Oi6tIoDasz3fClIEGJIqUanEo1unl0yCaSpoF3yozRjRlXhKCKXwyPE8",
+            "final_url": "https://play.google.com/store/apps/details?id=com.pecheur.appv2&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2V3uSdm--nnszAeCXqNYpwBR31s6E8GSOxC3xm2fXuXu3b7F5ZDDNb-d63uCfnZZtdRuFMh2eXurCzSp72jbwf1iEEgtXF3E-rjfZ1uxz58XEtevs1znjX50OFptaKw0YEq1ItT07Oi6tIoDasz3fClIEGJIqUanEo1unl0yCaSpoF3yozRjRlXhKCKXwyPE8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://play.google.com/store/apps/details?id=com.pecheur.appv2&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 25,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2hi8RZbFFO1dAehr4ZMC-ExcfFqVHEc8p6LC3zHzUQ10-eW2fpwxmd7DlTdza3a80mQvp_UiYkaC2UeFbhn1MxQhPbQ-6f0nWKNSAHX8gPYp1paqq4ok-mgRAVdr_ymtyl39P3TzE_8j03ItIZTIFLw",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FPecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2hi8RZbFFO1dAehr4ZMC-ExcfFqVHEc8p6LC3zHzUQ10-eW2fpwxmd7DlTdza3a80mQvp_UiYkaC2UeFbhn1MxQhPbQ-6f0nWKNSAHX8gPYp1paqq4ok-mgRAVdr_ymtyl39P3TzE_8j03ItIZTIFLw"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/Pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FPecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 26,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2UvLfw5C_Hkfrn7DU21CANxkIBiFHEvlJ2HoCMP1j_lWhev5HkwCr3VW91pDn0Xom1MEuA37RznQIP8JUw7tqcN54MxKrEsQBNN1Q38l3JHBuNi8xHuYBwk_ez4OZg_o6di7OAbShVQjfEirbKdd7qA",
+            "final_url": "https://www.youtube.com/@PecheurPointCom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2UvLfw5C_Hkfrn7DU21CANxkIBiFHEvlJ2HoCMP1j_lWhev5HkwCr3VW91pDn0Xom1MEuA37RznQIP8JUw7tqcN54MxKrEsQBNN1Q38l3JHBuNi8xHuYBwk_ez4OZg_o6di7OAbShVQjfEirbKdd7qA"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.youtube.com/@PecheurPointCom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 27,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2sZTHDe2DCuBYbKJpSWvMSR0gg6VYQ4vs93EIkNn_Aa2AoWdx_czKI4VpjpTAIM1wwQuQW17Mr-Wi8Xuw65GYPl7wE2vRg6jRBgtkfGZkicd8_hFu3tVPkvC6l8zGvbM-NkMXPjjZBjqblgxqZNSVcA"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/pecheurcom?idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fpecheurcom%3Fidprob%26utm_campaign%3Demailing%26utm_medium%3Demail%26utm_source%3Dnewsletter&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 28,
+            "txt": "",
+            "original_url": "https://tg.info.pecheur.com/l/o2SxWaogbwcKGkBsJUGfVLIfPguh_J6I1gA6TCcfb00L9t1aYWDRsmXVACD6WhpZM8ArUapYPBXWPm_QSJl7VcTDmh7uOFZq_KvwrdkJvLK9QRbF8lKFtGWBlXXqe4t9hSzWPpvKYFrKi7La6Y52yokw",
+            "final_url": "https://www.tiktok.com/@pecheurcom?lang=fr&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "domain": "tg.info.pecheur.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://tg.info.pecheur.com/l/o2SxWaogbwcKGkBsJUGfVLIfPguh_J6I1gA6TCcfb00L9t1aYWDRsmXVACD6WhpZM8ArUapYPBXWPm_QSJl7VcTDmh7uOFZq_KvwrdkJvLK9QRbF8lKFtGWBlXXqe4t9hSzWPpvKYFrKi7La6Y52yokw"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@pecheurcom?lang=fr&idprob=&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        },
+        {
+            "index": 29,
+            "txt": "",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-04-23 13:59:10"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://tg.info.pecheur.com/l/o20lJX-9M7xcsn317J9diQm34uW0pFWKsbcuiedoFxcGgzGgmtPabdL4DzaZcm4Bac",
+            "status": "Integration: OK",
+            "domain": "tg.info.pecheur.com",
+            "is_gtinsi": false
+        }
+    ]
+}
