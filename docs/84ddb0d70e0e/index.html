@@ -1092,7 +1092,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Paris, Madrid, Marseille… jusqu’à 100€ remboursés en Feebets* pour parier sur Betclic !".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Paris, Madrid, Marseille\u2026 jusqu\u2019\u00e0 100\u20ac rembours\u00e9s en Feebets* pour parier sur Betclic !".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

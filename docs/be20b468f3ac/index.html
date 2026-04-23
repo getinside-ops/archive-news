@@ -1836,7 +1836,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Ultra Premium Direct | Les croquettes de Noël 🐶".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Ultra Premium Direct | Les croquettes de No\u00ebl \ud83d\udc36".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

@@ -1898,7 +1898,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "EXCLUSIVITÉ AVEC SHOWROOMPRIVÉ 10€ de lavage OFFERTS".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "EXCLUSIVIT\u00c9 AVEC SHOWROOMPRIV\u00c9 10\u20ac de lavage OFFERTS".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

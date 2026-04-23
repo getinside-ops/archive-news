@@ -1470,7 +1470,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "[BAT FR 03/04 Abo 2 multipart/alternative] Recevez votre carte cadeau de 50€".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "[BAT FR 03/04 Abo 2 multipart/alternative] Recevez votre carte cadeau de 50\u20ac".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

@@ -1848,7 +1848,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "On a quelque chose à vous annoncer... 🎅".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "On a quelque chose \u00e0 vous annoncer... \ud83c\udf85".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

@@ -2024,7 +2024,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Offre spéciale sur vos Magazines : Le Chasseur Français, La Revue Nationale de la Chasse...".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Offre sp\u00e9ciale sur vos Magazines : Le Chasseur Fran\u00e7ais, La Revue Nationale de la Chasse...".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

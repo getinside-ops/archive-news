@@ -1344,7 +1344,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Le Coffret Mastu : le cadeau de Noël idéal pour votre animal 🐶😺".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Le Coffret Mastu : le cadeau de No\u00ebl id\u00e9al pour votre animal \ud83d\udc36\ud83d\ude3a".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

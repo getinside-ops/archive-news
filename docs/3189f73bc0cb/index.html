@@ -2016,7 +2016,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Dernier rappel : -15% + 5% pour la SPA… avant la fin 💙".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Dernier rappel : -15% + 5% pour la SPA\u2026 avant la fin \ud83d\udc99".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

@@ -966,7 +966,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Offre exclusive : jusqu’à 95 € offerts avec HelloFresh".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Offre exclusive : jusqu\u2019\u00e0 95 \u20ac offerts avec HelloFresh".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

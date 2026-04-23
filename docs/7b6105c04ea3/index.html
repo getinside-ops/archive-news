@@ -1008,7 +1008,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "💸 Parie sur la plus grande soirée de football européen avec Betclic (PNG)".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "\ud83d\udcb8 Parie sur la plus grande soir\u00e9e de football europ\u00e9en avec Betclic (PNG)".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

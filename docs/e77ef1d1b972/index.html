@@ -1982,7 +1982,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "1 pièce, 1 sourire 👛".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "1 pi\u00e8ce, 1 sourire \ud83d\udc5b".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

@@ -1218,7 +1218,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "C&#39;est quand la St Valentin déjà ? 😅".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "C\u0027est quand la St Valentin d\u00e9j\u00e0 ? \ud83d\ude05".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

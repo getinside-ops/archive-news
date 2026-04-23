@@ -1260,7 +1260,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Mini livre photo offert 🎁".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Mini livre photo offert \ud83c\udf81".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 

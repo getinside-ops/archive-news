@@ -2654,7 +2654,7 @@
         async function downloadEmailZip() {
             try {
                 const zip = new JSZip();
-                const subject = "Bouteilles sensorielles à prix minis 🌟".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const subject = "Bouteilles sensorielles \u00e0 prix minis \ud83c\udf1f".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
                 const zipFilename = `${subject}_${timestamp}.zip`;
 
