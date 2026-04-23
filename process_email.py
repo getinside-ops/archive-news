@@ -275,8 +275,8 @@ def regen_only():
 
 
 def check_new_emails():
-    """Quick check: compare IMAP message count vs. archived count.
-    Exits 0 if new emails exist, exits 2 if nothing to process."""
+    """Check whether any IMAP email is missing from the local archive by ID.
+    Exits 0 if at least one email is not yet archived, exits 2 if all are present."""
     if not GMAIL_USER or not GMAIL_PASSWORD:
         logger.error("Missing credentials: set GMAIL_USER and GMAIL_PASSWORD env vars.")
         sys.exit(1)
@@ -284,19 +284,23 @@ def check_new_emails():
     fetcher = EmailFetcher(GMAIL_USER, GMAIL_PASSWORD, TARGET_LABEL)
     try:
         fetcher.connect()
-        imap_count = len(fetcher.search_all())
-        archived_count = sum(
-            1 for d in os.listdir(OUTPUT_FOLDER)
-            if os.path.isfile(os.path.join(OUTPUT_FOLDER, d, "metadata.json"))
-        ) if os.path.exists(OUTPUT_FOLDER) else 0
+        ids = fetcher.search_all()
+        email_map = fetcher.fetch_headers(ids)
 
-        if imap_count > archived_count:
-            logger.info("IMAP: %d emails, archived: %d → %d new. Running pipeline.",
-                        imap_count, archived_count, imap_count - archived_count)
+        archived_ids = set(
+            d for d in os.listdir(OUTPUT_FOLDER)
+            if os.path.isfile(os.path.join(OUTPUT_FOLDER, d, "metadata.json"))
+        ) if os.path.exists(OUTPUT_FOLDER) else set()
+
+        missing = [f_id for f_id in email_map if f_id not in archived_ids]
+
+        if missing:
+            logger.info("IMAP: %d emails, archived: %d → %d not yet archived. Running pipeline.",
+                        len(email_map), len(archived_ids), len(missing))
             sys.exit(0)
         else:
-            logger.info("IMAP: %d emails, archived: %d → nothing new. Skipping.",
-                        imap_count, archived_count)
+            logger.info("IMAP: %d emails, all archived → nothing new. Skipping.",
+                        len(email_map))
             sys.exit(2)
     finally:
         fetcher.close()

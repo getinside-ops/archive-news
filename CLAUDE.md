@@ -70,7 +70,7 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 
 - **Single remote**: `getinside` → `https://github.com/getinside-ops/archive-news.git`. Always push with `git push getinside main`. There is no `origin` remote — if one appears, remove it with `git remote remove origin`.
 - Required secrets: `GMAIL_USER` + `GMAIL_PASSWORD` only. `GEMINI_API_KEY` is **not** referenced in any `.py` file — do not add it.
-- **CI optimization**: The workflow runs a `--check-new` count check before the full pipeline. If IMAP count ≤ archived count, all heavy steps are skipped. Manual `workflow_dispatch` has a `force_update` boolean input to bypass this.
+- **CI optimization**: The workflow runs `--check-new` before the full pipeline. It fetches all IMAP headers, computes deterministic IDs, and checks which IDs are missing a `metadata.json` in `docs/`. If every IMAP email is already archived, all heavy steps are skipped. Manual `workflow_dispatch` has a `force_update` boolean input to bypass this. (Previously count-based — ID-based check prevents false negatives when `archived_count >= imap_count` due to injector uploads or label changes.)
 - To reconfigure Pages source: `gh api repos/getinside-ops/archive-news/pages --method PUT -f 'source[branch]=main' -f 'source[path]=/docs'`
   (JSON object format is rejected by the API — use nested `-f` field syntax only.)
 

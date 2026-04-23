@@ -116,7 +116,7 @@ The GitHub Actions workflow (`.github/workflows/check_mail.yml`) runs automatica
 
 - **Schedule**: Every 30 minutes (`*/30 * * * *`)
 - **Manual trigger**: `workflow_dispatch` with `force_update` boolean input
-- **Optimization**: `--check-new` skips pipeline if no new emails
+- **Optimization**: `--check-new` fetches IMAP headers, computes deterministic IDs, and skips the pipeline only if every Gmail email already has a `metadata.json` in `docs/` — ID-based, not count-based
 - **Deployment**: Commits `docs/*` changes via `stefanzweifel/git-auto-commit-action@v5`
 
 ---
