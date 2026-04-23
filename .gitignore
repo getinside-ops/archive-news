@@ -33,3 +33,15 @@ env/
 
 # Git worktrees
 .worktrees/
+
+# Tooling / AI assistants
+.playwright-mcp/
+.qwen/
+.superpowers/
+
+# Screenshots and local test assets (root-level only; docs/ images are tracked)
+/*.png
+/*.jpg
+
+# Duplicate of src/assets/ (local artifact)
+/assets/
