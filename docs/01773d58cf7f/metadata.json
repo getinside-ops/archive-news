@@ -1,0 +1,296 @@
+{
+    "id": "01773d58cf7f",
+    "subject": "Découvrez la box à cuisiner HelloFresh dès 2,86€ par assiette",
+    "date_rec": "28/04/2026 à 03:16",
+    "date_iso": "2026-04-28T03:16:55-07:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "28/04/2026 à 10:21",
+    "preheader": "Découvrez la box à cuisiner HelloFresh dès 2,86€ par assiette Voir la version en ligne Se désabonner Code promo : SARENZACDF VOUS ALLEZ GAGNER DU TEMPS EN CUISI...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Too Long",
+        "unsubscribe_found": false,
+        "link_count": 15,
+        "images_no_alt": 7
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "Voir la version en ligne",
+            "original_url": "<%@ include view='MirrorPageUrl' %>",
+            "final_url": "<%@ include view='MirrorPageUrl' %>",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "<%@ include view='MirrorPageUrl' %>"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 2,
+            "txt": "Se désabonner",
+            "original_url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>",
+            "final_url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>",
+            "domain": "sarenza.com",
+            "is_tracking": true,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://www.sarenza.com/",
+            "final_url": "https://www.sarenza.com/",
+            "domain": "sarenza.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.sarenza.com/"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://gtinsi.de/69c4eee220bc4",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69c4eee220bc4"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 5,
+            "txt": "VOUS ALLEZ GAGNER DU TEMPS EN CUISINE",
+            "original_url": "https://gtinsi.de/69c4eee220bc4",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69c4eee220bc4"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 6,
+            "txt": "J'en profite",
+            "original_url": "https://gtinsi.de/69c4eee220bc4",
+            "final_url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce",
+            "domain": "gtinsi.de",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69c4eee220bc4"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://www.sarenza.com/fr/fr/faq",
+            "final_url": "https://www.sarenza.com/fr/fr/faq",
+            "domain": "sarenza.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.sarenza.com/fr/fr/faq"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://www.facebook.com/sarenza.com/",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fsarenza.com%2F",
+            "domain": "facebook.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/sarenza.com/"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fsarenza.com%2F"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://www.instagram.com/sarenza/",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsarenza%2F&is_from_rle",
+            "domain": "instagram.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/sarenza/"
+                },
+                {
+                    "status": 429,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsarenza%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://www.tiktok.com/@sarenza?lang=fr",
+            "final_url": "https://www.tiktok.com/@sarenza?lang=fr",
+            "domain": "tiktok.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@sarenza?lang=fr"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://apps.apple.com/fr/app/sarenza-com/id712216051",
+            "final_url": "https://apps.apple.com/fr/app/sarenza-com/id712216051",
+            "domain": "apps.apple.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://apps.apple.com/fr/app/sarenza-com/id712216051"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://play.google.com/store/apps/details?id=com.sarenza",
+            "final_url": "https://play.google.com/store/apps/details?id=com.sarenza",
+            "domain": "play.google.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://play.google.com/store/apps/details?id=com.sarenza"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 13,
+            "txt": "cliquez ici",
+            "original_url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr",
+            "final_url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr",
+            "domain": "",
+            "is_tracking": true,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 14,
+            "txt": "https://www.sarenza.com/fr/fr/page-viewer/cgv",
+            "original_url": "https://www.sarenza.com/fr/fr/page-viewer/cgv",
+            "final_url": "https://www.sarenza.com/fr/fr/page-viewer/cgv",
+            "domain": "sarenza.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        },
+        {
+            "index": 15,
+            "txt": "*Voir les conditions générales de vente.",
+            "original_url": "https://www.sarenza.com/fr/fr/page-viewer/cgv",
+            "final_url": "https://www.sarenza.com/fr/fr/page-viewer/cgv",
+            "domain": "sarenza.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
+                }
+            ],
+            "audit_date": "2026-04-28 10:21:26"
+        }
+    ],
+    "detected_pixels": []
+}
