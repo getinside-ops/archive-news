@@ -125,76 +125,8 @@
             </div>
         </div>
 
-        {# === AUDIT SCORING (computed at render time, no new data required) === #}
-
-        {# Metadata: FAIL if preheader or subject missing, WARN if clipping risk #}
-        {% set _meta_preheader_ok = preheader and preheader | trim | length > 0 %}
-        {% set _meta_subject_ok = subject and subject | trim | length > 0 %}
-        {% set metadata_score = 'fail' if (not _meta_preheader_ok or not _meta_subject_ok) else ('warn' if email_size > 102000 else 'pass') %}
-
-        {# Pixels: WARN if no pixels detected (data lost during sanitization), PASS if pixels found #}
-        {% set pixels_score = 'warn' if not detected_pixels else 'pass' %}
-
-        {# Links: FAIL if any HTTP or DEV link; WARN if no tracking links (and links exist) #}
-        {% set _http_links = links | selectattr('is_secure', 'equalto', false) | list %}
-        {% set _dev_links = links | selectattr('is_dev') | list %}
-        {% set _tracking_links = links | selectattr('is_tracking') | list %}
-        {% set _links_fail = (_http_links | length > 0) or (_dev_links | length > 0) %}
-        {% set _links_warn = (_tracking_links | length == 0) and (links | length > 0) %}
-        {% set links_score = 'fail' if _links_fail else ('warn' if _links_warn else 'pass') %}
-        {% set flagged_links_count = (_http_links | length) + (_dev_links | length) %}
-
-        {# Overall: FAIL if any FAIL, WARN if any WARN, PASS if all PASS #}
-        {% set _any_fail = metadata_score == 'fail' or pixels_score == 'fail' or links_score == 'fail' %}
-        {% set _any_warn = metadata_score == 'warn' or pixels_score == 'warn' or links_score == 'warn' %}
-        {% set overall_score = 'fail' if _any_fail else ('warn' if _any_warn else 'pass') %}
-
         <!-- Sidebar -->
         <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
-            <!-- Fixed: Audit Summary Panel -->
-            <div class="audit-summary-panel" role="region" aria-label="Audit scorecard">
-                <div class="audit-overall audit-overall--{{ overall_score }}">
-                    <span class="audit-overall-dot"></span>
-                    <span class="audit-overall-label">{{ overall_score | upper }}</span>
-                </div>
-                <!-- Status Legend -->
-                <div class="status-legend">
-                    <div class="status-legend-item">
-                        <span class="status-dot status-dot--pass"></span>
-                        <span class="status-label" data-i18n="legend_pass">PASS: No issues</span>
-                    </div>
-                    <div class="status-legend-item">
-                        <span class="status-dot status-dot--warn"></span>
-                        <span class="status-label" data-i18n="legend_warn">WARN: Needs attention</span>
-                    </div>
-                    <div class="status-legend-item">
-                        <span class="status-dot status-dot--fail"></span>
-                        <span class="status-label" data-i18n="legend_fail">FAIL: Critical issue</span>
-                    </div>
-                </div>
-                <div class="audit-categories">
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                        <span class="audit-cat-name">Metadata</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ metadata_score }}" title="{{ 'PASS: Preheader and subject present' if metadata_score == 'pass' else 'WARN: Clipping risk or missing metadata' if metadata_score == 'warn' else 'FAIL: Missing preheader or subject' }}">{{ metadata_score | upper }}</span>
-                    </div>
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        <span class="audit-cat-name">Pixels</span>
-                        <span class="audit-cat-count">{{ detected_pixels | length }}</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ pixels_score }}" title="{{ 'PASS: Pixels detected' if pixels_score == 'pass' else 'WARN: No pixels detected (may be lost during sanitization)' }}">{{ pixels_score | upper }}</span>
-                    </div>
-                    <div class="audit-category-row">
-                        <svg class="audit-cat-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        <span class="audit-cat-name">Links</span>
-                        <span class="audit-cat-count">{{ flagged_links_count }}/{{ links | length }}</span>
-                        <span class="audit-cat-spacer"></span>
-                        <span class="audit-cat-chip audit-chip--{{ links_score }}" title="{{ 'PASS: All links secure' if links_score == 'pass' else 'WARN: No tracking links detected' if links_score == 'warn' else 'FAIL: HTTP or DEV links found' }}">{{ links_score | upper }}</span>
-                    </div>
-                </div>
-            </div>
 
             <!-- Scrollable: Detail Log (existing tab content) -->
             <div class="audit-detail-log" role="region" aria-label="Audit detail">
@@ -272,10 +204,20 @@
                                         <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
                                             <code class="card-v2-url">{{ pixel.url }}</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Test Pixel" data-url="{{ pixel.url }}" onclick="event.stopPropagation(); testPixel(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
                                                 <button class="btn-card" title="Copy URL" data-url="{{ pixel.url }}" onclick="event.stopPropagation(); copyLink(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                                                 </button>
                                             </div>
+                                        </div>
+                                        <!-- Pixel Test Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Testing...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -843,6 +785,65 @@
             } finally {
                 btn.disabled = false;
                 btn.title = originalTitle;
+            }
+        }
+
+        async function testPixel(btn) {
+            const url = btn.dataset.url;
+            const cardBody = btn.closest('.card-v2-body');
+            const logContainer = cardBody.querySelector('.audit-log-container');
+            const timeline = logContainer.querySelector('.audit-timeline');
+            const statusText = logContainer.querySelector('.audit-status-text');
+
+            btn.disabled = true;
+            logContainer.classList.add('active');
+            timeline.innerHTML = '';
+            statusText.innerHTML = 'Sending pixel request…';
+            statusText.className = 'audit-status-text text-yellow';
+
+            await new Promise(r => setTimeout(r, 300));
+
+            try {
+                const testUrl = url + (url.includes('?') ? '&' : '?') + '_pxtest=' + Date.now();
+                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> &rarr; ${url}</div>`;
+                await new Promise(r => setTimeout(r, 400));
+
+                await new Promise((resolve, reject) => {
+                    const img = new Image();
+                    const timer = setTimeout(() => {
+                        img.src = '';
+                        reject(new Error('Timeout'));
+                    }, 7000);
+                    img.onload = () => { clearTimeout(timer); resolve('loaded'); };
+                    img.onerror = () => { clearTimeout(timer); resolve('onerror'); };
+                    img.src = testUrl;
+                }).then(result => {
+                    if (result === 'loaded') {
+                        timeline.innerHTML += `<div class="audit-step final"><strong>200</strong> &bull; Pixel responded with an image</div>`;
+                        statusText.innerHTML = 'Pixel Active';
+                        statusText.className = 'audit-status-text text-green';
+                        btn.style.color = 'var(--accent-green)';
+                    } else {
+                        timeline.innerHTML += `<div class="audit-step"><strong>Fired</strong> &bull; Request sent (non-image response or blocked)</div>`;
+                        statusText.innerHTML = 'Pixel Fired (no image returned)';
+                        statusText.className = 'audit-status-text text-yellow';
+                        btn.style.color = 'var(--accent-yellow)';
+                    }
+                });
+            } catch (e) {
+                if (e.message === 'Timeout') {
+                    timeline.innerHTML += `<div class="audit-step error"><strong>Timeout</strong> &bull; No response after 7s</div>`;
+                    statusText.innerHTML = 'Pixel Timed Out';
+                    statusText.className = 'audit-status-text text-red';
+                    btn.style.color = 'var(--accent-red)';
+                } else {
+                    timeline.innerHTML += `<div class="audit-step error"><strong>Error</strong> &bull; ${e.message}</div>`;
+                    statusText.innerHTML = 'Pixel Unreachable';
+                    statusText.className = 'audit-status-text text-red';
+                    btn.style.color = 'var(--accent-red)';
+                }
+            } finally {
+                btn.disabled = false;
             }
         }
 
