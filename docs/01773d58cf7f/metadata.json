@@ -4,7 +4,7 @@
     "date_rec": "28/04/2026 à 03:16",
     "date_iso": "2026-04-28T03:16:55-07:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "04/05/2026 à 07:05",
+    "date_arch": "04/05/2026 à 07:33",
     "preheader": "Découvrez la box à cuisiner HelloFresh dès 2,86€ par assiette Voir la version en ligne Se désabonner Code promo : SARENZACDF VOUS ALLEZ GAGNER DU TEMPS EN CUISI...",
     "reading_time": "2 min",
     "audit": {
@@ -31,7 +31,7 @@
                     "url": "<%@ include view='MirrorPageUrl' %>"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 2,
@@ -48,7 +48,7 @@
                     "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 3,
@@ -65,7 +65,7 @@
                     "url": "https://www.sarenza.com/"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 4,
@@ -86,7 +86,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 5,
@@ -107,7 +107,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 6,
@@ -128,7 +128,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=SARENZACDF&utm_source=Sarenza&utm_medium=NL&utm_campaign=Sarenza_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=690836d3-daa2-4de4-875a-99b547dad57e&discount_comm_id=ddce3267-5303-4a55-86a1-a5ff4eefd9ce"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 7,
@@ -145,7 +145,7 @@
                     "url": "https://www.sarenza.com/fr/fr/faq"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 8,
@@ -166,7 +166,7 @@
                     "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fsarenza.com%2F"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 9,
@@ -187,7 +187,7 @@
                     "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsarenza%2F&is_from_rle"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 10,
@@ -204,7 +204,7 @@
                     "url": "https://www.tiktok.com/@sarenza?lang=fr"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 11,
@@ -221,7 +221,7 @@
                     "url": "https://apps.apple.com/fr/app/sarenza-com/id712216051"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 12,
@@ -238,7 +238,7 @@
                     "url": "https://play.google.com/store/apps/details?id=com.sarenza"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 13,
@@ -255,7 +255,7 @@
                     "url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 14,
@@ -272,7 +272,7 @@
                     "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         },
         {
             "index": 15,
@@ -289,7 +289,7 @@
                     "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
                 }
             ],
-            "audit_date": "2026-05-04 07:05:49"
+            "audit_date": "2026-05-04 07:33:33"
         }
     ],
     "detected_pixels": []
