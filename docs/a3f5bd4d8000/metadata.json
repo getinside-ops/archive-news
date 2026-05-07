@@ -4,7 +4,7 @@
     "date_rec": "31/03/2026 à 15:26",
     "date_iso": "2026-03-31T15:26:55+00:00",
     "sender": "noreply@dartagnan.io",
-    "date_arch": "07/05/2026 à 13:54",
+    "date_arch": "07/05/2026 à 14:07",
     "preheader": "Recevez votre carte cadeau de 50€ - mixez lecture et shopping Voir la version en ligne Se désabonner Craquez pour vos magazines préférés de notre partenaire Le ...",
     "reading_time": "1 min",
     "audit": {
@@ -31,7 +31,7 @@
                     "url": "<%@ include view='MirrorPageUrl' %>"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 2,
@@ -48,7 +48,7 @@
                     "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 3,
@@ -65,7 +65,7 @@
                     "url": "https://www.sarenza.com/"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 4,
@@ -86,7 +86,7 @@
                     "url": "https://www.serviceabo-sarenza.com/?CODEMAILING=TW521&utm_source=promo&utm_medium=email"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 5,
@@ -107,7 +107,7 @@
                     "url": "https://www.serviceabo-sarenza.com/?CODEMAILING=TW521&utm_source=promo&utm_medium=email"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 6,
@@ -128,7 +128,7 @@
                     "url": "https://www.serviceabo-sarenza.com:443/"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 7,
@@ -149,7 +149,7 @@
                     "url": "https://www.serviceabo-sarenza.com:443/"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 8,
@@ -170,7 +170,7 @@
                     "url": "https://www.serviceabo-sarenza.com:443/"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 9,
@@ -191,7 +191,7 @@
                     "url": "https://www.serviceabo-sarenza.com:443/"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 10,
@@ -212,7 +212,7 @@
                     "url": "https://www.serviceabo-sarenza.com/?CODEMAILING=TW521&utm_source=promo&utm_medium=email"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 11,
@@ -229,7 +229,7 @@
                     "url": "https://www.sarenza.com/fr/fr/faq"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 12,
@@ -250,7 +250,7 @@
                     "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fsarenza.com%2F"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 13,
@@ -267,11 +267,11 @@
                     "url": "https://www.instagram.com/sarenza/"
                 },
                 {
-                    "status": 429,
+                    "status": 200,
                     "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fsarenza%2F&is_from_rle"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 14,
@@ -288,7 +288,7 @@
                     "url": "https://www.tiktok.com/@sarenza?lang=fr"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 15,
@@ -305,7 +305,7 @@
                     "url": "https://apps.apple.com/fr/app/sarenza-com/id712216051"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 16,
@@ -322,7 +322,7 @@
                     "url": "https://play.google.com/store/apps/details?id=com.sarenza"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 17,
@@ -339,7 +339,7 @@
                     "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 18,
@@ -356,7 +356,7 @@
                     "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         },
         {
             "index": 19,
@@ -373,7 +373,7 @@
                     "url": "https://www.sarenza.com/fr/fr/page-viewer/cgv"
                 }
             ],
-            "audit_date": "2026-05-07 13:54:28"
+            "audit_date": "2026-05-07 14:07:40"
         }
     ],
     "detected_pixels": []
