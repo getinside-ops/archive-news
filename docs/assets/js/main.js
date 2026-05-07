@@ -154,7 +154,7 @@ function _applyMobileScaling(frameEl, doc) {
     if (!isMobile) { el.innerHTML = ''; return; }
 
     el.innerHTML = ''; // reset zoom before measuring natural width
-    const naturalWidth = doc.documentElement.scrollWidth;
+    const naturalWidth = doc.body.scrollWidth;
     const frameWidth = frameEl.getBoundingClientRect().width;
     if (naturalWidth > frameWidth && frameWidth > 0) {
         const scale = (frameWidth / naturalWidth).toFixed(4);
