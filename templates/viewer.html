@@ -447,7 +447,8 @@
             const theme = localStorage.getItem('theme') || 'light';
             if (theme === 'dark') applyTheme('dark');
             if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
-            if (typeof _applyMobileScaling === 'function') _applyMobileScaling(frame, frame.contentDocument);
+            // Defer until after layout so getBoundingClientRect() returns the real frame width
+            if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
         }
 
         function setMode(mode) {
