@@ -447,6 +447,7 @@
             const theme = localStorage.getItem('theme') || 'light';
             if (theme === 'dark') applyTheme('dark');
             if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            if (typeof _applyMobileScaling === 'function') _applyMobileScaling(frame, frame.contentDocument);
         }
 
         function setMode(mode) {
@@ -469,6 +470,10 @@
             if (linksHighlighted) {
                 setTimeout(updateOverlays, 150);
             }
+
+            setTimeout(() => {
+                if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
+            }, 150);
         }
 
         function highlightLink(idx) {

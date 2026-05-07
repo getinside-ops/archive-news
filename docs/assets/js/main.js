@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (doc && doc.head) {
                 const theme = document.body.getAttribute('data-theme') || 'light';
                 _applyIframeScrollbar(emailFrame, doc, theme);
+                _applyMobileScaling(emailFrame, doc);
             }
         }).observe(emailFrame, { attributes: true, attributeFilter: ['class'] });
     }
@@ -135,6 +136,29 @@ function _applyIframeScrollbar(frameEl, doc, theme) {
             html::-webkit-scrollbar-thumb { background: ${thumb}; border-radius: 3px; }
             html { scrollbar-width: thin; scrollbar-color: ${thumb} transparent; }
         `;
+    }
+}
+
+/* Scale email content to fit narrow device frames (mobile/tablet).
+   Uses CSS zoom so layout and scrolling both work naturally. */
+function _applyMobileScaling(frameEl, doc) {
+    if (!doc || !doc.head || !doc.body) return;
+    const styleId = 'mobile-scale-style';
+    let el = doc.getElementById(styleId);
+    if (!el) {
+        el = doc.createElement('style');
+        el.id = styleId;
+        doc.head.appendChild(el);
+    }
+    const isMobile = frameEl.classList.contains('no-scrollbar');
+    if (!isMobile) { el.innerHTML = ''; return; }
+
+    el.innerHTML = ''; // reset zoom before measuring natural width
+    const naturalWidth = doc.documentElement.scrollWidth;
+    const frameWidth = frameEl.getBoundingClientRect().width;
+    if (naturalWidth > frameWidth && frameWidth > 0) {
+        const scale = (frameWidth / naturalWidth).toFixed(4);
+        el.innerHTML = `html { zoom: ${scale}; }`;
     }
 }
 
