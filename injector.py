@@ -28,12 +28,18 @@ Actions tourner toutes les 30 minutes.
 
 **Mode "Code HTML"**
 1. Ouvrez la newsletter dans Gmail.
-2. Menu `⋮` → `Afficher l'original` → bouton `Copier au format HTML`,
-   ou bien `Inspecter` sur le rendu → copier l'`outerHTML` du `<body>`.
-3. Collez dans la zone "Code HTML".
-4. **Renseignez l'URL d'origine de la newsletter** (ex. la page "voir dans
-   votre navigateur"). Elle sert de `Referer` lors du téléchargement des
-   images — sans elle, les CDN d'ESP (Selligent, Adobe, Sarbacane…)
+2. **Préférer** : menu `⋮` → `Afficher l'original` → bouton
+   `Copier au format` → choisir le format HTML. C'est la source
+   canonique du message, sans pollution par votre navigateur.
+3. **À éviter** : `Inspecter` puis `Copy outerHTML` sur la page rendue.
+   Les extensions Chrome (anti-tracking, traducteurs, gestionnaires de
+   mots de passe…) injectent leurs propres `<img>` dans le DOM
+   (ex. `chrome-extension://…/icon.png`). Ces images parasites
+   déclenchent à tort le badge `⚠️ image non archivée`.
+4. Collez le HTML dans la zone "Code HTML".
+5. **Renseignez l'URL d'origine de la newsletter** (ex. la page "voir
+   dans votre navigateur"). Elle sert de `Referer` lors du téléchargement
+   des images — sans elle, les CDN d'ESP (Selligent, Adobe, Sarbacane…)
    renvoient souvent un `403` et les images n'apparaissent pas.
 
 **Mode "Fichier ZIP"**

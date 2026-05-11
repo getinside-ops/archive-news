@@ -323,6 +323,13 @@ class EmailParser:
                     continue
 
             if src.startswith("//"): src = "https:" + src
+            # Only http(s) is fetchable. Browser DOM dumps (outerHTML copies)
+            # often contain chrome-extension://, moz-extension://, blob:, etc.
+            # injected by user extensions — skip silently so they don't pollute
+            # failed_images.json or trigger a misleading viewer warning chip.
+            if not (src.startswith("http://") or src.startswith("https://")):
+                logger.debug("Skipping non-http image src: %s", src[:80])
+                continue
             images_to_download.append((img, src, image_idx))
             image_idx += 1
             
