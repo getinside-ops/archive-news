@@ -61,6 +61,7 @@
                         <h1 class="vh-subject" title="10€ offerts, profitez de votre offre exclusive !">10€ offerts, profitez de votre offre exclusive !</h1>
                         <span class="crm-badge" data-crm="Unknown">Unknown</span>
                         <span class="vh-date">01/02/2026 à 09:19</span>
+                        
                     </div>
                     <div class="vh-zone-divider" aria-hidden="true"></div>
                     <!-- Center: Device toggle (hidden on mobile) -->
@@ -2132,14 +2133,32 @@
                     --spotlight-glow: #AF0584;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
-                /* Fallback responsive layout for emails whose <style> was stripped (e.g. Gmail SMTP transit) */
-                @media screen and (max-width: 640px) {
-                    table[width="640"] { width: 100% !important; max-width: 100% !important; }
+                /* Fit-to-width fallback for emails whose own @media queries are broken
+                   or stripped in transit (Outlook / Marketing Cloud templates often ship
+                   with invalid selectors). Applied based on the iframe viewport width
+                   regardless of the email's own responsive logic. */
+                @media screen and (max-width: 480px) {
+                    table, tbody, tr, td, th {
+                        max-width: 100% !important;
+                        box-sizing: border-box !important;
+                    }
+                    table[width], td[width], th[width], div[width] {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                    }
+                    table[style*="width"], td[style*="width"], div[style*="width"] {
+                        max-width: 100% !important;
+                    }
+                    img, img[width] {
+                        max-width: 100% !important;
+                        height: auto !important;
+                    }
+                    body, html { overflow-x: hidden !important; }
                 }
-                @media screen and (max-width: 450px) {
-                    table[width] { width: 100% !important; max-width: 100% !important; }
-                    td[width] { width: auto !important; }
-                    img[width] { max-width: 100% !important; height: auto !important; }
+                @media screen and (max-width: 640px) {
+                    table[width="640"], table[width="600"] {
+                        width: 100% !important; max-width: 100% !important;
+                    }
                 }
                 .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
@@ -2169,6 +2188,51 @@
             const theme = localStorage.getItem('theme') || 'light';
             if (theme === 'dark') applyTheme('dark');
             if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            // Defer until after layout so getBoundingClientRect() returns the real frame width
+            if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
+        }
+
+        // Failed images panel: lazily fetch failed_images.json (written by the parser
+        // when image localization fails — usually ESP CDN Referer blocks).
+        let _failedImagesLoaded = false;
+        function _escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        async function _loadFailedImages() {
+            if (_failedImagesLoaded) return;
+            const list = document.getElementById('failedImagesList');
+            if (!list) return;
+            try {
+                const r = await fetch('failed_images.json', { cache: 'no-store' });
+                if (!r.ok) throw new Error('http ' + r.status);
+                const items = await r.json();
+                if (!Array.isArray(items) || items.length === 0) {
+                    list.innerHTML = '<li class="fip-empty">Aucun détail disponible.</li>';
+                } else {
+                    list.innerHTML = items.map(it => {
+                        const url = _escapeHtml(it.url || '');
+                        const reason = _escapeHtml(it.reason || 'unknown');
+                        return '<li class="fip-item"><a href="' + url + '" target="_blank" rel="noopener">'
+                            + url + '</a><span class="fip-reason">' + reason + '</span></li>';
+                    }).join('');
+                }
+            } catch (e) {
+                list.innerHTML = '<li class="fip-empty">Impossible de charger failed_images.json (' + _escapeHtml(e.message) + ').</li>';
+            }
+            _failedImagesLoaded = true;
+        }
+        function toggleFailedImagesPanel() {
+            const panel = document.getElementById('failedImagesPanel');
+            if (!panel) return;
+            const willOpen = panel.hasAttribute('hidden');
+            if (willOpen) {
+                panel.removeAttribute('hidden');
+                _loadFailedImages();
+            } else {
+                panel.setAttribute('hidden', '');
+            }
         }
 
         function setMode(mode) {
@@ -2191,6 +2255,10 @@
             if (linksHighlighted) {
                 setTimeout(updateOverlays, 150);
             }
+
+            setTimeout(() => {
+                if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
+            }, 150);
         }
 
         function highlightLink(idx) {

@@ -17,7 +17,7 @@ st.set_page_config(page_title="Newsletter Injector", page_icon="💉")
 st.title("💉 Injecteur de Newsletter (Version +)")
 st.markdown("Cet outil permet d'envoyer manuellement du HTML brut ou un fichier ZIP à votre archive.")
 
-with st.expander("📖 Comment utiliser cet outil", expanded=False):
+with st.expander("📖 Comment utiliser cet outil", expanded=True):
     st.markdown(
         """
 **Quand utiliser l'injecteur ?**

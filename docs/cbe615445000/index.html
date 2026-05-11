@@ -705,14 +705,32 @@
                     --spotlight-glow: #AF0584;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
-                /* Fallback responsive layout for emails whose <style> was stripped (e.g. Gmail SMTP transit) */
-                @media screen and (max-width: 640px) {
-                    table[width="640"] { width: 100% !important; max-width: 100% !important; }
+                /* Fit-to-width fallback for emails whose own @media queries are broken
+                   or stripped in transit (Outlook / Marketing Cloud templates often ship
+                   with invalid selectors). Applied based on the iframe viewport width
+                   regardless of the email's own responsive logic. */
+                @media screen and (max-width: 480px) {
+                    table, tbody, tr, td, th {
+                        max-width: 100% !important;
+                        box-sizing: border-box !important;
+                    }
+                    table[width], td[width], th[width], div[width] {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                    }
+                    table[style*="width"], td[style*="width"], div[style*="width"] {
+                        max-width: 100% !important;
+                    }
+                    img, img[width] {
+                        max-width: 100% !important;
+                        height: auto !important;
+                    }
+                    body, html { overflow-x: hidden !important; }
                 }
-                @media screen and (max-width: 450px) {
-                    table[width] { width: 100% !important; max-width: 100% !important; }
-                    td[width] { width: auto !important; }
-                    img[width] { max-width: 100% !important; height: auto !important; }
+                @media screen and (max-width: 640px) {
+                    table[width="640"], table[width="600"] {
+                        width: 100% !important; max-width: 100% !important;
+                    }
                 }
                 .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
