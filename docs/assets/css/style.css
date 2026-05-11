@@ -673,6 +673,153 @@ footer a:hover {
     border-color: var(--border-color) !important;
 }
 
+/* === FAILED IMAGES WARNING (viewer chip + archive card chip + panel) === */
+.failed-images-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+.failed-images-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    background: rgba(234, 88, 12, 0.12);
+    color: #b45309;
+    border: 1px solid rgba(234, 88, 12, 0.28);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.failed-images-chip:hover {
+    background: rgba(234, 88, 12, 0.2);
+}
+
+.failed-images-chip .fic-count {
+    font-weight: 800;
+}
+
+[data-theme="dark"] .failed-images-chip {
+    background: rgba(251, 146, 60, 0.14);
+    color: #fdba74;
+    border-color: rgba(251, 146, 60, 0.3);
+}
+
+.failed-images-panel {
+    position: absolute;
+    z-index: 50;
+    top: 100%;
+    right: 16px;
+    margin-top: 8px;
+    min-width: 320px;
+    max-width: min(520px, 90vw);
+    max-height: 60vh;
+    overflow: auto;
+    background: var(--bg-elevated, #fff);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    padding: 14px 16px;
+}
+
+.failed-images-panel[hidden] {
+    display: none;
+}
+
+.failed-images-panel .fip-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.failed-images-panel .fip-close {
+    background: none;
+    border: 0;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.failed-images-panel .fip-hint {
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.failed-images-panel .fip-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.failed-images-panel .fip-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.78rem;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: var(--bg-soft, rgba(0, 0, 0, 0.03));
+    word-break: break-all;
+}
+
+.failed-images-panel .fip-item a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.failed-images-panel .fip-item a:hover {
+    text-decoration: underline;
+}
+
+.failed-images-panel .fip-reason {
+    color: var(--text-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+}
+
+.failed-images-panel .fip-empty {
+    list-style: none;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+[data-theme="dark"] .failed-images-panel {
+    background: var(--bg-elevated, #1f2027);
+}
+
+/* Card chip on the archive landing page */
+.card-warning-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: rgba(234, 88, 12, 0.12);
+    color: #b45309;
+    border: 1px solid rgba(234, 88, 12, 0.28);
+}
+
+[data-theme="dark"] .card-warning-chip {
+    background: rgba(251, 146, 60, 0.14);
+    color: #fdba74;
+    border-color: rgba(251, 146, 60, 0.3);
+}
+
 /* Homepage: neutral badge style to match handbook */
 body.index-page .crm-badge {
     background: rgba(0, 0, 0, 0.05);

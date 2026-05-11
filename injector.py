@@ -17,6 +17,53 @@ st.set_page_config(page_title="Newsletter Injector", page_icon="💉")
 st.title("💉 Injecteur de Newsletter (Version +)")
 st.markdown("Cet outil permet d'envoyer manuellement du HTML brut ou un fichier ZIP à votre archive.")
 
+with st.expander("📖 Comment utiliser cet outil", expanded=False):
+    st.markdown(
+        """
+**Quand utiliser l'injecteur ?**
+Pour archiver une newsletter ponctuelle qui n'arrive pas dans le label Gmail
+`Github/archive-newsletters` (newsletters reçues sur une autre boîte, captures
+HTML, exports manuels, etc.). Pour le flux normal, laissez le job GitHub
+Actions tourner toutes les 30 minutes.
+
+**Mode "Code HTML"**
+1. Ouvrez la newsletter dans Gmail.
+2. Menu `⋮` → `Afficher l'original` → bouton `Copier au format HTML`,
+   ou bien `Inspecter` sur le rendu → copier l'`outerHTML` du `<body>`.
+3. Collez dans la zone "Code HTML".
+4. **Renseignez l'URL d'origine de la newsletter** (ex. la page "voir dans
+   votre navigateur"). Elle sert de `Referer` lors du téléchargement des
+   images — sans elle, les CDN d'ESP (Selligent, Adobe, Sarbacane…)
+   renvoient souvent un `403` et les images n'apparaissent pas.
+
+**Mode "Fichier ZIP"**
+1. Préparez un ZIP contenant un `index.html` (ou tout `.html`) et les images
+   référencées au même niveau ou dans des sous-dossiers — les chemins doivent
+   correspondre exactement aux attributs `src` du HTML.
+2. **Conseillé : renseignez aussi l'URL d'origine.** La plupart des
+   newsletters référencent encore des images distantes (CDN ESP) absentes du
+   ZIP ; sans Referer, ces images échouent au téléchargement.
+
+**Identifiants**
+Gmail + [mot de passe d'application](https://myaccount.google.com/apppasswords).
+Si `.streamlit/secrets.toml` est configuré (clés `GMAIL_USER` /
+`GMAIL_PASSWORD`), les champs sont pré-remplis.
+
+**Après l'envoi**
+L'email part vers la boîte d'archive. Le job GitHub Actions le récupère
+dans les ~30 minutes suivantes et la page apparaît sur le site déployé.
+Si certaines images n'ont pas pu être archivées, un badge `⚠️ N images
+non archivées` s'affiche dans le viewer et un fichier `failed_images.json`
+est écrit à côté de `metadata.json`.
+
+**Dépannage images cassées**
+1. L'URL d'origine est-elle renseignée ?
+2. Le domaine source bloque-t-il le hot-link (Referer obligatoire) ?
+3. Si rien ne marche, repassez en mode ZIP en incluant manuellement les
+   images extraites de la newsletter rendue dans le navigateur.
+"""
+    )
+
 # Récupération des secrets
 default_user = st.secrets["GMAIL_USER"] if "GMAIL_USER" in st.secrets else ""
 default_pass = st.secrets["GMAIL_PASSWORD"] if "GMAIL_PASSWORD" in st.secrets else ""
@@ -34,14 +81,20 @@ with st.form("email_form", clear_on_submit=False):
     
     st.write("---")
     subject = st.text_input("Sujet de la Newsletter")
-    
+    base_url = st.text_input(
+        "URL d'origine de la newsletter (Recommandé)",
+        placeholder="ex: https://news.exemple.fr/...",
+        help=(
+            "Sert de Referer pour télécharger les images distantes "
+            "(les CDN d'ESP bloquent souvent le hot-link sans Referer). "
+            "Également utilisée pour résoudre les liens relatifs en mode HTML."
+        ),
+    )
+
     html_content = ""
     zip_file = None
-    base_url = ""
-    
+
     if upload_type == "Code HTML":
-        base_url = st.text_input("URL d'origine (Recommandé)", placeholder="ex: https://...", 
-                                 help="Indispensable pour que les liens et images distantes fonctionnent.")
         html_content = st.text_area("Collez le Code HTML (OuterHTML) ici", height=300)
     else:
         zip_file = st.file_uploader("Choisissez un fichier ZIP", type="zip")
@@ -153,7 +206,12 @@ if submitted:
                 msg["Subject"] = subject
                 msg["From"] = user_email
                 msg["To"] = dest_email
-                
+                # Forward source URL + injector tag so the server-side parser can use
+                # them as Referer for image fetches and audit-trace the import.
+                if base_url:
+                    msg["X-Source-URL"] = base_url
+                msg["X-Archive-Injector"] = "streamlit/1"
+
                 msg_alternative = MIMEMultipart("alternative")
                 msg.attach(msg_alternative)
                 

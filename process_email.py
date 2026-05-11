@@ -151,6 +151,7 @@ def process_emails():
                     'crm': parser.detected_crm,
                     'links': parser.links,
                     'detected_pixels': parser.detected_pixels,
+                    'failed_images_count': len(parser.failed_images),
                 }
 
                 # Subject Length Audit

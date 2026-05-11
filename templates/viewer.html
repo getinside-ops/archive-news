@@ -61,6 +61,23 @@
                         <h1 class="vh-subject" title="{{ subject }}">{{ subject }}</h1>
                         <span class="crm-badge" data-crm="{{ crm or 'Unknown' }}">{{ crm or 'Unknown' }}</span>
                         <span class="vh-date">{{ email_date }}</span>
+                        {% if failed_images_count and failed_images_count > 0 %}
+                        <span class="failed-images-wrap">
+                            <button type="button" class="failed-images-chip" onclick="toggleFailedImagesPanel(this)" title="{{ failed_images_count }} image(s) n'ont pas pu être archivées. Cliquez pour voir la liste.">
+                                <span aria-hidden="true">⚠️</span>
+                                <span class="fic-count">{{ failed_images_count }}</span>
+                                <span class="fic-label" data-i18n="failed_images_label">images non archivées</span>
+                            </button>
+                            <div id="failedImagesPanel" class="failed-images-panel" hidden role="dialog" aria-label="Images non archivées">
+                                <div class="fip-header">
+                                    <strong data-i18n="failed_images_title">Images non téléchargées</strong>
+                                    <button type="button" class="fip-close" onclick="toggleFailedImagesPanel()" aria-label="Fermer">×</button>
+                                </div>
+                                <p class="fip-hint" data-i18n="failed_images_hint">Le CDN d'origine a refusé le téléchargement (souvent un blocage hot-link). Réimportez la newsletter en mode ZIP avec les images bundlées pour les archiver.</p>
+                                <ul class="fip-list" id="failedImagesList"></ul>
+                            </div>
+                        </span>
+                        {% endif %}
                     </div>
                     <div class="vh-zone-divider" aria-hidden="true"></div>
                     <!-- Center: Device toggle (hidden on mobile) -->
@@ -449,6 +466,49 @@
             if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
             // Defer until after layout so getBoundingClientRect() returns the real frame width
             if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
+        }
+
+        // Failed images panel: lazily fetch failed_images.json (written by the parser
+        // when image localization fails — usually ESP CDN Referer blocks).
+        let _failedImagesLoaded = false;
+        function _escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        async function _loadFailedImages() {
+            if (_failedImagesLoaded) return;
+            const list = document.getElementById('failedImagesList');
+            if (!list) return;
+            try {
+                const r = await fetch('failed_images.json', { cache: 'no-store' });
+                if (!r.ok) throw new Error('http ' + r.status);
+                const items = await r.json();
+                if (!Array.isArray(items) || items.length === 0) {
+                    list.innerHTML = '<li class="fip-empty">Aucun détail disponible.</li>';
+                } else {
+                    list.innerHTML = items.map(it => {
+                        const url = _escapeHtml(it.url || '');
+                        const reason = _escapeHtml(it.reason || 'unknown');
+                        return '<li class="fip-item"><a href="' + url + '" target="_blank" rel="noopener">'
+                            + url + '</a><span class="fip-reason">' + reason + '</span></li>';
+                    }).join('');
+                }
+            } catch (e) {
+                list.innerHTML = '<li class="fip-empty">Impossible de charger failed_images.json (' + _escapeHtml(e.message) + ').</li>';
+            }
+            _failedImagesLoaded = true;
+        }
+        function toggleFailedImagesPanel() {
+            const panel = document.getElementById('failedImagesPanel');
+            if (!panel) return;
+            const willOpen = panel.hasAttribute('hidden');
+            if (willOpen) {
+                panel.removeAttribute('hidden');
+                _loadFailedImages();
+            } else {
+                panel.setAttribute('hidden', '');
+            }
         }
 
         function setMode(mode) {

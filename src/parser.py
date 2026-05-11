@@ -1,6 +1,7 @@
 
 from bs4 import BeautifulSoup
 import html
+import json
 import logging
 import mimetypes
 import os
@@ -55,16 +56,22 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
     'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Sec-Fetch-Dest': 'image',
+    'Sec-Fetch-Mode': 'no-cors',
+    'Sec-Fetch-Site': 'cross-site',
 }
 
 
-def _http_get(url, retries=3, timeout=10):
+def _http_get(url, retries=3, timeout=10, referer=None):
     """GET with exponential backoff (1s, 2s, 4s) on transient failures."""
     delays = [1, 2, 4]
     last_err = None
+    req_headers = dict(HEADERS)
+    if referer:
+        req_headers['Referer'] = referer
     for attempt in range(retries):
         try:
-            return requests.get(url, headers=HEADERS, timeout=timeout)
+            return requests.get(url, headers=req_headers, timeout=timeout)
         except Exception as e:
             last_err = e
             if attempt < retries - 1:
@@ -80,6 +87,11 @@ class EmailParser:
         self.links = []
         self.detected_pixels = []
         self.detected_crm = None
+        # Source URL forwarded by the Streamlit injector via X-Source-URL.
+        # Used as the Referer when localizing images so ESP CDNs (e.g. news.but.fr)
+        # don't 403 hot-link attempts.
+        self.source_url = (self.headers.get('X-Source-URL') or self.headers.get('x-source-url') or '').strip() or None
+        self.failed_images = []
 
     def detect_crm(self):
         """Detect which CRM/ESP was used to send this email by analyzing URLs and headers."""
@@ -314,36 +326,97 @@ class EmailParser:
             images_to_download.append((img, src, image_idx))
             image_idx += 1
             
-        def _download(img_obj, url, idx):
-            try:
-                # Determine extension first (guess or default)
-                # Optimization: We can't know the exact ext without HEAD/GET usually, 
-                # but if we look at existing files in output_folder matching img_{idx}.*, we can skip.
-                # Use a simple heuristics or just check common extensions.
-                
-                # Check for existing file with standard extensions
-                for ext in ['.jpg', '.png', '.gif', '.jpeg', '.webp']:
-                    potential_name = f"img_{idx}{ext}"
-                    potential_path = os.path.join(self.output_folder, potential_name)
-                    if os.path.exists(potential_path):
-                        return img_obj, potential_name
+        MAX_IMG_BYTES = 15 * 1024 * 1024
 
-                r = _http_get(url)
-                if r.status_code == 200:
-                    ext = mimetypes.guess_extension(r.headers.get('content-type', '')) or ".jpg"
+        def _image_origin(url):
+            try:
+                parsed = urlparse(url)
+                if parsed.scheme and parsed.netloc:
+                    return f"{parsed.scheme}://{parsed.netloc}/"
+            except Exception:
+                pass
+            return None
+
+        def _attempt(url, referer):
+            r = _http_get(url, referer=referer)
+            if not (200 <= r.status_code < 300):
+                return r, None, f"http_{r.status_code}"
+            ctype = (r.headers.get('content-type') or '').split(';')[0].strip().lower()
+            if not ctype.startswith('image/'):
+                return r, None, f"bad_content_type:{ctype or 'unknown'}"
+            size = len(r.content)
+            if size <= 0 or size > MAX_IMG_BYTES:
+                return r, None, f"bad_size:{size}"
+            ext = mimetypes.guess_extension(ctype) or ".jpg"
+            return r, ext, None
+
+        def _download(img_obj, url, idx):
+            # Check for existing file with standard extensions (resume support)
+            for ext in ['.jpg', '.png', '.gif', '.jpeg', '.webp']:
+                potential_name = f"img_{idx}{ext}"
+                potential_path = os.path.join(self.output_folder, potential_name)
+                if os.path.exists(potential_path):
+                    return img_obj, potential_name, None
+
+            # Referer fallback chain: source URL → image origin → none
+            referer_chain = []
+            if self.source_url:
+                referer_chain.append(self.source_url)
+            origin = _image_origin(url)
+            if origin and origin not in referer_chain:
+                referer_chain.append(origin)
+            referer_chain.append(None)
+
+            last_reason = None
+            last_referer = None
+            for referer in referer_chain:
+                try:
+                    r, ext, reason = _attempt(url, referer)
+                    last_reason = reason
+                    last_referer = referer
+                    if ext is None:
+                        # 403 with a Referer often means the CDN rejects any cross-origin Referer.
+                        # 429 → respect Retry-After once.
+                        if r.status_code == 429:
+                            retry_after = r.headers.get('Retry-After')
+                            try:
+                                time.sleep(min(float(retry_after), 5.0)) if retry_after else None
+                            except Exception:
+                                pass
+                        continue
                     local_name = f"img_{idx}{ext}"
                     path = os.path.join(self.output_folder, local_name)
-                    with open(path, "wb") as f: f.write(r.content)
-                    return img_obj, local_name
-            except Exception as e:
-                logger.warning("Image download failed for %s: %s", url, e)
-            return img_obj, None
+                    with open(path, "wb") as f:
+                        f.write(r.content)
+                    return img_obj, local_name, None
+                except Exception as e:
+                    last_reason = f"exception:{type(e).__name__}:{e}"
+                    last_referer = referer
+                    continue
+
+            logger.warning("Image download failed for %s (referer=%s reason=%s)", url, last_referer, last_reason)
+            return img_obj, None, {
+                'url': url,
+                'reason': last_reason or 'unknown',
+                'referer_used': last_referer,
+            }
 
         with ThreadPoolExecutor(max_workers=5) as ex:
             futures = {ex.submit(_download, item[0], item[1], item[2]): item for item in images_to_download}
             for f in as_completed(futures):
-                img, local = f.result()
-                if local: img['src'] = local
+                img, local, failure = f.result()
+                if local:
+                    img['src'] = local
+                elif failure:
+                    self.failed_images.append(failure)
+
+        if self.failed_images:
+            try:
+                fail_path = os.path.join(self.output_folder, 'failed_images.json')
+                with open(fail_path, 'w', encoding='utf-8') as f:
+                    json.dump(self.failed_images, f, ensure_ascii=False, indent=2)
+            except Exception as e:
+                logger.warning("Could not write failed_images.json: %s", e)
 
     def resolve_redirects_parallel(self):
         """Pre-calculate redirect chains for all links to avoid CORS issues in the statics viewer."""

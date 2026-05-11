@@ -53,7 +53,8 @@ def generate_viewer(metadata, html_content, links, output_path, lang='fr', detec
         audit=metadata.get('audit', {}),
         crm=metadata.get('crm'),
         links_json=Markup(json.dumps(links).replace('</script>', r'<\/script>')),
-        gtinsi_count=gtinsi_count
+        gtinsi_count=gtinsi_count,
+        failed_images_count=metadata.get('failed_images_count', 0),
     )
 
     with open(output_path, 'w', encoding='utf-8') as f:

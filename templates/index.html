@@ -128,6 +128,11 @@
                         <span class="date">{{ email.date_rec }}</span>
                         <span class="crm-badge" data-crm="{{ email.crm or 'Unknown' }}">{{ email.crm or 'Unknown'
                             }}</span>
+                        {% if email.failed_images_count and email.failed_images_count > 0 %}
+                        <span class="card-warning-chip" title="{{ email.failed_images_count }} image(s) non archivée(s)" aria-label="{{ email.failed_images_count }} images non archivées">
+                            ⚠️ <span>{{ email.failed_images_count }}</span>
+                        </span>
+                        {% endif %}
                     </div>
                     <div class="sender-pill">{{ email.sender }}</div>
                     <h2 class="card-title">{{ email.subject }}</h2>
