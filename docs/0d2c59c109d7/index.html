@@ -1373,25 +1373,46 @@
                     --spotlight-glow: #AF0584;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
-                /* Minimal safety net for emails with NO responsive CSS or only
-                   pixel-based desktop widths. Deliberately conservative —
-                   well-built newsletters carry their own @media rules with
-                   class-based percent widths (e.g. .m_w50p, .m_w30p), and we
-                   MUST NOT override those. Specificity matters: td[width]
-                   (0,1,1) beats .m_w50p (0,1,0), so we no longer target
-                   [width] generically. */
+                /* Mobile fallback for emails whose own responsive logic is
+                   missing or insufficient. Targeted selectors only — must NOT
+                   override class-based percent widths like .m_w50p (specificity
+                   0,1,0 vs td[width] 0,1,1). */
                 @media screen and (max-width: 480px) {
-                    /* Collapse only the canonical 600/640px newsletter wrapper
-                       widths — these are always desktop-only outer containers
-                       and never have a corresponding mobile class. */
+                    /* Stripo / Mailchimp ghost spacer imgs (1×1 px,
+                       max-height:0) lock desktop width via inline width:600px.
+                       Hide them on mobile so the parent TD can collapse. */
+                    img[style*="max-height:0"], img[height="1"] { display: none !important; }
+                    /* Inline min-width pins to desktop width — neutralize. */
+                    [style*="min-width:"] { min-width: 0 !important; }
+                    /* Canonical wrapper tables: by width attribute, by inline
+                       style="width:NNNpx", and by Stripo class. */
                     table[width="640"], table[width="600"],
-                    table[width="650"], table[width="700"] {
+                    table[width="650"], table[width="700"],
+                    table[style*="width:600px"], table[style*="width: 600px"],
+                    table[style*="width:640px"], table[style*="width: 640px"],
+                    table[style*="width:650px"], table[style*="width: 650px"],
+                    table[style*="width:700px"], table[style*="width: 700px"],
+                    table.es-wrapper {
                         width: 100% !important;
                         max-width: 100% !important;
                     }
-                    /* Cap images so a stray hero doesn't overflow horizontally.
-                       Do NOT set width:100% — that would stretch a 77px logo
-                       to fill its parent. */
+                    /* Cells with inline pixel widths: release them. */
+                    td[style*="width:600px"], td[style*="width: 600px"],
+                    td[style*="width:640px"], td[style*="width: 640px"] {
+                        width: auto !important;
+                        max-width: 100% !important;
+                    }
+                    /* Hero imgs (canonical desktop widths) — only target large
+                       widths so small logos (e.g. width="77") stay intact. */
+                    img[width="600"], img[width="640"], img[width="650"],
+                    img[width="700"], img[width="750"], img[width="800"],
+                    img[style*="width:600px"], img[style*="width: 600px"],
+                    img[style*="width:640px"], img[style*="width: 640px"] {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        height: auto !important;
+                    }
+                    /* Universal img safety cap (does not stretch). */
                     img { max-width: 100% !important; height: auto !important; }
                     body { overflow-x: hidden !important; }
                 }
