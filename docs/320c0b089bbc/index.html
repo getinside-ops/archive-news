@@ -1645,31 +1645,27 @@
                     --spotlight-glow: #AF0584;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
-                /* Fit-to-width fallback for emails whose own @media queries are
-                   broken or stripped in transit. Constrains the OUTER containers
-                   (table[width], divs with inline widths) to the iframe width so
-                   _applyMobileScaling doesn't fall back to zoom and shrink text.
-                   Deliberately leaves td[width] alone — forcing 100% on cells
-                   breaks side-by-side column layouts. */
+                /* Minimal safety net for emails with NO responsive CSS or only
+                   pixel-based desktop widths. Deliberately conservative —
+                   well-built newsletters carry their own @media rules with
+                   class-based percent widths (e.g. .m_w50p, .m_w30p), and we
+                   MUST NOT override those. Specificity matters: td[width]
+                   (0,1,1) beats .m_w50p (0,1,0), so we no longer target
+                   [width] generically. */
                 @media screen and (max-width: 480px) {
-                    table[width], div[width] {
+                    /* Collapse only the canonical 600/640px newsletter wrapper
+                       widths — these are always desktop-only outer containers
+                       and never have a corresponding mobile class. */
+                    table[width="640"], table[width="600"],
+                    table[width="650"], table[width="700"] {
                         width: 100% !important;
                         max-width: 100% !important;
                     }
-                    table[style*="width:"], div[style*="width:"] {
-                        max-width: 100% !important;
-                    }
-                    td[width] { width: auto !important; }
-                    img, img[width] {
-                        max-width: 100% !important;
-                        height: auto !important;
-                    }
+                    /* Cap images so a stray hero doesn't overflow horizontally.
+                       Do NOT set width:100% — that would stretch a 77px logo
+                       to fill its parent. */
+                    img { max-width: 100% !important; height: auto !important; }
                     body { overflow-x: hidden !important; }
-                }
-                @media screen and (max-width: 640px) {
-                    table[width="640"], table[width="600"] {
-                        width: 100% !important; max-width: 100% !important;
-                    }
                 }
                 .link-outline {
                     outline: 2px solid #8BE9FD !important; /* Cyan */
@@ -1696,7 +1692,9 @@
             `;
             doc.head.appendChild(style);
 
-            const theme = localStorage.getItem('theme') || 'light';
+            const theme = (typeof _resolveInitialTheme === 'function')
+                ? _resolveInitialTheme()
+                : (localStorage.getItem('theme') || 'light');
             if (theme === 'dark') applyTheme('dark');
             if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
             // Defer until after layout so getBoundingClientRect() returns the real frame width

@@ -45,10 +45,33 @@ function changePage(delta) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function _resolveInitialTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark' || stored === 'light') return stored;
+    try {
+        return window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark' : 'light';
+    } catch (_) { return 'light'; }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    applyTheme(savedTheme);
+    // Initialize Theme (honors prefers-color-scheme when user hasn't toggled)
+    applyTheme(_resolveInitialTheme());
+
+    // React to live OS-level theme changes when the user hasn't manually chosen
+    if (window.matchMedia) {
+        try {
+            const mq = window.matchMedia('(prefers-color-scheme: dark)');
+            const onChange = e => {
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            };
+            if (mq.addEventListener) mq.addEventListener('change', onChange);
+            else if (mq.addListener) mq.addListener(onChange); // Safari <14
+        } catch (_) { /* ignore */ }
+    }
 
     // Debounced search
     let _searchTimer = null;
