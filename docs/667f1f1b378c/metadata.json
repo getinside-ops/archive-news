@@ -4,7 +4,7 @@
     "date_rec": "24/11/2025 à 05:24",
     "date_iso": "2025-11-24T05:24:30-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "07/05/2026 à 14:27",
+    "date_arch": "11/05/2026 à 10:06",
     "preheader": "Encore merci pour votre commande ! Voici votre code promo exclusif Suite à votre commande chez MieuxQueDesFleurs, bénéficiez de jusqu'à 95€ offerts sur vos prem...",
     "reading_time": "2 min",
     "audit": {
@@ -35,7 +35,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         },
         {
             "index": 2,
@@ -56,7 +56,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         },
         {
             "index": 3,
@@ -77,7 +77,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         },
         {
             "index": 4,
@@ -98,7 +98,7 @@
                     "url": "https://www.hellofresh.fr/pages/value-messaging?c=MQDFB2S&utm_source=MieuxQueDesFleurs&utm_medium=GWP&utm_campaign=Mieuxquedesfleurs_partnerships&utm_content=act_partnerships_partnershipsothers&vs_campaign_id=93d94513-b975-46b4-9190-4b5b5c128c69&discount_comm_id=163573c4-5828-4254-b4c2-9ea634844d92&_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         },
         {
             "index": 5,
@@ -127,7 +127,7 @@
                     "url": "https://www.hellofresh.fr/about/termes-et-conditions?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         },
         {
             "index": 6,
@@ -144,8 +144,9 @@
                     "url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
                 }
             ],
-            "audit_date": "2026-05-07 14:27:52"
+            "audit_date": "2026-05-11 10:06:24"
         }
     ],
-    "detected_pixels": []
+    "detected_pixels": [],
+    "failed_images_count": 0
 }

@@ -4,7 +4,7 @@
     "date_rec": "07/01/2026 à 05:39",
     "date_iso": "2026-01-07T05:39:03-08:00",
     "sender": "benoit@getinside.fr",
-    "date_arch": "07/05/2026 à 14:26",
+    "date_arch": "11/05/2026 à 10:05",
     "preheader": "Showroomprive.com Aidez-nous à améliorer le cadre de vie des enfants hospitalisés. Version en ligne DE TOUT COEUR AVEC LES PIÈCES JAUNES Showroomprivé soutient ...",
     "reading_time": "1 min",
     "audit": {
@@ -31,7 +31,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 2,
@@ -48,13 +48,13 @@
                     "url": "%%view_email_url%%"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 3,
             "txt": "",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx",
-            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx",
+            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3ddaily%26utm_channel%3demail_animco%26utm_content%3d110526%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dnewsletter%26utm_term%3dlogo_SRP_header",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
@@ -70,10 +70,10 @@
                 },
                 {
                     "status": 200,
-                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx"
+                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3ddaily%26utm_channel%3demail_animco%26utm_content%3d110526%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dnewsletter%26utm_term%3dlogo_SRP_header"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 4,
@@ -90,7 +90,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 5,
@@ -107,7 +107,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 6,
@@ -124,7 +124,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 7,
@@ -141,7 +141,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 8,
@@ -158,7 +158,7 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 9,
@@ -175,13 +175,13 @@
                     "url": "https://don.fondationhopitaux.fr/piecesjaunes/?utm_source=getinside-showroomprive&utm_medium=email&utm_campaign=piecesjaunes2026"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 10,
             "txt": "",
             "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx",
-            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx",
+            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3ddaily%26utm_channel%3demail_animco%26utm_content%3d110526%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dnewsletter%26utm_term%3dlogo_SRP_header",
             "domain": "showroomprive.com",
             "is_tracking": false,
             "is_secure": true,
@@ -197,10 +197,10 @@
                 },
                 {
                     "status": 200,
-                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx"
+                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3ddaily%26utm_channel%3demail_animco%26utm_content%3d110526%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dnewsletter%26utm_term%3dlogo_SRP_header"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 11,
@@ -221,11 +221,11 @@
                     "url": "https://www.instagram.com/showroomprive/"
                 },
                 {
-                    "status": 200,
+                    "status": 429,
                     "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 12,
@@ -246,7 +246,7 @@
                     "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 13,
@@ -263,7 +263,7 @@
                     "url": "https://www.tiktok.com/@showroomprive"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 14,
@@ -280,7 +280,7 @@
                     "url": "https://fr.linkedin.com/company/showroomprive-com"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 15,
@@ -301,7 +301,7 @@
                     "url": "https://www.showroomprive.com/mobile.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 16,
@@ -326,7 +326,7 @@
                     "url": "https://www.showroomprive.com/?mes=&direction=%2fMonCompte%2fMescommandes.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 17,
@@ -355,7 +355,7 @@
                     "url": "https://www.showroomprive.com/?mes=&direction=%2fmoncompte%2fmesavantages.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 18,
@@ -380,7 +380,7 @@
                     "url": "https://www.showroomprive.com/?mes=&direction=%2fmoncompte%2fmespreferences.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 19,
@@ -405,7 +405,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/mode?u=1?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 20,
@@ -430,7 +430,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universmaison?u=4?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 21,
@@ -459,7 +459,7 @@
                     "url": "https://www.showroomprive.com/?mes=&direction=%2fvoyage%2forchestra%2fsrporchestra.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 22,
@@ -484,7 +484,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/ope/universbeaute?u=6?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 23,
@@ -509,7 +509,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/enfant?u=3?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 24,
@@ -534,7 +534,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 25,
@@ -559,7 +559,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/ht/electromenager?u=147?webview=1"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 26,
@@ -580,7 +580,7 @@
                     "url": "https://www.showroomprive.com/accueilbilletterie.aspx%3Fu%3D9"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 27,
@@ -605,7 +605,7 @@
                     "url": "https://www.showroomprive.com/erreur.aspx?aspxerrorpath=/univers-srp/legrandmarche?u=161"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 28,
@@ -626,7 +626,7 @@
                     "url": "https://www.showroomprive.com/outlet.aspx%3Fu%3D8"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         },
         {
             "index": 29,
@@ -651,8 +651,9 @@
                     "url": "https://www.showroomprive.com/?mes=&direction=%2fmoncompte%2fmespreferences.aspx"
                 }
             ],
-            "audit_date": "2026-05-07 14:26:50"
+            "audit_date": "2026-05-11 10:05:21"
         }
     ],
-    "detected_pixels": []
+    "detected_pixels": [],
+    "failed_images_count": 0
 }
