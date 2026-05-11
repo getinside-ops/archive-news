@@ -1417,27 +1417,26 @@
                     --spotlight-glow: #AF0584;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
-                /* Fit-to-width fallback for emails whose own @media queries are broken
-                   or stripped in transit (Outlook / Marketing Cloud templates often ship
-                   with invalid selectors). Applied based on the iframe viewport width
-                   regardless of the email's own responsive logic. */
+                /* Fit-to-width fallback for emails whose own @media queries are
+                   broken or stripped in transit. Constrains the OUTER containers
+                   (table[width], divs with inline widths) to the iframe width so
+                   _applyMobileScaling doesn't fall back to zoom and shrink text.
+                   Deliberately leaves td[width] alone — forcing 100% on cells
+                   breaks side-by-side column layouts. */
                 @media screen and (max-width: 480px) {
-                    table, tbody, tr, td, th {
-                        max-width: 100% !important;
-                        box-sizing: border-box !important;
-                    }
-                    table[width], td[width], th[width], div[width] {
+                    table[width], div[width] {
                         width: 100% !important;
                         max-width: 100% !important;
                     }
-                    table[style*="width"], td[style*="width"], div[style*="width"] {
+                    table[style*="width:"], div[style*="width:"] {
                         max-width: 100% !important;
                     }
+                    td[width] { width: auto !important; }
                     img, img[width] {
                         max-width: 100% !important;
                         height: auto !important;
                     }
-                    body, html { overflow-x: hidden !important; }
+                    body { overflow-x: hidden !important; }
                 }
                 @media screen and (max-width: 640px) {
                     table[width="640"], table[width="600"] {

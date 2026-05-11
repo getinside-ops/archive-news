@@ -154,9 +154,14 @@ function _applyMobileScaling(frameEl, doc) {
     if (!isMobile) { el.innerHTML = ''; return; }
 
     el.innerHTML = ''; // reset zoom before measuring natural width
+    doc.body.offsetHeight; // force layout flush so @media-driven CSS settles
     const naturalWidth = doc.body.scrollWidth;
     const frameWidth = frameEl.getBoundingClientRect().width;
-    if (naturalWidth > frameWidth && frameWidth > 0) {
+    // 4px tolerance + only zoom when content really overflows. The iframe's
+    // own @media query (max-width: 480px) already collapses wide tables; if
+    // it succeeded, scrollWidth ≈ frameWidth and we skip zoom so text stays
+    // legible at native size.
+    if (frameWidth > 0 && naturalWidth > frameWidth + 4) {
         const scale = (frameWidth / naturalWidth).toFixed(4);
         el.innerHTML = `html { zoom: ${scale}; }`;
     }
