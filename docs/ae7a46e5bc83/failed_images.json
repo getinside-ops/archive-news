@@ -1,0 +1,7 @@
+[
+  {
+    "url": "chrome-extension://kobncfkmjelbefaoohoblamnbackjggk/icon/icon_32.png",
+    "reason": "exception:InvalidSchema:No connection adapters were found for 'chrome-extension://kobncfkmjelbefaoohoblamnbackjggk/icon/icon_32.png'",
+    "referer_used": null
+  }
+]
