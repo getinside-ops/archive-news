@@ -1,0 +1,511 @@
+{
+    "id": "0d2c59c109d7",
+    "subject": "🎁 Choisissez votre magazine préféré et recevez un cadeau high tech !",
+    "date_rec": "11/05/2026 à 06:42",
+    "date_iso": "2026-05-11T06:42:10-07:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "11/05/2026 à 13:43",
+    "preheader": "[TEST] 🎁 Choisissez votre magazine préféré et recevez un cadeau high-tech ! 🎁 Choisissez votre magazine préféré et recevez un cadeau high-tech ! Plus de 300 mag...",
+    "reading_time": "3 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Too Long",
+        "unsubscribe_found": false,
+        "link_count": 22,
+        "images_no_alt": 2
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs",
+            "final_url": "https://www.oscaro.com/",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 2,
+            "txt": "Pièces auto",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs",
+            "final_url": "https://www.oscaro.com/",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 3,
+            "txt": "Huile moteur",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/0boRO_z33ZIH2WfKltzwrw~~/AABGZBA~/BtkPKlSMomglASi_9ZYk8SV33gUz1lssvrv49mXJ9HCtazc31tJ2xHCD7Yb3RAN3O8j1_qEzH16LJbpih_6V1Bsj7d_xlIJ9PibqfQ4h0fgGR-xSecdIKvuFlbVDyst1wL28Lwm1FckCqN61MYbj0A~~",
+            "final_url": "https://www.oscaro.com/huile-moteur-1862-g",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/0boRO_z33ZIH2WfKltzwrw~~/AABGZBA~/BtkPKlSMomglASi_9ZYk8SV33gUz1lssvrv49mXJ9HCtazc31tJ2xHCD7Yb3RAN3O8j1_qEzH16LJbpih_6V1Bsj7d_xlIJ9PibqfQ4h0fgGR-xSecdIKvuFlbVDyst1wL28Lwm1FckCqN61MYbj0A~~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/huile-moteur-1862-g"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 4,
+            "txt": "Pneus",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/in17vrSJRmk6Ev1-CtJ7dw~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvendKrKIIIpzdqOMI-rQCvWIwQD52_lnvWY4ep80cRxJSIj3FvRjYMQ0--OPkhuiydelNekJbb9k-m1YyKWFq8-HIOinKtbAcHfCFFyFAfruJlih7qzZTzQnAxWIx0iBEQ~~",
+            "final_url": "https://www.oscaro.com/pneu-4400-g",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/in17vrSJRmk6Ev1-CtJ7dw~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvendKrKIIIpzdqOMI-rQCvWIwQD52_lnvWY4ep80cRxJSIj3FvRjYMQ0--OPkhuiydelNekJbb9k-m1YyKWFq8-HIOinKtbAcHfCFFyFAfruJlih7qzZTzQnAxWIx0iBEQ~~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/pneu-4400-g"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 5,
+            "txt": "Accessoires",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/t6657Y-afVCs_HlJpa0QOQ~~/AABGZBA~/eOBBoioKFPvbL3xl-jKwh6F_Vv99wxwRGNjICmdwSKerj0Eiok7bxyebCgz3vvxj4HhIuRKfPhezD_VEfYgAXWLdeOJoW56Ggmomq5JLlBD_3HCiS6g0YDWuMVCNG60_Kyhz5xbuKTnarKGueQC0J02nAjgXgiiUryRfi3bEClw~",
+            "final_url": "https://www.oscaro.com/entretien-et-nettoyage-702667-c",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/t6657Y-afVCs_HlJpa0QOQ~~/AABGZBA~/eOBBoioKFPvbL3xl-jKwh6F_Vv99wxwRGNjICmdwSKerj0Eiok7bxyebCgz3vvxj4HhIuRKfPhezD_VEfYgAXWLdeOJoW56Ggmomq5JLlBD_3HCiS6g0YDWuMVCNG60_Kyhz5xbuKTnarKGueQC0J02nAjgXgiiUryRfi3bEClw~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/entretien-et-nettoyage-702667-c"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 6,
+            "txt": "Outillage",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/lddl8mxwTG0eX3QK-MD-Gg~~/AABGZBA~/VRjBT0-GYOr7XFBI4iUMzdK39DgmW38xpm1pJZtKB1ggaMwio4Sx_ptefsxrhXElUGrgaUY6C9hfRrEE2D9DjBlp9ADsAcisa7bAaIRm2_Qgi6_BPx4pgbEDm947b4Xr0NIPDOkR1Mxeq-PPPqodGA~~",
+            "final_url": "https://www.oscaro.com/outillage-702627-c",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/lddl8mxwTG0eX3QK-MD-Gg~~/AABGZBA~/VRjBT0-GYOr7XFBI4iUMzdK39DgmW38xpm1pJZtKB1ggaMwio4Sx_ptefsxrhXElUGrgaUY6C9hfRrEE2D9DjBlp9ADsAcisa7bAaIRm2_Qgi6_BPx4pgbEDm947b4Xr0NIPDOkR1Mxeq-PPPqodGA~~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/outillage-702627-c"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~",
+            "final_url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699dea158bdff"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~",
+            "final_url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699dea158bdff"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 9,
+            "txt": "J'en profite",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~",
+            "final_url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/qzyiU9TWUhP3W9obSKfpkw~~/AABGZBA~/KA2xn7FEdi-sJCobXNFnxEFdJYQcQKCO3BAvEzmlCNQlXq2rYthlssmcKqsXjJzJmdib6xZ5u9LA3I7y2KwTMnP1tfX5g4MFJByLg6gEyEa-6AJX2qWGFUO_lJepu1KzgsEYf1ZmwTUr6_auMV1Vaw~~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/699dea158bdff"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.serviceabo-oscaro.fr/?CODEMAILING=TW524&utm_source=catalogue&utm_medium=email"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs",
+            "final_url": "https://www.oscaro.com/",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs",
+            "final_url": "https://www.oscaro.com/",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/mC8oqYDTaGjpuugHt4PNIg~~/AABGZBA~/ItYXh0SnUOO1hf20mcRRZ7aX8SN0EUtSci8uddYERBbWwN5OFctBLd5zBWSBIiwnLtVYDmNUSYBA6PEchLASUDH6riEQICWorhNuyEf7sKJc4AF5u7n9Jz6YMOeWdlKs"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "#",
+            "final_url": "#",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "#"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/N0LJP1rRwVThIJUALpoDwA~~/AABGZBA~/y_8k2pt-K9qBrO5FklJ5WF0VDLRcJIRd5tuBbW3rJAKUnHExODCCgVqQcWfZr_3E_tIa1TyMwMAdonI5TLpPJYLVxThwr6jfk7AA-J8eO_EeEcTEmZTgb5ByRfU5trcBF2wWRSX8eZB1rotoYey6Lw~~",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FOscaro%2F",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/N0LJP1rRwVThIJUALpoDwA~~/AABGZBA~/y_8k2pt-K9qBrO5FklJ5WF0VDLRcJIRd5tuBbW3rJAKUnHExODCCgVqQcWfZr_3E_tIa1TyMwMAdonI5TLpPJYLVxThwr6jfk7AA-J8eO_EeEcTEmZTgb5ByRfU5trcBF2wWRSX8eZB1rotoYey6Lw~~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/Oscaro/"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FOscaro%2F"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 16,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/lqSZJbHB_ZaJAaZJqzK5Vg~~/AABGZBA~/ZOrIF9yXyP4j59Cxff-c9FsAAZhKpeIcWGA2v3jMEkVFkwUnDJV-c11q3zGK0Bxct-zSWi3rKmVx-Upqs8mCM2X6MwWUkcjNHnPl7qour7bS9q4OojIPsWrcUS0IO4NEr_yptKYGnrzuKiqJL_X-_5M7PlGoCTzey2gFZ_i-mEU~",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Foscaro_official%2F%3Fhl%3Dfr&is_from_rle",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/lqSZJbHB_ZaJAaZJqzK5Vg~~/AABGZBA~/ZOrIF9yXyP4j59Cxff-c9FsAAZhKpeIcWGA2v3jMEkVFkwUnDJV-c11q3zGK0Bxct-zSWi3rKmVx-Upqs8mCM2X6MwWUkcjNHnPl7qour7bS9q4OojIPsWrcUS0IO4NEr_yptKYGnrzuKiqJL_X-_5M7PlGoCTzey2gFZ_i-mEU~"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/oscaro_official/?hl=fr"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Foscaro_official%2F%3Fhl%3Dfr&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/sJVTRHaGR2kmhOmOWqSEQQ~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvcMpIu4g79zudDwhn7ZgIOZaBX6MepKE1kZvRx9_RNqA3Xh2MScVW1Wsm58DrjrChOK3KFhFkpS-B1GpZlSTu_a9tDy8DvrkRH891daaKYlN_plcDl5r7XBBWNyI_uIouQ~~",
+            "final_url": "https://www.tiktok.com/@oscaro.com",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/sJVTRHaGR2kmhOmOWqSEQQ~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvcMpIu4g79zudDwhn7ZgIOZaBX6MepKE1kZvRx9_RNqA3Xh2MScVW1Wsm58DrjrChOK3KFhFkpS-B1GpZlSTu_a9tDy8DvrkRH891daaKYlN_plcDl5r7XBBWNyI_uIouQ~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@oscaro.com"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/b9hfuKls5MqbEMjCxPW5vA~~/AABGZBA~/961xhcuemUsHqbRq_UroEWP80jWXPLmjk9ukzPkhHRj4Rra-X8jlg68fVAOyhCGg9Bca88fyYP3AYxBtQ2M_-6At7YzebitddezhQst_igwz5p6VpDfgr7o3Mx3QsHU0C-Z0XW3Ku299eDBNgEh3tw~~",
+            "final_url": "https://fr.linkedin.com/company/oscaro",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/b9hfuKls5MqbEMjCxPW5vA~~/AABGZBA~/961xhcuemUsHqbRq_UroEWP80jWXPLmjk9ukzPkhHRj4Rra-X8jlg68fVAOyhCGg9Bca88fyYP3AYxBtQ2M_-6At7YzebitddezhQst_igwz5p6VpDfgr7o3Mx3QsHU0C-Z0XW3Ku299eDBNgEh3tw~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://fr.linkedin.com/company/oscaro"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/MoFg-xIsJrsE3qxV46m-iw~~/AABGZBA~/shtS13cG8EFstv86eHAFhtx5yylX6ztnai1TOaKDHIv6C9vvp88kRBoc0XNyf1NiK_Sj4_zRNov2GXdNX8CrMWo3IdHTqrCgsz_EE6p-xu69MLL-WXHnNN-c_G1Ly4Kkq5YE2EMVO8Y97EIdSR8p3A~~",
+            "final_url": "https://www.youtube.com/user/oscaro",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/MoFg-xIsJrsE3qxV46m-iw~~/AABGZBA~/shtS13cG8EFstv86eHAFhtx5yylX6ztnai1TOaKDHIv6C9vvp88kRBoc0XNyf1NiK_Sj4_zRNov2GXdNX8CrMWo3IdHTqrCgsz_EE6p-xu69MLL-WXHnNN-c_G1Ly4Kkq5YE2EMVO8Y97EIdSR8p3A~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.youtube.com/user/oscaro"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 20,
+            "txt": "Politique de protection des données personnelles",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/TCay_-xbjmZllbj8UwYFtA~~/AABGZBA~/Keky_CDWAPYoSkWLGExgy4Mw_uNAPqPh-fAy8MH3G1LPCBlDPVAenaSe0RDZfJ8KFmrE1hGZQNA4UpoVWLwlBpuuh8hV208Iuki9Gkwik-bN2wgJSA60F_sRQTRRNPutfA61uy7L3d86JjeIozgaZXLaFOGSJzBrKhK9RrXy-lU~",
+            "final_url": "https://www.oscaro.com/fr/info/securite-confidentialite",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/TCay_-xbjmZllbj8UwYFtA~~/AABGZBA~/Keky_CDWAPYoSkWLGExgy4Mw_uNAPqPh-fAy8MH3G1LPCBlDPVAenaSe0RDZfJ8KFmrE1hGZQNA4UpoVWLwlBpuuh8hV208Iuki9Gkwik-bN2wgJSA60F_sRQTRRNPutfA61uy7L3d86JjeIozgaZXLaFOGSJzBrKhK9RrXy-lU~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/fr/info/securite-confidentialite"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 21,
+            "txt": "Conditions générales de vente",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/BKayxwRJcVF9d3e1qufxFw~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvendKrKIIIpzdqOMI-rQCvVpnXcLtxy3wZ4tr4EMeRJyb2kKBEMnmYXjXvM64hSZFoGdqEe0mH96kJIy3lujDBW9oJGHg52tmn8qIC_8A1t1-KVvQULOrb8DObMEdjy6bQ~~",
+            "final_url": "https://www.oscaro.com/fr/info/cgv",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/BKayxwRJcVF9d3e1qufxFw~~/AABGZBA~/WJssQY1hEIn4X3TqpSfBvendKrKIIIpzdqOMI-rQCvVpnXcLtxy3wZ4tr4EMeRJyb2kKBEMnmYXjXvM64hSZFoGdqEe0mH96kJIy3lujDBW9oJGHg52tmn8qIC_8A1t1-KVvQULOrb8DObMEdjy6bQ~~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.oscaro.com/fr/info/cgv"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        },
+        {
+            "index": 22,
+            "txt": "Cliquez ici",
+            "original_url": "https://post.eu.spmailtechnol.com/f/a/DHO9Qb58UKmykWX3npTWdg~~/AABGZBA~/FtWWErOKC062ay78BWD-k5bEyc03-ty46ZQsZRchZrkDNGRHxVW-StW4hciVwppnxhoXd1JTAbi3b1auH-Qa1Wlz-JVBRG5e9O_9e-fNQ8UcDYz3lVUPXwYS5Kim7PGhS251WEVfF9tKhbcITS5a8oEt2ouR-LLjwjfCcdMXik1o5x1o7yhoszl4bvq1N-tj",
+            "final_url": "https://static.batch.com/list-management/landing.html",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechnol.com/f/a/DHO9Qb58UKmykWX3npTWdg~~/AABGZBA~/FtWWErOKC062ay78BWD-k5bEyc03-ty46ZQsZRchZrkDNGRHxVW-StW4hciVwppnxhoXd1JTAbi3b1auH-Qa1Wlz-JVBRG5e9O_9e-fNQ8UcDYz3lVUPXwYS5Kim7PGhS251WEVfF9tKhbcITS5a8oEt2ouR-LLjwjfCcdMXik1o5x1o7yhoszl4bvq1N-tj"
+                },
+                {
+                    "status": 200,
+                    "url": "https://static.batch.com/list-management/landing.html"
+                }
+            ],
+            "audit_date": "2026-05-11 13:43:31"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://post.eu.spmailtechnol.com/q/05To61fUxmt1omALo1ba_g~~/AABGZBA~/1t6_6K25KNA4t_904vN7CU5HG_CYJAicuQCZnGT0BLV4L7YThi9qfx3TYV6Sc9fwgiwanBKO2nTOK6579lKyK0WMHJ-XUt-M9ey5I9CqJ6o~",
+            "status": "Integration: OK",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_gtinsi": false
+        },
+        {
+            "url": "https://pixel.gtinsi.de/699dea158dd7d",
+            "status": "Integration: OK",
+            "domain": "pixel.gtinsi.de",
+            "is_gtinsi": true
+        },
+        {
+            "url": "https://post.eu.spmailtechnol.com/q/x0u2QXWyuUidK3XZjALHTQ~~/AABGZBA~/hkdAa27L1ah2DeKFe_PDSBlTx_3mGqzN5BJtNV1DOJafuHRBN3Ipr53-roVroJZwmLrM15w0d3XPgRXj66NnHjqLWLU1sClaj6unoglYG-0~",
+            "status": "Integration: OK",
+            "domain": "post.eu.spmailtechnol.com",
+            "is_gtinsi": false
+        }
+    ],
+    "failed_images_count": 0
+}
