@@ -358,23 +358,47 @@ function copyToClipboard(text, btn) {
     });
 }
 
-function shareEmail(btn) {
-    const url = window.location.href;
-    const title = document.querySelector('.vh-subject')?.textContent?.trim() || document.title;
-    if (navigator.share) {
-        navigator.share({ title, url }).catch(() => {});
+async function screenshotEmail(btn) {
+    const iframe = document.getElementById('emailFrame');
+    const deviceFrame = document.getElementById('deviceFrame');
+    if (!iframe || !iframe.contentDocument || !iframe.contentDocument.documentElement) {
+        alert('Email not loaded yet.');
         return;
     }
-    // Fallback: copy URL to clipboard
-    navigator.clipboard.writeText(url).then(() => {
-        const originalHtml = btn.innerHTML;
-        btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg>Copied!';
-        btn.classList.add('copy-success');
-        setTimeout(() => {
-            btn.innerHTML = originalHtml;
-            btn.classList.remove('copy-success');
-        }, 2000);
-    }).catch(err => console.error('Failed to copy:', err));
+
+    const mode = deviceFrame ? (deviceFrame.dataset.mode || 'email') : 'email';
+    const originalHtml = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:4px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>…';
+
+    try {
+        const doc = iframe.contentDocument;
+        const target = doc.documentElement;
+        const canvas = await html2canvas(target, {
+            useCORS: true,
+            allowTaint: false,
+            logging: false,
+            scrollX: 0,
+            scrollY: 0,
+            windowWidth: iframe.contentWindow.innerWidth,
+            windowHeight: doc.documentElement.scrollHeight,
+            width: iframe.contentWindow.innerWidth,
+            height: doc.documentElement.scrollHeight,
+        });
+
+        const a = document.createElement('a');
+        const subject = document.querySelector('.vh-subject')?.textContent?.trim() || 'email';
+        const safe = subject.replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').toLowerCase().slice(0, 60);
+        a.download = `${safe}-${mode}.png`;
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+    } catch (err) {
+        console.error('Screenshot failed:', err);
+        alert('Screenshot failed. Please try again.');
+    } finally {
+        btn.innerHTML = originalHtml;
+        btn.disabled = false;
+    }
 }
 
 /* Link Highlighting from Sidebar List */
