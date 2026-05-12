@@ -224,7 +224,8 @@ def _extract_email_html_from_viewer(viewer_path):
     m = re.search(r'const content = ("(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\')', text, re.DOTALL)
     if not m:
         return None
-    return json.loads(m.group(1))
+    from src.parser import _strip_outer_wrapper
+    return _strip_outer_wrapper(json.loads(m.group(1)))
 
 
 def regen_only():

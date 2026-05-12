@@ -78,8 +78,19 @@ def _http_get(url, retries=3, timeout=10, referer=None):
                 time.sleep(delays[attempt])
     raise last_err
 
+def _strip_outer_wrapper(raw_html):
+    """Strip simple outer HTML wrapper (e.g. added by Gmail/SMTP relay) when body contains a full email HTML."""
+    # Only check the beginning to avoid expensive full-string scan
+    if re.search(r'<body[^>]*>\s*(?:<!DOCTYPE|<html\b)', raw_html[:2000], re.IGNORECASE):
+        inner = re.search(r'<body[^>]*>(.*)</body\s*>', raw_html, re.DOTALL | re.IGNORECASE)
+        if inner:
+            return inner.group(1).strip()
+    return raw_html
+
+
 class EmailParser:
     def __init__(self, raw_html, output_folder, headers=None, attachments=None):
+        raw_html = _strip_outer_wrapper(raw_html)
         self.soup = BeautifulSoup(raw_html, "html.parser")
         self.output_folder = output_folder
         self.headers = headers or {}
