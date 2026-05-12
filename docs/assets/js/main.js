@@ -1,7 +1,7 @@
 /* Main JS for Archive News */
 
 /* Image proxy for screenshot — set to deployed Cloudflare Worker URL, e.g.:
-   'https://archive-news-redirect-checker.<subdomain>.workers.dev'
+   'https://archive-news-redirect-checker.benoit-3dd.workers.dev'
    Leave empty to skip proxy (remote images without CORS headers will be blank) */
 const SCREENSHOT_PROXY_URL = '';
 
