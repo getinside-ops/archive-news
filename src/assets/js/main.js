@@ -1,5 +1,10 @@
 /* Main JS for Archive News */
 
+/* Image proxy for screenshot — set to deployed Cloudflare Worker URL, e.g.:
+   'https://archive-news-redirect-checker.<subdomain>.workers.dev'
+   Leave empty to skip proxy (remote images without CORS headers will be blank) */
+const SCREENSHOT_PROXY_URL = '';
+
 /* Pagination */
 const PAGE_SIZE = 20;
 let currentPage = 1;
@@ -371,19 +376,35 @@ async function screenshotEmail(btn) {
     btn.disabled = true;
     btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:4px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>…';
 
+    const doc = iframe.contentDocument;
+    let savedZoom = null;
+    let swapped = [];
+
     try {
-        const doc = iframe.contentDocument;
-        const target = doc.documentElement;
-        const canvas = await html2canvas(target, {
+        // Remove CSS zoom so html2canvas captures at natural layout (not zoomed)
+        const zoomStyle = doc.getElementById('mobile-scale-style');
+        if (zoomStyle && zoomStyle.innerHTML) {
+            savedZoom = { el: zoomStyle, val: zoomStyle.innerHTML };
+            zoomStyle.innerHTML = '';
+            await new Promise(r => setTimeout(r, 50));
+        }
+
+        // Pre-fetch cross-origin images as data URLs so html2canvas can draw them
+        swapped = await _fetchCrossOriginImages(doc);
+
+        const w = doc.documentElement.scrollWidth;
+        const h = doc.documentElement.scrollHeight;
+
+        const canvas = await html2canvas(doc.documentElement, {
             useCORS: true,
             allowTaint: false,
             logging: false,
             scrollX: 0,
             scrollY: 0,
-            windowWidth: iframe.contentWindow.innerWidth,
-            windowHeight: doc.documentElement.scrollHeight,
-            width: iframe.contentWindow.innerWidth,
-            height: doc.documentElement.scrollHeight,
+            windowWidth: w,
+            windowHeight: h,
+            width: w,
+            height: h,
         });
 
         const a = document.createElement('a');
@@ -396,9 +417,53 @@ async function screenshotEmail(btn) {
         console.error('Screenshot failed:', err);
         alert('Screenshot failed. Please try again.');
     } finally {
+        if (savedZoom) savedZoom.el.innerHTML = savedZoom.val;
+        for (const { img, src } of swapped) img.src = src;
         btn.innerHTML = originalHtml;
         btn.disabled = false;
     }
+}
+
+/* Pre-fetch cross-origin images as data URLs so html2canvas can draw them.
+   With SCREENSHOT_PROXY_URL set: routes all remote images through the Worker (handles any CDN).
+   Without it: attempts direct CORS re-fetch (works for CDNs that serve CORS headers).
+   Returns an array of {img, src} to restore after capture. */
+async function _fetchCrossOriginImages(doc) {
+    const origin = location.origin;
+    const imgs = Array.from(doc.querySelectorAll('img')).filter(img => {
+        if (!img.naturalWidth) return false;
+        try { return new URL(img.src, location.href).origin !== origin; }
+        catch { return false; }
+    });
+    if (!imgs.length) return [];
+
+    const swapped = [];
+    await Promise.allSettled(imgs.map(img => new Promise(resolve => {
+        const originalSrc = img.src;
+        const fetchSrc = SCREENSHOT_PROXY_URL
+            ? `${SCREENSHOT_PROXY_URL}/img?url=${encodeURIComponent(originalSrc)}`
+            : originalSrc;
+
+        const tester = new Image();
+        tester.crossOrigin = 'anonymous';
+        const timer = setTimeout(resolve, 8000);
+        tester.onload = () => {
+            clearTimeout(timer);
+            try {
+                const c = document.createElement('canvas');
+                c.width = tester.naturalWidth;
+                c.height = tester.naturalHeight;
+                c.getContext('2d').drawImage(tester, 0, 0);
+                swapped.push({ img, src: originalSrc });
+                img.src = c.toDataURL();
+            } catch { /* CORS blocked even via proxy — leave as-is */ }
+            resolve();
+        };
+        tester.onerror = () => { clearTimeout(timer); resolve(); };
+        tester.src = fetchSrc;
+    })));
+
+    return swapped;
 }
 
 /* Link Highlighting from Sidebar List */

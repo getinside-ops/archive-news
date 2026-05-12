@@ -6,22 +6,29 @@ const USER_AGENTS = {
   'apple-mail': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)'
 };
 
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type'
+};
+
 export default {
   async fetch(request, env, ctx) {
     if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type'
-        }
-      });
+      return new Response(null, { headers: CORS_HEADERS });
+    }
+
+    const { pathname } = new URL(request.url);
+
+    // GET /img?url=<encoded> — image proxy for screenshot tool
+    if (request.method === 'GET' && pathname === '/img') {
+      return handleImageProxy(request);
     }
 
     if (request.method !== 'POST') {
       return new Response(JSON.stringify({ success: false, error: 'POST required' }), {
         status: 400,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+        headers: { 'Content-Type': 'application/json', ...CORS_HEADERS }
       });
     }
 
@@ -115,12 +122,40 @@ function mapErrorMessage(err) {
   return 'Request failed — try again in a moment';
 }
 
+async function handleImageProxy(request) {
+  const { searchParams } = new URL(request.url);
+  const imageUrl = searchParams.get('url');
+  if (!imageUrl) {
+    return new Response('url parameter required', { status: 400, headers: CORS_HEADERS });
+  }
+  let parsed;
+  try { parsed = new URL(imageUrl); }
+  catch { return new Response('Invalid URL', { status: 400, headers: CORS_HEADERS }); }
+  if (!['http:', 'https:'].includes(parsed.protocol)) {
+    return new Response('Only http/https supported', { status: 400, headers: CORS_HEADERS });
+  }
+  try {
+    const resp = await fetch(imageUrl, {
+      headers: { 'User-Agent': USER_AGENTS['chrome-desktop'] }
+    });
+    const contentType = resp.headers.get('content-type') || 'application/octet-stream';
+    const body = await resp.arrayBuffer();
+    return new Response(body, {
+      status: 200,
+      headers: {
+        'Content-Type': contentType,
+        'Cache-Control': 'public, max-age=3600',
+        ...CORS_HEADERS
+      }
+    });
+  } catch (e) {
+    return new Response('Failed to fetch image', { status: 502, headers: CORS_HEADERS });
+  }
+}
+
 function jsonResponse(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    }
+    headers: { 'Content-Type': 'application/json', ...CORS_HEADERS }
   });
 }
