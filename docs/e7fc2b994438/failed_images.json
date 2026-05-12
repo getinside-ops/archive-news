@@ -25,17 +25,17 @@
     "referer_used": null
   },
   {
+    "url": "https://ig.info.chasseur.com/870/270818/B8A0C1C374FD015D19E45EA0D5A92D61",
+    "reason": "bad_content_type:application/octet-stream",
+    "referer_used": null
+  },
+  {
     "url": "https://ig.info.chasseur.com/870/270818/F13C85CC6B64BD033B0500C482833D0D",
     "reason": "bad_content_type:application/octet-stream",
     "referer_used": null
   },
   {
     "url": "https://ig.info.chasseur.com/870/270818/14777FB3FB3CFBA680C6DE6FC3AFF64A",
-    "reason": "bad_content_type:application/octet-stream",
-    "referer_used": null
-  },
-  {
-    "url": "https://ig.info.chasseur.com/870/270818/B8A0C1C374FD015D19E45EA0D5A92D61",
     "reason": "bad_content_type:application/octet-stream",
     "referer_used": null
   },
@@ -55,12 +55,12 @@
     "referer_used": null
   },
   {
-    "url": "https://ig.info.chasseur.com/870/270818/ECC28B62E8D45B6585DAD30747C91DEC",
+    "url": "https://ig.info.chasseur.com/870/270818/588D69685836877C5469BD58FA6B7862",
     "reason": "bad_content_type:application/octet-stream",
     "referer_used": null
   },
   {
-    "url": "https://ig.info.chasseur.com/870/270818/588D69685836877C5469BD58FA6B7862",
+    "url": "https://ig.info.chasseur.com/870/270818/ECC28B62E8D45B6585DAD30747C91DEC",
     "reason": "bad_content_type:application/octet-stream",
     "referer_used": null
   },
