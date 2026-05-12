@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -87,8 +88,8 @@
                         <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
                             Download
                         </button>
-                        <button class="btn btn-secondary" id="shareBtn" onclick="shareEmail(this)" title="Share this email (S)">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Share
+                        <button class="btn btn-secondary" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Screenshot
                         </button>
                     </div>
                 </div>
@@ -1556,7 +1557,7 @@
             if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
-            if (e.key === 's' || e.key === 'S') shareEmail(document.getElementById('shareBtn'));
+            if (e.key === 's' || e.key === 'S') screenshotEmail(document.getElementById('screenshotBtn'));
 
             // Scroll iframe with arrows
             if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
