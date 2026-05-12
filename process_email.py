@@ -52,7 +52,20 @@ def process_emails():
         
         # 2. Sync / Phase 1
         email_map = fetcher.fetch_headers(ids)
-        
+
+        # 2b. Remove archived emails no longer in Gmail
+        gmail_ids = set(email_map.keys())
+        archived_ids = set(
+            d for d in os.listdir(OUTPUT_FOLDER)
+            if os.path.isfile(os.path.join(OUTPUT_FOLDER, d, "metadata.json"))
+        ) if os.path.exists(OUTPUT_FOLDER) else set()
+        orphaned = archived_ids - gmail_ids
+        if orphaned:
+            logger.info("Removing %d orphaned email(s) no longer in Gmail.", len(orphaned))
+            for oid in orphaned:
+                shutil.rmtree(os.path.join(OUTPUT_FOLDER, oid))
+                logger.info("Deleted %s", oid)
+
         # 3. Process
         all_metadata = []
         failure_count = 0
@@ -295,13 +308,14 @@ def check_new_emails():
         ) if os.path.exists(OUTPUT_FOLDER) else set()
 
         missing = [f_id for f_id in email_map if f_id not in archived_ids]
+        orphaned = archived_ids - set(email_map.keys())
 
-        if missing:
-            logger.info("IMAP: %d emails, archived: %d → %d not yet archived. Running pipeline.",
-                        len(email_map), len(archived_ids), len(missing))
+        if missing or orphaned:
+            logger.info("IMAP: %d emails, archived: %d → %d to add, %d to remove. Running pipeline.",
+                        len(email_map), len(archived_ids), len(missing), len(orphaned))
             sys.exit(0)
         else:
-            logger.info("IMAP: %d emails, all archived → nothing new. Skipping.",
+            logger.info("IMAP: %d emails, archive in sync → nothing to do. Skipping.",
                         len(email_map))
             sys.exit(2)
     finally:
