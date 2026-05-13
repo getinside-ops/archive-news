@@ -1380,6 +1380,98 @@ html:not([data-theme="dark"]) .device-mockup[data-mode="tablet"] .dm-home-indica
     background: rgba(10, 170, 142, 0.1);
 }
 
+.tag-warning {
+    color: #7a4f00;
+    background: rgba(224, 160, 0, 0.15);
+    border: 1px solid rgba(224, 160, 0, 0.35);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+[data-theme="dark"] .tag-warning {
+    color: #ffc947;
+    background: rgba(224, 160, 0, 0.2);
+    border-color: rgba(224, 160, 0, 0.4);
+}
+
+.pixel-issue-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(224, 160, 0, 0.1);
+    border: 1px solid rgba(224, 160, 0, 0.3);
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #7a4f00;
+    margin-bottom: 10px;
+}
+[data-theme="dark"] .pixel-issue-banner {
+    background: rgba(224, 160, 0, 0.12);
+    border-color: rgba(224, 160, 0, 0.35);
+    color: #ffc947;
+}
+
+.pixel-warnings-block {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pixel-warning-item {
+    background: rgba(224, 160, 0, 0.07);
+    border-left: 3px solid rgba(224, 160, 0, 0.5);
+    border-radius: 0 4px 4px 0;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+}
+[data-theme="dark"] .pixel-warning-item {
+    background: rgba(224, 160, 0, 0.1);
+}
+
+.pixel-warning-label {
+    font-weight: 700;
+    color: #7a4f00;
+    margin-bottom: 3px;
+}
+[data-theme="dark"] .pixel-warning-label {
+    color: #ffc947;
+}
+
+.pixel-warning-detail {
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.pixel-warning-fix {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.pixel-warning-fix-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-primary);
+    margin-top: 1px;
+    white-space: nowrap;
+}
+
+.card-has-issues {
+    border-left: 3px solid rgba(224, 160, 0, 0.7) !important;
+}
+
 .card-v2-body {
     padding: 12px 14px;
 }

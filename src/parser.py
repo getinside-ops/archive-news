@@ -91,6 +91,7 @@ def _strip_outer_wrapper(raw_html):
 class EmailParser:
     def __init__(self, raw_html, output_folder, headers=None, attachments=None):
         raw_html = _strip_outer_wrapper(raw_html)
+        self._raw_html = raw_html
         self.soup = BeautifulSoup(raw_html, "html.parser")
         self.output_folder = output_folder
         self.headers = headers or {}
@@ -174,8 +175,185 @@ class EmailParser:
         
         return None
 
+    def _extract_mso_blocks(self):
+        """Return (mso_blocks, not_mso_blocks) — lists of inner HTML from conditional comments.
+
+        We extract only the content between the <!--[if mso]> and <![endif]--> markers,
+        so it can be re-parsed by BeautifulSoup without being treated as a comment again.
+        """
+        mso = re.findall(
+            r'<!--\[if\s+(?:gte\s+)?mso[^\]]*\]>(.*?)<!\[endif\]-->',
+            self._raw_html, flags=re.DOTALL | re.IGNORECASE
+        )
+        not_mso = re.findall(
+            r'<!--\[if\s+!mso[^\]]*\]>(.*?)<!\[endif\]-->',
+            self._raw_html, flags=re.DOTALL | re.IGNORECASE
+        )
+        return mso, not_mso
+
+    def _pixel_warnings(self, src, img, mso_blocks, not_mso_blocks):
+        """Return list of warning dicts describing why this pixel may not fire."""
+        warnings = []
+
+        if any(src in block for block in mso_blocks):
+            warnings.append({
+                'code': 'mso_block',
+                'label': 'Dans un bloc [if mso]',
+                'detail': 'Ce pixel n\'est chargé que par Microsoft Outlook. '
+                          'Il est ignoré par tous les webmails (Gmail, Yahoo…), iOS Mail, Android et les navigateurs.',
+                'fix': 'Sortir le pixel du bloc <!--[if mso]>…<![endif]--> et le placer '
+                       'juste avant </body>, dans le flux HTML standard.'
+            })
+
+        if any(src in block for block in not_mso_blocks):
+            warnings.append({
+                'code': 'not_mso_block',
+                'label': 'Dans un bloc [if !mso]',
+                'detail': 'Ce pixel est masqué dans Outlook. Il ne se chargera pas chez les utilisateurs Outlook.',
+                'fix': 'Sortir le pixel du bloc <!--[if !mso]>…<![endif]--> et le placer '
+                       'dans le flux HTML standard.'
+            })
+
+        if src.startswith('http://'):
+            warnings.append({
+                'code': 'insecure_url',
+                'label': 'URL en HTTP (non sécurisée)',
+                'detail': 'Les contextes HTTPS (Gmail, Yahoo, iOS) bloquent les ressources HTTP. '
+                          'Le pixel ne se chargera pas dans la majorité des clients modernes.',
+                'fix': 'Remplacer http:// par https:// dans l\'URL du pixel.'
+            })
+
+        if src.startswith('//'):
+            warnings.append({
+                'code': 'protocol_relative',
+                'label': 'URL protocole-relative (//',
+                'detail': 'Certains clients email ne résolvent pas les URLs sans protocole explicite.',
+                'fix': 'Remplacer // par https:// dans l\'URL du pixel.'
+            })
+
+        if img.get('width') == '0' or img.get('height') == '0':
+            warnings.append({
+                'code': 'zero_dimensions',
+                'label': 'Dimensions 0×0',
+                'detail': 'Certains clients filtrent les ressources de taille nulle et ne les chargent pas.',
+                'fix': 'Utiliser width="1" height="1" à la place de 0×0.'
+            })
+
+        if img.find_parent('head'):
+            warnings.append({
+                'code': 'in_head',
+                'label': 'Placé dans <head>',
+                'detail': 'Certains clients email n\'exécutent pas les ressources déclarées dans le <head>.',
+                'fix': 'Déplacer le pixel dans le <body>, juste avant </body>.'
+            })
+
+        if img.find_parent('noscript'):
+            warnings.append({
+                'code': 'noscript',
+                'label': 'Dans <noscript>',
+                'detail': 'Le contenu <noscript> ne s\'affiche que si JavaScript est désactivé. '
+                          'La quasi-totalité des clients email ignorent cette balise.',
+                'fix': 'Sortir le pixel du bloc <noscript> et le placer directement dans le <body>.'
+            })
+
+        if img.find_parent(style=re.compile(r'display\s*:\s*none', re.I)):
+            warnings.append({
+                'code': 'hidden_parent',
+                'label': 'Conteneur masqué (display:none)',
+                'detail': 'Le pixel est dans un élément CSS masqué. '
+                          'Bien que display:none n\'empêche pas toujours le chargement, '
+                          'certains clients optimisés ne chargent pas ces ressources.',
+                'fix': 'Déplacer le pixel hors du conteneur masqué.'
+            })
+
+        def _is_preheader_container(tag):
+            s = tag.get('style', '')
+            return (re.search(r'(?:max-)?height\s*:\s*0', s, re.I)
+                    and re.search(r'overflow\s*:\s*hidden', s, re.I))
+
+        if img.find_parent(_is_preheader_container):
+            warnings.append({
+                'code': 'hidden_overflow',
+                'label': 'Conteneur preheader (height:0 + overflow:hidden)',
+                'detail': 'Le pixel est coincé dans le bloc preheader invisible. '
+                          'Ce bloc a height:0 et overflow:hidden — le pixel ne se charge pas.',
+                'fix': 'Déplacer le pixel hors du bloc preheader, juste avant </body>.'
+            })
+
+        return warnings
+
+    def _scan_conditional_blocks_for_pixels(self, mso_blocks, not_mso_blocks):
+        """Detect tracking pixels hidden inside MSO/not-mso conditional comment blocks.
+
+        BeautifulSoup treats <!--[if mso]>...<![endif]--> as opaque Comment nodes,
+        so img tags inside are invisible to find_all('img'). This method parses
+        the raw block content independently and appends any found pixels to
+        self.detected_pixels with the appropriate placement warning.
+        """
+        already_seen = {px['url'] for px in self.detected_pixels}
+
+        for block_html, warning_code, warning_label, warning_detail, warning_fix in [
+            (
+                '\n'.join(mso_blocks),
+                'mso_block',
+                'Dans un bloc [if mso]',
+                "Ce pixel n'est chargé que par Microsoft Outlook. "
+                "Il est ignoré par tous les webmails (Gmail, Yahoo…), iOS Mail, Android et les navigateurs.",
+                "Sortir le pixel du bloc <!--[if mso]>…<![endif]--> et le placer "
+                "juste avant </body>, dans le flux HTML standard."
+            ),
+            (
+                '\n'.join(not_mso_blocks),
+                'not_mso_block',
+                'Dans un bloc [if !mso]',
+                "Ce pixel est masqué dans Outlook. Il ne se chargera pas chez les utilisateurs Outlook.",
+                "Sortir le pixel du bloc <!--[if !mso]>…<![endif]--> et le placer "
+                "dans le flux HTML standard."
+            ),
+        ]:
+            if not block_html.strip():
+                continue
+            block_soup = BeautifulSoup(block_html, "html.parser")
+            for img in block_soup.find_all("img"):
+                src = img.get("src", "").strip()
+                if not src or src in already_seen:
+                    continue
+                width = img.get("width", "")
+                height = img.get("height", "")
+                is_tracking = (
+                    any(p in src for p in TRACKING_PATTERNS)
+                    or (width == "1" and height == "1")
+                )
+                if not is_tracking:
+                    continue
+                try:
+                    pixel_domain = urlparse(src).netloc.replace('www.', '')
+                    if not pixel_domain:
+                        continue
+                except Exception:
+                    continue
+                already_seen.add(src)
+                # Build full warning list: placement warning first, then URL-level checks
+                w_placement = {
+                    'code': warning_code,
+                    'label': warning_label,
+                    'detail': warning_detail,
+                    'fix': warning_fix,
+                }
+                extra_warnings = self._pixel_warnings(src, img, [], [])  # URL checks only
+                warnings = [w_placement] + extra_warnings
+                self.detected_pixels.append({
+                    'url': src,
+                    'status': 'Problème détecté',
+                    'domain': pixel_domain,
+                    'is_gtinsi': 'gtinsi.de' in src,
+                    'warnings': warnings,
+                    'has_issues': True,
+                })
+
     def clean_and_process(self):
         # 1. Pixel Detection & Cleanup
+        mso_blocks, not_mso_blocks = self._extract_mso_blocks()
         for img in self.soup.find_all("img"):
             # Handle lazy-loading attributes BEFORE checking src
             # This ensures we capture the actual tracking URL
@@ -218,15 +396,21 @@ class EmailParser:
                 # Check if pixel contains gtinsi.de
                 is_gtinsi = 'gtinsi.de' in src
 
+                warnings = self._pixel_warnings(src, img, mso_blocks, not_mso_blocks)
                 self.detected_pixels.append({
                     'url': src,
-                    'status': 'Integration: OK',
+                    'status': 'Problème détecté' if warnings else 'Integration: OK',
                     'domain': pixel_domain,
-                    'is_gtinsi': is_gtinsi
+                    'is_gtinsi': is_gtinsi,
+                    'warnings': warnings,
+                    'has_issues': bool(warnings),
                 })
                 img['src'] = ""
                 img['style'] = "display:none !important;"
-        
+
+        # Scan pixels hidden inside MSO conditional comment blocks (invisible to BS4)
+        self._scan_conditional_blocks_for_pixels(mso_blocks, not_mso_blocks)
+
         # 2. Extract Preheader (Text approximation)
         # Strip invisible characters like zero-width joiners and spacing characters used in emails
         text = self.soup.get_text(separator=" ", strip=True)

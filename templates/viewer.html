@@ -200,13 +200,21 @@
                     <div class="tab-pane" id="tab-pixels" style="display:none;">
                         {% if detected_pixels %}
                         <div style="padding: 8px 10px;">
+                            {% set issue_count = detected_pixels | selectattr('has_issues') | list | length %}
+                            {% if issue_count > 0 %}
+                            <div class="pixel-issue-banner">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                {{ issue_count }} pixel{{ 's' if issue_count > 1 else '' }} avec problème de placement détecté{{ 's' if issue_count > 1 else '' }}
+                            </div>
+                            {% endif %}
                             {% for pixel in detected_pixels %}
-                            <div class="link-card-v2 {% if pixel.is_gtinsi %}gtinsi-highlight{% endif %}" id="px-{{ loop.index }}">
+                            <div class="link-card-v2 {% if pixel.is_gtinsi %}gtinsi-highlight{% endif %}{% if pixel.has_issues %} card-has-issues{% endif %}" id="px-{{ loop.index }}">
                                 <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">{{ pixel.domain or 'Unknown Provider' }}</span>
                                     <div style="display: flex; gap: 4px;">
                                         {% if pixel.is_gtinsi %}<span class="card-v2-tag tag-gtinsi"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> getinside</span>{% endif %}
+                                        {% if pixel.has_issues %}<span class="card-v2-tag tag-warning">⚠ ERREUR</span>{% endif %}
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
                                     </div>
                                 </div>
@@ -219,7 +227,21 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">{{ pixel.status }}</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        {% if pixel.has_issues and pixel.warnings %}
+                                        <div class="pixel-warnings-block">
+                                            {% for w in pixel.warnings %}
+                                            <div class="pixel-warning-item">
+                                                <div class="pixel-warning-label">{{ w.label }}</div>
+                                                <div class="pixel-warning-detail">{{ w.detail }}</div>
+                                                <div class="pixel-warning-fix">
+                                                    <span class="pixel-warning-fix-label">Fix&nbsp;→</span>
+                                                    <span>{{ w.fix }}</span>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
                                             <code class="card-v2-url">{{ pixel.url }}</code>
                                             <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
                                                 <button class="btn-card" title="Test Pixel" data-url="{{ pixel.url }}" onclick="event.stopPropagation(); testPixel(this)">
