@@ -1,0 +1,780 @@
+{
+    "id": "9dae85fcf4ac",
+    "subject": "Votre nouveau meuble vous portera-t-il chance ?",
+    "date_rec": "13/05/2026 à 02:18",
+    "date_iso": "2026-05-13T02:18:06-07:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "13/05/2026 à 09:19",
+    "preheader": "Testez votre chance depuis votre canapé Si vous rencontrez des problèmes d'affichage, cliquez ici. & Je tente ma chance Votre nouveau meuble vous portera-t-il c...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": true,
+        "link_count": 29,
+        "images_no_alt": 8
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "Si vous rencontrez des problèmes d'affichage,cliqu",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=v34r58dif0b8ljre31807jrrm6s734f2mdut5a2h2im8l61f8ktg",
+            "final_url": "https://news.but.fr/pub/sf/ResponseForm?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXMtX%3DBQjkPkSRTQGzerWHLOGyuD2HcohzchmAeg0oMoDfMRXJUXzdzczekzedrkzdzbXzfnwBf&_ei_=EX-2D7ZmgKiZkpkiM6MZ7jQ&_di_=901tba1e6ituhu6n9epghiqd9576pjtcbncoo7uk9vjh7q0q53e0",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=v34r58dif0b8ljre31807jrrm6s734f2mdut5a2h2im8l61f8ktg"
+                },
+                {
+                    "status": 200,
+                    "url": "https://news.but.fr/pub/sf/ResponseForm?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXMtX%3DBQjkPkSRTQGzerWHLOGyuD2HcohzchmAeg0oMoDfMRXJUXzdzczekzedrkzdzbXzfnwBf&_ei_=EX-2D7ZmgKiZkpkiM6MZ7jQ&_di_=901tba1e6ituhu6n9epghiqd9576pjtcbncoo7uk9vjh7q0q53e0"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ee3d2a0sn9uvl08cc7092roa8cte46up12vcd6fhujhtnh3fr59g",
+            "final_url": "https://www.but.fr/",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ee3d2a0sn9uvl08cc7092roa8cte46up12vcd6fhujhtnh3fr59g"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.but.fr/"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=0gd7tntrj7fgfjh0i5c2cj5gug6m7mt04i6kanio24pf5s1c7l0g",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=0gd7tntrj7fgfjh0i5c2cj5gug6m7mt04i6kanio24pf5s1c7l0g"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a03340449651"
+                },
+                {
+                    "status": 302,
+                    "url": "https://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 5,
+            "txt": "Je tente ma chance",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=38jkc2di0354puaqr4e3skj8onibh0nkdu9spms0760q252rvlr0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=38jkc2di0354puaqr4e3skj8onibh0nkdu9spms0760q252rvlr0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 6,
+            "txt": "Votre nouveau meuble vous portera-t-il chance ?",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 7,
+            "txt": "🛋️Nouveau canapé ? Nouvelle cuisine ?Et si vous te",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 8,
+            "txt": "10€ offerts*****",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 9,
+            "txt": "pour toute inscription et 5€ joués sur FDJ.fr ou l",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 10,
+            "txt": "BUT",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 11,
+            "txt": "Je tente ma chance",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=38jkc2di0354puaqr4e3skj8onibh0nkdu9spms0760q252rvlr0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=38jkc2di0354puaqr4e3skj8onibh0nkdu9spms0760q252rvlr0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 12,
+            "txt": "Comment tenter votre chance en 4 étapes :",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 14,
+            "txt": "Je créé mon comptesur FDJ.fr ou l'app FDJ.",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 16,
+            "txt": "Je scanne ma carte d'identitéet je l'envoie.",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 18,
+            "txt": "Je saisis le code BUTpuis je joue 5€.",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 20,
+            "txt": "Je reçoismon crédit de jeu de10€.",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0",
+            "final_url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTUAW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=l0a9gcogmfbta5gc28q8vrsiombdvgeo6fahbateq6s4fhum2sa0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69e8de7a96585"
+                },
+                {
+                    "status": 302,
+                    "url": "http://fdj.etr.im/vKab"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/acq-codepromo-but?ead-publisher=BUT&ead-name=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT&ead-location=FIXE_BUT_CONQUETE_INSCRIPTION_ROS_ROS_EMAIL_1x1_REDIRECT_MULTIDEVICE_BUT&ead-creative=MULTIPRODUITS_MULTIFORMATS_INSCRIPTION_BUT_1x1&ead-creativetype=1x1&ead-mediaplan=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT&at_medium=partenariat&at_campaign=1091&at_creation=BUT-0001_HASARD_MULTI-GAMME_MULTIPRODUIT_CONQUETE_INSCRIPTION_WEB_PARTENARIAT_20260420_20260504_BUT-BUT"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "https://www.joueurs-info-service.fr/",
+            "final_url": "https://www.joueurs-info-service.fr/",
+            "domain": "joueurs-info-service.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.joueurs-info-service.fr/"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 22,
+            "txt": "Besoin d'aide ?Contactez-nous",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=5pvl4ngvkefnhl22r0cemj7p0kn1te7e38h3k1488nmcdg05tjog",
+            "final_url": "https://www.fdj.fr/informations/faq#/home",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWTW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=5pvl4ngvkefnhl22r0cemj7p0kn1te7e38h3k1488nmcdg05tjog"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a03340cc194c"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/informations/faq#/home"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 23,
+            "txt": "Nos outilsJeu Responsable",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ubu5af8o1kv1qo17npv7s9fnj0606s21e2fnefq45q9j9n94uu40",
+            "final_url": "https://www.fdj.fr/pour-vous-accompagner",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWWW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ubu5af8o1kv1qo17npv7s9fnj0606s21e2fnefq45q9j9n94uu40"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a033421df9f1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.fdj.fr/pour-vous-accompagner"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 24,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWRW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=o7emr2tj5s46tt21sb6uok43ko03ru6v2b1mpfd3bpcgltherohg",
+            "final_url": "https://www.joueurs-info-service.fr/",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTWRW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=o7emr2tj5s46tt21sb6uok43ko03ru6v2b1mpfd3bpcgltherohg"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a0334173f8f8"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.joueurs-info-service.fr/"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 25,
+            "txt": "",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ee3d2a0sn9uvl08cc7092roa8cte46up12vcd6fhujhtnh3fr59g",
+            "final_url": "https://www.but.fr/",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTTCW&_ei_=ESTUOwa1ULmLxlBKi7CTndBh9GIltriVCy0dUejhbNlWLfghNTpobyQcjruz3IjapFSOhOxFenTe7-3eUOov_1_8Pd9dXVEp81Gm_ynmteQWQg9Fp0FOjNejR-QWfR6QGZAJWYxI_NmgQ3Lmp6IHD8mkibrHj5Kmj1SCF6ofIk4z8XOBXcQDf4dG2325iMMyW2Am4g.&_di_=ee3d2a0sn9uvl08cc7092roa8cte46up12vcd6fhujhtnh3fr59g"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.but.fr/"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 26,
+            "txt": "informatique.libertes@but.fr",
+            "original_url": "mailto:informatique.libertes@but.fr",
+            "final_url": "mailto:informatique.libertes@but.fr",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "mailto:informatique.libertes@but.fr"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 27,
+            "txt": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "original_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "final_url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact",
+            "domain": "but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.but.fr/aide?_eptssref=/fr-fr/contact"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 28,
+            "txt": "https://www.but.fr/Common/Services/DonneesPersonne",
+            "original_url": "https://www.but.fr/Common/Services/DonneesPersonnelles",
+            "final_url": "https://www.but.fr/Common/Services/DonneesPersonnelles",
+            "domain": "but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://www.but.fr/Common/Services/DonneesPersonnelles"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        },
+        {
+            "index": 29,
+            "txt": "Je peux me désinscrire facilement et ne plus recev",
+            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTURW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjAiSkbJKU_Ou_wGW7lejjAekto7DcgDU-EANT8D9cSI1S8cWShPBeg0.&_di_=p2iu4sqilj3lq7m76meh9m23hea9r765dh26sdbpsn8sf9cmkb00",
+            "final_url": "https://news.but.fr/pub/rf?_ri_=X0Gzc2X%3DAQjkPkSRTQGf3Dblvkdzcd5nhCEJ2lMtP0S6vNfzfaAstzbzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRTQG4zaNqHlL1jc0EWAIkOKB9CiS6vNfzfaAstzbza&_ei_=EYN3tLp37T4UM5xzoWPy0xo&_di_=pr3htg9u68p3s4csufot1gvtioegqm8s6mtvgbughl07j8e7ao60&CUSTOMER_ID_=&OPTIN_EMAIL=false&ABO_BONS_PLANS=N&ABO_INSPI=N&ABO_TRIGGER=N&ABO_AVIS=N&UNSUB_CAMPAIGN=EN_0_2605_GI_FDJ&FORM_NAME=OneClickUnsubscribe&SUBMISSION_DATE=2026-05-13&FORM_SOURCE_ID=RSYS&RIID_=6001184&CAMPAIGN_NAME=EN_0_2605_GI_FDJ&CAMPAIGN_ID=butintlprod.1467624&UNSUB_CAMPAIGN_ID=butintlprod.1467624",
+            "domain": "news.but.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQG17jezgX7wczetWdEfqvvK4r8ORzeoXfRg88dkwSzeyjzg3bEm4zcnufVXtpKX%3DDSTURW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjAiSkbJKU_Ou_wGW7lejjAekto7DcgDU-EANT8D9cSI1S8cWShPBeg0.&_di_=p2iu4sqilj3lq7m76meh9m23hea9r765dh26sdbpsn8sf9cmkb00"
+                },
+                {
+                    "status": 200,
+                    "url": "https://news.but.fr/pub/rf?_ri_=X0Gzc2X%3DAQjkPkSRTQGf3Dblvkdzcd5nhCEJ2lMtP0S6vNfzfaAstzbzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRTQG4zaNqHlL1jc0EWAIkOKB9CiS6vNfzfaAstzbza&_ei_=EYN3tLp37T4UM5xzoWPy0xo&_di_=pr3htg9u68p3s4csufot1gvtioegqm8s6mtvgbughl07j8e7ao60&CUSTOMER_ID_=&OPTIN_EMAIL=false&ABO_BONS_PLANS=N&ABO_INSPI=N&ABO_TRIGGER=N&ABO_AVIS=N&UNSUB_CAMPAIGN=EN_0_2605_GI_FDJ&FORM_NAME=OneClickUnsubscribe&SUBMISSION_DATE=2026-05-13&FORM_SOURCE_ID=RSYS&RIID_=6001184&CAMPAIGN_NAME=EN_0_2605_GI_FDJ&CAMPAIGN_ID=butintlprod.1467624&UNSUB_CAMPAIGN_ID=butintlprod.1467624"
+                }
+            ],
+            "audit_date": "2026-05-13 09:19:04"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://pixel.gtinsi.de/69e8de7ad79b0",
+            "status": "Integration: OK",
+            "domain": "pixel.gtinsi.de",
+            "is_gtinsi": true,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
