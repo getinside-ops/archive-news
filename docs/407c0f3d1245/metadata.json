@@ -1,0 +1,488 @@
+{
+    "id": "407c0f3d1245",
+    "subject": "Marque Amie : Metagenics 💊",
+    "date_rec": "25/05/2026 à 13:09",
+    "date_iso": "2026-05-25T13:09:59+00:00",
+    "sender": "The Bradery",
+    "date_arch": "25/05/2026 à 13:12",
+    "preheader": "Une approche experte du bien-être, pensée pour durer, avec -30% sur tout le site* ! Un nouveau réflexe bien-être commence avec -30% sur tout le site¹ Pour toute...",
+    "reading_time": "1 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": true,
+        "link_count": 17,
+        "images_no_alt": 13
+    },
+    "crm": "Klaviyo",
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D5y_U_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojghy3NJj6w7ciTHkEv1d72EvrIbc-2FuLDL-2Box2N2T-2B9soxKl3c6f7KxJ99FPOV1gQg8Jh4BrrWKwVboO-2BACQIG4XvEmCSxJkJr3R4xBpl21vxbXZJZWuTkCFuRltSkB-2Bq2K5bFPTs-2FDkC0sZ0eXggmEaHXVn-2BgmSJASh0cEDZyI1o",
+            "final_url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D5y_U_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojghy3NJj6w7ciTHkEv1d72EvrIbc-2FuLDL-2Box2N2T-2B9soxKl3c6f7KxJ99FPOV1gQg8Jh4BrrWKwVboO-2BACQIG4XvEmCSxJkJr3R4xBpl21vxbXZJZWuTkCFuRltSkB-2Bq2K5bFPTs-2FDkC0sZ0eXggmEaHXVn-2BgmSJASh0cEDZyI1o"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DUYMp_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojq-2BuvvHBjZJgQTDq7nxYFbZROdWq3nE4n7JzcicRHVjHblvcUNV012LdTBVtsp1wgSZU95425-2Bxy9vDhf57WKW9pfWykMfPoewGQ-2BD0uqmj-2BtlfADBYJ0-2Fw-2BxoxIJPj9zonf-2BMMdclPcUsrtEPC1jIArI0je-2BsQJoJE8nm8518cB",
+            "final_url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DUYMp_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojq-2BuvvHBjZJgQTDq7nxYFbZROdWq3nE4n7JzcicRHVjHblvcUNV012LdTBVtsp1wgSZU95425-2Bxy9vDhf57WKW9pfWykMfPoewGQ-2BD0uqmj-2BtlfADBYJ0-2Fw-2BxoxIJPj9zonf-2BMMdclPcUsrtEPC1jIArI0je-2BsQJoJE8nm8518cB"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4niCQnY?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb41413eef1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 3,
+            "txt": "j’en profite",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DSiI2_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtmosPcSQB1hg25VwPjpTvfZPTTzgRFjrZ-2FoCoKXiTV7JSbApvJbz82WJH3OMMtikli8jO4uAhHv2MxfQdLEcQHWhRG-2F3mIir24WBXC8iwAmDzC0cdfH03sHAwqxdP-2Bj8zQsEUgE3VDyLsBnJhANZFwh9jtbPqV1TWq8CCrHb4Ig",
+            "final_url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DSiI2_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtmosPcSQB1hg25VwPjpTvfZPTTzgRFjrZ-2FoCoKXiTV7JSbApvJbz82WJH3OMMtikli8jO4uAhHv2MxfQdLEcQHWhRG-2F3mIir24WBXC8iwAmDzC0cdfH03sHAwqxdP-2Bj8zQsEUgE3VDyLsBnJhANZFwh9jtbPqV1TWq8CCrHb4Ig"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4niCQnY?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb41413eef1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DBNxP_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojoWTE2p2cvG-2FG8Mdgl07nKcXqGJ-2FqwNf9HV7JFJdaq2YTvlbENS5JeFtuQaIGqoy1Qmk5zh7Jk57VruJF7p-2B9V46Ju3A0Wy4-2BQAV0HBrZsPMz-2FnYr9ijlKYxIOvixviEAvnopM101daof0XAuHMRMqLU9uiVMDTUmFRHCH4qRsbr",
+            "final_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DBNxP_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojoWTE2p2cvG-2FG8Mdgl07nKcXqGJ-2FqwNf9HV7JFJdaq2YTvlbENS5JeFtuQaIGqoy1Qmk5zh7Jk57VruJF7p-2B9V46Ju3A0Wy4-2BQAV0HBrZsPMz-2FnYr9ijlKYxIOvixviEAvnopM101daof0XAuHMRMqLU9uiVMDTUmFRHCH4qRsbr"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/3OYaGln?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb414aafc3a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 5,
+            "txt": "JE DÉCOUVRE",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DARHU_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtRSfCZT9NdfCJbH08mrqWCa80AUu1IYRzbVjzQmUDsJJttpBtnsjbaXsdxjX2ks0lC0KMuguMJ80-2FG-2FLnI-2FRvCqynSz0ElD3xP8lfXCfOF24pLpd5cwGd-2Bm53eOc8ESz5lV2Hr-2FRWfULiUJRo8Kqfxo-2By-2FlaMQVzf-2BDKcsCT1CF",
+            "final_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DARHU_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtRSfCZT9NdfCJbH08mrqWCa80AUu1IYRzbVjzQmUDsJJttpBtnsjbaXsdxjX2ks0lC0KMuguMJ80-2FG-2FLnI-2FRvCqynSz0ElD3xP8lfXCfOF24pLpd5cwGd-2Bm53eOc8ESz5lV2Hr-2FRWfULiUJRo8Kqfxo-2By-2FlaMQVzf-2BDKcsCT1CF"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/3OYaGln?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb414aafc3a"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7lRuB1c343UiSJKVyb3r2b6FaqHf-2FSkw4CxO5rv2yjbzj0GvDRdIcdQo8XmsPiL1lT2WV0b8jQPdrArGcvEUyO9Qcr6UMTCKDgPSK2I-2F5S5mnfgg7HDNLCMDCW5pLHDRFVtsKjjZsd6lB2Yx8SSwSbVUYX-2BAlTFhTnPhOxnxo1OHKZ6qSUxCOax21nD-2BuUVqpIoi9fFYTWsTx0at-2FvocARGgw1uodkr2G8ag9sJVk20YGhuS7ssZNeAc5VdbenqnfQ-3D-3D3mES_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojufXOA5RXRYyPRmURDMduBiqD2UCU1BQ51cVs3QUKKo4kcc5yLf9LQQ36BKObHIqoANHHe-2BqgN5v1ziZGsUr21DMfAc8tmo-2Ba5yZTvi12hpPcazkVy2uOvwkhwaJpcEOvj1fnlOiTbZDYF3BE6svoOfzGMBko51iiPlZm2OYBq-2Fl",
+            "final_url": "https://www.metagenics.fr/collections/stress-humeur?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7lRuB1c343UiSJKVyb3r2b6FaqHf-2FSkw4CxO5rv2yjbzj0GvDRdIcdQo8XmsPiL1lT2WV0b8jQPdrArGcvEUyO9Qcr6UMTCKDgPSK2I-2F5S5mnfgg7HDNLCMDCW5pLHDRFVtsKjjZsd6lB2Yx8SSwSbVUYX-2BAlTFhTnPhOxnxo1OHKZ6qSUxCOax21nD-2BuUVqpIoi9fFYTWsTx0at-2FvocARGgw1uodkr2G8ag9sJVk20YGhuS7ssZNeAc5VdbenqnfQ-3D-3D3mES_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojufXOA5RXRYyPRmURDMduBiqD2UCU1BQ51cVs3QUKKo4kcc5yLf9LQQ36BKObHIqoANHHe-2BqgN5v1ziZGsUr21DMfAc8tmo-2Ba5yZTvi12hpPcazkVy2uOvwkhwaJpcEOvj1fnlOiTbZDYF3BE6svoOfzGMBko51iiPlZm2OYBq-2Fl"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4tWOgjG?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb4189ca7d4"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/stress-humeur?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7t2RWIafLikcaUBdvDkkVuGaEajgojmjH-2B-2FZZbGf4HbYa6yZKJaXtocy4heBP613G7EehLaMI7GQeNRlJYSlt0kI5TsSFTbQ7dGfzxpfs6IDVIGnUXkH1jnIUvtBl-2BtM10IYoH6zCaqFrAYNunH8C1TK0BKSDa0Rzb6TJ1gbQ2x08uHpYXzKiRfQgCRV32v7b-2FBcfG81lDVhmYG9dGtP-2B-2B-2Fi6iVWLGJfgoNoXUyqWhrrmNDumY0a2SbXeBxHKn6sLg-3D-3DO9mK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojiaeVXJ7GVMYR4KgQ1lZE-2B6yy37OISYbtFdsm4lfpKIahaRMaf31mkkENfxPMov2sua0lrV2CVvTmPrk9KLLAiUBcMLnhqXnFoieFb-2FQi3GC-2BUUXnAxtozvZ2PWMahLRVygOB6I56xp5rf4iN-2FAMkt7JDdRlikmH8OQaidfa1Iqg",
+            "final_url": "https://www.metagenics.fr/collections/souplesse-articulations?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7t2RWIafLikcaUBdvDkkVuGaEajgojmjH-2B-2FZZbGf4HbYa6yZKJaXtocy4heBP613G7EehLaMI7GQeNRlJYSlt0kI5TsSFTbQ7dGfzxpfs6IDVIGnUXkH1jnIUvtBl-2BtM10IYoH6zCaqFrAYNunH8C1TK0BKSDa0Rzb6TJ1gbQ2x08uHpYXzKiRfQgCRV32v7b-2FBcfG81lDVhmYG9dGtP-2B-2B-2Fi6iVWLGJfgoNoXUyqWhrrmNDumY0a2SbXeBxHKn6sLg-3D-3DO9mK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojiaeVXJ7GVMYR4KgQ1lZE-2B6yy37OISYbtFdsm4lfpKIahaRMaf31mkkENfxPMov2sua0lrV2CVvTmPrk9KLLAiUBcMLnhqXnFoieFb-2FQi3GC-2BUUXnAxtozvZ2PWMahLRVygOB6I56xp5rf4iN-2FAMkt7JDdRlikmH8OQaidfa1Iqg"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4uBfLPQ?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb41ac88ea2"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/souplesse-articulations?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7tn3U9RL2FYIeNOd1hIFDyacET-2FPwmqSbG-2F4PtfNxs1twH-2BLmxHZJFTP5rZd4M6nwX92yN7Ytj5ZYapyXscnI9BSydoqzhQJzyxy-2BxGb6xJbXZEqWQNCM7AnCpXvoffchUsTwr7MvAijvccTUawvsKnuLN9koyR2hLUiTHXachqwhMjACTA3EdracQIsQ-2BU968miJHPTCyFdZfOONsKidB-2F6O0Inf9-2Bso5-2FVCjHonUYpQJY27aYRVmIPAArZDR8-2BbA-3D-3DZErO_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojg6e8JLlF6YpUfA7B5CxG3ojpEgJo-2FHHBrrfCwDv5ZNmnHG-2FxnT6wOZbBkjYupAX4tc0Dha6-2FAFJX-2BvN3qYyzD8OByChYiZhtV7GrLwwex5kP6lYzogxTWMtbWZpHz1vTqY7lWr4jLUxliQVu-2FFOH7zj9hnkelulCcI4lDdtsJKr",
+            "final_url": "https://www.metagenics.fr/collections/microbiote-probiotiques?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7tn3U9RL2FYIeNOd1hIFDyacET-2FPwmqSbG-2F4PtfNxs1twH-2BLmxHZJFTP5rZd4M6nwX92yN7Ytj5ZYapyXscnI9BSydoqzhQJzyxy-2BxGb6xJbXZEqWQNCM7AnCpXvoffchUsTwr7MvAijvccTUawvsKnuLN9koyR2hLUiTHXachqwhMjACTA3EdracQIsQ-2BU968miJHPTCyFdZfOONsKidB-2F6O0Inf9-2Bso5-2FVCjHonUYpQJY27aYRVmIPAArZDR8-2BbA-3D-3DZErO_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojg6e8JLlF6YpUfA7B5CxG3ojpEgJo-2FHHBrrfCwDv5ZNmnHG-2FxnT6wOZbBkjYupAX4tc0Dha6-2FAFJX-2BvN3qYyzD8OByChYiZhtV7GrLwwex5kP6lYzogxTWMtbWZpHz1vTqY7lWr4jLUxliQVu-2FFOH7zj9hnkelulCcI4lDdtsJKr"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4f2JGvs?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb419270add"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/microbiote-probiotiques?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7iy91ldrHz9gs5-2FabF4GI1Ah7n94WzrWXxiK-2FSXZ-2FIKtsom2t0RD330hEaKatIlHXgO1-2Bq-2Fb2-2FPL-2Bet1ZAVe4aN4pWi9p1A4hdGvSaPoFU0jOqndztDp3itUtTRy8-2BU-2Bf5H3Smy6JskiIUpAfy5H1vyBV-2Bur7TmVnp75hgmv1gZhFmq-2Fd4V18G-2F60zN1Zu-2FmFvdXFDB46uQxKBM36hgtl4Nd25fqsxXHYUb1Mo9KY2qKhfBRMLZdYCxdlrZ2AKVphw-3D-3DiBhw_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojk8cHqV7Vmzz3i8Og5-2BoCEUU8ZE6UWskIUJvcdTenL6UcwxjCNcjR5zmegucXjKf8LRNKW2cARUftrR7NDCwC0meIn9jRo6g2IFEMmZfONi8NsRp7IdJFMbYOfUtoL-2BOQdsUxKVgMlOvcVK1qlPs8aO1B33E3nuaZL-2FwO0gGRIr4",
+            "final_url": "https://www.metagenics.fr/collections/sommeil?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7iy91ldrHz9gs5-2FabF4GI1Ah7n94WzrWXxiK-2FSXZ-2FIKtsom2t0RD330hEaKatIlHXgO1-2Bq-2Fb2-2FPL-2Bet1ZAVe4aN4pWi9p1A4hdGvSaPoFU0jOqndztDp3itUtTRy8-2BU-2Bf5H3Smy6JskiIUpAfy5H1vyBV-2Bur7TmVnp75hgmv1gZhFmq-2Fd4V18G-2F60zN1Zu-2FmFvdXFDB46uQxKBM36hgtl4Nd25fqsxXHYUb1Mo9KY2qKhfBRMLZdYCxdlrZ2AKVphw-3D-3DiBhw_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojk8cHqV7Vmzz3i8Og5-2BoCEUU8ZE6UWskIUJvcdTenL6UcwxjCNcjR5zmegucXjKf8LRNKW2cARUftrR7NDCwC0meIn9jRo6g2IFEMmZfONi8NsRp7IdJFMbYOfUtoL-2BOQdsUxKVgMlOvcVK1qlPs8aO1B33E3nuaZL-2FwO0gGRIr4"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/48ITKpC?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb417272668"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/sommeil?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 10,
+            "txt": "JE DÉCOUVRE tout",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DTID8_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojuIMUuvJm4kBjo6GZ4orNuIVVs7fuRVsMw7kcZ0KtWDT3bxsNZqotMacOWlIbDCdfTfQn9xQBg7iKzicPbxqu9nmvUkpiMSyMgPatexlb-2B-2BF70NmjY1magSBTB04xHv7gvBcBsr-2FnS1LvdHCR-2F6sGfHvfDm3B58jScbFoABH7vN2",
+            "final_url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DTID8_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojuIMUuvJm4kBjo6GZ4orNuIVVs7fuRVsMw7kcZ0KtWDT3bxsNZqotMacOWlIbDCdfTfQn9xQBg7iKzicPbxqu9nmvUkpiMSyMgPatexlb-2B-2BF70NmjY1magSBTB04xHv7gvBcBsr-2FnS1LvdHCR-2F6sGfHvfDm3B58jScbFoABH7vN2"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4niCQnY?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb41413eef1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 11,
+            "txt": "Je découvre",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DAXcF_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojm6kZO3g-2FFKbBQRuoo9G-2F-2FjicYUJZuzdwp-2FJB39MSbIETRQtqLBQe98FurzZuTG9xjYhiTYN3ApZ8TB7oqgVbnI2dZV4pfGdaksyNSxFXsbu1VOW8NwQ-2BdXKV0etm2tZCtJzWJlEcTuYJZFp1Ax-2BX2qTe-2FwTfmSMpHXLrkzTmkjt",
+            "final_url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DAXcF_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojm6kZO3g-2FFKbBQRuoo9G-2F-2FjicYUJZuzdwp-2FJB39MSbIETRQtqLBQe98FurzZuTG9xjYhiTYN3ApZ8TB7oqgVbnI2dZV4pfGdaksyNSxFXsbu1VOW8NwQ-2BdXKV0etm2tZCtJzWJlEcTuYJZFp1Ax-2BX2qTe-2FwTfmSMpHXLrkzTmkjt"
+                },
+                {
+                    "status": 301,
+                    "url": "https://bit.ly/4niCQnY?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/69fb41413eef1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/?utm_source=the_bradery&utm_medium=email&utm_campaign=brand_awareness_metagenics_the_bradery"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D7D4n_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojli7me8c7ddooYH1L7z9T7q25JazRgifys1X2Fw1KzQfqyvQYYFsXJ94nBX6j9nSiv-2BuPbD9ekqjJ6hI6vMgCGUPeFsf92Q8y8zuxA8vQkjYRwxSiORhOUBTEBUpnB8iogkedF1zcflSIHacT8peiFivnQyiRo8myRhsY77Z5Sdq",
+            "final_url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D7D4n_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojli7me8c7ddooYH1L7z9T7q25JazRgifys1X2Fw1KzQfqyvQYYFsXJ94nBX6j9nSiv-2BuPbD9ekqjJ6hI6vMgCGUPeFsf92Q8y8zuxA8vQkjYRwxSiORhOUBTEBUpnB8iogkedF1zcflSIHacT8peiFivnQyiRo8myRhsY77Z5Sdq"
+                },
+                {
+                    "status": 200,
+                    "url": "https://thebradery.com/?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kTfMHoBwCueKNfsvIIeb31h5lvuKXp3-2BSZC6Yo9RMhTy8kgH0fACGDSKHAVYqw6piB6My9oEc490l1is-2FkfZzqFNqAgSo32Zj-2FvesXlzX-2BRI4bBg-2FLUZuHCOgWRy5vW66mMyzLO3P1QKafuJKF3uc4m08d6yGaJEBiiTXFx3CWnCnTLJfxRUPj8EN0hzQJpHii4OfJb26OoPRM3n5tAGYa7vS3woFpc6CZAXeMayuQxpPcH0iqrBxN9zmhWaYD0lZYmGTYfHuxjfxgB-2BmjhlOo-3Dr-Wx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojo6Y7ROUoixPp1-2FAv-2FM6v5AvBDeG3nSwJe-2BAf0f7zLQYs7E-2BxRShtzzhhuaqbNsO6ILEHZrb1PHME0niRZY9aYpJUFfK-2BPOukGqDh3HPe7O3-2FWuOETj0aUESiE0DhBO5JkwPPKEOy0eRaUYKvBmBxzRUXQJ4CftC6cIyU8d6YoDs",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthebradery%2F%3Futm_source%3Dlancement%26utm_medium%3Demail%26utm_campaign%3DNL_METAGENICS_OPEMEDIA_180526%2B%252801KR0TDTSBE3SMWVQMPNSCJ9KG%2529%26hash_email%26_kx%3DAirT4g2wbdc1wiFjUXmfMA.KQsfB7&is_from_rle",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kTfMHoBwCueKNfsvIIeb31h5lvuKXp3-2BSZC6Yo9RMhTy8kgH0fACGDSKHAVYqw6piB6My9oEc490l1is-2FkfZzqFNqAgSo32Zj-2FvesXlzX-2BRI4bBg-2FLUZuHCOgWRy5vW66mMyzLO3P1QKafuJKF3uc4m08d6yGaJEBiiTXFx3CWnCnTLJfxRUPj8EN0hzQJpHii4OfJb26OoPRM3n5tAGYa7vS3woFpc6CZAXeMayuQxpPcH0iqrBxN9zmhWaYD0lZYmGTYfHuxjfxgB-2BmjhlOo-3Dr-Wx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojo6Y7ROUoixPp1-2FAv-2FM6v5AvBDeG3nSwJe-2BAf0f7zLQYs7E-2BxRShtzzhhuaqbNsO6ILEHZrb1PHME0niRZY9aYpJUFfK-2BPOukGqDh3HPe7O3-2FWuOETj0aUESiE0DhBO5JkwPPKEOy0eRaUYKvBmBxzRUXQJ4CftC6cIyU8d6YoDs"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/thebradery/?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                },
+                {
+                    "status": 429,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fthebradery%2F%3Futm_source%3Dlancement%26utm_medium%3Demail%26utm_campaign%3DNL_METAGENICS_OPEMEDIA_180526%2B%252801KR0TDTSBE3SMWVQMPNSCJ9KG%2529%26hash_email%26_kx%3DAirT4g2wbdc1wiFjUXmfMA.KQsfB7&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7jEcf4xLMPA0nNKZXmot1Tk5p6A4pq-2FE3rt4vR7JNHBAp-2FcU6dDVRWy-2FSTThVmP7iaXlyE1fxcNiW2DvOECofKO5TBFuNSkA4Rz6Zgfe0E0xpCIFp4y6s3c6Eu9a-2F0Mz5rynWj5K5yIc2Bi8pw67SpcOGSx2Sy-2FN5h5-2B7X3RCM87H7Bprxgl0J-2FfVyuWwkUQPwX3Xqa3MjHPgNcPYyRwRW7HrbOL7zTzBQwgoz1XXDJSUPjJ7OKS5Zi1fqXIZ5Ayo3tg8svOvp754weMflgt1Uo-3DmekK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvokltlBEmyiImbxF2FxJCplADC5FZmdZ-2BRLSMu6ppNHgadzEXKj4nB9JFfQSaClg1r3JfS-2FBvoNv3u07GrCVYp9LHRNjDzBvLgHN5bp2XxZ5rpOo5MVuVm1Om7ON1wt54wpvAAWwVJlBCKbtS3T-2Byqd8wwLuc64R1JALgvesatN",
+            "final_url": "https://www.tiktok.com/@thebradery?lang=fr&utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7jEcf4xLMPA0nNKZXmot1Tk5p6A4pq-2FE3rt4vR7JNHBAp-2FcU6dDVRWy-2FSTThVmP7iaXlyE1fxcNiW2DvOECofKO5TBFuNSkA4Rz6Zgfe0E0xpCIFp4y6s3c6Eu9a-2F0Mz5rynWj5K5yIc2Bi8pw67SpcOGSx2Sy-2FN5h5-2B7X3RCM87H7Bprxgl0J-2FfVyuWwkUQPwX3Xqa3MjHPgNcPYyRwRW7HrbOL7zTzBQwgoz1XXDJSUPjJ7OKS5Zi1fqXIZ5Ayo3tg8svOvp754weMflgt1Uo-3DmekK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvokltlBEmyiImbxF2FxJCplADC5FZmdZ-2BRLSMu6ppNHgadzEXKj4nB9JFfQSaClg1r3JfS-2FBvoNv3u07GrCVYp9LHRNjDzBvLgHN5bp2XxZ5rpOo5MVuVm1Om7ON1wt54wpvAAWwVJlBCKbtS3T-2Byqd8wwLuc64R1JALgvesatN"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@thebradery?lang=fr&utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7qu3wXqlpqOzcfJJaK4GfJc99G22hBA9COr-2F7lW5vfRN2YNgmqSnlA0DcKZHY9yMQCuUxW9ZZhEYqznYfg076dhOplJfP4-2F7Tds5AcfgZBYLF5S7AafgZcw1E71Sb0kTmsWTWr2-2Bx3rnfWL5eJnkxvzLBZ2Ey7KVQmPsB9srIxCd4Cvls1-2BVIi-2BShR1Fa-2B-2FKJmG5x7NUG9uJSDthiN3kzjn7-2BQ4u5h3rY2Y9Nn1AeER7-2FwZxMTRWsjqdLCpSgR-2FaFCPVwBLeWgJcS9efTA6i1Jo-3DOfPA_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojlZe-2BU1H9eoG-2F3YSubbl5RLIVkcXkc6kN7N20Zop2c0fYBSm-2Bky49pwDyRzzbCmO6NbZYNCobjNInC-2FP6dnboEGg4Oli83mMSiqaJQ8Gm863EJ4ulOo5yYnsBZRP5QNfHD1OHnkBh-2Bz5Tsvi7JoaxOPEZghpSdWtzX8t2U-2Fk894l",
+            "final_url": "https://fr.linkedin.com/company/the-bradery?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7qu3wXqlpqOzcfJJaK4GfJc99G22hBA9COr-2F7lW5vfRN2YNgmqSnlA0DcKZHY9yMQCuUxW9ZZhEYqznYfg076dhOplJfP4-2F7Tds5AcfgZBYLF5S7AafgZcw1E71Sb0kTmsWTWr2-2Bx3rnfWL5eJnkxvzLBZ2Ey7KVQmPsB9srIxCd4Cvls1-2BVIi-2BShR1Fa-2B-2FKJmG5x7NUG9uJSDthiN3kzjn7-2BQ4u5h3rY2Y9Nn1AeER7-2FwZxMTRWsjqdLCpSgR-2FaFCPVwBLeWgJcS9efTA6i1Jo-3DOfPA_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojlZe-2BU1H9eoG-2F3YSubbl5RLIVkcXkc6kN7N20Zop2c0fYBSm-2Bky49pwDyRzzbCmO6NbZYNCobjNInC-2FP6dnboEGg4Oli83mMSiqaJQ8Gm863EJ4ulOo5yYnsBZRP5QNfHD1OHnkBh-2Bz5Tsvi7JoaxOPEZghpSdWtzX8t2U-2Fk894l"
+                },
+                {
+                    "status": 200,
+                    "url": "https://fr.linkedin.com/company/the-bradery?utm_source=lancement&utm_medium=email&utm_campaign=NL_METAGENICS_OPEMEDIA_180526%20%2801KR0TDTSBE3SMWVQMPNSCJ9KG%29&hash_email=&_kx=AirT4g2wbdc1wiFjUXmfMA.KQsfB7"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 16,
+            "txt": "préférences",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.zsQJJL3LgXd4yF4m27xsV82MWk3xeMwEPeqL-2Ba-2Fqhz64d3VI7Ays1hQZgCwndSt6wT9puhewEoqZFbeDDWrQ5yT1fQ0IIrtAdWjgGZjskEQ-3DNuFq_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvWQdCte-2BQaRYg08h-2BSwlCbP0J-2FGJu2O570q3C9zTjY8XDxUPiJ8U1FzJJlbRpbM5VnvcF-2FLGivvkzlvWCCY-2B86EMPvxtxSEvzBCASNdueU-2BgWr2hQ4nKBVIN12I-2F-2F8gdFVYQQGXnfwUoSZCY9FoA41rYaDuLW1zFWjFLKFKdutD",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.zsQJJL3LgXd4yF4m27xsV82MWk3xeMwEPeqL-2Ba-2Fqhz64d3VI7Ays1hQZgCwndSt6wT9puhewEoqZFbeDDWrQ5yT1fQ0IIrtAdWjgGZjskEQ-3DNuFq_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvWQdCte-2BQaRYg08h-2BSwlCbP0J-2FGJu2O570q3C9zTjY8XDxUPiJ8U1FzJJlbRpbM5VnvcF-2FLGivvkzlvWCCY-2B86EMPvxtxSEvzBCASNdueU-2BgWr2hQ4nKBVIN12I-2F-2F8gdFVYQQGXnfwUoSZCY9FoA41rYaDuLW1zFWjFLKFKdutD"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        },
+        {
+            "index": 17,
+            "txt": "désinscrire",
+            "original_url": "https://trk.klclick.com/ls/click?upn=u001.zsQJJL3LgXd4yF4m27xsV82MWk3xeMwEPeqL-2Ba-2Fqhz64d3VI7Ays1hQZgCwndSt6wT9puhewEoqZFbeDDWrQ5yT1fQ0IIrtAdWjgGZjskEQ-3D8OMx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojpm6ith-2FKcv7m6piDgJYVZz8f143hipBws5Vt1loLCPmBI7r6GMs51u7y7-2Bbb-2BsZhyn1OT7IwMrBw-2F3Xox0yOQAm2muTXNPdoggh06jhfRPlxJnBMTz8jjHW1oIhbqCtrWJIKXN16UrfAyUXCTQiZJMXHJzmWF0-2Bv6IZYLxZbLS-2F",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "domain": "trk.klclick.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.klclick.com/ls/click?upn=u001.zsQJJL3LgXd4yF4m27xsV82MWk3xeMwEPeqL-2Ba-2Fqhz64d3VI7Ays1hQZgCwndSt6wT9puhewEoqZFbeDDWrQ5yT1fQ0IIrtAdWjgGZjskEQ-3D8OMx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojpm6ith-2FKcv7m6piDgJYVZz8f143hipBws5Vt1loLCPmBI7r6GMs51u7y7-2Bbb-2BsZhyn1OT7IwMrBw-2F3Xox0yOQAm2muTXNPdoggh06jhfRPlxJnBMTz8jjHW1oIhbqCtrWJIKXN16UrfAyUXCTQiZJMXHJzmWF0-2Bv6IZYLxZbLS-2F"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-05-25 13:12:21"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://pixel.gtinsi.de/69c2b99fb93b3",
+            "status": "Integration: OK",
+            "domain": "pixel.gtinsi.de",
+            "is_gtinsi": true,
+            "warnings": [],
+            "has_issues": false
+        },
+        {
+            "url": "https://trk.klclick.com/wf/open?upn=u001.le-2FTlON6BhQVYvQcu6kgctcPILq-2BKvgSs69A1R-2Bu6So1qqbR4nhgmnv9iWIFPi4q643UMNChFTReF6fmfbrVlvUQGZNSXJw2hLYWNC7PgDPWk9B-2FopltXlkdn2KMD-2B2MAAOBmMIKNYzS0SZ0zhrgbIFe-2FU-2B6VSoxz710j8tkWcKk1GkhLdi3iOJPUffMbcR6smRn9wkFWyNtV25bPFrFxCX7r07APamT-2F7dwZgbs3v9uO-2BB6n9OgtDlFlywDaJlHOq1UhaDnU5vwN9IB-2Fw7iq6DOQUo90XEmMi2tGVj0RiIXMOtBW0U9mD0Q31HgOuX9tJV31TAV2QgL3zHPv7gEKPnIfTLGW5Bk6joUGPplrPF8DexDi3LFa5M3Lj4xALEfTjULVkuioRhQo57G2OzGT0L9sr1KDRhXRZTsZDCM7FbMI4JGkx4mLrG2Cx6zWo7EKyxCzwg0rXYOQySlqECqqgGquyBhb1OVMAd7-2B-2BteZkPIbaj65awLywUl-2F3Dp6r-2FVjPdcgNA3zX5ddTSkBkFf0B0H8T6BR4gKThpfR7f31xvYyaMjjXifVVXcV9RCtp296sgoeJkm3DxgDPM493m1ZQ-3D-3D",
+            "status": "Integration: OK",
+            "domain": "trk.klclick.com",
+            "is_gtinsi": false,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
