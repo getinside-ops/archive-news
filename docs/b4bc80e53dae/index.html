@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 Votre première box Quitoque offerte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="viewer-layout">
+        <!-- Top navigation -->
+        <nav class="gi-topnav">
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+            </a>
+
+            <div class="gi-topnav-actions">
+                <!-- Language picker: translate icon matching VitePress vpi-languages -->
+                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+
+                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
+                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
+                    <span class="gi-vp-check">
+                        <span class="gi-vp-icon">
+                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main body row: viewer + sidebar -->
+        <div class="viewer-body-row">
+        <!-- Main Content -->
+        <div class="viewer-main">
+            <!-- Header: three-zone unified bar -->
+            <header class="viewer-header">
+                <div class="vh-unified-bar">
+                    <!-- Left: Email identity -->
+                    <div class="vh-zone-identity">
+                        <span class="vh-sender-pill">Fanny de Yooji</span>
+                        <h1 class="vh-subject" title="🎁 Votre première box Quitoque offerte">🎁 Votre première box Quitoque offerte</h1>
+                        <span class="crm-badge" data-crm="HubSpot">HubSpot</span>
+                        <span class="vh-date">26/05/2026 à 19:19</span>
+                        
+                    </div>
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Center: Device toggle (hidden on mobile) -->
+                    <div class="vh-zone-view hide-mobile">
+                        <div class="device-toggle">
+                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </button>
+                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="vh-zone-divider" aria-hidden="true"></div>
+                    <!-- Right: QA Actions -->
+                    <div class="vh-zone-actions">
+                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+                            <span id="highlightBtnText">Show Links</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
+                            Download
+                        </button>
+                        <button class="btn btn-secondary" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Screenshot
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Email Content -->
+            <div class="viewer-content">
+                <div id="deviceFrame" class="device-mockup" data-mode="mobile">
+                    <!-- Desktop browser chrome -->
+                    <div class="dm-browser-bar">
+                        <div class="dm-traffic-lights">
+                            <div class="dm-dot dm-dot-close"></div>
+                            <div class="dm-dot dm-dot-min"></div>
+                            <div class="dm-dot dm-dot-max"></div>
+                        </div>
+                        <div class="dm-tab">
+                            <div class="dm-tab-favicon"></div>
+                            <span>🎁 Votre première box Quitoque offerte</span>
+                        </div>
+                        <div class="dm-address-bar">Fanny de Yooji</div>
+                    </div>
+                    <!-- Mobile/Tablet status bar + notch -->
+                    <div class="dm-status-bar">
+                        <div class="dm-notch"></div>
+                    </div>
+                    <!-- Email screen -->
+                    <div class="dm-screen">
+                        <iframe id="emailFrame" class="email-frame no-scrollbar" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" title="Email content"></iframe>
+                    </div>
+                    <!-- Bottom home bar -->
+                    <div class="dm-chrome-bottom">
+                        <div class="dm-home-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="viewer-sidebar" role="region" aria-label="Sidebar">
+
+            <!-- Scrollable: Detail Log (existing tab content) -->
+            <div class="audit-detail-log" role="region" aria-label="Audit detail">
+                <div class="tab-bar">
+                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">11</span></button>
+                </div>
+
+                <div class="sidebar-content">
+
+                    <!-- META Tab -->
+                    <div class="tab-pane" id="tab-meta">
+                        <div class="stat-grid">
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_sender">Sender</span>
+                                <span class="sc-value">Fanny de Yooji</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_crm">CRM</span>
+                                <span class="sc-value text-cyan">HubSpot</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_subject">Subject</span>
+                                <span class="sc-value" title="🎁 Votre première box Quitoque offerte">🎁 Votre première box Quitoque offerte</span>
+                            </div>
+                            <div class="stat-cell sc-wide">
+                                <span class="sc-label" data-i18n="meta_preheader">Preheader</span>
+                                <span class="sc-value" title="🎁 Votre première box Quitoque offerte Des recettes faciles à cuisiner pour alléger vos soirs de semaine 🍽️ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...">🎁 Votre première box Quitoque offerte Des recettes faciles à cuisiner pour alléger vos soirs de semaine 🍽️ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­...</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_received">Received</span>
+                                <span class="sc-value">26/05/2026 à 19:19</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_size">Size</span>
+                                <span class="sc-value text-yellow">35.2 KB</span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
+                                <span class="sc-value text-green">
+                                    Low
+                                </span>
+                            </div>
+                            <div class="stat-cell">
+                                <span class="sc-label" data-i18n="meta_links">Links</span>
+                                <span class="sc-value">11</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PIXELS Tab -->
+                    <div class="tab-pane" id="tab-pixels" style="display:none;">
+                        
+                        <div style="padding: 8px 10px;">
+                            
+                            
+                            
+                            <div class="link-card-v2 " id="px-1">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index">P</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        <span class="card-v2-tag tag-pixel">PIXEL</span>
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Cto/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_W5q1h3W8fYGz72q21</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Cto/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_W5q1h3W8fYGz72q21" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Integration: OK</div>
+                                        
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Cto/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_W5q1h3W8fYGz72q21</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Test Pixel" data-url="https://d13dCg04.na1.hubspotlinks.com/Cto/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_W5q1h3W8fYGz72q21" onclick="event.stopPropagation(); testPixel(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Cto/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_W5q1h3W8fYGz72q21" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Pixel Test Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Testing...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <!-- LINKS Tab -->
+                    <div class="tab-pane" id="tab-links" style="display:none;">
+                        <div class="lf-filter-row" id="linkFilterRow">
+                            <button class="lf-chip active" onclick="filterLinks('all')" data-i18n="filter_all">All</button>
+                            <button class="lf-chip" onclick="filterLinks('tracking')" data-i18n="filter_tracking">Tracking</button>
+                            <button class="lf-chip" onclick="filterLinks('http')" data-i18n="filter_http">HTTP</button>
+                            <button class="lf-chip" onclick="filterLinks('gtinsi')" data-i18n="filter_gtinsi">
+                                getinside
+                            </button>
+                        </div>
+                        <div style="padding: 8px 10px;">
+                            
+                            <div class="link-card-v2 " id="lc-1">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-2">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">YOOJI80</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-3">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">J&#39;en profite maintenant !</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-4">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-5">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-6">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-7">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-8">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-9">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                    <span class="card-v2-domain">d13dCg04.na1.hubspotlinks.com</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text"></div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-10">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                    <span class="card-v2-domain">hs-9012182.s.hubspotemail.net</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Se désabonner</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="link-card-v2 " id="lc-11">
+                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                    <span class="card-v2-domain">hs-9012182.s.hubspotemail.net</span>
+                                    <div style="display: flex; gap: 4px;">
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-v2-url-preview" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <code class="card-v2-url-truncated">https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274</code>
+                                    <button class="btn-card" title="Copy URL" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" onclick="event.stopPropagation(); copyLink(this)">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    </button>
+                                </div>
+                                <div class="card-expand-zone">
+                                    <div class="card-v2-body">
+                                        <div class="card-v2-text">Gérer les préférences</div>
+                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                            <code class="card-v2-url">https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274</code>
+                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                                <button class="btn-card" title="Verify Link" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                                </button>
+                                                <button class="btn-card" title="Copy URL" data-url="https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274" onclick="event.stopPropagation(); copyLink(this)">
+                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Audit Log Container -->
+                                        <div class="audit-log-container">
+                                            <div class="audit-status-bar">
+                                                <span class="audit-status-text">Scanning...</span>
+                                            </div>
+                                            <div class="audit-timeline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div><!-- /.sidebar-content -->
+            </div><!-- /.audit-detail-log -->
+
+            <!-- Sticky Footer -->
+            <div class="sidebar-footer">
+                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
+                    Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
+                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                    © 2026 getinside. Tous droits réservés.
+                </p>
+            </div>
+        </aside>
+        </div><!-- /.viewer-body-row -->
+    </div><!-- /.viewer-layout -->
+
+
+
+    <!-- Mobile sidebar toggle button -->
+    <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
+        ☰ Links
+    </button>
+
+    <!-- Link overlays container -->
+    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+
+<script src="../assets/js/main.js"></script>
+    <script>
+        const content = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional //EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html lang=\"fr-FR\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:v=\"urn:schemas-microsoft-com:vml\"><head><base target=\"_blank\"/>\n<title>\ud83c\udf81 Votre premi\u00e8re box Quitoque offerte</title>\n<meta content=\"\ud83c\udf81 Votre premi\u00e8re box Quitoque offerte\" property=\"og:title\"/>\n<meta content=\"\ud83c\udf81 Votre premi\u00e8re box Quitoque offerte\" name=\"twitter:title\"/>\n<meta name=\"x-apple-disable-message-reformatting\"/>\n<meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\"/>\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\"/>\n<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"/>\n<style>\r\na.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'\u203a';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}\r\n</style>\n<!-- $$__SECOND_PASS_CSS_HEAD__$$ -->\n<!--[if gte mso 9]>\r\n  <xml>\r\n    <o:OfficeDocumentSettings>\r\n      <o:AllowPNG/>\r\n      <o:PixelsPerInch>96</o:PixelsPerInch>\r\n    </o:OfficeDocumentSettings>\r\n    <w:WordDocument xmlns:w=\"urn:schemas-microsoft-com:office:word\">\r\n      <w:DontUseAdvancedTypographyReadingMail/>\r\n    </w:WordDocument>\r\n  </xml>\r\n  \r\n  <style>\r\n    ul > li {\r\n      text-indent: -1em;\r\n    }\r\n  </style>\r\n<![endif]-->\n<!--[if mso]>\r\n<style type=\"text/css\">\r\n body, td {font-family: Arial, Helvetica, sans-serif;}\r\n .hse-body-wrapper-table {background-color: #FAFAFA;}\r\n</style>\r\n<![endif]-->\n<!--[if mso | IE]>\r\n  <style type=\"text/css\">\r\n    .hse-column-container { border: none !important; padding: 0 !important; }\r\n  </style>\r\n<![endif]-->\n<meta content=\"HubSpot\" name=\"generator\"/><meta content=\"http://yooji-9012182.hs-sites.com/-temporary-slug-a7045d6e-88a5-4699-a919-80079bed7345\" property=\"og:url\"/><meta content=\"noindex,follow\" name=\"robots\"/><!--[if !((mso)|(IE))]><!-- --><style type=\"text/css\">@media only screen and (max-width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta .hs-cta-img{height:auto !important;width:100% !important}\r\n.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px !important;padding-right:20px !important}\r\n.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd{display:table !important}\r\n}@media only screen and (max-width:639px){.hse-border-m{border-left:1px solid #ccc !important;border-right:1px solid #ccc !important;box-sizing:border-box}\r\n.hse-border-bottom-m{border-bottom:1px solid #ccc !important}.hse-border-top-m{border-top:1px solid #ccc !important}\r\n.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-bottom:none !important}\r\n}.moz-text-html .hse-column-container{max-width:600px !important;width:600px !important}\r\n.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:600px !important}\r\n@media only screen and (min-width:640px){.hse-column-container{max-width:600px !important;width:600px !important}\r\n.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12{max-width:600px !important;width:600px !important}\r\n}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:20px !important}\r\n#section_1754385088108 .hse-column-container{background-color:#3e6256 !important}\r\n}@media screen and (max-width:639px){.social-network-cell{display:inline-block} }\r\n@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-bottom:20px !important}\r\n#section_175437795725714 .hse-column-container{padding-top:0px !important;padding-bottom:0px !important}\r\n#section_175437795725714 .hse-column-container{background-color:#fff !important}\r\n}</style><!--<![endif]--><style type=\"text/css\">#hs_body #hs_cos_wrapper_main a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !important;font-size:inherit !important;font-family:inherit !important;font-weight:inherit !important;line-height:inherit !important}\r\na{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-smoothing:grayscale}\r\ntable{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{border-collapse:collapse}\r\nimg{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rule:exactly}\r\n.ShadowHTML p,.sh-modified-inline p{margin:0}</style></head>\n<body bgcolor=\"#FAFAFA\" id=\"hs_body\" style=\"margin:0 !important; padding:0 !important; font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<div id=\"preview_text\" lang=\"fr-FR\" style=\"display:none;font-size:1px;color:#FAFAFA;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;\">Des recettes faciles \u00e0 cuisiner pour all\u00e9ger vos soirs de semaine \ud83c\udf7d\ufe0f\u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u2007\u034f \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00ad \u00a0\r\n</div>\n<!--[if gte mso 9]>\r\n<v:background xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\">\r\n    <v:fill type=\"tile\" color=\"#ffffff\"/>\r\n</v:background>\r\n<![endif]-->\n<div bgcolor=\"#fafafa\" class=\"hse-body-background\" lang=\"fr-FR\" style=\"background-color:#fafafa\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"hse-body-wrapper-table\" height=\"100%\" role=\"presentation\" style=\"margin:0; padding:0; width:100% !important; min-width:320px !important; height:100% !important\" width=\"100%\">\n<tbody><tr>\n<td class=\"hse-body-wrapper-td\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding-top:20px; padding-bottom:20px\" valign=\"top\">\n<div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_dnd_area\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"dnd_area\" id=\"hs_cos_wrapper_main\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"> <div class=\"hse-section hse-section-first\" id=\"section_1754385088108\" style=\"padding-left:10px; padding-right:10px\">\n<div bgcolor=\"#3E6256\" class=\"hse-column-container\" style=\"min-width:280px; max-width:600px; margin:0 auto; background-color:#3E6256\">\n<!--[if (mso)|(IE)]>\r\n      <table align=\"center\" style=\"width:600px;\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"600\" bgcolor=\"#3E6256\">\r\n      <tr style=\"background-color:#3E6256;\">\r\n    <![endif]-->\n<!--[if (mso)|(IE)]>\r\n  <td valign=\"top\" style=\"width:600px;\">\r\n<![endif]-->\n<!--[if gte mso 9]>\r\n  <table role=\"presentation\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:600px\">\r\n<![endif]-->\n<div class=\"hse-column hse-size-12\" id=\"column_1754385088108_0\">\n<div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17543850881024\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"hse-image-wrapper\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-family:Helvetica, Arial, sans-serif; color:#666666; word-break:break-word; text-align:center; padding:0px; font-size:0px\" valign=\"top\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"ZE2sZdbe\" data-index=\"1\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04\" style=\"color:#00a4bd\" target=\"_blank\">\n<img align=\"middle\" alt=\"newsletter-quitoque-v2\" class=\"stretch-on-mobile\" src=\"img_0.webp\" style=\"outline:none; text-decoration:none; border:none; max-width:100%; font-size:16px\" width=\"600\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table></div>\n</div>\n<!--[if gte mso 9]></table><![endif]-->\n<!--[if (mso)|(IE)]></td><![endif]-->\n<!--[if (mso)|(IE)]></tr></table><![endif]-->\n</div>\n</div>\n<div class=\"hse-section\" id=\"module_1706793488646\" style=\"padding-left:10px; padding-right:10px\">\n<div bgcolor=\"#3E6256\" class=\"hse-column-container\" style=\"min-width:280px; max-width:600px; margin:0 auto; background-color:#3E6256; padding-bottom:10px; padding-top:5px\">\n<!--[if (mso)|(IE)]>\r\n      <table align=\"center\" style=\"width:600px;\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"600\" bgcolor=\"#3E6256\">\r\n      <tr style=\"background-color:#3E6256;\">\r\n    <![endif]-->\n<!--[if (mso)|(IE)]>\r\n  <td valign=\"top\" style=\"width:600px;padding-bottom:10px; padding-top:5px;\">\r\n<![endif]-->\n<!--[if gte mso 9]>\r\n  <table role=\"presentation\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:600px\">\r\n<![endif]-->\n<div class=\"hse-column hse-size-12\" id=\"module_1706793488646_0\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:15px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_171396990003913\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_171396990003913_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p style=\"line-height:150%\"><span style=\"color: #ffffff;\">Le retour des vacances, c\u2019est la reprise du rythme\u2026et le retour de la fameuse question :\u00a0<strong>\u201cOn mange quoi ce soir ?\u201d</strong></span></p>\n<p style=\"line-height:150%\"><br/><span style=\"color: #ffffff;\">Entre le travail, la cr\u00e8che (ou nounou), et les activit\u00e9s, les d\u00eeners peuvent vite devenir une source de charge mentale.</span></p>\n<p style=\"line-height:150%\"><br/><span style=\"color: #ffffff;\">Alors pour vous simplifier la vie, Yooji s\u2019associe \u00e0\u00a0<strong>Quitoque</strong>, une marque fran\u00e7aise qui partage notre exigence de qualit\u00e9 et de go\u00fbt.</span><br/><br/></p>\n<p style=\"line-height:150%\"><span style=\"color: #ffffff;\">Avec Quitoque, vous recevez chez vous des paniers repas avec :</span><br/><span style=\"color: #ffffff;\">\u2714\ufe0f Des produits frais et de saison</span><br/><span style=\"color: #ffffff;\">\u2714\ufe0f Des recettes \u00e9quilibr\u00e9es et faciles</span><br/><span style=\"color: #ffffff;\">\u2714\ufe0f Les bonnes quantit\u00e9s (moins de gaspillage)</span><br/><br/></p>\n<p style=\"line-height:150%\"><span style=\"color: #ffffff;\">\ud83d\udc49 Moins de courses</span><br/><span style=\"color: #ffffff;\">\ud83d\udc49 Moins d\u2019improvisation</span><br/><span style=\"color: #ffffff;\">\ud83d\udc49 Plus de temps en famille</span></p></div></div></td></tr></tbody></table>\n</div>\n<!--[if gte mso 9]></table><![endif]-->\n<!--[if (mso)|(IE)]></td><![endif]-->\n<!--[if (mso)|(IE)]></tr></table><![endif]-->\n</div>\n</div>\n<div class=\"hse-section\" id=\"module_1725527582477\" style=\"padding-left:10px; padding-right:10px\">\n<div bgcolor=\"#789F90\" class=\"hse-column-container\" style=\"min-width:280px; max-width:600px; margin:0 auto; background-color:#789F90; padding-top:20px\">\n<!--[if (mso)|(IE)]>\r\n      <table align=\"center\" style=\"width:600px;\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"600\" bgcolor=\"#789F90\">\r\n      <tr style=\"background-color:#789F90;\">\r\n    <![endif]-->\n<!--[if (mso)|(IE)]>\r\n  <td valign=\"top\" style=\"width:600px;padding-top:20px;\">\r\n<![endif]-->\n<!--[if gte mso 9]>\r\n  <table role=\"presentation\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:600px\">\r\n<![endif]-->\n<div class=\"hse-column hse-size-12\" id=\"module_1725527582477_0\">\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:5px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17429844777336\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_17429844777336_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p align=\"center\" style=\"text-align:center; font-size:20px; line-height:125%\"><span style=\"color: #ffffff;\">\ud83c\udf81<strong>\u00a0Offre exclusive Yooji x Quitoque</strong></span></p></div></div></td></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:15px 10px 0px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17429836874064\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_17429836874064_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p style=\"line-height:150%\"><span style=\"color: #ffffff;\">Pour vous permettre de tester en toute s\u00e9r\u00e9nit\u00e9, on a une offre exclusive ! Profitez de\u00a0<strong>votre premi\u00e8re box offerte (d'une valeur de 40\u20ac)</strong>, puis le\u00a0<strong>panier de fruits bio offert pendant 4 semaines</strong>\u00a0avec le code :</span></p></div></div></td></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:15px 10px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17755667994301\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_17755667994301_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p align=\"center\" style=\"line-height:150%; text-align:center\"><a data-hs-link-id=\"1\" data-hs-link-id-v2=\"hkQnR95R\" data-index=\"2\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04\" rel=\"noopener noreferrer\" style=\"color:#439764\" target=\"_blank\"><strong><span style=\"text-decoration: underline; text-decoration-color: #ffffff;\"><span style=\"font-size: 28px; color: #ffffff;\">YOOJI80</span></span></strong></a></p></div></div></td></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:10px 0px 15px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17619295740112\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"border-collapse:separate!important\">\n<tbody><tr>\n<td align=\"center\" bgcolor=\"#FFFFFF\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; border-radius:25px; cursor:auto; background-color:#FFFFFF; mso-padding-alt:10px 35px\" valign=\"middle\">\n<a data-hs-link-id=\"2\" data-hs-link-id-v2=\"A0PLBVRM\" data-index=\"3\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04\" style=\"color:#00a4bd; font-size:14px; font-family:Helvetica,Arial,sans-serif; Margin:0; text-transform:none; text-decoration:none; padding:10px 35px; display:block\" target=\"_blank\">\n<strong style=\"color:#587f73;font-weight:bold;text-decoration:none;font-style:normal;\">J'en profite maintenant !</strong>\n</a>\n</td>\n</tr>\n</tbody></table></div></td></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:15px 10px 0px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17755668871512\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_17755668871512_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p align=\"center\" style=\"text-align:center; line-height:150%\"><span style=\"color: #ffffff;\">Une fa\u00e7on simple de reprendre le rythme\u2026 sans compromis sur la qualit\u00e9 ni sur le go\u00fbt.\u00a0Testez Quitoque et simplifiez vos d\u00eeners d\u00e8s cette semaine !</span></p>\n<p align=\"center\" style=\"text-align:center; line-height:150%\">\u00a0</p>\n<p align=\"center\" style=\"text-align:center; line-height:150%\"><span style=\"color: #ffffff;\"><strong>L\u2019\u00e9quipe Yooji \ud83d\udc9a</strong></span></p></div></div></td></tr></tbody></table>\n<div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_17419660844548\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"hse-image-wrapper\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-family:Helvetica, Arial, sans-serif; color:#666666; word-break:break-word; text-align:center; padding:15px 0px 0px; font-size:0px\" valign=\"top\">\n<a data-hs-link-id=\"3\" data-hs-link-id-v2=\"jxZDJeTg\" data-index=\"4\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04\" style=\"color:#00a4bd\" target=\"_blank\">\n<img align=\"middle\" alt=\"Repas Quitoque\" class=\"stretch-on-mobile\" src=\"img_1.jpg\" style=\"outline:none; text-decoration:none; border:none; max-width:100%; font-size:16px\" width=\"600\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table></div>\n</div>\n<!--[if gte mso 9]></table><![endif]-->\n<!--[if (mso)|(IE)]></td><![endif]-->\n<!--[if (mso)|(IE)]></tr></table><![endif]-->\n</div>\n</div>\n<div class=\"hse-section hse-section-last\" id=\"section_175437795725714\" style=\"padding-left:10px; padding-right:10px\">\n<div bgcolor=\"#ffffff\" class=\"hse-column-container\" style=\"min-width:280px; max-width:600px; margin:0 auto; background-color:#ffffff\">\n<!--[if (mso)|(IE)]>\r\n      <table align=\"center\" style=\"width:600px;\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" width=\"600\" bgcolor=\"#ffffff\">\r\n      <tr style=\"background-color:#ffffff;\">\r\n    <![endif]-->\n<!--[if (mso)|(IE)]>\r\n  <td valign=\"top\" style=\"width:600px;\">\r\n<![endif]-->\n<!--[if gte mso 9]>\r\n  <table role=\"presentation\" width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:600px\">\r\n<![endif]-->\n<div class=\"hse-column hse-size-12\" id=\"column-1754377957257-0\">\n<div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_175437795725710\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"hse-image-wrapper\" role=\"presentation\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; color:#666666; word-break:break-word; text-align:center; padding:20px; font-size:0px\" valign=\"top\">\n<img align=\"middle\" alt=\"Yooji-nouveau-logo-V2-1\" src=\"img_2.webp\" style=\"outline:none; text-decoration:none; max-width:100%; font-size:16px\" width=\"120\"/>\n</td>\n</tr>\n</tbody>\n</table></div>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:10px 5px 0px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_175437795725711\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"rich_text\" id=\"hs_cos_wrapper_module_175437795725711_\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><p align=\"center\" style=\"line-height:115%; text-align:center; font-size:12px\"><span style=\"color: #587f73;\">Rejoignez notre communaut\u00e9\u00a0:</span></p></div></div></td></tr></tbody></table>\n<table cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"\" width=\"100%\"><tbody><tr><td class=\"hs_padded\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:5px 10px\"><div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_175437795725712\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table align=\"center\" class=\"hs_cos_wrapper_type_social_module\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"social-network-cell\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<table align=\"center\" class=\"hs_cos_wrapper_type_social_module_single\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"display_block_on_small_screens\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:8px 10px; line-height:1; vertical-align:middle\" valign=\"middle\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"OYJgqDwN\" data-index=\"5\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04\" style=\"color:#00a4bd; text-decoration:none !important\" target=\"_blank\"><img alt=\"Instagram\" height=\"30\" src=\"img_3.png\" style=\"outline:none; text-decoration:none; border:none; width:auto!important; height:30px!important; vertical-align:middle\" valign=\"middle\" width=\"auto\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td><td align=\"center\" class=\"social-network-cell\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<table align=\"center\" class=\"hs_cos_wrapper_type_social_module_single\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"display_block_on_small_screens\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:8px 10px; line-height:1; vertical-align:middle\" valign=\"middle\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"YtyeOYua\" data-index=\"6\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04\" style=\"color:#00a4bd; text-decoration:none !important\" target=\"_blank\"><img alt=\"TikTok\" height=\"30\" src=\"img_4.png\" style=\"outline:none; text-decoration:none; border:none; width:auto!important; height:30px!important; vertical-align:middle\" valign=\"middle\" width=\"auto\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td><td align=\"center\" class=\"social-network-cell\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<table align=\"center\" class=\"hs_cos_wrapper_type_social_module_single\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"display_block_on_small_screens\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:8px 10px; line-height:1; vertical-align:middle\" valign=\"middle\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"XJ4j1wJq\" data-index=\"7\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804\" style=\"color:#00a4bd; text-decoration:none !important\" target=\"_blank\"><img alt=\"Facebook\" height=\"30\" src=\"img_5.png\" style=\"outline:none; text-decoration:none; border:none; width:auto!important; height:30px!important; vertical-align:middle\" valign=\"middle\" width=\"auto\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td><td align=\"center\" class=\"social-network-cell\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<table align=\"center\" class=\"hs_cos_wrapper_type_social_module_single\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"display_block_on_small_screens\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:8px 10px; line-height:1; vertical-align:middle\" valign=\"middle\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"sGcT1LYU\" data-index=\"8\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204\" style=\"color:#00a4bd; text-decoration:none !important\" target=\"_blank\"><img alt=\"LinkedIn\" height=\"30\" src=\"img_6.png\" style=\"outline:none; text-decoration:none; border:none; width:auto!important; height:30px!important; vertical-align:middle\" valign=\"middle\" width=\"auto\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td><td align=\"center\" class=\"social-network-cell\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word\">\n<table align=\"center\" class=\"hs_cos_wrapper_type_social_module_single\" role=\"presentation\" style=\"width: auto; text-align: center; margin: 0 auto; \">\n<tbody>\n<tr>\n<td align=\"center\" class=\"display_block_on_small_screens\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; padding:8px 10px; line-height:1; vertical-align:middle\" valign=\"middle\">\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"yjxoebGK\" data-index=\"9\" href=\"https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04\" style=\"color:#00a4bd; text-decoration:none !important\" target=\"_blank\"><img alt=\"YouTube\" height=\"30\" src=\"img_7.png\" style=\"outline:none; text-decoration:none; border:none; width:auto!important; height:30px!important; vertical-align:middle\" valign=\"middle\" width=\"auto\"/>\n</a>\n</td>\n</tr>\n</tbody>\n</table>\n</td>\n</tr>\n</tbody>\n</table>\n</div></td></tr></tbody></table>\n<div class=\"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module\" data-hs-cos-general-type=\"widget\" data-hs-cos-type=\"module\" id=\"hs_cos_wrapper_module_175437795725713\" style=\"color: inherit; font-size: inherit; line-height: inherit;\"><table cellpadding=\"0\" cellspacing=\"0\" class=\"hse-footer hse-secondary\" role=\"presentation\" style=\"font-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padding:0\" width=\"100%\">\n<tbody>\n<tr>\n<td align=\"center\" style=\"font-family:Helvetica, Arial, sans-serif; font-size:16px; color:#666666; word-break:break-word; text-align:center; margin-bottom:0; line-height:135%; padding:10px 20px\" valign=\"top\">\n<p style=\"font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:normal;text-decoration:none;font-style:normal;color:#587f73\">\r\n          Yooji, Agropole Entreprise, Estillac, Nouvelle-Aquitaine 47310, France\r\n        </p>\n<p>\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"SFRZzEXk\" data-index=\"10\" data-unsubscribe=\"true\" href=\"https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274\" style=\"font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#587f73; font-weight:normal; text-decoration:underline; font-style:normal\" target=\"_blank\">Se d\u00e9sabonner</a>\n<a data-hs-link-id=\"0\" data-hs-link-id-v2=\"qjPJqCop\" data-index=\"11\" data-unsubscribe=\"true\" href=\"https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&amp;utm_campaign=10925613-YOOJIxQUITOQUE&amp;utm_source=hs_email&amp;utm_medium=email&amp;utm_content=420518274&amp;_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&amp;_hsmi=420518274\" style=\"font-family:Helvetica,Arial,sans-serif; font-size:10px; color:#587f73; font-weight:normal; text-decoration:underline; font-style:normal\" target=\"_blank\">G\u00e9rer les pr\u00e9f\u00e9rences</a>\n</p>\n</td>\n</tr>\n</tbody>\n</table></div>\n</div>\n<!--[if gte mso 9]></table><![endif]-->\n<!--[if (mso)|(IE)]></td><![endif]-->\n<!--[if (mso)|(IE)]></tr></table><![endif]-->\n</div>\n</div></div>\n</td>\n</tr>\n</tbody></table>\n</div>\n<img alt=\"\" border=\"0\" height=\"1\" src=\"\" style=\"display:none !important;\" width=\"1\"/></body></html>";
+        const emailLinks = [{"index": 1, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3mxW4ysPTw2nJ_KPW5RxSKS95XpFZN6NV95J72P0DW5xC9pL7NNXR5W5bscj_6t5JssW6XxKxG1ly8bJW2GW2KZ8Xgk7KW4f3qjx8Vzd9KW5psS7h77rQWCW5vc-t92_Xr7ZW9gbRfb6kP028W3GcG0d1d0y0CW7G3zr_7YDHC1W7FMpPb6K9ChMW49PkLN8JRNk4W2rKDSP7kQhHkW2tBxm21R2TgVW5zYK2Q4x_q3QW71C24w6XlPn0W2dKZBg1d1PMDW2jRnmd7tF8C3N3XWzNPYDKK3W1PhsYQ5cxZXvW5SQ8wb7tH7tVW3dDHzd8MXmRjW1pH6mQ1JJXWzW2MP44L3bM6Y3W2_Rkg558tqrjf8lM18d04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 2, "txt": "YOOJI80", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lDW6kjxX37qTJj5W5XKJVL5pX7-hW4PJnVC6FpNbRW24zxgp4XWlt2W2kyCxx6xx9nyW3f0-VK6mzvd5V6_GJq8FSSxgW8rFzQq9fFF-cW5_kvn47bsT2tMZmGKmbwTtLW6w8lCQ8QqXB7W7YsXTs9fD9JLW33S7fR37hNzVW5_grDk8wD0kFW3Z22vr4rXXlwN5sDGbngW2W6W1-ZKRg1zcK2CW5z29y76p-_mkVtcgky42dRFMW1nyFwV1YVvM-VgBFWr5KmCBdW4nJJ7F7HtLf_W7DBb-v5hqmVzW575PyD86m7RHW7Y8ptt2X7TrGW3rRyrL8Scr-CW7qH42D3B0qkyVxGbLD5scKMMf8DhysH04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 3, "txt": "J'en profite maintenant !", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lzW3RMndw3SvCG3W3n-qMl83Q0LwVCw2s01cYvhjW7skbkq2z8h7_W5cldxH4gtX3vW8YRhYD2Wn9L9N1rJ4hydCth3W3wTkcD6D37mjW5MKKsm1RJcdBW4r24wD3Fd1VQW6Lvs1k8Kp2HXW477Jdn7f5b0XW4KYD8H2JJfjTW8m5mls4qJ_Y3VxZ6J16Tnxy1W2T2KHd2zMZmGW8fqLRs9lCKWyW2tJ0Qq4Nr0BMW5cPHP-2wRXnLW1Dv1HB6JzH12W6dBwl77NhS3_W30zfPT6tqJdYW34Ynxk2xMSBSW6TXt5f7BH2H7W9j0zzC9gm4GzW4qwf2j2fbv6sW8LL5Xx8JG5vzW2Hx3HH95F3t5f2FF0JF04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 4, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3hKBlW8wLKSR6lZ3lCW4zJnzH247fwSW1yBf_91mxgZSW7McbVT15b2kFVnyl7g60cpzJW770K5X8RvN9DW5X2_P03lnJcwW6VfHQq6yBPxMW3Fxx_v2rjGqBW72-Cr_3mGZZqW7thRcG5JbjrKW7DtmRs6mpr5SVn-TJv1r0WqqW3DGbGm3W-nvhW1s5Rn139H-fGW7z8T-q8ccFV7W3gfDLR8DstFLN2B_-l9nfWBhW2zkG706qG35_W4l2MwR2JbxxQW4yXLX45JNTLKW4RB70s7WYLzbV2LBRB8L7q00W7sV_Gm11hhVQW91sY3W8jX126W5yPKTk4fhTYnN2_FMqWWMKkDW4z5zp995g5DMW99Gb1S5rbfFJf8qjc8H04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 5, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3kJW94qGpt5nPnnNW2Bbp7H6VPmPgW5PBMH45h5HQRW2glbFt67mQlDW5PCSrV4qH5NKV4YT_w7ClV9SW916ptq8zB02sW352xBW94srtVW3D018h239c8sW8Yq3qc1R_6RMW4PC2_298c-DWN1cNc2j-QNN_W7-JgRz6V7_3nW19BhvR4DfbvMW9f54ck6FdZ-4N5Lk0KYNZtBYW32HNyZ42sR2SW8GKXx_761KytW7n85RQ2B3vB9W65lRFY50Nm0KW5Q0KZJ2lJHRWW28SjGY244r2mW73zBQ92wGLfGW5cSLmb688WlSW91KTHJ1M2dG7W8J9-PQ8kn9qsf82LZ1q04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 6, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nhW5t4kV58x9ctyW7lZNS13LWv4qW2ry5Wf1l_TddW6xXB_M2nmzSDW4x0W3n6jcc_bW5lSYjx1fXrHBW8svkgz1ZFjmWW4gy1TM14M-54W66nlnS8xSxxWW26NZNp3rsrP4W99h01t1BqpZyW7B9pFb8PLXmzW6WbnXK54S4f1W3CLvvT9bM_sKW6JylGQ1g2f1zW67FBZ-37DF01W3Qg58M4HKFMmW9dJMBc5c_C3FW5X6Z3c1GqPdYW3gRgGm6qxm0-W4yck3_1blgKYW3QwkJm1X270cW5NJqHW9l25pkN4q7wbn_TDjXW2-5h-r3WVZs1W3gGVwl38Shlkf7mpsCs04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 7, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3nsW1nJZj54fQ-0sW8MjwGC5S8JFSW1Z-pfK31wfzcW6R5Hmp6CwHKJW3slVxZ7R2r2TW7zTkK_7CfLjzW6l9nlV74XR3FVDgP7g43ZhgLW2RwDsx64JZgxW8bn_TV2SnXlLW2QJYgK65_RsyV5D9l97_W2PnN6FLdq7RG48dMrK4HcnkjjFN6Gx8HrdZvY1W6g1pdm1RpQkQW4D3Wfw7VkBrgW1gLhKQ87LLglW3-Jxyl4spvkkMsLmXBzZw1MW5fjHg21LdYCVW9dJfFs7_WXdCW7nTGJP7B2S6lW1HF5v32Y_PrVW3WCst6217mHRW2Gd7nS8TFMD3f5mrpY804"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 8, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkH3qn9qW8wLKSR6lZ3pnW45fBQr1Zq-51W3kl2Fg58L6FCW1WTt_K54S89rW2MPnyy1T6TlDW8BCh726qFkWfVbC9vZ5RxpDgW1G8Tkr4Cx4rmW5-2F1s1nDPYNW4FCxCR8qg1-rW3KTpzk3tSbxsV3qSmX2HB5hQW8rM8Cs8GfX0CW7HsssY7h45nyW2_4xLS2-l5w1W27KrGF2-kxD_W978hGF5F5lLwW5gT4zg8sb4WSVMGnDg1nbDTVVwSh3G4jfLXCW6b-rgr7GgXgsW3hg5jg5zww51W7n41nf5j0SLVW3MgLQC2VCr1xW5xY77M67TbMhW9jRxYN13RY7lW17MR966vs_97W3g6HYt87B2Z5N97vWNyrYpQBf62Qmh204"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 9, "txt": "", "original_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04", "final_url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04", "domain": "d13dCg04.na1.hubspotlinks.com", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://d13dCg04.na1.hubspotlinks.com/Ctc/5E+113/d13dCg04/VXbtW-8YQQz2W6Tj9gl5glBKGVZjc4S5Pxv9_N5q1hkn3qn9qW7Y8-PT6lZ3lZW2Q0c6l2fLZxrW5cD2Yt6d0YjxW5WwFKF2R27GcN8RnqgBx3gZMW2S4z0f575HqrW8_zfYz2yz2qfW56d3Cs3_54KQW6JXVnv8lFGsYW4yQc-K2VRC_PW4lVW3f3_R0vpW32fW9Q2ff6b3W3C1Ly92fnPnRW6nhBWm6d_g2SW3np5n-7HrHDvW1Mh3wX4xySWxW4yrBqw5cwm1NW5BydHx52W4yyW4969SG6pJmNZW6dzhH25FNP4DVlmqD_7BHpT7W2yggG_1_7FbrW72YjjN2rZHmbVWkJQF1GklmDW36QJMC3Q2McxW8YS4ql84HBmWW11KQ9g4v80fKf20-xRM04"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 10, "txt": "Se d\u00e9sabonner", "original_url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274", "final_url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274", "domain": "hs-9012182.s.hubspotemail.net", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/direct?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274"}], "audit_date": "2026-05-26 19:02:28"}, {"index": 11, "txt": "G\u00e9rer les pr\u00e9f\u00e9rences", "original_url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274", "final_url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274", "domain": "hs-9012182.s.hubspotemail.net", "is_tracking": false, "is_secure": true, "is_dev": false, "redirect_chain": [{"status": 200, "url": "https://hs-9012182.s.hubspotemail.net/hs/preferences-center/fr/page?data=W2nXS-N30h-HbW3bhp0v2zTJZHW3N-NJ541FLzGW34xqw53B_lRFW49TNrm3P4bs_W3V_W3f4cxkCYW3QBlSS3jc3Z-W1Vdtg82-Mp1SW45HkGB2-fhyJW1_bCQl47lFtMW1LlMbN3M4ThpW1YZZ_h3b1gV8W2KQr_x3P8RkGW49lZpy2WrhG9W2qXg9S3ZGsRVW2vK0Rg32Jq0rW3LHR1j233WQLW1VbQn_1ZwTtmW38hF-G2xyZskW4cg-Hl3R6Z-lW2YqHcC3H0gXqW1L3M7t1Q4w64W2vC6H04kf4lLW1Xsnlq4rhMtbW1QyB1t253KF9W4cvypq38Bs1YW24SJS734yLrsW2qRh6t3VPzGYW47DLl_30dgS-W2Hm-DZ47QG84W252v9H32y_pWW3_SHwg3ZMzR-W3j07cB1BtQJQW2YLjkk32m7tJW2HsvV62B39V6W1R_j0n4fN0FfW47wqb_3CcSYbW3___sf3BNHQVW2sR2xM1BNcxjW2nXtPt2D1FQlW3F9Gd63bwsBXW2zZmc93j8-n5W3ZvlGH1LB7qBW4hFVbV49M44dW2CtPlp3T6k9RW49BSw62MqsHBW385FPb2WKjP0W4hLVqS3LVYCLW23l_003XGL2_W2ztWvp2D1gKhW3g6czH34jnHvW2nF54Z3CfB9zW2WNzly2CCpc1W2WGLZW3P1Hn-W4rjDqZ4tG9tTW47QFF03J-P7FW4hs8M92MQdF-W2FZLj8214yHKW2KW3h_25fPB30&utm_campaign=10925613-YOOJIxQUITOQUE&utm_source=hs_email&utm_medium=email&utm_content=420518274&_hsenc=p2ANqtz-9Ag8WwuyDAf14_NYJ5PYSicFt6aTXKaq3IGWOUP0FCaaX3vqCLN_NT5HLMMwhexvX6AIuSkAFLP6wFKLGzLp8qFQoOvg&_hsmi=420518274"}], "audit_date": "2026-05-26 19:02:28"}];
+        const frame = document.getElementById('emailFrame');
+        let linksHighlighted = false;
+        let overlayElements = [];
+        let lastHighlightedIdx = null;
+        let spotlightTimeout = null;
+
+        // ── i18n ──────────────────────────────────────────────────────────────
+        const STRINGS = {
+            en: {
+                tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LINKS',
+                meta_sender: 'Sender', meta_crm: 'CRM', meta_subject: 'Subject',
+                meta_preheader: 'Preheader', meta_received: 'Received',
+                meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
+                filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
+                show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
+                lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
+                sidebar_toggle_title: 'Toggle Links Panel',
+                audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
+                audit_error: 'Audit Finished (Error Found)',
+                legend_pass: 'PASS: No issues', legend_warn: 'WARN: Needs attention', legend_fail: 'FAIL: Critical issue',
+            },
+            fr: {
+                tab_meta: 'META', tab_pixels: 'PIXELS', tab_links: 'LIENS',
+                meta_sender: 'Expéditeur', meta_crm: 'CRM', meta_subject: 'Sujet',
+                meta_preheader: 'Prévisualisation', meta_received: 'Reçu le',
+                meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
+                filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
+                show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
+                lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
+                sidebar_toggle_title: 'Panneau des liens',
+                audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
+                audit_error: 'Audit terminé (Erreur détectée)',
+                legend_pass: 'PASS: Aucun problème', legend_warn: 'WARN: Attention requise', legend_fail: 'FAIL: Problème critique',
+            }
+        };
+
+        function detectLang() {
+            const stored = localStorage.getItem('lang');
+            if (stored && STRINGS[stored]) return stored;
+            return (navigator.language || '').startsWith('fr') ? 'fr' : 'en';
+        }
+
+        let currentLang = detectLang();
+
+        function applyStrings(lang) {
+            const s = STRINGS[lang] || STRINGS.en;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (s[key] !== undefined) el.textContent = s[key];
+            });
+            document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                const key = el.dataset.i18nTitle;
+                if (s[key] !== undefined) el.title = s[key];
+            });
+            document.getElementById('htmlRoot').lang = lang;
+            // Sync highlight button text with current state
+            const highlightBtn = document.getElementById('highlightBtnText');
+            if (highlightBtn) highlightBtn.textContent = linksHighlighted ? s.hide_links : s.show_links;
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('lang', currentLang);
+            applyStrings(currentLang);
+        });
+        // ── end i18n ──────────────────────────────────────────────────────────
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).style.display = 'block';
+            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
+        }
+
+        function toggleExpand(card) {
+            card.classList.toggle('expanded');
+        }
+
+        function init() {
+            const doc = frame.contentDocument;
+            doc.open();
+            doc.write(content);
+            doc.close();
+
+            const style = doc.createElement('style');
+            style.innerHTML = `
+                :root {
+                    --spotlight-dim: rgba(0, 0, 0, 0.6);
+                    --spotlight-glow: #50FA7B;
+                }
+                [data-theme="dark"] {
+                    /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
+                    --spotlight-dim: rgba(255, 255, 255, 0.7);
+                    /* And we use the complement of green so it inverts back to green */
+                    --spotlight-glow: #AF0584;
+                }
+                body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
+                /* Mobile fallback for emails whose own responsive logic is
+                   missing or insufficient. Targeted selectors only — must NOT
+                   override class-based percent widths like .m_w50p (specificity
+                   0,1,0 vs td[width] 0,1,1). */
+                @media screen and (max-width: 480px) {
+                    /* Stripo / Mailchimp ghost spacer imgs (1×1 px,
+                       max-height:0) lock desktop width via inline width:600px.
+                       Hide them on mobile so the parent TD can collapse. */
+                    img[style*="max-height:0"], img[height="1"] { display: none !important; }
+                    /* Inline min-width pins to desktop width — neutralize. */
+                    [style*="min-width:"] { min-width: 0 !important; }
+                    /* Canonical wrapper tables: by width attribute, by inline
+                       style="width:NNNpx", and by Stripo class. */
+                    table[width="640"], table[width="600"],
+                    table[width="650"], table[width="700"],
+                    table[style*="width:600px"], table[style*="width: 600px"],
+                    table[style*="width:640px"], table[style*="width: 640px"],
+                    table[style*="width:650px"], table[style*="width: 650px"],
+                    table[style*="width:700px"], table[style*="width: 700px"],
+                    table.es-wrapper {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                    }
+                    /* Cells with inline pixel widths: release them. */
+                    td[style*="width:600px"], td[style*="width: 600px"],
+                    td[style*="width:640px"], td[style*="width: 640px"] {
+                        width: auto !important;
+                        max-width: 100% !important;
+                    }
+                    /* Hero imgs (canonical desktop widths) — only target large
+                       widths so small logos (e.g. width="77") stay intact. */
+                    img[width="600"], img[width="640"], img[width="650"],
+                    img[width="700"], img[width="750"], img[width="800"],
+                    img[style*="width:600px"], img[style*="width: 600px"],
+                    img[style*="width:640px"], img[style*="width: 640px"] {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        height: auto !important;
+                    }
+                    /* Universal img safety cap (does not stretch). */
+                    img { max-width: 100% !important; height: auto !important; }
+                    body { overflow-x: hidden !important; }
+                }
+                .link-outline {
+                    outline: 2px solid #8BE9FD !important; /* Cyan */
+                    outline-offset: 1px !important;
+                    transition: outline 0.2s ease;
+                }
+                .link-highlight-pulse {
+                    animation: link-pulse 2s infinite;
+                }
+                @keyframes link-pulse {
+                    0% { outline-color: #8BE9FD; outline-width: 2px; }
+                    50% { outline-color: #BD93F9; outline-width: 4px; outline-offset: 3px; }
+                    100% { outline-color: #8BE9FD; outline-width: 2px; }
+                }
+                .link-flash-spotlight {
+                    position: relative !important;
+                    z-index: 2147483647 !important;
+                    outline: 8px solid var(--spotlight-glow) !important;
+                    outline-offset: 4px !important;
+                    box-shadow: 0 0 0 10000px var(--spotlight-dim), 0 0 40px var(--spotlight-glow) !important;
+                    background-color: rgba(255, 255, 255, 1) !important;
+                    color: #282a36 !important;
+                }
+            `;
+            doc.head.appendChild(style);
+
+            const theme = (typeof _resolveInitialTheme === 'function')
+                ? _resolveInitialTheme()
+                : (localStorage.getItem('theme') || 'light');
+            if (theme === 'dark') applyTheme('dark');
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            // Defer until after layout so getBoundingClientRect() returns the real frame width
+            if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
+        }
+
+        // Failed images panel: lazily fetch failed_images.json (written by the parser
+        // when image localization fails — usually ESP CDN Referer blocks).
+        let _failedImagesLoaded = false;
+        function _escapeHtml(s) {
+            return String(s == null ? '' : s)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        async function _loadFailedImages() {
+            if (_failedImagesLoaded) return;
+            const list = document.getElementById('failedImagesList');
+            if (!list) return;
+            try {
+                const r = await fetch('failed_images.json', { cache: 'no-store' });
+                if (!r.ok) throw new Error('http ' + r.status);
+                const items = await r.json();
+                if (!Array.isArray(items) || items.length === 0) {
+                    list.innerHTML = '<li class="fip-empty">Aucun détail disponible.</li>';
+                } else {
+                    list.innerHTML = items.map(it => {
+                        const url = _escapeHtml(it.url || '');
+                        const reason = _escapeHtml(it.reason || 'unknown');
+                        return '<li class="fip-item"><a href="' + url + '" target="_blank" rel="noopener">'
+                            + url + '</a><span class="fip-reason">' + reason + '</span></li>';
+                    }).join('');
+                }
+            } catch (e) {
+                list.innerHTML = '<li class="fip-empty">Impossible de charger failed_images.json (' + _escapeHtml(e.message) + ').</li>';
+            }
+            _failedImagesLoaded = true;
+        }
+        function toggleFailedImagesPanel() {
+            const panel = document.getElementById('failedImagesPanel');
+            if (!panel) return;
+            const willOpen = panel.hasAttribute('hidden');
+            if (willOpen) {
+                panel.removeAttribute('hidden');
+                _loadFailedImages();
+            } else {
+                panel.setAttribute('hidden', '');
+            }
+        }
+
+        function setMode(mode) {
+            const frameEl = document.getElementById('deviceFrame');
+            const iframeEl = document.getElementById('emailFrame');
+
+            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+            const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
+            if (btn) btn.classList.add('active');
+
+            // Switch mode — CSS handles sizing via data-mode attribute
+            frameEl.dataset.mode = mode;
+            if (mode === 'desktop') {
+                iframeEl.classList.remove('no-scrollbar');
+            } else {
+                iframeEl.classList.add('no-scrollbar');
+            }
+
+            // Update overlays if visible
+            if (linksHighlighted) {
+                setTimeout(updateOverlays, 150);
+            }
+
+            setTimeout(() => {
+                if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
+            }, 150);
+        }
+
+        function highlightLink(idx) {
+            const doc = frame.contentDocument;
+            const link = doc.querySelector(`[data-index="${idx}"]`);
+            if (link) {
+                // Toggle Logic: If clicking the same link again, remove highlight
+                if (lastHighlightedIdx === idx) {
+                    doc.querySelectorAll('.link-flash-spotlight').forEach(el => el.classList.remove('link-flash-spotlight'));
+                    if (!linksHighlighted) {
+                        link.classList.remove('link-outline');
+                    }
+                    lastHighlightedIdx = null;
+                    if (spotlightTimeout) clearTimeout(spotlightTimeout);
+                    return;
+                }
+
+                lastHighlightedIdx = idx;
+
+                // Ensure it's scrolled into view
+                link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Remove existing flash/spotlight from others
+                doc.querySelectorAll('.link-flash-spotlight').forEach(el => el.classList.remove('link-flash-spotlight'));
+
+                // Add spotlight class (this dims the rest of the iframe via large box-shadow)
+                link.classList.add('link-flash-spotlight');
+
+                // If Show Links is off, temporarily show this one's overlay/outline
+                const wasHighlighted = linksHighlighted;
+                if (!wasHighlighted) {
+                    link.classList.add('link-outline');
+                }
+
+                if (spotlightTimeout) clearTimeout(spotlightTimeout);
+                spotlightTimeout = setTimeout(() => {
+                    link.classList.remove('link-flash-spotlight');
+                    if (!wasHighlighted) {
+                        link.classList.remove('link-outline');
+                    }
+                    if (lastHighlightedIdx === idx) lastHighlightedIdx = null;
+                }, 4000); // 4 seconds spotlight
+            }
+        }
+
+        function toggleHighlightLinks() {
+            linksHighlighted = !linksHighlighted;
+            const s = STRINGS[currentLang] || STRINGS.en;
+            const btn = document.getElementById('highlightBtnText');
+            btn.textContent = linksHighlighted ? s.hide_links : s.show_links;
+
+            if (linksHighlighted) {
+                createOverlays();
+            } else {
+                removeOverlays();
+            }
+        }
+
+        function createOverlays() {
+            removeOverlays();
+            const doc = frame.contentDocument;
+            const links = doc.querySelectorAll('[data-index]');
+            const container = document.getElementById('linkOverlays');
+            const frameRect = frame.getBoundingClientRect();
+
+            links.forEach(link => {
+                const idx = link.getAttribute('data-index');
+                let rect = link.getBoundingClientRect();
+
+                // Advanced Dimension Check: If element is "empty" or "inline-collapsed", check children or use parent
+                if (rect.width <= 2 || rect.height <= 2) {
+                    const children = link.querySelectorAll('img, table, div, span, p');
+                    let found = false;
+                    for (let child of children) {
+                        const childRect = child.getBoundingClientRect();
+                        if (childRect.width > 2 && childRect.height > 2) {
+                            rect = childRect;
+                            found = true;
+                            break;
+                        }
+                    }
+                    // If still no size, it might be a text-only link that is display: inline
+                    // Try to get a range client rect if possible
+                    if (!found) {
+                        try {
+                            const range = doc.createRange();
+                            range.selectNodeContents(link);
+                            const rangeRect = range.getBoundingClientRect();
+                            if (rangeRect.width > 0) {
+                                rect = rangeRect;
+                            }
+                        } catch (e) {
+                            console.warn("Could not calculate range rect for link", idx);
+                        }
+                    }
+                }
+
+                // Final safety skip
+                if (rect.width === 0 || rect.height === 0) return;
+
+                // Clipping Logic: Only show badge if link is at least partially visible in iframe viewport
+                // rect is relative to iframe viewport
+                const iframeHeight = frame.clientHeight;
+                const iframeWidth = frame.clientWidth;
+
+                // If the link is fully out of view, skip it
+                if (rect.bottom < 0 || rect.top > iframeHeight || rect.right < 0 || rect.left > iframeWidth) {
+                    return;
+                }
+
+                // Create overlay badge
+                const badge = document.createElement('div');
+                badge.className = 'link-overlay-badge';
+                badge.textContent = idx;
+
+                // Position badge: top-right calculation relative to main window
+                let badgeX, badgeY;
+                if (rect.width < 15) {
+                    badgeX = frameRect.left + rect.left + (rect.width / 2) - 10;
+                    badgeY = frameRect.top + rect.top - 20;
+                } else {
+                    badgeX = frameRect.left + rect.left + rect.width - 6;
+                    badgeY = frameRect.top + rect.top - 12;
+                }
+
+                // Ensure the badge itself is clipped by the frame boundaries
+                // (e.g. don't let it overlap the header if the link is at the very top edge)
+                if (badgeY < frameRect.top) {
+                    // If the link is partially visible at top but badge would be outside,
+                    // we can either hide it or stick it to the edge. Let's hide for clean look.
+                    return;
+                }
+                if (badgeY > frameRect.bottom - 20) {
+                    return;
+                }
+
+                badge.style.cssText = `
+                    position: fixed;
+                    left: ${badgeX}px;
+                    top: ${badgeY}px;
+                    background: #6AE7C8;
+                    color: #0C0D10;
+                    font-size: 11px;
+                    font-weight: 800;
+                    padding: 0px 6px;
+                    min-width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    z-index: 1000;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.8);
+                    text-align: center;
+                    border: none;
+                    pointer-events: none;
+                    opacity: 1;
+                    transition: transform 0.2s ease;
+                `;
+                container.appendChild(badge);
+                overlayElements.push(badge);
+
+                // Add highlight to link in iframe
+                link.classList.add('link-outline');
+                link.classList.add('link-highlight-pulse');
+            });
+        }
+
+        function removeOverlays() {
+            const container = document.getElementById('linkOverlays');
+            container.innerHTML = '';
+            overlayElements = [];
+
+            // Remove outlines from iframe links
+            const doc = frame.contentDocument;
+            if (doc) {
+                const links = doc.querySelectorAll('[data-index]');
+                links.forEach(link => {
+                    link.classList.remove('link-outline');
+                    link.classList.remove('link-highlight-pulse');
+                    link.classList.remove('link-flash-spotlight');
+                });
+            }
+        }
+
+        function updateOverlays() {
+            if (linksHighlighted) {
+                createOverlays();
+            }
+        }
+
+        // Update overlays logic (both scroll and resize debounced via RAF)
+        frame.addEventListener('load', () => {
+            let rafPending = false;
+            frame.contentWindow.addEventListener('scroll', () => {
+                if (linksHighlighted && !rafPending) {
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        rafPending = false;
+                    });
+                }
+            });
+            let resizePending = false;
+            frame.contentWindow.addEventListener('resize', () => {
+                if (linksHighlighted && !resizePending) {
+                    resizePending = true;
+                    requestAnimationFrame(() => {
+                        updateOverlays();
+                        resizePending = false;
+                    });
+                }
+            });
+        });
+
+
+
+        function copyLink(btn) {
+            const url = btn.dataset.url;
+            navigator.clipboard.writeText(url).then(() => {
+                const originalHtml = btn.innerHTML;
+                // Temporarily show checkmark
+                btn.innerHTML = '<span style="color: var(--accent-green); font-weight: bold;">✓</span>';
+                btn.classList.add('copy-success');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.classList.remove('copy-success');
+                }, 1500);
+            });
+        }
+
+        async function runAudit(btn) {
+            const url = btn.dataset.url;
+            const index = parseInt(btn.dataset.index);
+            // Find parent elements
+            const cardBody = btn.closest('.card-v2-body');
+            const logContainer = cardBody.querySelector('.audit-log-container');
+            const timeline = logContainer.querySelector('.audit-timeline');
+            const statusText = logContainer.querySelector('.audit-status-text');
+            const linkData = emailLinks.find(l => l.index === index);
+
+            // Disable button during audit
+            btn.disabled = true;
+            const originalTitle = btn.title;
+            btn.title = 'Auditing...';
+
+            // Reset UI
+            const _s = STRINGS[currentLang] || STRINGS.en;
+            logContainer.classList.add('active');
+            timeline.innerHTML = '';
+            statusText.innerHTML = _s.audit_initiating;
+            statusText.className = 'audit-status-text text-yellow';
+
+            // Allow animation
+            await new Promise(r => setTimeout(r, 300));
+
+            try {
+                if (linkData && linkData.redirect_chain && linkData.redirect_chain.length > 0) {
+                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${linkData.audit_date}</small>` : '';
+                    statusText.innerHTML = 'Analyzing Redirection Chain...' + auditDateStr;
+
+                    let containsGtinsi = false;
+                    for (let i = 0; i < linkData.redirect_chain.length; i++) {
+                        const step = linkData.redirect_chain[i];
+                        const isLast = i === linkData.redirect_chain.length - 1;
+                        const isGtinsi = step.url && step.url.includes('gtinsi.de');
+                        if (isGtinsi) containsGtinsi = true;
+
+                        const stepClass = isGtinsi ? 'audit-step highlighted' : 'audit-step';
+
+                        // Display the step
+                        if (!isLast) {
+                            // It's a redirect step
+                            const nextStep = linkData.redirect_chain[i + 1];
+                            timeline.innerHTML += `<div class="${stepClass}"><strong>${step.status}</strong> &rarr; ${nextStep.url}</div>`;
+                        } else {
+                            // It's the final destination
+                            const statusColor = (step.status === 200) ? 'text-green' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'text-red' : 'text-cyan');
+                            const statusIcon = (step.status === 200) ? 'final' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'error' : '');
+
+                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${step.status || 'Done'}</strong> &bull; ${step.url}</div>`;
+
+                            // Update status text
+                            if (step.status === 200) {
+                                statusText.innerHTML = containsGtinsi ? 'Verification Complete (getinside Detected)' : _s.audit_finished;
+                            } else if (step.status === 'Timeout') {
+                                statusText.innerHTML = 'Request Timed Out';
+                            } else if (step.status >= 400 || step.status === 'Error') {
+                                statusText.innerHTML = _s.audit_error;
+                            } else {
+                                statusText.innerHTML = _s.audit_finished;
+                            }
+
+                            statusText.className = `audit-status-text ${statusColor}`;
+                            btn.style.color = (step.status === 200) ? 'var(--accent-green)' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'var(--accent-red)' : 'var(--accent-cyan)');
+                        }
+                        await new Promise(r => setTimeout(r, 400));
+                    }
+                } else {
+                    // Fallback for archives created before this feature or if resolution failed
+                    timeline.innerHTML += `<div class="audit-step"><strong>INFO</strong> Pre-calculated redirect data missing.</div>`;
+                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${url}</div>`;
+                    await new Promise(r => setTimeout(r, 600));
+                    timeline.innerHTML += `<div class="audit-step final"><strong>ACTION</strong> Please re-archive this email to enable full redirect auditing.</div>`;
+                    statusText.innerHTML = 'Direct Link Check';
+                    statusText.className = 'audit-status-text text-yellow';
+                    btn.style.color = 'var(--accent-yellow)';
+                }
+
+            } catch (e) {
+                console.error("Audit error:", e);
+                statusText.innerHTML = 'Analysis Error';
+                statusText.className = 'audit-status-text text-red';
+            } finally {
+                btn.disabled = false;
+                btn.title = originalTitle;
+            }
+        }
+
+        async function testPixel(btn) {
+            const url = btn.dataset.url;
+            const cardBody = btn.closest('.card-v2-body');
+            const logContainer = cardBody.querySelector('.audit-log-container');
+            const timeline = logContainer.querySelector('.audit-timeline');
+            const statusText = logContainer.querySelector('.audit-status-text');
+
+            btn.disabled = true;
+            logContainer.classList.add('active');
+            timeline.innerHTML = '';
+            statusText.innerHTML = 'Sending pixel request…';
+            statusText.className = 'audit-status-text text-yellow';
+
+            await new Promise(r => setTimeout(r, 300));
+
+            try {
+                const testUrl = url + (url.includes('?') ? '&' : '?') + '_pxtest=' + Date.now();
+                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> &rarr; ${url}</div>`;
+                await new Promise(r => setTimeout(r, 400));
+
+                await new Promise((resolve, reject) => {
+                    const img = new Image();
+                    const timer = setTimeout(() => {
+                        img.src = '';
+                        reject(new Error('Timeout'));
+                    }, 7000);
+                    img.onload = () => { clearTimeout(timer); resolve('loaded'); };
+                    img.onerror = () => { clearTimeout(timer); resolve('onerror'); };
+                    img.src = testUrl;
+                }).then(result => {
+                    if (result === 'loaded') {
+                        timeline.innerHTML += `<div class="audit-step final"><strong>200</strong> &bull; Pixel responded with an image</div>`;
+                        statusText.innerHTML = 'Pixel Active';
+                        statusText.className = 'audit-status-text text-green';
+                        btn.style.color = 'var(--accent-green)';
+                    } else {
+                        timeline.innerHTML += `<div class="audit-step"><strong>Fired</strong> &bull; Request sent (non-image response or blocked)</div>`;
+                        statusText.innerHTML = 'Pixel Fired (no image returned)';
+                        statusText.className = 'audit-status-text text-yellow';
+                        btn.style.color = 'var(--accent-yellow)';
+                    }
+                });
+            } catch (e) {
+                if (e.message === 'Timeout') {
+                    timeline.innerHTML += `<div class="audit-step error"><strong>Timeout</strong> &bull; No response after 7s</div>`;
+                    statusText.innerHTML = 'Pixel Timed Out';
+                    statusText.className = 'audit-status-text text-red';
+                    btn.style.color = 'var(--accent-red)';
+                } else {
+                    timeline.innerHTML += `<div class="audit-step error"><strong>Error</strong> &bull; ${e.message}</div>`;
+                    statusText.innerHTML = 'Pixel Unreachable';
+                    statusText.className = 'audit-status-text text-red';
+                    btn.style.color = 'var(--accent-red)';
+                }
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        async function downloadEmailZip() {
+            try {
+                const zip = new JSZip();
+                const subject = "\ud83c\udf81 Votre premi\u00e8re box Quitoque offerte".replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                const timestamp = new Date().toISOString().split('T')[0];
+                const zipFilename = `${subject}_${timestamp}.zip`;
+
+                // Get all images from the current directory
+                const currentPath = window.location.pathname;
+                const emailDir = currentPath.substring(0, currentPath.lastIndexOf('/'));
+
+                // Find all image references in the HTML
+                const doc = frame.contentDocument;
+                const images = doc.querySelectorAll('img[src]');
+
+                // Create a folder for images
+                const imgFolder = zip.folder("images");
+
+                // Download each image and track the mapping
+                let downloadCount = 0;
+                const imagePromises = [];
+                const imageMapping = new Map(); // old path -> new path
+
+                images.forEach((img, index) => {
+                    const imgSrc = img.getAttribute('src');
+                    if (imgSrc && !imgSrc.startsWith('data:') && !imgSrc.startsWith('http')) {
+                        // It's a local image
+                        const imgPath = emailDir + '/' + imgSrc;
+                        const imgFilename = imgSrc.split('/').pop();
+
+                        // Store the mapping: old src -> new path in zip
+                        imageMapping.set(imgSrc, 'images/' + imgFilename);
+
+                        const promise = fetch(imgPath)
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.blob();
+                                }
+                                throw new Error(`Failed to fetch ${imgFilename}`);
+                            })
+                            .then(blob => {
+                                imgFolder.file(imgFilename, blob);
+                                downloadCount++;
+                            })
+                            .catch(err => {
+                                console.warn(`Could not download ${imgFilename}:`, err);
+                            });
+
+                        imagePromises.push(promise);
+                    }
+                });
+
+                // Wait for all images to be added
+                await Promise.all(imagePromises);
+
+                // Fix image paths in HTML content
+                let fixedHtml = content;
+                imageMapping.forEach((newPath, oldPath) => {
+                    // Replace all occurrences of the old path with the new path
+                    const regex = new RegExp(oldPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+                    fixedHtml = fixedHtml.replace(regex, newPath);
+                });
+
+                // Add HTML content with fixed paths
+                zip.file("email.html", fixedHtml);
+
+                // Generate zip file
+                const blob = await zip.generateAsync({ type: "blob" });
+
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = zipFilename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                console.log(`Downloaded ${downloadCount} images and HTML as ${zipFilename}`);
+            } catch (error) {
+                console.error('Error creating zip file:', error);
+                alert('Failed to create download. Please try again.');
+            }
+        }
+
+        function toggleMobileSidebar() {
+            const sidebar = document.querySelector('.viewer-sidebar');
+            sidebar.classList.toggle('sidebar-open');
+        }
+
+        let activeLinkFilter = 'all';
+        function filterLinks(type) {
+            activeLinkFilter = type;
+            document.querySelectorAll('.lf-chip').forEach(c => c.classList.remove('active', 'gtinsi-active'));
+            const selectedChip = document.querySelector(`.lf-chip[onclick*="'${type}'"]`);
+            selectedChip.classList.add('active');
+            // Add special gtinsi-active class for the GTINSI button
+            if (type === 'gtinsi') {
+                selectedChip.classList.add('gtinsi-active');
+            }
+            document.querySelectorAll('#tab-links .link-card-v2').forEach(card => {
+                const hasTracking = card.querySelector('.tag-tracking');
+                const hasHttp = card.querySelector('.tag-unsecure');
+                const hasGtinsi = card.querySelector('.tag-gtinsi');
+                const show = type === 'all'
+                    || (type === 'tracking' && hasTracking)
+                    || (type === 'http' && hasHttp)
+                    || (type === 'gtinsi' && hasGtinsi);
+                card.style.display = show ? '' : 'none';
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '1') setMode('mobile');
+            if (e.key === '2') setMode('tablet');
+            if (e.key === '3') setMode('desktop');
+            if (e.key === 't' || e.key === 'T') toggleTheme();
+            if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
+            if (e.key === 'd' || e.key === 'D') downloadEmailZip();
+            if (e.key === 's' || e.key === 'S') screenshotEmail(document.getElementById('screenshotBtn'));
+
+            // Scroll iframe with arrows
+            if (e.key === 'ArrowDown') frame.contentWindow.scrollBy(0, 150);
+            if (e.key === 'ArrowUp') frame.contentWindow.scrollBy(0, -150);
+        });
+
+        applyStrings(currentLang);
+        init();
+    </script>
+</body>
+
+</html>
