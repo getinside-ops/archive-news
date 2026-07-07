@@ -1,0 +1,476 @@
+{
+    "id": "9aa3c3668243",
+    "subject": "Parce que c'est la vedette de toutes vos photos 📸 🐾",
+    "date_rec": "07/07/2026 à 03:12",
+    "date_iso": "2026-07-07T03:12:46-07:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "07/07/2026 à 10:13",
+    "preheader": "Parce que c'est la vedette de toutes vos photos 📸 🐾 On a un cadeau pour vous (et pour lui) MON COMPTE LIVRES PHOTO CARTE CADEAU BONS PLANS 🐶 Parce qu'il fait pa...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": false,
+        "link_count": 26,
+        "images_no_alt": 4
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://www.photoweb.fr/?lid=gg1rguz3l6ti",
+            "final_url": "https://www.photoweb.fr/?lid=gg1rguz3l6ti",
+            "domain": "photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/?lid=gg1rguz3l6ti"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 2,
+            "txt": "MON COMPTE",
+            "original_url": "https://www.photoweb.fr/customer/account/index/?lid=t2ita27qtqrk",
+            "final_url": "https://account.digitalphoto.group/b0d54c7e-9ffb-45ad-afa7-e1d31ca4a6ae/oauth2/v2.0/authorize?p=B2C_1A_SIGNUP_SIGNIN&client_id=ce723465-60cf-4159-b44b-1e691cd5aa3a&nonce=6a4cd157c2be4&redirect_uri=https://www.photoweb.fr/azure/callback/&scope=openid&response_type=id_token&response_mode=query&prompt=&lang=fr",
+            "domain": "photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.photoweb.fr/customer/account/index/?lid=t2ita27qtqrk"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.photoweb.fr/customer/account/login/referer/aHR0cHM6Ly93d3cucGhvdG93ZWIuZnIvY3VzdG9tZXIvYWNjb3VudC9pbmRleC8~/"
+                },
+                {
+                    "status": 200,
+                    "url": "https://account.digitalphoto.group/b0d54c7e-9ffb-45ad-afa7-e1d31ca4a6ae/oauth2/v2.0/authorize?p=B2C_1A_SIGNUP_SIGNIN&client_id=ce723465-60cf-4159-b44b-1e691cd5aa3a&nonce=6a4cd157c2be4&redirect_uri=https://www.photoweb.fr/azure/callback/&scope=openid&response_type=id_token&response_mode=query&prompt=&lang=fr"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 3,
+            "txt": "LIVRES PHOTO",
+            "original_url": "https://www.photoweb.fr/livre-photo?lid=4417kzysi32m",
+            "final_url": "https://www.photoweb.fr/livre-photo?lid=4417kzysi32m",
+            "domain": "photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/livre-photo?lid=4417kzysi32m"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 4,
+            "txt": "CARTE CADEAU",
+            "original_url": "https://carte-cadeau.photoweb.fr/?lid=16pgfcfp46a1",
+            "final_url": "https://carte-cadeau.photoweb.fr/?lid=16pgfcfp46a1",
+            "domain": "carte-cadeau.photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://carte-cadeau.photoweb.fr/?lid=16pgfcfp46a1"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 5,
+            "txt": "BONS PLANS",
+            "original_url": "https://www.photoweb.fr/promotion-code-promo?lid=osf4lnd2vxgg",
+            "final_url": "https://www.photoweb.fr/promotion-code-promo?lid=osf4lnd2vxgg",
+            "domain": "photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/promotion-code-promo?lid=osf4lnd2vxgg"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=a6b4ic9qpujp",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=a6b4ic9qpujp",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=a6b4ic9qpujp"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 7,
+            "txt": "Je découvre l'offre",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=lxof5ajq0qkb",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=lxof5ajq0qkb",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=lxof5ajq0qkb"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j4qaida946kr",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j4qaida946kr",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j4qaida946kr"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=vxgmljp9a8bl",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=vxgmljp9a8bl",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=vxgmljp9a8bl"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=n3le495hj9c2",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=n3le495hj9c2",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=n3le495hj9c2"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=apix1rkl0un1",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=apix1rkl0un1",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=apix1rkl0un1"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=ji6m4228drcf",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=ji6m4228drcf",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=ji6m4228drcf"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=07b6jv38wz0e",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=07b6jv38wz0e",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=07b6jv38wz0e"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 14,
+            "txt": "Je découvre",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jz4ufv7v4hlf",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jz4ufv7v4hlf",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jz4ufv7v4hlf"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j95e3sxjyg5h",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j95e3sxjyg5h",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=j95e3sxjyg5h"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 16,
+            "txt": "Je découvre",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jak5q711gfds",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jak5q711gfds",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=jak5q711gfds"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=1g7gkg3ca841",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=1g7gkg3ca841",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=1g7gkg3ca841"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=0m8dvksw8wzi",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=0m8dvksw8wzi",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=0m8dvksw8wzi"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=mdw5qb8ss6mm",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=mdw5qb8ss6mm",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=mdw5qb8ss6mm"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=bs9kz21kgd1r",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=bs9kz21kgd1r",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=bs9kz21kgd1r"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=4af9d52ic4l8",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=4af9d52ic4l8",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=4af9d52ic4l8"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 22,
+            "txt": "Je deviens client !",
+            "original_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=8si5nd31a2hn",
+            "final_url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=8si5nd31a2hn",
+            "domain": "offre.ultrapremiumdirect.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://offre.ultrapremiumdirect.com/landing/photoweb-6207-nl/?utm_source=Partenariat&utm_medium=email&utm_campaign=photoweb-nl-0626&lid=8si5nd31a2hn"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "https://www.avis-verifies.com/avis-clients/ultrapremiumdirect.com?lid=co30mby9mjf5",
+            "final_url": "https://www.avis-verifies.com/avis-clients/ultrapremiumdirect.com?lid=co30mby9mjf5",
+            "domain": "avis-verifies.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.avis-verifies.com/avis-clients/ultrapremiumdirect.com?lid=co30mby9mjf5"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 24,
+            "txt": "Cliquez-ici",
+            "original_url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f",
+            "final_url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f",
+            "domain": "braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 25,
+            "txt": "Cliquez ici",
+            "original_url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f",
+            "final_url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f",
+            "domain": "braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://braze-02-shareable-preview-eu.s3.eu-central-1.amazonaws.com/6540ed7b2a1fe9004a7360f0/6a4b89379ae49c0085443698/1783412054/index.html?response-content-disposition=inline&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAYQPXDCO6L55ILG53%2F20260707%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20260707T081414Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=acb284155d9cf422b117a05bc3cfc2e16b24409cd79068948cbca2a55c8e583f"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        },
+        {
+            "index": 26,
+            "txt": "Nous contacter",
+            "original_url": "https://www.photoweb.fr/espace_contact/espace-contact.asp",
+            "final_url": "https://www.photoweb.fr/questions-frequentes/mon-compte-fr/",
+            "domain": "photoweb.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 301,
+                    "url": "https://www.photoweb.fr/espace_contact/espace-contact.asp"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.photoweb.fr/questions-frequentes/mon-compte-fr/"
+                }
+            ],
+            "audit_date": "2026-07-07 10:13:42"
+        }
+    ],
+    "detected_pixels": [],
+    "failed_images_count": 0
+}
