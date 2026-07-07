@@ -1,0 +1,747 @@
+{
+    "id": "df656cdf4500",
+    "subject": "[TEST] 👶 Jusqu'à -25 % sur les soins bébé Avène & Klorane",
+    "date_rec": "07/07/2026 à 08:57",
+    "date_iso": "2026-07-07T08:57:30+00:00",
+    "sender": "Test",
+    "date_arch": "07/07/2026 à 09:28",
+    "preheader": "👶 Jusqu'à -25 % sur les soins bébé Avène & Klorane Découvrez notre sélection de soins doux, adaptés dès la naissance. présente OFFRE EXCLUSIVE Notre sélection d...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": false,
+        "link_count": 29,
+        "images_no_alt": 12
+    },
+    "crm": "Sarbacane",
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/x0W04kKDMvm4zb6Y-f-zLQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qoYAcm96Hal0bAbwxRkJs0rJwX0OlpliQOJrtnTxzmKm6kUzRmMo-6PEbyTT-uQqkHTPmcSw4kP7k8No6bo9BSO12GTtbjXZE_1BCQmIJSWY",
+            "final_url": "https://www.bebeboutik-prive.fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/x0W04kKDMvm4zb6Y-f-zLQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qoYAcm96Hal0bAbwxRkJs0rJwX0OlpliQOJrtnTxzmKm6kUzRmMo-6PEbyTT-uQqkHTPmcSw4kP7k8No6bo9BSO12GTtbjXZE_1BCQmIJSWY"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 3,
+            "txt": "Voir l'offre",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 5,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/YofsFD7oMQ6FZPINoPl9HQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhCPA73hX8iZHbksT7Ta936_Ot08N2ajjeR8oJUOB8DMjiN3TFHzODShU_VsJPtH2w4kkryZ0nkuty8BxfLq4eW",
+            "final_url": "https://www.easypara.fr/klorane-bebe-gel-lavant-doux-500ml.html?queryID=1d47c1be202c079b072f91cd9ebf9e12&objectID=67272&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/YofsFD7oMQ6FZPINoPl9HQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhCPA73hX8iZHbksT7Ta936_Ot08N2ajjeR8oJUOB8DMjiN3TFHzODShU_VsJPtH2w4kkryZ0nkuty8BxfLq4eW"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda37e0159"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-gel-lavant-doux-500ml.html?queryID=1d47c1be202c079b072f91cd9ebf9e12&objectID=67272&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/YofsFD7oMQ6FZPINoPl9HQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhCPA73hX8iZHbksT7Ta936_Ot08N2ajjeR8oJUOB8DMjiN3TFHzODShU_VsJPtH2w4kkryZ0nkuty8BxfLq4eW",
+            "final_url": "https://www.easypara.fr/klorane-bebe-gel-lavant-doux-500ml.html?queryID=1d47c1be202c079b072f91cd9ebf9e12&objectID=67272&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/YofsFD7oMQ6FZPINoPl9HQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhCPA73hX8iZHbksT7Ta936_Ot08N2ajjeR8oJUOB8DMjiN3TFHzODShU_VsJPtH2w4kkryZ0nkuty8BxfLq4eW"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda37e0159"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-gel-lavant-doux-500ml.html?queryID=1d47c1be202c079b072f91cd9ebf9e12&objectID=67272&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 7,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9",
+            "final_url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda882726d"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9",
+            "final_url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda882726d"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9",
+            "final_url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda882726d"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 10,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9",
+            "final_url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/qHscW0n8oZ15X3XUToUekQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZjvn5DzftbP3lpi7iYJkrdGefmW4w1PFk06GVMvfdM8c3GbvZkgEROq_QtUScviYdszJd74QvXfmrwJFhvDQ2G9"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cda882726d"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/klorane-bebe-lingettes-nettoyantes-douces-70-unites.html?queryID=9351aee7f765fac58d20df44d7ef9d53&objectID=67283&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 11,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 12,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/zETw0ML5ZOVVtH7EjjLQUA~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhcrL_nf8QuCtHvaIkI_hbvtht90Lxg7DpK2PcxaSH211sV-TgptrR69cr1r38ZSzOWgWGH512eoINkr_d7Yvbt",
+            "final_url": "https://www.easypara.fr/creme-reparatrice-mains-peaux-sensibles-et-irritees-100ml-cicalfate-avene.html?queryID=10cef01ef95c9d50dc2fa582bfca345b&objectID=27465&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/zETw0ML5ZOVVtH7EjjLQUA~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhcrL_nf8QuCtHvaIkI_hbvtht90Lxg7DpK2PcxaSH211sV-TgptrR69cr1r38ZSzOWgWGH512eoINkr_d7Yvbt"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdad2df575"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/creme-reparatrice-mains-peaux-sensibles-et-irritees-100ml-cicalfate-avene.html?queryID=10cef01ef95c9d50dc2fa582bfca345b&objectID=27465&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/zETw0ML5ZOVVtH7EjjLQUA~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhcrL_nf8QuCtHvaIkI_hbvtht90Lxg7DpK2PcxaSH211sV-TgptrR69cr1r38ZSzOWgWGH512eoINkr_d7Yvbt",
+            "final_url": "https://www.easypara.fr/creme-reparatrice-mains-peaux-sensibles-et-irritees-100ml-cicalfate-avene.html?queryID=10cef01ef95c9d50dc2fa582bfca345b&objectID=27465&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/zETw0ML5ZOVVtH7EjjLQUA~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhcrL_nf8QuCtHvaIkI_hbvtht90Lxg7DpK2PcxaSH211sV-TgptrR69cr1r38ZSzOWgWGH512eoINkr_d7Yvbt"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdad2df575"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/creme-reparatrice-mains-peaux-sensibles-et-irritees-100ml-cicalfate-avene.html?queryID=10cef01ef95c9d50dc2fa582bfca345b&objectID=27465&indexName=prod_magento2_fr_products&utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 14,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx",
+            "final_url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdae38f00e"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx",
+            "final_url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdae38f00e"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 16,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx",
+            "final_url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdae38f00e"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 17,
+            "txt": "Découvrir",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx",
+            "final_url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/UOisUp7Jp47kCCsOD4rMgw~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZhADI07yo3bP5Ph799g-yaEo0Na9E3XKCDzPLVFysPW9eNZbbvWjXljb256927wPmYHozHJKDt3Or8SYY7qQ1Qx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdae38f00e"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/avene-xeracalm-a-d-baume-relipidant-400ml.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 21,
+            "txt": "J'en profite",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH",
+            "final_url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gkYsR-7jEBxaRwB5C_xmxQ~~/AABGZBA~/CvOGqDapp9bcVF9Oyxs9qpZQ0mhGY9S4pkrDe2LjuZi3HHWRKEZ1UG1gGAek738_Zx474K-FoCF1mO8SRV_TY56AjRZ7hqIZE6nJ1igHqGRr6FhS7DGgDh8tMUHPqbYH"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a3cdb963cf58"
+                },
+                {
+                    "status": 403,
+                    "url": "https://www.easypara.fr/bons-plans/listing/selection/offre-a-derma-klorane-avene-ducray-bebe.html?utm_source=email&utm_medium=banner&utm_campaign=trade_pierre_fabre_bebe_fr"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 22,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/vEiP7I33VxmDWFkH3oemBA~~/AABGZBA~/DSFPWXiP9gHO7imWX49ZlyjulR0VBvzHyYR-HXo5Hj4ZXTSy_h1HxKDfV5pfdY-cYNn9I9MxmhDZcjWdL0R7kcdVjNWS6wTf-8LgX135CfZSKZUKOQDUdWSdBMpy8gXC",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/vEiP7I33VxmDWFkH3oemBA~~/AABGZBA~/DSFPWXiP9gHO7imWX49ZlyjulR0VBvzHyYR-HXo5Hj4ZXTSy_h1HxKDfV5pfdY-cYNn9I9MxmhDZcjWdL0R7kcdVjNWS6wTf-8LgX135CfZSKZUKOQDUdWSdBMpy8gXC"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/bebeboutik/"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/bW3UtwbuKmp1FiX4upfIjw~~/AABGZBA~/mqHdn8KMAmHusNngbmNwOSjOKYc4A4CD7DdskZhjwQDY73Pfj6VjBj8rfBnySuOORbL6yhzQySRfVV75FBmTedLSsKaAjOhTcqNsAcR_aAq9x1pzVWw3nmssJUHKib1L",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/bW3UtwbuKmp1FiX4upfIjw~~/AABGZBA~/mqHdn8KMAmHusNngbmNwOSjOKYc4A4CD7DdskZhjwQDY73Pfj6VjBj8rfBnySuOORbL6yhzQySRfVV75FBmTedLSsKaAjOhTcqNsAcR_aAq9x1pzVWw3nmssJUHKib1L"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/bebeboutik/"
+                },
+                {
+                    "status": 429,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 24,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/s_DqSHZGPdYFHxRB5H5eiQ~~/AABGZBA~/KfFUfJZJxsNJkHN7WEWJhykGd8dLg-ap_TF73isJLwoQVXqh7_d14DpDWho3o7i_hQ9T6Q3MgtFYyLeZXauzGtwFtEEQ0ZgRbnsDHaG6z6LFtzLkC5G4g1lMT4HNvWApe3V7FdQ4ch6uSX3lYXM1Oe_Kc4TzwWF4KQHAGZ6ru2Y~",
+            "final_url": "https://play.google.com/store/apps/details?id=com.bebeboutik",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/s_DqSHZGPdYFHxRB5H5eiQ~~/AABGZBA~/KfFUfJZJxsNJkHN7WEWJhykGd8dLg-ap_TF73isJLwoQVXqh7_d14DpDWho3o7i_hQ9T6Q3MgtFYyLeZXauzGtwFtEEQ0ZgRbnsDHaG6z6LFtzLkC5G4g1lMT4HNvWApe3V7FdQ4ch6uSX3lYXM1Oe_Kc4TzwWF4KQHAGZ6ru2Y~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://play.google.com/store/apps/details?id=com.bebeboutik"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 25,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/nBzvZwtVBfEz4mqUnWaTVw~~/AABGZBA~/7f-rCNXtW0KSjzCxRMxScOJpMgO__4_1nZ_uJP1qrbByEx2crDLkk-8JXNBha7VpYpysraWPAQMkcHOvDxWdX-AdZQQk6dZo9RsTC1gQTpcDbvOCbNaKNr46oPui19XLC-ZIXMVYM1mIkD_yyM8Y7KzIcPD1wV9uzKvIkIwWBSiU-qjY6BzH1E6j14ISOu5f",
+            "final_url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/nBzvZwtVBfEz4mqUnWaTVw~~/AABGZBA~/7f-rCNXtW0KSjzCxRMxScOJpMgO__4_1nZ_uJP1qrbByEx2crDLkk-8JXNBha7VpYpysraWPAQMkcHOvDxWdX-AdZQQk6dZo9RsTC1gQTpcDbvOCbNaKNr46oPui19XLC-ZIXMVYM1mIkD_yyM8Y7KzIcPD1wV9uzKvIkIwWBSiU-qjY6BzH1E6j14ISOu5f"
+                },
+                {
+                    "status": 200,
+                    "url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 26,
+            "txt": "www.bebeboutik-prive.fr",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/22A0V5i99YtHMMnuMtqIjg~~/AABGZBA~/NsWVj-J6ygDqNkiXjkeELX2WhHyDWnchJ3IFQQ60LR1Fexj2z3s5BX9b5XJmlMGzUmPPjE_KglV9umw19S_JC1UhvsBcjX90YE8m-s7CbiPoghrs0MZMn2nk_suw6k6g",
+            "final_url": "https://www.bebeboutik-prive.fr/",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/22A0V5i99YtHMMnuMtqIjg~~/AABGZBA~/NsWVj-J6ygDqNkiXjkeELX2WhHyDWnchJ3IFQQ60LR1Fexj2z3s5BX9b5XJmlMGzUmPPjE_KglV9umw19S_JC1UhvsBcjX90YE8m-s7CbiPoghrs0MZMn2nk_suw6k6g"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.bebeboutik-prive.fr"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 27,
+            "txt": "cliquez ici",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/v4Q4TwNwIilWJXD2yRC3Bw~~/AABGZBA~/vXvdEPGxOHNYRIPH8KGKWeN_xAGTdhz8JJ7_tRF0ywjsSS66OyHsqT10MA2FqvYGSRWlctNQsqpl79X7q95oVpPUrM6bHoD-f2j7uxNkSRdDkEqTvavbQ7zayqpQ4i9HIAVODr_L9R9D_wxeh6ZgxTtm1pJkYsyeSvBitt3ygMM~",
+            "final_url": "https://static.batch.com/list-management/landing.html",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/v4Q4TwNwIilWJXD2yRC3Bw~~/AABGZBA~/vXvdEPGxOHNYRIPH8KGKWeN_xAGTdhz8JJ7_tRF0ywjsSS66OyHsqT10MA2FqvYGSRWlctNQsqpl79X7q95oVpPUrM6bHoD-f2j7uxNkSRdDkEqTvavbQ7zayqpQ4i9HIAVODr_L9R9D_wxeh6ZgxTtm1pJkYsyeSvBitt3ygMM~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://static.batch.com/list-management/landing.html"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 28,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/1G3ylAJu3cp2ibuOc7WCFA~~/AABGZBA~/X_uvNfUhiCO9fF9aYOLcSc5QZizklWbwmc9ZeKk2alvZp09Ed7IWWzbXMKeEnNsBdX6DzwpUNs3ele7cKoGRQBklfkXSXbimHQdNjjiRz-kEFp_eiMZlmLvRtt3x2OrU",
+            "final_url": "https://www.bebeboutik-prive.fr/",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/1G3ylAJu3cp2ibuOc7WCFA~~/AABGZBA~/X_uvNfUhiCO9fF9aYOLcSc5QZizklWbwmc9ZeKk2alvZp09Ed7IWWzbXMKeEnNsBdX6DzwpUNs3ele7cKoGRQBklfkXSXbimHQdNjjiRz-kEFp_eiMZlmLvRtt3x2OrU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        },
+        {
+            "index": 29,
+            "txt": "Mentions légales",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/3qUz1VaIAOXFOk0xFMrD6g~~/AABGZBA~/S_LMXBWeBkSiqWCkyRwI20u-PIVyopOfZt1CXpsVwkdbHTxc8HHIIRMl622Faz5NXKi_McnQ-526lByq1rCJR2rbITIJ8xAKIOdbEbYle17wXtRjGCifIBZ6k2rjGFdAS2tjRgYS0P7TkBjLDEfPlg~~",
+            "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/3qUz1VaIAOXFOk0xFMrD6g~~/AABGZBA~/S_LMXBWeBkSiqWCkyRwI20u-PIVyopOfZt1CXpsVwkdbHTxc8HHIIRMl622Faz5NXKi_McnQ-526lByq1rCJR2rbITIJ8xAKIOdbEbYle17wXtRjGCifIBZ6k2rjGFdAS2tjRgYS0P7TkBjLDEfPlg~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"
+                }
+            ],
+            "audit_date": "2026-07-07 09:28:05"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://go.eu.sparkpostmail1.com/q/owUtXpTXfILvz9-e1L4juA~~/AABGZBA~/TqR5GwScG_jSlLdmZzZu_L4ITb8K1Cgo54dCLjwxdk9niplUVSDtGk7bFE5J_6w2VW9JFRfUbD8nELJqXzYayw~~",
+            "status": "Problème détecté",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_gtinsi": false,
+            "warnings": [
+                {
+                    "code": "hidden_parent",
+                    "label": "Conteneur masqué (display:none)",
+                    "detail": "Le pixel est dans un élément CSS masqué. Bien que display:none n'empêche pas toujours le chargement, certains clients optimisés ne chargent pas ces ressources.",
+                    "fix": "Déplacer le pixel hors du conteneur masqué."
+                }
+            ],
+            "has_issues": true
+        },
+        {
+            "url": "https://go.eu.sparkpostmail1.com/q/HQkyBjj005KVZcV6ZEVZKQ~~/AABGZBA~/BvDky_TfJKo1kTgVnXm5mzEVGF60SMigMXpp-RN6hqcRw8cickEc9f0p9qVSHZDl7S-gYEob9aIu6G-RmzCCqg~~",
+            "status": "Integration: OK",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_gtinsi": false,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
