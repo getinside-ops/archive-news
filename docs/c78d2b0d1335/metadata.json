@@ -1,0 +1,722 @@
+{
+    "id": "c78d2b0d1335",
+    "subject": "[TEST] Votre petit compagnon mérite aussi le meilleur 🐾",
+    "date_rec": "08/07/2026 à 13:39",
+    "date_iso": "2026-07-08T13:39:09+00:00",
+    "sender": "Test",
+    "date_arch": "08/07/2026 à 13:41",
+    "preheader": "Lui aussi mérite d'être chouchouté 🐾 On a un cadeau pour vous (et pour lui) ! présente 🐶 Parce qu'il fait aussi partie de la famille 😺 Chez Bebeboutik, nous sav...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": false,
+        "link_count": 28,
+        "images_no_alt": 4
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/yOWbxVN1Rv0oLKwMAuGrJw~~/AABGZBA~/KdnkGpjNLIoN5ni76dapV4yDUkSJ2PQ9HBLf2RqIEX8wf9GrsIR1SsupKdqaDonZvJTsCupLZAM_OoX5TDEX0f2MIRFFOtQJyDrw1p9sM6NL7E84I-BhA1CK2N2tPQVWaSjXTo3CG8X8TFFbT2KlY6QIJHPQfRfydUAkGu6_nRIjgdPCY4WkbyLr2JReeeE5fMR1n_kj_pfN00zEBlTbGg~~",
+            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/yOWbxVN1Rv0oLKwMAuGrJw~~/AABGZBA~/KdnkGpjNLIoN5ni76dapV4yDUkSJ2PQ9HBLf2RqIEX8wf9GrsIR1SsupKdqaDonZvJTsCupLZAM_OoX5TDEX0f2MIRFFOtQJyDrw1p9sM6NL7E84I-BhA1CK2N2tPQVWaSjXTo3CG8X8TFFbT2KlY6QIJHPQfRfydUAkGu6_nRIjgdPCY4WkbyLr2JReeeE5fMR1n_kj_pfN00zEBlTbGg~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 4,
+            "txt": "Je découvre la marque",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 5,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/GIilty_48XXgKZS-qnhD4w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsuTjtuevKN9bSpvHAKg4Hy5cfDRuB9vmX9VS_sfJt6Rbev6B9LryOmwy3QlJk4tCv38vcJQFfchlJKo5TJvkIg",
+            "final_url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/GIilty_48XXgKZS-qnhD4w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsuTjtuevKN9bSpvHAKg4Hy5cfDRuB9vmX9VS_sfJt6Rbev6B9LryOmwy3QlJk4tCv38vcJQFfchlJKo5TJvkIg"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a4e0e32a5e5e"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 11,
+            "txt": "Je découvre",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/GIilty_48XXgKZS-qnhD4w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsuTjtuevKN9bSpvHAKg4Hy5cfDRuB9vmX9VS_sfJt6Rbev6B9LryOmwy3QlJk4tCv38vcJQFfchlJKo5TJvkIg",
+            "final_url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/GIilty_48XXgKZS-qnhD4w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsuTjtuevKN9bSpvHAKg4Hy5cfDRuB9vmX9VS_sfJt6Rbev6B9LryOmwy3QlJk4tCv38vcJQFfchlJKo5TJvkIg"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a4e0e32a5e5e"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chien/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/TwXioGle1kc5QTYjFukltg~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsTHL09FmrSHZWVdA-4mJcUGuFuJFSoRvrEopUIWWtd0xrIgiHqsdqypFvxHQElMuD08rpKkky8aK4CM17-yBL2",
+            "final_url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/TwXioGle1kc5QTYjFukltg~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsTHL09FmrSHZWVdA-4mJcUGuFuJFSoRvrEopUIWWtd0xrIgiHqsdqypFvxHQElMuD08rpKkky8aK4CM17-yBL2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a4e0e3a07bc6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 13,
+            "txt": "Je découvre",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/TwXioGle1kc5QTYjFukltg~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsTHL09FmrSHZWVdA-4mJcUGuFuJFSoRvrEopUIWWtd0xrIgiHqsdqypFvxHQElMuD08rpKkky8aK4CM17-yBL2",
+            "final_url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/TwXioGle1kc5QTYjFukltg~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiJN1hRxFARtPI1YleFCPlgsTHL09FmrSHZWVdA-4mJcUGuFuJFSoRvrEopUIWWtd0xrIgiHqsdqypFvxHQElMuD08rpKkky8aK4CM17-yBL2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a4e0e3a07bc6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/chat/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 16,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 19,
+            "txt": "Je deviens client !",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0",
+            "final_url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/z4X_EhmG9_Z9VJj2M1iE-w~~/AABGZBA~/8NZcN_tZTvlKaDa9H48fiAo2lniUQYRUcmxX5tDsgjaGA5Bc_QJvnPJxlI0vOFWtocuhURwno6CIQY8lhjX1wyvdtKs-zP4M4UKaAqE4vGb4-Z5tpn4bHhCCs9W3DBb0"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/6a26723c5c15d"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.ultrapremiumdirect.com/?utm_source=Partenariat&utm_medium=partenariat_display&utm_campaign=bebeboutik-0826"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/fkwpwjqTuiHogab9wDOWoA~~/AABGZBA~/SlD5IBL2uXq2fIHVAiJ5Au9QiOUA4dwz2U9InHbYa4sit3y7VlSLW-FmfjF6p5p4r-y26q4SsTUg-FR3_fB07UFdN0eoYJ2nqtdeOWBStJqLADljS7yoUOLw-GOgFvyO",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/fkwpwjqTuiHogab9wDOWoA~~/AABGZBA~/SlD5IBL2uXq2fIHVAiJ5Au9QiOUA4dwz2U9InHbYa4sit3y7VlSLW-FmfjF6p5p4r-y26q4SsTUg-FR3_fB07UFdN0eoYJ2nqtdeOWBStJqLADljS7yoUOLw-GOgFvyO"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/bebeboutik/"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 22,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/kqoCqIXlZW32BaKXtl0QLA~~/AABGZBA~/rCzeT3qWEL5ajpkp8OZhyacSs3K8QtvBEZXqWXaDC7gMp4FT4LIK0rlOum3P3XEVrKux5_NXwmG-ZFNjkMIuqxb-7egyFMR0iS9ifCi__qWL60ZNFJOR2TQFo19DvYG5",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/kqoCqIXlZW32BaKXtl0QLA~~/AABGZBA~/rCzeT3qWEL5ajpkp8OZhyacSs3K8QtvBEZXqWXaDC7gMp4FT4LIK0rlOum3P3XEVrKux5_NXwmG-ZFNjkMIuqxb-7egyFMR0iS9ifCi__qWL60ZNFJOR2TQFo19DvYG5"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/bebeboutik/"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/BTrN16bjrhd_gVgeFwYLng~~/AABGZBA~/HcnjmkPuV4LqGfSyiE4_-mb4OKUsXKW15-p27WVLUOQB_tmJraAqbSIagbXFon3wPWiQoLrsuDfdBHpolpG9X6kflbC-CJ1nNyRpIzMXRrCYqIu4e6CJLPjwQUVOHf0VSrS7wVgLVxRPfpOLWJpmbKv_anm74jOEhojxIE2MXKc~",
+            "final_url": "https://play.google.com/store/apps/details?id=com.bebeboutik",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/BTrN16bjrhd_gVgeFwYLng~~/AABGZBA~/HcnjmkPuV4LqGfSyiE4_-mb4OKUsXKW15-p27WVLUOQB_tmJraAqbSIagbXFon3wPWiQoLrsuDfdBHpolpG9X6kflbC-CJ1nNyRpIzMXRrCYqIu4e6CJLPjwQUVOHf0VSrS7wVgLVxRPfpOLWJpmbKv_anm74jOEhojxIE2MXKc~"
+                },
+                {
+                    "status": 403,
+                    "url": "https://play.google.com/store/apps/details?id=com.bebeboutik"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 24,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/gmsDGJb_M5Gf6VqgUY3DyQ~~/AABGZBA~/eotMrWu-rQ3ktbNdePKSk5pNsCCxIFVrc5ouLaiH0QWS5zn1fnzWlYKMj6lk9zXCrz-if6OrqT6bJ3tJkrXcoXN_3cYdDEWYGHZkMxZtvWgMS8nZqWLBlm82bNkUkSJBKQeIRntzdd0_M_yasmzLCRkL7C3zjI9L9lrGeglQw0pjbfscRDTQFKnBd3Fs9vag",
+            "final_url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/gmsDGJb_M5Gf6VqgUY3DyQ~~/AABGZBA~/eotMrWu-rQ3ktbNdePKSk5pNsCCxIFVrc5ouLaiH0QWS5zn1fnzWlYKMj6lk9zXCrz-if6OrqT6bJ3tJkrXcoXN_3cYdDEWYGHZkMxZtvWgMS8nZqWLBlm82bNkUkSJBKQeIRntzdd0_M_yasmzLCRkL7C3zjI9L9lrGeglQw0pjbfscRDTQFKnBd3Fs9vag"
+                },
+                {
+                    "status": 429,
+                    "url": "https://apps.apple.com/fr/app/bebeboutik-ventes-priv%C3%A9es/id1287943233"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 25,
+            "txt": "www.bebeboutik-prive.fr",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/JCj2997FLlsM2PgicGJuQQ~~/AABGZBA~/r8fVFMhKCzKKb_ENKDeGys0CsRATx_W-g3m0sCjo0kp13GlZhZOAhff7LRNd4jwTiqsdFliG23jupUsZ1KVj1SCtCnGQrnOpnKLL_7Evt7a1zZQw0GmkS-DzlWKqjBkZ",
+            "final_url": "https://www.bebeboutik-prive.fr/",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/JCj2997FLlsM2PgicGJuQQ~~/AABGZBA~/r8fVFMhKCzKKb_ENKDeGys0CsRATx_W-g3m0sCjo0kp13GlZhZOAhff7LRNd4jwTiqsdFliG23jupUsZ1KVj1SCtCnGQrnOpnKLL_7Evt7a1zZQw0GmkS-DzlWKqjBkZ"
+                },
+                {
+                    "status": 301,
+                    "url": "http://www.bebeboutik-prive.fr"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 26,
+            "txt": "cliquez ici",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/62S7UlWXWJTiGZk0vIudDQ~~/AABGZBA~/h7PwaLKuiB0CwqowhujR5k1iuvoq7985Md_IDWMniavGcq7mNf_akePbmeNW_FvNsYZeRjXP4YSHPzVZdczGEDZCGZIskts8L1PkBq_KTwi_WgL99SSxNvidKFBIMZXch7dhueMkFYkXRALri9J4D8iYE8xD6X51hnesehtm0DI~",
+            "final_url": "https://static.batch.com/list-management/landing.html",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/62S7UlWXWJTiGZk0vIudDQ~~/AABGZBA~/h7PwaLKuiB0CwqowhujR5k1iuvoq7985Md_IDWMniavGcq7mNf_akePbmeNW_FvNsYZeRjXP4YSHPzVZdczGEDZCGZIskts8L1PkBq_KTwi_WgL99SSxNvidKFBIMZXch7dhueMkFYkXRALri9J4D8iYE8xD6X51hnesehtm0DI~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://static.batch.com/list-management/landing.html"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 27,
+            "txt": "",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/1O5lqbThu_RWvS9lV05U_A~~/AABGZBA~/KfTRFXwZG7DAv8Pvlnrw1zl4B2vO-GOUcZJjJtwqXiHXYKWgShdycSX5AO-6jw3z839z25CHa02Ik1qXwJ6OvXCdOpO03iONU1IsHaMtNs4V1QxD0hr-uNw88rCiFLex",
+            "final_url": "https://www.bebeboutik-prive.fr/",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/1O5lqbThu_RWvS9lV05U_A~~/AABGZBA~/KfTRFXwZG7DAv8Pvlnrw1zl4B2vO-GOUcZJjJtwqXiHXYKWgShdycSX5AO-6jw3z839z25CHa02Ik1qXwJ6OvXCdOpO03iONU1IsHaMtNs4V1QxD0hr-uNw88rCiFLex"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        },
+        {
+            "index": 28,
+            "txt": "Mentions légales",
+            "original_url": "https://go.eu.sparkpostmail1.com/f/a/3L6jY94Fn7qSmTE7YQkYZw~~/AABGZBA~/ALZt_Ua-i-OTauNTv4GdAIfwfa4r543le0jyBzKHNPw6enTHSiy1tdJPgAhvdHlAKwZP3qs3JTjPJHf7dnBnD_sr3MIFMB0ELp_czx1lkcTBeh9DocABYCNqXmQBtRWRuCeLCRFHPI1dnY1UZI1nHQ~~",
+            "final_url": "https://www.bebeboutik-prive.fr/page/mentions-legales",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://go.eu.sparkpostmail1.com/f/a/3L6jY94Fn7qSmTE7YQkYZw~~/AABGZBA~/ALZt_Ua-i-OTauNTv4GdAIfwfa4r543le0jyBzKHNPw6enTHSiy1tdJPgAhvdHlAKwZP3qs3JTjPJHf7dnBnD_sr3MIFMB0ELp_czx1lkcTBeh9DocABYCNqXmQBtRWRuCeLCRFHPI1dnY1UZI1nHQ~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"
+                }
+            ],
+            "audit_date": "2026-07-08 13:41:49"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://go.eu.sparkpostmail1.com/q/9YGs6z6LyyMgRTjOAV3uRg~~/AABGZBA~/Axs27FM5qw_5oKOTyL0x8wsFE99Ml2um65YP2eJHmB-MNxaFGgMDQrnYGaFko1rPCVkytwMyHjD3yq4iokwllw~~",
+            "status": "Problème détecté",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_gtinsi": false,
+            "warnings": [
+                {
+                    "code": "hidden_parent",
+                    "label": "Conteneur masqué (display:none)",
+                    "detail": "Le pixel est dans un élément CSS masqué. Bien que display:none n'empêche pas toujours le chargement, certains clients optimisés ne chargent pas ces ressources.",
+                    "fix": "Déplacer le pixel hors du conteneur masqué."
+                }
+            ],
+            "has_issues": true
+        },
+        {
+            "url": "https://go.eu.sparkpostmail1.com/q/wYgEEp-GeJEnAYB1m-KgeQ~~/AABGZBA~/zPI5WESJi7bbMBNvdrrjDs_TofLqUxKdBAkxPqWqlTmIUv06ise5biEOtbiJPwX3cJ50k3zTOeYZKyVMggvXNg~~",
+            "status": "Integration: OK",
+            "domain": "go.eu.sparkpostmail1.com",
+            "is_gtinsi": false,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
