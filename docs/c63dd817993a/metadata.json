@@ -1,0 +1,626 @@
+{
+    "id": "c63dd817993a",
+    "subject": "Aubert s'associe à HelloFresh ! Sur vos 5 premières box.",
+    "date_rec": "16/07/2026 à 00:36",
+    "date_iso": "2026-07-16T00:36:06-07:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "16/07/2026 à 07:54",
+    "preheader": "Hello Fresh Mon compte ☰ ⊗ Produits Liste de naissance Soldes Cadeaux Bons plans Aubert s'associe à HelloFresh ! Sur vos 5 premières box. Grâce à notre partenar...",
+    "reading_time": "3 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": false,
+        "link_count": 28,
+        "images_no_alt": 5
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "Mon\n                                              ",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388214&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/login",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388214&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.aubert.com/my-account?utm_source=email&utm_medium=newsletter&utm_content=compte&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/login"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388215&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com?utm_source=email&utm_medium=newsletter&utm_content=logo&utm_campaign=nld-s4-hellofresh&utm_term=france",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388215&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com?utm_source=email&utm_medium=newsletter&utm_content=logo&utm_campaign=nld-s4-hellofresh&utm_term=france"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 3,
+            "txt": "Produits",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388216&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/c/00000000/produits?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388216&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/c/00000000/produits?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 4,
+            "txt": "Liste de naissance",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388217&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/liste-de-naissance?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388217&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/liste-de-naissance?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 5,
+            "txt": "Soldes",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388218&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/c/soldes/bons-plans/soldes-d-ete-pour-bebe?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388218&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 301,
+                    "url": "https://www.aubert.com/c/soldes/bons-plans/soldes-d-hiver-pour-bebe?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/c/soldes/bons-plans/soldes-d-ete-pour-bebe?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 6,
+            "txt": "Cadeaux",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388219&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/Idees-Cadeaux.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388219&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/Idees-Cadeaux.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 7,
+            "txt": "Bons plans",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388220&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/bons-plans?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388220&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/bons-plans?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=header&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388221&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=bandeaudebut24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388221&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=bandeaudebut24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 9,
+            "txt": "Aubert s'associe à HelloFresh !Sur vos 5 premières",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388222&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=titre24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388222&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=titre24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 10,
+            "txt": "lien hellofresh",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388223&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=txt24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388223&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=txt24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 11,
+            "txt": "CODE PROMO HELLOFRESH : 00-ZSRHL",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388224&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326?utm_source=email&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=titre24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388224&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326?utm_source=email&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=titre24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 12,
+            "txt": "J'active ma box",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388225&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=ctafin24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388225&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=ctafin24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 13,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388221&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=bandeaudebut24012026",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388221&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.hellofresh.fr/pages/selectra?c=&discount_comm_id=6382ce55-d85b-43a6-8b87-f3bb2827e326&utm_source=aubert&utm_medium=newsletter&utm_term=france&utm_campaign=nld-s4-hellofresh&utm_content=bandeaudebut24012026"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388226&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://magasins.aubert.com/fr/france-FR?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388226&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://magasins.aubert.com/fr/france-FR?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388227&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/les-modes-d-envoi.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388227&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/les-modes-d-envoi.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 16,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388228&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/aide?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388228&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/aide?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388229&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/retrait-magasin-2h.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388229&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/retrait-magasin-2h.html?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388230&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/liste-de-naissance?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388230&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/liste-de-naissance?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388231&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/programme-fidelite?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388231&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/programme-fidelite?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388232&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FAubert%3Futm_source%3Demail%26utm_medium%3Dnewsletter%26utm_term%3Dfrance%26utm_content%3Dfooter%26utm_campaign%3Dnld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388232&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/Aubert?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FAubert%3Futm_source%3Demail%26utm_medium%3Dnewsletter%26utm_term%3Dfrance%26utm_content%3Dfooter%26utm_campaign%3Dnld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388233&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.tiktok.com/@aubert_france?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388233&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@aubert_france?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 22,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388234&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faubert_france%2F%3Futm_source%3Demail%26utm_medium%3Dnewsletter%26utm_term%3Dfrance%253Futm_content%253Dfooter%26utm_campaign%3Dnld-s4-hellofresh&is_from_rle",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388234&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/aubert_france/?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faubert_france%2F%3Futm_source%3Demail%26utm_medium%3Dnewsletter%26utm_term%3Dfrance%253Futm_content%253Dfooter%26utm_campaign%3Dnld-s4-hellofresh&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388235&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.youtube.com/user/AubertTV?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388235&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.youtube.com/user/AubertTV?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 24,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388236&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://fr.pinterest.com/aubert_fr/?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388236&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 308,
+                    "url": "https://www.pinterest.fr/aubert_fr?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 301,
+                    "url": "https://fr.pinterest.com/aubert_fr?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 200,
+                    "url": "https://fr.pinterest.com/aubert_fr/?utm_source=email&utm_medium=newsletter&utm_term=france?utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 25,
+            "txt": "",
+            "original_url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388237&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "https://www.aubert.com/conseils/?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh",
+            "domain": "l.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "http://l.newsletter-aubert.fr/rts/go2.aspx?h=388237&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGb-G-lDX2QWpV4C-mwKKs&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                },
+                {
+                    "status": 301,
+                    "url": "https://www.aubert.com/conseils?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.aubert.com/conseils/?utm_source=email&utm_medium=newsletter&utm_term=france&utm_content=footer&utm_campaign=nld-s4-hellofresh"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 26,
+            "txt": "aubert.contact@aubert.fr",
+            "original_url": "mailto:aubert.contact@aubert.fr",
+            "final_url": "mailto:aubert.contact@aubert.fr",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "mailto:aubert.contact@aubert.fr"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 27,
+            "txt": "Cliquez ici pour ne plus\n                         ",
+            "original_url": "http://x.newsletter-aubert.fr/ats/show.aspx?cr=580&fm=23&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGc-G-lDX2QWpV4C-1D0kTI&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "final_url": "http://x.newsletter-aubert.fr/ats/show.aspx?cr=580&fm=23&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGc-G-lDX2QWpV4C-1D0kTI&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU",
+            "domain": "x.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "http://x.newsletter-aubert.fr/ats/show.aspx?cr=580&fm=23&tp=i-16IJ-9M-4Rg-jRB54-1c-8kI3-1c-BGc-G-lDX2QWpV4C-1D0kTI&pi=zyw1-uKHMCFgeqVILbpP_Vd8l8zxicf18gY0K4ZS2DU"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        },
+        {
+            "index": 28,
+            "txt": "Version cet email en ligne",
+            "original_url": "http://x.newsletter-aubert.fr/ats/msg.aspx?sg1=51832fe4741b645341573f5b423c02a7",
+            "final_url": "http://x.newsletter-aubert.fr/ats/msg.aspx?sg1=51832fe4741b645341573f5b423c02a7",
+            "domain": "x.newsletter-aubert.fr",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "http://x.newsletter-aubert.fr/ats/msg.aspx?sg1=51832fe4741b645341573f5b423c02a7"
+                }
+            ],
+            "audit_date": "2026-07-16 07:53:53"
+        }
+    ],
+    "detected_pixels": [],
+    "failed_images_count": 0
+}
