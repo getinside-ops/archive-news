@@ -1,0 +1,340 @@
+{
+    "id": "23f11ec1d239",
+    "subject": "[TEST] Offre exclusive : jusqu’à -43% pour découvrir l’actualité autrement !",
+    "date_rec": "22/07/2026 à 15:15",
+    "date_iso": "2026-07-22T15:15:59+00:00",
+    "sender": "Le Petit Ballon",
+    "date_arch": "22/07/2026 à 15:18",
+    "preheader": "Votre abonnement à Courrier international un tarif spécial Le Petit Ballon. ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ­ ...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Too Long",
+        "unsubscribe_found": false,
+        "link_count": 13,
+        "images_no_alt": 5
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_0",
+            "final_url": "https://www.lepetitballon.com/pages/15-ans?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_0"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.lepetitballon.com/pages/15-ans?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_1",
+            "final_url": "https://www.lepetitballon.com/pages/15-ans?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_1"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.lepetitballon.com/pages/15-ans?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_2",
+            "final_url": "https://www.courrierinternational.com/abos/2026/PBLI",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_2"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/697203b457c10?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 404,
+                    "url": "https://www.courrierinternational.com/abos/2026/PBLI"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_3",
+            "final_url": "https://www.courrierinternational.com/abos/2026/PBLI",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_3"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/697203b457c10?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 404,
+                    "url": "https://www.courrierinternational.com/abos/2026/PBLI"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 5,
+            "txt": "En profiter",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_4",
+            "final_url": "https://www.courrierinternational.com/abos/2026/PBLI",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_4"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/697203b457c10?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 404,
+                    "url": "https://www.courrierinternational.com/abos/2026/PBLI"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_5",
+            "final_url": "https://www.courrierinternational.com/abos/2026/PBLI",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_5"
+                },
+                {
+                    "status": 302,
+                    "url": "https://gtinsi.de/697203b457c10?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 404,
+                    "url": "https://www.courrierinternational.com/abos/2026/PBLI"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_6",
+            "final_url": "https://www.tiktok.com/@lepetitballon?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_6"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@lepetitballon?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_7",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Flepetitballon%3Futm_source%3DKlaviyo%26utm_medium%3Demail%26utm_campaign%3D20260903_PAID_courrier_international%26_kx%3DDljowdspkSQSeomwzQosNw.TuNbFm&is_from_rle",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_7"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/lepetitballon?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Flepetitballon%3Futm_source%3DKlaviyo%26utm_medium%3Demail%26utm_campaign%3D20260903_PAID_courrier_international%26_kx%3DDljowdspkSQSeomwzQosNw.TuNbFm&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 9,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_8",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Flepetitballon%3Futm_source%3DKlaviyo%26utm_medium%3Demail%26utm_campaign%3D20260903_PAID_courrier_international%26_kx%3DDljowdspkSQSeomwzQosNw.TuNbFm",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_8"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/lepetitballon?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Flepetitballon%3Futm_source%3DKlaviyo%26utm_medium%3Demail%26utm_campaign%3D20260903_PAID_courrier_international%26_kx%3DDljowdspkSQSeomwzQosNw.TuNbFm"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_9",
+            "final_url": "https://www.linkedin.com/company/lepetitballon-com?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_9"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.linkedin.com/company/lepetitballon-com?utm_source=Klaviyo&utm_medium=email&utm_campaign=20260903_PAID_courrier_international&_kx=DljowdspkSQSeomwzQosNw.TuNbFm"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 11,
+            "txt": "bonjour@lepetitballon.com",
+            "original_url": "mailto:bonjour@lepetitballon.com",
+            "final_url": "mailto:bonjour@lepetitballon.com",
+            "domain": "",
+            "is_tracking": false,
+            "is_secure": false,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": "Error",
+                    "url": "mailto:bonjour@lepetitballon.com"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 12,
+            "txt": "gérer vos préférences",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_10",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_10"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        },
+        {
+            "index": 13,
+            "txt": "vous désabonner",
+            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_11",
+            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "domain": "trk.email.lepetitballon.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_11"
+                },
+                {
+                    "status": 301,
+                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
+                },
+                {
+                    "status": 200,
+                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
+                }
+            ],
+            "audit_date": "2026-07-22 15:18:13"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://pixel.gtinsi.de/697203b45977e",
+            "status": "Integration: OK",
+            "domain": "pixel.gtinsi.de",
+            "is_gtinsi": true,
+            "warnings": [],
+            "has_issues": false
+        },
+        {
+            "url": "https://trk.email.lepetitballon.com/o/01KY56BQAKX43R7P0K1EAKNB9E",
+            "status": "Integration: OK",
+            "domain": "trk.email.lepetitballon.com",
+            "is_gtinsi": false,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
