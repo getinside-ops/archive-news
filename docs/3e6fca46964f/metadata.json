@@ -1,10 +1,10 @@
 {
-    "id": "c5c7999b12e6",
+    "id": "3e6fca46964f",
     "subject": "[TEST] -25 % sur la nutrition de vos animaux 🐾",
-    "date_rec": "21/09/2026 à 14:04",
-    "date_iso": "2026-09-21T14:04:35+00:00",
+    "date_rec": "22/09/2026 à 09:38",
+    "date_iso": "2026-09-22T09:38:04+00:00",
     "sender": "Test",
-    "date_arch": "21/09/2026 à 14:15",
+    "date_arch": "22/09/2026 à 09:44",
     "preheader": "Profitez de notre offre exclusive sur Pro-Nutrition présente ✨ Offre exclusive ! -25% de réduction sur l’ensemble du site* CODE PROMO : BEBEBOUTIK25 🐾 🐾 🐾 La nu...",
     "reading_time": "1 min",
     "audit": {
@@ -12,14 +12,14 @@
         "subject_check": "Good",
         "unsubscribe_found": true,
         "link_count": 12,
-        "images_no_alt": 2
+        "images_no_alt": 3
     },
     "crm": null,
     "links": [
         {
             "index": 1,
             "txt": "",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/Xz3npct1h8mg9gOkg3tjXA~~/AABGZBA~/_qeC7h0lTVDFf8RCm8gZ0c8I-A-jaaC4qsRUxP-XpjLbTvn8f0ER-pfVN-RRPqcVXy4C_i6EUsK7Y5Lo8G4M5hECuLKWdg5cyXE3LtBQLBM_uycUpLNBUAm5ipMb9CwHeAc4upPt1OSNP6USkHgeAhnOM2OReS6xPbArdkO-U4fKE_NyiTOoqBgbAtRwnFi9tGBFlzXWV1EB5leYcv4vsA~~",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/8AczmQ7BT2uKeeHgCZN8DA~~/AABGZBA~/hX0_XJWyVbDXREGilynxa1xZ1m-yBmloBJQh_KSa282GegKzpQJf6JGcebpDygCFg0I_jX4MkBCw1cB2O-SOJJsOEXIf8XehZEsjpiQSLDFKJuq9EU1R0BVfWFmkoFXvI4Y24QGIzJuErkwEN_z7SYHUPJlN6hh-vdCxQEy8djlGwy7WcvpFAj0oDHprYE3DQJN5gNxjWBvufr2Ae_VfZg~~",
             "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -28,19 +28,19 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/Xz3npct1h8mg9gOkg3tjXA~~/AABGZBA~/_qeC7h0lTVDFf8RCm8gZ0c8I-A-jaaC4qsRUxP-XpjLbTvn8f0ER-pfVN-RRPqcVXy4C_i6EUsK7Y5Lo8G4M5hECuLKWdg5cyXE3LtBQLBM_uycUpLNBUAm5ipMb9CwHeAc4upPt1OSNP6USkHgeAhnOM2OReS6xPbArdkO-U4fKE_NyiTOoqBgbAtRwnFi9tGBFlzXWV1EB5leYcv4vsA~~"
+                    "url": "https://post.eu.spmailtechno.com/f/a/8AczmQ7BT2uKeeHgCZN8DA~~/AABGZBA~/hX0_XJWyVbDXREGilynxa1xZ1m-yBmloBJQh_KSa282GegKzpQJf6JGcebpDygCFg0I_jX4MkBCw1cB2O-SOJJsOEXIf8XehZEsjpiQSLDFKJuq9EU1R0BVfWFmkoFXvI4Y24QGIzJuErkwEN_z7SYHUPJlN6hh-vdCxQEy8djlGwy7WcvpFAj0oDHprYE3DQJN5gNxjWBvufr2Ae_VfZg~~"
                 },
                 {
                     "status": 200,
                     "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 2,
             "txt": "",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -49,7 +49,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -60,12 +60,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 3,
-            "txt": "✨ Offre exclusive !-25%de réductionsur l’ensemble ",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -74,7 +74,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -85,12 +85,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 4,
             "txt": "Je profite de l'offre",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -99,7 +99,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -110,12 +110,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 5,
             "txt": "",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -124,7 +124,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -135,12 +135,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 6,
             "txt": "Je découvre les produits",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -149,7 +149,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -160,12 +160,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 7,
             "txt": "Je passe commande",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F",
             "final_url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -174,7 +174,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/IG9p9fFY3hE_tGXja8gRJg~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_cbV9TDDSdjvZ76JUJCgV0R5--t_QFioi-oNfvEuQTyHBeIoONCSeO6AwtrcnBENRND7pQvhWxYXTrGqd_PEMieaO9vbQ9al6nxsxFtijdCQ"
+                    "url": "https://post.eu.spmailtechno.com/f/a/ZnASzOhLokF_wpMWu_bg6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEc1KU2ygfdbPZtC0_5ZkFlIcUvh6Nmhp9K3JGGSHLKBor1qeRA2lc5H9k9z_0ozn7R6ZXelgo9_CwZgbYii-nXMtgo8oyVaJeYH5hTFx5h8F"
                 },
                 {
                     "status": 302,
@@ -185,12 +185,12 @@
                     "url": "https://www.pro-nutrition.fr/pages/croquettes-chien-et-chat-premium"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 8,
             "txt": "",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/tNiJFr4CfTbRRoLoEmMm2w~~/AABGZBA~/-UCzV7AIHyvldyy2zkSD5HiXkE4k8YcghAlmqKu-USm8wY5ueKlsGqM68nrKiyYWdflTxy7mulConJIW8dEiIUr5MSdpL_dpJ2_7Pw7Vzdf6utiWy0dtaHCMV3XWdlSx",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/l_JAdNukNYLLQVf2MD2s3w~~/AABGZBA~/9y8QYDf9NDNCsxwL0ez_FQ6uvEPY9hXGBZep81s8_ZF9GCs7wO0pO9Br8DL-7xZrqKJloRezU8ifU3aDA1YlfcZ6wb_2YMcYZlCEBA9ezwKymL2h7IW66md5d2DimcFy",
             "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -199,7 +199,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/tNiJFr4CfTbRRoLoEmMm2w~~/AABGZBA~/-UCzV7AIHyvldyy2zkSD5HiXkE4k8YcghAlmqKu-USm8wY5ueKlsGqM68nrKiyYWdflTxy7mulConJIW8dEiIUr5MSdpL_dpJ2_7Pw7Vzdf6utiWy0dtaHCMV3XWdlSx"
+                    "url": "https://post.eu.spmailtechno.com/f/a/l_JAdNukNYLLQVf2MD2s3w~~/AABGZBA~/9y8QYDf9NDNCsxwL0ez_FQ6uvEPY9hXGBZep81s8_ZF9GCs7wO0pO9Br8DL-7xZrqKJloRezU8ifU3aDA1YlfcZ6wb_2YMcYZlCEBA9ezwKymL2h7IW66md5d2DimcFy"
                 },
                 {
                     "status": 302,
@@ -210,12 +210,12 @@
                     "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 9,
             "txt": "",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/2TTTkPn6E6XUTIj3Rfpavg~~/AABGZBA~/RX_UtmKx6vZBXYoATDE9WavSKkINs9hLeve7HV0p_ln81HxEMTE7l4cvwoXgT9mF4CHRPl5-I10quNHg_qB2IMjhA2U-yDPxRDlpAhZFU8MydKzNCpItuI7wkdtamFA6",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/Fc8h9AuN-nkRX5hRx8xDbg~~/AABGZBA~/SHsYBf6oD-s9ysn_aCTwM89M-LXazjIQD-Ed9MJ137T6HDIJzoNlXU8s72Vpkva0W-om313rSifjfW2zJFO45AXV0LofFZLo0YA_zFy9AjhbIfUgCrodz5_0vNPuuEYA",
             "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -224,7 +224,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/2TTTkPn6E6XUTIj3Rfpavg~~/AABGZBA~/RX_UtmKx6vZBXYoATDE9WavSKkINs9hLeve7HV0p_ln81HxEMTE7l4cvwoXgT9mF4CHRPl5-I10quNHg_qB2IMjhA2U-yDPxRDlpAhZFU8MydKzNCpItuI7wkdtamFA6"
+                    "url": "https://post.eu.spmailtechno.com/f/a/Fc8h9AuN-nkRX5hRx8xDbg~~/AABGZBA~/SHsYBf6oD-s9ysn_aCTwM89M-LXazjIQD-Ed9MJ137T6HDIJzoNlXU8s72Vpkva0W-om313rSifjfW2zJFO45AXV0LofFZLo0YA_zFy9AjhbIfUgCrodz5_0vNPuuEYA"
                 },
                 {
                     "status": 302,
@@ -235,12 +235,12 @@
                     "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 10,
             "txt": "www.bebeboutik-prive.fr",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/WTwNU1Hnmom5BdYyslAXxw~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_XYNfgE8VaKsMXv-deDn_c3wGLjAxq13U50HI0k7cwZeUtxJEFGrcS-kaWKnPyEWsg1RToC_Pwo3b2OXDFZh5lMtWN9HBQ4_qq819qemEaQ-",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/gL9BfToNMHXfBtubV5Jh6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEdTW4kvNKX2vtTgbVhl8bUEsCXSnvPMqINwxXTqB9lnrURbWJ-x5r-9dUqJ6uUHj5UO92khzjmTkVQ1OTyupvcjnGSL8RffZhzbuZ2zvLWSQ",
             "final_url": "https://www.bebeboutik-prive.fr",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -249,19 +249,19 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/WTwNU1Hnmom5BdYyslAXxw~~/AABGZBA~/rkRXZ0KsOLAcssqf5TTg_XYNfgE8VaKsMXv-deDn_c3wGLjAxq13U50HI0k7cwZeUtxJEFGrcS-kaWKnPyEWsg1RToC_Pwo3b2OXDFZh5lMtWN9HBQ4_qq819qemEaQ-"
+                    "url": "https://post.eu.spmailtechno.com/f/a/gL9BfToNMHXfBtubV5Jh6Q~~/AABGZBA~/TB--dmCOS-UnJZuulABCEdTW4kvNKX2vtTgbVhl8bUEsCXSnvPMqINwxXTqB9lnrURbWJ-x5r-9dUqJ6uUHj5UO92khzjmTkVQ1OTyupvcjnGSL8RffZhzbuZ2zvLWSQ"
                 },
                 {
                     "status": 200,
                     "url": "https://www.bebeboutik-prive.fr"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 11,
             "txt": "désinscrire",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/rQrThCSItR5bTON8J5eQOg~~/AABGZBA~/TXUFolPfYWQi_UdIh7MsSv1wbQiBYKZaN0SNJ28OVHvwSHbwxLxTnnQPtYnt-Ng7NEfqa9z7qbrIN0bYdgQZvCrQ6xB1IZeOjgosi0vY5sEZ-fiF5k7J5JS1lllyAP8bWymkMQH8AkA3HwfTf9Dlow~~",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/wqmM_dVMODia9ETVWfs5Qg~~/AABGZBA~/bxrctd1mdViwlvS5FrJgMGmeKrvrZSJb9S5Ctno9r3Wk-9DJU5tY-IjtY9QzIpGnk3r8BBZV3yxu6c8YMcAYSA3k3FhbVuCsfB98ei_0NiTfy-JAB7f6iNosiw91exdnsaY6YmrakN5oOJBaC3i4Kw~~",
             "final_url": "https://www.bebeboutik-prive.fr/desabonnement",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -270,7 +270,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/rQrThCSItR5bTON8J5eQOg~~/AABGZBA~/TXUFolPfYWQi_UdIh7MsSv1wbQiBYKZaN0SNJ28OVHvwSHbwxLxTnnQPtYnt-Ng7NEfqa9z7qbrIN0bYdgQZvCrQ6xB1IZeOjgosi0vY5sEZ-fiF5k7J5JS1lllyAP8bWymkMQH8AkA3HwfTf9Dlow~~"
+                    "url": "https://post.eu.spmailtechno.com/f/a/wqmM_dVMODia9ETVWfs5Qg~~/AABGZBA~/bxrctd1mdViwlvS5FrJgMGmeKrvrZSJb9S5Ctno9r3Wk-9DJU5tY-IjtY9QzIpGnk3r8BBZV3yxu6c8YMcAYSA3k3FhbVuCsfB98ei_0NiTfy-JAB7f6iNosiw91exdnsaY6YmrakN5oOJBaC3i4Kw~~"
                 },
                 {
                     "status": 308,
@@ -281,12 +281,12 @@
                     "url": "https://www.bebeboutik-prive.fr/desabonnement"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         },
         {
             "index": 12,
             "txt": "Mentions légales",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/in91QnJYybL97mRa2umu8w~~/AABGZBA~/mTTWFyP1YgpfoYOWKKrjN9THQyGzrthzFNu08xvy54t6LO4T3WAr0NvgqUXTBCtXpYwm1NQ29SFGXOnpYNjWBGM9HT6BEGmeu09eMOHuHWWQmK2DXPJa0w9rJRDclorB1s-TpK9wS-by3jRha7pOrw~~",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/-WGrG0lbHWtlx-giuVEXUg~~/AABGZBA~/8nprg2yRj0YBJJnB7xOiMbi4Zg4ErSo47TBUHI5FnhIkDdlqHuZIOzcFeHTzQjBWjLPSbJ3NxDWeyyCpVhi_0z6zckmYcy3IxUsUolBWpZ1MYWJOncVzlBLmcIFsjRZ8LKYOKUd1Gf3aN9ebC19idA~~",
             "final_url": "https://www.bebeboutik-prive.fr/pages/mentions-legales",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
@@ -295,7 +295,7 @@
             "redirect_chain": [
                 {
                     "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/in91QnJYybL97mRa2umu8w~~/AABGZBA~/mTTWFyP1YgpfoYOWKKrjN9THQyGzrthzFNu08xvy54t6LO4T3WAr0NvgqUXTBCtXpYwm1NQ29SFGXOnpYNjWBGM9HT6BEGmeu09eMOHuHWWQmK2DXPJa0w9rJRDclorB1s-TpK9wS-by3jRha7pOrw~~"
+                    "url": "https://post.eu.spmailtechno.com/f/a/-WGrG0lbHWtlx-giuVEXUg~~/AABGZBA~/8nprg2yRj0YBJJnB7xOiMbi4Zg4ErSo47TBUHI5FnhIkDdlqHuZIOzcFeHTzQjBWjLPSbJ3NxDWeyyCpVhi_0z6zckmYcy3IxUsUolBWpZ1MYWJOncVzlBLmcIFsjRZ8LKYOKUd1Gf3aN9ebC19idA~~"
                 },
                 {
                     "status": 308,
@@ -306,12 +306,12 @@
                     "url": "https://www.bebeboutik-prive.fr/pages/mentions-legales"
                 }
             ],
-            "audit_date": "2026-09-21 14:15:46"
+            "audit_date": "2026-09-22 09:44:18"
         }
     ],
     "detected_pixels": [
         {
-            "url": "https://post.eu.spmailtechno.com/q/4VDpC58DpXtQJQPoFhRFww~~/AABGZBA~/YyNT6KYkhWEfySY4Rz5iT_kELOooBeHDtC2lEfOPlU8r0_kNhvVUMR67r_c_NynyYJI4OGvbKeHM2xQhX3elxw~~",
+            "url": "https://post.eu.spmailtechno.com/q/P66xCxYKXAjSOyZrAvpX1g~~/AABGZBA~/dvibOr4jSxU4UnrleXPMwhwo3Frnpd6hej4c9Ky6KjeLjRN93iE7xGsvCh4WV-N3l1JcxEn4EauXY8ISWzjfMA~~",
             "status": "Problème détecté",
             "domain": "post.eu.spmailtechno.com",
             "is_gtinsi": false,
@@ -326,7 +326,7 @@
             "has_issues": true
         },
         {
-            "url": "https://post.eu.spmailtechno.com/q/GwOMX8MpaLxUIng9F_bl6w~~/AABGZBA~/eDaB4f3U8lZLU7Gc69h-yTAf1ZFaNs4DwxdlEtdmLm6tbjcXmINfyGVrIf8ahKlMPxlOQ-VkBW8hT9ZfdjfAuQ~~",
+            "url": "https://post.eu.spmailtechno.com/q/XK8jCTJHcwirGiDkkH5iZg~~/AABGZBA~/Qli-Ok0_ekUoNck7Vb-TxfDAHVu7JrJEHYrDG46T1V47WTe8OLiPp75OH_ko10zcMkjhfKzVRlzkDSWsPMg0_g~~",
             "status": "Integration: OK",
             "domain": "post.eu.spmailtechno.com",
             "is_gtinsi": false,
