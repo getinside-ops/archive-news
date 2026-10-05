@@ -1,0 +1,288 @@
+{
+    "id": "82c929967178",
+    "subject": "[TEST] 🍽️ Foodbag : 60 € offerts pour moins de courses et plus de câlins !",
+    "date_rec": "05/10/2026 à 09:11",
+    "date_iso": "2026-10-05T09:11:05+00:00",
+    "sender": "Test",
+    "date_arch": "05/10/2026 à 09:17",
+    "preheader": "Des recettes livrés chez vous, sans prise de tête. présente La box repas belge , par excellence ! Faites-vous livrer de savoureux repas à domicile Entre le trav...",
+    "reading_time": "2 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Too Long",
+        "unsubscribe_found": true,
+        "link_count": 10,
+        "images_no_alt": 0
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/I_8Z-aiP616exqyttPfcrg~~/AABGZBA~/ombJAZoBMpZ5o3iPRjTORSWm4-8AGrR3OjBrwWFdUDTysoCsFCmrCcCzXx95MgKA3zkEjpFxC2Yf_Se4UpwwzD1fOQ-GJFfWs1CzPcusrflZ4QE_QZwB9jyXHX5R6Q--A3bUAqEyKxNz8HG2Rn-OyGLax_yKB5ZQfaJbrKPI6EycDJQeYTPz9q-T_ys0aQZqWFcu_fUwS40cd6fc6Aaq9A~~",
+            "final_url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/I_8Z-aiP616exqyttPfcrg~~/AABGZBA~/ombJAZoBMpZ5o3iPRjTORSWm4-8AGrR3OjBrwWFdUDTysoCsFCmrCcCzXx95MgKA3zkEjpFxC2Yf_Se4UpwwzD1fOQ-GJFfWs1CzPcusrflZ4QE_QZwB9jyXHX5R6Q--A3bUAqEyKxNz8HG2Rn-OyGLax_yKB5ZQfaJbrKPI6EycDJQeYTPz9q-T_ys0aQZqWFcu_fUwS40cd6fc6Aaq9A~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/?utm_source=batch&utm_medium=email_soir&utm_campaign=2026-03-26"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 2,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/FvFsgx-nN-7bnS5WDvIXYg~~/AABGZBA~/cn--5YVNN6zL-HtBCWzKijELVXUW47-cqHbQhMGiRxcPb2BZqnVCkKszQFe67j-MjRnltQsB_VVyDHR9Dr2_euWifH6LYOKs89y-CQZch9RkxRDsIFqioeWNTCZPhqU5",
+            "final_url": "https://www.foodbag.be/fr",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/FvFsgx-nN-7bnS5WDvIXYg~~/AABGZBA~/cn--5YVNN6zL-HtBCWzKijELVXUW47-cqHbQhMGiRxcPb2BZqnVCkKszQFe67j-MjRnltQsB_VVyDHR9Dr2_euWifH6LYOKs89y-CQZch9RkxRDsIFqioeWNTCZPhqU5"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.foodbag.be/fr"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 3,
+            "txt": "Je découvre Foodbag",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/MPjeXPAHKPFmBfx4xk7KMg~~/AABGZBA~/4yLkXrTgt0AIxIehw6n7_x7K8w2hoP6oAOvSz4500PkOg_X9j3ka0j2iD8FChunUQPCc6kNNm2Z2Jv9mNcV-5qBUC6cWuKW87APN2aEREkAZIobV4N3kClUQstAcZG1gf47aaW2QAJ0kJVj_Ldty0w~~",
+            "final_url": "https://www.foodbag.be/fr/comment-ca-marche",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/MPjeXPAHKPFmBfx4xk7KMg~~/AABGZBA~/4yLkXrTgt0AIxIehw6n7_x7K8w2hoP6oAOvSz4500PkOg_X9j3ka0j2iD8FChunUQPCc6kNNm2Z2Jv9mNcV-5qBUC6cWuKW87APN2aEREkAZIobV4N3kClUQstAcZG1gf47aaW2QAJ0kJVj_Ldty0w~~"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.foodbag.be/fr/comment-ca-marche"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 4,
+            "txt": "Composez vite votre menu",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/KDZMfgjULNJ0JlQqtCNt3A~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_pUjfkL7yZgLNcRKil0Came10mp2kSteTxFI6zl9_S09h57SVyUg9zXRAGbsNwLUIQ2daPpr_GLutWo_GzSeSD4FoGdMuLES_lLgL6esrfT2",
+            "final_url": "https://www.foodbag.be/fr/menu/W42Y2026",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/KDZMfgjULNJ0JlQqtCNt3A~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_pUjfkL7yZgLNcRKil0Came10mp2kSteTxFI6zl9_S09h57SVyUg9zXRAGbsNwLUIQ2daPpr_GLutWo_GzSeSD4FoGdMuLES_lLgL6esrfT2"
+                },
+                {
+                    "status": 308,
+                    "url": "https://www.foodbag.be/fr/menu/"
+                },
+                {
+                    "status": 307,
+                    "url": "https://www.foodbag.be/fr/menu"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.foodbag.be/fr/menu/W42Y2026"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 5,
+            "txt": "J'en profite",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/KDZMfgjULNJ0JlQqtCNt3A~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_pUjfkL7yZgLNcRKil0Came10mp2kSteTxFI6zl9_S09h57SVyUg9zXRAGbsNwLUIQ2daPpr_GLutWo_GzSeSD4FoGdMuLES_lLgL6esrfT2",
+            "final_url": "https://www.foodbag.be/fr/menu/W42Y2026",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/KDZMfgjULNJ0JlQqtCNt3A~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_pUjfkL7yZgLNcRKil0Came10mp2kSteTxFI6zl9_S09h57SVyUg9zXRAGbsNwLUIQ2daPpr_GLutWo_GzSeSD4FoGdMuLES_lLgL6esrfT2"
+                },
+                {
+                    "status": 308,
+                    "url": "https://www.foodbag.be/fr/menu/"
+                },
+                {
+                    "status": 307,
+                    "url": "https://www.foodbag.be/fr/menu"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.foodbag.be/fr/menu/W42Y2026"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/5icqqvdYqWaFdxRZ_uIgbA~~/AABGZBA~/GuwnE7EdvXVIXH8c1Ics-cdZ0dTnxFbEwPRvHu4dv-puCu1ml7cc644L0Ce5MYhvl8u70LtoBMnCbgz0gIrYXoaFzPZLfdtn8qWnndc3-ClNVTELKekCvTRHP7AbsNLp",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/5icqqvdYqWaFdxRZ_uIgbA~~/AABGZBA~/GuwnE7EdvXVIXH8c1Ics-cdZ0dTnxFbEwPRvHu4dv-puCu1ml7cc644L0Ce5MYhvl8u70LtoBMnCbgz0gIrYXoaFzPZLfdtn8qWnndc3-ClNVTELKekCvTRHP7AbsNLp"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/bebeboutik/"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbebeboutik%2F"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 7,
+            "txt": "",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/K4wzgb96qw6j_AhQR7osFQ~~/AABGZBA~/7Dmj0v9FNJXyxUO-gBbnDNnlfkt4F6HI800pb1E5ad4Oe8s2bCwCiyjS_-jGvYXCCWBptxFkp46bVepfY5o3QwjWLj-IIOgUubz3qSeIicD9BJJ5750SZ8FeWlH2TlRD",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/K4wzgb96qw6j_AhQR7osFQ~~/AABGZBA~/7Dmj0v9FNJXyxUO-gBbnDNnlfkt4F6HI800pb1E5ad4Oe8s2bCwCiyjS_-jGvYXCCWBptxFkp46bVepfY5o3QwjWLj-IIOgUubz3qSeIicD9BJJ5750SZ8FeWlH2TlRD"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/bebeboutik/"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fbebeboutik%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 8,
+            "txt": "www.bebeboutik-prive.fr",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/d40qvi9K7vy990cbqxyChA~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_rYzbfFAx4MEo_tUWyB7p3bkLsykd7aFJeGPLRRXsOI7dJgzwTK-yTEXToeJ9ohr2asfmq2J7pNojt58gMxmQI35KDG54XdOHfMQL9KCxqHl",
+            "final_url": "https://www.bebeboutik-prive.fr",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/d40qvi9K7vy990cbqxyChA~~/AABGZBA~/9UdOCFhv1GJ41mEwdVqe_rYzbfFAx4MEo_tUWyB7p3bkLsykd7aFJeGPLRRXsOI7dJgzwTK-yTEXToeJ9ohr2asfmq2J7pNojt58gMxmQI35KDG54XdOHfMQL9KCxqHl"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 9,
+            "txt": "désinscrire",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/5T9givHP-ArIrgmawhpUag~~/AABGZBA~/Y0xAPwH9DuOROZ2bYoRW6wu8pSZAdGX4XfHKgmOZ6YSvt9EdNU-m6wD08NcZQZreL8UAzAqbQ5r097tKbjnsY3Tudj4ZRgGp40T7f_6Oj0yqX6XJ4ZgJrIGfzxFeiD9UQsyEvibe_ltaOCwkgcOzJQ~~",
+            "final_url": "https://www.bebeboutik-prive.fr/desabonnement",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/5T9givHP-ArIrgmawhpUag~~/AABGZBA~/Y0xAPwH9DuOROZ2bYoRW6wu8pSZAdGX4XfHKgmOZ6YSvt9EdNU-m6wD08NcZQZreL8UAzAqbQ5r097tKbjnsY3Tudj4ZRgGp40T7f_6Oj0yqX6XJ4ZgJrIGfzxFeiD9UQsyEvibe_ltaOCwkgcOzJQ~~"
+                },
+                {
+                    "status": 308,
+                    "url": "https://www.bebeboutik-prive.fr/desabonnement/"
+                },
+                {
+                    "status": 404,
+                    "url": "https://www.bebeboutik-prive.fr/desabonnement"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        },
+        {
+            "index": 10,
+            "txt": "Mentions légales",
+            "original_url": "https://post.eu.spmailtechno.com/f/a/zD61mfkbelfttHBED0HUAw~~/AABGZBA~/l1Xc7S3hoWlH_vTXAsK2d1w_g88LCtnf38WHdMbn4GB2z0uUDJVxPS-LcPzfYpASlQUGoZ8IshMJxW71RiScOi2KYBDdY-Ce_Ki0RAo-AJR8AlBUupJ8PJUitQSPAcz0Ro9tcydvnqVpSBFftTRYkQ~~",
+            "final_url": "https://www.bebeboutik-prive.fr/pages/mentions-legales",
+            "domain": "post.eu.spmailtechno.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://post.eu.spmailtechno.com/f/a/zD61mfkbelfttHBED0HUAw~~/AABGZBA~/l1Xc7S3hoWlH_vTXAsK2d1w_g88LCtnf38WHdMbn4GB2z0uUDJVxPS-LcPzfYpASlQUGoZ8IshMJxW71RiScOi2KYBDdY-Ce_Ki0RAo-AJR8AlBUupJ8PJUitQSPAcz0Ro9tcydvnqVpSBFftTRYkQ~~"
+                },
+                {
+                    "status": 308,
+                    "url": "https://www.bebeboutik-prive.fr/page/mentions-legales"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.bebeboutik-prive.fr/pages/mentions-legales"
+                }
+            ],
+            "audit_date": "2026-10-05 09:17:23"
+        }
+    ],
+    "detected_pixels": [
+        {
+            "url": "https://post.eu.spmailtechno.com/q/OUZLjSfntGVMgtSnIUgG9w~~/AABGZBA~/X9dNXJj-JYZgLV4fmd7TReGrlE-m4Nlj057dajrfocVFXpfyywNKWDGf4hyX9q6YaPjAO7VjgUFgLTeZxOfmfw~~",
+            "status": "Problème détecté",
+            "domain": "post.eu.spmailtechno.com",
+            "is_gtinsi": false,
+            "warnings": [
+                {
+                    "code": "hidden_parent",
+                    "label": "Conteneur masqué (display:none)",
+                    "detail": "Le pixel est dans un élément CSS masqué. Bien que display:none n'empêche pas toujours le chargement, certains clients optimisés ne chargent pas ces ressources.",
+                    "fix": "Déplacer le pixel hors du conteneur masqué."
+                }
+            ],
+            "has_issues": true
+        },
+        {
+            "url": "https://post.eu.spmailtechno.com/q/kFIRzAK-rXE3tZ0Tdt-U2w~~/AABGZBA~/59Qpzv_tgBJdHwK-EpfqFaw0t6mMZu5aJiL66z0_3JoHL7PXuwGLGC0m_DHSu2IBXOMqbnqHYYPDQU20aI2NJw~~",
+            "status": "Integration: OK",
+            "domain": "post.eu.spmailtechno.com",
+            "is_gtinsi": false,
+            "warnings": [],
+            "has_issues": false
+        }
+    ],
+    "failed_images_count": 0
+}
