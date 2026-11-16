@@ -936,9 +936,7 @@
             }
         }
 
-        let _wantedMode = 'mobile';
         function setMode(mode) {
-            _wantedMode = mode;
             const frameEl = document.getElementById('deviceFrame');
             const iframeEl = document.getElementById('emailFrame');
 
@@ -948,20 +946,34 @@
                 b.setAttribute('aria-pressed', on);
             });
 
-            // Tout l'état final est posé d'un coup ; la View Transition anime entre
-            // deux captures, donc l'e-mail n'est remis en page qu'une seule fois.
-            // Lit _wantedMode : une transition sautée par un clic plus récent exécute quand même
-            // sa fonction, parfois après la suivante, et ne doit pas rétablir l'ancien mode.
-            const apply = () => {
-                frameEl.dataset.mode = _wantedMode;
-                iframeEl.classList.toggle('no-scrollbar', _wantedMode !== 'desktop');
-                if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(iframeEl, iframeEl.contentDocument);
-                if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
+            // Morphing du cadre (FLIP) : on mesure l'ancien cadre, on pose l'état final,
+            // puis on anime largeur/hauteur de l'un à l'autre. L'e-mail est figé à sa
+            // taille finale pendant l'animation : une seule mise en page, aucune déformation.
+            const first = frameEl.getBoundingClientRect();
+            const firstRadius = getComputedStyle(frameEl).borderRadius;
+            frameEl.getAnimations().forEach(a => a.cancel());
+            iframeEl.style.cssText = '';
+
+            frameEl.dataset.mode = mode;
+            iframeEl.classList.toggle('no-scrollbar', mode !== 'desktop');
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(iframeEl, iframeEl.contentDocument);
+            if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
+            if (linksHighlighted) updateOverlays();
+
+            const last = frameEl.getBoundingClientRect();
+            if (!frameEl.animate || !first.width || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const screen = iframeEl.getBoundingClientRect();
+            iframeEl.style.cssText = `flex: none; width: ${screen.width}px; height: ${screen.height}px;`;
+            frameEl.animate({
+                width: [first.width + 'px', last.width + 'px'],
+                height: [first.height + 'px', last.height + 'px'],
+                maxWidth: ['none', 'none'],
+                maxHeight: ['none', 'none'],
+                borderRadius: [firstRadius, getComputedStyle(frameEl).borderRadius],
+            }, { duration: 400, easing: 'cubic-bezier(0.2, 0.7, 0.2, 1)' }).finished.then(() => {
+                iframeEl.style.cssText = '';
                 if (linksHighlighted) updateOverlays();
-            };
-            // Transition sautée (onglet masqué, clics rapprochés) : l'état est appliqué quand même.
-            if (document.startViewTransition) document.startViewTransition(apply).ready.catch(() => {});
-            else apply();
+            }, () => {}); // annulée par un clic plus récent, qui reprend la main
         }
 
         function highlightLink(idx) {

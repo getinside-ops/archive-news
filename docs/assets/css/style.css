@@ -421,17 +421,13 @@ body.viewer-page { overflow: hidden; }
     border: 2px solid var(--color-ink);
     background: var(--color-white);
     box-shadow: var(--shadow-hard-lg);
-    /* Le changement d'appareil est animé par une View Transition (setMode) :
-       le navigateur fond deux captures, l'e-mail n'est remis en page qu'une fois. */
-    view-transition-name: device-mockup;
 }
-::view-transition-group(device-mockup) { animation-duration: 350ms; animation-timing-function: var(--ease-out); }
-::view-transition-old(device-mockup), ::view-transition-new(device-mockup) { height: 100%; object-fit: cover; object-position: top; }
 .device-mockup[data-mode="desktop"] { max-width: 960px; border-radius: var(--radius-md); aspect-ratio: 16 / 10; }
 .device-mockup[data-mode="tablet"] { max-width: 600px; border-radius: var(--radius-lg); aspect-ratio: 3 / 4; }
 .device-mockup[data-mode="mobile"] { max-width: 375px; border-radius: var(--radius-xl); aspect-ratio: 9 / 19.5; }
 
-.dm-screen { display: flex; flex: 1; min-height: 0; overflow: hidden; }
+/* centré : pendant le morphing (setMode) l'e-mail garde sa taille finale et le cadre le découvre */
+.dm-screen { display: flex; justify-content: center; flex: 1; min-height: 0; overflow: hidden; }
 .email-frame { flex: 1; width: 100%; height: 100%; border: 0; background: var(--color-white); }
 
 .dm-browser-bar {
@@ -665,5 +661,4 @@ button.card-v2-index { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; animation: none !important; }
-    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
