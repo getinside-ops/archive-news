@@ -225,18 +225,24 @@ code { font-family: var(--font-mono); }
 .gi-topnav-links + .gi-topnav-actions { margin-left: 0; }
 .gi-topnav-actions { margin-left: auto; }
 
-/* ── Index : hero jaune ────────────────────────────────────────────────── */
-.hero { background: var(--color-brand); }
-.hero-inner {
+/* ── Index : hero jaune (carte encadrée, comme l'accueil du handbook) ──── */
+.hero {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: calc(var(--spacing) * 6);
-    padding-block: clamp(1.5rem, 5vw, 4rem) clamp(2rem, 6vw, 4.5rem);
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 6) calc(var(--spacing) * 10);
+    margin-top: calc(var(--spacing) * 4);
+    padding: clamp(1.25rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2.5rem);
+    border: 2px solid var(--color-ink);
+    border-radius: var(--radius-xl);
+    background: var(--color-brand);
+    box-shadow: var(--shadow-hard);
 }
+.hero-head { flex: 1 1 20rem; display: flex; flex-direction: column; align-items: flex-start; gap: calc(var(--spacing) * 4); }
 .hero-title {
     max-width: 22ch;
-    font-size: clamp(2.5rem, 5vw, 3.25rem);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     line-height: 1.16;
     letter-spacing: -0.025em;
 }
@@ -257,21 +263,20 @@ code { font-family: var(--font-mono); }
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: calc(var(--spacing) * 6) clamp(2rem, 8vw, 6rem);
-    width: 100%;
+    gap: calc(var(--spacing) * 5) clamp(1.5rem, 4vw, 3rem);
     margin: 0;
 }
 .stat { display: flex; flex-direction: column; gap: calc(var(--spacing) * 2); }
-.stat dt { order: 2; font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
+.stat dt { order: 2; font-size: 1rem; line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
 .stat dd { margin: 0; }
 .stat-value {
     order: 1;
     align-self: flex-start;
-    font-size: clamp(2.25rem, 7vw, 5.5rem);
+    font-size: clamp(2rem, 4vw, 2.75rem);
     line-height: 0.95;
     letter-spacing: -0.03em;
 }
-.stat-value-sm { font-size: clamp(1.5rem, 4vw, 2.875rem); line-height: 1.15; letter-spacing: -0.025em; }
+.stat-value-sm { font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.15; letter-spacing: -0.025em; }
 .stat-mark {
     font-weight: 600;
     font-variant-numeric: tabular-nums;
@@ -284,7 +289,7 @@ code { font-family: var(--font-mono); }
 .stat:hover .stat-mark { background-size: 100% 100%; }
 
 /* ── Index : filtres, recherche, tri ───────────────────────────────────── */
-.index-page main { padding-block: clamp(3rem, 6vw, 4rem); }
+.index-page main { padding-block: clamp(2rem, 4vw, 3rem) clamp(3rem, 6vw, 4rem); }
 .ix-section-label { font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; opacity: 0.75; margin-bottom: calc(var(--spacing) * 3); }
 .ix-chip-row { display: flex; flex-wrap: wrap; gap: calc(var(--spacing) * 3); padding-bottom: 3px; }
 .ix-controls-row { display: flex; flex-wrap: wrap; gap: calc(var(--spacing) * 4); margin-block: calc(var(--spacing) * 8); }
@@ -649,6 +654,8 @@ button.card-v2-index { cursor: pointer; }
 
 @media (max-width: 45rem) {
     .gi-topnav-links { display: none; }
+    .gi-topnav { gap: calc(var(--spacing) * 3); }
+    .index-page .gi-topnav .btn .icon { display: none; }
     .viewer-page .gi-topnav .btn-ghost { display: none; }
     .stats { display: grid; grid-template-columns: 1fr 1fr; }
     .stat:last-child { grid-column: 1 / -1; }
