@@ -1,0 +1,466 @@
+{
+    "id": "9f00edfc241e",
+    "subject": "SHOWROOMPRIVE  - METAGENICS - FR",
+    "date_rec": "16/11/2026 à 02:51",
+    "date_iso": "2026-11-16T02:51:16-08:00",
+    "sender": "benoit@getinside.fr",
+    "date_arch": "16/11/2026 à 11:14",
+    "preheader": "L'occasion idéale de commencer votre routine santé Version en ligne Et si ce Black Friday était l’occasion de découvrir une nouvelle façon de prendre soin de vo...",
+    "reading_time": "1 min",
+    "audit": {
+        "subject_length": 0,
+        "subject_check": "Good",
+        "unsubscribe_found": false,
+        "link_count": 24,
+        "images_no_alt": 0
+    },
+    "crm": null,
+    "links": [
+        {
+            "index": 1,
+            "txt": "L'occasion idéale de commencer votre routine santé",
+            "original_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "final_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 2,
+            "txt": "Version en ligne",
+            "original_url": "https://email-builder.justrelate.com/instances/384dc4fc9e1246a2967b5f517173cdb8/mirror-link/mirror-inner/%%view_email_url%%",
+            "final_url": "https://email-builder.justrelate.com/instances/384dc4fc9e1246a2967b5f517173cdb8/mirror-link/mirror-inner/%%view_email_url%%",
+            "domain": "email-builder.justrelate.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 404,
+                    "url": "https://email-builder.justrelate.com/instances/384dc4fc9e1246a2967b5f517173cdb8/mirror-link/mirror-inner/%%view_email_url%%"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 3,
+            "txt": "",
+            "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx",
+            "final_url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3djules%26utm_channel%3demail_animco%26utm_content%3dlogo%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dmarques_favorites%26utm_term%3dheader",
+            "domain": "showroomprive.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=accueil.aspx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.showroomprive.com/accueil.aspx"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.showroomprive.com/?mes=0&direction=%2faccueil.aspx%3futm_campaign%3djules%26utm_channel%3demail_animco%26utm_content%3dlogo%26utm_goal%3d5%26utm_medium%3demail_animco%26utm_source%3dmarques_favorites%26utm_term%3dheader"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 4,
+            "txt": "",
+            "original_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "final_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 5,
+            "txt": "J'en profite",
+            "original_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "final_url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/collections/tous-les-produits?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=tous_les_produits"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 6,
+            "txt": "",
+            "original_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm",
+            "final_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 7,
+            "txt": "Je découvre",
+            "original_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm",
+            "final_url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/nutrimag-fastcalm-stress-gaba?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=nutrimag_fast_calm"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 8,
+            "txt": "",
+            "original_url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres",
+            "final_url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": true,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 9,
+            "txt": "Je découvre",
+            "original_url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres",
+            "final_url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": true,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/ultraflora-fibres-ggph-digestion-regularite-intestinale?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=uf_fibres"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 10,
+            "txt": "",
+            "original_url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide",
+            "final_url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 11,
+            "txt": "Je découvre",
+            "original_url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide",
+            "final_url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/soulagement-rapide-de-la-douleur?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=ma_rapide"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 12,
+            "txt": "",
+            "original_url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus",
+            "final_url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 13,
+            "txt": "Je découvre",
+            "original_url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus",
+            "final_url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus",
+            "domain": "metagenics.fr",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.metagenics.fr/products/complement-alimentaire-omega-3?utm_source=showroomprive&utm_medium=email&utm_campaign=nl_showroomprive&utm_content=omegagenics_capital_plus"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 14,
+            "txt": "",
+            "original_url": "https://apps.apple.com/fr/app/showroom-mode-maison-voyage/id426414466",
+            "final_url": "https://apps.apple.com/fr/app/showroomprive-appli-bon-plan/id426414466",
+            "domain": "apps.apple.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 301,
+                    "url": "https://apps.apple.com/fr/app/showroom-mode-maison-voyage/id426414466"
+                },
+                {
+                    "status": 200,
+                    "url": "https://apps.apple.com/fr/app/showroomprive-appli-bon-plan/id426414466"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 15,
+            "txt": "",
+            "original_url": "https://play.google.com/store/apps/details?id=com.holosfind.showroom&hl=fr",
+            "final_url": "https://play.google.com/store/apps/details?id=com.holosfind.showroom&hl=fr",
+            "domain": "play.google.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 403,
+                    "url": "https://play.google.com/store/apps/details?id=com.holosfind.showroom&hl=fr"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 16,
+            "txt": "",
+            "original_url": "https://www.facebook.com/showroomprivecom",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom",
+            "domain": "facebook.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/showroomprivecom"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 17,
+            "txt": "",
+            "original_url": "https://www.instagram.com/showroomprive/",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle",
+            "domain": "instagram.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/showroomprive/"
+                },
+                {
+                    "status": 429,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 18,
+            "txt": "",
+            "original_url": "https://www.linkedin.com/company/showroomprive/",
+            "final_url": "https://www.linkedin.com/company/showroomprive/",
+            "domain": "linkedin.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.linkedin.com/company/showroomprive/"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 19,
+            "txt": "",
+            "original_url": "https://www.tiktok.com/@showroomprive",
+            "final_url": "https://www.tiktok.com/@showroomprive",
+            "domain": "tiktok.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@showroomprive"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 20,
+            "txt": "",
+            "original_url": "https://www.facebook.com/showroomprivecom",
+            "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom",
+            "domain": "facebook.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.facebook.com/showroomprivecom"
+                },
+                {
+                    "status": 400,
+                    "url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fshowroomprivecom"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 21,
+            "txt": "",
+            "original_url": "https://www.instagram.com/showroomprive/",
+            "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle",
+            "domain": "instagram.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.instagram.com/showroomprive/"
+                },
+                {
+                    "status": 429,
+                    "url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fshowroomprive%2F&is_from_rle"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 22,
+            "txt": "",
+            "original_url": "https://www.linkedin.com/company/showroomprive/",
+            "final_url": "https://www.linkedin.com/company/showroomprive/",
+            "domain": "linkedin.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.linkedin.com/company/showroomprive/"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 23,
+            "txt": "",
+            "original_url": "https://www.tiktok.com/@showroomprive",
+            "final_url": "https://www.tiktok.com/@showroomprive",
+            "domain": "tiktok.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 200,
+                    "url": "https://www.tiktok.com/@showroomprive"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        },
+        {
+            "index": 24,
+            "txt": "ici",
+            "original_url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx",
+            "final_url": "https://www.showroomprive.com/?mes=&direction=%2fmoncompte%2fmespreferences.aspx",
+            "domain": "showroomprive.com",
+            "is_tracking": false,
+            "is_secure": true,
+            "is_dev": false,
+            "redirect_chain": [
+                {
+                    "status": 302,
+                    "url": "https://www.showroomprive.com/remoteconnexion.aspx?u=%%Member Email%%&p=%%Member Encrypted Password%%&direction=moncompte/mespreferences.aspx"
+                },
+                {
+                    "status": 302,
+                    "url": "https://www.showroomprive.com/moncompte/mespreferences.aspx"
+                },
+                {
+                    "status": 200,
+                    "url": "https://www.showroomprive.com/?mes=&direction=%2fmoncompte%2fmespreferences.aspx"
+                }
+            ],
+            "audit_date": "2026-11-16 11:14:23"
+        }
+    ],
+    "detected_pixels": [],
+    "failed_images_count": 0
+}
