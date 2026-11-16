@@ -67,6 +67,12 @@ jobs:
           FORCE_UPDATE: ${{ github.event.inputs.force_update }}
         run: python process_email.py 2>&1 | tee pipeline.log
 
+      # Facultatif : sans vignette, la carte de l'accueil s'affiche sans image.
+      - name: Generate card thumbnails
+        if: steps.check_new.outputs.has_new == 'true'
+        continue-on-error: true
+        run: pip install playwright && python make_thumbs.py
+
       - name: Upload pipeline log on failure
         if: failure()
         uses: actions/upload-artifact@v4

@@ -1236,7 +1236,9 @@
             }
         }
 
+        let _wantedMode = 'mobile';
         function setMode(mode) {
+            _wantedMode = mode;
             const frameEl = document.getElementById('deviceFrame');
             const iframeEl = document.getElementById('emailFrame');
 
@@ -1246,22 +1248,20 @@
                 b.setAttribute('aria-pressed', on);
             });
 
-            // Switch mode — CSS handles sizing via data-mode attribute
-            frameEl.dataset.mode = mode;
-            if (mode === 'desktop') {
-                iframeEl.classList.remove('no-scrollbar');
-            } else {
-                iframeEl.classList.add('no-scrollbar');
-            }
-
-            // Update overlays if visible
-            if (linksHighlighted) {
-                setTimeout(updateOverlays, 150);
-            }
-
-            setTimeout(() => {
+            // Tout l'état final est posé d'un coup ; la View Transition anime entre
+            // deux captures, donc l'e-mail n'est remis en page qu'une seule fois.
+            // Lit _wantedMode : une transition sautée par un clic plus récent exécute quand même
+            // sa fonction, parfois après la suivante, et ne doit pas rétablir l'ancien mode.
+            const apply = () => {
+                frameEl.dataset.mode = _wantedMode;
+                iframeEl.classList.toggle('no-scrollbar', _wantedMode !== 'desktop');
+                if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(iframeEl, iframeEl.contentDocument);
                 if (typeof _applyMobileScaling === 'function') _applyMobileScaling(iframeEl, iframeEl.contentDocument);
-            }, 150);
+                if (linksHighlighted) updateOverlays();
+            };
+            // Transition sautée (onglet masqué, clics rapprochés) : l'état est appliqué quand même.
+            if (document.startViewTransition) document.startViewTransition(apply).ready.catch(() => {});
+            else apply();
         }
 
         function highlightLink(idx) {

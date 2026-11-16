@@ -232,7 +232,7 @@ code { font-family: var(--font-mono); }
     flex-direction: column;
     align-items: flex-start;
     gap: calc(var(--spacing) * 6);
-    padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 6vw, 4.5rem);
+    padding-block: clamp(1.5rem, 5vw, 4rem) clamp(2rem, 6vw, 4.5rem);
 }
 .hero-title {
     max-width: 22ch;
@@ -254,23 +254,24 @@ code { font-family: var(--font-mono); }
 
 /* Chiffres clés (Stat) : soulignés d'un trait épais qui remplit le chiffre au survol */
 .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: calc(var(--spacing) * 10);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: calc(var(--spacing) * 6) clamp(2rem, 8vw, 6rem);
     width: 100%;
-    margin: calc(var(--spacing) * 4) 0 0;
+    margin: 0;
 }
-.stat { display: flex; flex-direction: column; gap: calc(var(--spacing) * 3); }
-.stat dt { order: 2; font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
+.stat { display: flex; flex-direction: column; gap: calc(var(--spacing) * 2); }
+.stat dt { order: 2; font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; }
 .stat dd { margin: 0; }
 .stat-value {
     order: 1;
     align-self: flex-start;
-    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-size: clamp(2.25rem, 7vw, 5.5rem);
     line-height: 0.95;
     letter-spacing: -0.03em;
 }
-.stat-value-sm { font-size: clamp(2rem, 4vw, 2.875rem); line-height: 1.15; letter-spacing: -0.025em; }
+.stat-value-sm { font-size: clamp(1.5rem, 4vw, 2.875rem); line-height: 1.15; letter-spacing: -0.025em; }
 .stat-mark {
     font-weight: 600;
     font-variant-numeric: tabular-nums;
@@ -321,10 +322,9 @@ code { font-family: var(--font-mono); }
 .news-link {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 3);
     width: 100%;
     min-width: 0;
-    padding: calc(var(--spacing) * 6);
+    overflow: hidden;
     border: 2px solid var(--color-ink);
     border-radius: var(--radius-lg);
     background: var(--color-white);
@@ -334,14 +334,17 @@ code { font-family: var(--font-mono); }
     transition: translate 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
 }
 .news-link:hover { translate: -2px -2px; box-shadow: var(--shadow-hard-lg); }
+/* Vignette : haut de l'e-mail, produite par make_thumbs.py (absente = carte sans image) */
+.card-thumb { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 2px solid var(--color-ink); background: var(--color-muted); }
+.card-body { display: flex; flex-direction: column; flex: 1; gap: calc(var(--spacing) * 3); padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6); }
 .card-header { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--spacing) * 2); }
-.card-header .date { margin-right: auto; font-size: 0.875rem; line-height: 1.25rem; color: var(--color-ink-soft); }
-.sender-pill { font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; overflow-wrap: anywhere; }
+.card-footer .date { font-weight: 400; color: var(--color-ink-soft); }
+.sender-pill { margin-right: auto; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; color: var(--color-ink-soft); overflow-wrap: anywhere; }
 .card-title { font-size: 1.25rem; line-height: 1.75rem; overflow-wrap: anywhere; text-wrap: auto; }
 .card-preview {
     color: var(--color-ink-soft);
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     overflow-wrap: anywhere;
@@ -367,7 +370,7 @@ body.viewer-page { overflow: hidden; }
 .vh-unified-bar { display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--spacing) * 3) calc(var(--spacing) * 6); }
 .vh-zone-identity { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: calc(var(--spacing) * 1) calc(var(--spacing) * 3); flex: 1 1 18rem; min-width: 0; }
 .vh-sender { flex-basis: 100%; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600; color: var(--color-ink-soft); }
-.vh-subject { min-width: 0; max-width: 100%; font-size: 1.25rem; line-height: 1.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-wrap: nowrap; }
+.vh-subject { min-width: 0; max-width: 100%; font-size: 1.25rem; line-height: 1.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
 .vh-date { font-size: 0.875rem; color: var(--color-ink-soft); white-space: nowrap; }
 .device-toggle, .vh-zone-actions { display: flex; flex-wrap: wrap; gap: calc(var(--spacing) * 3); padding: 0 3px 3px 0; }
 .viewer-page .btn { height: calc(var(--spacing) * 10); padding-inline: calc(var(--spacing) * 4); font-size: 0.875rem; }
@@ -418,8 +421,12 @@ body.viewer-page { overflow: hidden; }
     border: 2px solid var(--color-ink);
     background: var(--color-white);
     box-shadow: var(--shadow-hard-lg);
-    transition: border-radius 300ms var(--ease-out), max-width 300ms var(--ease-out);
+    /* Le changement d'appareil est animé par une View Transition (setMode) :
+       le navigateur fond deux captures, l'e-mail n'est remis en page qu'une fois. */
+    view-transition-name: device-mockup;
 }
+::view-transition-group(device-mockup) { animation-duration: 350ms; animation-timing-function: var(--ease-out); }
+::view-transition-old(device-mockup), ::view-transition-new(device-mockup) { height: 100%; object-fit: cover; object-position: top; }
 .device-mockup[data-mode="desktop"] { max-width: 960px; border-radius: var(--radius-md); aspect-ratio: 16 / 10; }
 .device-mockup[data-mode="tablet"] { max-width: 600px; border-radius: var(--radius-lg); aspect-ratio: 3 / 4; }
 .device-mockup[data-mode="mobile"] { max-width: 375px; border-radius: var(--radius-xl); aspect-ratio: 9 / 19.5; }
@@ -647,9 +654,16 @@ button.card-v2-index { cursor: pointer; }
 @media (max-width: 45rem) {
     .gi-topnav-links { display: none; }
     .viewer-page .gi-topnav .btn-ghost { display: none; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; }
+    .stat:last-child { grid-column: 1 / -1; }
+    /* Sur téléphone, pas de téléphone dessiné dans le téléphone : l'e-mail prend tout l'écran */
+    .viewer-content { padding: 0; }
+    .device-mockup[data-mode] { max-width: none; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; }
+    .dm-status-bar, .dm-chrome-bottom { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; animation: none !important; }
+    ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }

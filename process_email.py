@@ -35,6 +35,14 @@ BATCH_SIZE = 9999
 FORCE_UPDATE = os.environ.get("FORCE_UPDATE", "false").lower() == "true"
 
 
+MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+
+
+def _now_fr():
+    n = datetime.now()
+    return f"{n.day} {MOIS[n.month - 1]} {n.year}, {n:%H:%M}"
+
+
 def process_emails():
     if not GMAIL_USER or not GMAIL_PASSWORD:
         logger.error("Missing credentials: set GMAIL_USER and GMAIL_PASSWORD env vars.")
@@ -209,8 +217,8 @@ def process_emails():
                 if not os.path.islink(fp):
                     total_size += os.path.getsize(fp)
         
-        size_mb = f"{total_size / (1024*1024):.1f} MB"
-        last_updated = datetime.now().strftime("%d %b %Y, %H:%M")
+        size_mb = f"{total_size / (1024*1024):.1f} Mo"
+        last_updated = _now_fr()
         
         stats = {
             'last_updated': last_updated,
@@ -291,8 +299,8 @@ def regen_only():
         if not os.path.islink(os.path.join(dp, f))
     )
     stats = {
-        'last_updated': datetime.now().strftime("%d %b %Y, %H:%M"),
-        'archive_size': f"{total_size / (1024*1024):.1f} MB",
+        'last_updated': _now_fr(),
+        'archive_size': f"{total_size / (1024*1024):.1f} Mo",
         'count': len(all_metadata)
     }
     generate_index(all_metadata, os.path.join(OUTPUT_FOLDER, "index.html"), stats)

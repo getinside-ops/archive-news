@@ -98,22 +98,24 @@
             {% for email in emails %}
             <li class="news-card" data-date="{{ email.date_iso }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
                 <a href="{{ email.id }}/index.html" class="news-link">
-                    <div class="card-header">
-                        <span class="date">{{ email.date_rec }}</span>
-                        <span class="crm-badge" data-crm="{{ email.crm or 'Unknown' }}">{{ email.crm or 'Inconnu' }}</span>
-                        {% if email.failed_images_count and email.failed_images_count > 0 %}
-                        <span class="card-warning-chip" title="{{ email.failed_images_count }} image(s) non archivée(s)" aria-label="{{ email.failed_images_count }} images non archivées">
-                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-                            <span>{{ email.failed_images_count }}</span>
-                        </span>
-                        {% endif %}
-                    </div>
-                    <div class="sender-pill">{{ email.sender }}</div>
-                    <h2 class="card-title">{{ email.subject }}</h2>
-                    <p class="card-preview">{{ email.preheader }}</p>
-                    <div class="card-footer">
-                        {% if email.reading_time %}<span class="read-time">{{ email.reading_time }}</span>{% endif %}
-                        <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    <img class="card-thumb" src="{{ email.id }}/thumb.jpg" alt="" loading="lazy" onerror="this.remove()">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div class="sender-pill">{{ email.sender }}</div>
+                            {% if email.crm %}<span class="crm-badge" data-crm="{{ email.crm }}">{{ email.crm }}</span>{% endif %}
+                            {% if email.failed_images_count and email.failed_images_count > 0 %}
+                            <span class="card-warning-chip" title="{{ email.failed_images_count }} image(s) non archivée(s)" aria-label="{{ email.failed_images_count }} images non archivées">
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                                <span>{{ email.failed_images_count }}</span>
+                            </span>
+                            {% endif %}
+                        </div>
+                        <h2 class="card-title">{{ email.subject }}</h2>
+                        <p class="card-preview">{{ email.preheader }}</p>
+                        <div class="card-footer">
+                            <span class="date">{{ email.date_rec }}</span>
+                            <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </div>
                     </div>
                 </a>
             </li>

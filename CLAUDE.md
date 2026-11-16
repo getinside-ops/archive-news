@@ -87,6 +87,7 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 
 ## Utility scripts
 
+- **`make_thumbs.py`**: screenshots the top of each archived email into `docs/<id>/thumb.jpg` for the index cards (missing ones only). Needs `pip install playwright` and a local Chrome; optional step in CI, cards render without a thumbnail.
 - **`debug_gmail.py`**: Standalone IMAP connection debugger — lists labels and message counts without archiving anything. Useful for diagnosing credential or label issues.
 
 ## Contributing rules (from README)
