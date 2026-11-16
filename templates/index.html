@@ -1,93 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title data-i18n="page_title">Newsletter Archive</title>
-    <meta name="description" content="A premium archive of curated newsletters.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Archive des newsletters · getinside</title>
+    <meta name="description" content="Les newsletters archivées et auditées par getinside.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/images/gi-keyvisual.svg" type="image/svg+xml">
 </head>
 
 <body class="index-page">
-    <!-- Hero blob background -->
-    <div class="ix-hero-blobs" aria-hidden="true">
-        <div class="ix-blob ix-blob-mint"></div>
-        <div class="ix-blob ix-blob-purple"></div>
-    </div>
-
-    <nav class="gi-topnav">
-        <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
-            <img src="assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
-        </a>
-
-        <div class="gi-topnav-links">
-            <a href="index.html" class="gi-topnav-link active">Archive</a>
-            <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">🛍️ Annonceurs</a>
-            <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">📦 Retailers</a>
-            <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">❓ FAQ</a>
-            <a href="https://app.getinside.media/" class="gi-topnav-link gi-topnav-saas" target="_blank" rel="noopener">
-                Accéder au SaaS
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3H2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V7.5M7 2h3m0 0v3m0-3L5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <header class="hero">
+        <nav class="gi-topnav">
+            <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
+                <img src="assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img">
             </a>
-        </div>
 
-        <div class="gi-topnav-actions">
-            <!-- Language picker -->
-            <button class="gi-lang-btn" title="Change language" aria-label="Change language">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-            </button>
-
-            <!-- Theme toggle: VitePress pill switch -->
-            <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme" aria-label="Toggle theme">
-                <span class="gi-vp-check">
-                    <span class="gi-vp-icon">
-                        <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                        <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                    </span>
-                </span>
-            </button>
-        </div>
-    </nav>
-
-    <div class="container">
-
-        <!-- Stats Band -->
-        <div class="ix-stats-band">
-            <div class="ix-stat-block">
-                <span class="ix-stat-num">{{ stats.count }}</span>
-                <span class="ix-stat-label">Dispatches</span>
+            <div class="gi-topnav-links">
+                <a href="https://getinside-ops.github.io/handbook/advertisers/" class="gi-topnav-link" target="_blank" rel="noopener">Annonceurs</a>
+                <a href="https://getinside-ops.github.io/handbook/publishers/" class="gi-topnav-link" target="_blank" rel="noopener">Retailers</a>
+                <a href="https://getinside-ops.github.io/handbook/faq/" class="gi-topnav-link" target="_blank" rel="noopener">FAQ</a>
             </div>
-            <div class="ix-stat-divider"></div>
-            <div class="ix-stat-block">
-                <span class="ix-stat-num">{{ stats.last_updated }}</span>
-                <span class="ix-stat-label">Last Updated</span>
+
+            <div class="gi-topnav-actions">
+                <a href="https://app.getinside.media/" class="btn" target="_blank" rel="noopener">
+                    Accéder au SaaS
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </a>
             </div>
-            <div class="ix-stat-divider"></div>
-            <div class="ix-stat-block">
-                <span class="ix-stat-num">{{ stats.archive_size }}</span>
-                <span class="ix-stat-label">Archive Size</span>
-            </div>
+        </nav>
+
+        <div class="container hero-inner">
+            <span class="tag tag-lilac">Archive</span>
+            <h1 class="hero-title">Les newsletters <span class="accent-box">archivées</span> et auditées.</h1>
+
+            <dl class="stats">
+                <div class="stat">
+                    <dd class="stat-value"><span class="stat-mark">{{ stats.count }}</span></dd>
+                    <dt>newsletters archivées</dt>
+                </div>
+                <div class="stat">
+                    <dd class="stat-value"><span class="stat-mark">{{ stats.archive_size }}</span></dd>
+                    <dt>d'archive</dt>
+                </div>
+                <div class="stat">
+                    <dd class="stat-value stat-value-sm"><span class="stat-mark">{{ stats.last_updated }}</span></dd>
+                    <dt>dernière mise à jour</dt>
+                </div>
+            </dl>
         </div>
+    </header>
+
+    <main class="container">
 
         <!-- CRM Filter Chips -->
-        <div class="ix-section-label">Filtrer par CRM</div>
-        <div class="ix-chip-row" id="crmFilterRow">
-            <button class="ix-chip ix-chip-all active" data-crm="all">All</button>
+        <h2 class="ix-section-label" id="crmFilterLabel">Filtrer par CRM</h2>
+        <div class="ix-chip-row" id="crmFilterRow" role="group" aria-labelledby="crmFilterLabel">
+            <button class="ix-chip ix-chip-all active" data-crm="all">Tous</button>
             {% set seen = namespace(crms=[]) %}
             {% for email in emails %}
                 {% set crm = email.crm or 'Unknown' %}
                 {% if crm not in seen.crms %}
                     {% set seen.crms = seen.crms + [crm] %}
-                    <button class="ix-chip" data-crm="{{ crm }}">{{ crm }}</button>
+                    <button class="ix-chip" data-crm="{{ crm }}">{{ 'Inconnu' if crm == 'Unknown' else crm }}</button>
                 {% endif %}
             {% endfor %}
         </div>
@@ -95,43 +72,39 @@
         <!-- Controls Row (search + sort together) -->
         <div class="ix-controls-row">
             <div class="search-wrapper ix-search-wrapper">
-                <svg class="icon search-icon" viewBox="0 0 24 24">
+                <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <input type="text" id="searchInput" class="search-input ix-search" placeholder="Search dispatches..."
-                    data-i18n="search_placeholder">
+                <input type="text" id="searchInput" class="search-input ix-search" placeholder="Rechercher un sujet, un expéditeur…" aria-label="Rechercher dans les newsletters">
             </div>
             <div class="sort-wrapper ix-sort-wrapper">
-                <select id="sortSelect" class="sort-select ix-sort-select" onchange="sortList()">
-                    <option value="date-desc">Newest First</option>
-                    <option value="date-asc">Oldest First</option>
-                    <option value="sender-az">Sender A-Z</option>
-                    <option value="sender-za">Sender Z-A</option>
+                <select id="sortSelect" class="sort-select ix-sort-select" onchange="sortList()" aria-label="Trier les newsletters">
+                    <option value="date-desc">Plus récentes d'abord</option>
+                    <option value="date-asc">Plus anciennes d'abord</option>
+                    <option value="sender-az">Expéditeur A-Z</option>
+                    <option value="sender-za">Expéditeur Z-A</option>
                 </select>
-                <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="icon sort-icon-chevron" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="m6 9 6 6 6-6" />
                 </svg>
             </div>
         </div>
 
         <ul class="news-grid" id="newsList">
-            <li id="noResults"
-                style="display:none; grid-column: 1/-1; list-style:none; text-align: center; padding: 40px; color: var(--text-secondary);"
-                data-i18n="no_results">
-                No results found.
+            <li id="noResults" class="no-results" style="display:none;">
+                Aucune newsletter ne correspond.
             </li>
             {% for email in emails %}
-            <li class="news-card glass" data-date="{{ email.date_obj }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
+            <li class="news-card" data-date="{{ email.date_iso }}" data-sender="{{ email.sender | e }}" data-crm="{{ email.crm or 'Unknown' }}">
                 <a href="{{ email.id }}/index.html" class="news-link">
                     <div class="card-header">
                         <span class="date">{{ email.date_rec }}</span>
-                        <span class="crm-badge" data-crm="{{ email.crm or 'Unknown' }}">{{ email.crm or 'Unknown'
-                            }}</span>
+                        <span class="crm-badge" data-crm="{{ email.crm or 'Unknown' }}">{{ email.crm or 'Inconnu' }}</span>
                         {% if email.failed_images_count and email.failed_images_count > 0 %}
                         <span class="card-warning-chip" title="{{ email.failed_images_count }} image(s) non archivée(s)" aria-label="{{ email.failed_images_count }} images non archivées">
-                            ⚠️ <span>{{ email.failed_images_count }}</span>
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                            <span>{{ email.failed_images_count }}</span>
                         </span>
                         {% endif %}
                     </div>
@@ -140,25 +113,32 @@
                     <p class="card-preview">{{ email.preheader }}</p>
                     <div class="card-footer">
                         {% if email.reading_time %}<span class="read-time">{{ email.reading_time }}</span>{% endif %}
-                        <span class="arrow">→</span>
+                        <svg class="icon arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </div>
                 </a>
             </li>
             {% endfor %}
         </ul>
 
-        <div id="paginationWrapper" style="display:none; justify-content:center; align-items:center; gap:16px; padding:24px 0; flex-wrap:wrap;">
-            <button id="paginationPrev" onclick="changePage(-1)" class="ix-chip" disabled aria-label="Previous page">← Prev</button>
-            <span id="paginationInfo" style="color:var(--text-secondary); font-size:0.9rem;" aria-live="polite"></span>
-            <button id="paginationNext" onclick="changePage(1)" class="ix-chip" aria-label="Next page">Next →</button>
+        <div id="paginationWrapper" class="pagination" style="display:none;">
+            <button id="paginationPrev" onclick="changePage(-1)" class="btn-round" disabled aria-label="Page précédente">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </button>
+            <span id="paginationInfo" aria-live="polite"></span>
+            <button id="paginationNext" onclick="changePage(1)" class="btn-round" aria-label="Page suivante">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
         </div>
 
-        <footer>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
             <p>Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>
             · Studio : <a href="mailto:studio@getinside.fr">studio@getinside.fr</a></p>
             <p>© 2026 getinside. Tous droits réservés.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <script src="assets/js/main.js"></script>
 </body>
 

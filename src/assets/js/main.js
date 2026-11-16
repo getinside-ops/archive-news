@@ -41,7 +41,7 @@ function updatePaginationUI(page, totalPages) {
     wrapper.style.display = totalPages > 1 ? 'flex' : 'none';
     if (prevBtn) prevBtn.disabled = page <= 1;
     if (nextBtn) nextBtn.disabled = page >= totalPages;
-    if (pageInfo) pageInfo.textContent = totalPages > 1 ? `Page ${page} of ${totalPages}` : '';
+    if (pageInfo) pageInfo.textContent = totalPages > 1 ? `Page ${page} sur ${totalPages}` : '';
 }
 
 function changePage(delta) {
@@ -50,34 +50,7 @@ function changePage(delta) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function _resolveInitialTheme() {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark' || stored === 'light') return stored;
-    try {
-        return window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark' : 'light';
-    } catch (_) { return 'light'; }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Theme (honors prefers-color-scheme when user hasn't toggled)
-    applyTheme(_resolveInitialTheme());
-
-    // React to live OS-level theme changes when the user hasn't manually chosen
-    if (window.matchMedia) {
-        try {
-            const mq = window.matchMedia('(prefers-color-scheme: dark)');
-            const onChange = e => {
-                if (!localStorage.getItem('theme')) {
-                    applyTheme(e.matches ? 'dark' : 'light');
-                }
-            };
-            if (mq.addEventListener) mq.addEventListener('change', onChange);
-            else if (mq.addListener) mq.addListener(onChange); // Safari <14
-        } catch (_) { /* ignore */ }
-    }
-
     // Debounced search
     let _searchTimer = null;
     const searchInput = document.getElementById('searchInput');
@@ -98,50 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
         new MutationObserver(() => {
             const doc = emailFrame.contentDocument;
             if (doc && doc.head) {
-                const theme = document.body.getAttribute('data-theme') || 'light';
-                _applyIframeScrollbar(emailFrame, doc, theme);
+                _applyIframeScrollbar(emailFrame, doc);
                 _applyMobileScaling(emailFrame, doc);
             }
         }).observe(emailFrame, { attributes: true, attributeFilter: ['class'] });
     }
 });
 
-function applyTheme(theme) {
-    document.body.setAttribute('data-theme', theme);
-    updateThemeIcon(theme);
-
-    // Update Iframe if exists
-    const frame = document.getElementById('emailFrame');
-    if (frame) {
-        const doc = frame.contentDocument;
-        if (doc && doc.head) {
-            const styleId = 'dm-filter';
-            let oldStyle = doc.getElementById(styleId);
-            if (oldStyle) oldStyle.remove();
-
-            if (theme === 'dark') {
-                if (doc.body) doc.body.setAttribute('data-theme', 'dark');
-                const style = doc.createElement('style');
-                style.id = styleId;
-                // Smart Inversion
-                style.innerHTML = `
-                    html { filter: invert(1) hue-rotate(180deg); }
-                    img, video, iframe, [style*="background-image"] { filter: invert(1) hue-rotate(180deg); }
-                `;
-                doc.head.appendChild(style);
-            } else {
-                if (doc.body) doc.body.setAttribute('data-theme', 'light');
-            }
-
-            _applyIframeScrollbar(frame, doc, theme);
-        }
-    }
-}
-
 /* Inject scrollbar CSS into the iframe document.
    hide=true  → scrollbar hidden but content still scrollable (mobile/tablet)
-   hide=false → thin themed scrollbar (desktop) */
-function _applyIframeScrollbar(frameEl, doc, theme) {
+   hide=false → thin scrollbar (desktop) */
+function _applyIframeScrollbar(frameEl, doc) {
     if (!doc || !doc.head) return;
     const hide = frameEl.classList.contains('no-scrollbar');
     const styleId = 'sb-style';
@@ -157,7 +97,7 @@ function _applyIframeScrollbar(frameEl, doc, theme) {
             html::-webkit-scrollbar, body::-webkit-scrollbar { display: none !important; }
         `;
     } else {
-        const thumb = theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)';
+        const thumb = 'rgba(0,0,0,0.2)';
         sbStyle.innerHTML = `
             html::-webkit-scrollbar { width: 6px; }
             html::-webkit-scrollbar-track { background: transparent; }
@@ -192,27 +132,6 @@ function _applyMobileScaling(frameEl, doc) {
     if (frameWidth > 0 && naturalWidth > frameWidth + 4) {
         const scale = (frameWidth / naturalWidth).toFixed(4);
         el.innerHTML = `html { zoom: ${scale}; }`;
-    }
-}
-
-function toggleTheme() {
-    const current = document.body.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
-    applyTheme(next);
-}
-
-function updateThemeIcon(theme) {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-    const sun = btn.querySelector('.icon-sun');
-    const moon = btn.querySelector('.icon-moon');
-    if (theme === 'dark') {
-        if (sun) sun.style.display = 'none';
-        if (moon) moon.style.display = 'block';
-    } else {
-        if (sun) sun.style.display = 'block';
-        if (moon) moon.style.display = 'none';
     }
 }
 
@@ -363,6 +282,26 @@ function copyToClipboard(text, btn) {
     });
 }
 
+/* jszip / html2canvas are only needed on click: load them then, not on every page view. */
+const _loadedScripts = {};
+function _loadScript(src) {
+    return _loadedScripts[src] || (_loadedScripts[src] = new Promise((resolve, reject) => {
+        const el = document.createElement('script');
+        el.src = src; el.onload = resolve; el.onerror = reject;
+        document.head.appendChild(el);
+    }));
+}
+const JSZIP_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+const HTML2CANVAS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+
+/* Keyboard access for clickable non-button elements (expandable cards). */
+document.addEventListener('keydown', e => {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('[role="button"]')) {
+        e.preventDefault();
+        e.target.click();
+    }
+});
+
 async function screenshotEmail(btn) {
     const iframe = document.getElementById('emailFrame');
     const deviceFrame = document.getElementById('deviceFrame');
@@ -374,13 +313,14 @@ async function screenshotEmail(btn) {
     const mode = deviceFrame ? (deviceFrame.dataset.mode || 'email') : 'email';
     const originalHtml = btn.innerHTML;
     btn.disabled = true;
-    btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:4px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>…';
+    btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>…';
 
     const doc = iframe.contentDocument;
     let savedZoom = null;
     let swapped = [];
 
     try {
+        await _loadScript(HTML2CANVAS_URL);
         // Remove CSS zoom so html2canvas captures at natural layout (not zoomed)
         const zoomStyle = doc.getElementById('mobile-scale-style');
         if (zoomStyle && zoomStyle.innerHTML) {

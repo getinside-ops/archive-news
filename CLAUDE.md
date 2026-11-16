@@ -52,13 +52,10 @@ The pipeline has 4 stages orchestrated by `process_email.py`:
 
 4. **Output** (`docs/`): Static site root served by GitHub Pages. Each archived email lives in `docs/<12-char-id>/` alongside its localized images and `metadata.json`.
 
-5. **Worker** (`src/worker.js` + `wrangler.toml`): Cloudflare serverless function for live viewer operations (e.g., redirect checking, external API calls). Deploy via `wrangler deploy`. Worker URL must be configured in `templates/viewer.html` as `window.WORKER_URL`.
 
 ## Key design notes
 
 **Incremental sync**: `metadata.json` presence is the skip signal. If it exists and `FORCE_UPDATE` is false, the email is loaded from disk and not re-fetched.
-
-**Smart Inversion dark mode**: The viewer applies `filter: invert(1) hue-rotate(180deg)` to the email iframe. CSS variables in `templates/viewer.html` use "pre-inverted" values so highlights/shadows flip back to the intended colors when the filter is active.
 
 **Badge overlays**: Link number badges are rendered in the parent window using `getBoundingClientRect()` on iframe elements — necessary because the email iframe is sandboxed. Badges are hidden via clipping logic when links scroll out of the iframe viewport.
 
@@ -85,8 +82,7 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 
 - **CSS sync**: After editing `src/assets/css/style.css`, always copy to `docs/assets/css/style.css`. The generator does this automatically on pipeline runs.
 - **`docs/index.html` is generated**: `templates/index.html` → `docs/index.html` via `generator.py`. When making nav/static changes, update both files manually if not running the full pipeline.
-- **Viewer CSS layering**: Base layout rules in `.viewer-content` etc.; viewer-specific overrides live in `.viewer-layout .viewer-content` blocks (~line 1315 in style.css). Add overrides there, not to base rules.
-- **CSS variables required for dark mode**: Use `var(--vw-*)` and `var(--text-*)` variables, not hardcoded hex colors. Light/dark theme toggle applies `filter: invert(1)` to iframe; CSS variables flip back to intended colors.
+- **Design system**: the getinside redesign tokens live at the top of `src/assets/css/style.css` (`--color-*`, `--radius-*`, `--shadow-hard-*`). Rules: Bricolage Grotesque 400/600 only; 2px ink border + hard shadow (no blur) on anything clickable; pill buttons that sink into their shadow; Tags never have a shadow, Chips always do; no yellow button; single light theme (no dark mode); Lucide icons, no emoji. `--font-mono` and the `--accent-*` status colours are app-specific additions, not design-system tokens.
 - **Local preview**: Playwright blocks `file://` — run `python3 -m http.server 8765` inside `docs/` to preview locally.
 
 ## Utility scripts
@@ -99,5 +95,4 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 - **Template updates**: Maintain the JS-based sidebar logic; be careful with variable escaping when injecting JSON into `<script>` tags. **Never pass URLs via `onclick="{{ url | tojson }}"` — `tojson` produces double-quoted strings that break HTML attribute parsing.** Use `data-url="{{ url }}"` on the element and read `btn.dataset.url` in JS instead.
 - **Device mockup**: Chrome HTML structure lives in `#deviceFrame` in `templates/viewer.html` (dm-browser-bar, dm-status-bar, dm-notch, dm-screen, dm-chrome-bottom). The CSS uses `.device-mockup[data-mode="mobile|tablet|desktop"]` selectors — both the class and `data-mode` attribute must be present. `setMode()` switches modes by setting `frameEl.dataset.mode`.
 - **Assets**: All archived images must be saved to `docs/assets/` (via `copy_assets`) or per-email folders — never referenced from `src/`.
-- **CSS**: Use the getinside Design System palette defined in `src/assets/css/style.css` and documented in `DESIGN-SYSTEM.md`. Key tokens: `#0aaa8e` brand primary (light), `#6AE7C8` mint accent, `#F7F6F3` light bg, `#1b1b1f` dark bg. After editing CSS, copy `src/assets/css/style.css` → `docs/assets/css/style.css`.
-- **Worker JSON responses**: URLs and user content rendered to DOM must be HTML-escaped to prevent XSS. Use `escapeHtml()` helper function with DOM's textContent/innerHTML pattern.
+- **CSS**: use the tokens in `src/assets/css/style.css`, never raw hex values. After editing CSS, run `python process_email.py --regen-only` (copies assets to `docs/`).

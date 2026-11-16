@@ -1,51 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot">
+<html lang="fr" id="htmlRoot">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>YOOJI ✨ recettes bio &amp; portions faciles</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
-<body>
+<body class="viewer-page">
     <div class="viewer-layout">
         <!-- Top navigation -->
         <nav class="gi-topnav">
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
-                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img">
             </a>
 
             <div class="gi-topnav-actions">
-                <!-- Language picker: translate icon matching VitePress vpi-languages -->
-                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-                </button>
-
-                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
-                    <span class="gi-vp-check">
-                        <span class="gi-vp-icon">
-                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        </span>
-                    </span>
+                <a href="../index.html" class="btn btn-ghost" data-i18n="back_archive">Toutes les archives</a>
+                <button id="langBtn" class="btn-round" data-i18n-title="lang_btn_title" title="Changer la langue" aria-label="Changer la langue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
                 </button>
             </div>
         </nav>
@@ -59,38 +35,36 @@
                 <div class="vh-unified-bar">
                     <!-- Left: Email identity -->
                     <div class="vh-zone-identity">
-                        <span class="vh-sender-pill">Bebeboutik</span>
+                        <span class="vh-sender">Bebeboutik</span>
                         <h1 class="vh-subject" title="YOOJI ✨ recettes bio &amp; portions faciles">YOOJI ✨ recettes bio &amp; portions faciles</h1>
                         <span class="crm-badge" data-crm="Sarbacane">Sarbacane</span>
                         <span class="vh-date">29/11/2025 à 06:00</span>
                         
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Center: Device toggle (hidden on mobile) -->
+                                        <!-- Center: Device toggle (hidden on mobile) -->
                     <div class="vh-zone-view hide-mobile">
                         <div class="device-toggle">
-                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                            <button class="device-btn active" onclick="setMode('mobile')" aria-pressed="true" title="Mobile (1)" aria-label="Mobile view (1)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                            <button class="device-btn" onclick="setMode('tablet')" aria-pressed="false" title="Tablet (2)" aria-label="Tablet view (2)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                            <button class="device-btn" onclick="setMode('desktop')" aria-pressed="false" title="Desktop (3)" aria-label="Desktop view (3)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </button>
                         </div>
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Right: QA Actions -->
+                                        <!-- Right: QA Actions -->
                     <div class="vh-zone-actions">
-                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
-                            <span id="highlightBtnText">Show Links</span>
+                        <button class="btn" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+                            <span id="highlightBtnText">Voir les liens</span>
                         </button>
-                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
-                            Download
+                        <button class="btn" onclick="downloadEmailZip()" title="Download Email (D)">
+                            <span data-i18n="download">Télécharger</span>
                         </button>
-                        <button class="btn btn-secondary" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Screenshot
+                        <button class="btn" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="screenshot">Capture</span>
                         </button>
                     </div>
                 </div>
@@ -133,10 +107,10 @@
 
             <!-- Scrollable: Detail Log (existing tab content) -->
             <div class="audit-detail-log" role="region" aria-label="Audit detail">
-                <div class="tab-bar">
-                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
-                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
-                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">26</span></button>
+                <div class="tab-bar" role="tablist">
+                    <button class="tab-btn active" role="tab" aria-selected="true" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">26</span></button>
                 </div>
 
                 <div class="sidebar-content">
@@ -150,7 +124,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_crm">CRM</span>
-                                <span class="sc-value text-cyan">Sarbacane</span>
+                                <span class="sc-value">Sarbacane</span>
                             </div>
                             <div class="stat-cell sc-wide">
                                 <span class="sc-label" data-i18n="meta_subject">Subject</span>
@@ -166,7 +140,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_size">Size</span>
-                                <span class="sc-value text-yellow">53.7 KB</span>
+                                <span class="sc-value">53.7 KB</span>
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
@@ -184,7 +158,7 @@
                     <!-- PIXELS Tab -->
                     <div class="tab-pane" id="tab-pixels" style="display:none;">
                         
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             
                             <div class="pixel-issue-banner">
@@ -194,12 +168,12 @@
                             
                             
                             <div class="link-card-v2  card-has-issues" id="px-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-warning">⚠ ERREUR</span>
+                                        <span class="card-v2-tag tag-warning">ERREUR</span>
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
                                     </div>
                                 </div>
@@ -226,9 +200,9 @@
                                             
                                         </div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/q/6UtNbqS6Tcbs7goGS2aVyw~~/AABGZBA~/zPAPpO-Xad2XvMnTvoRyDjCUIxxsisFP18TMkUM9d4oK0JsaiqSN-HRQW1iD0nFP_icLQuPYbXZU9iOo_fgS2w~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://clic.bebeboutik-prive.fr/q/6UtNbqS6Tcbs7goGS2aVyw~~/AABGZBA~/zPAPpO-Xad2XvMnTvoRyDjCUIxxsisFP18TMkUM9d4oK0JsaiqSN-HRQW1iD0nFP_icLQuPYbXZU9iOo_fgS2w~~" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -249,10 +223,10 @@
                             </div>
                             
                             <div class="link-card-v2 " id="px-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
                                         
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
@@ -268,9 +242,9 @@
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Integration: OK</div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/q/34nVB37mswMnJIOUKP4JGA~~/AABGZBA~/Muw0GwVs4NZOLBqzzlkWg5icEvmAu_iq6JySpJ1RM_Y7FczNi0ab-5ZP3fW4ga2NToHdi5-t5zx1CaVzAiG_xA~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://clic.bebeboutik-prive.fr/q/34nVB37mswMnJIOUKP4JGA~~/AABGZBA~/Muw0GwVs4NZOLBqzzlkWg5icEvmAu_iq6JySpJ1RM_Y7FczNi0ab-5ZP3fW4ga2NToHdi5-t5zx1CaVzAiG_xA~~" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -304,13 +278,14 @@
                                 getinside
                             </button>
                         </div>
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             <div class="link-card-v2 " id="lc-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(1)">1</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -326,9 +301,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -349,10 +324,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(2)">2</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -368,9 +344,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/jD_wZ_NmWKgQcn386krsxw~~/AABGZBA~/wubcdki4-hOC5xSol4Iriy627-Ore6IWcWr_O0no6FFUqdsYNVszc0OeMX8vQs0y1uXXc0yRxlh7ToisEhG133NuXO3b1fHROOLNYCYtVAlRiq7ohO9FXGH-vVqhHXZ2U9iqU3lCBXqmd6EAoDvE9uDAc-zlq3IAxujv9mE9R8KVcxSnjn6mk79Dz6bVWzuWBkgYjvd-Bce3m7JOhtbE--1D6BrxbLfgiJOYz5hqrW0~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/jD_wZ_NmWKgQcn386krsxw~~/AABGZBA~/wubcdki4-hOC5xSol4Iriy627-Ore6IWcWr_O0no6FFUqdsYNVszc0OeMX8vQs0y1uXXc0yRxlh7ToisEhG133NuXO3b1fHROOLNYCYtVAlRiq7ohO9FXGH-vVqhHXZ2U9iqU3lCBXqmd6EAoDvE9uDAc-zlq3IAxujv9mE9R8KVcxSnjn6mk79Dz6bVWzuWBkgYjvd-Bce3m7JOhtbE--1D6BrxbLfgiJOYz5hqrW0~" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -391,10 +367,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-3">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(3)">3</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -410,9 +387,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/HXQVT_8zViZLg3mJj6O_gQ~~/AABGZBA~/YFLyJy6tpyg5e1kl89DdRh0I8dd99r2AmjREdG9PoYnjzLeyJiGGs_ioPxPZ2UPCP2oQxx5L_KBkqp06nPth788egvrhOdlKD6W1kAZ-eVjIt_qSuqLW94NCzcvtXTBv35xI-vArqRWOeQfqljwAqUUrmuNxz1hyY-13MqUlB1f9mdJmo_peHWaQLkyS-Z68QERao0blUM0iVMR8-ZHiKRzogUMsBw_GI7E1jI1L-trbShUS2-FIOSrFzfu1R-aKcJSGudjkpq4KI0OtVq9Pbg~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/HXQVT_8zViZLg3mJj6O_gQ~~/AABGZBA~/YFLyJy6tpyg5e1kl89DdRh0I8dd99r2AmjREdG9PoYnjzLeyJiGGs_ioPxPZ2UPCP2oQxx5L_KBkqp06nPth788egvrhOdlKD6W1kAZ-eVjIt_qSuqLW94NCzcvtXTBv35xI-vArqRWOeQfqljwAqUUrmuNxz1hyY-13MqUlB1f9mdJmo_peHWaQLkyS-Z68QERao0blUM0iVMR8-ZHiKRzogUMsBw_GI7E1jI1L-trbShUS2-FIOSrFzfu1R-aKcJSGudjkpq4KI0OtVq9Pbg~~" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -433,10 +410,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-4">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(4)">4</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -452,9 +430,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/DZ-MBpfMEPHPdjNLzY1BIg~~/AABGZBA~/e7T1B_avnQAFeYCFbmXRTDCillXBucwQ4LdqLzpeCIF2oKLwJid-HWWgL_14SRKoU6RF5kkxmtTjba_FGXzlvRWBkhpteNrNW58MIsd1Ss19oAG7JSDmPiO0IG43djJoLKRyD3zXN5Cb1mo6nhkg7Y3NAr7psozFgNj1mz3nbBkEoL1jp3D7MOmwxSMa_8tTQLEfPoVoOq9LY8BFwJXIW9T8bS4Jba_9Cl5-2vNTUX6qDS2Oe6TA3SyYubRTtSI-</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/DZ-MBpfMEPHPdjNLzY1BIg~~/AABGZBA~/e7T1B_avnQAFeYCFbmXRTDCillXBucwQ4LdqLzpeCIF2oKLwJid-HWWgL_14SRKoU6RF5kkxmtTjba_FGXzlvRWBkhpteNrNW58MIsd1Ss19oAG7JSDmPiO0IG43djJoLKRyD3zXN5Cb1mo6nhkg7Y3NAr7psozFgNj1mz3nbBkEoL1jp3D7MOmwxSMa_8tTQLEfPoVoOq9LY8BFwJXIW9T8bS4Jba_9Cl5-2vNTUX6qDS2Oe6TA3SyYubRTtSI-" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -475,10 +453,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-5">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(5)">5</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -494,9 +473,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/oVLcmvfzPQE6qYd6u0ZkxA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCORTt85vnqnBpEyzCszNLMzZJ5-I7KaGT-t1OeBCw3u-d0ARv877AqZIYJl1f-hrIo4V3-Mo1e8dtf9O7BV4eLhhxPy0WwSpKxlygYe_S13Qtlru0zbvQW1b0X6MjXHMP08os58JDt_ENXgq_OXF_jVMj6i25y51RUO4FEKSG3tbOjNaTK7bUbvgun3sVQUGNUJPAuBoAlWNlUgmXEy7c3g</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/oVLcmvfzPQE6qYd6u0ZkxA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCORTt85vnqnBpEyzCszNLMzZJ5-I7KaGT-t1OeBCw3u-d0ARv877AqZIYJl1f-hrIo4V3-Mo1e8dtf9O7BV4eLhhxPy0WwSpKxlygYe_S13Qtlru0zbvQW1b0X6MjXHMP08os58JDt_ENXgq_OXF_jVMj6i25y51RUO4FEKSG3tbOjNaTK7bUbvgun3sVQUGNUJPAuBoAlWNlUgmXEy7c3g" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -517,10 +496,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-6">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(6)">6</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -536,9 +516,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/Pn7WBfqPXVxrrJNVRL-7lQ~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZVglwYblbDFgS53UUVdQ1IeQ_0JlAykpfk5wRH8bZBor1EVwe5KzKrGczdq1-Y-RB4kxt2Wa7d7YSukjKaOYO3AB5QxWjK-GMvAGCp3lOHTLJhQ8Eyh8AQM-1B9UmftVMbtF-L8ubV5-cMOzTJRCTPiRyZ3_QdHjZKcFyyDjJQFjFImnvz90MA2hWahiAruDaZh7kHmdD1ZBO-ZP8klNKh</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/Pn7WBfqPXVxrrJNVRL-7lQ~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZVglwYblbDFgS53UUVdQ1IeQ_0JlAykpfk5wRH8bZBor1EVwe5KzKrGczdq1-Y-RB4kxt2Wa7d7YSukjKaOYO3AB5QxWjK-GMvAGCp3lOHTLJhQ8Eyh8AQM-1B9UmftVMbtF-L8ubV5-cMOzTJRCTPiRyZ3_QdHjZKcFyyDjJQFjFImnvz90MA2hWahiAruDaZh7kHmdD1ZBO-ZP8klNKh" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -559,10 +539,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-7">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(7)">7</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -578,9 +559,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/RlL1juDYfIhlwjVSGul8Ew~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHSZLCwt2TxVaL6WYq2jZ5Oz8rU9Ae_RhKvmu-K9_GwvhVA7Ifu0gpVsLwb3tMs011MYpyjCVOtYY7G4OtUi8mysE-s3FR_5xCT2I5RIY9G_wN9aHMmo3asDloiL_Vk-00hCOn8YR7Ui7kBO_5c8g1Sdi1aCyo74HQYxhxaC-nCd3VX9zu1aAWjDBnBEzna7Vc7FtUbN27rkWig3Bq3DgjG_q9CHlhgOoO6Aou2WROCGew~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/RlL1juDYfIhlwjVSGul8Ew~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHSZLCwt2TxVaL6WYq2jZ5Oz8rU9Ae_RhKvmu-K9_GwvhVA7Ifu0gpVsLwb3tMs011MYpyjCVOtYY7G4OtUi8mysE-s3FR_5xCT2I5RIY9G_wN9aHMmo3asDloiL_Vk-00hCOn8YR7Ui7kBO_5c8g1Sdi1aCyo74HQYxhxaC-nCd3VX9zu1aAWjDBnBEzna7Vc7FtUbN27rkWig3Bq3DgjG_q9CHlhgOoO6Aou2WROCGew~~" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -601,10 +582,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-8">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(8)">8</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -620,9 +602,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/qPuMgLsrCC5HAwnsC8Q7KA~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHRvWWLrjPQxJdRsI66MSpMMlba4s1QudXhvXk9FAHWQnFiv772yF8m4R6-0qWeyc_Nr7BOLYqxXgr_anP1_tjgnCnXjvaSDg9EbIN9D4JWGyMkRQ5xltbdXTjlulSXUTDOoflSOsKpPEB8vxRAEI-K5U16AvdtkFJCxa8c8zWCLbj-nJTvdVBlwyyDLSamHktLF1u5uxkvtKCAu1c3BZdDS8p5faMoru_dyQXw7-zJweQ~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/qPuMgLsrCC5HAwnsC8Q7KA~~/AABGZBA~/QSni5ivmIvmPkqiOgcDNatDbq4WeqFoeNDSzuu50xHRvWWLrjPQxJdRsI66MSpMMlba4s1QudXhvXk9FAHWQnFiv772yF8m4R6-0qWeyc_Nr7BOLYqxXgr_anP1_tjgnCnXjvaSDg9EbIN9D4JWGyMkRQ5xltbdXTjlulSXUTDOoflSOsKpPEB8vxRAEI-K5U16AvdtkFJCxa8c8zWCLbj-nJTvdVBlwyyDLSamHktLF1u5uxkvtKCAu1c3BZdDS8p5faMoru_dyQXw7-zJweQ~~" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -643,10 +625,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-9">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(9)">9</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -662,9 +645,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/Wnnock6X_a6e0EyBF_-eLA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCNpYy480Y0byerKWJ8eow4HBFSMm1OUZjwvQLY0CITmWnFHgv_K2q0xqXo6BGqx_HMw8EBlMnMKAqjktwQmjWCmJUZsF94r8Ckb9XjACkT9iFiNojBfcZLgnSbscjmgR7r2i-yFDqcFrFbfKwv2sOy5VumgrnZyk95xRLgarso7w8FyqNFbtmXGKO_iDkTe31ij07BDC4nizX7oQs1ujoSj</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/Wnnock6X_a6e0EyBF_-eLA~~/AABGZBA~/dpWsASJLWyefxdmdM7JxmcyeJjRbXxDmdhyFqE1oeCNpYy480Y0byerKWJ8eow4HBFSMm1OUZjwvQLY0CITmWnFHgv_K2q0xqXo6BGqx_HMw8EBlMnMKAqjktwQmjWCmJUZsF94r8Ckb9XjACkT9iFiNojBfcZLgnSbscjmgR7r2i-yFDqcFrFbfKwv2sOy5VumgrnZyk95xRLgarso7w8FyqNFbtmXGKO_iDkTe31ij07BDC4nizX7oQs1ujoSj" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -685,10 +668,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-10">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(10)">10</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -704,9 +688,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/sql-Ms2x7UE0n19abwUGiA~~/AABGZBA~/RGXpvdXpOWOpco58BlE2OkyCM0j9Lu5vKn6ahfn4yUXdVRe3efZTXwq7ZahQvMzI4CLqllqIIKKKF6cdYL55U2CcDrOu7MgMZOQA8SjDLWdBquuuUzGUKrtGUPzWxsgUc28hUbDLo4nmrTk4An6EbDInsoMlhgTIxr0VQMy97jfrQzuBAxAK6vq0FMuhhW6Zp64IdxZrdMo-GkclDKSXvONVichPlbhXzAtOOd_BmRZyg8II9fynTUdV7ctARHEY</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/sql-Ms2x7UE0n19abwUGiA~~/AABGZBA~/RGXpvdXpOWOpco58BlE2OkyCM0j9Lu5vKn6ahfn4yUXdVRe3efZTXwq7ZahQvMzI4CLqllqIIKKKF6cdYL55U2CcDrOu7MgMZOQA8SjDLWdBquuuUzGUKrtGUPzWxsgUc28hUbDLo4nmrTk4An6EbDInsoMlhgTIxr0VQMy97jfrQzuBAxAK6vq0FMuhhW6Zp64IdxZrdMo-GkclDKSXvONVichPlbhXzAtOOd_BmRZyg8II9fynTUdV7ctARHEY" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -727,10 +711,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-11">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(11)">11</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -746,9 +731,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">EN VOIR PLUS</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -769,10 +754,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-12">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(12)">12</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -788,9 +774,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/H-JviqT9g3ACVN8f28oRrA~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZURXWfHLCW8TG3_KDpAxoY8DbFLF-R7-iQLkCdAQWKBJsLkhcqxwlGJenEISiSoMtEqsNWQvuuKWqABrftNJp-0MBmyHjm0TVY4fHlxi2vqnNQ89UBUz0L7UrnVdLjSC8SPZNLbDHIqEeSOtn67147lBhLFWuc3fYQ99KW4qWtBwKLPQUT3n4C6pmCmfCKOA3A6NLiPUcuPjokw0akawc-</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/H-JviqT9g3ACVN8f28oRrA~~/AABGZBA~/iSgIob7XKf50Aw9uOPLqYlONBBMY5YFyCoG3S1M99UZURXWfHLCW8TG3_KDpAxoY8DbFLF-R7-iQLkCdAQWKBJsLkhcqxwlGJenEISiSoMtEqsNWQvuuKWqABrftNJp-0MBmyHjm0TVY4fHlxi2vqnNQ89UBUz0L7UrnVdLjSC8SPZNLbDHIqEeSOtn67147lBhLFWuc3fYQ99KW4qWtBwKLPQUT3n4C6pmCmfCKOA3A6NLiPUcuPjokw0akawc-" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -811,10 +797,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-13">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(13)">13</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(13)">13</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -830,9 +817,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/SxJeCz6miS07LyOw2ACASw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M1_sw5dkcWGiA4__kBdL4PBsKs57fhP3g8RDJdhzp8kopTyfY6vT16dOw0urb1q1dTaivoH9XKst1tz11bmwSKP4HRVHoknOipponS1FcFnOrXCn2BATqdYs4sDllmOYgt-u_SGziwagel-DybxNbCcjvGegffN48QG5B0UjbjHd1g0NSLaOhbFAGspgX21v9pIggtMnhUxS4Urg6YHFP_b</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/SxJeCz6miS07LyOw2ACASw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M1_sw5dkcWGiA4__kBdL4PBsKs57fhP3g8RDJdhzp8kopTyfY6vT16dOw0urb1q1dTaivoH9XKst1tz11bmwSKP4HRVHoknOipponS1FcFnOrXCn2BATqdYs4sDllmOYgt-u_SGziwagel-DybxNbCcjvGegffN48QG5B0UjbjHd1g0NSLaOhbFAGspgX21v9pIggtMnhUxS4Urg6YHFP_b" data-index="13" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -853,10 +840,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-14">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(14)">14</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(14)">14</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -872,9 +860,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pUkwbNGHr3pGby932zlwSw~~/AABGZBA~/fX0uY7XinMAVbh2K3WraALXAXzuoqK2IwzS3HAVPvb3KRJSbc13nCompy6v4QTqyUgexzTebfwaXQpguRBK0vw156ZmWhLIu0Tbr6GJBY2FnR7NJO4sCWeI5mZWdLnkczQeW3M49R7UaAcgYC0a5quOOzNFwx8CmlOr2CCzkuPnmChjTC1BV86CfMtU7yZ-JGak5e0dDxErgFzj6qyGErCv0H4ZPbUsJafmLM7apubyAX_TO_E0Sc-ixvzzoS-rw</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/pUkwbNGHr3pGby932zlwSw~~/AABGZBA~/fX0uY7XinMAVbh2K3WraALXAXzuoqK2IwzS3HAVPvb3KRJSbc13nCompy6v4QTqyUgexzTebfwaXQpguRBK0vw156ZmWhLIu0Tbr6GJBY2FnR7NJO4sCWeI5mZWdLnkczQeW3M49R7UaAcgYC0a5quOOzNFwx8CmlOr2CCzkuPnmChjTC1BV86CfMtU7yZ-JGak5e0dDxErgFzj6qyGErCv0H4ZPbUsJafmLM7apubyAX_TO_E0Sc-ixvzzoS-rw" data-index="14" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -895,10 +883,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-15">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(15)">15</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(15)">15</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -914,9 +903,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/GGijNu4cs8dO91HhRVfdyw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M10Z83nRcNNWYGCfUCumnWDzfYd4-snQWIneEF2T094PVZCAJN8fYpXIM-dtkPODFN8ofWPby-t-IWe5Fethr-Qww2faIwwRBnA0kTkEz4zI429-DP0wezFHiiczhJG6EKdZwELFfv3ZjNmWSYLEibucp6q_sqjrwCpQY0QWaiLM4nsn6QHKLPxN2Tu0ofN_JPt1NkCD8kflxGEKN3zhv8J</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/GGijNu4cs8dO91HhRVfdyw~~/AABGZBA~/TmyCY8UcaH2BZpKmT9-vygl67eUrkMKhcSpiY2aN4M10Z83nRcNNWYGCfUCumnWDzfYd4-snQWIneEF2T094PVZCAJN8fYpXIM-dtkPODFN8ofWPby-t-IWe5Fethr-Qww2faIwwRBnA0kTkEz4zI429-DP0wezFHiiczhJG6EKdZwELFfv3ZjNmWSYLEibucp6q_sqjrwCpQY0QWaiLM4nsn6QHKLPxN2Tu0ofN_JPt1NkCD8kflxGEKN3zhv8J" data-index="15" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -937,10 +926,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-16">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(16)">16</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(16)">16</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -956,9 +946,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/FYPvb73S4cD6tQt441AzcQ~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEV99c08S-1xKr3Lq4E83kAD_q55dKLkoQCbWJtBmtl-Slv0YvC2VWEXeDFUyb1vOWw2KcPrc7k-0iO1GyCXd6nBIUTx1CUMj_1gJiyveaGDDGHKIKUQQPuooW4gX8pDZWbvUVThs6srbS0Qa0MjOlD9zUE3bLkAtr2CN9un3SspLfHt_5esC2TbPBRpCMvr3SZiLrTde8OPVuidxhPopQMR</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/FYPvb73S4cD6tQt441AzcQ~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEV99c08S-1xKr3Lq4E83kAD_q55dKLkoQCbWJtBmtl-Slv0YvC2VWEXeDFUyb1vOWw2KcPrc7k-0iO1GyCXd6nBIUTx1CUMj_1gJiyveaGDDGHKIKUQQPuooW4gX8pDZWbvUVThs6srbS0Qa0MjOlD9zUE3bLkAtr2CN9un3SspLfHt_5esC2TbPBRpCMvr3SZiLrTde8OPVuidxhPopQMR" data-index="16" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -979,10 +969,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-17">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(17)">17</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(17)">17</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -998,9 +989,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/MqVG31ZsB4STusimfxuEWg~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEWJDhPFUcvC25RILpTeiQqmcZPN6zSzGycjqUzLaGF6gcRAMKecWVbNTC-CbQgbwXx4t3MBpLBMcnF1LImH911u2YInOkNwU4DIOg0j0Oc85e2WLIcW2CfpagMzP-SP-Gk-0vibW1_Js5f2qkII3hOjPdlntNiEyX-BWtNLGC_HEvDnD_ZajL1Jlkj4wwZ1g19TD5bmGYryQnrMCkPsxD_8</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/MqVG31ZsB4STusimfxuEWg~~/AABGZBA~/lG2UAjJcCQsejmLwC_C1wJeRuLGYCefZBmbFG-Y2QEWJDhPFUcvC25RILpTeiQqmcZPN6zSzGycjqUzLaGF6gcRAMKecWVbNTC-CbQgbwXx4t3MBpLBMcnF1LImH911u2YInOkNwU4DIOg0j0Oc85e2WLIcW2CfpagMzP-SP-Gk-0vibW1_Js5f2qkII3hOjPdlntNiEyX-BWtNLGC_HEvDnD_ZajL1Jlkj4wwZ1g19TD5bmGYryQnrMCkPsxD_8" data-index="17" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1021,10 +1012,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-18">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(18)">18</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(18)">18</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1040,9 +1032,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">TOUTES LES VENTES</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/pZ1eDkDpvleJ-R-DZRAJLg~~/AABGZBA~/GExURYHqXI0xPtDRkgn7qMatwCMrq4FZfjRYKn1D3lqbL4iHLKZgMDfFaZ4d3zUSdCWPc5KT1WO53kSXqVjK-4gSZi70CdQNaSU7iJIdq5Y8bjTV46-D0qIQQDPMIURoNkjtrU87_HNqN-iohc9_OEqRarTgED35-BNKLk7dP92sfPbb3X-6ijdUbMgMuTn9XdKB5ovSAfwNsZ7oWlkhdg~~" data-index="18" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1063,10 +1055,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-19">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(19)">19</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(19)">19</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1082,9 +1075,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/w8K8_xBOgHMBrWXm4HTf9w~~/AABGZBA~/j3GyEzXfwX4Ks0aktpd-x3F0FoVhN8pKOV8xDYRmxkvD7p776CXabadzSlTc-83cJE6BETS5BbjJGgtJxF74AAmxzgLRxqxaFfITLW2cziS5ZSWvMpsWdyYNbkTZUs_Y</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/w8K8_xBOgHMBrWXm4HTf9w~~/AABGZBA~/j3GyEzXfwX4Ks0aktpd-x3F0FoVhN8pKOV8xDYRmxkvD7p776CXabadzSlTc-83cJE6BETS5BbjJGgtJxF74AAmxzgLRxqxaFfITLW2cziS5ZSWvMpsWdyYNbkTZUs_Y" data-index="19" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1105,10 +1098,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-20">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(20)">20</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(20)">20</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1124,9 +1118,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/kgL7sPWxCHCVa-sQhhWpDw~~/AABGZBA~/6e5DnkMWNBlEYLfoVezmqBMLXUigAoMKQvWcecDCnQIYE_aYbhXURYtjfOzIVLlA_NlE-YyhFKEihzw1zn-s8CgnFTARjF9zJTJtVKjha3BcnQdpVhvHVmzpgAG0XMWU</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/kgL7sPWxCHCVa-sQhhWpDw~~/AABGZBA~/6e5DnkMWNBlEYLfoVezmqBMLXUigAoMKQvWcecDCnQIYE_aYbhXURYtjfOzIVLlA_NlE-YyhFKEihzw1zn-s8CgnFTARjF9zJTJtVKjha3BcnQdpVhvHVmzpgAG0XMWU" data-index="20" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1147,10 +1141,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-21">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(21)">21</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(21)">21</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1166,9 +1161,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/UaJutZZkLmgbSkINVsiogg~~/AABGZBA~/CLEEgWf9Dcos9ukAJsIzABV3zTUMkkIgpgiBy5f-14NRB05Q43_2NFziK91prtLBHLOvw7Mo7U_fX4T9OY7nIqhcPDkSPTs8HM1hpcudcF-HJtgLMeq68WDxaoNClr_cfofPVgDu8uaAjN1lfJ760qYDTnOkCuhz4p7vCwOtlqY~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/UaJutZZkLmgbSkINVsiogg~~/AABGZBA~/CLEEgWf9Dcos9ukAJsIzABV3zTUMkkIgpgiBy5f-14NRB05Q43_2NFziK91prtLBHLOvw7Mo7U_fX4T9OY7nIqhcPDkSPTs8HM1hpcudcF-HJtgLMeq68WDxaoNClr_cfofPVgDu8uaAjN1lfJ760qYDTnOkCuhz4p7vCwOtlqY~" data-index="21" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1189,10 +1184,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-22">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(22)">22</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(22)">22</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1208,9 +1204,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/RAnBHn_ZLkjkBTjw0r_gQA~~/AABGZBA~/DjbfomFewlGrWQulpTS_j48FaNtPchfitmy3tle6vYwRsWVmXVR9lDiTRRMBfKaOWYQ3yfOERAMsMnGFbA37pUkq8-41sz6T_GgLOq3aq7eDLbm7gSjEYSdOydnVzYfm5m6ibYRMQLn79tl1mDTxrCCd_K67IwFzZGFGyHhKrZma4JjtjSD5b7QU6DfzW1pz</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/RAnBHn_ZLkjkBTjw0r_gQA~~/AABGZBA~/DjbfomFewlGrWQulpTS_j48FaNtPchfitmy3tle6vYwRsWVmXVR9lDiTRRMBfKaOWYQ3yfOERAMsMnGFbA37pUkq8-41sz6T_GgLOq3aq7eDLbm7gSjEYSdOydnVzYfm5m6ibYRMQLn79tl1mDTxrCCd_K67IwFzZGFGyHhKrZma4JjtjSD5b7QU6DfzW1pz" data-index="22" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1231,10 +1227,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-23">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(23)">23</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(23)">23</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1250,9 +1247,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">www.bebeboutik-prive.fr</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/1ftTx9idSUGQBv_oyLRO_A~~/AABGZBA~/I3CfAPjEcadk6M6kn5oYzeEfb3hQo_ctUvjbW08U8hLFVFvx9-irRaQHx2IH6VM7ekIyOknr0skjGR43FTpAUzOEnFyAv6Dvd6oPf7hN5kjMSc9GDBjOplFRjnWFXQx7</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/1ftTx9idSUGQBv_oyLRO_A~~/AABGZBA~/I3CfAPjEcadk6M6kn5oYzeEfb3hQo_ctUvjbW08U8hLFVFvx9-irRaQHx2IH6VM7ekIyOknr0skjGR43FTpAUzOEnFyAv6Dvd6oPf7hN5kjMSc9GDBjOplFRjnWFXQx7" data-index="23" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1273,10 +1270,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-24">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(24)">24</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(24)">24</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1292,9 +1290,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">cliquez ici</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/2FOvJG3tnSxlirQEfbmeCg~~/AABGZBA~/y-pyjFDQPcPMXarjvzQ5UouPSeeDA0oGAlj8YVGv49xtyOyWZ3aYRNEokdrmTWd3wFuR-SCZ77UPrvZ4S6a3l5uMCrX0QfURP4hCD_iN8EwQidye7tW10t7TL2qTR3T1FdG07zpLt0ILQ9Rerc77lX8cnWaLZc0HWefD4ZopO-RFbh_n0yId0I-1OXlPuanXNUe7JfdAZ-npRDYbLqaPYQ~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/2FOvJG3tnSxlirQEfbmeCg~~/AABGZBA~/y-pyjFDQPcPMXarjvzQ5UouPSeeDA0oGAlj8YVGv49xtyOyWZ3aYRNEokdrmTWd3wFuR-SCZ77UPrvZ4S6a3l5uMCrX0QfURP4hCD_iN8EwQidye7tW10t7TL2qTR3T1FdG07zpLt0ILQ9Rerc77lX8cnWaLZc0HWefD4ZopO-RFbh_n0yId0I-1OXlPuanXNUe7JfdAZ-npRDYbLqaPYQ~~" data-index="24" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1315,10 +1313,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-25">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(25)">25</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(25)">25</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1334,9 +1333,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/uPzTUooecMh_Ym1yd6tgvA~~/AABGZBA~/qUdIdDbrzuYPnl_R9_c_DlWnSkrisL4vrHpRQtVKFBpsfvdtnD35C8i26ds6AI0yA3fykzuPw_J_4vk2HQnJWf5RH9jAKMp3bVRrkzm0oila2EKuvqbuUILVBPsOZzC_</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/uPzTUooecMh_Ym1yd6tgvA~~/AABGZBA~/qUdIdDbrzuYPnl_R9_c_DlWnSkrisL4vrHpRQtVKFBpsfvdtnD35C8i26ds6AI0yA3fykzuPw_J_4vk2HQnJWf5RH9jAKMp3bVRrkzm0oila2EKuvqbuUILVBPsOZzC_" data-index="25" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1357,10 +1356,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-26">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(26)">26</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(26)">26</button>
                                     <span class="card-v2-domain">clic.bebeboutik-prive.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -1376,9 +1376,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Mentions légales</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://clic.bebeboutik-prive.fr/f/a/uoKPUJ9lFN1aoDxnd2z2Nw~~/AABGZBA~/j9YqbFM92V5i-mcKqkuHC_q3MG9TXH8gYSpNs8HYB4thfIa0wMxKyROpxPy1OUWTDWpXr3eD6KpexGaPw5m8HFLaQHY3YNldciZY3X5Js8gEBMGLKucxcuYuMfEe5dg7yqzZZ0F5fl71xxKCGVE72g~~</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://clic.bebeboutik-prive.fr/f/a/uoKPUJ9lFN1aoDxnd2z2Nw~~/AABGZBA~/j9YqbFM92V5i-mcKqkuHC_q3MG9TXH8gYSpNs8HYB4thfIa0wMxKyROpxPy1OUWTDWpXr3eD6KpexGaPw5m8HFLaQHY3YNldciZY3X5Js8gEBMGLKucxcuYuMfEe5dg7yqzZZ0F5fl71xxKCGVE72g~~" data-index="26" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1406,9 +1406,9 @@
 
             <!-- Sticky Footer -->
             <div class="sidebar-footer">
-                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
-                    Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
-                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                <p>
+                    Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>
+                    · Studio : <a href="mailto:studio@getinside.fr">studio@getinside.fr</a><br>
                     © 2026 getinside. Tous droits réservés.
                 </p>
             </div>
@@ -1420,11 +1420,11 @@
 
     <!-- Mobile sidebar toggle button -->
     <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
-        ☰ Links
+        <span data-i18n="tab_links">LIENS</span>
     </button>
 
     <!-- Link overlays container -->
-    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+    <div id="linkOverlays"></div>
 
 <script src="../assets/js/main.js"></script>
     <script>
@@ -1445,7 +1445,7 @@
                 meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
                 filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
-                lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
+                lang_btn_title: 'Change language', back_archive: 'All archives', screenshot: 'Screenshot',
                 sidebar_toggle_title: 'Toggle Links Panel',
                 audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
                 audit_error: 'Audit Finished (Error Found)',
@@ -1458,7 +1458,7 @@
                 meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
                 filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
-                lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
+                lang_btn_title: 'Changer la langue', back_archive: 'Toutes les archives', screenshot: 'Capture',
                 sidebar_toggle_title: 'Panneau des liens',
                 audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
                 audit_error: 'Audit terminé (Erreur détectée)',
@@ -1499,13 +1499,17 @@
 
         function showTab(name) {
             document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.tab === name);
+                b.setAttribute('aria-selected', b.dataset.tab === name);
+            });
             document.getElementById('tab-' + name).style.display = 'block';
-            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
         }
 
         function toggleExpand(card) {
-            card.classList.toggle('expanded');
+            const open = card.classList.toggle('expanded');
+            const header = card.querySelector('.card-v2-header');
+            if (header) header.setAttribute('aria-expanded', open);
         }
 
         function init() {
@@ -1517,14 +1521,8 @@
             const style = doc.createElement('style');
             style.innerHTML = `
                 :root {
-                    --spotlight-dim: rgba(0, 0, 0, 0.6);
-                    --spotlight-glow: #50FA7B;
-                }
-                [data-theme="dark"] {
-                    /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
-                    --spotlight-dim: rgba(255, 255, 255, 0.7);
-                    /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584;
+                    --spotlight-dim: rgba(12, 12, 9, 0.6);
+                    --spotlight-glow: #fcf758;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
                 /* Mobile fallback for emails whose own responsive logic is
@@ -1571,7 +1569,7 @@
                     body { overflow-x: hidden !important; }
                 }
                 .link-outline {
-                    outline: 2px solid #8BE9FD !important; /* Cyan */
+                    outline: 2px solid #0c0c09 !important;
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
                 }
@@ -1579,9 +1577,9 @@
                     animation: link-pulse 2s infinite;
                 }
                 @keyframes link-pulse {
-                    0% { outline-color: #8BE9FD; outline-width: 2px; }
-                    50% { outline-color: #BD93F9; outline-width: 4px; outline-offset: 3px; }
-                    100% { outline-color: #8BE9FD; outline-width: 2px; }
+                    0% { outline-color: #0c0c09; outline-width: 2px; }
+                    50% { outline-color: #cfb7f9; outline-width: 4px; outline-offset: 3px; }
+                    100% { outline-color: #0c0c09; outline-width: 2px; }
                 }
                 .link-flash-spotlight {
                     position: relative !important;
@@ -1590,16 +1588,12 @@
                     outline-offset: 4px !important;
                     box-shadow: 0 0 0 10000px var(--spotlight-dim), 0 0 40px var(--spotlight-glow) !important;
                     background-color: rgba(255, 255, 255, 1) !important;
-                    color: #282a36 !important;
+                    color: #0c0c09 !important;
                 }
             `;
             doc.head.appendChild(style);
 
-            const theme = (typeof _resolveInitialTheme === 'function')
-                ? _resolveInitialTheme()
-                : (localStorage.getItem('theme') || 'light');
-            if (theme === 'dark') applyTheme('dark');
-            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument);
             // Defer until after layout so getBoundingClientRect() returns the real frame width
             if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
         }
@@ -1651,9 +1645,11 @@
             const frameEl = document.getElementById('deviceFrame');
             const iframeEl = document.getElementById('emailFrame');
 
-            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
-            const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
-            if (btn) btn.classList.add('active');
+            document.querySelectorAll('.device-btn').forEach(b => {
+                const on = b.getAttribute('onclick').includes(mode);
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-pressed', on);
+            });
 
             // Switch mode — CSS handles sizing via data-mode attribute
             frameEl.dataset.mode = mode;
@@ -1807,28 +1803,7 @@
                     return;
                 }
 
-                badge.style.cssText = `
-                    position: fixed;
-                    left: ${badgeX}px;
-                    top: ${badgeY}px;
-                    background: #6AE7C8;
-                    color: #0C0D10;
-                    font-size: 11px;
-                    font-weight: 800;
-                    padding: 0px 6px;
-                    min-width: 20px;
-                    height: 20px;
-                    line-height: 20px;
-                    border-radius: 10px;
-                    font-family: 'Inter', sans-serif;
-                    z-index: 1000;
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.8);
-                    text-align: center;
-                    border: none;
-                    pointer-events: none;
-                    opacity: 1;
-                    transition: transform 0.2s ease;
-                `;
+                badge.style.cssText = `left: ${badgeX}px; top: ${badgeY}px;`;
                 container.appendChild(badge);
                 overlayElements.push(badge);
 
@@ -1892,7 +1867,7 @@
             navigator.clipboard.writeText(url).then(() => {
                 const originalHtml = btn.innerHTML;
                 // Temporarily show checkmark
-                btn.innerHTML = '<span style="color: var(--accent-green); font-weight: bold;">✓</span>';
+                btn.innerHTML = '✓';
                 btn.classList.add('copy-success');
 
                 setTimeout(() => {
@@ -2051,6 +2026,7 @@
 
         async function downloadEmailZip() {
             try {
+                await _loadScript(JSZIP_URL);
                 const zip = new JSZip();
                 const subject = "YOOJI \u2728 recettes bio \u0026 portions faciles".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
@@ -2167,7 +2143,6 @@
             if (e.key === '1') setMode('mobile');
             if (e.key === '2') setMode('tablet');
             if (e.key === '3') setMode('desktop');
-            if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
             if (e.key === 's' || e.key === 'S') screenshotEmail(document.getElementById('screenshotBtn'));

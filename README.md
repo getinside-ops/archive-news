@@ -43,9 +43,8 @@ graph TD;
 | **Parser** | `src/parser.py` | `EmailParser` class. BeautifulSoup logic, image localization, tracking pixel detection, link metadata extraction (domain/tracking), redirect resolution. |
 | **Generator** | `src/generator.py` | Jinja2 rendering. Creates `index.html` and individual viewer files. Handles asset copying. |
 | **Viewer UI** | `templates/viewer.html` | Responsive dashboard for emails. Fixed sidebar, mobile simulator, link interaction logic (Spotlight, Overlays). |
-| **Theme & UX** | `src/assets/js/main.js` | Client-side logic for theme toggling, search filtering, and "Smart Inversion" dark mode. |
+| **Index & UX** | `src/assets/js/main.js` | Client-side logic: search, CRM filters, sorting, pagination, screenshot. |
 | **Manual Injector** | `injector.py` | Streamlit app for out-of-band archival. Fixes lazy-loading and relative paths. |
-| **Worker** | `src/worker.js` | Cloudflare serverless function for live viewer operations. |
 
 ---
 
@@ -124,15 +123,9 @@ The GitHub Actions workflow (`.github/workflows/check_mail.yml`) runs automatica
 
 ## 🧠 Key Technical Concepts
 
-### 1. Smart Inversion Dark Mode
+### 1. Single light theme
 
-Instead of complex CSS re-theming of unknown email HTML, we apply a global filter to the email iframe:
-
-```css
-filter: invert(1) hue-rotate(180deg);
-```
-
-**Spotlight Problem**: Shadows and highlights are inverted. We use "Pre-inverted" CSS variables in `viewer.html` so that when the filter is applied, they flip back to the intended colors (e.g., purple inverts to green highlights).
+The site follows the getinside redesign design system, which has one light theme. The email is shown as sent: no dark mode, no colour inversion of the iframe.
 
 ### 2. Multi-Zone Link Cards
 
@@ -201,10 +194,10 @@ cd docs && python3 -m http.server 8765
 
 ### CSS Architecture
 
-- Use `var(--vp-c-*)` and `var(--text-*)` variables from the getinside Design System
-- Key tokens: `#0aaa8e` brand primary (light), `#6AE7C8` mint accent, `#F7F6F3` light bg, `#1b1b1f` dark bg
-- After editing `src/assets/css/style.css`, copy to `docs/assets/css/style.css` (auto-done on pipeline run)
-- Viewer-specific overrides live in `.viewer-layout .viewer-content` blocks (~line 1315 in style.css)
+- Use the design-system tokens declared at the top of `src/assets/css/style.css` (`--color-*`, `--radius-*`, `--shadow-hard-*`), never raw hex values
+- Invariants: Bricolage Grotesque in 400 and 600; 2px ink border and hard shadow (no blur) on anything clickable; pill buttons; Tags have no shadow, Chips do; no yellow button; Lucide icons
+- `--font-mono` (URLs) and the `--accent-*` status colours are additions specific to this tool
+- After editing CSS, run `python process_email.py --regen-only` to copy assets to `docs/`
 
 ### Parser Changes
 
@@ -221,12 +214,6 @@ When adding new metadata:
 - Be careful with variable escaping when injecting JSON into `<script>` tags
 - Device mockup Chrome HTML structure lives in `#deviceFrame` with `.device-mockup[data-mode="mobile|tablet|desktop"]` selectors
 - Iframe sandbox must include `allow-popups-to-escape-sandbox` for link clicks to work
-
-### CSS Gotchas
-
-- **Generic `header` selector** has `margin-bottom: 32px` — override with `.viewer-layout .viewer-header { margin-bottom: 0; }` to remove unwanted gaps
-- **Mobile/Tablet borders**: Use `border-width: 3px` for clearer device outlines in light mode
-- **Light mode devices**: Mobile/tablet use same light color scheme as desktop (no dark chrome override)
 
 ### Asset Isolation
 

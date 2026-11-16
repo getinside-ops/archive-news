@@ -1,51 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot">
+<html lang="fr" id="htmlRoot">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Ultra Premium Direct | Les croquettes de Noël 🐶</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
-<body>
+<body class="viewer-page">
     <div class="viewer-layout">
         <!-- Top navigation -->
         <nav class="gi-topnav">
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
-                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img">
             </a>
 
             <div class="gi-topnav-actions">
-                <!-- Language picker: translate icon matching VitePress vpi-languages -->
-                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-                </button>
-
-                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
-                    <span class="gi-vp-check">
-                        <span class="gi-vp-icon">
-                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        </span>
-                    </span>
+                <a href="../index.html" class="btn btn-ghost" data-i18n="back_archive">Toutes les archives</a>
+                <button id="langBtn" class="btn-round" data-i18n-title="lang_btn_title" title="Changer la langue" aria-label="Changer la langue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
                 </button>
             </div>
         </nav>
@@ -59,38 +35,36 @@
                 <div class="vh-unified-bar">
                     <!-- Left: Email identity -->
                     <div class="vh-zone-identity">
-                        <span class="vh-sender-pill">benoit@getinside.fr</span>
+                        <span class="vh-sender">benoit@getinside.fr</span>
                         <h1 class="vh-subject" title="Ultra Premium Direct | Les croquettes de Noël 🐶">Ultra Premium Direct | Les croquettes de Noël 🐶</h1>
-                        <span class="crm-badge" data-crm="Unknown">Unknown</span>
+                        <span class="crm-badge" data-crm="Unknown">Inconnu</span>
                         <span class="vh-date">28/11/2025 à 08:37</span>
                         
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Center: Device toggle (hidden on mobile) -->
+                                        <!-- Center: Device toggle (hidden on mobile) -->
                     <div class="vh-zone-view hide-mobile">
                         <div class="device-toggle">
-                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                            <button class="device-btn active" onclick="setMode('mobile')" aria-pressed="true" title="Mobile (1)" aria-label="Mobile view (1)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                            <button class="device-btn" onclick="setMode('tablet')" aria-pressed="false" title="Tablet (2)" aria-label="Tablet view (2)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                            <button class="device-btn" onclick="setMode('desktop')" aria-pressed="false" title="Desktop (3)" aria-label="Desktop view (3)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </button>
                         </div>
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Right: QA Actions -->
+                                        <!-- Right: QA Actions -->
                     <div class="vh-zone-actions">
-                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
-                            <span id="highlightBtnText">Show Links</span>
+                        <button class="btn" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+                            <span id="highlightBtnText">Voir les liens</span>
                         </button>
-                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
-                            Download
+                        <button class="btn" onclick="downloadEmailZip()" title="Download Email (D)">
+                            <span data-i18n="download">Télécharger</span>
                         </button>
-                        <button class="btn btn-secondary" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Screenshot
+                        <button class="btn" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="screenshot">Capture</span>
                         </button>
                     </div>
                 </div>
@@ -133,10 +107,10 @@
 
             <!-- Scrollable: Detail Log (existing tab content) -->
             <div class="audit-detail-log" role="region" aria-label="Audit detail">
-                <div class="tab-bar">
-                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
-                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
-                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">24</span></button>
+                <div class="tab-bar" role="tablist">
+                    <button class="tab-btn active" role="tab" aria-selected="true" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">24</span></button>
                 </div>
 
                 <div class="sidebar-content">
@@ -150,7 +124,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_crm">CRM</span>
-                                <span class="sc-value text-cyan">Unknown</span>
+                                <span class="sc-value">Inconnu</span>
                             </div>
                             <div class="stat-cell sc-wide">
                                 <span class="sc-label" data-i18n="meta_subject">Subject</span>
@@ -166,7 +140,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_size">Size</span>
-                                <span class="sc-value text-yellow">40.0 KB</span>
+                                <span class="sc-value">40.0 KB</span>
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
@@ -184,7 +158,7 @@
                     <!-- PIXELS Tab -->
                     <div class="tab-pane" id="tab-pixels" style="display:none;">
                         
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             
                             <div class="pixel-issue-banner">
@@ -194,10 +168,10 @@
                             
                             
                             <div class="link-card-v2 " id="px-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">api.getinside.media</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
                                         
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
@@ -213,9 +187,9 @@
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Integration: OK</div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://api.getinside.media/v1/emails/track/6908b512f2b49</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://api.getinside.media/v1/emails/track/6908b512f2b49" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -236,12 +210,12 @@
                             </div>
                             
                             <div class="link-card-v2  card-has-issues" id="px-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-warning">⚠ ERREUR</span>
+                                        <span class="card-v2-tag tag-warning">ERREUR</span>
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
                                     </div>
                                 </div>
@@ -268,9 +242,9 @@
                                             
                                         </div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,1</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,1" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -304,15 +278,16 @@
                                 getinside
                             </button>
                         </div>
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             <div class="link-card-v2 " id="lc-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(1)">1</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -326,9 +301,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b0</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b0" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -349,12 +324,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(2)">2</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -368,9 +344,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b1</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b1" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -391,12 +367,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-3">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(3)">3</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -410,9 +387,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">-25%* avec le code REDOUTE25 !</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b2</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b2" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -433,12 +410,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-4">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(4)">4</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -452,9 +430,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Faites vivre un Noël gourmand à votre animal avec </div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b3</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b3" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -475,12 +453,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-5">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(5)">5</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -494,9 +473,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">J’en profite</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b4</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b4" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -517,12 +496,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-6">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(6)">6</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -536,9 +516,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b5</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b5" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -559,12 +539,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-7">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(7)">7</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -578,9 +559,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b6</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b6" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -601,12 +582,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-8">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(8)">8</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -620,9 +602,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Croquettes chien adulte(sac de 12 kg)</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b7</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,28542b7" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -643,12 +625,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-9">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(9)">9</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -662,9 +645,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">62,90€25%47,18€</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855014</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855014" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -685,12 +668,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-10">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(10)">10</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -704,9 +688,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855015</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855015" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -727,12 +711,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-11">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(11)">11</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -746,9 +731,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Croquettes chiot toutes tailles (sac de 12 kg)</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855016</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855016" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -769,12 +754,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-12">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(12)">12</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -788,9 +774,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">62,90€-25%47,18€</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855017</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855017" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -811,12 +797,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-13">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(13)">13</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(13)">13</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -830,9 +817,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Voir la sélection</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855018</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855018" data-index="13" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -853,12 +840,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-14">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(14)">14</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(14)">14</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -872,9 +860,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855019</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855019" data-index="14" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -895,12 +883,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-15">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(15)">15</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(15)">15</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -914,9 +903,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501a</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501a" data-index="15" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -937,12 +926,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-16">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(16)">16</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(16)">16</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -956,9 +946,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Croquettes chat stérilisé(sac de 7 kg)</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501b</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501b" data-index="16" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -979,12 +969,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-17">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(17)">17</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(17)">17</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -998,9 +989,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">48,90€-25%36,68€</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501c</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501c" data-index="17" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1021,12 +1012,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-18">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(18)">18</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(18)">18</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1040,9 +1032,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501d</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501d" data-index="18" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1063,12 +1055,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-19">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(19)">19</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(19)">19</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1082,9 +1075,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Boîtes d&#39;émincés(12 x 85 gr)</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501e</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501e" data-index="19" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1105,12 +1098,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-20">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(20)">20</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(20)">20</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1124,9 +1118,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">13,90€-25%10,43€</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501f</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,285501f" data-index="20" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1147,12 +1141,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-21">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(21)">21</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(21)">21</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1166,9 +1161,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Voir la sélection</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855020</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855020" data-index="21" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1189,13 +1184,14 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-22">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(22)">22</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(22)">22</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
                                         
+                                        <span class="card-v2-tag tag-muted" title="Lien de désinscription : URL masquée, jamais visitée">DÉSINSCRIPTION</span>
                                         
                                     </div>
                                 </div>
@@ -1208,9 +1204,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Si vous souhaitez vous désabonner de la lettre d’i</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/" data-index="22" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1231,12 +1227,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-23">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(23)">23</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(23)">23</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1250,9 +1247,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Mon compte</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855022&amp;e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&amp;s=fevEFEMDO5oMGoh9vvGXNzWPt41DSU66aVNRCyzObrM</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855022&amp;e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&amp;s=fevEFEMDO5oMGoh9vvGXNzWPt41DSU66aVNRCyzObrM" data-index="23" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1273,12 +1270,13 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-24">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(24)">24</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(24)">24</button>
                                     <span class="card-v2-domain">news.tracking.laredoute.fr</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
-                                        <span class="card-v2-tag tag-tracking"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        <span class="card-v2-tag tag-tracking"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> TRACK</span>
+                                        
                                         
                                         
                                     </div>
@@ -1292,9 +1290,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Mes Newsletters</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855023&amp;e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&amp;s=N0as2vEfbgyNYsv-fP4x4W6Fwt7F5Dv_9lPCiR716rA</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855023&amp;e=cDE9RU1DMDAyMTEyMDRGUiZwMj1mNmI3YzM3Ny1mNzhlLTQxNjctYWM5NC1lYTFiNTljYmU4NDcmcDM9ZjYyMGE1NzctMWQ0Yy00ZjllLThhODQtNWI4MTYzZDdiMTQ5JnA0PQ&amp;s=N0as2vEfbgyNYsv-fP4x4W6Fwt7F5Dv_9lPCiR716rA" data-index="24" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1322,9 +1320,9 @@
 
             <!-- Sticky Footer -->
             <div class="sidebar-footer">
-                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
-                    Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
-                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                <p>
+                    Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>
+                    · Studio : <a href="mailto:studio@getinside.fr">studio@getinside.fr</a><br>
                     © 2026 getinside. Tous droits réservés.
                 </p>
             </div>
@@ -1336,11 +1334,11 @@
 
     <!-- Mobile sidebar toggle button -->
     <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
-        ☰ Links
+        <span data-i18n="tab_links">LIENS</span>
     </button>
 
     <!-- Link overlays container -->
-    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+    <div id="linkOverlays"></div>
 
 <script src="../assets/js/main.js"></script>
     <script>
@@ -1361,7 +1359,7 @@
                 meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
                 filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
-                lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
+                lang_btn_title: 'Change language', back_archive: 'All archives', screenshot: 'Screenshot',
                 sidebar_toggle_title: 'Toggle Links Panel',
                 audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
                 audit_error: 'Audit Finished (Error Found)',
@@ -1374,7 +1372,7 @@
                 meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
                 filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
-                lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
+                lang_btn_title: 'Changer la langue', back_archive: 'Toutes les archives', screenshot: 'Capture',
                 sidebar_toggle_title: 'Panneau des liens',
                 audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
                 audit_error: 'Audit terminé (Erreur détectée)',
@@ -1415,13 +1413,17 @@
 
         function showTab(name) {
             document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.tab === name);
+                b.setAttribute('aria-selected', b.dataset.tab === name);
+            });
             document.getElementById('tab-' + name).style.display = 'block';
-            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
         }
 
         function toggleExpand(card) {
-            card.classList.toggle('expanded');
+            const open = card.classList.toggle('expanded');
+            const header = card.querySelector('.card-v2-header');
+            if (header) header.setAttribute('aria-expanded', open);
         }
 
         function init() {
@@ -1433,14 +1435,8 @@
             const style = doc.createElement('style');
             style.innerHTML = `
                 :root {
-                    --spotlight-dim: rgba(0, 0, 0, 0.6);
-                    --spotlight-glow: #50FA7B;
-                }
-                [data-theme="dark"] {
-                    /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
-                    --spotlight-dim: rgba(255, 255, 255, 0.7);
-                    /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584;
+                    --spotlight-dim: rgba(12, 12, 9, 0.6);
+                    --spotlight-glow: #fcf758;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
                 /* Mobile fallback for emails whose own responsive logic is
@@ -1487,7 +1483,7 @@
                     body { overflow-x: hidden !important; }
                 }
                 .link-outline {
-                    outline: 2px solid #8BE9FD !important; /* Cyan */
+                    outline: 2px solid #0c0c09 !important;
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
                 }
@@ -1495,9 +1491,9 @@
                     animation: link-pulse 2s infinite;
                 }
                 @keyframes link-pulse {
-                    0% { outline-color: #8BE9FD; outline-width: 2px; }
-                    50% { outline-color: #BD93F9; outline-width: 4px; outline-offset: 3px; }
-                    100% { outline-color: #8BE9FD; outline-width: 2px; }
+                    0% { outline-color: #0c0c09; outline-width: 2px; }
+                    50% { outline-color: #cfb7f9; outline-width: 4px; outline-offset: 3px; }
+                    100% { outline-color: #0c0c09; outline-width: 2px; }
                 }
                 .link-flash-spotlight {
                     position: relative !important;
@@ -1506,16 +1502,12 @@
                     outline-offset: 4px !important;
                     box-shadow: 0 0 0 10000px var(--spotlight-dim), 0 0 40px var(--spotlight-glow) !important;
                     background-color: rgba(255, 255, 255, 1) !important;
-                    color: #282a36 !important;
+                    color: #0c0c09 !important;
                 }
             `;
             doc.head.appendChild(style);
 
-            const theme = (typeof _resolveInitialTheme === 'function')
-                ? _resolveInitialTheme()
-                : (localStorage.getItem('theme') || 'light');
-            if (theme === 'dark') applyTheme('dark');
-            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument);
             // Defer until after layout so getBoundingClientRect() returns the real frame width
             if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
         }
@@ -1567,9 +1559,11 @@
             const frameEl = document.getElementById('deviceFrame');
             const iframeEl = document.getElementById('emailFrame');
 
-            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
-            const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
-            if (btn) btn.classList.add('active');
+            document.querySelectorAll('.device-btn').forEach(b => {
+                const on = b.getAttribute('onclick').includes(mode);
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-pressed', on);
+            });
 
             // Switch mode — CSS handles sizing via data-mode attribute
             frameEl.dataset.mode = mode;
@@ -1723,28 +1717,7 @@
                     return;
                 }
 
-                badge.style.cssText = `
-                    position: fixed;
-                    left: ${badgeX}px;
-                    top: ${badgeY}px;
-                    background: #6AE7C8;
-                    color: #0C0D10;
-                    font-size: 11px;
-                    font-weight: 800;
-                    padding: 0px 6px;
-                    min-width: 20px;
-                    height: 20px;
-                    line-height: 20px;
-                    border-radius: 10px;
-                    font-family: 'Inter', sans-serif;
-                    z-index: 1000;
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.8);
-                    text-align: center;
-                    border: none;
-                    pointer-events: none;
-                    opacity: 1;
-                    transition: transform 0.2s ease;
-                `;
+                badge.style.cssText = `left: ${badgeX}px; top: ${badgeY}px;`;
                 container.appendChild(badge);
                 overlayElements.push(badge);
 
@@ -1808,7 +1781,7 @@
             navigator.clipboard.writeText(url).then(() => {
                 const originalHtml = btn.innerHTML;
                 // Temporarily show checkmark
-                btn.innerHTML = '<span style="color: var(--accent-green); font-weight: bold;">✓</span>';
+                btn.innerHTML = '✓';
                 btn.classList.add('copy-success');
 
                 setTimeout(() => {
@@ -1967,6 +1940,7 @@
 
         async function downloadEmailZip() {
             try {
+                await _loadScript(JSZIP_URL);
                 const zip = new JSZip();
                 const subject = "Ultra Premium Direct | Les croquettes de No\u00ebl \ud83d\udc36".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
@@ -2083,7 +2057,6 @@
             if (e.key === '1') setMode('mobile');
             if (e.key === '2') setMode('tablet');
             if (e.key === '3') setMode('desktop');
-            if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
             if (e.key === 's' || e.key === 'S') screenshotEmail(document.getElementById('screenshotBtn'));

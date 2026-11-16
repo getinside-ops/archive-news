@@ -1,51 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot">
+<html lang="fr" id="htmlRoot">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Marque Amie : Metagenics 💊</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="../assets/images/gi-keyvisual.svg" type="image/svg+xml">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
-<body>
+<body class="viewer-page">
     <div class="viewer-layout">
         <!-- Top navigation -->
         <nav class="gi-topnav">
             <a href="https://getinside-ops.github.io/handbook/" class="gi-topnav-logo" target="_blank" rel="noopener">
-                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img gi-logo-sm">
+                <img src="../assets/images/logo-getinside.svg" alt="getinside" class="gi-logo-img">
             </a>
 
             <div class="gi-topnav-actions">
-                <!-- Language picker: translate icon matching VitePress vpi-languages -->
-                <button id="langBtn" class="gi-lang-btn" title="Change language" aria-label="Change language">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-                </button>
-
-                <!-- Theme toggle: VitePress pill switch (40×22px sliding circle) -->
-                <button id="theme-toggle" onclick="toggleTheme()" class="gi-vp-switch" title="Toggle Theme (T)" aria-label="Toggle theme">
-                    <span class="gi-vp-check">
-                        <span class="gi-vp-icon">
-                            <svg class="icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-                            <svg class="icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-                        </span>
-                    </span>
+                <a href="../index.html" class="btn btn-ghost" data-i18n="back_archive">Toutes les archives</a>
+                <button id="langBtn" class="btn-round" data-i18n-title="lang_btn_title" title="Changer la langue" aria-label="Changer la langue">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
                 </button>
             </div>
         </nav>
@@ -59,38 +35,36 @@
                 <div class="vh-unified-bar">
                     <!-- Left: Email identity -->
                     <div class="vh-zone-identity">
-                        <span class="vh-sender-pill">The Bradery</span>
+                        <span class="vh-sender">The Bradery</span>
                         <h1 class="vh-subject" title="Marque Amie : Metagenics 💊">Marque Amie : Metagenics 💊</h1>
                         <span class="crm-badge" data-crm="Klaviyo">Klaviyo</span>
                         <span class="vh-date">25/05/2026 à 13:09</span>
                         
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Center: Device toggle (hidden on mobile) -->
+                                        <!-- Center: Device toggle (hidden on mobile) -->
                     <div class="vh-zone-view hide-mobile">
                         <div class="device-toggle">
-                            <button class="device-btn device-chip active" onclick="setMode('mobile')" title="Mobile (1)" aria-label="Mobile view (1)">
+                            <button class="device-btn active" onclick="setMode('mobile')" aria-pressed="true" title="Mobile (1)" aria-label="Mobile view (1)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('tablet')" title="Tablet (2)" aria-label="Tablet view (2)">
+                            <button class="device-btn" onclick="setMode('tablet')" aria-pressed="false" title="Tablet (2)" aria-label="Tablet view (2)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                             </button>
-                            <button class="device-btn device-chip" onclick="setMode('desktop')" title="Desktop (3)" aria-label="Desktop view (3)">
+                            <button class="device-btn" onclick="setMode('desktop')" aria-pressed="false" title="Desktop (3)" aria-label="Desktop view (3)">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                             </button>
                         </div>
                     </div>
-                    <div class="vh-zone-divider" aria-hidden="true"></div>
-                    <!-- Right: QA Actions -->
+                                        <!-- Right: QA Actions -->
                     <div class="vh-zone-actions">
-                        <button class="btn btn-secondary" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
-                            <span id="highlightBtnText">Show Links</span>
+                        <button class="btn" onclick="toggleHighlightLinks()" title="Highlight all links (H)">
+                            <span id="highlightBtnText">Voir les liens</span>
                         </button>
-                        <button class="btn btn-secondary" onclick="downloadEmailZip()" title="Download Email (D)">
-                            Download
+                        <button class="btn" onclick="downloadEmailZip()" title="Download Email (D)">
+                            <span data-i18n="download">Télécharger</span>
                         </button>
-                        <button class="btn btn-secondary" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Screenshot
+                        <button class="btn" id="screenshotBtn" onclick="screenshotEmail(this)" title="Download screenshot (S)">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span data-i18n="screenshot">Capture</span>
                         </button>
                     </div>
                 </div>
@@ -133,10 +107,10 @@
 
             <!-- Scrollable: Detail Log (existing tab content) -->
             <div class="audit-detail-log" role="region" aria-label="Audit detail">
-                <div class="tab-bar">
-                    <button class="tab-btn active" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
-                    <button class="tab-btn" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
-                    <button class="tab-btn" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">17</span></button>
+                <div class="tab-bar" role="tablist">
+                    <button class="tab-btn active" role="tab" aria-selected="true" data-tab="meta" onclick="showTab('meta')" data-i18n="tab_meta">META</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="pixels" onclick="showTab('pixels')" data-i18n="tab_pixels">PIXELS</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" data-tab="links" onclick="showTab('links')"><span data-i18n="tab_links">LINKS</span> <span class="tab-count-badge">17</span></button>
                 </div>
 
                 <div class="sidebar-content">
@@ -150,7 +124,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_crm">CRM</span>
-                                <span class="sc-value text-cyan">Klaviyo</span>
+                                <span class="sc-value">Klaviyo</span>
                             </div>
                             <div class="stat-cell sc-wide">
                                 <span class="sc-label" data-i18n="meta_subject">Subject</span>
@@ -166,7 +140,7 @@
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_size">Size</span>
-                                <span class="sc-value text-yellow">44.0 KB</span>
+                                <span class="sc-value">44.0 KB</span>
                             </div>
                             <div class="stat-cell">
                                 <span class="sc-label" data-i18n="meta_clipping">Clipping Risk</span>
@@ -184,16 +158,16 @@
                     <!-- PIXELS Tab -->
                     <div class="tab-pane" id="tab-pixels" style="display:none;">
                         
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             
                             
                             <div class="link-card-v2 gtinsi-highlight" id="px-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">pixel.gtinsi.de</span>
-                                    <div style="display: flex; gap: 4px;">
-                                        <span class="card-v2-tag tag-gtinsi"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> getinside</span>
+                                    <div class="card-v2-tags">
+                                        <span class="card-v2-tag tag-gtinsi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> getinside</span>
                                         
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
                                     </div>
@@ -208,9 +182,9 @@
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Integration: OK</div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://pixel.gtinsi.de/69c2b99fb93b3</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://pixel.gtinsi.de/69c2b99fb93b3" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -231,10 +205,10 @@
                             </div>
                             
                             <div class="link-card-v2 " id="px-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
                                     <span class="card-v2-index">P</span>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
                                         
                                         <span class="card-v2-tag tag-pixel">PIXEL</span>
@@ -250,9 +224,9 @@
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Integration: OK</div>
                                         
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch; margin-top: 10px;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/wf/open?upn=u001.le-2FTlON6BhQVYvQcu6kgctcPILq-2BKvgSs69A1R-2Bu6So1qqbR4nhgmnv9iWIFPi4q643UMNChFTReF6fmfbrVlvUQGZNSXJw2hLYWNC7PgDPWk9B-2FopltXlkdn2KMD-2B2MAAOBmMIKNYzS0SZ0zhrgbIFe-2FU-2B6VSoxz710j8tkWcKk1GkhLdi3iOJPUffMbcR6smRn9wkFWyNtV25bPFrFxCX7r07APamT-2F7dwZgbs3v9uO-2BB6n9OgtDlFlywDaJlHOq1UhaDnU5vwN9IB-2Fw7iq6DOQUo90XEmMi2tGVj0RiIXMOtBW0U9mD0Q31HgOuX9tJV31TAV2QgL3zHPv7gEKPnIfTLGW5Bk6joUGPplrPF8DexDi3LFa5M3Lj4xALEfTjULVkuioRhQo57G2OzGT0L9sr1KDRhXRZTsZDCM7FbMI4JGkx4mLrG2Cx6zWo7EKyxCzwg0rXYOQySlqECqqgGquyBhb1OVMAd7-2B-2BteZkPIbaj65awLywUl-2F3Dp6r-2FVjPdcgNA3zX5ddTSkBkFf0B0H8T6BR4gKThpfR7f31xvYyaMjjXifVVXcV9RCtp296sgoeJkm3DxgDPM493m1ZQ-3D-3D</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Test Pixel" data-url="https://trk.klclick.com/wf/open?upn=u001.le-2FTlON6BhQVYvQcu6kgctcPILq-2BKvgSs69A1R-2Bu6So1qqbR4nhgmnv9iWIFPi4q643UMNChFTReF6fmfbrVlvUQGZNSXJw2hLYWNC7PgDPWk9B-2FopltXlkdn2KMD-2B2MAAOBmMIKNYzS0SZ0zhrgbIFe-2FU-2B6VSoxz710j8tkWcKk1GkhLdi3iOJPUffMbcR6smRn9wkFWyNtV25bPFrFxCX7r07APamT-2F7dwZgbs3v9uO-2BB6n9OgtDlFlywDaJlHOq1UhaDnU5vwN9IB-2Fw7iq6DOQUo90XEmMi2tGVj0RiIXMOtBW0U9mD0Q31HgOuX9tJV31TAV2QgL3zHPv7gEKPnIfTLGW5Bk6joUGPplrPF8DexDi3LFa5M3Lj4xALEfTjULVkuioRhQo57G2OzGT0L9sr1KDRhXRZTsZDCM7FbMI4JGkx4mLrG2Cx6zWo7EKyxCzwg0rXYOQySlqECqqgGquyBhb1OVMAd7-2B-2BteZkPIbaj65awLywUl-2F3Dp6r-2FVjPdcgNA3zX5ddTSkBkFf0B0H8T6BR4gKThpfR7f31xvYyaMjjXifVVXcV9RCtp296sgoeJkm3DxgDPM493m1ZQ-3D-3D" onclick="event.stopPropagation(); testPixel(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -286,13 +260,14 @@
                                 getinside
                             </button>
                         </div>
-                        <div style="padding: 8px 10px;">
+                        <div class="card-list">
                             
                             <div class="link-card-v2 " id="lc-1">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(1)">1</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(1)">1</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -308,9 +283,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D5y_U_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojghy3NJj6w7ciTHkEv1d72EvrIbc-2FuLDL-2Box2N2T-2B9soxKl3c6f7KxJ99FPOV1gQg8Jh4BrrWKwVboO-2BACQIG4XvEmCSxJkJr3R4xBpl21vxbXZJZWuTkCFuRltSkB-2Bq2K5bFPTs-2FDkC0sZ0eXggmEaHXVn-2BgmSJASh0cEDZyI1o</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D5y_U_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojghy3NJj6w7ciTHkEv1d72EvrIbc-2FuLDL-2Box2N2T-2B9soxKl3c6f7KxJ99FPOV1gQg8Jh4BrrWKwVboO-2BACQIG4XvEmCSxJkJr3R4xBpl21vxbXZJZWuTkCFuRltSkB-2Bq2K5bFPTs-2FDkC0sZ0eXggmEaHXVn-2BgmSJASh0cEDZyI1o" data-index="1" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -331,10 +306,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-2">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(2)">2</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(2)">2</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -350,9 +326,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DUYMp_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojq-2BuvvHBjZJgQTDq7nxYFbZROdWq3nE4n7JzcicRHVjHblvcUNV012LdTBVtsp1wgSZU95425-2Bxy9vDhf57WKW9pfWykMfPoewGQ-2BD0uqmj-2BtlfADBYJ0-2Fw-2BxoxIJPj9zonf-2BMMdclPcUsrtEPC1jIArI0je-2BsQJoJE8nm8518cB</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DUYMp_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojq-2BuvvHBjZJgQTDq7nxYFbZROdWq3nE4n7JzcicRHVjHblvcUNV012LdTBVtsp1wgSZU95425-2Bxy9vDhf57WKW9pfWykMfPoewGQ-2BD0uqmj-2BtlfADBYJ0-2Fw-2BxoxIJPj9zonf-2BMMdclPcUsrtEPC1jIArI0je-2BsQJoJE8nm8518cB" data-index="2" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -373,10 +349,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-3">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(3)">3</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(3)">3</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -392,9 +369,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">j’en profite</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DSiI2_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtmosPcSQB1hg25VwPjpTvfZPTTzgRFjrZ-2FoCoKXiTV7JSbApvJbz82WJH3OMMtikli8jO4uAhHv2MxfQdLEcQHWhRG-2F3mIir24WBXC8iwAmDzC0cdfH03sHAwqxdP-2Bj8zQsEUgE3VDyLsBnJhANZFwh9jtbPqV1TWq8CCrHb4Ig</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DSiI2_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtmosPcSQB1hg25VwPjpTvfZPTTzgRFjrZ-2FoCoKXiTV7JSbApvJbz82WJH3OMMtikli8jO4uAhHv2MxfQdLEcQHWhRG-2F3mIir24WBXC8iwAmDzC0cdfH03sHAwqxdP-2Bj8zQsEUgE3VDyLsBnJhANZFwh9jtbPqV1TWq8CCrHb4Ig" data-index="3" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -415,10 +392,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-4">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(4)">4</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(4)">4</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -434,9 +412,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DBNxP_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojoWTE2p2cvG-2FG8Mdgl07nKcXqGJ-2FqwNf9HV7JFJdaq2YTvlbENS5JeFtuQaIGqoy1Qmk5zh7Jk57VruJF7p-2B9V46Ju3A0Wy4-2BQAV0HBrZsPMz-2FnYr9ijlKYxIOvixviEAvnopM101daof0XAuHMRMqLU9uiVMDTUmFRHCH4qRsbr</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DBNxP_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojoWTE2p2cvG-2FG8Mdgl07nKcXqGJ-2FqwNf9HV7JFJdaq2YTvlbENS5JeFtuQaIGqoy1Qmk5zh7Jk57VruJF7p-2B9V46Ju3A0Wy4-2BQAV0HBrZsPMz-2FnYr9ijlKYxIOvixviEAvnopM101daof0XAuHMRMqLU9uiVMDTUmFRHCH4qRsbr" data-index="4" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -457,10 +435,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-5">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(5)">5</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(5)">5</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -476,9 +455,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">JE DÉCOUVRE</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DARHU_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtRSfCZT9NdfCJbH08mrqWCa80AUu1IYRzbVjzQmUDsJJttpBtnsjbaXsdxjX2ks0lC0KMuguMJ80-2FG-2FLnI-2FRvCqynSz0ElD3xP8lfXCfOF24pLpd5cwGd-2Bm53eOc8ESz5lV2Hr-2FRWfULiUJRo8Kqfxo-2By-2FlaMQVzf-2BDKcsCT1CF</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kKfZdEfb1TkdrJq43wNuDa-2BTR6pWXbzHT64tkoBqE1jan2MTxTawX9mTL0v30-2BZm6tsRWLwaesA6GguKxv21Z2kPkau4wcbnniyO6ib0v0nhyvxfkiRKD7zvXLCEemY2nAx1cxRUKmQoQ0ls15-2BRFzogHtn4zNpE4fEZRkE6oczMS7T4AupJ9wLK81KPDrdbSAx55Fw8YqjTutRFn-2FbDbR-2FaIt5Nv5lWrElfLyj-2BNiUYnUKzc1yjW2KRg8fVZs61w-3D-3DARHU_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojtRSfCZT9NdfCJbH08mrqWCa80AUu1IYRzbVjzQmUDsJJttpBtnsjbaXsdxjX2ks0lC0KMuguMJ80-2FG-2FLnI-2FRvCqynSz0ElD3xP8lfXCfOF24pLpd5cwGd-2Bm53eOc8ESz5lV2Hr-2FRWfULiUJRo8Kqfxo-2By-2FlaMQVzf-2BDKcsCT1CF" data-index="5" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -499,10 +478,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-6">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(6)">6</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(6)">6</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -518,9 +498,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7lRuB1c343UiSJKVyb3r2b6FaqHf-2FSkw4CxO5rv2yjbzj0GvDRdIcdQo8XmsPiL1lT2WV0b8jQPdrArGcvEUyO9Qcr6UMTCKDgPSK2I-2F5S5mnfgg7HDNLCMDCW5pLHDRFVtsKjjZsd6lB2Yx8SSwSbVUYX-2BAlTFhTnPhOxnxo1OHKZ6qSUxCOax21nD-2BuUVqpIoi9fFYTWsTx0at-2FvocARGgw1uodkr2G8ag9sJVk20YGhuS7ssZNeAc5VdbenqnfQ-3D-3D3mES_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojufXOA5RXRYyPRmURDMduBiqD2UCU1BQ51cVs3QUKKo4kcc5yLf9LQQ36BKObHIqoANHHe-2BqgN5v1ziZGsUr21DMfAc8tmo-2Ba5yZTvi12hpPcazkVy2uOvwkhwaJpcEOvj1fnlOiTbZDYF3BE6svoOfzGMBko51iiPlZm2OYBq-2Fl</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7lRuB1c343UiSJKVyb3r2b6FaqHf-2FSkw4CxO5rv2yjbzj0GvDRdIcdQo8XmsPiL1lT2WV0b8jQPdrArGcvEUyO9Qcr6UMTCKDgPSK2I-2F5S5mnfgg7HDNLCMDCW5pLHDRFVtsKjjZsd6lB2Yx8SSwSbVUYX-2BAlTFhTnPhOxnxo1OHKZ6qSUxCOax21nD-2BuUVqpIoi9fFYTWsTx0at-2FvocARGgw1uodkr2G8ag9sJVk20YGhuS7ssZNeAc5VdbenqnfQ-3D-3D3mES_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojufXOA5RXRYyPRmURDMduBiqD2UCU1BQ51cVs3QUKKo4kcc5yLf9LQQ36BKObHIqoANHHe-2BqgN5v1ziZGsUr21DMfAc8tmo-2Ba5yZTvi12hpPcazkVy2uOvwkhwaJpcEOvj1fnlOiTbZDYF3BE6svoOfzGMBko51iiPlZm2OYBq-2Fl" data-index="6" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -541,10 +521,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-7">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(7)">7</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(7)">7</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -560,9 +541,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7t2RWIafLikcaUBdvDkkVuGaEajgojmjH-2B-2FZZbGf4HbYa6yZKJaXtocy4heBP613G7EehLaMI7GQeNRlJYSlt0kI5TsSFTbQ7dGfzxpfs6IDVIGnUXkH1jnIUvtBl-2BtM10IYoH6zCaqFrAYNunH8C1TK0BKSDa0Rzb6TJ1gbQ2x08uHpYXzKiRfQgCRV32v7b-2FBcfG81lDVhmYG9dGtP-2B-2B-2Fi6iVWLGJfgoNoXUyqWhrrmNDumY0a2SbXeBxHKn6sLg-3D-3DO9mK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojiaeVXJ7GVMYR4KgQ1lZE-2B6yy37OISYbtFdsm4lfpKIahaRMaf31mkkENfxPMov2sua0lrV2CVvTmPrk9KLLAiUBcMLnhqXnFoieFb-2FQi3GC-2BUUXnAxtozvZ2PWMahLRVygOB6I56xp5rf4iN-2FAMkt7JDdRlikmH8OQaidfa1Iqg</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7t2RWIafLikcaUBdvDkkVuGaEajgojmjH-2B-2FZZbGf4HbYa6yZKJaXtocy4heBP613G7EehLaMI7GQeNRlJYSlt0kI5TsSFTbQ7dGfzxpfs6IDVIGnUXkH1jnIUvtBl-2BtM10IYoH6zCaqFrAYNunH8C1TK0BKSDa0Rzb6TJ1gbQ2x08uHpYXzKiRfQgCRV32v7b-2FBcfG81lDVhmYG9dGtP-2B-2B-2Fi6iVWLGJfgoNoXUyqWhrrmNDumY0a2SbXeBxHKn6sLg-3D-3DO9mK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojiaeVXJ7GVMYR4KgQ1lZE-2B6yy37OISYbtFdsm4lfpKIahaRMaf31mkkENfxPMov2sua0lrV2CVvTmPrk9KLLAiUBcMLnhqXnFoieFb-2FQi3GC-2BUUXnAxtozvZ2PWMahLRVygOB6I56xp5rf4iN-2FAMkt7JDdRlikmH8OQaidfa1Iqg" data-index="7" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -583,10 +564,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-8">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(8)">8</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(8)">8</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -602,9 +584,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7tn3U9RL2FYIeNOd1hIFDyacET-2FPwmqSbG-2F4PtfNxs1twH-2BLmxHZJFTP5rZd4M6nwX92yN7Ytj5ZYapyXscnI9BSydoqzhQJzyxy-2BxGb6xJbXZEqWQNCM7AnCpXvoffchUsTwr7MvAijvccTUawvsKnuLN9koyR2hLUiTHXachqwhMjACTA3EdracQIsQ-2BU968miJHPTCyFdZfOONsKidB-2F6O0Inf9-2Bso5-2FVCjHonUYpQJY27aYRVmIPAArZDR8-2BbA-3D-3DZErO_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojg6e8JLlF6YpUfA7B5CxG3ojpEgJo-2FHHBrrfCwDv5ZNmnHG-2FxnT6wOZbBkjYupAX4tc0Dha6-2FAFJX-2BvN3qYyzD8OByChYiZhtV7GrLwwex5kP6lYzogxTWMtbWZpHz1vTqY7lWr4jLUxliQVu-2FFOH7zj9hnkelulCcI4lDdtsJKr</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7tn3U9RL2FYIeNOd1hIFDyacET-2FPwmqSbG-2F4PtfNxs1twH-2BLmxHZJFTP5rZd4M6nwX92yN7Ytj5ZYapyXscnI9BSydoqzhQJzyxy-2BxGb6xJbXZEqWQNCM7AnCpXvoffchUsTwr7MvAijvccTUawvsKnuLN9koyR2hLUiTHXachqwhMjACTA3EdracQIsQ-2BU968miJHPTCyFdZfOONsKidB-2F6O0Inf9-2Bso5-2FVCjHonUYpQJY27aYRVmIPAArZDR8-2BbA-3D-3DZErO_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojg6e8JLlF6YpUfA7B5CxG3ojpEgJo-2FHHBrrfCwDv5ZNmnHG-2FxnT6wOZbBkjYupAX4tc0Dha6-2FAFJX-2BvN3qYyzD8OByChYiZhtV7GrLwwex5kP6lYzogxTWMtbWZpHz1vTqY7lWr4jLUxliQVu-2FFOH7zj9hnkelulCcI4lDdtsJKr" data-index="8" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -625,10 +607,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-9">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(9)">9</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(9)">9</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -644,9 +627,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7iy91ldrHz9gs5-2FabF4GI1Ah7n94WzrWXxiK-2FSXZ-2FIKtsom2t0RD330hEaKatIlHXgO1-2Bq-2Fb2-2FPL-2Bet1ZAVe4aN4pWi9p1A4hdGvSaPoFU0jOqndztDp3itUtTRy8-2BU-2Bf5H3Smy6JskiIUpAfy5H1vyBV-2Bur7TmVnp75hgmv1gZhFmq-2Fd4V18G-2F60zN1Zu-2FmFvdXFDB46uQxKBM36hgtl4Nd25fqsxXHYUb1Mo9KY2qKhfBRMLZdYCxdlrZ2AKVphw-3D-3DiBhw_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojk8cHqV7Vmzz3i8Og5-2BoCEUU8ZE6UWskIUJvcdTenL6UcwxjCNcjR5zmegucXjKf8LRNKW2cARUftrR7NDCwC0meIn9jRo6g2IFEMmZfONi8NsRp7IdJFMbYOfUtoL-2BOQdsUxKVgMlOvcVK1qlPs8aO1B33E3nuaZL-2FwO0gGRIr4</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7iy91ldrHz9gs5-2FabF4GI1Ah7n94WzrWXxiK-2FSXZ-2FIKtsom2t0RD330hEaKatIlHXgO1-2Bq-2Fb2-2FPL-2Bet1ZAVe4aN4pWi9p1A4hdGvSaPoFU0jOqndztDp3itUtTRy8-2BU-2Bf5H3Smy6JskiIUpAfy5H1vyBV-2Bur7TmVnp75hgmv1gZhFmq-2Fd4V18G-2F60zN1Zu-2FmFvdXFDB46uQxKBM36hgtl4Nd25fqsxXHYUb1Mo9KY2qKhfBRMLZdYCxdlrZ2AKVphw-3D-3DiBhw_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojk8cHqV7Vmzz3i8Og5-2BoCEUU8ZE6UWskIUJvcdTenL6UcwxjCNcjR5zmegucXjKf8LRNKW2cARUftrR7NDCwC0meIn9jRo6g2IFEMmZfONi8NsRp7IdJFMbYOfUtoL-2BOQdsUxKVgMlOvcVK1qlPs8aO1B33E3nuaZL-2FwO0gGRIr4" data-index="9" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -667,10 +650,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-10">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(10)">10</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(10)">10</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -686,9 +670,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">JE DÉCOUVRE tout</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DTID8_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojuIMUuvJm4kBjo6GZ4orNuIVVs7fuRVsMw7kcZ0KtWDT3bxsNZqotMacOWlIbDCdfTfQn9xQBg7iKzicPbxqu9nmvUkpiMSyMgPatexlb-2B-2BF70NmjY1magSBTB04xHv7gvBcBsr-2FnS1LvdHCR-2F6sGfHvfDm3B58jScbFoABH7vN2</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DTID8_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojuIMUuvJm4kBjo6GZ4orNuIVVs7fuRVsMw7kcZ0KtWDT3bxsNZqotMacOWlIbDCdfTfQn9xQBg7iKzicPbxqu9nmvUkpiMSyMgPatexlb-2B-2BF70NmjY1magSBTB04xHv7gvBcBsr-2FnS1LvdHCR-2F6sGfHvfDm3B58jScbFoABH7vN2" data-index="10" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -709,10 +693,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-11">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(11)">11</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(11)">11</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -728,9 +713,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">Je découvre</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DAXcF_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojm6kZO3g-2FFKbBQRuoo9G-2F-2FjicYUJZuzdwp-2FJB39MSbIETRQtqLBQe98FurzZuTG9xjYhiTYN3ApZ8TB7oqgVbnI2dZV4pfGdaksyNSxFXsbu1VOW8NwQ-2BdXKV0etm2tZCtJzWJlEcTuYJZFp1Ax-2BX2qTe-2FwTfmSMpHXLrkzTmkjt</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7uJWRIYRDUVJFMiUTUjxartcFLnHCdl7cnO7MIdCM06m5qctlou3RFyFfvy0WQyUbBjeTAiXBAJwBZPLQFey1lwQvEJSCMi-2FcMIoS-2BG64zKQDkI2cl89nD2InFNiXJBTuI4WXf-2FYPe-2B-2F-2FTFAhS6aTNk5V31onDAqouPcOMsuAAIno71P0R2lW26q-2BAoi6RjQv-2FUGowfKSKSLF8a47O0YLAN7SRj7dZx4aBWlMWqjaY4-2FmYAj8vte4lmhZO37O310lQ-3D-3DAXcF_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojm6kZO3g-2FFKbBQRuoo9G-2F-2FjicYUJZuzdwp-2FJB39MSbIETRQtqLBQe98FurzZuTG9xjYhiTYN3ApZ8TB7oqgVbnI2dZV4pfGdaksyNSxFXsbu1VOW8NwQ-2BdXKV0etm2tZCtJzWJlEcTuYJZFp1Ax-2BX2qTe-2FwTfmSMpHXLrkzTmkjt" data-index="11" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -751,10 +736,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-12">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(12)">12</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(12)">12</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -770,9 +756,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D7D4n_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojli7me8c7ddooYH1L7z9T7q25JazRgifys1X2Fw1KzQfqyvQYYFsXJ94nBX6j9nSiv-2BuPbD9ekqjJ6hI6vMgCGUPeFsf92Q8y8zuxA8vQkjYRwxSiORhOUBTEBUpnB8iogkedF1zcflSIHacT8peiFivnQyiRo8myRhsY77Z5Sdq</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7s2IYieIwqYo4u3eXJp1uKH4mMoQbidMciBPGe3McOXP1wjsrbz1F3jksTnn8SQeAsC8NIEoAuR0BfKmaUZS9qxnk8BRKuMPw-2BkNv3cW-2BiaRHQQhzl84ZIFj-2FOx47Wgo-2Fm0vDE1mo0-2BLZTvc2nWipdUrRaUXf4mFwfVgIAUt8zENK4o-2B7cgVNE4rNSWgPW-2BiSc7Ba8Cl4cEAkq5W9EaDKH1cqLVzDNI4ROP9kPIYTbdGB2z9JmISXp3qvnVE2w5oSw-3D-3D7D4n_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojli7me8c7ddooYH1L7z9T7q25JazRgifys1X2Fw1KzQfqyvQYYFsXJ94nBX6j9nSiv-2BuPbD9ekqjJ6hI6vMgCGUPeFsf92Q8y8zuxA8vQkjYRwxSiORhOUBTEBUpnB8iogkedF1zcflSIHacT8peiFivnQyiRo8myRhsY77Z5Sdq" data-index="12" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -793,10 +779,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-13">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(13)">13</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(13)">13</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -812,9 +799,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kTfMHoBwCueKNfsvIIeb31h5lvuKXp3-2BSZC6Yo9RMhTy8kgH0fACGDSKHAVYqw6piB6My9oEc490l1is-2FkfZzqFNqAgSo32Zj-2FvesXlzX-2BRI4bBg-2FLUZuHCOgWRy5vW66mMyzLO3P1QKafuJKF3uc4m08d6yGaJEBiiTXFx3CWnCnTLJfxRUPj8EN0hzQJpHii4OfJb26OoPRM3n5tAGYa7vS3woFpc6CZAXeMayuQxpPcH0iqrBxN9zmhWaYD0lZYmGTYfHuxjfxgB-2BmjhlOo-3Dr-Wx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojo6Y7ROUoixPp1-2FAv-2FM6v5AvBDeG3nSwJe-2BAf0f7zLQYs7E-2BxRShtzzhhuaqbNsO6ILEHZrb1PHME0niRZY9aYpJUFfK-2BPOukGqDh3HPe7O3-2FWuOETj0aUESiE0DhBO5JkwPPKEOy0eRaUYKvBmBxzRUXQJ4CftC6cIyU8d6YoDs</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7kTfMHoBwCueKNfsvIIeb31h5lvuKXp3-2BSZC6Yo9RMhTy8kgH0fACGDSKHAVYqw6piB6My9oEc490l1is-2FkfZzqFNqAgSo32Zj-2FvesXlzX-2BRI4bBg-2FLUZuHCOgWRy5vW66mMyzLO3P1QKafuJKF3uc4m08d6yGaJEBiiTXFx3CWnCnTLJfxRUPj8EN0hzQJpHii4OfJb26OoPRM3n5tAGYa7vS3woFpc6CZAXeMayuQxpPcH0iqrBxN9zmhWaYD0lZYmGTYfHuxjfxgB-2BmjhlOo-3Dr-Wx_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojo6Y7ROUoixPp1-2FAv-2FM6v5AvBDeG3nSwJe-2BAf0f7zLQYs7E-2BxRShtzzhhuaqbNsO6ILEHZrb1PHME0niRZY9aYpJUFfK-2BPOukGqDh3HPe7O3-2FWuOETj0aUESiE0DhBO5JkwPPKEOy0eRaUYKvBmBxzRUXQJ4CftC6cIyU8d6YoDs" data-index="13" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -835,10 +822,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-14">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(14)">14</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(14)">14</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -854,9 +842,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7jEcf4xLMPA0nNKZXmot1Tk5p6A4pq-2FE3rt4vR7JNHBAp-2FcU6dDVRWy-2FSTThVmP7iaXlyE1fxcNiW2DvOECofKO5TBFuNSkA4Rz6Zgfe0E0xpCIFp4y6s3c6Eu9a-2F0Mz5rynWj5K5yIc2Bi8pw67SpcOGSx2Sy-2FN5h5-2B7X3RCM87H7Bprxgl0J-2FfVyuWwkUQPwX3Xqa3MjHPgNcPYyRwRW7HrbOL7zTzBQwgoz1XXDJSUPjJ7OKS5Zi1fqXIZ5Ayo3tg8svOvp754weMflgt1Uo-3DmekK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvokltlBEmyiImbxF2FxJCplADC5FZmdZ-2BRLSMu6ppNHgadzEXKj4nB9JFfQSaClg1r3JfS-2FBvoNv3u07GrCVYp9LHRNjDzBvLgHN5bp2XxZ5rpOo5MVuVm1Om7ON1wt54wpvAAWwVJlBCKbtS3T-2Byqd8wwLuc64R1JALgvesatN</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7jEcf4xLMPA0nNKZXmot1Tk5p6A4pq-2FE3rt4vR7JNHBAp-2FcU6dDVRWy-2FSTThVmP7iaXlyE1fxcNiW2DvOECofKO5TBFuNSkA4Rz6Zgfe0E0xpCIFp4y6s3c6Eu9a-2F0Mz5rynWj5K5yIc2Bi8pw67SpcOGSx2Sy-2FN5h5-2B7X3RCM87H7Bprxgl0J-2FfVyuWwkUQPwX3Xqa3MjHPgNcPYyRwRW7HrbOL7zTzBQwgoz1XXDJSUPjJ7OKS5Zi1fqXIZ5Ayo3tg8svOvp754weMflgt1Uo-3DmekK_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojvokltlBEmyiImbxF2FxJCplADC5FZmdZ-2BRLSMu6ppNHgadzEXKj4nB9JFfQSaClg1r3JfS-2FBvoNv3u07GrCVYp9LHRNjDzBvLgHN5bp2XxZ5rpOo5MVuVm1Om7ON1wt54wpvAAWwVJlBCKbtS3T-2Byqd8wwLuc64R1JALgvesatN" data-index="14" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -877,10 +865,11 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-15">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(15)">15</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(15)">15</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
+                                        
                                         
                                         
                                         
@@ -896,9 +885,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text"></div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7qu3wXqlpqOzcfJJaK4GfJc99G22hBA9COr-2F7lW5vfRN2YNgmqSnlA0DcKZHY9yMQCuUxW9ZZhEYqznYfg076dhOplJfP4-2F7Tds5AcfgZBYLF5S7AafgZcw1E71Sb0kTmsWTWr2-2Bx3rnfWL5eJnkxvzLBZ2Ey7KVQmPsB9srIxCd4Cvls1-2BVIi-2BShR1Fa-2B-2FKJmG5x7NUG9uJSDthiN3kzjn7-2BQ4u5h3rY2Y9Nn1AeER7-2FwZxMTRWsjqdLCpSgR-2FaFCPVwBLeWgJcS9efTA6i1Jo-3DOfPA_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojlZe-2BU1H9eoG-2F3YSubbl5RLIVkcXkc6kN7N20Zop2c0fYBSm-2Bky49pwDyRzzbCmO6NbZYNCobjNInC-2FP6dnboEGg4Oli83mMSiqaJQ8Gm863EJ4ulOo5yYnsBZRP5QNfHD1OHnkBh-2Bz5Tsvi7JoaxOPEZghpSdWtzX8t2U-2Fk894l</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/ls/click?upn=u001.IRxEd0tSg5q0URiGp0LA7qu3wXqlpqOzcfJJaK4GfJc99G22hBA9COr-2F7lW5vfRN2YNgmqSnlA0DcKZHY9yMQCuUxW9ZZhEYqznYfg076dhOplJfP4-2F7Tds5AcfgZBYLF5S7AafgZcw1E71Sb0kTmsWTWr2-2Bx3rnfWL5eJnkxvzLBZ2Ey7KVQmPsB9srIxCd4Cvls1-2BVIi-2BShR1Fa-2B-2FKJmG5x7NUG9uJSDthiN3kzjn7-2BQ4u5h3rY2Y9Nn1AeER7-2FwZxMTRWsjqdLCpSgR-2FaFCPVwBLeWgJcS9efTA6i1Jo-3DOfPA_-2BluoFPcwczFWoyEUYjmCrpIOu-2BBafXBTec4gsCAqhbiI-2FcGxZdmAAGhm47zFyS7PfJIkC4GizolYv1XbnDHyU0suSMmpcor7plDxANkgx1yZ5iv3nLuH2s8PZMWydYZJixA8HNmuU6YEdvzjf0nL99gRGwXMMx1wPIY6mQxZHJSfxzCgKzbWUX6HP81ghe16Ni54-2Bdl-2BkwuTxqI7QASYsSH-2BpVPiyExPhAprSCUT3tIyJsvrSH50D4TOzkg9L4-2Bd-2Fj0FxoGNxHJrMj7F8DVYFjVv5MOJAFkdkmvloiu3af4daPUG-2F1OISgB8sAvg-2BCVOrdDS02ZSNCTYRWUBDagQSOM3UBe3gdNROoOi-2BNg16nlwqgst18SA3IJQ4kYDo0J5b-2F20Y3zfAsdV2BHeH7oojlZe-2BU1H9eoG-2F3YSubbl5RLIVkcXkc6kN7N20Zop2c0fYBSm-2Bky49pwDyRzzbCmO6NbZYNCobjNInC-2FP6dnboEGg4Oli83mMSiqaJQ8Gm863EJ4ulOo5yYnsBZRP5QNfHD1OHnkBh-2Bz5Tsvi7JoaxOPEZghpSdWtzX8t2U-2Fk894l" data-index="15" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -919,13 +908,14 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-16">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(16)">16</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(16)">16</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
                                         
                                         
+                                        <span class="card-v2-tag tag-muted" title="Lien de désinscription : URL masquée, jamais visitée">DÉSINSCRIPTION</span>
                                         
                                     </div>
                                 </div>
@@ -938,9 +928,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">préférences</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/" data-index="16" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -961,13 +951,14 @@
                             </div>
                             
                             <div class="link-card-v2 " id="lc-17">
-                                <div class="card-v2-header" onclick="toggleExpand(this.closest('.link-card-v2'))">
-                                    <span class="card-v2-index" onclick="event.stopPropagation(); highlightLink(17)">17</span>
+                                <div class="card-v2-header" role="button" tabindex="0" aria-expanded="false" onclick="toggleExpand(this.closest('.link-card-v2'))">
+                                    <button type="button" class="card-v2-index" title="Localiser dans l'e-mail" onclick="event.stopPropagation(); highlightLink(17)">17</button>
                                     <span class="card-v2-domain">trk.klclick.com</span>
-                                    <div style="display: flex; gap: 4px;">
+                                    <div class="card-v2-tags">
                                         
                                         
                                         
+                                        <span class="card-v2-tag tag-muted" title="Lien de désinscription : URL masquée, jamais visitée">DÉSINSCRIPTION</span>
                                         
                                     </div>
                                 </div>
@@ -980,9 +971,9 @@
                                 <div class="card-expand-zone">
                                     <div class="card-v2-body">
                                         <div class="card-v2-text">désinscrire</div>
-                                        <div class="card-v2-url-zone" style="flex-direction: column; align-items: stretch;">
+                                        <div class="card-v2-url-zone">
                                             <code class="card-v2-url">https://trk.klclick.com/</code>
-                                            <div style="display: flex; gap: 8px; margin-top: 8px; justify-content: flex-end;">
+                                            <div class="card-v2-actions">
                                                 <button class="btn-card" title="Verify Link" data-url="https://trk.klclick.com/" data-index="17" onclick="event.stopPropagation(); runAudit(this)">
                                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                                 </button>
@@ -1010,9 +1001,9 @@
 
             <!-- Sticky Footer -->
             <div class="sidebar-footer">
-                <p style="font-size:0.72rem;color:var(--text-muted);text-align:center;margin:0;line-height:1.7;">
-                    Contact Opérations : <a href="mailto:benoit@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">benoit@getinside.fr</a>
-                    · Studio : <a href="mailto:studio@getinside.fr" style="color:var(--accent-primary);text-decoration:underline dotted;">studio@getinside.fr</a><br>
+                <p>
+                    Contact Opérations : <a href="mailto:benoit@getinside.fr">benoit@getinside.fr</a>
+                    · Studio : <a href="mailto:studio@getinside.fr">studio@getinside.fr</a><br>
                     © 2026 getinside. Tous droits réservés.
                 </p>
             </div>
@@ -1024,11 +1015,11 @@
 
     <!-- Mobile sidebar toggle button -->
     <button id="sidebarToggle" class="sidebar-mobile-toggle" onclick="toggleMobileSidebar()" title="Toggle Links Panel" aria-label="Toggle Links Panel">
-        ☰ Links
+        <span data-i18n="tab_links">LIENS</span>
     </button>
 
     <!-- Link overlays container -->
-    <div id="linkOverlays" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100;"></div>
+    <div id="linkOverlays"></div>
 
 <script src="../assets/js/main.js"></script>
     <script>
@@ -1049,7 +1040,7 @@
                 meta_size: 'Size', meta_clipping: 'Clipping Risk', meta_links: 'Links',
                 filter_all: 'All', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Show Links', hide_links: 'Hide Links', download: 'Download',
-                lang_btn_title: 'Change language', theme_btn_title: 'Toggle Theme (T)',
+                lang_btn_title: 'Change language', back_archive: 'All archives', screenshot: 'Screenshot',
                 sidebar_toggle_title: 'Toggle Links Panel',
                 audit_initiating: 'Initiating Audit\u2026', audit_finished: 'Audit Finished',
                 audit_error: 'Audit Finished (Error Found)',
@@ -1062,7 +1053,7 @@
                 meta_size: 'Taille', meta_clipping: 'Risque coupure', meta_links: 'Liens',
                 filter_all: 'Tous', filter_tracking: 'Tracking', filter_http: 'HTTP', filter_gtinsi: 'getinside',
                 show_links: 'Voir les liens', hide_links: 'Masquer les liens', download: 'Télécharger',
-                lang_btn_title: 'Changer la langue', theme_btn_title: 'Mode sombre (T)',
+                lang_btn_title: 'Changer la langue', back_archive: 'Toutes les archives', screenshot: 'Capture',
                 sidebar_toggle_title: 'Panneau des liens',
                 audit_initiating: 'Audit en cours\u2026', audit_finished: 'Audit terminé',
                 audit_error: 'Audit terminé (Erreur détectée)',
@@ -1103,13 +1094,17 @@
 
         function showTab(name) {
             document.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'none');
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.tab === name);
+                b.setAttribute('aria-selected', b.dataset.tab === name);
+            });
             document.getElementById('tab-' + name).style.display = 'block';
-            document.querySelector(`.tab-btn[data-tab="${name}"]`).classList.add('active');
         }
 
         function toggleExpand(card) {
-            card.classList.toggle('expanded');
+            const open = card.classList.toggle('expanded');
+            const header = card.querySelector('.card-v2-header');
+            if (header) header.setAttribute('aria-expanded', open);
         }
 
         function init() {
@@ -1121,14 +1116,8 @@
             const style = doc.createElement('style');
             style.innerHTML = `
                 :root {
-                    --spotlight-dim: rgba(0, 0, 0, 0.6);
-                    --spotlight-glow: #50FA7B;
-                }
-                [data-theme="dark"] {
-                    /* In Dark Mode (Inverted), we want the dimming to be light so it inverts to dark */
-                    --spotlight-dim: rgba(255, 255, 255, 0.7);
-                    /* And we use the complement of green so it inverts back to green */
-                    --spotlight-glow: #AF0584;
+                    --spotlight-dim: rgba(12, 12, 9, 0.6);
+                    --spotlight-glow: #fcf758;
                 }
                 body { margin: 0 auto; font-family: sans-serif; background: #fff; position: relative; }
                 /* Mobile fallback for emails whose own responsive logic is
@@ -1175,7 +1164,7 @@
                     body { overflow-x: hidden !important; }
                 }
                 .link-outline {
-                    outline: 2px solid #8BE9FD !important; /* Cyan */
+                    outline: 2px solid #0c0c09 !important;
                     outline-offset: 1px !important;
                     transition: outline 0.2s ease;
                 }
@@ -1183,9 +1172,9 @@
                     animation: link-pulse 2s infinite;
                 }
                 @keyframes link-pulse {
-                    0% { outline-color: #8BE9FD; outline-width: 2px; }
-                    50% { outline-color: #BD93F9; outline-width: 4px; outline-offset: 3px; }
-                    100% { outline-color: #8BE9FD; outline-width: 2px; }
+                    0% { outline-color: #0c0c09; outline-width: 2px; }
+                    50% { outline-color: #cfb7f9; outline-width: 4px; outline-offset: 3px; }
+                    100% { outline-color: #0c0c09; outline-width: 2px; }
                 }
                 .link-flash-spotlight {
                     position: relative !important;
@@ -1194,16 +1183,12 @@
                     outline-offset: 4px !important;
                     box-shadow: 0 0 0 10000px var(--spotlight-dim), 0 0 40px var(--spotlight-glow) !important;
                     background-color: rgba(255, 255, 255, 1) !important;
-                    color: #282a36 !important;
+                    color: #0c0c09 !important;
                 }
             `;
             doc.head.appendChild(style);
 
-            const theme = (typeof _resolveInitialTheme === 'function')
-                ? _resolveInitialTheme()
-                : (localStorage.getItem('theme') || 'light');
-            if (theme === 'dark') applyTheme('dark');
-            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument, theme);
+            if (typeof _applyIframeScrollbar === 'function') _applyIframeScrollbar(frame, frame.contentDocument);
             // Defer until after layout so getBoundingClientRect() returns the real frame width
             if (typeof _applyMobileScaling === 'function') requestAnimationFrame(() => _applyMobileScaling(frame, frame.contentDocument));
         }
@@ -1255,9 +1240,11 @@
             const frameEl = document.getElementById('deviceFrame');
             const iframeEl = document.getElementById('emailFrame');
 
-            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
-            const btn = document.querySelector(`.device-btn[onclick*="${mode}"]`);
-            if (btn) btn.classList.add('active');
+            document.querySelectorAll('.device-btn').forEach(b => {
+                const on = b.getAttribute('onclick').includes(mode);
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-pressed', on);
+            });
 
             // Switch mode — CSS handles sizing via data-mode attribute
             frameEl.dataset.mode = mode;
@@ -1411,28 +1398,7 @@
                     return;
                 }
 
-                badge.style.cssText = `
-                    position: fixed;
-                    left: ${badgeX}px;
-                    top: ${badgeY}px;
-                    background: #6AE7C8;
-                    color: #0C0D10;
-                    font-size: 11px;
-                    font-weight: 800;
-                    padding: 0px 6px;
-                    min-width: 20px;
-                    height: 20px;
-                    line-height: 20px;
-                    border-radius: 10px;
-                    font-family: 'Inter', sans-serif;
-                    z-index: 1000;
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.8);
-                    text-align: center;
-                    border: none;
-                    pointer-events: none;
-                    opacity: 1;
-                    transition: transform 0.2s ease;
-                `;
+                badge.style.cssText = `left: ${badgeX}px; top: ${badgeY}px;`;
                 container.appendChild(badge);
                 overlayElements.push(badge);
 
@@ -1496,7 +1462,7 @@
             navigator.clipboard.writeText(url).then(() => {
                 const originalHtml = btn.innerHTML;
                 // Temporarily show checkmark
-                btn.innerHTML = '<span style="color: var(--accent-green); font-weight: bold;">✓</span>';
+                btn.innerHTML = '✓';
                 btn.classList.add('copy-success');
 
                 setTimeout(() => {
@@ -1655,6 +1621,7 @@
 
         async function downloadEmailZip() {
             try {
+                await _loadScript(JSZIP_URL);
                 const zip = new JSZip();
                 const subject = "Marque Amie : Metagenics \ud83d\udc8a".replace(/[^a-z0-9]/gi, '_').toLowerCase();
                 const timestamp = new Date().toISOString().split('T')[0];
@@ -1771,7 +1738,6 @@
             if (e.key === '1') setMode('mobile');
             if (e.key === '2') setMode('tablet');
             if (e.key === '3') setMode('desktop');
-            if (e.key === 't' || e.key === 'T') toggleTheme();
             if (e.key === 'h' || e.key === 'H') toggleHighlightLinks();
             if (e.key === 'd' || e.key === 'D') downloadEmailZip();
             if (e.key === 's' || e.key === 'S') screenshotEmail(document.getElementById('screenshotBtn'));
