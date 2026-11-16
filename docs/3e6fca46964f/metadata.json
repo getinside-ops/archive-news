@@ -261,27 +261,13 @@
         {
             "index": 11,
             "txt": "désinscrire",
-            "original_url": "https://post.eu.spmailtechno.com/f/a/wqmM_dVMODia9ETVWfs5Qg~~/AABGZBA~/bxrctd1mdViwlvS5FrJgMGmeKrvrZSJb9S5Ctno9r3Wk-9DJU5tY-IjtY9QzIpGnk3r8BBZV3yxu6c8YMcAYSA3k3FhbVuCsfB98ei_0NiTfy-JAB7f6iNosiw91exdnsaY6YmrakN5oOJBaC3i4Kw~~",
-            "final_url": "https://www.bebeboutik-prive.fr/desabonnement",
+            "original_url": "https://post.eu.spmailtechno.com/",
+            "final_url": "https://post.eu.spmailtechno.com/",
             "domain": "post.eu.spmailtechno.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://post.eu.spmailtechno.com/f/a/wqmM_dVMODia9ETVWfs5Qg~~/AABGZBA~/bxrctd1mdViwlvS5FrJgMGmeKrvrZSJb9S5Ctno9r3Wk-9DJU5tY-IjtY9QzIpGnk3r8BBZV3yxu6c8YMcAYSA3k3FhbVuCsfB98ei_0NiTfy-JAB7f6iNosiw91exdnsaY6YmrakN5oOJBaC3i4Kw~~"
-                },
-                {
-                    "status": 308,
-                    "url": "https://www.bebeboutik-prive.fr/desabonnement/"
-                },
-                {
-                    "status": 404,
-                    "url": "https://www.bebeboutik-prive.fr/desabonnement"
-                }
-            ],
-            "audit_date": "2026-09-22 09:44:18"
+            "is_unsubscribe": true
         },
         {
             "index": 12,

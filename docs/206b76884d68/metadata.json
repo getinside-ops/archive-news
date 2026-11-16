@@ -148,19 +148,13 @@
         {
             "index": 6,
             "txt": "Vous pouvez vous désinscrire ici.",
-            "original_url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202026%20%28URs9uW%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
-            "final_url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202026%20%28URs9uW%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP",
+            "original_url": "http://HelloFresh, c'est quoi /",
+            "final_url": "http://HelloFresh, c'est quoi /",
             "domain": "HelloFresh, c'est quoi ",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "http://HelloFresh, c'est quoi ?utm_source=Klaviyo&utm_medium=flow&utm_campaign=Hello%20Fresh%20-%20Campagne%20Insertion%20Panier%20-%20Janvier%202026%20%28URs9uW%29&_kx=F7OK-fxWTQBCgRr7w2cd8g.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:31"
+            "is_unsubscribe": true
         },
         {
             "index": 7,

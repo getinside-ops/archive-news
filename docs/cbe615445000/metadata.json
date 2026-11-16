@@ -186,19 +186,13 @@
         {
             "index": 8,
             "txt": "Me désabonner des emails de kiabi@kiabicontest.com",
-            "original_url": "https://jeux-concours.kiabi.com/tracking/hellofresh-web/emailing/3793a4640ce4c895a32d168b3dd0cb1d/unsubscribe/?data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbEhpc3RvcnlJZCI6IjY5OGM1YzE5ZmQ2YjhlMjAzMDBmMmI3NiJ9.SFoyv096dJfsVqb8Sj0ystp3zwOaySp8cQSEVFHM7Nw",
-            "final_url": "https://jeux-concours.kiabi.com/tracking/hellofresh-web/emailing/3793a4640ce4c895a32d168b3dd0cb1d/unsubscribe/?data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbEhpc3RvcnlJZCI6IjY5OGM1YzE5ZmQ2YjhlMjAzMDBmMmI3NiJ9.SFoyv096dJfsVqb8Sj0ystp3zwOaySp8cQSEVFHM7Nw",
+            "original_url": "https://jeux-concours.kiabi.com/",
+            "final_url": "https://jeux-concours.kiabi.com/",
             "domain": "jeux-concours.kiabi.com",
             "is_tracking": true,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://jeux-concours.kiabi.com/tracking/hellofresh-web/emailing/3793a4640ce4c895a32d168b3dd0cb1d/unsubscribe/?data=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbEhpc3RvcnlJZCI6IjY5OGM1YzE5ZmQ2YjhlMjAzMDBmMmI3NiJ9.SFoyv096dJfsVqb8Sj0ystp3zwOaySp8cQSEVFHM7Nw"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:24"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

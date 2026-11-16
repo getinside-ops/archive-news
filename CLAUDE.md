@@ -28,10 +28,10 @@ python process_email.py --regen-only
 python process_email.py --check-new
 
 # Manual injector (Streamlit UI for one-off uploads)
-streamlit run injector.py
+pip install -r requirements-injector.txt && streamlit run injector.py
 ```
 
-No test suite exists in this project.
+Tests: `python test_parser.py` (plain asserts, no framework; also run by CI before the pipeline).
 
 ## Architecture
 
@@ -64,6 +64,13 @@ The pipeline has 4 stages orchestrated by `process_email.py`:
 
 **JSON injection safety**: In `generator.py`, `</script>` is escaped to `<\/script>` inside embedded JSON before being marked `Markup`-safe to prevent template injection.
 
+## Safety rules
+
+- **Unsubscribe links are never visited nor published**: `is_unsubscribe_link` / `redact_url` in `src/parser.py`. `--regen-only` redacts older archives.
+- **Never delete archives on a partial IMAP answer**: orphan cleanup is skipped when `fetcher.header_errors > 0` or the label comes back empty.
+- **Inline JSON goes through `_script_json`** (`src/generator.py`); values put in `innerHTML` go through `_escapeHtml` (`templates/viewer.html`).
+- The site is public but `noindex`. A `robots.txt` would be ignored (project site, not the host root).
+
 ## Deployment
 
 This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages serves from `main /docs`.
@@ -84,9 +91,7 @@ This repo deploys to **`getinside-ops/archive-news`** on GitHub. GitHub Pages se
 
 ## Utility scripts
 
-- **`apply_changes.py`**: Applies bulk template/generator changes to existing archived viewers without re-running the full IMAP pipeline.
 - **`debug_gmail.py`**: Standalone IMAP connection debugger — lists labels and message counts without archiving anything. Useful for diagnosing credential or label issues.
-- **`test_parser.py`**: Ad-hoc parser test script for checking parse output on local HTML files. Not a test suite.
 
 ## Contributing rules (from README)
 

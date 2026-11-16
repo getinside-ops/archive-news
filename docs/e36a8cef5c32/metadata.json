@@ -36,19 +36,13 @@
         {
             "index": 2,
             "txt": "Se désinscrire",
-            "original_url": "${unsubscribe}",
-            "final_url": "${unsubscribe}",
+            "original_url": "#",
+            "final_url": "#",
             "domain": "",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "${unsubscribe}"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:27"
+            "is_unsubscribe": true
         },
         {
             "index": 3,

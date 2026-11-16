@@ -683,44 +683,24 @@
         {
             "index": 29,
             "txt": "Mes préférences d'abonnement",
-            "original_url": "https://tg.info.chasseur.com/1/c/k22A0_0CVL032nX0taFZFEtgMfoMQrakW5yfRO1CWXtJKDh2BQS51fsfdnxWDSwFETbearH8_ByF_2taq2rjsX_1Mr6cM4jycWhQWp8nokyiiF_tzTNAOeAknE0SkmFLzy8ZduoifOAYt4iHYofPQ3B24kDH8GE8h6nEuTv8IGFZK8z3YmHd0VzkXDLL3U2JAR9ccoGOounKvdT0eunyPIlu9Hb59g1bWtJDT6cxYAlYI",
-            "final_url": "https://www.chasseur.com/lettre-inscription.asp",
+            "original_url": "https://tg.info.chasseur.com/",
+            "final_url": "https://tg.info.chasseur.com/",
             "domain": "tg.info.chasseur.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://tg.info.chasseur.com/1/c/k22A0_0CVL032nX0taFZFEtgMfoMQrakW5yfRO1CWXtJKDh2BQS51fsfdnxWDSwFETbearH8_ByF_2taq2rjsX_1Mr6cM4jycWhQWp8nokyiiF_tzTNAOeAknE0SkmFLzy8ZduoifOAYt4iHYofPQ3B24kDH8GE8h6nEuTv8IGFZK8z3YmHd0VzkXDLL3U2JAR9ccoGOounKvdT0eunyPIlu9Hb59g1bWtJDT6cxYAlYI"
-                },
-                {
-                    "status": 302,
-                    "url": "https://www.chasseur.com/espace-abonne.html?idprob=181773_588609&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
-                },
-                {
-                    "status": 200,
-                    "url": "https://www.chasseur.com/lettre-inscription.asp"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:38"
+            "is_unsubscribe": true
         },
         {
             "index": 30,
             "txt": "Me désabonner",
-            "original_url": "https://tg.info.chasseur.com/f/o2rpHh_Bq5dC25-F1bLgNyia_2o732_xvlpMqlpoq0V8giyTmiVqaBkhACa4_e0-l1",
-            "final_url": "https://tg.info.chasseur.com/f/o2rpHh_Bq5dC25-F1bLgNyia_2o732_xvlpMqlpoq0V8giyTmiVqaBkhACa4_e0-l1",
+            "original_url": "https://tg.info.chasseur.com/",
+            "final_url": "https://tg.info.chasseur.com/",
             "domain": "tg.info.chasseur.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://tg.info.chasseur.com/f/o2rpHh_Bq5dC25-F1bLgNyia_2o732_xvlpMqlpoq0V8giyTmiVqaBkhACa4_e0-l1"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:38"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [],

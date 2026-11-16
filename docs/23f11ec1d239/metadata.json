@@ -270,52 +270,24 @@
         {
             "index": 12,
             "txt": "gérer vos préférences",
-            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_10",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "original_url": "https://trk.email.lepetitballon.com/",
+            "final_url": "https://trk.email.lepetitballon.com/",
             "domain": "trk.email.lepetitballon.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_10"
-                },
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-07-22 15:18:13"
+            "is_unsubscribe": true
         },
         {
             "index": 13,
             "txt": "vous désabonner",
-            "original_url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_11",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "original_url": "https://trk.email.lepetitballon.com/",
+            "final_url": "https://trk.email.lepetitballon.com/",
             "domain": "trk.email.lepetitballon.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://trk.email.lepetitballon.com/l/01KY56BQAKX43R7P0K1EAKNB9E_11"
-                },
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-07-22 15:18:13"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

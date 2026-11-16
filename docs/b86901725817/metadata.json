@@ -145,19 +145,13 @@
         {
             "index": 7,
             "txt": "Se désabonner",
-            "original_url": "https://www.monjardinbio.com/account/unsubscribe/preview",
-            "final_url": "https://www.monjardinbio.com/account/unsubscribe/preview",
+            "original_url": "https://www.monjardinbio.com/",
+            "final_url": "https://www.monjardinbio.com/",
             "domain": "monjardinbio.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://www.monjardinbio.com/account/unsubscribe/preview"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:54"
+            "is_unsubscribe": true
         },
         {
             "index": 8,

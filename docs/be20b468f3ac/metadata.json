@@ -544,23 +544,13 @@
         {
             "index": 22,
             "txt": "Si vous souhaitez vous désabonner de la lettre d’i",
-            "original_url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855021",
-            "final_url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx",
+            "original_url": "https://news.tracking.laredoute.fr/",
+            "final_url": "https://news.tracking.laredoute.fr/",
             "domain": "news.tracking.laredoute.fr",
             "is_tracking": true,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.tracking.laredoute.fr/r/?id=hf6b7c377-f78e-4167-ac94-ea1b59cbe847,11c783b,2855021"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.laredoute.fr/myaccount/newslettersubscribe.aspx"
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:14"
+            "is_unsubscribe": true
         },
         {
             "index": 23,

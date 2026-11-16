@@ -342,19 +342,13 @@
         {
             "index": 20,
             "txt": "Se désinscrire",
-            "original_url": "http://r.newsletter.megara.fr/mk/un/v2/sh/7xYEvk0fHl1ZgYvAXZXaGYqMmSVYTUV/Lj2GS2lRfQ2S",
-            "final_url": "http://r.newsletter.megara.fr/mk/un/v2/sh/7xYEvk0fHl1ZgYvAXZXaGYqMmSVYTUV/Lj2GS2lRfQ2S",
+            "original_url": "http://r.newsletter.megara.fr/",
+            "final_url": "http://r.newsletter.megara.fr/",
             "domain": "r.newsletter.megara.fr",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "http://r.newsletter.megara.fr/mk/un/v2/sh/7xYEvk0fHl1ZgYvAXZXaGYqMmSVYTUV/Lj2GS2lRfQ2S"
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:28"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [],

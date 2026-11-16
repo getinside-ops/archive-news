@@ -683,40 +683,24 @@
         {
             "index": 29,
             "txt": "Mes préférences d'abonnement",
-            "original_url": "https://tg.info.pecheur.com/3/c/k2tdSQBUIYassTwqgIYIJBrQjo3yXQDoiRnLESEhX-bI2Dh2BQS51fsfdnxWDSwFETctAVvUmX9ob0gXWBoFfOsKJOmcs_ndCJvxp2K5kuj3qJ423bUGzwBFmvFDlXqciAe-QKM_wCFXV0bw3Hl1qatkxDBpGNMnSlRg2Qifl1CHteB_9Kul2IsZowTC2vhdIGbiQMfwYTyHqcS5O_wgYVkrzPdiYd3RXORcMsvdTYkBFwPjj-fJR241Vm118SizNB70dvn2DVta0kNPpzFgCVgg",
-            "final_url": "https://www.pecheur.com/newsdispatch.html?from=130&paysiso=FR&langueiso=FR&idprob=223268_3132895&utm_campaign=emailing&utm_medium=email&utm_source=newsletter",
+            "original_url": "https://tg.info.pecheur.com/",
+            "final_url": "https://tg.info.pecheur.com/",
             "domain": "tg.info.pecheur.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://tg.info.pecheur.com/3/c/k2tdSQBUIYassTwqgIYIJBrQjo3yXQDoiRnLESEhX-bI2Dh2BQS51fsfdnxWDSwFETctAVvUmX9ob0gXWBoFfOsKJOmcs_ndCJvxp2K5kuj3qJ423bUGzwBFmvFDlXqciAe-QKM_wCFXV0bw3Hl1qatkxDBpGNMnSlRg2Qifl1CHteB_9Kul2IsZowTC2vhdIGbiQMfwYTyHqcS5O_wgYVkrzPdiYd3RXORcMsvdTYkBFwPjj-fJR241Vm118SizNB70dvn2DVta0kNPpzFgCVgg"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.pecheur.com/newsdispatch.html?from=130&paysiso=FR&langueiso=FR&idprob=223268_3132895&utm_campaign=emailing&utm_medium=email&utm_source=newsletter"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:02"
+            "is_unsubscribe": true
         },
         {
             "index": 30,
             "txt": "Me désabonner",
-            "original_url": "https://tg.info.pecheur.com/f/o26YfhzzWxQTlXRxxWEyEUF9H6pk9iuu7dYAB5OMb4bb0iyTmiVqaBkhACa4_e0-l1",
-            "final_url": "https://tg.info.pecheur.com/f/o26YfhzzWxQTlXRxxWEyEUF9H6pk9iuu7dYAB5OMb4bb0iyTmiVqaBkhACa4_e0-l1",
+            "original_url": "https://tg.info.pecheur.com/",
+            "final_url": "https://tg.info.pecheur.com/",
             "domain": "tg.info.pecheur.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://tg.info.pecheur.com/f/o26YfhzzWxQTlXRxxWEyEUF9H6pk9iuu7dYAB5OMb4bb0iyTmiVqaBkhACa4_e0-l1"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:02"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

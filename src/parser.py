@@ -51,6 +51,40 @@ CRM_PATTERNS = {
     'Shopify': ['shopify.com', 'shopifyemail.com'],
 }
 
+# Unsubscribe links are personal: a GET can unsubscribe the mailbox, and publishing
+# them lets anyone do it. They are never visited and never published.
+UNSUB_RE = re.compile(r"unsub|d[ée]sinscri|d[ée]sabonn|opt[-_ ]?out|pr[ée]f[ée]rences|preferences", re.IGNORECASE)
+
+
+def is_unsubscribe_link(text, url):
+    return bool(UNSUB_RE.search(text or '') or UNSUB_RE.search(url or ''))
+
+
+def redact_url(url):
+    """Keep only scheme://host/ so the audit still shows where the link points."""
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme in ('http', 'https') and parsed.netloc:
+            return f"{parsed.scheme}://{parsed.netloc}/"
+    except Exception:
+        pass
+    return "#"
+
+
+def redact_unsubscribe(soup, links):
+    """Redact unsubscribe links in an already-archived email (soup + metadata links). Idempotent."""
+    for link in links:
+        if link.get('is_unsubscribe') or is_unsubscribe_link(link.get('txt'), link.get('original_url')):
+            link['is_unsubscribe'] = True
+            link['original_url'] = link['final_url'] = redact_url(link.get('original_url', ''))
+            link.pop('redirect_chain', None)
+            link.pop('audit_date', None)
+    flagged = {str(l.get('index')) for l in links if l.get('is_unsubscribe')}
+    for a in soup.find_all('a', href=True):
+        if a.get('data-index') in flagged or is_unsubscribe_link(a.get_text(strip=True), a['href']):
+            a['href'] = '#'
+
+
 RESOLVE_REDIRECTS = True
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -435,6 +469,12 @@ class EmailParser:
             link_idx += 1
             a['data-index'] = str(link_idx)
             original_url = a['href']
+            link_text = a.get_text(strip=True)
+            is_unsubscribe = is_unsubscribe_link(link_text, original_url)
+            if is_unsubscribe:
+                self.audit['unsubscribe_found'] = True
+                original_url = redact_url(original_url)
+                a['href'] = '#'
             
             # Domain Extraction
             domain = ""
@@ -452,11 +492,6 @@ class EmailParser:
             dev_patterns = ['test', 'staging', 'dev.', 'localhost', 'internal', 'bat.', 'preprod']
             is_dev = any(p in original_url.lower() for p in dev_patterns)
 
-            # Unsubscribe check
-            txt = a.get_text(strip=True).lower()
-            if 'unsubscribe' in txt or 'désinscrire' in txt or 'opt-out' in txt or 'manage preferences' in txt:
-                self.audit['unsubscribe_found'] = True
-
             self.links.append({
                 'index': link_idx,
                 'txt': a.get_text(strip=True)[:50],
@@ -465,7 +500,8 @@ class EmailParser:
                 'domain': domain,
                 'is_tracking': is_tracking,
                 'is_secure': is_secure,
-                'is_dev': is_dev
+                'is_dev': is_dev,
+                'is_unsubscribe': is_unsubscribe,
             })
             
         self.audit['link_count'] = link_idx
@@ -625,7 +661,7 @@ class EmailParser:
         if not RESOLVE_REDIRECTS or not self.links:
             return
 
-        unique_urls = list(set(l['original_url'] for l in self.links))
+        unique_urls = list(set(l['original_url'] for l in self.links if not l.get('is_unsubscribe')))
         results_cache = {}
 
         from datetime import datetime

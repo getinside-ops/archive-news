@@ -278,23 +278,13 @@
         {
             "index": 12,
             "txt": "Vous pouvez vous désinscrire ici.",
-            "original_url": "https://ctrk.klclick.com/l/01KF06QX7ZB44MVPXGGR4ANHET_11",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=Qb2tyP&c=01K62GP6DFCRW691B7Z9XE824D&k=b212668ba3e469100ec8cfe1a71e1e23&m=01KESNWE9BT2ZNCM3KSPZKXKAA&r=01KF06CQV0M7JC68CRYXPZQSRP",
+            "original_url": "https://ctrk.klclick.com/",
+            "final_url": "https://ctrk.klclick.com/",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KF06QX7ZB44MVPXGGR4ANHET_11"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=Qb2tyP&c=01K62GP6DFCRW691B7Z9XE824D&k=b212668ba3e469100ec8cfe1a71e1e23&m=01KESNWE9BT2ZNCM3KSPZKXKAA&r=01KF06CQV0M7JC68CRYXPZQSRP"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:34"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

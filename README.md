@@ -104,6 +104,7 @@ python process_email.py --regen-only
 python process_email.py --check-new
 
 # Manual injector (Streamlit UI for one-off uploads)
+pip install -r requirements-injector.txt
 streamlit run injector.py
 
 # Debug IMAP connection
@@ -161,11 +162,8 @@ In `generator.py`, `</script>` is escaped to `<\/script>` inside embedded JSON b
 
 | Script | Purpose |
 | :--- | :--- |
-| `apply_changes.py` | Applies bulk template/generator changes to existing archived viewers without re-running IMAP pipeline |
-| `apply_base_target.py` | Injects `<base target="_blank">` into all existing `docs/*/index.html` files so links open in new tabs |
 | `debug_gmail.py` | Standalone IMAP connection debugger — lists labels and message counts |
-| `test_parser.py` | Ad-hoc parser test script for checking parse output on local HTML files |
-| `backfill_audit_data.py` | Backfills audit metadata for existing archives |
+| `test_parser.py` | Self-checking tests, no framework: `python test_parser.py` |
 
 ---
 
@@ -248,8 +246,6 @@ All archived images MUST be saved to `docs/<id>/` or `docs/assets/` — never re
 jinja2>=3.0,<4.0
 beautifulsoup4>=4.12,<5.0
 requests>=2.31,<3.0
-lxml>=4.9,<6.0
-streamlit>=1.35,<2.0
 python-dotenv>=1.0,<2.0
 ```
 

@@ -270,44 +270,24 @@
         {
             "index": 12,
             "txt": "gérer vos préférences",
-            "original_url": "http://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN",
-            "final_url": "https://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN",
+            "original_url": "http://le-petit-ballon.myklpages.com/",
+            "final_url": "http://le-petit-ballon.myklpages.com/",
             "domain": "le-petit-ballon.myklpages.com",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "http://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN"
-                },
-                {
-                    "status": 200,
-                    "url": "https://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN"
-                }
-            ],
-            "audit_date": "2026-09-03 09:06:17"
+            "is_unsubscribe": true
         },
         {
             "index": 13,
             "txt": "vous désabonner",
-            "original_url": "http://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN",
-            "final_url": "https://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN",
+            "original_url": "http://le-petit-ballon.myklpages.com/",
+            "final_url": "http://le-petit-ballon.myklpages.com/",
             "domain": "le-petit-ballon.myklpages.com",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "http://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN"
-                },
-                {
-                    "status": 200,
-                    "url": "https://le-petit-ballon.myklpages.com/p/unsubscribe?a=TuNbFm&c=01K7E78ASNTH9PWQDCDM88M5MH&k=d2342dddab2217f99af9cc38c650be5e&se=benoit%40getinside.fr&m=01KY29MN5CMSHXJWJ2CCMJ07P4&r=01M1JYC7FWQ7DYSBXE98YMJDDN"
-                }
-            ],
-            "audit_date": "2026-09-03 09:06:17"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

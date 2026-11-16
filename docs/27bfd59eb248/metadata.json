@@ -755,23 +755,13 @@
         {
             "index": 29,
             "txt": "Je peux me désinscrire facilement et ne plus recev",
-            "original_url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGy4d4dWoWC6zeIo1IE6zekW7KKgJPfFe7UqGXNuO93EzdPqbms83OVXtpKX%3DDSTURW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjAiSkbJKU_Ou_wGW7lejjAekto7DcgDU-EANT8D9cSI1S8cWShPBeg0.&_di_=niotl92fmd4n2hog4outaul0igq0kfe5rthklb88o23mrqbrqc40",
-            "final_url": "https://news.but.fr/pub/rf?_ri_=X0Gzc2X%3DAQjkPkSRTQGf3Dblvkdzcd5nhCEJ2lMtP0S6vNfzfaAstzbzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRTQG4zaNqHlL1jc0EWAIkOKB9CiS6vNfzfaAstzbza&_ei_=EYN3tLp37T4UM5xzoWPy0xo&_di_=pr3htg9u68p3s4csufot1gvtioegqm8s6mtvgbughl07j8e7ao60&CUSTOMER_ID_=&OPTIN_EMAIL=false&ABO_BONS_PLANS=N&ABO_INSPI=N&ABO_TRIGGER=N&ABO_AVIS=N&UNSUB_CAMPAIGN=EN_0_2605_GI_FDJ&FORM_NAME=OneClickUnsubscribe&SUBMISSION_DATE=2026-05-25&FORM_SOURCE_ID=RSYS&RIID_=6001184&CAMPAIGN_NAME=EN_0_2605_GI_FDJ&CAMPAIGN_ID=butintlprod.1467624&UNSUB_CAMPAIGN_ID=butintlprod.1467624",
+            "original_url": "https://news.but.fr/",
+            "final_url": "https://news.but.fr/",
             "domain": "news.but.fr",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://news.but.fr/pub/cc?_ri_=X0Gzc2X%3DBQjkPkSRTQGy4d4dWoWC6zeIo1IE6zekW7KKgJPfFe7UqGXNuO93EzdPqbms83OVXtpKX%3DDSTURW&_ei_=ENk6ZcbGcEnrMjFTkZAoJ-u87x5-yWU1bXjWLLScMGtjAiSkbJKU_Ou_wGW7lejjAekto7DcgDU-EANT8D9cSI1S8cWShPBeg0.&_di_=niotl92fmd4n2hog4outaul0igq0kfe5rthklb88o23mrqbrqc40"
-                },
-                {
-                    "status": 200,
-                    "url": "https://news.but.fr/pub/rf?_ri_=X0Gzc2X%3DAQjkPkSRTQGf3Dblvkdzcd5nhCEJ2lMtP0S6vNfzfaAstzbzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DAQjkPkSRTQG4zaNqHlL1jc0EWAIkOKB9CiS6vNfzfaAstzbza&_ei_=EYN3tLp37T4UM5xzoWPy0xo&_di_=pr3htg9u68p3s4csufot1gvtioegqm8s6mtvgbughl07j8e7ao60&CUSTOMER_ID_=&OPTIN_EMAIL=false&ABO_BONS_PLANS=N&ABO_INSPI=N&ABO_TRIGGER=N&ABO_AVIS=N&UNSUB_CAMPAIGN=EN_0_2605_GI_FDJ&FORM_NAME=OneClickUnsubscribe&SUBMISSION_DATE=2026-05-25&FORM_SOURCE_ID=RSYS&RIID_=6001184&CAMPAIGN_NAME=EN_0_2605_GI_FDJ&CAMPAIGN_ID=butintlprod.1467624&UNSUB_CAMPAIGN_ID=butintlprod.1467624"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:29"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

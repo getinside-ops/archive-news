@@ -36,19 +36,13 @@
         {
             "index": 2,
             "txt": "Se désabonner",
-            "original_url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>",
-            "final_url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>",
+            "original_url": "https://www.sarenza.com/",
+            "final_url": "https://www.sarenza.com/",
             "domain": "sarenza.com",
             "is_tracking": true,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 403,
-                    "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=<%=recipient.emailBase64%>&<%@ include view='srz_fr_tracking_url' %>"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:59"
+            "is_unsubscribe": true
         },
         {
             "index": 3,
@@ -243,19 +237,13 @@
         {
             "index": 13,
             "txt": "cliquez ici",
-            "original_url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr?<%@ include view='srz_fr_tracking_url' %>",
-            "final_url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr?<%@ include view='srz_fr_tracking_url' %>",
+            "original_url": "#",
+            "final_url": "#",
             "domain": "",
             "is_tracking": true,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "<%@ include option='NmsServer_URL' %>/webApp/desabonne_moi_srz?_uuid=<%= escapeUrl(reversibleCrypt(recipient.id)) %>&idDiffusion=<%= escapeUrl(reversibleCrypt(message.delivery.id)) %>&<%@ include view='srz_fr_tracking_url' %>&lang=fr?<%@ include view='srz_fr_tracking_url' %>"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:59"
+            "is_unsubscribe": true
         },
         {
             "index": 14,

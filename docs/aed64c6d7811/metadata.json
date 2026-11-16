@@ -40,44 +40,24 @@
         {
             "index": 2,
             "txt": "Se désabonner",
-            "original_url": "https://t.info.sarenza.com/r/?id=h76d66100,e160155,8f587fd8&p1=bGF1cmVudC5tYWluZ3V5QGxhcG9zdGUubmV0&p2=[BAT FR 03/04 Abo 3] nl_fr_20260403_br-crm_service_occasionnel&p3=adhocpleintarif&p4=occasionnel&p5=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&p6=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd",
-            "final_url": "https://www.sarenza.com/fr/fr/unsubscribe?email=bGF1cmVudC5tYWluZ3V5QGxhcG9zdGUubmV0&utm_medium=mailing&utm_campaign=%5BBAT%20FR%2003%2F04%20Abo%203%5D%20nl_fr_20260403_br-crm_service_occasionnel&utm_content=owned&utm_term=adhocpleintarif_occasionnel&utm_source=sarenza&email=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&hct_e=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd",
+            "original_url": "https://t.info.sarenza.com/",
+            "final_url": "https://t.info.sarenza.com/",
             "domain": "t.info.sarenza.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://t.info.sarenza.com/r/?id=h76d66100,e160155,8f587fd8&p1=bGF1cmVudC5tYWluZ3V5QGxhcG9zdGUubmV0&p2=[BAT FR 03/04 Abo 3] nl_fr_20260403_br-crm_service_occasionnel&p3=adhocpleintarif&p4=occasionnel&p5=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&p6=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd"
-                },
-                {
-                    "status": 403,
-                    "url": "https://www.sarenza.com/fr/fr/unsubscribe?email=bGF1cmVudC5tYWluZ3V5QGxhcG9zdGUubmV0&utm_medium=mailing&utm_campaign=%5BBAT%20FR%2003%2F04%20Abo%203%5D%20nl_fr_20260403_br-crm_service_occasionnel&utm_content=owned&utm_term=adhocpleintarif_occasionnel&utm_source=sarenza&email=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&hct_e=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:11"
+            "is_unsubscribe": true
         },
         {
             "index": 3,
             "txt": "Se désabonner",
-            "original_url": "https://t.info.sarenza.com/r/?id=h76d66100,e160155,8f587fd9&p1=78WduMpdMt%2FDB2sufSlGYxcgeMNsKLuVdBJCVCACAA%3D%3D&p2=78WNqMZRMVrEx734Xf9sLqe%2FVCrohjr8Y00SQlQgAgA%3D&p3=[BAT FR 03/04 Abo 3] nl_fr_20260403_br-crm_service_occasionnel&p4=adhocpleintarif&p5=occasionnel&p6=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&p7=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd",
-            "final_url": "https://t.info.sarenza.com/webApp/desabonne_moi_srz?_uuid=78WduMpdMt%2FDB2sufSlGYxcgeMNsKLuVdBJCVCACAA%3D%3D&idDiffusion=78WNqMZRMVrEx734Xf9sLqe%2FVCrohjr8Y00SQlQgAgA%3D&utm_medium=mailing&utm_campaign=%5BBAT%20FR%2003%2F04%20Abo%203%5D%20nl_fr_20260403_br-crm_service_occasionnel&utm_content=owned&utm_term=adhocpleintarif_occasionnel&utm_source=sarenza&email=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&hct_e=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&lang=fr",
+            "original_url": "https://t.info.sarenza.com/",
+            "final_url": "https://t.info.sarenza.com/",
             "domain": "t.info.sarenza.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://t.info.sarenza.com/r/?id=h76d66100,e160155,8f587fd9&p1=78WduMpdMt%2FDB2sufSlGYxcgeMNsKLuVdBJCVCACAA%3D%3D&p2=78WNqMZRMVrEx734Xf9sLqe%2FVCrohjr8Y00SQlQgAgA%3D&p3=[BAT FR 03/04 Abo 3] nl_fr_20260403_br-crm_service_occasionnel&p4=adhocpleintarif&p5=occasionnel&p6=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&p7=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd"
-                },
-                {
-                    "status": 200,
-                    "url": "https://t.info.sarenza.com/webApp/desabonne_moi_srz?_uuid=78WduMpdMt%2FDB2sufSlGYxcgeMNsKLuVdBJCVCACAA%3D%3D&idDiffusion=78WNqMZRMVrEx734Xf9sLqe%2FVCrohjr8Y00SQlQgAgA%3D&utm_medium=mailing&utm_campaign=%5BBAT%20FR%2003%2F04%20Abo%203%5D%20nl_fr_20260403_br-crm_service_occasionnel&utm_content=owned&utm_term=adhocpleintarif_occasionnel&utm_source=sarenza&email=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&hct_e=0e2f9b76ccfefa31c0098444e622527408cca7c5e4d5ff3db5c1f9fffd53eacd&lang=fr"
-                }
-            ],
-            "audit_date": "2026-05-25 13:13:11"
+            "is_unsubscribe": true
         },
         {
             "index": 4,

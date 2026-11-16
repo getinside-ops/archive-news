@@ -223,19 +223,13 @@
         {
             "index": 13,
             "txt": "Se désinscrire",
-            "original_url": "https://hfbd6.r.ag.d.sendibm3.com/mk/un/v2/sh/1t6AVsdYhqSR1hNo2zdjnngPWeWmyn/_7DiLzyj4zlH",
-            "final_url": "https://hfbd6.r.ag.d.sendibm3.com/mk/un/v2/sh/1t6AVsdYhqSR1hNo2zdjnngPWeWmyn/_7DiLzyj4zlH",
+            "original_url": "https://hfbd6.r.ag.d.sendibm3.com/",
+            "final_url": "https://hfbd6.r.ag.d.sendibm3.com/",
             "domain": "hfbd6.r.ag.d.sendibm3.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 200,
-                    "url": "https://hfbd6.r.ag.d.sendibm3.com/mk/un/v2/sh/1t6AVsdYhqSR1hNo2zdjnngPWeWmyn/_7DiLzyj4zlH"
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:36"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

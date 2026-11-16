@@ -375,27 +375,13 @@
         {
             "index": 13,
             "txt": "Vous pouvez vous désinscrire ici.",
-            "original_url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_12",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "original_url": "https://ctrk.klclick.com/",
+            "final_url": "https://ctrk.klclick.com/",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KBQKYKGF7KPGNF8GVSKVME77_12"
-                },
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:03"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

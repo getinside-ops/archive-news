@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>{{ subject }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -852,7 +853,7 @@
 
             try {
                 if (linkData && linkData.redirect_chain && linkData.redirect_chain.length > 0) {
-                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${linkData.audit_date}</small>` : '';
+                    const auditDateStr = linkData.audit_date ? `<br><small style="opacity: 0.7; font-size: 0.8em;">Audit: ${_escapeHtml(linkData.audit_date)}</small>` : '';
                     statusText.innerHTML = 'Analyzing Redirection Chain...' + auditDateStr;
 
                     let containsGtinsi = false;
@@ -868,13 +869,13 @@
                         if (!isLast) {
                             // It's a redirect step
                             const nextStep = linkData.redirect_chain[i + 1];
-                            timeline.innerHTML += `<div class="${stepClass}"><strong>${step.status}</strong> &rarr; ${nextStep.url}</div>`;
+                            timeline.innerHTML += `<div class="${stepClass}"><strong>${_escapeHtml(step.status)}</strong> &rarr; ${_escapeHtml(nextStep.url)}</div>`;
                         } else {
                             // It's the final destination
                             const statusColor = (step.status === 200) ? 'text-green' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'text-red' : 'text-cyan');
                             const statusIcon = (step.status === 200) ? 'final' : (step.status >= 400 || step.status === 'Error' || step.status === 'Timeout' ? 'error' : '');
 
-                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${step.status || 'Done'}</strong> &bull; ${step.url}</div>`;
+                            timeline.innerHTML += `<div class="audit-step ${statusIcon}"><strong>${_escapeHtml(step.status || 'Done')}</strong> &bull; ${_escapeHtml(step.url)}</div>`;
 
                             // Update status text
                             if (step.status === 200) {
@@ -895,7 +896,7 @@
                 } else {
                     // Fallback for archives created before this feature or if resolution failed
                     timeline.innerHTML += `<div class="audit-step"><strong>INFO</strong> Pre-calculated redirect data missing.</div>`;
-                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${url}</div>`;
+                    timeline.innerHTML += `<div class="audit-step"><strong>URL</strong> ${_escapeHtml(url)}</div>`;
                     await new Promise(r => setTimeout(r, 600));
                     timeline.innerHTML += `<div class="audit-step final"><strong>ACTION</strong> Please re-archive this email to enable full redirect auditing.</div>`;
                     statusText.innerHTML = 'Direct Link Check';
@@ -930,7 +931,7 @@
 
             try {
                 const testUrl = url + (url.includes('?') ? '&' : '?') + '_pxtest=' + Date.now();
-                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> &rarr; ${url}</div>`;
+                timeline.innerHTML += `<div class="audit-step"><strong>GET</strong> &rarr; ${_escapeHtml(url)}</div>`;
                 await new Promise(r => setTimeout(r, 400));
 
                 await new Promise((resolve, reject) => {
@@ -962,7 +963,7 @@
                     statusText.className = 'audit-status-text text-red';
                     btn.style.color = 'var(--accent-red)';
                 } else {
-                    timeline.innerHTML += `<div class="audit-step error"><strong>Error</strong> &bull; ${e.message}</div>`;
+                    timeline.innerHTML += `<div class="audit-step error"><strong>Error</strong> &bull; ${_escapeHtml(e.message)}</div>`;
                     statusText.innerHTML = 'Pixel Unreachable';
                     statusText.className = 'audit-status-text text-red';
                     btn.style.color = 'var(--accent-red)';

@@ -6,16 +6,34 @@ const USER_AGENTS = {
   'apple-mail': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)'
 };
 
+// Only the archive site (and local preview) may use this worker.
+const ALLOWED_ORIGINS = ['https://getinside-ops.github.io', 'http://localhost:8765'];
+
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': ALLOWED_ORIGINS[0],
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type'
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Vary': 'Origin'
 };
+
+// <img> requests send Referer but no Origin, so accept either.
+function isAllowed(request) {
+  const origin = request.headers.get('Origin');
+  const referer = request.headers.get('Referer') || '';
+  return ALLOWED_ORIGINS.includes(origin) || ALLOWED_ORIGINS.some(o => referer.startsWith(o + '/'));
+}
 
 export default {
   async fetch(request, env, ctx) {
+    const origin = request.headers.get('Origin');
+    if (ALLOWED_ORIGINS.includes(origin)) CORS_HEADERS['Access-Control-Allow-Origin'] = origin;
+
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: CORS_HEADERS });
+    }
+
+    if (!isAllowed(request)) {
+      return new Response('Forbidden', { status: 403 });
     }
 
     const { pathname } = new URL(request.url);
@@ -87,7 +105,7 @@ async function followRedirects(url, userAgent, maxHops) {
         method: 'HEAD',
         headers: { 'User-Agent': userAgent },
         redirect: 'manual',
-        timeout: 15000
+        signal: AbortSignal.timeout(15000)
       });
 
       const status = response.status;
@@ -138,13 +156,18 @@ async function handleImageProxy(request) {
     const resp = await fetch(imageUrl, {
       headers: { 'User-Agent': USER_AGENTS['chrome-desktop'] }
     });
-    const contentType = resp.headers.get('content-type') || 'application/octet-stream';
+    const contentType = resp.headers.get('content-type') || '';
+    // Raster images only: never relay HTML or SVG (script) from this origin.
+    if (!contentType.startsWith('image/') || contentType.includes('svg')) {
+      return new Response('Not an image', { status: 415, headers: CORS_HEADERS });
+    }
     const body = await resp.arrayBuffer();
     return new Response(body, {
       status: 200,
       headers: {
         'Content-Type': contentType,
         'Cache-Control': 'public, max-age=3600',
+        'X-Content-Type-Options': 'nosniff',
         ...CORS_HEADERS
       }
     });

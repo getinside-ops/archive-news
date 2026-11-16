@@ -23,6 +23,12 @@ def _format_date(d):
 
 env.globals.update(format_date=_format_date)
 
+
+def _script_json(value):
+    """JSON safe to inline in a <script>: no '<' survives, so no </script> or <!-- breakout."""
+    return json.dumps(value).replace('<', '\\u003c')
+
+
 def generate_viewer(metadata, html_content, links, output_path, lang='fr', detected_pixels=[], audit={}):
     """
     Generates the viewer HTML using Jinja2 template.
@@ -36,7 +42,7 @@ def generate_viewer(metadata, html_content, links, output_path, lang='fr', detec
     gtinsi_count = sum(1 for link in links if 'gtinsi.de' in link.get('original_url', ''))
 
     # Escape </script> to avoid breaking the viewer's script tag, then mark as safe for Jinja2
-    safe_html_json = Markup(json.dumps(html_content).replace('</script>', r'<\/script>'))
+    safe_html_json = Markup(_script_json(html_content))
 
     rendered_html = template.render(
         subject=metadata.get('subject', 'No Subject'),
@@ -52,7 +58,7 @@ def generate_viewer(metadata, html_content, links, output_path, lang='fr', detec
         detected_pixels=detected_pixels,
         audit=metadata.get('audit', {}),
         crm=metadata.get('crm'),
-        links_json=Markup(json.dumps(links).replace('</script>', r'<\/script>')),
+        links_json=Markup(_script_json(links)),
         gtinsi_count=gtinsi_count,
         failed_images_count=metadata.get('failed_images_count', 0),
     )

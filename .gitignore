@@ -45,3 +45,6 @@ env/
 
 # Duplicate of src/assets/ (local artifact)
 /assets/
+
+# Test scratch output
+test_output/

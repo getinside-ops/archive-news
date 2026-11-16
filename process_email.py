@@ -15,7 +15,8 @@ except ImportError:
     pass
 
 from src.imap_client import EmailFetcher
-from src.parser import EmailParser
+from bs4 import BeautifulSoup
+from src.parser import EmailParser, redact_unsubscribe
 from src.generator import generate_viewer, generate_index
 
 logging.basicConfig(
@@ -60,7 +61,11 @@ def process_emails():
             if os.path.isfile(os.path.join(OUTPUT_FOLDER, d, "metadata.json"))
         ) if os.path.exists(OUTPUT_FOLDER) else set()
         orphaned = archived_ids - gmail_ids
-        if orphaned:
+        if orphaned and (fetcher.header_errors or not email_map):
+            # A partial or empty IMAP answer must never wipe the archive.
+            logger.warning("IMAP answer incomplete (%d header error(s), %d email(s)): keeping %d archive(s) absent from it.",
+                           fetcher.header_errors, len(email_map), len(orphaned))
+        elif orphaned:
             logger.info("Removing %d orphaned email(s) no longer in Gmail.", len(orphaned))
             for oid in orphaned:
                 shutil.rmtree(os.path.join(OUTPUT_FOLDER, oid))
@@ -263,6 +268,12 @@ def regen_only():
             html_content = _extract_email_html_from_viewer(viewer_path)
             if html_content:
                 links = metadata.get('links', [])
+                # Archives made before unsubscribe links were redacted get redacted here.
+                soup = BeautifulSoup(html_content, "html.parser")
+                redact_unsubscribe(soup, links)
+                html_content = str(soup)
+                with open(meta_path, 'w', encoding='utf-8') as f:
+                    json.dump(metadata, f, ensure_ascii=False, indent=4)
                 detected_pixels = metadata.get('detected_pixels', [])
                 generate_viewer(metadata, html_content, links, viewer_path, detected_pixels=detected_pixels)
                 logger.info("Re-rendered %s", entry)

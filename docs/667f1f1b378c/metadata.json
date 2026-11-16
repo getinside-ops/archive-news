@@ -132,19 +132,13 @@
         {
             "index": 6,
             "txt": "Vous pouvez vous désinscrire ici.",
-            "original_url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
-            "final_url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP",
+            "original_url": "http://HelloFresh,%20c'est%20quoi%20/",
+            "final_url": "http://HelloFresh,%20c'est%20quoi%20/",
             "domain": "HelloFresh,%20c'est%20quoi%20",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": "Error",
-                    "url": "http://HelloFresh,%20c'est%20quoi%20?_kx=A7is3Z3Pj3H_T-5E5S1ZKetI43DUjfu5pId0Q-ivdro.Qb2tyP"
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:32"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [],

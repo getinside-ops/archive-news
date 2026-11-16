@@ -223,44 +223,24 @@
         {
             "index": 9,
             "txt": "préférences",
-            "original_url": "http://manage.kmail-lists.com/subscriptions/placeholder",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "original_url": "http://manage.kmail-lists.com/",
+            "final_url": "http://manage.kmail-lists.com/",
             "domain": "manage.kmail-lists.com",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-10-14 14:28:38"
+            "is_unsubscribe": true
         },
         {
             "index": 10,
             "txt": "désinscrire",
-            "original_url": "http://manage.kmail-lists.com/subscriptions/placeholder",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/placeholder",
+            "original_url": "http://manage.kmail-lists.com/",
+            "final_url": "http://manage.kmail-lists.com/",
             "domain": "manage.kmail-lists.com",
             "is_tracking": false,
             "is_secure": false,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 301,
-                    "url": "http://manage.kmail-lists.com/subscriptions/placeholder"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/placeholder"
-                }
-            ],
-            "audit_date": "2026-10-14 14:28:38"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

@@ -16,6 +16,7 @@ class EmailFetcher:
         self.password = password
         self.label = label
         self.mail = None
+        self.header_errors = 0  # callers must not delete archives when > 0
 
     def connect(self):
         logger.info("Connecting to Gmail...")
@@ -67,6 +68,7 @@ class EmailFetcher:
                 f_id = self._get_deterministic_id(clean_subj, date_header, msg_id)
                 email_map[f_id] = num
             except Exception as e:
+                self.header_errors += 1
                 logger.warning("Error fetching headers for msg %s: %s", num, e)
         return email_map
 

@@ -336,27 +336,13 @@
         {
             "index": 14,
             "txt": "Me désinscrire",
-            "original_url": "https://bitli.pro/2C9el_23ce0ca4",
-            "final_url": "https://mibc-fr-11.mailinblack.com/protect/securelink/?url=https://trk.newsletter.lespetitsculottes.fr&key=eyJsYW5nIjoiRlIiLCJ1cmwiOiJodHRwczovL3Ryay5uZXdzbGV0dGVyLmxlc3BldGl0c2N1bG90dGVzLmZyL2wvMDFLNllZN0JaTUhGWlIwRUsxNFQxQTJWV0dfMTIiLCJ0b2tlbiI6ImdBQUFBQUJvNU5YMkREa1FWYUxUd25OTUF6VGt2Q001eS1RSF80VVR0ZF9aQ2FrUzc1M1JQeHhDeks0b2NBazd3TlJ2UjBwN0xzZ1JFV2hPNWFJWFN6X29oTk9mN2RGaUM1MUR1eWZDMEhUdE9PNW9pZjZQM01Halh5T1Nfc2FfV0xZdnVnOFdkcjhVZEdvbTJNUGNlN1hRVEhjRTdVcndPU0plNWRaeVhZQ2tzWExYSGVlU0t0VVNKdWVRejRYZDRKQm1ia2dmMXZpWWhVY1hnYmF5aG1RMzVoNlZrdnRRb1plNVU4a1RHV1dzSmV6Q3B6UGd1OXBhNmJzeUstTDhlRE9XM0E1X2RLUWxFdUNVaVlaNmxFU3RiQUpFemI0NHdVdEZMWkRCMnJQYmZzZnltYnlMQ0VVUWlkMlBUNWp4TnRrYkVCaWxmYlREIn0=",
+            "original_url": "https://bitli.pro/",
+            "final_url": "https://bitli.pro/",
             "domain": "bitli.pro",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://bitli.pro/2C9el_23ce0ca4"
-                },
-                {
-                    "status": 301,
-                    "url": "https://mibc-fr-11.mailinblack.com/securelink/?url=https://trk.newsletter.lespetitsculottes.fr&key=eyJsYW5nIjoiRlIiLCJ1cmwiOiJodHRwczovL3Ryay5uZXdzbGV0dGVyLmxlc3BldGl0c2N1bG90dGVzLmZyL2wvMDFLNllZN0JaTUhGWlIwRUsxNFQxQTJWV0dfMTIiLCJ0b2tlbiI6ImdBQUFBQUJvNU5YMkREa1FWYUxUd25OTUF6VGt2Q001eS1RSF80VVR0ZF9aQ2FrUzc1M1JQeHhDeks0b2NBazd3TlJ2UjBwN0xzZ1JFV2hPNWFJWFN6X29oTk9mN2RGaUM1MUR1eWZDMEhUdE9PNW9pZjZQM01Halh5T1Nfc2FfV0xZdnVnOFdkcjhVZEdvbTJNUGNlN1hRVEhjRTdVcndPU0plNWRaeVhZQ2tzWExYSGVlU0t0VVNKdWVRejRYZDRKQm1ia2dmMXZpWWhVY1hnYmF5aG1RMzVoNlZrdnRRb1plNVU4a1RHV1dzSmV6Q3B6UGd1OXBhNmJzeUstTDhlRE9XM0E1X2RLUWxFdUNVaVlaNmxFU3RiQUpFemI0NHdVdEZMWkRCMnJQYmZzZnltYnlMQ0VVUWlkMlBUNWp4TnRrYkVCaWxmYlREIn0="
-                },
-                {
-                    "status": 200,
-                    "url": "https://mibc-fr-11.mailinblack.com/protect/securelink/?url=https://trk.newsletter.lespetitsculottes.fr&key=eyJsYW5nIjoiRlIiLCJ1cmwiOiJodHRwczovL3Ryay5uZXdzbGV0dGVyLmxlc3BldGl0c2N1bG90dGVzLmZyL2wvMDFLNllZN0JaTUhGWlIwRUsxNFQxQTJWV0dfMTIiLCJ0b2tlbiI6ImdBQUFBQUJvNU5YMkREa1FWYUxUd25OTUF6VGt2Q001eS1RSF80VVR0ZF9aQ2FrUzc1M1JQeHhDeks0b2NBazd3TlJ2UjBwN0xzZ1JFV2hPNWFJWFN6X29oTk9mN2RGaUM1MUR1eWZDMEhUdE9PNW9pZjZQM01Halh5T1Nfc2FfV0xZdnVnOFdkcjhVZEdvbTJNUGNlN1hRVEhjRTdVcndPU0plNWRaeVhZQ2tzWExYSGVlU0t0VVNKdWVRejRYZDRKQm1ia2dmMXZpWWhVY1hnYmF5aG1RMzVoNlZrdnRRb1plNVU4a1RHV1dzSmV6Q3B6UGd1OXBhNmJzeUstTDhlRE9XM0E1X2RLUWxFdUNVaVlaNmxFU3RiQUpFemI0NHdVdEZMWkRCMnJQYmZzZnltYnlMQ0VVUWlkMlBUNWp4TnRrYkVCaWxmYlREIn0="
-                }
-            ],
-            "audit_date": "2026-05-25 13:14:34"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [

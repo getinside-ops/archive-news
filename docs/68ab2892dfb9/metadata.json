@@ -537,44 +537,24 @@
         {
             "index": 23,
             "txt": "préférences",
-            "original_url": "https://ctrk.klclick.com/l/01KJ5W9DQ8ZVWN95BZSWYC2JZT_22",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/update?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KJ5KG8Q0D3A9Z0N77M8C5FGZ&r=01KJ5W7JM8C7MDQBY7D97TBMXN",
+            "original_url": "https://ctrk.klclick.com/",
+            "final_url": "https://ctrk.klclick.com/",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KJ5W9DQ8ZVWN95BZSWYC2JZT_22"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/update?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KJ5KG8Q0D3A9Z0N77M8C5FGZ&r=01KJ5W7JM8C7MDQBY7D97TBMXN"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:32"
+            "is_unsubscribe": true
         },
         {
             "index": 24,
             "txt": "désinscrire",
-            "original_url": "https://ctrk.klclick.com/l/01KJ5W9DQ8ZVWN95BZSWYC2JZT_23",
-            "final_url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KJ5KG8Q0D3A9Z0N77M8C5FGZ&r=01KJ5W7JM8C7MDQBY7D97TBMXN",
+            "original_url": "https://ctrk.klclick.com/",
+            "final_url": "https://ctrk.klclick.com/",
             "domain": "ctrk.klclick.com",
             "is_tracking": false,
             "is_secure": true,
             "is_dev": false,
-            "redirect_chain": [
-                {
-                    "status": 302,
-                    "url": "https://ctrk.klclick.com/l/01KJ5W9DQ8ZVWN95BZSWYC2JZT_23"
-                },
-                {
-                    "status": 200,
-                    "url": "https://manage.kmail-lists.com/subscriptions/unsubscribe?a=KQsfB7&c=01JYS05CXGP9E88AV4HTF3W2Z1&k=ae240036cbf29a0d5d0a48e01461e66d&m=01KJ5KG8Q0D3A9Z0N77M8C5FGZ&r=01KJ5W7JM8C7MDQBY7D97TBMXN"
-                }
-            ],
-            "audit_date": "2026-05-25 13:12:32"
+            "is_unsubscribe": true
         }
     ],
     "detected_pixels": [
